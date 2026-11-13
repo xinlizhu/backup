@@ -1,0 +1,49 @@
+{
+  "group_id": "pinpoint_group_5842a42a9267933f",
+  "model": "claude-sonnet-5-5",
+  "signature": "aff20e5a5733d87f80fd7515c25d92c77cff20d4f50c9f8dbf4123bfdabed97b",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_5842a42a9267933f_query_05943_object_add",
+      "decision": "reject",
+      "failure_code": "not_visually_verifiable",
+      "reason": "The added object 'a brass floor lamp' cannot be reliably verified in the supplied positive images. Image 2 (the minimalist bedroom reference) shows a pendant lamp and a black floor lamp arm, but no brass floor lamp is clearly visible in images 3, 4, or 5. The edit cannot be validated against the positive set."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-sonnet-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "55a73d04b9bd4bdeb06e4fee259f9a1fe66cb68fe4103c45fbfb4b4c6e294f14",
+      "input_hash": "141ea2f3a120380d1d05706ec47aa097a7267932cdce1c037abe114e5b54e3f8",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/claude-sonnet-5-5/cache/validate_group/141ea2f3a120380d1d05706ec47aa097a7267932cdce1c037abe114e5b54e3f8.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01lrwjBt8gQcOODBKaQzSYBGk1",
+      "usage": {
+        "prompt_tokens": 9188,
+        "completion_tokens": 167,
+        "total_tokens": 9355,
+        "prompt_tokens_details": {
+          "cached_tokens": 7163,
+          "cache_creation_tokens": 2021
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_5842a42a9267933f_query_05943_object_add",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 310,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

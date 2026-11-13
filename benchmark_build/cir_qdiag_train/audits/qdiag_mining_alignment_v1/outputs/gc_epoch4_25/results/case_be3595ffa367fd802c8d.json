@@ -1,0 +1,91 @@
+{
+  "case_id": "case_be3595ffa367fd802c8d",
+  "audit_query_id": "audit_query_082",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_be3595ffa367fd802c8d",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Compared with R's cab-end view, T shows the locomotive from the opposite, long-hood end at a three-quarter angle, with prominent white diagonal stripes."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows wooden glazed doors viewed straight on, with no locomotive, rear-corner locomotive view, or added white stripe pattern."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "Show the locomotive from its back corner.",
+      "Add white strips to the locomotive."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_be3595ffa367fd802c8d",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "The locomotive is viewed obliquely from an end corner and has prominent white diagonal stripes. However, the visible details do not reliably establish that the shown end is the back, so the requested back-corner orientation remains uncertain."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The candidate shows wooden sliding interior doors, not a locomotive turned toward a back corner with added white stripes."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "2b969f4cfb6bc4f68a2e9a2b630d0970121af5dcc250aeb791fb9c611e7c5e1e",
+      "input_hash": "7967e94036dad00365d050649f2ce051822dcae44791becaf6d38d9d0d861040",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/7967e94036dad00365d050649f2ce051822dcae44791becaf6d38d9d0d861040.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0f4eb593d4c071cf016af2bdf6163c87d1aee49b28691862aa",
+      "usage": {
+        "prompt_tokens": 6475,
+        "completion_tokens": 240,
+        "total_tokens": 6715,
+        "prompt_tokens_details": {
+          "cached_tokens": 5240
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 57
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "cfa2adacaa0fa3677372913acc44ff90d92432764d990e09b486d4880cf538b7",
+      "input_hash": "16c5e4eed43c96ebfd79c0dba48435236fb528467173b61329be871ee057b441",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/16c5e4eed43c96ebfd79c0dba48435236fb528467173b61329be871ee057b441.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0daf874430b34a65016af2be0083e487d195468166e349a0e9",
+      "usage": {
+        "prompt_tokens": 5933,
+        "completion_tokens": 157,
+        "total_tokens": 6090,
+        "prompt_tokens_details": {
+          "cached_tokens": 4776
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 36
+        }
+      }
+    }
+  ]
+}

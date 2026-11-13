@@ -1,0 +1,85 @@
+{
+  "case_id": "case_0dd0ecc9b81cfe30a301",
+  "audit_query_id": "audit_query_096",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_0dd0ecc9b81cfe30a301",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Two yellow school buses are parked side by side, with both fronts clearly visible, unlike the side views in R."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows an indoor wardrobe with sliding panels; no school buses or adjacent parked vehicles are visible."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "Show the fronts of school buses.",
+      "Show the school buses parked adjacent to each other."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_0dd0ecc9b81cfe30a301",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Two yellow vehicles labeled SCHOOL BUS are parked side by side, with both fronts clearly visible, satisfying the requested front view and adjacency."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The image shows an indoor wardrobe with dark and wood-grain sliding doors. No school buses or bus fronts are visible."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "a09bbb4957a060a5e5477d36f723d8eb4b9fe417bde2065da9d6d83e9e5a4c98",
+      "input_hash": "0e997655cd19a5e76e24773cdb0f32fb317b15ed0b065b3d520ae21fafbe4eb7",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/0e997655cd19a5e76e24773cdb0f32fb317b15ed0b065b3d520ae21fafbe4eb7.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_086e414a994d4b1b016af2bec67fb487d1b860999d7e17e4a1",
+      "usage": {
+        "prompt_tokens": 7187,
+        "completion_tokens": 171,
+        "total_tokens": 7358,
+        "prompt_tokens_details": {
+          "cached_tokens": 3830
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "2d355bc851ef03fe0509c2bd13900c91ff7c87545b4a33bb13d543495f636e32",
+      "input_hash": "8c24f7553eebd41ccc779f67fa81cd2d37aa68eb8ac64d5558e36655c18f2ba6",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/8c24f7553eebd41ccc779f67fa81cd2d37aa68eb8ac64d5558e36655c18f2ba6.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0228d6ecf6c10fe8016af2bed2f4c487d0b7496df11b8870a9",
+      "usage": {
+        "prompt_tokens": 6645,
+        "completion_tokens": 104,
+        "total_tokens": 6749,
+        "prompt_tokens_details": {
+          "cached_tokens": 3482
+        }
+      }
+    }
+  ]
+}

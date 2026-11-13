@@ -1,0 +1,49 @@
+{
+  "group_id": "pinpoint_group_f219ca03818fa79c",
+  "model": "claude-sonnet-5-5",
+  "signature": "aff20e5a5733d87f80fd7515c25d92c77cff20d4f50c9f8dbf4123bfdabed97b",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_f219ca03818fa79c_query_04985_object_substitute",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Single object substitution from Mumbai to Delhi. Source text preserved with fluent grammar. All supplied positive images (2-5) show Mumbai-specific dishes and landmarks (Bombay sandwich, biryani, street food vendor with 'GOTTA EAT-I MUMBAI' sign, food at Mumbai's Victoria Terminus). None support Delhi dishes, making the negative text clearly false for every positive image."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-sonnet-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "93e6e36601dd243667f85eb153b31d60f1578f0f068e80cd9d92884e8b4f9f1b",
+      "input_hash": "05477e8437e0e1375870cbcbcd2372fdb1600dc7d12f4c5c1526805e9ca49f8b",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/claude-sonnet-5-5/cache/validate_group/05477e8437e0e1375870cbcbcd2372fdb1600dc7d12f4c5c1526805e9ca49f8b.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01Uy2xmqHkQ6WcjAShIBqRAgGw",
+      "usage": {
+        "prompt_tokens": 8634,
+        "completion_tokens": 189,
+        "total_tokens": 8823,
+        "prompt_tokens_details": {
+          "cached_tokens": 6731,
+          "cache_creation_tokens": 1899
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_f219ca03818fa79c_query_04985_object_substitute",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 375,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

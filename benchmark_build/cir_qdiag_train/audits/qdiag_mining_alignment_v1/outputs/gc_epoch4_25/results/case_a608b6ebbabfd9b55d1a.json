@@ -1,0 +1,92 @@
+{
+  "case_id": "case_a608b6ebbabfd9b55d1a",
+  "audit_query_id": "audit_query_094",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_a608b6ebbabfd9b55d1a",
+    "case_status": "source_invalid_or_uncertain",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "Two piglets appear to nurse together on the image-left side of an adult warthog, unlike their opposite-side arrangement in R. However, the requested change from mother to boar implies a male adult, which is not visibly established; anatomical left is also unclear."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The adult wild pig is accompanied by at least three visible striped piglets, dispersed on both image sides. Their heads are near the ground rather than visibly nursing together on the same left side. The adult's sex is uncertain."
+    },
+    "candidate_relation": "multiple_constraint_conflict",
+    "violated_source_constraints": [
+      "The target depicts two babies; C shows at least three piglets.",
+      "The babies are nursing; C shows the visible piglets with their heads near the ground, away from nursing positions.",
+      "Both babies are together on the same left side; C shows piglets dispersed on both image sides."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_a608b6ebbabfd9b55d1a",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "Two warthog piglets press their snouts beneath the adult's belly on the same image-left side, consistent with nursing. However, the adult is not visibly established as a male boar, and 'left side' is ambiguous between image position and anatomical side. The full instruction cannot be reliably established."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The adult wild pig stands with striped piglets around it. The visible piglets have their heads away from its underside rather than nursing; they are also distributed on both sides of the image, rather than two nursing together on the left."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "de5ee58aedb38767441d9dc8937eeb8a07647266955781b92081e0094905bb9d",
+      "input_hash": "59f2adfe45fd5df264e896e583233e73606ef849300c096c782f1f5e7ffcd207",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/59f2adfe45fd5df264e896e583233e73606ef849300c096c782f1f5e7ffcd207.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_074385634d2d55c2016af2bd4cfdd887d1bec638d027206997",
+      "usage": {
+        "prompt_tokens": 15759,
+        "completion_tokens": 365,
+        "total_tokens": 16124,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 87
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "7a59ad181abbaada389d78a9251ce4688a0ab712fa7541632f2124231440243a",
+      "input_hash": "b34da5cf5fb3dca02f9561695b09e60a56cc0da09a80b8b643dfbe0bda57852a",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/b34da5cf5fb3dca02f9561695b09e60a56cc0da09a80b8b643dfbe0bda57852a.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_02537add220d70f9016af2bd5e1d9887d1aa4dfc4434319f52",
+      "usage": {
+        "prompt_tokens": 15217,
+        "completion_tokens": 219,
+        "total_tokens": 15436,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 27
+        }
+      }
+    }
+  ]
+}

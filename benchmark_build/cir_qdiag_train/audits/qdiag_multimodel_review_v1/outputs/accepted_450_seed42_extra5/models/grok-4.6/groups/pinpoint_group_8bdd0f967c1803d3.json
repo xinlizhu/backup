@@ -1,0 +1,57 @@
+{
+  "group_id": "pinpoint_group_8bdd0f967c1803d3",
+  "model": "grok-4.6",
+  "signature": "cb958fa178e5ebcdd33f446ebd46fe25a7c20417ca5539cc74de61fb4df99804",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_8bdd0f967c1803d3_query_04221_object_add",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Appending 'with tassels' is one object addition that reconstructs the source exactly. Every positive lacks tassels: edges are pom-poms, ruffles, or plain, so the added fact is clearly false."
+    },
+    {
+      "negative_id": "pinpoint_group_8bdd0f967c1803d3_query_04221_object_delete",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Removing the single object phrase 'crochet blanket' leaves a fluent, strictly weaker query that still preserves 'this' and 'in soft pastels'."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.6",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "aab3ef91e537f3d2b344d9aad1b687a6269f0c92437fc2900c698ba2a57ff4f2",
+      "input_hash": "e23676a63e16840cdb123227397920efcc4d09f1cb6195c4ff4aed641a8e5b39",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/grok-4.6/cache/validate_group/e23676a63e16840cdb123227397920efcc4d09f1cb6195c4ff4aed641a8e5b39.json",
+      "cached": false,
+      "attempts": 2,
+      "request_id": "7ca19a14-66b6-90d1-b348-f44b0b82a37b",
+      "usage": {
+        "prompt_tokens": 5047,
+        "completion_tokens": 170,
+        "total_tokens": 10885,
+        "prompt_tokens_details": {
+          "text_tokens": 2580,
+          "audio_tokens": 0,
+          "image_tokens": 2467,
+          "cached_tokens": 4992
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 5668,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 376340000
+      }
+    }
+  ],
+  "format_warnings": []
+}

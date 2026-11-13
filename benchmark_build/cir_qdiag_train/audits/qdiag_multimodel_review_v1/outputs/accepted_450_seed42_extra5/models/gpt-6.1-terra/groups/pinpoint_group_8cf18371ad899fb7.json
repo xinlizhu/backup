@@ -1,0 +1,49 @@
+{
+  "group_id": "pinpoint_group_8cf18371ad899fb7",
+  "model": "gpt-6.1-terra",
+  "signature": "08eff7f6139e72d377a59effd10853d9c15929bec5b0a3afebcc9b0ca4a1c2df",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_8cf18371ad899fb7_query_06794_attribute_delete",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Deletes only the pink color constraint; the remaining request is fluent and meaningfully weaker."
+    },
+    {
+      "negative_id": "pinpoint_group_8cf18371ad899fb7_query_06794_predicate_substitute",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "Substituting “soften” is a single fluent predicate edit, but the supplied positives do not make that requested action clearly false."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "gpt-6.1-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "8e5e24de9221a5f30cf3b9936ec77bfbe9868729099e55d5e0d199f92963d55b",
+      "input_hash": "4f08ebfde7f52da813cfe42ff19d702bd3e0d0ace60de8c97997273ed281d766",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/gpt-6.1-terra/cache/validate_group/4f08ebfde7f52da813cfe42ff19d702bd3e0d0ace60de8c97997273ed281d766.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_012814f752114a1d016af42e52461487d1868e6f5ff698e70d",
+      "usage": {
+        "prompt_tokens": 8534,
+        "completion_tokens": 308,
+        "total_tokens": 8842,
+        "prompt_tokens_details": {
+          "cached_tokens": 3286
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 179
+        }
+      }
+    }
+  ],
+  "format_warnings": []
+}

@@ -1,0 +1,90 @@
+{
+  "case_id": "case_35275b021d19335fd5d3",
+  "audit_query_id": "audit_query_095",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_35275b021d19335fd5d3",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "One pelican is visible in grey water, with its neck, upper body, and spread wings raised above the surface and its bill wide open."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "One penguin is raised out of the water, but the visible water is blue rather than grey; the grey background is shore. Its bill is obscured against the seal's mouth, so an open mouth cannot be verified."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "Change water color to grey."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_35275b021d19335fd5d3",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows one bird with its body raised above shallow grey-brown water and its beak open."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows two birds, not one, and they are on a dark shoreline rather than in grey water; neither visibly has an open mouth while raised out of water."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "66092ca5c20ef47b57d30d9d2fc70449ae684210c1c0704091881371bd35423b",
+      "input_hash": "67ccc22f60406c49dc37fc3790a5925971f503b3285ff85e88fa570baf6dbbbc",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/67ccc22f60406c49dc37fc3790a5925971f503b3285ff85e88fa570baf6dbbbc.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0445791bfa86d2af016af2bf2ebb6c87d28b201b2a351ca205",
+      "usage": {
+        "prompt_tokens": 12583,
+        "completion_tokens": 308,
+        "total_tokens": 12891,
+        "prompt_tokens_details": {
+          "cached_tokens": 3830
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 115
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "e948590ac5d10191878c2e0a9477d4def8056e6eec54c0a7b38c1eb2b9bfb33a",
+      "input_hash": "3e0ed652e36be663cdf4bb9d557c800fb94940ad7413c2d226db7e80c9c79c12",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/3e0ed652e36be663cdf4bb9d557c800fb94940ad7413c2d226db7e80c9c79c12.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0957307018fb2a8f016af2bf3ec06087d187b9f094368a9d7e",
+      "usage": {
+        "prompt_tokens": 12205,
+        "completion_tokens": 223,
+        "total_tokens": 12428,
+        "prompt_tokens_details": {
+          "cached_tokens": 5248
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 111
+        }
+      }
+    }
+  ]
+}

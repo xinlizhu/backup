@@ -1,0 +1,44 @@
+experiment:
+  name: cirr_hard_negatives_without_delete
+  seed: 42
+  negative_mode: add_substitute
+  output_dir: outputs/clip_b/add_substitute
+
+data:
+  train_manifest: data/cirr_train_with_negatives.jsonl
+  val_annotation_path: /mnt/data/datasets/search_dataset/zxl/CIR_new/datasets/CIRR/cirr/captions/cap.rc2.val.json
+  val_image_split_path: /mnt/data/datasets/search_dataset/zxl/CIR_new/datasets/CIRR/cirr/image_splits/split.rc2.val.json
+  image_root: /mnt/data/datasets/search_dataset/zxl/CIR_new/datasets/CIRR
+  max_non_delete_negatives_per_sample: 6
+  max_delete_negatives_per_sample: 3
+  num_workers: 8
+
+model:
+  variant: clip_vit_b16
+  pretrained_model_name_or_path: models/clip-vit-base-patch16
+  local_files_only: true
+  hidden_dim: 1024
+  dropout: 0.1
+  freeze_backbone: true
+  gradient_checkpointing: false
+
+optimizer:
+  epochs: 2
+  batch_size_per_gpu: 512
+  gradient_accumulation_steps: 1
+  learning_rate: 0.0001
+  backbone_learning_rate: 0.000001
+  weight_decay: 0.01
+  warmup_ratio: 0.05
+  max_grad_norm: 1.0
+  temperature: 0.07
+  learnable_temperature: true
+  hard_negative_weight: 1.0
+  mixed_precision: bf16
+  log_every_steps: 20
+  save_every_epochs: 1
+
+evaluation:
+  batch_size: 128
+  recall_k: [1, 5, 10, 50]
+  group_recall_k: [1, 2, 3]

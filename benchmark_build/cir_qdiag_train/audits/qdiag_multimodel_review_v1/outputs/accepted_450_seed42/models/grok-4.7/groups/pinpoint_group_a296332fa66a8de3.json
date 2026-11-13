@@ -1,0 +1,57 @@
+{
+  "group_id": "pinpoint_group_a296332fa66a8de3",
+  "model": "grok-4.7",
+  "signature": "52913ea34ae01078c58f7a80fc2119b86ef4b6b3449e9e55b21816a5d5d1ccbd",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_a296332fa66a8de3_query_05612_object_substitute",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Single object swap of tattoo to piercing; fluent and meaning-preserving. Every positive shows flat ink marks, not jewelry through skin, so piercing is clearly false."
+    },
+    {
+      "negative_id": "pinpoint_group_a296332fa66a8de3_query_05617_object_substitute",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Single object swap of tattoo to logo; the span reconstructs exactly and stays fluent. Positives are body tattoos, not logo designs, so the new object is clearly false."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.7",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "07dec223cbf86b33fb58fc5476479b52509a2a0e8699cba550c2fdcece38781f",
+      "input_hash": "1639b5cc5d4708a3d7cd838f40517f94ffb90e932ca2b29d234fc2812fba0b72",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/grok-4.7/cache/validate_group/1639b5cc5d4708a3d7cd838f40517f94ffb90e932ca2b29d234fc2812fba0b72.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "71a7ad57-595c-915d-b237-78db3821b042",
+      "usage": {
+        "prompt_tokens": 6003,
+        "completion_tokens": 161,
+        "total_tokens": 9068,
+        "prompt_tokens_details": {
+          "text_tokens": 2804,
+          "audio_tokens": 0,
+          "image_tokens": 3199,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2904,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 273240000
+      }
+    }
+  ],
+  "format_warnings": []
+}

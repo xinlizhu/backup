@@ -1,0 +1,84 @@
+{
+  "case_id": "case_c5b61b106c520d6d5221",
+  "audit_query_id": "audit_query_091",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_c5b61b106c520d6d5221",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The sink is set into a visibly wooden vanity with a polished black, pale-veined marble countertop, replacing the reference's ceramic pedestal design."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The sink unit has a plain light-gray countertop rather than a black marble surface. Its glossy black cabinet does not reveal whether the underlying material is wood."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The sink unit must have a black marble surface."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_c5b61b106c520d6d5221",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a sink vanity with a visibly grained wooden cabinet and a polished black countertop with pale marble veining, replacing the reference's blue-and-white ceramic pedestal sink."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a black-framed sink unit with a stainless-steel basin and a smooth gray countertop. The countertop is not a black marble surface; the black cabinet's underlying material is not visibly established."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "de60ac6575505f4c8606592d08d6200ccf8b75d76800a9d69900328594f35157",
+      "input_hash": "749c6508fbf85b3210014b0b0539b3a2900272faa47509e2fa257d9f8f6f5672",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/749c6508fbf85b3210014b0b0539b3a2900272faa47509e2fa257d9f8f6f5672.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_08360f1efe6571cd016af2bd42e2c887d2b9dfc60a640c97e6",
+      "usage": {
+        "prompt_tokens": 7944,
+        "completion_tokens": 305,
+        "total_tokens": 8249,
+        "completion_tokens_details": {
+          "reasoning_tokens": 123
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "e1dd6c3861ab74f177589c30ce328e7a7e489f1e4cdd5757c89f2085502faca5",
+      "input_hash": "cd893b89a95604aa9484cf571f2297139cb03abb306066bdb777789d924511d1",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/cd893b89a95604aa9484cf571f2297139cb03abb306066bdb777789d924511d1.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0cbf2169f5753d4f016af2bd503b3887d1ae106bbdcc06a0b6",
+      "usage": {
+        "prompt_tokens": 7402,
+        "completion_tokens": 158,
+        "total_tokens": 7560,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "completed": [
+    "CLIP4CIR-CIRR-RN50x4",
+    "MagicLens-CLIP-Base",
+    "MagicLens-CLIP-Large",
+    "TEMA-MCIRR"
+  ],
+  "skipped": {
+    "QuRe-CIRR": "User explicitly requested skipping after official CIRR weight folder was confirmed empty."
+  },
+  "protocol": {
+    "data": "PinPoint V7 pilot 500 groups; 499 groups with negatives",
+    "bootstrap_replicates": 2000,
+    "seed": 42,
+    "random_samples": 10,
+    "multi_reference": "mean native reference visual features/tokens before multimodal fusion",
+    "single_reference_summary": "Uses full-set calibrated threshold, reported separately as diagnostic subset",
+    "TEMA_batching": "Equal text token lengths, to avoid batch-padding effects in the official entity mapper"
+  },
+  "validation": {
+    "metric_regression": "tests/test_external_qdiag_metrics.py passed against the original evaluator",
+    "TEMA_native_query_max_abs_error": 1.7881393432617188e-07,
+    "TEMA_native_target_max_abs_error": 0.0
+  },
+  "weights_root": "/mnt/data/datasets/search_dataset/zxl/models",
+  "input_sha256": "a4bf2806949651815f5cded10ea607e39c34f2e2f90ccdb133c5dd77fddeb437",
+  "validation_per_model": {
+    "CLIP4CIR-CIRR-RN50x4": {
+      "finite": true,
+      "query_shape": [
+        3,
+        640
+      ],
+      "target_shape": [
+        3,
+        640
+      ]
+    },
+    "MagicLens-CLIP-Base": {
+      "native_query_max_abs_error": 2.253800630569458e-07,
+      "native_target_max_abs_error": 3.818422555923462e-07,
+      "preprocess_max_abs_error": 2.384185791015625e-07,
+      "checkpoint_tree_verified": true,
+      "query_shape": [
+        3,
+        512
+      ]
+    },
+    "MagicLens-CLIP-Large": {
+      "native_query_max_abs_error": 3.026798367500305e-07,
+      "native_target_max_abs_error": 3.427267074584961e-07,
+      "preprocess_max_abs_error": 2.384185791015625e-07,
+      "checkpoint_tree_verified": true,
+      "query_shape": [
+        3,
+        768
+      ]
+    },
+    "TEMA-MCIRR": {
+      "finite": true,
+      "native_query_max_abs_error": 1.7881393432617188e-07,
+      "native_target_max_abs_error": 0.0,
+      "query_shape": [
+        3,
+        256
+      ],
+      "target_shape": [
+        3,
+        256
+      ]
+    }
+  }
+}

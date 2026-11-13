@@ -1,0 +1,132 @@
+{
+  "case_id": "case_0d8b3044184e5ac089c0",
+  "audit_query_id": "audit_query_093",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_0d8b3044184e5ac089c0",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The pillow rests against a gray chunky-textured fabric, with a light vertical background that gives a window-like effect."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The pillow is against white bedding, not a gray textured towel or throw; a bright window is visible behind it."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "Place the pillow on a grey towel/throw; the candidate shows it on white bedding."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "object",
+        "before_span": "grey turkey towel",
+        "after_span": "white bed",
+        "edited_instruction": "Place pillow on white bed with window background effect",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "The supporting surface changes from a gray towel/throw to a white bed.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The pillow is supported by gray textured fabric, not a white bed."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The pillow rests on white bedding, with a bright window behind it."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_0d8b3044184e5ac089c0",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "The pillow rests against a gray-green chunky textured textile draped over seating. Its identification as a 'turkey towel' is not visually established, and the blurred background does not clearly establish a window."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The pillow is on a white bed with windows behind it; no gray towel is visible beneath it."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "reject",
+        "failure_code": "source_invalid_or_uncertain",
+        "witness_type": null,
+        "reason": "The proposed span replacement reconstructs the edited instruction, but the required source support on T cannot be established. The visible chunky textile does not reliably establish a 'grey turkey towel,' and the window background is also unclear.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The pillow is arranged on textured fabric over seating with an exposed wooden surface, rather than on a white bed."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "A white pillow rests on a white bed, with large, bright window panes clearly visible behind it."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": false,
+      "local_failures": [
+        "wrong_witness_type",
+        "wrong_support_pattern"
+      ],
+      "review_decision": "reject"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "1a3a4d3ed0206bc13f86374f025e8b1e6f6312be7439b665524ebd93c817ec4e",
+      "input_hash": "8363468392eba859251b12758df7fab292130003ba399ae9e8a2ab55f9e7acf9",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/8363468392eba859251b12758df7fab292130003ba399ae9e8a2ab55f9e7acf9.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_890e3c74775c6e7d170321350fad377e753a3ad8a35785bd",
+      "usage": {
+        "prompt_tokens": 7944,
+        "completion_tokens": 839,
+        "total_tokens": 8783,
+        "completion_tokens_details": {
+          "reasoning_tokens": 573
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "e776b5202d1eb5a90b97d22825e5811df33754c3ebd4d20b579c035261666ea3",
+      "input_hash": "dd95ae87a28bd6b3abeedb784f854ed27f3bad7ad4ccab89c09393dbf966b069",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/dd95ae87a28bd6b3abeedb784f854ed27f3bad7ad4ccab89c09393dbf966b069.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_05191ecc76599a6e016af2bf3274e087d2a23ccf69f82436ff",
+      "usage": {
+        "prompt_tokens": 7301,
+        "completion_tokens": 364,
+        "total_tokens": 7665,
+        "prompt_tokens_details": {
+          "cached_tokens": 3482
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 41
+        }
+      }
+    }
+  ]
+}

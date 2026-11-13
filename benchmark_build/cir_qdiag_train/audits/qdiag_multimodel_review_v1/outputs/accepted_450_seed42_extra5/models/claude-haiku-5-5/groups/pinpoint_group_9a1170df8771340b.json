@@ -1,0 +1,61 @@
+{
+  "group_id": "pinpoint_group_9a1170df8771340b",
+  "model": "claude-haiku-5-5",
+  "signature": "44bb4aae802e19564501a676b733c7e19828d9ced260b7da0428f08b1a359df2",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_9a1170df8771340b_query_01747_attribute_add",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Single fluent edit adds 'with long sleeves' as a sleeve attribute. Source says 'tshirt', negative adds sleeve specification. All positive images show short-sleeved graphic tees, making the long sleeves attribute clearly false for every supplied positive."
+    },
+    {
+      "negative_id": "pinpoint_group_9a1170df8771340b_query_01747_predicate_add",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "Adding 'hanging' as a predicate is problematic. Image 1 shows a graphic tee displayed/hung on a wall in a hanging position, making the 'hanging' state compatible with the reference. This fails the requirement that the new fact be clearly false for every supplied positive."
+    },
+    {
+      "negative_id": "pinpoint_group_9a1170df8771340b_query_01752_predicate_substitute",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Single fluent substitution changes 'align with' to 'contrast with', reversing the aesthetic relationship. Source seeks alignment; negative seeks contrast. All positive images show pop-art graphic tees that align with the pop-art aesthetic in reference image 1. None support or remain compatible with a contrasting aesthetic relationship."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-haiku-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "fad95a8d3e1e620ed829ce9396212a9542b00cd76d59bd68684ebce04a8734fc",
+      "input_hash": "dc18f78b0e33b97e11e88663d90f2c5fe33ed8ef6a4938edcf355849aa99d68a",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/claude-haiku-5-5/cache/validate_group/dc18f78b0e33b97e11e88663d90f2c5fe33ed8ef6a4938edcf355849aa99d68a.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01bfYda4zrQJ61kHoK1VdnGVBo",
+      "usage": {
+        "prompt_tokens": 9970,
+        "completion_tokens": 428,
+        "total_tokens": 10398,
+        "prompt_tokens_details": {
+          "cached_tokens": 7773,
+          "cache_creation_tokens": 2193
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_9a1170df8771340b_query_01752_predicate_substitute",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 337,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

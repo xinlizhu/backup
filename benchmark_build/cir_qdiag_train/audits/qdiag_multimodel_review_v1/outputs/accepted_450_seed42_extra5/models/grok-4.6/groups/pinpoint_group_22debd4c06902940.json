@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_22debd4c06902940",
+  "model": "grok-4.6",
+  "signature": "cb958fa178e5ebcdd33f446ebd46fe25a7c20417ca5539cc74de61fb4df99804",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_22debd4c06902940_query_04703_attribute_substitute",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Single attribute edit: replacing 'summer' with 'winter' reconstructs the text and changes only the day's season. Every supplied positive shows warm-weather white-shorts styling, and one is explicitly labeled SUMMER, so a winter day is clearly false for all."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.6",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "b0ec24ba98c3b876da810c663f1b5195c454e615802baa46f3c1cfc1d0e5fb08",
+      "input_hash": "d00b5a1ef22b11a2396ad6f9c93ac2fea7ee49658b7dc455761d922fbf013b52",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/grok-4.6/cache/validate_group/d00b5a1ef22b11a2396ad6f9c93ac2fea7ee49658b7dc455761d922fbf013b52.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "92e48bbc-db39-958d-ba76-1fd58ef6cc15",
+      "usage": {
+        "prompt_tokens": 5104,
+        "completion_tokens": 101,
+        "total_tokens": 8585,
+        "prompt_tokens_details": {
+          "text_tokens": 2501,
+          "audio_tokens": 0,
+          "image_tokens": 2603,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 3380,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 280220000
+      }
+    }
+  ],
+  "format_warnings": []
+}

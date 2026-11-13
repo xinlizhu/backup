@@ -1,0 +1,49 @@
+{
+  "group_id": "pinpoint_group_ff7f4ec838da8aa8",
+  "model": "gpt-6.1-terra",
+  "signature": "08eff7f6139e72d377a59effd10853d9c15929bec5b0a3afebcc9b0ca4a1c2df",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_ff7f4ec838da8aa8_query_05059_attribute_add",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "The edit adds one fluent color attribute; all supplied positive images show small monochrome or nearly monochrome tattoos, not colorful ones."
+    },
+    {
+      "negative_id": "pinpoint_group_ff7f4ec838da8aa8_query_05060_predicate_substitute",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "The supplied positives show tattoos on feet, which remains compatible with a request to remove a tattoo from a foot."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "gpt-6.1-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "2dc3961d127fc5b2457c4bd34b48162968ccc8e4c67093a68fc4761b3571996b",
+      "input_hash": "f73508acbfc76294b83351730cd953e019ec83ba23f59447fe128ff215f516f4",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/gpt-6.1-terra/cache/validate_group/f73508acbfc76294b83351730cd953e019ec83ba23f59447fe128ff215f516f4.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_04c3df43f42ca02c016af42e6387f887d0b6c591566ceb06b4",
+      "usage": {
+        "prompt_tokens": 8234,
+        "completion_tokens": 565,
+        "total_tokens": 8799,
+        "prompt_tokens_details": {
+          "cached_tokens": 3346
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 430
+        }
+      }
+    }
+  ],
+  "format_warnings": []
+}

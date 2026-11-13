@@ -1,0 +1,235 @@
+{
+  "case_id": "case_af995604f47d530dbb77",
+  "audit_query_id": "audit_query_090",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_af995604f47d530dbb77",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The orange car is shown from a rear three-quarter angle on a road beside a large body of water."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The white convertible is shown from a rear three-quarter angle beside an industrial facility and gravel piles, rather than water."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The car must be by water."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "object",
+        "before_span": "water",
+        "after_span": "an industrial building",
+        "edited_instruction": "Show car from back by an industrial building.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "The nearby landmark changes from water to an industrial building.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The rear-view car is beside water and wooded rocky hills, with no adjacent industrial building."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The white car's rear is visible, and a large industrial building stands directly behind it."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "operation": "delete",
+        "semantic_target": "predicate",
+        "before_span": "by water",
+        "after_span": null,
+        "edited_instruction": "Show car from back.",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "Remove the requirement that the car be beside water.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "The orange car's rear bumper, taillights, and rear license plate are clearly visible."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The white convertible is viewed from a rear three-quarter angle, showing its rear bumper, taillights, and license plate."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_af995604f47d530dbb77",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a car from a rear three-quarter viewpoint, with its rear bumper and taillights clearly visible, on a road immediately beside a large body of water."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a car from a rear three-quarter viewpoint beside an industrial facility and aggregate piles. The visible surroundings are dry ground and pavement, rather than a waterside setting."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing 'water' with 'an industrial building' makes one object substitution within the same proximity relation and preserves the rear-view requirement. The visible settings support the required contrast.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 places the rear-view car beside water and wooded cliffs; no industrial building is present in the visible setting."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows the car's rear and side directly in front of large industrial structures with exposed steelwork and processing equipment."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting 'by water' removes one location predicate and exactly reconstructs the edited instruction after punctuation normalization. Both images satisfy the retained rear-view requirement; the candidate violates only the removed waterside constraint.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 clearly shows the car from behind at a three-quarter angle, including the rear plate, taillights, bumper, and exhausts."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows the car from a rear three-quarter angle, with its rear plate, taillights, and rear bumper clearly visible."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "substitute",
+      "semantic_target": "object",
+      "before_span": "water",
+      "after_span": "an industrial building",
+      "edited_instruction": "Show car from back by an industrial building.",
+      "witness_type": "substitution_contrast",
+      "changed_constraint": "The nearby landmark changes from water to an industrial building.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "The rear-view car is beside water and wooded rocky hills, with no adjacent industrial building."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "The white car's rear is visible, and a large industrial building stands directly behind it."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing 'water' with 'an industrial building' makes one object substitution within the same proximity relation and preserves the rear-view requirement. The visible settings support the required contrast.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 places the rear-view car beside water and wooded cliffs; no industrial building is present in the visible setting."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows the car's rear and side directly in front of large industrial structures with exposed steelwork and processing equipment."
+        }
+      }
+    },
+    {
+      "witness_id": "w2",
+      "operation": "delete",
+      "semantic_target": "predicate",
+      "before_span": "by water",
+      "after_span": null,
+      "edited_instruction": "Show car from back.",
+      "witness_type": "deletion_relaxation",
+      "changed_constraint": "Remove the requirement that the car be beside water.",
+      "edited_on_positive": {
+        "status": "supported",
+        "evidence": "The orange car's rear bumper, taillights, and rear license plate are clearly visible."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "The white convertible is viewed from a rear three-quarter angle, showing its rear bumper, taillights, and license plate."
+      },
+      "independent_review": {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting 'by water' removes one location predicate and exactly reconstructs the edited instruction after punctuation normalization. Both images satisfy the retained rear-view requirement; the candidate violates only the removed waterside constraint.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 clearly shows the car from behind at a three-quarter angle, including the rear plate, taillights, bumper, and exhausts."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows the car from a rear three-quarter angle, with its rear plate, taillights, and rear bumper clearly visible."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    },
+    {
+      "witness_id": "w2",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "165514d7ce2bc1e564204a35ffd951a9f0b4b6b4551043f1a14207120b6ad4d5",
+      "input_hash": "a794facad7ec9eb60589ab432781395dfffff41d346ca7073b283b3ead76c61f",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/a794facad7ec9eb60589ab432781395dfffff41d346ca7073b283b3ead76c61f.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0a6fe14f262d8b74016af2be395f6087d189b92426ac233eb4",
+      "usage": {
+        "prompt_tokens": 10801,
+        "completion_tokens": 578,
+        "total_tokens": 11379,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 67
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "2deecb4d04867b70f01b766752244d48a52ea9c1e3602bdc24757a908a66b143",
+      "input_hash": "770bb718f481865991f9ac697347d5724d235bfbe4ca30bf774633f07335deb1",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/770bb718f481865991f9ac697347d5724d235bfbe4ca30bf774633f07335deb1.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0456a8d6400b1636016af2be4a02a887d18b5890c990a18db4",
+      "usage": {
+        "prompt_tokens": 10380,
+        "completion_tokens": 511,
+        "total_tokens": 10891,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "checkpoint": "/mnt/data/datasets/search_dataset/zxl/models/MagicLens/models/magic_lens_clip_base.pkl",
+  "complete": true,
+  "environment": "/mnt/data/datasets/search_dataset/zxl/magic_lens311/bin/python",
+  "feature_seconds": 21.33892583847046,
+  "features_complete": true,
+  "gallery_count": 5373,
+  "image_batch_size": 256,
+  "jax_devices": "[CudaDevice(id=0)]",
+  "jax_version": "0.10.2",
+  "metrics": {
+    "gallery_size": 5373,
+    "num_queries": 1961,
+    "recall_at_1": 8.822,
+    "recall_at_10": 28.9138,
+    "recall_at_5": 21.2137,
+    "recall_at_50": 51.2494
+  },
+  "model": "MagicLens-CLIP-Base",
+  "preprocessing": "native MagicLens max-normalization + antialiased bilinear square resize",
+  "query_count": 1961,
+  "reference_feature_pooling": "mean raw CLIP image embeddings before multimodal Transformer",
+  "scoring_protocol": {
+    "caption_composition": "strip('.?, ') then caption_1 + ' and ' + caption_2",
+    "category": "toptee",
+    "exclude_reference": false,
+    "split": "val"
+  },
+  "target_encoding": "image + empty text through full multimodal model",
+  "text_batch_size": 512,
+  "truncated_query_count": 0
+}

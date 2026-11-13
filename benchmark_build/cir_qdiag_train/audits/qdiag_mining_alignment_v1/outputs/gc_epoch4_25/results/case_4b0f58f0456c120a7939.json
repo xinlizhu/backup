@@ -1,0 +1,207 @@
+{
+  "case_id": "case_4b0f58f0456c120a7939",
+  "audit_query_id": "audit_query_092",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_4b0f58f0456c120a7939",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows one panda lying with its head on a paw while positioned on a horizontal branch; Image 1 shows a panda in a tree eating."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows one panda sitting upright among branches with its tongue out, rather than lying down on its paw; it is still positioned on branches."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The panda is laying down on his paw."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "predicate",
+        "before_span": "laying down on his paw",
+        "after_span": "sitting upright and",
+        "edited_instruction": "Goes from a panda in a tree eating something to a single panda sitting upright and resting on a branch.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "The panda's pose changes from laying down on his paw to sitting upright.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 shows the panda lying with its head on a paw, not sitting upright."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 visibly shows one panda in an upright seated pose on the branches, with the body supported by the branch structure."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "operation": "delete",
+        "semantic_target": "predicate",
+        "before_span": "laying down on his paw",
+        "after_span": null,
+        "edited_instruction": "Goes from a panda in a tree eating something to a single panda resting on a branch.",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "The requirement that the panda be laying down on his paw is removed.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 shows a single panda resting on a horizontal branch."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows a single panda seated and supported by multiple branches."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_4b0f58f0456c120a7939",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The single panda has its head laid sideways on its black forepaw or forearm, which rests across a visible branch. This supports the requested resting pose relative to the eating panda in the reference."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The single panda is seated upright among branches, with its head raised above its forepaws rather than lying down on a paw."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "reject",
+        "failure_code": "wrong_semantic_target",
+        "witness_type": null,
+        "reason": "The replacement reconstructs the edited text and yields the requested visual contrast, but it does not preserve the predicate's arguments: replacing 'laying down on his paw' with 'sitting upright and' removes the paw-support relation as well as changing posture.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The panda's head lies sideways on its forelimb over the branch; it is not sitting upright."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "One panda sits upright with its body supported by branches and its forelimbs resting on a branch in front."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting the complete paw-supported lying predicate produces the stated fluent instruction. Both images show a single panda resting on a branch; the candidate violates only the removed pose requirement.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "The single panda rests its head on its forelimb immediately above a supporting branch."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The single panda rests seated on branches, with its forelimbs supported by the branch in front."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w2",
+      "operation": "delete",
+      "semantic_target": "predicate",
+      "before_span": "laying down on his paw",
+      "after_span": null,
+      "edited_instruction": "Goes from a panda in a tree eating something to a single panda resting on a branch.",
+      "witness_type": "deletion_relaxation",
+      "changed_constraint": "The requirement that the panda be laying down on his paw is removed.",
+      "edited_on_positive": {
+        "status": "supported",
+        "evidence": "Image 2 shows a single panda resting on a horizontal branch."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "Image 3 shows a single panda seated and supported by multiple branches."
+      },
+      "independent_review": {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting the complete paw-supported lying predicate produces the stated fluent instruction. Both images show a single panda resting on a branch; the candidate violates only the removed pose requirement.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "The single panda rests its head on its forelimb immediately above a supporting branch."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The single panda rests seated on branches, with its forelimbs supported by the branch in front."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": false,
+      "local_failures": [
+        "wrong_witness_type"
+      ],
+      "review_decision": "reject"
+    },
+    {
+      "witness_id": "w2",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "165a2b8ea3e63462420ba5e3e7a2c1d3dbed8cd17d9b6cef81f2fe9345d0e52b",
+      "input_hash": "c3eb84c89cde00299d20c685b4b211d184e5c54c1447e37dc53da20edd52bc31",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/c3eb84c89cde00299d20c685b4b211d184e5c54c1447e37dc53da20edd52bc31.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_02f83e36b3389149016af2bfa42cf087d180d7c3991c88601c",
+      "usage": {
+        "prompt_tokens": 8186,
+        "completion_tokens": 1420,
+        "total_tokens": 9606,
+        "prompt_tokens_details": {
+          "cached_tokens": 5888
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 984
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "856473d540dc079be768033ac72ab3481f6941710fb5cd79c21a76c56f2b01ad",
+      "input_hash": "8844f027a496bfdf2d177e115c9a2107aa3c2662413b1a60c3609bab87a03bcb",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/8844f027a496bfdf2d177e115c9a2107aa3c2662413b1a60c3609bab87a03bcb.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_046e8fe970dcda5b016af2bff6ba0087d19fb68e17b0c466c6",
+      "usage": {
+        "prompt_tokens": 7638,
+        "completion_tokens": 746,
+        "total_tokens": 8384,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 251
+        }
+      }
+    }
+  ]
+}

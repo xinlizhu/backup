@@ -1,0 +1,177 @@
+{
+  "case_id": "case_35d9c5a51175d478dfdd",
+  "audit_query_id": "audit_query_082",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_35d9c5a51175d478dfdd",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Relative to R, the locomotive is shown from the opposite corner, with its near end on the left and its side extending right. White diagonal stripes mark the end and lower side."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C also reverses R's corner view, placing the near end on the left, but its locomotive has broad orange and red bands rather than white stripes."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "Add white strips."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "attribute",
+        "before_span": "white",
+        "after_span": "orange",
+        "edited_instruction": "Turn to face back corner and add orange strips.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "The added strips are orange instead of white.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "T has the requested opposite-corner view, but its contrasting stripes are white, not orange."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C has the opposite-corner view relative to R and broad orange bands running along the locomotive."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "operation": "delete",
+        "semantic_target": "attribute",
+        "before_span": "white",
+        "after_span": null,
+        "edited_instruction": "Turn to face back corner and add strips.",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "Remove the requirement that the strips be white.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "T shows the opposite corner relative to R and has visible diagonal strips."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C shows the opposite corner relative to R and has broad colored strips along its body; their color is now unrestricted."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_35d9c5a51175d478dfdd",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "The locomotive has conspicuous white diagonal strips and is seen obliquely from an end and side. However, the visible features do not reliably establish that this is its back corner relative to the reference."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The candidate shows a rounded locomotive nose with a headlight and pilot at the near corner, indicating a front-corner view. Its broad bands are orange and red rather than white."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "reject",
+        "failure_code": "source_invalid_or_uncertain",
+        "witness_type": null,
+        "reason": "The white-to-orange replacement is a single attribute edit, but the source's back-corner requirement cannot be reliably established on the positive. The candidate also retains a front-corner view, so changing strip color does not make the edited instruction supported.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The visible diagonal strips are white, not orange."
+        },
+        "edited_on_candidate": {
+          "status": "contradicted",
+          "evidence": "Orange bands are visible, but the prominent rounded nose, headlight, and pilot indicate a front-corner view rather than the required back corner."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "decision": "reject",
+        "failure_code": "source_invalid_or_uncertain",
+        "witness_type": null,
+        "reason": "Deleting white removes one color constraint, but the source is not established on the positive. The candidate also violates the retained back-corner requirement, so color is not its only source-query violation.",
+        "edited_on_positive": {
+          "status": "uncertain",
+          "evidence": "Strips are clearly visible, but whether the view shows the required back corner remains uncertain."
+        },
+        "edited_on_candidate": {
+          "status": "contradicted",
+          "evidence": "The locomotive has colored bands, but its visible nose, headlight, and pilot place the near viewpoint at the front corner."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": false,
+      "local_failures": [
+        "wrong_witness_type",
+        "wrong_support_pattern"
+      ],
+      "review_decision": "reject"
+    },
+    {
+      "witness_id": "w2",
+      "accepted": false,
+      "local_failures": [
+        "wrong_witness_type",
+        "wrong_support_pattern"
+      ],
+      "review_decision": "reject"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "6b0c755dc9e83015f54a9d18491793b983d21fb851c05a69289b5cccc7734374",
+      "input_hash": "133146ff6de98a9177d2e4ae62b1cfc34c8896faa6ea4668745050de9f90f2d1",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/133146ff6de98a9177d2e4ae62b1cfc34c8896faa6ea4668745050de9f90f2d1.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_028e68e08d4caf04016af2be0c421487d192aad64c8590df67",
+      "usage": {
+        "prompt_tokens": 6468,
+        "completion_tokens": 995,
+        "total_tokens": 7463,
+        "prompt_tokens_details": {
+          "cached_tokens": 5228
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 467
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "5b8e64848ccba7609e812d83feabefefb02aecf0573f290e6fef42229be44fac",
+      "input_hash": "07f2a8463e6d7958b3faba17dc67c8e7a39dcf9acb75a2e97f384bf8d9b251c2",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/07f2a8463e6d7958b3faba17dc67c8e7a39dcf9acb75a2e97f384bf8d9b251c2.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_09bb4bfcc8a8b495016af2be36b7ac87d191a0217bcc83a268",
+      "usage": {
+        "prompt_tokens": 6049,
+        "completion_tokens": 559,
+        "total_tokens": 6608,
+        "prompt_tokens_details": {
+          "cached_tokens": 5009
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 143
+        }
+      }
+    }
+  ]
+}

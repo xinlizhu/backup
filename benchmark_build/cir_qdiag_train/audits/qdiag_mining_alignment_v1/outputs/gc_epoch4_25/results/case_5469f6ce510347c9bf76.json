@@ -1,0 +1,155 @@
+{
+  "case_id": "case_5469f6ce510347c9bf76",
+  "audit_query_id": "audit_query_083",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_5469f6ce510347c9bf76",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "T shows one body-cream container with one matching box, satisfying the requested single product and its box."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "C shows one Imari cologne bottle with its matching box. The instruction does not require retaining the sunscreen category or pink color from R."
+    },
+    "candidate_relation": "compatible",
+    "violated_source_constraints": [],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "add",
+        "semantic_target": "attribute",
+        "before_span": null,
+        "after_span": "burgundy",
+        "edited_instruction": "Leave a single product with its burgundy box",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "The product's box is burgundy.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "T has one product with its box, but the box is light pink rather than burgundy."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C shows one cologne bottle with a burgundy box edged in gold."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_5469f6ce510347c9bf76",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows one body cream container with one matching pink box, satisfying the requested single product with its box."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "Image 3 shows one burgundy Imari bottle beside one matching Imari box, satisfying the requested single product with its box."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "Inserting 'burgundy' before 'box' adds one visible box-color attribute while preserving every source constraint. Both images satisfy the source instruction; only the candidate satisfies the added color constraint.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The single body cream container has a light pink box, not a burgundy box."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The single Imari bottle is accompanied by its matching box, whose main panels are burgundy with gold borders."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "add",
+      "semantic_target": "attribute",
+      "before_span": null,
+      "after_span": "burgundy",
+      "edited_instruction": "Leave a single product with its burgundy box",
+      "witness_type": "addition_disambiguation",
+      "changed_constraint": "The product's box is burgundy.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "T has one product with its box, but the box is light pink rather than burgundy."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C shows one cologne bottle with a burgundy box edged in gold."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "Inserting 'burgundy' before 'box' adds one visible box-color attribute while preserving every source constraint. Both images satisfy the source instruction; only the candidate satisfies the added color constraint.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The single body cream container has a light pink box, not a burgundy box."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The single Imari bottle is accompanied by its matching box, whose main panels are burgundy with gold borders."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "dfe8c5d11949be26b6c4cd6dacb3e7f3b9e1ebf5b52a92886bdf42363174cecd",
+      "input_hash": "3223f21cd15cfd26340144ff5206eba6c14293de6cf158880069ae1e4a76059d",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/3223f21cd15cfd26340144ff5206eba6c14293de6cf158880069ae1e4a76059d.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0de85fd287f4858a016af2bd32363887d18e5f4303070d45a5",
+      "usage": {
+        "prompt_tokens": 7728,
+        "completion_tokens": 525,
+        "total_tokens": 8253,
+        "completion_tokens_details": {
+          "reasoning_tokens": 203
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "118882789fb376982fc01f12c2aecd42ca4e32fa8e12a94e25a1da3d98e64755",
+      "input_hash": "2f627ef88f0c13b33d18f0b60133726a41659037e19bb9426660476808d9f3c4",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/2f627ef88f0c13b33d18f0b60133726a41659037e19bb9426660476808d9f3c4.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0c43e16d0febe6ac016af2bd468ffc87d1849a5dd3f00fd32f",
+      "usage": {
+        "prompt_tokens": 7247,
+        "completion_tokens": 231,
+        "total_tokens": 7478
+      }
+    }
+  ]
+}

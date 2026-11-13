@@ -1,0 +1,172 @@
+{
+  "case_id": "case_8d96a24aa6ccb1a2d896",
+  "audit_query_id": "audit_query_087",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_8d96a24aa6ccb1a2d896",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The clownfish has deeper orange coloration than the reference's bright yellow face and is nestled among tentacles in the middle of a sea anemone."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "The clownfish have deeper orange and dark coloration compared with the reference's yellow face, and are positioned among tentacles near the anemone's middle."
+    },
+    "candidate_relation": "compatible",
+    "violated_source_constraints": [],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "add",
+        "semantic_target": "object",
+        "before_span": null,
+        "after_span": " with another clown fish nearby",
+        "edited_instruction": "Shows a darker colored clown fish swimming through the middle of a sea anemone with another clown fish nearby.",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "An additional clownfish is nearby.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Only one clownfish is visible among the tentacles; the partially visible fish at the upper right is gray and is not a clownfish."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Two orange, white-banded clownfish are visible close together among the central anemone tentacles."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "operation": "add",
+        "semantic_target": "attribute",
+        "before_span": null,
+        "after_span": "purple ",
+        "edited_instruction": "Shows a darker colored clown fish swimming through the middle of a purple sea anemone.",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "The sea anemone is purple.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The surrounding anemone tentacles are predominantly grayish tan with pale cream tips, rather than purple."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The darker clownfish are among the middle tentacles of a visibly purple-lavender anemone."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_8d96a24aa6ccb1a2d896",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "T shows an orange clownfish among the central anemone tentacles. Its coloration is not reliably darker than R: R already has substantial black body areas, while T is predominantly bright orange. The required relative darkness is ambiguous."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "C shows dark reddish-brown clownfish with white bands among the central anemone tentacles. Their colored body areas appear darker than the yellow-orange areas of the reference fish."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "reject",
+        "failure_code": "source_invalid_or_uncertain",
+        "witness_type": null,
+        "reason": "The insertion adds one nearby clownfish requirement, and C visibly has two clownfish. However, ADD requires the original instruction to be supported on T, and T's darker coloration relative to R cannot be reliably established.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Only one clownfish is visible in T. The partially visible gray fish at the upper right is not another clownfish."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Two dark reddish-brown, white-banded clownfish are close together amid the central tentacles of the same anemone."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "decision": "reject",
+        "failure_code": "source_invalid_or_uncertain",
+        "witness_type": null,
+        "reason": "Adding 'purple' is a single attribute insertion, but the original darker-fish constraint is uncertain on T. Also, T's tentacles have gray-lavender coloration, so a definite non-purple versus purple distinction is not established.",
+        "edited_on_positive": {
+          "status": "uncertain",
+          "evidence": "T's anemone has gray, tan, and lavender-looking tentacles under colored illumination. Purple is not clearly excluded, and the fish's relative darkness remains uncertain."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C visibly shows dark clownfish amid an anemone with predominantly purple-lavender tentacles and pale tips."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": false,
+      "local_failures": [
+        "wrong_witness_type",
+        "wrong_support_pattern"
+      ],
+      "review_decision": "reject"
+    },
+    {
+      "witness_id": "w2",
+      "accepted": false,
+      "local_failures": [
+        "wrong_witness_type",
+        "wrong_support_pattern"
+      ],
+      "review_decision": "reject"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "fa00941130be3aef2d4627f6b141af6ee8f333cde7057eedefc3cf305d945e0e",
+      "input_hash": "744de49daf815619d2a15205d8a4de4d21ba17dcda403d564661b776104ff93c",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/744de49daf815619d2a15205d8a4de4d21ba17dcda403d564661b776104ff93c.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0b4ae99d2dad00ea016af2be76582c87d2b39a7165d1f84081",
+      "usage": {
+        "prompt_tokens": 8252,
+        "completion_tokens": 775,
+        "total_tokens": 9027,
+        "completion_tokens_details": {
+          "reasoning_tokens": 228
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "f5473f31ca8536fdf1d6caa2fdc28ffef04558a33ab6b475990a157ea468b165",
+      "input_hash": "d5033a0f6af6b9ec2f02fd8a5973669e72d84a752dbced3af36f4457fe581ed1",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/d5033a0f6af6b9ec2f02fd8a5973669e72d84a752dbced3af36f4457fe581ed1.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0262df6389a8ba1c016af2bea8cd6887d1a9dc44801f7dbd39",
+      "usage": {
+        "prompt_tokens": 7855,
+        "completion_tokens": 697,
+        "total_tokens": 8552,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 151
+        }
+      }
+    }
+  ]
+}

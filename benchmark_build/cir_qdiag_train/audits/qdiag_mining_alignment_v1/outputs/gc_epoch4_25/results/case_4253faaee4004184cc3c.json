@@ -1,0 +1,238 @@
+{
+  "case_id": "case_4253faaee4004184cc3c",
+  "audit_query_id": "audit_query_079",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_4253faaee4004184cc3c",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "T shows a black, bowl-shaped vessel sink with a faucet."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows a white vessel sink with a rectangular bowl; the black surface is the supporting shelf, not the sink."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The bowl sink must be black."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "attribute",
+        "before_span": "black",
+        "after_span": "white",
+        "edited_instruction": "Show a white bowl sink.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "The sink color changes from black to white.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "T's bowl sink is black, not white."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C shows a white vessel sink with a rectangular bowl."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "operation": "delete",
+        "semantic_target": "attribute",
+        "before_span": "black",
+        "after_span": null,
+        "edited_instruction": "Show a bowl sink.",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "The requirement that the bowl sink be black is removed.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "T shows a round bowl sink mounted above a countertop."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C shows an above-counter vessel sink with a rectangular bowl."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_4253faaee4004184cc3c",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a black, bowl-shaped vessel sink with a faucet pouring water into its basin."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a white vessel sink on a black shelf. The sink itself is white, not black."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing 'black' with 'white' changes exactly one color attribute and reconstructs the edited instruction. Both images show bowl sinks; the candidate's rectangular vessel basin does not violate any explicit roundness requirement. The color substitution reverses support.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The vessel sink in Image 2 is black rather than white."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows a white, raised vessel basin with a faucet and drain, satisfying 'white bowl sink.'"
+        }
+      },
+      {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting 'black' removes exactly one color constraint and yields the proposed fluent instruction. Both images contain bowl sinks, and the candidate violates only the removed color requirement. No circular shape is explicitly required.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 clearly shows a bowl-shaped vessel sink."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows a rectangular vessel bowl sink mounted above a shelf, satisfying the instruction without the color restriction."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "substitute",
+      "semantic_target": "attribute",
+      "before_span": "black",
+      "after_span": "white",
+      "edited_instruction": "Show a white bowl sink.",
+      "witness_type": "substitution_contrast",
+      "changed_constraint": "The sink color changes from black to white.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "T's bowl sink is black, not white."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C shows a white vessel sink with a rectangular bowl."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing 'black' with 'white' changes exactly one color attribute and reconstructs the edited instruction. Both images show bowl sinks; the candidate's rectangular vessel basin does not violate any explicit roundness requirement. The color substitution reverses support.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The vessel sink in Image 2 is black rather than white."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows a white, raised vessel basin with a faucet and drain, satisfying 'white bowl sink.'"
+        }
+      }
+    },
+    {
+      "witness_id": "w2",
+      "operation": "delete",
+      "semantic_target": "attribute",
+      "before_span": "black",
+      "after_span": null,
+      "edited_instruction": "Show a bowl sink.",
+      "witness_type": "deletion_relaxation",
+      "changed_constraint": "The requirement that the bowl sink be black is removed.",
+      "edited_on_positive": {
+        "status": "supported",
+        "evidence": "T shows a round bowl sink mounted above a countertop."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C shows an above-counter vessel sink with a rectangular bowl."
+      },
+      "independent_review": {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting 'black' removes exactly one color constraint and yields the proposed fluent instruction. Both images contain bowl sinks, and the candidate violates only the removed color requirement. No circular shape is explicitly required.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 clearly shows a bowl-shaped vessel sink."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows a rectangular vessel bowl sink mounted above a shelf, satisfying the instruction without the color restriction."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    },
+    {
+      "witness_id": "w2",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "f0db0b6c4b7f3a0c5704608f01549f6a50e2b6feb5b960b2f1080e1c13bf038a",
+      "input_hash": "b5a2cb0d64dffcd8d986ce0c2c074f002d1e62392160db2cb434998899c3d684",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/b5a2cb0d64dffcd8d986ce0c2c074f002d1e62392160db2cb434998899c3d684.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0b947e506327e31e016af2bd448f3087d2aebab32f46bc2b79",
+      "usage": {
+        "prompt_tokens": 8028,
+        "completion_tokens": 510,
+        "total_tokens": 8538,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 49
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "20cbceab97011e48b66666ceb733e4fe092a58a9727510903cd19de4ecffd7ee",
+      "input_hash": "cd2a894ba4f1fdd0ad94ba667edabe0974174ff5e40c3e9dfe6989188c096ea7",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/cd2a894ba4f1fdd0ad94ba667edabe0974174ff5e40c3e9dfe6989188c096ea7.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0851cf612e3a6395016af2bd530ea487d2b0e9d5ae7d64864d",
+      "usage": {
+        "prompt_tokens": 7601,
+        "completion_tokens": 487,
+        "total_tokens": 8088,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 26
+        }
+      }
+    }
+  ]
+}

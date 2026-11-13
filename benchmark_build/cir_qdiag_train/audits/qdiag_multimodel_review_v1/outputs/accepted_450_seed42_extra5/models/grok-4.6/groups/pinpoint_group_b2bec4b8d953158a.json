@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_b2bec4b8d953158a",
+  "model": "grok-4.6",
+  "signature": "cb958fa178e5ebcdd33f446ebd46fe25a7c20417ca5539cc74de61fb4df99804",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_b2bec4b8d953158a_query_03662_object_add",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "Adding “for a mannequin” is one fluent object edit, but image 3 is an unworn product/ghost-mannequin garment with no person, so that new fact is not clearly false for every positive."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.6",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "790bf34b61249555c1f301a21d1ec42fd1e3ac6c4046d45b446431026d14298e",
+      "input_hash": "791bfb6a4bcc8052a00b68f15dd3911877c62828df9ee370a47f46e753badc0d",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/grok-4.6/cache/validate_group/791bfb6a4bcc8052a00b68f15dd3911877c62828df9ee370a47f46e753badc0d.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "f12d832c-fc07-9a88-81ed-8b71692fac32",
+      "usage": {
+        "prompt_tokens": 5196,
+        "completion_tokens": 98,
+        "total_tokens": 8167,
+        "prompt_tokens_details": {
+          "text_tokens": 2526,
+          "audio_tokens": 0,
+          "image_tokens": 2670,
+          "cached_tokens": 2304
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2873,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 247620000
+      }
+    }
+  ],
+  "format_warnings": []
+}

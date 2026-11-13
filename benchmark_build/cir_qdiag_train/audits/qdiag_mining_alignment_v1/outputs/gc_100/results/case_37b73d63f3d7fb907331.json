@@ -1,0 +1,126 @@
+{
+  "case_id": "case_37b73d63f3d7fb907331",
+  "audit_query_id": "audit_query_024",
+  "signature": "5065d94bb0c1b275e428d3f2ada2352b274139ccb2134477487b5f51eef77ac6",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_37b73d63f3d7fb907331",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The reference shows eight bottles and Image 2 shows three, consistent with removing five."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "The reference shows eight bottles and Image 3 shows three, consistent with removing five."
+    },
+    "candidate_relation": "compatible",
+    "violated_source_constraints": [],
+    "witnesses": [
+      {
+        "witness_id": "add_attribute_1",
+        "operation": "add",
+        "semantic_target": "attribute",
+        "before_span": null,
+        "after_span": ", leaving three bottles with birthday-themed labels",
+        "edited_instruction": "Remove five bottles, leaving three bottles with birthday-themed labels.",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "The remaining bottles have birthday-themed labels; Image 3 shows birthday wording and decorations, unlike Image 2's bank, business, and medical labels.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2's three bottles have bank, business, and medical-themed labels, not birthday-themed labels."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows three bottles with labels including “Our Sweetie is 6” and “Happy Birthday Grace!”."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_37b73d63f3d7fb907331",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "R shows eight bottles; T shows three, consistent with removing five."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "R shows eight bottles; C shows three, consistent with removing five."
+    },
+    "verdicts": [
+      {
+        "witness_id": "add_attribute_1",
+        "decision": "reject",
+        "failure_code": "not_single_edit",
+        "witness_type": null,
+        "reason": "The insertion asserts both that three bottles remain and that they have birthday-themed labels. The count is already implied by the source instruction relative to R, so this is not a single genuinely new constraint.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "T shows three bottles, but their visible labels are branded McNelly Services and Stanford Medical, not birthday-themed."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C shows three bottles with visible birthday-themed labels."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [],
+  "local_checks": [
+    {
+      "witness_id": "add_attribute_1",
+      "accepted": false,
+      "local_failures": [
+        "wrong_witness_type"
+      ],
+      "review_decision": "reject"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "46bf8b1c7c5691a4eaea5a5d0aeaf01e1c1d35544633da3496b3d406de0ab31e",
+      "input_hash": "f680cecc950cd8be446506e2554a25e8b56e05161ba5a0c96a09d7a3e370d4c4",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_100/api_cache/propose_witnesses/f680cecc950cd8be446506e2554a25e8b56e05161ba5a0c96a09d7a3e370d4c4.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0fc4d4802072e15f016af2b9543d9487d18464f0ac239f7f28",
+      "usage": {
+        "prompt_tokens": 7616,
+        "completion_tokens": 1816,
+        "total_tokens": 9432,
+        "completion_tokens_details": {
+          "reasoning_tokens": 1547
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "c8c366cb2684482c26568b2c9c4bf4f6854e0d1c5a4efd1d135ff975536a5676",
+      "input_hash": "07fdfdab384cc372e7d97a4756e7fcdc3dc785e10b1408541afe7a575e4cbad7",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_100/api_cache/review_witnesses/07fdfdab384cc372e7d97a4756e7fcdc3dc785e10b1408541afe7a575e4cbad7.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_06c2bd50bcbfc23c016af2b972183087d1942feacd1e379fc0",
+      "usage": {
+        "prompt_tokens": 7144,
+        "completion_tokens": 1099,
+        "total_tokens": 8243,
+        "completion_tokens_details": {
+          "reasoning_tokens": 890
+        }
+      }
+    }
+  ]
+}

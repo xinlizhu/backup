@@ -1,0 +1,88 @@
+{
+  "case_id": "case_be560fdd2a29c314eb17",
+  "audit_query_id": "audit_query_079",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_be560fdd2a29c314eb17",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "T shows a black, bowl-shaped sink receiving water from a faucet."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows a silver steelpan percussion instrument on a tripod, with playing areas visible inside the bowl, rather than a black sink."
+    },
+    "candidate_relation": "multiple_constraint_conflict",
+    "violated_source_constraints": [
+      "The object must be a sink.",
+      "The bowl sink must be black."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_be560fdd2a29c314eb17",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a black, round bowl-shaped vessel sink on a countertop, with a faucet pouring water into it."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a reflective silver metal percussion bowl mounted on a tripod stand, rather than a black bowl sink."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "03b41b646c1df40d44b16ec25aa45a40509428715b938beda3ead37f85fbd0c2",
+      "input_hash": "66cde171b68bc3245025ec2bed41fd8a1d8222a86eae5860dbddb33690403a16",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/66cde171b68bc3245025ec2bed41fd8a1d8222a86eae5860dbddb33690403a16.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_013360e4c561670d016af2bdfd386087d199aca5a53c3bdfe0",
+      "usage": {
+        "prompt_tokens": 7649,
+        "completion_tokens": 287,
+        "total_tokens": 7936,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 119
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "eaa27e263045450999693033d12c6402bfdb87a8282eec37ec970fccc038d770",
+      "input_hash": "f736d740c74ee9f6a4ecc19fad7dddbefe553bd78019020dff13ce2bf513cd7d",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/f736d740c74ee9f6a4ecc19fad7dddbefe553bd78019020dff13ce2bf513cd7d.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_030e90c92e0d6f62016af2be0baff087d1bcd5c16cf248634b",
+      "usage": {
+        "prompt_tokens": 7107,
+        "completion_tokens": 99,
+        "total_tokens": 7206,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        }
+      }
+    }
+  ]
+}

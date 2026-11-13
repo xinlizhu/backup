@@ -1,0 +1,91 @@
+{
+  "case_id": "case_5875631b066f224edf66",
+  "audit_query_id": "audit_query_082",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_5875631b066f224edf66",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The locomotive is viewed obliquely from the cab-end corner, reversing the reference's long-hood-end view, and has prominent white diagonal stripes on its end and along its side."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The candidate shows an open laptop from a rear corner, rather than the locomotive referenced by the turning instruction. It also lacks the requested white stripe pattern."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "The turning instruction retains the reference's locomotive as its subject; the candidate depicts a laptop.",
+      "The requested added white strips are absent."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_5875631b066f224edf66",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "The locomotive has conspicuous white diagonal stripes, but the visible end cannot reliably be identified as the requested back corner relative to the reference. The full source instruction is therefore uncertain."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The candidate shows a black laptop viewed from behind, rather than the reference locomotive turned toward a back corner with added white stripes. Its casing has red accents and no corresponding white stripes."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "4ee4c15f3359fee7ec12084bdc3a0ba2ebf8212897e6e80bdfc52980f8365363",
+      "input_hash": "b8a99348a85119e32428cf31be5b77c6ffbbab2cb812300ff630db592616a387",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/b8a99348a85119e32428cf31be5b77c6ffbbab2cb812300ff630db592616a387.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_058e0ea93c23e2cd016af2bd99915487d198e22629b67f42c9",
+      "usage": {
+        "prompt_tokens": 6511,
+        "completion_tokens": 285,
+        "total_tokens": 6796,
+        "prompt_tokens_details": {
+          "cached_tokens": 5382
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 80
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "767f2b8b6e4da14b31aa675518a8ffa0dcb461f71ebb740c0a80fd45810d6026",
+      "input_hash": "ad8112c55eb679257fa2e11acbf3bf6dcd7a63f2d919ab0af3095fbd2f0c916b",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/ad8112c55eb679257fa2e11acbf3bf6dcd7a63f2d919ab0af3095fbd2f0c916b.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_07a6b0d68da29c2e016af2bda45f2887d191813d1acaad07e2",
+      "usage": {
+        "prompt_tokens": 5969,
+        "completion_tokens": 177,
+        "total_tokens": 6146,
+        "prompt_tokens_details": {
+          "cached_tokens": 4817
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 52
+        }
+      }
+    }
+  ]
+}

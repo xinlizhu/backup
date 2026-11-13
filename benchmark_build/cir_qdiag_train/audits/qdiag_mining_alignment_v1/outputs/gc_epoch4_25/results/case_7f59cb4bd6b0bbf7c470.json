@@ -1,0 +1,160 @@
+{
+  "case_id": "case_7f59cb4bd6b0bbf7c470",
+  "audit_query_id": "audit_query_079",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_7f59cb4bd6b0bbf7c470",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "A black, bowl-shaped vessel sink is visible beneath a running faucet."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The image shows buffalo and cattle resting beneath trees; no bowl sink is visible."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "A bowl sink must be present."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "object",
+        "before_span": "bowl sink",
+        "after_span": "buffalo",
+        "edited_instruction": "Show a black buffalo.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "Replace the requested object category, bowl sink, with buffalo while retaining black.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The image shows a black vessel sink, with no buffalo visible."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Several black buffalo are visibly resting on the ground."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_7f59cb4bd6b0bbf7c470",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 prominently shows a black, bowl-shaped vessel sink beneath a running faucet."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows resting dark buffalo and other cattle outdoors; no bowl sink is visible."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing 'bowl sink' with 'buffalo' makes one object substitution and exactly reconstructs the edited instruction. The black attribute is preserved and visibly supported on the candidate's buffalo. The source and edited instructions have the required opposite support patterns.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 depicts a black vessel sink and faucet, with no buffalo visible."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 clearly shows multiple black or very dark buffalo resting in the foreground."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "substitute",
+      "semantic_target": "object",
+      "before_span": "bowl sink",
+      "after_span": "buffalo",
+      "edited_instruction": "Show a black buffalo.",
+      "witness_type": "substitution_contrast",
+      "changed_constraint": "Replace the requested object category, bowl sink, with buffalo while retaining black.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "The image shows a black vessel sink, with no buffalo visible."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "Several black buffalo are visibly resting on the ground."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing 'bowl sink' with 'buffalo' makes one object substitution and exactly reconstructs the edited instruction. The black attribute is preserved and visibly supported on the candidate's buffalo. The source and edited instructions have the required opposite support patterns.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 depicts a black vessel sink and faucet, with no buffalo visible."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 clearly shows multiple black or very dark buffalo resting in the foreground."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "3420083b06b8ebb6ca62f269733632489eda353a1f785c9f0a75b41e5e9285f8",
+      "input_hash": "2bc7e1a99493e25aa77d3a437275f29c5ffe5f8b66819aef65b0f146841d63b1",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/2bc7e1a99493e25aa77d3a437275f29c5ffe5f8b66819aef65b0f146841d63b1.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_07bdd0537c4f8c62016af2be3e473087d19c04068325003c5a",
+      "usage": {
+        "prompt_tokens": 7797,
+        "completion_tokens": 544,
+        "total_tokens": 8341,
+        "completion_tokens_details": {
+          "reasoning_tokens": 229
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "fdf1bfcd307d074188b21d2fd7b15c86cf4409122f7b2ff8c15db681c4f17554",
+      "input_hash": "d727882866027eaaa7830346f200ed0b2df8b44c01b2979e276ead4822508d76",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/d727882866027eaaa7830346f200ed0b2df8b44c01b2979e276ead4822508d76.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0d50ddcc586c1e6a016af2be6eee5087d1af34906dfafec71f",
+      "usage": {
+        "prompt_tokens": 7315,
+        "completion_tokens": 226,
+        "total_tokens": 7541,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        }
+      }
+    }
+  ]
+}

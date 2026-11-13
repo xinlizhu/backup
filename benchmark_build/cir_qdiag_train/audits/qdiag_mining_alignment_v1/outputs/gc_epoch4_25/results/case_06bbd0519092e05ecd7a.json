@@ -1,0 +1,91 @@
+{
+  "case_id": "case_06bbd0519092e05ecd7a",
+  "audit_query_id": "audit_query_087",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_06bbd0519092e05ecd7a",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The clownfish has deeper orange coloring than the reference's yellow-orange fish and is positioned among tentacles in the middle of a sea anemone, consistent with swimming through it."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The image shows a brown dog lying on dry ground; no clownfish or sea anemone is visible."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "Shows a clownfish.",
+      "The fish is swimming through the middle of a sea anemone."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_06bbd0519092e05ecd7a",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "A clownfish is visibly nestled among tentacles near the middle of an anemone. Its body is vivid orange with white bands, whereas the reference fish has a yellow face and substantial dark body markings. The required overall darker coloration relative to the reference is not reliably established."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The candidate shows a brown dog lying on bare ground outdoors. There is no clownfish or sea anemone, and no fish swimming through an anemone."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "bf4d180a80b58d77880e6f089cac94a8e38542514ec1ab63e8a1db246c00f8fd",
+      "input_hash": "34f16b69e262b18a16a47648de6347f5d2a1705f2444faccf46c1fe4c446dfbb",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/34f16b69e262b18a16a47648de6347f5d2a1705f2444faccf46c1fe4c446dfbb.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0bfa1081d5fa1a33016af2be76e87087d1a7ac597016e69262",
+      "usage": {
+        "prompt_tokens": 22980,
+        "completion_tokens": 231,
+        "total_tokens": 23211,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 41
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "8147f7b6b286001b0255d53937772391f8e25defc77a78f4ecbf8d2449ff75d0",
+      "input_hash": "a90a809407f4dfc08411e7307bf042ebb1281d428ec473f4537325248001d31c",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/a90a809407f4dfc08411e7307bf042ebb1281d428ec473f4537325248001d31c.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_06196881b8db6e13016af2be81668087d29301c28ec51dae34",
+      "usage": {
+        "prompt_tokens": 22438,
+        "completion_tokens": 167,
+        "total_tokens": 22605,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 23
+        }
+      }
+    }
+  ]
+}

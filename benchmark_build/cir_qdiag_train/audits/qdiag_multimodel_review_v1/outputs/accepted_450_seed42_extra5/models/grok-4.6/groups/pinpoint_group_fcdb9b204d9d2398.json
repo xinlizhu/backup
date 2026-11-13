@@ -1,0 +1,57 @@
+{
+  "group_id": "pinpoint_group_fcdb9b204d9d2398",
+  "model": "grok-4.6",
+  "signature": "cb958fa178e5ebcdd33f446ebd46fe25a7c20417ca5539cc74de61fb4df99804",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_fcdb9b204d9d2398_query_05113_attribute_substitute",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Single attribute edit from olive to green reconstructs the text and stays fluent. None of the supplied positives is green, so the new color is clearly false for every one."
+    },
+    {
+      "negative_id": "pinpoint_group_fcdb9b204d9d2398_query_05116_object_add",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "The added tassel tie at the neckline is not clearly false: image 6 shows a tassel hanging at the left woman's neckline, so that positive remains compatible."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.6",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "856c8be630ab507d4cdc5dfe1ead77a954ff2dd39349d4fdab76f7e0c733a0da",
+      "input_hash": "09c53f5b8bb9a2856d2621efb3769c558f3f0e9b2e63b28348d559da939499fc",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/grok-4.6/cache/validate_group/09c53f5b8bb9a2856d2621efb3769c558f3f0e9b2e63b28348d559da939499fc.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "9010dba3-802a-940f-9e6e-a21aeb57680e",
+      "usage": {
+        "prompt_tokens": 5487,
+        "completion_tokens": 168,
+        "total_tokens": 11253,
+        "prompt_tokens_details": {
+          "text_tokens": 2721,
+          "audio_tokens": 0,
+          "image_tokens": 2766,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 5598,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 424980000
+      }
+    }
+  ],
+  "format_warnings": []
+}

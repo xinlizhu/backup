@@ -1,0 +1,42 @@
+{
+  "models": [
+    "grok-4.6",
+    "grok-4.7",
+    "kimi-k3",
+    "gpt-6.1-terra",
+    "gpt-5.6-terra"
+  ],
+  "sample": "Exactly the same frozen 450 edits, 50 per original cell",
+  "target_selection": "minimum sha256(seed,single_target,group_id,image_id), among originally reviewed positives; shared across edits and models",
+  "images_per_edit": {
+    "two": 369,
+    "three": 81
+  },
+  "input": "Only source modification text, edited text, reference image(s), selected target and anonymous case/image-role identifiers",
+  "task": "Single-target validity of edited meaning; ADD/SUBSTITUTE must introduce a false target condition, DELETE must strictly weaken the query",
+  "omitted_checks": [
+    "semantic-axis label verification",
+    "before/after span reconstruction",
+    "difficulty rating"
+  ],
+  "uncertainty": "Explicit uncertain outcome, not silently counted as a semantic rejection or excluded",
+  "limitations": [
+    "This is a new single-target semantic check, not a replication of the original all-supplied-positives rule.",
+    "No semantic-axis labels, span anchors, old decisions, or other candidate edits are shown to the judge.",
+    "Necessary reference images are retained; a two-reference query receives three images total.",
+    "The target is an annotated positive; this protocol focuses on the edited condition rather than revalidating the source label.",
+    "The sample was selected from original accepted edits. Rates are conditional acceptance, not annotation accuracy.",
+    "Model responses depend on the supplied API deployment; matching model names alone do not verify upstream model identity."
+  ],
+  "workers": 16,
+  "max_output_tokens": 2048,
+  "calls_per_model": 450,
+  "planned_calls": 2250,
+  "old_run_preserved": true,
+  "old_model_decisions_reused": false,
+  "config": "configs/accepted_450_five_models.yaml",
+  "same_protocol_grok_results_reused": true,
+  "previous_gpt61_results_preserved": true,
+  "completed_single_target_decisions_reused": true,
+  "prior_multi_positive_decisions_reused": false
+}

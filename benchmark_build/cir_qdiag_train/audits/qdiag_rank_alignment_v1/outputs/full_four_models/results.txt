@@ -1,0 +1,18 @@
+CURRENT RESULTS: full-gallery, ADD/SUBSTITUTE subset
+
+Completed models: 4 / 4
+Gallery: 109,598 images; edits: 5,735 ADD/SUBSTITUTE (all 10,131 edits are separately retained).
+rho = weighted Spearman between target-score drop and log(edited rank / original rank).
+Weights follow target -> edit -> source instruction -> group. CIs resample groups, 2,000 times.
+CRR event: target-score drop > model-specific paraphrase threshold.
+P(down | CRR) is conditional on an individual target/edit triggering that event.
+Ranks are full-gallery ranks. Margin uses the tenth highest-scoring OTHER image, recomputed for each query.
+DELETE is descriptive; its weaker query does not imply the original target must be demoted.
+
+CLIP-L Original: rho=0.8273 [0.8153, 0.8384]; P(down | CRR)=99.46%; P(down | non-CRR)=61.37%; P(relative margin decreases | CRR)=99.61%; group-level rho(CRR_g, demotion rate_g)=0.2729.
+CLIP-L RIM + OPRD: rho=0.6751 [0.6547, 0.6952]; P(down | CRR)=93.82%; P(down | non-CRR)=64.74%; P(relative margin decreases | CRR)=95.49%; group-level rho(CRR_g, demotion rate_g)=0.3179.
+Qwen3-VL-Embedding-2B: rho=0.7936 [0.7771, 0.8083]; P(down | CRR)=97.36%; P(down | non-CRR)=63.60%; P(relative margin decreases | CRR)=97.66%; group-level rho(CRR_g, demotion rate_g)=0.4216.
+BGE-VL-MLLM-S2: rho=0.8247 [0.8111, 0.8368]; P(down | CRR)=99.01%; P(down | non-CRR)=67.39%; P(relative margin decreases | CRR)=99.64%; group-level rho(CRR_g, demotion rate_g)=0.3468.
+
+Interpretation: empirical alignment, not a mathematical guarantee. Absolute score drops can coexist with stable or improved ranks when competitors fall further. Do not confuse score-drop/rank correlation with group-level CRR/rank-rate correlation or correlation across models.
+These are results for the full released dataset; they are not the historical 500-group main-table CRRs. The pilot500 rows are supplied separately.

@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_5b7ab8fc78d95d6e",
+  "model": "grok-4.6",
+  "signature": "cb958fa178e5ebcdd33f446ebd46fe25a7c20417ca5539cc74de61fb4df99804",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_5b7ab8fc78d95d6e_query_06653_attribute_delete",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Deleting “one-piece” removes exactly one garment attribute; the query stays fluent, still asks for a romper in the same style, and is strictly weaker."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.6",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "e52cd783d27886e9c2fab64e64f1751b937861bd45394f2f80ab1d3a83fb779f",
+      "input_hash": "bde95ee725f8219419583e2bd404816d816b757d62af5349a14e45a96ae8b40e",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/grok-4.6/cache/validate_group/bde95ee725f8219419583e2bd404816d816b757d62af5349a14e45a96ae8b40e.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "736f5541-54ce-9e43-b501-825ed997346f",
+      "usage": {
+        "prompt_tokens": 5808,
+        "completion_tokens": 84,
+        "total_tokens": 8240,
+        "prompt_tokens_details": {
+          "text_tokens": 2462,
+          "audio_tokens": 0,
+          "image_tokens": 3346,
+          "cached_tokens": 2304
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2348,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 227520000
+      }
+    }
+  ],
+  "format_warnings": []
+}

@@ -1,0 +1,64 @@
+{
+  "case_id": "pair_1906895b2b176d662c17",
+  "signature": "f3a97f608e6addbd5531ad7795f5e06873610abdb12f716de8375d49eda4c022",
+  "simulated": false,
+  "status": "complete",
+  "judgment": {
+    "case_id": "pair_1906895b2b176d662c17",
+    "constraints": [
+      {
+        "constraint": "Remove all but one bird",
+        "A_status": "supported",
+        "B_status": "supported",
+        "A_evidence": "One bird is visible; the other prominent animal is a seal, not another bird.",
+        "B_evidence": "A single bird is visible in the scene."
+      },
+      {
+        "constraint": "Change the water color to grey",
+        "A_status": "supported",
+        "B_status": "supported",
+        "A_evidence": "The surrounding water appears dark grey.",
+        "B_evidence": "The water is visibly grey-brown and muted."
+      },
+      {
+        "constraint": "Raise the remaining bird out of the water",
+        "A_status": "supported",
+        "B_status": "supported",
+        "A_evidence": "The bird is upright and elevated above the water at the shoreline.",
+        "B_evidence": "The bird is standing upright with its body raised above the shallow water."
+      },
+      {
+        "constraint": "Have the remaining bird's mouth open",
+        "A_status": "contradicted",
+        "B_status": "supported",
+        "A_evidence": "The bird's beak appears closed or nearly closed.",
+        "B_evidence": "The bird has a clearly wide-open mouth."
+      }
+    ],
+    "decision": "B",
+    "confidence": "high",
+    "reason": "Both candidates show one bird in grey water with the bird elevated, but B clearly depicts the bird with its mouth open, whereas A's bird appears closed-beaked."
+  },
+  "trace": {
+    "stage": "rank_pair_relative_preference",
+    "model_name": "gpt-5.6-terra",
+    "model_revision": null,
+    "provider": "openai-compatible-chat",
+    "reasoning_effort": null,
+    "prompt_version": "rank_preference_relative_v2",
+    "prompt_hash": "8b39b684fb6504a1740c4559d430cdce5962254edd191d964355954fc708a4c1",
+    "input_hash": "1b7c4080970720ac13ce4fea7f4803098284c07e79a8f81052f34c6fc32a362d",
+    "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_rank_preference_v1/outputs/gc_epochs14_top3_relative/api_cache/rank_pair_relative_preference/1b7c4080970720ac13ce4fea7f4803098284c07e79a8f81052f34c6fc32a362d.json",
+    "cached": false,
+    "attempts": 1,
+    "request_id": "resp_ack_7d3198798ec7f3b81738a0ebcedb5b99",
+    "usage": {
+      "prompt_tokens": 7665,
+      "completion_tokens": 603,
+      "total_tokens": 8268,
+      "completion_tokens_details": {
+        "reasoning_tokens": 325
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+data:
+  annotation_path: /mnt/data/datasets/search_dataset/zxl/CIR_new/datasets/CIRR/cirr/captions/cap.rc2.train.json
+  image_split_path: /mnt/data/datasets/search_dataset/zxl/CIR_new/datasets/CIRR/cirr/image_splits/split.rc2.train.json
+  image_root: /mnt/data/datasets/search_dataset/zxl/CIR_new/datasets/CIRR
+  split: train
+  verify_images: true
+
+sampling:
+  limit: null
+  seed: 42
+  strategy: first
+
+model:
+  backend: openai
+  api_base: ${OPENAI_BASE_URL}
+  api_key: ${OPENAI_API_KEY}
+  timeout_seconds: 600
+  max_retries: 5
+  image_detail: high
+  structured_output_mode: prompt
+  generation_model: gpt-5.6-terra
+  validation_model: gpt-5.6-terra
+  generation_reasoning_effort: null
+  validation_reasoning_effort: null
+
+generation:
+  max_output_tokens: 2048
+
+validation:
+  max_output_tokens: 4096
+
+paraphrase:
+  num_variants: 5
+  generation_max_output_tokens: 2048
+  review_max_output_tokens: 4096
+  max_workers: 8
+
+runtime:
+  output_dir: outputs/cirr_train_full_v8
+  prompt_version: v8
+  resume: true
+  max_workers: 80

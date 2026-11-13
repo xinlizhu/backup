@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_9bbfe3d3dcaa128e",
+  "model": "grok-4.7",
+  "signature": "52913ea34ae01078c58f7a80fc2119b86ef4b6b3449e9e55b21816a5d5d1ccbd",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_9bbfe3d3dcaa128e_query_06827_object_substitute",
+      "decision": "reject",
+      "failure_code": "wrong_semantic_target",
+      "reason": "Replacing “denim” with “leather” changes only the jacket’s material, an attribute of the same jacket, not its object identity."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.7",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "29b7e4746c0146c691006a25c56428025f89d9164ff8a50ec02d7671b303afc6",
+      "input_hash": "912a8dbaf1549d25929efa6f26898992fcac06272d2d0428b889de8bd623dbd8",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/grok-4.7/cache/validate_group/912a8dbaf1549d25929efa6f26898992fcac06272d2d0428b889de8bd623dbd8.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "b05e843c-4778-998f-824d-76a223900ee5",
+      "usage": {
+        "prompt_tokens": 5495,
+        "completion_tokens": 84,
+        "total_tokens": 8179,
+        "prompt_tokens_details": {
+          "text_tokens": 2440,
+          "audio_tokens": 0,
+          "image_tokens": 3055,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2600,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 240220000
+      }
+    }
+  ],
+  "format_warnings": []
+}

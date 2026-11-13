@@ -1,0 +1,91 @@
+{
+  "case_id": "case_076848bc0269b90fd3ca",
+  "audit_query_id": "audit_query_100",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_076848bc0269b90fd3ca",
+    "case_status": "source_invalid_or_uncertain",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "A prepared dish has browned melted cheese on top, but its visible container appears to be a shallow metal baking pan; the requested bowl is not clearly supported."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Three dogs stand outdoors among snow-covered trees; no bowl, prepared food dish, or cheese topping is visible."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "A bowl containing a prepared dish.",
+      "Cheese on top of the dish."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_076848bc0269b90fd3ca",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "A food dish covered with melted, browned cheese is visible in a shallow round metal baking vessel. The cheese topping is clear, but the vessel appears to be a baking pan or tray; its identification as a bowl is not reliably established."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Three dogs stand outdoors among snow-covered trees. No bowl, food dish, or cheese topping is visible."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "caee9f0b56b24c37a2f76c2d70b9e6be1e5030c36ed876a6343f513a2a7d6876",
+      "input_hash": "1f15615f379212809e345df7543a47e15b61772f38aeec310b0fea0cb3873c70",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/1f15615f379212809e345df7543a47e15b61772f38aeec310b0fea0cb3873c70.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0b40ba1a6358ea99016af2bf4a158087d08e70a022c94ce8af",
+      "usage": {
+        "prompt_tokens": 13592,
+        "completion_tokens": 236,
+        "total_tokens": 13828,
+        "prompt_tokens_details": {
+          "cached_tokens": 3830
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 52
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "76c406db888aa958f3aa354083b3e0dfddc4948ff33cdc3c480838f51a964c7b",
+      "input_hash": "c884af45099ffd24c68793d7df3c4c0dec8a03d48e6f88d02a9948dd9e4825d7",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/c884af45099ffd24c68793d7df3c4c0dec8a03d48e6f88d02a9948dd9e4825d7.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_03df2362421be768016af2bf5d1b4887d299d6303908195826",
+      "usage": {
+        "prompt_tokens": 13050,
+        "completion_tokens": 148,
+        "total_tokens": 13198,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 25
+        }
+      }
+    }
+  ]
+}

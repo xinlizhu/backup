@@ -1,0 +1,163 @@
+{
+  "case_id": "case_37e369a1cbbe18714409",
+  "audit_query_id": "audit_query_080",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_37e369a1cbbe18714409",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "A bright yellow flower stands in a white vase, providing the colorful floral decoration requested relative to R's pale blossoms."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The vase-shaped mosaic lamp casts yellow light, but there is no flower in its visibly open top."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "A yellow flower must be present in a vase."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "object",
+        "before_span": "flower",
+        "after_span": "light",
+        "edited_instruction": "Bright up the room with a yellow light in a vase.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "Replace the flower in the vase with a light, retaining its yellow color and location in the vase.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The white vase holds a yellow flower; it contains no visible yellow light and is not glowing."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Yellow light shines from inside the mosaic vase-shaped lamp and illuminates the surrounding wall and surface."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_37e369a1cbbe18714409",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a bright yellow daffodil with its stem in a white vase, satisfying the requested yellow flower arrangement."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a vase-shaped mosaic lamp emitting yellow light; no flower is present."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing 'flower' with 'light' is one object substitution that exactly reconstructs the edited instruction. The yellow attribute and containment in a vase remain meaningful and visibly grounded. The positive has a yellow flower, while the candidate has yellow illumination originating inside a vase-shaped vessel.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 contains a yellow flower in an opaque white vase, with no yellow light illuminating the vase or its surroundings."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows yellow light shining from within the mosaic vase-shaped vessel and casting a yellow glow onto the surrounding wall and surface."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "substitute",
+      "semantic_target": "object",
+      "before_span": "flower",
+      "after_span": "light",
+      "edited_instruction": "Bright up the room with a yellow light in a vase.",
+      "witness_type": "substitution_contrast",
+      "changed_constraint": "Replace the flower in the vase with a light, retaining its yellow color and location in the vase.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "The white vase holds a yellow flower; it contains no visible yellow light and is not glowing."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "Yellow light shines from inside the mosaic vase-shaped lamp and illuminates the surrounding wall and surface."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing 'flower' with 'light' is one object substitution that exactly reconstructs the edited instruction. The yellow attribute and containment in a vase remain meaningful and visibly grounded. The positive has a yellow flower, while the candidate has yellow illumination originating inside a vase-shaped vessel.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 contains a yellow flower in an opaque white vase, with no yellow light illuminating the vase or its surroundings."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows yellow light shining from within the mosaic vase-shaped vessel and casting a yellow glow onto the surrounding wall and surface."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "4814de3d8d2e89b5810107c6461f1c5c21038f8a095ab9ca07839e1faa3c3a50",
+      "input_hash": "b6200ae8d3dd016bf46e52d2b629cad58f010351e8c1abf0ba2c83eb2d9df572",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/b6200ae8d3dd016bf46e52d2b629cad58f010351e8c1abf0ba2c83eb2d9df572.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_07f65f19218b67a6016af2be40d36887d19cb43d6fce08e390",
+      "usage": {
+        "prompt_tokens": 8808,
+        "completion_tokens": 511,
+        "total_tokens": 9319,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 158
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "eca36b107634af24d8b07de9dfdd7c1e557e8d771cd041b6649d4f6e4d02febb",
+      "input_hash": "fe26b46c128a3534909142b407886df274ade36c4a9c0a6c6063b23b66e6d4d4",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/fe26b46c128a3534909142b407886df274ade36c4a9c0a6c6063b23b66e6d4d4.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_075d085c0a3f3a22016af2be6bec1887d2b67ed674361d9e13",
+      "usage": {
+        "prompt_tokens": 8330,
+        "completion_tokens": 318,
+        "total_tokens": 8648,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        }
+      }
+    }
+  ]
+}

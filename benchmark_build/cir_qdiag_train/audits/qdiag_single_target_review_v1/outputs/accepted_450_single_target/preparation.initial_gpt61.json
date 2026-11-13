@@ -1,0 +1,37 @@
+{
+  "identity": {
+    "source_signature": "bd1831c68960abe458dbc4ffb203c5a0121dc541b550a246321120f3482e28c4",
+    "source_sample_sha256": "aa488599d9f1187738228849810575d3227057ff0d2b4f4650264e0377fb7d19",
+    "source_groups_sha256": "e3a9fe774e54fdd3784e0fc28f0ab81d236db2e5aa2fa17edbce4d80f3ea210a",
+    "seed": 42,
+    "protocol": "single_target_simple_v1",
+    "prompt_sha256": "9220441f99c96da4fa78ee7e22b00c41e7b83c7de9cf11dc6abca26fdbfa0f5d",
+    "target_rule": "minimum sha256(seed,single_target,group_id,image_id), among originally reviewed positives; shared across edits and models"
+  },
+  "signature": "6e4b56e501b73bb6084e58003a6736c4e6de8d68798ccd904c0c873bd7f24210",
+  "sampled_edits": 450,
+  "per_cell": 50,
+  "groups": 351,
+  "reference_count_by_edit": {
+    "1": 369,
+    "2": 81
+  },
+  "models": [
+    "gpt-6.1-terra",
+    "grok-4.6"
+  ],
+  "planned_calls": 900,
+  "limits": [
+    "This is a new single-target semantic check, not a replication of the original all-supplied-positives rule.",
+    "No semantic-axis labels, span anchors, old decisions, or other candidate edits are shown to the judge.",
+    "Necessary reference images are retained; a two-reference query receives three images total.",
+    "The target is an annotated positive; this protocol focuses on the edited condition rather than revalidating the source label.",
+    "The sample was selected from original accepted edits. Rates are conditional acceptance, not annotation accuracy.",
+    "Model responses depend on the supplied API deployment; matching model names alone do not verify upstream model identity."
+  ],
+  "artifacts": {
+    "cases.private.jsonl": "7ecf8fc9591e01985a2255556382bf54d5a2ed2acffebda0cb3ac68b968bb056",
+    "image_inventory.json": "0f11d89a12c6276a60d83a43c89613a97ca0820ed8e8640c9acb88519d7bf0f9",
+    "review_prompt.txt": "9220441f99c96da4fa78ee7e22b00c41e7b83c7de9cf11dc6abca26fdbfa0f5d"
+  }
+}

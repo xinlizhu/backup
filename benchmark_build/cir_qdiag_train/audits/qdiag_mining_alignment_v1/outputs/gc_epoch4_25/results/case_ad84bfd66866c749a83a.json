@@ -1,0 +1,166 @@
+{
+  "case_id": "case_ad84bfd66866c749a83a",
+  "audit_query_id": "audit_query_095",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_ad84bfd66866c749a83a",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "T shows one bird with its body raised above shallow grey water and its mouth open."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows one bird with its mouth open and body above the water, but the water is blue rather than grey."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "Change water color to grey"
+    ],
+    "witnesses": [
+      {
+        "witness_id": "delete_attribute_grey_water",
+        "operation": "delete",
+        "semantic_target": "attribute",
+        "before_span": "change water color to grey, and",
+        "after_span": null,
+        "edited_instruction": "Remove all but one bird, raise remaining bird out of wate with it's mouth open.",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "The grey-water color requirement is removed; C visibly has blue water, while T has grey water.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "T shows one bird raised above the water with its mouth open; the edited instruction no longer specifies water color."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C shows one bird raised above the water with its mouth open; water color is unrestricted in the edited instruction."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_ad84bfd66866c749a83a",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows one pelican with its head, long neck, upper body, and spread wings raised above grey water. Its beak is visibly wide open."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows one pelican with its head, neck, and upper chest above the water and its beak wide open, but the water is blue rather than grey."
+    },
+    "verdicts": [
+      {
+        "witness_id": "delete_attribute_grey_water",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "The specified span deletes only the water-color constraint and its attached conjunction, reconstructing the edited instruction. Both images satisfy the retained single-bird, raised posture, and open-mouth constraints; the candidate violates only the removed grey-water requirement.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "One pelican is visible, with its neck and upper body raised above the water and its beak wide open."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "One pelican is visible, holding its head, neck, and upper chest above the water with its beak wide open."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "delete_attribute_grey_water",
+      "operation": "delete",
+      "semantic_target": "attribute",
+      "before_span": "change water color to grey, and",
+      "after_span": null,
+      "edited_instruction": "Remove all but one bird, raise remaining bird out of wate with it's mouth open.",
+      "witness_type": "deletion_relaxation",
+      "changed_constraint": "The grey-water color requirement is removed; C visibly has blue water, while T has grey water.",
+      "edited_on_positive": {
+        "status": "supported",
+        "evidence": "T shows one bird raised above the water with its mouth open; the edited instruction no longer specifies water color."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C shows one bird raised above the water with its mouth open; water color is unrestricted in the edited instruction."
+      },
+      "independent_review": {
+        "witness_id": "delete_attribute_grey_water",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "The specified span deletes only the water-color constraint and its attached conjunction, reconstructing the edited instruction. Both images satisfy the retained single-bird, raised posture, and open-mouth constraints; the candidate violates only the removed grey-water requirement.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "One pelican is visible, with its neck and upper body raised above the water and its beak wide open."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "One pelican is visible, holding its head, neck, and upper chest above the water with its beak wide open."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "delete_attribute_grey_water",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "74039e785539786e2a4a728e0845cab1d76ad0bd6768d72e9cc0a2c55b9fad26",
+      "input_hash": "c3433925bbbd23dd9b13a8aa5c8e7e4330975bac71b72d6ad510c4e8bf5cacef",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/c3433925bbbd23dd9b13a8aa5c8e7e4330975bac71b72d6ad510c4e8bf5cacef.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0a9dfe15b9edc217016af2bfa5c0f487d2bb515ba71ccd0d59",
+      "usage": {
+        "prompt_tokens": 12181,
+        "completion_tokens": 766,
+        "total_tokens": 12947,
+        "prompt_tokens_details": {
+          "cached_tokens": 5888
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 489
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "b7e42bb1d9c9ea2c06239501c2d897d9a61249cfa05e22ab1045829c62348eed",
+      "input_hash": "ccfb4e52ee625952abc02ceeed61975f5e7cd6545c78e42614fd9371974df048",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/ccfb4e52ee625952abc02ceeed61975f5e7cd6545c78e42614fd9371974df048.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0de61942bbdd7ff2016af2bfb9a2a087d294d6bad268e432f5",
+      "usage": {
+        "prompt_tokens": 11553,
+        "completion_tokens": 397,
+        "total_tokens": 11950,
+        "prompt_tokens_details": {
+          "cached_tokens": 3482
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 60
+        }
+      }
+    }
+  ]
+}

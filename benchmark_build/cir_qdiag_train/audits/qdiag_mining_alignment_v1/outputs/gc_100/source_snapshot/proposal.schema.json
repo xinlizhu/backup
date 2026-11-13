@@ -1,0 +1,262 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "case_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "case_status": {
+      "enum": [
+        "source_valid",
+        "source_invalid_or_uncertain"
+      ]
+    },
+    "source_on_positive": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "enum": [
+            "supported",
+            "contradicted",
+            "uncertain"
+          ]
+        },
+        "evidence": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500
+        }
+      },
+      "required": [
+        "status",
+        "evidence"
+      ]
+    },
+    "source_on_candidate": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "enum": [
+            "supported",
+            "contradicted",
+            "uncertain"
+          ]
+        },
+        "evidence": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500
+        }
+      },
+      "required": [
+        "status",
+        "evidence"
+      ]
+    },
+    "candidate_relation": {
+      "enum": [
+        "compatible",
+        "single_constraint_conflict",
+        "multiple_constraint_conflict",
+        "unrelated",
+        "uncertain"
+      ]
+    },
+    "violated_source_constraints": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "witnesses": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "witness_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "operation": {
+            "enum": [
+              "add",
+              "substitute",
+              "delete"
+            ]
+          },
+          "semantic_target": {
+            "enum": [
+              "object",
+              "attribute",
+              "predicate"
+            ]
+          },
+          "before_span": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 1
+          },
+          "after_span": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 1
+          },
+          "edited_instruction": {
+            "type": "string",
+            "minLength": 1
+          },
+          "witness_type": {
+            "enum": [
+              "substitution_contrast",
+              "deletion_relaxation",
+              "addition_disambiguation"
+            ]
+          },
+          "changed_constraint": {
+            "type": "string",
+            "minLength": 1
+          },
+          "edited_on_positive": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "status": {
+                "enum": [
+                  "supported",
+                  "contradicted",
+                  "uncertain"
+                ]
+              },
+              "evidence": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 500
+              }
+            },
+            "required": [
+              "status",
+              "evidence"
+            ]
+          },
+          "edited_on_candidate": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "status": {
+                "enum": [
+                  "supported",
+                  "contradicted",
+                  "uncertain"
+                ]
+              },
+              "evidence": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 500
+              }
+            },
+            "required": [
+              "status",
+              "evidence"
+            ]
+          }
+        },
+        "required": [
+          "witness_id",
+          "operation",
+          "semantic_target",
+          "before_span",
+          "after_span",
+          "edited_instruction",
+          "witness_type",
+          "changed_constraint",
+          "edited_on_positive",
+          "edited_on_candidate"
+        ],
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "operation": {
+                  "const": "add"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "before_span": {
+                  "type": "null"
+                },
+                "after_span": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "operation": {
+                  "const": "delete"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "before_span": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "after_span": {
+                  "type": "null"
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "operation": {
+                  "const": "substitute"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "before_span": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "after_span": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          }
+        ]
+      },
+      "maxItems": 9
+    }
+  },
+  "required": [
+    "case_id",
+    "case_status",
+    "source_on_positive",
+    "source_on_candidate",
+    "candidate_relation",
+    "violated_source_constraints",
+    "witnesses"
+  ]
+}

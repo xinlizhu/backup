@@ -1,0 +1,230 @@
+{
+  "case_id": "case_d2b991d5f27cff5d84ce",
+  "audit_query_id": "audit_query_083",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_d2b991d5f27cff5d84ce",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Relative to the reference's multiple boxes, T shows a single body-cream container with one matching box."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "C shows one perfume bottle with one matching Jimmy Choo Blossom box, satisfying the single-product-with-box instruction."
+    },
+    "candidate_relation": "compatible",
+    "violated_source_constraints": [],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "add",
+        "semantic_target": "object",
+        "before_span": null,
+        "after_span": "perfume",
+        "edited_instruction": "Leave a single perfume product with its box",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "The single product must be perfume.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "T contains a body-cream container labeled 'Body Cream & Skin Care', not perfume."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C contains a single perfume bottle and its matching box, labeled 'EAU DE PARFUM'."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "operation": "add",
+        "semantic_target": "attribute",
+        "before_span": null,
+        "after_span": "pink",
+        "edited_instruction": "Leave a single pink product with its box",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "The single product must be pink.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "T's product container is white with a silver cap; its box is pink."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C shows a pink perfume bottle accompanied by its matching box."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_d2b991d5f27cff5d84ce",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "T shows one body-cream tube with one matching box. This satisfies the requested single product with its box, compared with the multiple boxes in R."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "C shows one Jimmy Choo Blossom bottle with one matching branded box, satisfying the single-product-and-box constraint."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "Inserting 'perfume' adds one product-category constraint while preserving the single product and its box. Both images satisfy q; only C satisfies the added perfume constraint.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "T's tube and matching box are labeled 'Body Cream & Skin Care'; the depicted product is body cream, not perfume."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C shows a perfume bottle with its matching Jimmy Choo Blossom box, visibly labeled 'EAU DE PARFUM'."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "Inserting 'pink' adds one color attribute to the product. T's product is white with a silver cap, whereas C's bottle is visibly pink. Both retain one product with its matching box.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The body-cream tube is predominantly white with a silver cap. Its box is pink, but the added attribute modifies the product itself."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The single perfume bottle has a visibly pink body and stands beside its matching pink box."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "add",
+      "semantic_target": "object",
+      "before_span": null,
+      "after_span": "perfume",
+      "edited_instruction": "Leave a single perfume product with its box",
+      "witness_type": "addition_disambiguation",
+      "changed_constraint": "The single product must be perfume.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "T contains a body-cream container labeled 'Body Cream & Skin Care', not perfume."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C contains a single perfume bottle and its matching box, labeled 'EAU DE PARFUM'."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "Inserting 'perfume' adds one product-category constraint while preserving the single product and its box. Both images satisfy q; only C satisfies the added perfume constraint.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "T's tube and matching box are labeled 'Body Cream & Skin Care'; the depicted product is body cream, not perfume."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C shows a perfume bottle with its matching Jimmy Choo Blossom box, visibly labeled 'EAU DE PARFUM'."
+        }
+      }
+    },
+    {
+      "witness_id": "w2",
+      "operation": "add",
+      "semantic_target": "attribute",
+      "before_span": null,
+      "after_span": "pink",
+      "edited_instruction": "Leave a single pink product with its box",
+      "witness_type": "addition_disambiguation",
+      "changed_constraint": "The single product must be pink.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "T's product container is white with a silver cap; its box is pink."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C shows a pink perfume bottle accompanied by its matching box."
+      },
+      "independent_review": {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "Inserting 'pink' adds one color attribute to the product. T's product is white with a silver cap, whereas C's bottle is visibly pink. Both retain one product with its matching box.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The body-cream tube is predominantly white with a silver cap. Its box is pink, but the added attribute modifies the product itself."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The single perfume bottle has a visibly pink body and stands beside its matching pink box."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    },
+    {
+      "witness_id": "w2",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "fad5756582085db376c7eb199c1e83e39fa251237e331e4c275cf79df28008c8",
+      "input_hash": "fe9720243d3f6e701c6632a223dfff1a21d3df51025fa069b8b08e5dbe2a38c4",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/fe9720243d3f6e701c6632a223dfff1a21d3df51025fa069b8b08e5dbe2a38c4.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_07f2e57e11246517016af2bd4389a087d2ac17b3761971b015",
+      "usage": {
+        "prompt_tokens": 9539,
+        "completion_tokens": 686,
+        "total_tokens": 10225,
+        "completion_tokens_details": {
+          "reasoning_tokens": 208
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "3a7ebb0e3b27e8ea68b08ec61b66ffc2aee9d20020c9f508ec73baae15a674de",
+      "input_hash": "10366f3b095088d6f9f92cb638511150579e2fc0368aee35bcb709f427cdcad5",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/10366f3b095088d6f9f92cb638511150579e2fc0368aee35bcb709f427cdcad5.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0c6f5a5b5416ce1d016af2bd5a384887d185bba20d616526e1",
+      "usage": {
+        "prompt_tokens": 9117,
+        "completion_tokens": 481,
+        "total_tokens": 9598,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        }
+      }
+    }
+  ]
+}

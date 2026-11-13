@@ -1,0 +1,166 @@
+{
+  "case_id": "case_63599652efd4cd71f806",
+  "audit_query_id": "audit_query_083",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_63599652efd4cd71f806",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "T shows one body-cream container alongside its matching box, satisfying the requested single product with its box."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows three RoC product containers beside a box, rather than a single product."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "Only a single product should remain with its box."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "attribute",
+        "before_span": "a single product with its",
+        "after_span": "three products with their",
+        "edited_instruction": "Leave three products with their box",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "Change the product count from one to three; plural agreement preserves the relation to the accompanying box.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "T contains one product container and its box, not three products."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C contains three RoC containers—a small tube and two taller containers—alongside a matching RoC box."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_63599652efd4cd71f806",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows one body cream container with one matching retail box, satisfying the requested single product with its box."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows three separate product containers—a small tube and two bottles—with a retail box, contradicting the single-product requirement."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "The replacement reconstructs the edited instruction and changes only product count from one to three. Pluralizing 'product' and changing 'its' to 'their' are grammatical agreement changes. The box requirement remains intact, and the visible product counts establish the substitution contrast.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 contains only one product container with its box, rather than three products."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 contains three RoC product containers in front of a matching RoC retail box."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "substitute",
+      "semantic_target": "attribute",
+      "before_span": "a single product with its",
+      "after_span": "three products with their",
+      "edited_instruction": "Leave three products with their box",
+      "witness_type": "substitution_contrast",
+      "changed_constraint": "Change the product count from one to three; plural agreement preserves the relation to the accompanying box.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "T contains one product container and its box, not three products."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C contains three RoC containers—a small tube and two taller containers—alongside a matching RoC box."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "The replacement reconstructs the edited instruction and changes only product count from one to three. Pluralizing 'product' and changing 'its' to 'their' are grammatical agreement changes. The box requirement remains intact, and the visible product counts establish the substitution contrast.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 contains only one product container with its box, rather than three products."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 contains three RoC product containers in front of a matching RoC retail box."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "020879550de9758a1bbb0c7986318d5855381e269d36d9deb019ab5bd7b53a11",
+      "input_hash": "bfd79d53b5baf3dadd5dbe1cbc7ef42f294eb6f7051a879ed1aec35416b94381",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/bfd79d53b5baf3dadd5dbe1cbc7ef42f294eb6f7051a879ed1aec35416b94381.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0831253b917911ed016af2bdfeb73487d1aeda7d366b7ff197",
+      "usage": {
+        "prompt_tokens": 7592,
+        "completion_tokens": 861,
+        "total_tokens": 8453,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 516
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "2cef13a01840d7ddbe13294f328d9714e17f6299ca4d0077bcc736c3fbd19488",
+      "input_hash": "b74c3d6a640845456eec8ab41c9a469d8d244e279ace3892bb448d9546ded749",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/b74c3d6a640845456eec8ab41c9a469d8d244e279ace3892bb448d9546ded749.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_00ec98ff694302f5016af2be35733087d2bdec5e0f8cd33f7e",
+      "usage": {
+        "prompt_tokens": 7116,
+        "completion_tokens": 336,
+        "total_tokens": 7452,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 26
+        }
+      }
+    }
+  ]
+}

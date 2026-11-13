@@ -1,0 +1,160 @@
+{
+  "case_id": "case_90a49a437c15919d5b4f",
+  "audit_query_id": "audit_query_097",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_90a49a437c15919d5b4f",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Relative to R's conventional gold-colored saxophone, T shows a saxophone with a clearly blue body and bell."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows a saxophone with a dark purple body and bell, rather than the requested blue finish."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The saxophone must be blue."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "attribute",
+        "before_span": "blue",
+        "after_span": "purple",
+        "edited_instruction": "be a purple saxophone instead of a regular one.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "The saxophone's body color changes from blue to purple.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "T's saxophone has a blue body and bell, not purple."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C's saxophone has a purple body and bell, contrasting with R's conventional gold finish."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_90a49a437c15919d5b4f",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a saxophone with a clearly blue body, neck, and bell, replacing the conventional gold finish of the reference saxophone."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a saxophone with a dark purple body, neck, and bell rather than a blue finish."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing 'blue' with 'purple' is one attribute substitution that exactly reconstructs the proposed instruction and preserves the saxophone entity and all other meanings. The visible body colors establish the required reversed support pattern.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The saxophone in Image 2 has a saturated blue finish, not a purple finish."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The saxophone in Image 3 has a purple finish, visibly distinct from the reference's conventional gold finish."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "substitute",
+      "semantic_target": "attribute",
+      "before_span": "blue",
+      "after_span": "purple",
+      "edited_instruction": "be a purple saxophone instead of a regular one.",
+      "witness_type": "substitution_contrast",
+      "changed_constraint": "The saxophone's body color changes from blue to purple.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "T's saxophone has a blue body and bell, not purple."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C's saxophone has a purple body and bell, contrasting with R's conventional gold finish."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing 'blue' with 'purple' is one attribute substitution that exactly reconstructs the proposed instruction and preserves the saxophone entity and all other meanings. The visible body colors establish the required reversed support pattern.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The saxophone in Image 2 has a saturated blue finish, not a purple finish."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The saxophone in Image 3 has a purple finish, visibly distinct from the reference's conventional gold finish."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "de9d791d4aaac4b438a5823cbf046e2fe49014ac6e88f71249b63557a7fb7cea",
+      "input_hash": "7c1284d5cfb8b1474fb61f0ff7077249524c9c291fde0e0c137c7d8e379e3240",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/7c1284d5cfb8b1474fb61f0ff7077249524c9c291fde0e0c137c7d8e379e3240.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0e3e721a02151670016af2bf49225c87d2828848a168a92f6a",
+      "usage": {
+        "prompt_tokens": 7748,
+        "completion_tokens": 439,
+        "total_tokens": 8187,
+        "completion_tokens_details": {
+          "reasoning_tokens": 100
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "948711159b1ae29a71a3330816bd963c84ae7c6f3db877fb24f02f35b204b8a9",
+      "input_hash": "62cd654373133315dd106ff4c548bdb583f7895acfcbe9f15eb887155586ca5a",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/62cd654373133315dd106ff4c548bdb583f7895acfcbe9f15eb887155586ca5a.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_04f452005fd7cfe9016af2bf567a7887d296cc6ca32bc078ad",
+      "usage": {
+        "prompt_tokens": 7269,
+        "completion_tokens": 307,
+        "total_tokens": 7576,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        }
+      }
+    }
+  ]
+}

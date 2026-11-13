@@ -1,0 +1,174 @@
+{
+  "case_id": "case_b7fe769686bc2a7ef175",
+  "audit_query_id": "audit_query_098",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_b7fe769686bc2a7ef175",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "A woman faces the camera from behind a large group of sled dogs in a snowy landscape, replacing the reference's reindeer-and-sleigh scene."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Women in graduation gowns face the camera among other graduates and balloons, but no group of dogs is present."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The woman must pose with a group of dogs."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "object",
+        "before_span": "dogs",
+        "after_span": "graduates",
+        "edited_instruction": "Make the woman to pose for camera with group of graduates instead showing different scene into picture",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "Replace the group of dogs accompanying the woman with a group of graduates.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The woman is with sled dogs; the people wear winter clothing, with no group of graduates shown."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Women face the camera within a group wearing graduation gowns and mortarboards."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "operation": "delete",
+        "semantic_target": "object",
+        "before_span": "with group of dogs",
+        "after_span": null,
+        "edited_instruction": "Make the woman to pose for camera instead showing different scene into picture",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "Remove the requirement that a group of dogs accompany the woman.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "A woman faces the camera behind the sled-dog team in a scene different from the reference."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Women pose facing the camera at a graduation gathering, a different scene from the reference."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_b7fe769686bc2a7ef175",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "A large dog team stands in front of two bundled people on a sled. The dogs are clear, but the people's faces and activity do not reliably establish that a woman is posing for the camera rather than riding or handling the sled."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Women in graduation caps and gowns stand together facing the camera. They are accompanied by other graduates, with no group of dogs visible."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "reject",
+        "failure_code": "source_invalid_or_uncertain",
+        "witness_type": null,
+        "reason": "Replacing 'dogs' with 'graduates' is a single object substitution, and the candidate supports the edited instruction. However, the positive does not reliably establish the original requirement that a woman pose for the camera, so the required source support pattern is unproven.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The people are bundled in winter clothing behind a dog team; there is no visible group of graduates."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Several women wearing graduation caps and gowns stand together, with foreground women facing the camera as part of the graduate group."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "decision": "reject",
+        "failure_code": "source_invalid_or_uncertain",
+        "witness_type": null,
+        "reason": "The deletion removes the dog-group requirement and reconstructs the proposed instruction. The candidate supports the relaxed instruction, but posing for the camera remains uncertain on the positive, preventing both the original and relaxed positive support from being established.",
+        "edited_on_positive": {
+          "status": "uncertain",
+          "evidence": "The people are positioned on a sled behind the dogs. Their visible posture and faces do not clearly distinguish a woman posing for the camera from people riding or managing the sled."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Foreground women in graduation attire stand facing the camera, including a smiling woman near the center."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": false,
+      "local_failures": [
+        "wrong_witness_type",
+        "wrong_support_pattern"
+      ],
+      "review_decision": "reject"
+    },
+    {
+      "witness_id": "w2",
+      "accepted": false,
+      "local_failures": [
+        "wrong_witness_type",
+        "wrong_support_pattern"
+      ],
+      "review_decision": "reject"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "9470ce6f26e4cf88ffbaa12b9a8cf256938bf0a672b05fcba73c43592596daec",
+      "input_hash": "18b64414bba7bdb8f97c7933a887ab81d2a35435d558bae4dee8d356141b25fb",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/18b64414bba7bdb8f97c7933a887ab81d2a35435d558bae4dee8d356141b25fb.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_04d43ac9f9b18a61016af2bd6085ec87d18b30fe7fdb883cbf",
+      "usage": {
+        "prompt_tokens": 7355,
+        "completion_tokens": 751,
+        "total_tokens": 8106,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 217
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "a5f84c354d065cb3b1a7b64f3bbff2f3ea4f935119f0cca9ced30cfb83c16733",
+      "input_hash": "f0be270eb02f093b2bf3f47260c3d7ef4ed1fa5018e6cab7db775e509e0eb014",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/f0be270eb02f093b2bf3f47260c3d7ef4ed1fa5018e6cab7db775e509e0eb014.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_01ddf4668b967568016af2bd87474487d198eb7f7dc8fc82e6",
+      "usage": {
+        "prompt_tokens": 6952,
+        "completion_tokens": 727,
+        "total_tokens": 7679,
+        "completion_tokens_details": {
+          "reasoning_tokens": 198
+        }
+      }
+    }
+  ]
+}

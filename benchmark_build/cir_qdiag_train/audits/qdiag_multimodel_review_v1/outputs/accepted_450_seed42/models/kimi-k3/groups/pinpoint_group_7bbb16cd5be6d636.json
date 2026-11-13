@@ -1,0 +1,64 @@
+{
+  "group_id": "pinpoint_group_7bbb16cd5be6d636",
+  "model": "kimi-k3",
+  "signature": "7bcee9a6a15f47b49de535c2997e213c18a83885fbb254d34ea6aaed145faa23",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_7bbb16cd5be6d636_query_05467_predicate_add",
+      "decision": "reject",
+      "failure_code": "not_visually_verifiable",
+      "reason": "The added clause 'echo its geometric patterns' presupposes that <img1> decor has geometric patterns. Reference image 1 shows a burgundy chaise against paneled walls with no clear geometric patterns, and the supplied positives are plain white chairs; whether this new requirement is false for them cannot be judged reliably from the references and positives."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "kimi-k3",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "72a1cbd0fdc571685ab4de9e02f799462bd8316cfd436886b0ecc64a09801fbc",
+      "input_hash": "ee60183f5775035479584bfcfba0b0dd260f698f1ae4a34ac5dbe23663cce2be",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/kimi-k3/cache/validate_group/ee60183f5775035479584bfcfba0b0dd260f698f1ae4a34ac5dbe23663cce2be.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "01a1c9ba32427530aadc437c53c833cb",
+      "usage": {
+        "prompt_tokens": 4910,
+        "completion_tokens": 333,
+        "total_tokens": 5243,
+        "prompt_cache_hit_tokens": 768,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "text_tokens": 0,
+          "audio_tokens": 0,
+          "image_tokens": 0
+        },
+        "completion_tokens_details": {
+          "text_tokens": 0,
+          "audio_tokens": 0,
+          "image_tokens": 0,
+          "reasoning_tokens": 0
+        },
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "input_tokens_details": null,
+        "claude_cache_creation_5_m_tokens": 0,
+        "claude_cache_creation_1_h_tokens": 0,
+        "credit": 2.94
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_7bbb16cd5be6d636_query_05467_predicate_add",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 357,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

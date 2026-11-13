@@ -1,0 +1,49 @@
+{
+  "group_id": "pinpoint_group_c42bee4a0fc0c9b0",
+  "model": "claude-sonnet-5-5",
+  "signature": "aff20e5a5733d87f80fd7515c25d92c77cff20d4f50c9f8dbf4123bfdabed97b",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_c42bee4a0fc0c9b0_query_02559_attribute_delete",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Valid DELETE of single attribute constraint. Source text specifies 'evenly spaced horizontal stripes'; negative text removes 'evenly spaced' while preserving 'horizontal stripes across the garment.' All positive images show stripes with varying spacing regularity, confirming that removing the spacing constraint produces a weaker, still-meaningful query. Fluent and grammatically correct."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-sonnet-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "9a6f846ff2d7d0f72d2306ae5dd3ce7d06711a17e8a26f3dfb22e06d8ac7fef5",
+      "input_hash": "422195a41a241bd3ba8fe40f0d1e24b460e9724c5579a3d5ea2b79d9380fb896",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/claude-sonnet-5-5/cache/validate_group/422195a41a241bd3ba8fe40f0d1e24b460e9724c5579a3d5ea2b79d9380fb896.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01qqZAlUv8RO68b4bgmKohYmJi",
+      "usage": {
+        "prompt_tokens": 10141,
+        "completion_tokens": 188,
+        "total_tokens": 10329,
+        "prompt_tokens_details": {
+          "cached_tokens": 7906,
+          "cache_creation_tokens": 2231
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_c42bee4a0fc0c9b0_query_02559_attribute_delete",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 389,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

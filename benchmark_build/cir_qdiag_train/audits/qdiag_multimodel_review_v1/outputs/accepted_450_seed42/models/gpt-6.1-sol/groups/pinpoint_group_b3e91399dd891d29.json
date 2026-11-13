@@ -1,0 +1,46 @@
+{
+  "group_id": "pinpoint_group_b3e91399dd891d29",
+  "model": "gpt-6.1-sol",
+  "signature": "3199147d46377d1a43ef15346ed654e435e31b3f51076fd29f1d795ef128d524",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_b3e91399dd891d29_query_06932_predicate_add",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "The supplied positives do not rule out a removed strap lying nearby. Image 3 shows only feet, and images 2 and 4 crop the surrounding area, leaving the added relation compatible with those images."
+    },
+    {
+      "negative_id": "pinpoint_group_b3e91399dd891d29_query_06932_object_substitute",
+      "decision": "reject",
+      "failure_code": "not_visually_verifiable",
+      "reason": "The substitution concerns the footwear before conversion. The reference shows a black high-top sneaker, not the described green ankle-strap footwear, and the positive mule images cannot establish whether the original footwear was boots."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "gpt-6.1-sol",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "6a36802d77a04bfc53128de55f16b7a0b753c8ef5b7cd288742528cf113b500e",
+      "input_hash": "a843a636db9ea7628dee9ba514b00f21ce63aac6e76147baaaf63fb5f5ddf79a",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/gpt-6.1-sol/cache/validate_group/a843a636db9ea7628dee9ba514b00f21ce63aac6e76147baaaf63fb5f5ddf79a.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0b8fd7f5de7abd81016af4271e92d887d186cc344ceb7911ee",
+      "usage": {
+        "prompt_tokens": 21598,
+        "completion_tokens": 463,
+        "total_tokens": 22061,
+        "completion_tokens_details": {
+          "reasoning_tokens": 293
+        }
+      }
+    }
+  ],
+  "format_warnings": []
+}

@@ -1,0 +1,85 @@
+{
+  "case_id": "case_967cbc0d6d44af78b1b5",
+  "audit_query_id": "audit_query_027",
+  "signature": "5065d94bb0c1b275e428d3f2ada2352b274139ccb2134477487b5f51eef77ac6",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_967cbc0d6d44af78b1b5",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a house with stone walls and a low stone wall in front."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a bakery display, not a house with a stone wall."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "Show a house",
+      "with stone wall"
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_967cbc0d6d44af78b1b5",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a stone house behind a visible stone wall."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a bakery display with bread and pastries; no house or stone wall is visible."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "717d4f711423d54d4483e55d1838e7bb9bb86b13ce9e35515ff8336adfd171c0",
+      "input_hash": "b3a00c464199d9e403ca9d1707cfc8fd46ceb974493cc29cdf33ff07f403a82f",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_100/api_cache/propose_witnesses/b3a00c464199d9e403ca9d1707cfc8fd46ceb974493cc29cdf33ff07f403a82f.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0e979c2a431f7aab016af2b94ce20887d1a8fec0e041710402",
+      "usage": {
+        "prompt_tokens": 7110,
+        "completion_tokens": 168,
+        "total_tokens": 7278,
+        "completion_tokens_details": {
+          "reasoning_tokens": 52
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "c3937c94688a47aa9c138720543bb28e61fe2766f7d2b16adf06f3a79a42f143",
+      "input_hash": "d4d938b0447f8c219bd4b7bc666ccd879ba28935a335711ab36f41c122173bf2",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_100/api_cache/review_witnesses/d4d938b0447f8c219bd4b7bc666ccd879ba28935a335711ab36f41c122173bf2.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_089b7635ab0cfb38016af2b9543fc087d19d3f3fc82e5ecc8a",
+      "usage": {
+        "prompt_tokens": 3179,
+        "completion_tokens": 127,
+        "total_tokens": 3306,
+        "completion_tokens_details": {
+          "reasoning_tokens": 37
+        }
+      }
+    }
+  ]
+}

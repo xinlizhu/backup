@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_447d072ee0a174bc",
+  "model": "grok-4.7",
+  "signature": "52913ea34ae01078c58f7a80fc2119b86ef4b6b3449e9e55b21816a5d5d1ccbd",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_447d072ee0a174bc_query_01280_object_substitute",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Single object swap of car to van reconstructs the text and stays fluent. Both positive interiors are classic cars, so the van identity is clearly false in every supplied positive."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.7",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "a6a6c5a63eea930eb3b2886091b0bb06cb512d7ddef35d0310668ae7673f94ad",
+      "input_hash": "0dcc480a039f829b5f3b86e711db2e2e4e3306e26ec33b7ffe2c57858101a417",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/grok-4.7/cache/validate_group/0dcc480a039f829b5f3b86e711db2e2e4e3306e26ec33b7ffe2c57858101a417.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "b8820bb6-edf7-9aec-a4a2-1937b07b4d16",
+      "usage": {
+        "prompt_tokens": 3294,
+        "completion_tokens": 82,
+        "total_tokens": 5178,
+        "prompt_tokens_details": {
+          "text_tokens": 2458,
+          "audio_tokens": 0,
+          "image_tokens": 836,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1802,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 148200000
+      }
+    }
+  ],
+  "format_warnings": []
+}

@@ -1,0 +1,238 @@
+{
+  "case_id": "case_4ad9dc451d19cffdb91c",
+  "audit_query_id": "audit_query_096",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_4ad9dc451d19cffdb91c",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Two school buses are parked next to each other with their fronts prominently facing the camera."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The school buses are parked alongside one another, but the view presents their sides rather than their fronts."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "Show the front of the school buses."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "attribute",
+        "before_span": "front",
+        "after_span": "side profiles",
+        "edited_instruction": "Show the side profiles of the school buses and park them adjacent to each other.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "Change the requested view of the buses from their fronts to their side profiles.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The buses face the camera in frontal and front three-quarter views, rather than side profiles."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The foreground bus is shown in side profile, with another side-facing school bus parked alongside it in the background."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "operation": "delete",
+        "semantic_target": "attribute",
+        "before_span": "front of the",
+        "after_span": null,
+        "edited_instruction": "Show the school buses and park them adjacent to each other.",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "Remove the requirement to show the buses from the front.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Two school buses are visible parked next to each other."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "A foreground school bus and another school bus alongside it are visible in the parking area."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_4ad9dc451d19cffdb91c",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Two yellow school buses are parked alongside one another, with both front faces, windshields, and headlights clearly visible."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The school buses are parked alongside one another, but the view shows their sides. The foreground bus is in profile, with its front face directed to the right rather than shown to the viewer."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing 'front' with 'side profiles' makes one fluent change to the buses' depicted view and preserves the adjacency constraint. T shows frontal views; C shows side profiles of adjacent school buses.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Both buses face toward the viewer. Although part of the nearer bus's side is visible, the buses are not depicted in side profile."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The foreground school bus is shown broadside, and another school bus is visible in side profile in the adjacent row behind it."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting 'front of the' reconstructs the proposed instruction exactly and removes only the view constraint. Both images show adjacent school buses; C violates only the removed requirement to show their fronts.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Two clearly identified school buses are parked next to each other."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "A foreground school bus and another school bus immediately behind it are parked alongside one another in parallel rows."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "substitute",
+      "semantic_target": "attribute",
+      "before_span": "front",
+      "after_span": "side profiles",
+      "edited_instruction": "Show the side profiles of the school buses and park them adjacent to each other.",
+      "witness_type": "substitution_contrast",
+      "changed_constraint": "Change the requested view of the buses from their fronts to their side profiles.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "The buses face the camera in frontal and front three-quarter views, rather than side profiles."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "The foreground bus is shown in side profile, with another side-facing school bus parked alongside it in the background."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing 'front' with 'side profiles' makes one fluent change to the buses' depicted view and preserves the adjacency constraint. T shows frontal views; C shows side profiles of adjacent school buses.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Both buses face toward the viewer. Although part of the nearer bus's side is visible, the buses are not depicted in side profile."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The foreground school bus is shown broadside, and another school bus is visible in side profile in the adjacent row behind it."
+        }
+      }
+    },
+    {
+      "witness_id": "w2",
+      "operation": "delete",
+      "semantic_target": "attribute",
+      "before_span": "front of the",
+      "after_span": null,
+      "edited_instruction": "Show the school buses and park them adjacent to each other.",
+      "witness_type": "deletion_relaxation",
+      "changed_constraint": "Remove the requirement to show the buses from the front.",
+      "edited_on_positive": {
+        "status": "supported",
+        "evidence": "Two school buses are visible parked next to each other."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "A foreground school bus and another school bus alongside it are visible in the parking area."
+      },
+      "independent_review": {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting 'front of the' reconstructs the proposed instruction exactly and removes only the view constraint. Both images show adjacent school buses; C violates only the removed requirement to show their fronts.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Two clearly identified school buses are parked next to each other."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "A foreground school bus and another school bus immediately behind it are parked alongside one another in parallel rows."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    },
+    {
+      "witness_id": "w2",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "2b1d7669d6130761208393c6766fafed7499d3d47325d6e56c0ce0e9caeb7bf9",
+      "input_hash": "593b8d3909e310bbca3cd03f2523473068452c91bd4678010cd4b4d78dffcb27",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/593b8d3909e310bbca3cd03f2523473068452c91bd4678010cd4b4d78dffcb27.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0ca0f48b92235149016af2bfd0a99887d18f5f3850096376b3",
+      "usage": {
+        "prompt_tokens": 7642,
+        "completion_tokens": 799,
+        "total_tokens": 8441,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 285
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "c26cc87058d25738d42c65d74d6ce7cca07a5ac2188b8c08466f0b35d271616a",
+      "input_hash": "ce8240e0e7e30aa67a7203ba06c8d9d8f36187c8dd2fc43a11704131f0dc5d6d",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/ce8240e0e7e30aa67a7203ba06c8d9d8f36187c8dd2fc43a11704131f0dc5d6d.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0be4e715adb7fa86016af2bffa3aac87d1a69d8e9aa3002ade",
+      "usage": {
+        "prompt_tokens": 7235,
+        "completion_tokens": 577,
+        "total_tokens": 7812,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 91
+        }
+      }
+    }
+  ]
+}

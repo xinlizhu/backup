@@ -1,0 +1,71 @@
+experiment:
+  name: qwen2_embedding_shared_oprd_s2
+  seed: 42
+  output_dir: outputs/qwen_embedding_shared_2gpu_e1/qwen2_embedding_shared_oprd_s2
+data:
+  num_workers: 8
+  prefetch_factor: 2
+  train_annotation_path: /mnt/data/datasets/search_dataset/zxl/CIR_new/datasets/CIRR/cirr/captions/cap.rc2.train.json
+  train_image_split_path: /mnt/data/datasets/search_dataset/zxl/CIR_new/datasets/CIRR/cirr/image_splits/split.rc2.train.json
+  val_annotation_path: /mnt/data/datasets/search_dataset/zxl/CIR_new/datasets/CIRR/cirr/captions/cap.rc2.val.json
+  val_image_split_path: /mnt/data/datasets/search_dataset/zxl/CIR_new/datasets/CIRR/cirr/image_splits/split.rc2.val.json
+  image_root: /mnt/data/datasets/search_dataset/zxl/CIR_new/datasets/CIRR
+  teacher_cache_dir: outputs/on_policy_centered/cache/bge_mllm_s2_cirr_train
+  student_gallery_cache_dir: null
+model:
+  variant: qwen3_vl_embedding_shared_lora
+  pretrained_model_name_or_path: /mnt/data/datasets/search_dataset/zxl/CIR_PLAY/models/Qwen3-VL-Embedding-2B
+  local_files_only: true
+  trust_remote_code: false
+  lora_target_modules: all-linear
+  lora_rank: 16
+  lora_alpha: 32.0
+  lora_dropout: 0.05
+  gradient_checkpointing: true
+  max_length: 1024
+  min_pixels: 4096
+  max_pixels: 262144
+objective:
+  loss_type: rank_kd
+  rank_weight: 1.0
+  centered_response_weight: 0.0
+  rank_temperature: 0.05
+  rank_kl_direction: reverse
+  centered_response_beta: 0.01
+  require_teacher_target_top1: false
+  teacher_target_max_rank: null
+mining:
+  top_k: 32
+  force_target_insertion: true
+  candidate_source: student
+  refresh_mode: every_epoch
+  refresh_every_epochs: 1
+  image_batch_size: 16
+  query_batch_size: 16
+  teacher_score_batch_size: 512
+  cache_dtype: float16
+optimizer:
+  epochs: 1
+  world_size: 2
+  batch_size_per_gpu: 16
+  gradient_accumulation_steps: 1
+  candidate_encode_batch_size: 32
+  candidate_gradient_cache: false
+  learning_rate: 2.0e-05
+  weight_decay: 0.01
+  warmup_ratio: 0.05
+  max_grad_norm: 1.0
+  mixed_precision: bf16
+  log_every_steps: 20
+  save_every_epochs: 1
+evaluation:
+  batch_size: 16
+  recall_k:
+  - 1
+  - 5
+  - 10
+  - 50
+  group_recall_k:
+  - 1
+  - 2
+  - 3

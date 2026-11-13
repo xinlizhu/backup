@@ -1,0 +1,57 @@
+{
+  "group_id": "pinpoint_group_52d533f36225a9a0",
+  "model": "grok-4.6",
+  "signature": "cb958fa178e5ebcdd33f446ebd46fe25a7c20417ca5539cc74de61fb4df99804",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_52d533f36225a9a0_query_02863_attribute_substitute",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Replacing 'layered' with 'fitted' is one attribute edit and reconstructs the negative exactly. Every supplied positive top is loose or oversized, so fitted is clearly false."
+    },
+    {
+      "negative_id": "pinpoint_group_52d533f36225a9a0_query_02864_attribute_delete",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Deleting only 'layered' yields a fluent, strictly weaker request for a top matching the same mood, with all other wording preserved."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.6",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "8004ae45f724435d6522e9666138d6f00ad2e6a1d411ee1634a6c8ff9f1d342d",
+      "input_hash": "da21ed8ef93d11f62e3806b6cf31d2f17a4f4073b31bf31a86313afe5dfbeb02",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/grok-4.6/cache/validate_group/da21ed8ef93d11f62e3806b6cf31d2f17a4f4073b31bf31a86313afe5dfbeb02.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "4706043a-ae6f-902f-b2e9-885f450eb5c0",
+      "usage": {
+        "prompt_tokens": 5492,
+        "completion_tokens": 157,
+        "total_tokens": 8131,
+        "prompt_tokens_details": {
+          "text_tokens": 2632,
+          "audio_tokens": 0,
+          "image_tokens": 2860,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2482,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 237460000
+      }
+    }
+  ],
+  "format_warnings": []
+}

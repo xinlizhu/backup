@@ -1,0 +1,235 @@
+{
+  "case_id": "case_f45cccf5989e417bf7db",
+  "audit_query_id": "audit_query_084",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_f45cccf5989e417bf7db",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The dough is photographed from an oblique angle similar to R, with a wooden rolling pin clearly visible on the right."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The dough is shown from an oblique angle, but the cylindrical object on the right is an opened dough can, not a rolling pin."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "Must include a rolling pin on the right-hand side."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "object",
+        "before_span": "rolling pin",
+        "after_span": "an opened dough can",
+        "edited_instruction": "Similar angled photograph, must include an opened dough can on the right hand side",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "Replace the required rolling pin with an opened dough can, retaining its right-hand location.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The right-hand object is a wooden rolling pin; no opened dough can is visible."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The oblique photograph shows dough emerging from an opened cylindrical dough can whose body occupies the right side."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "operation": "delete",
+        "semantic_target": "object",
+        "before_span": ", must include rolling pin on the right hand side",
+        "after_span": null,
+        "edited_instruction": "Similar angled photograph",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "Remove the requirement for a rolling pin on the right-hand side.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "The dough and work surface are viewed obliquely, similar to the reference."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The dough and opened packaging are viewed obliquely, consistent with the reference's angled view."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_f45cccf5989e417bf7db",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "T shows dough on a work surface from an oblique, slightly elevated viewpoint similar to R, with a wooden rolling pin clearly visible on the right."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C is also an oblique close-up of dough, but the object on the right is an opened cardboard dough can. No rolling pin is visible."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "The exact replacement changes one object identity while retaining its required right-side location and the similar angled viewpoint. T has the required rolling pin but no opened dough can; C has the opened dough can on the right but no rolling pin.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "T contains a wooden rolling pin on the right, not an opened dough can; no opened dough can is visible."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C shows dough emerging from an opened cardboard can whose cylindrical body occupies the right side, photographed from an oblique viewpoint similar to R."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting the specified clause exactly removes the single requirement to include a rolling pin on the right. Both images retain the oblique viewpoint relative to R, and C violates only the removed requirement.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "T photographs dough from a slightly elevated oblique angle, showing its top and front surfaces as in R."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C is an oblique close-up showing the top and side surfaces of dough and its opened container, consistent with the angled viewpoint in R."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "substitute",
+      "semantic_target": "object",
+      "before_span": "rolling pin",
+      "after_span": "an opened dough can",
+      "edited_instruction": "Similar angled photograph, must include an opened dough can on the right hand side",
+      "witness_type": "substitution_contrast",
+      "changed_constraint": "Replace the required rolling pin with an opened dough can, retaining its right-hand location.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "The right-hand object is a wooden rolling pin; no opened dough can is visible."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "The oblique photograph shows dough emerging from an opened cylindrical dough can whose body occupies the right side."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "The exact replacement changes one object identity while retaining its required right-side location and the similar angled viewpoint. T has the required rolling pin but no opened dough can; C has the opened dough can on the right but no rolling pin.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "T contains a wooden rolling pin on the right, not an opened dough can; no opened dough can is visible."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C shows dough emerging from an opened cardboard can whose cylindrical body occupies the right side, photographed from an oblique viewpoint similar to R."
+        }
+      }
+    },
+    {
+      "witness_id": "w2",
+      "operation": "delete",
+      "semantic_target": "object",
+      "before_span": ", must include rolling pin on the right hand side",
+      "after_span": null,
+      "edited_instruction": "Similar angled photograph",
+      "witness_type": "deletion_relaxation",
+      "changed_constraint": "Remove the requirement for a rolling pin on the right-hand side.",
+      "edited_on_positive": {
+        "status": "supported",
+        "evidence": "The dough and work surface are viewed obliquely, similar to the reference."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "The dough and opened packaging are viewed obliquely, consistent with the reference's angled view."
+      },
+      "independent_review": {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting the specified clause exactly removes the single requirement to include a rolling pin on the right. Both images retain the oblique viewpoint relative to R, and C violates only the removed requirement.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "T photographs dough from a slightly elevated oblique angle, showing its top and front surfaces as in R."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C is an oblique close-up showing the top and side surfaces of dough and its opened container, consistent with the angled viewpoint in R."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    },
+    {
+      "witness_id": "w2",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "20e1375b85a589ddd392b8d2e7d662d2a90f896ecf2092698cfaa4db3392609c",
+      "input_hash": "c9d7ec7b4ee5097454bf1b6eafbf16ffde765c6c9ab7e982008b43c67bbd0b13",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/c9d7ec7b4ee5097454bf1b6eafbf16ffde765c6c9ab7e982008b43c67bbd0b13.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0f8c352931ae7af5016af2bdf555d487d1a2596ffea0f5e9ba",
+      "usage": {
+        "prompt_tokens": 7955,
+        "completion_tokens": 730,
+        "total_tokens": 8685,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 188
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "bef8d7c3f17d29feeb16e48f3727319ae189af69006e3bbbf042ba6580a1cd7a",
+      "input_hash": "9affb157d705dfb2340aff4ba3a4113835d601910fbf37a9879a2059e6c277fc",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/9affb157d705dfb2340aff4ba3a4113835d601910fbf37a9879a2059e6c277fc.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0f7e28d27a3bfdfe016af2be11bd7487d1a104402c1227f613",
+      "usage": {
+        "prompt_tokens": 7549,
+        "completion_tokens": 593,
+        "total_tokens": 8142,
+        "completion_tokens_details": {
+          "reasoning_tokens": 88
+        }
+      }
+    }
+  ]
+}

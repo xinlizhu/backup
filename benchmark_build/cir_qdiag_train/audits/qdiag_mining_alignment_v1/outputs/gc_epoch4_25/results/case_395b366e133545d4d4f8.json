@@ -1,0 +1,160 @@
+{
+  "case_id": "case_395b366e133545d4d4f8",
+  "audit_query_id": "audit_query_095",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_395b366e133545d4d4f8",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "One pelican is visible in grey water, with its neck and upper body raised above the surface and its bill wide open. The instruction specifies a bird, allowing the category change from the reference's sea lions."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "One sea lion has its head and upper body above greyish water and its mouth open around a fish. It is a mammal, not the requested bird."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The remaining animal must be a bird."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "object",
+        "before_span": "bird, change water color to grey, and raise remaining bird",
+        "after_span": "sea lion, change water color to grey, and raise remaining sea lion",
+        "edited_instruction": "Remove all but one sea lion, change water color to grey, and raise remaining sea lion out of wate with it's mouth open.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "Change the remaining animal's category from bird to sea lion, updating both mentions of that animal.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The single animal is a pelican, not a sea lion; the grey water, raised upper body, and open mouth satisfy the surviving constraints."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "A single sea lion rises above greyish water with its mouth open around a fish, matching the requested reduction from the reference's group and the retained posture and mouth constraints."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_395b366e133545d4d4f8",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "T shows one pelican with its bill open and its upper body raised above grey-brown water. However, R shows sea lions, not birds, so the instruction to remove all but one bird cannot be grounded in R."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows a sea lion holding a fish in its open mouth, with its head and upper body above the water. It does not show the required remaining bird."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "reject",
+        "failure_code": "source_invalid_or_uncertain",
+        "witness_type": null,
+        "reason": "The spans reconstruct the proposed object substitution, but the required source support on T is not established: R contains sea lions rather than birds from which all but one could be removed. T's single pelican does not establish that reference-relative removal.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "T contains a pelican, not the single remaining sea lion required by the edited instruction."
+        },
+        "edited_on_candidate": {
+          "status": "uncertain",
+          "evidence": "C shows one sea lion with its mouth open around a fish and its upper body above water. The water appears greenish grey, so the required change to grey is not unambiguously established."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": false,
+      "local_failures": [
+        "wrong_witness_type",
+        "wrong_support_pattern"
+      ],
+      "review_decision": "reject"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "197dc8be22f45e0ecbccf6d813153c87975c93b35a6069b31292872be91a19d0",
+      "input_hash": "2c192a996f6bbb87752945207eaec58bbea29c626a3c54ed3d316566b9ba2110",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/2c192a996f6bbb87752945207eaec58bbea29c626a3c54ed3d316566b9ba2110.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0c07cf65ed446be3016af2bda577d487d19f7f3d9e1444c35d",
+      "usage": {
+        "prompt_tokens": 11960,
+        "completion_tokens": 487,
+        "total_tokens": 12447,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 296
+        }
+      }
+    },
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "197dc8be22f45e0ecbccf6d813153c87975c93b35a6069b31292872be91a19d0",
+      "input_hash": "2c192a996f6bbb87752945207eaec58bbea29c626a3c54ed3d316566b9ba2110",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/2c192a996f6bbb87752945207eaec58bbea29c626a3c54ed3d316566b9ba2110.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0df5bc5b6c57a12c016af2bdc502dc87d1aaa09f5ad5c2edf6",
+      "usage": {
+        "prompt_tokens": 11960,
+        "completion_tokens": 635,
+        "total_tokens": 12595,
+        "prompt_tokens_details": {
+          "cached_tokens": 9633
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 188
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "2cd22ac5328fb2a5cbb7aeed232b142e555e5ed769ec59fee0a6cf3007fa0103",
+      "input_hash": "8eaf7fd978b1975813f97fd23f111c8efbeee2d015d2e3098f3951e38bd40a32",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/8eaf7fd978b1975813f97fd23f111c8efbeee2d015d2e3098f3951e38bd40a32.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_04c03a07c497c2f0016af2bde0423887d18782c62b2e30a035",
+      "usage": {
+        "prompt_tokens": 11521,
+        "completion_tokens": 506,
+        "total_tokens": 12027,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 211
+        }
+      }
+    }
+  ]
+}

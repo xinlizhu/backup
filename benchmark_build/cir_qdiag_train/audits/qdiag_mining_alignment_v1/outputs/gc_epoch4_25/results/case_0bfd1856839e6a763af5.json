@@ -1,0 +1,89 @@
+{
+  "case_id": "case_0bfd1856839e6a763af5",
+  "audit_query_id": "audit_query_093",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_0bfd1856839e6a763af5",
+    "case_status": "source_invalid_or_uncertain",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "Image 2 shows a pillow on grey textured fabric and a light indoor background, but no turkey marking or other visible evidence identifies the fabric as a turkey towel."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a boar outdoors among rocks and mud, with no visible pillow, grey towel, or window-like background."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "Pillow presence",
+      "Placement on a grey turkey towel",
+      "Window-like background"
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_0bfd1856839e6a763af5",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "Image 2 visibly shows a pillow on a grey textured towel or blanket, but no turkey is visibly identifiable and the claimed window background effect is ambiguous."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a wild boar in mud and foliage, with no visible pillow, grey towel, or window background."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "e0d50dac6f8de79321e6d87ccb9d4f4854b87aca751022b420dfdedeabed8abc",
+      "input_hash": "56f7e4c9fcb1ed18318f545daa6c510d1a31bdb7c3fddfbf675030f9a475eb24",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/56f7e4c9fcb1ed18318f545daa6c510d1a31bdb7c3fddfbf675030f9a475eb24.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0de48b185aec9bdb016af2bf8fcd6087d199de44b9c2ac6282",
+      "usage": {
+        "prompt_tokens": 7590,
+        "completion_tokens": 414,
+        "total_tokens": 8004,
+        "prompt_tokens_details": {
+          "cached_tokens": 5888
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 264
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "670405bf7d963a3f50a155beed6cd973241a37b3334124c8fe032825da07906a",
+      "input_hash": "316b9db759f44641cd44b579c1d5fc89e4acb8903bbd2c793a73010368b05906",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/316b9db759f44641cd44b579c1d5fc89e4acb8903bbd2c793a73010368b05906.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0f019d36785f1652016af2bf9b9a4487d1952d36a6d1c597f8",
+      "usage": {
+        "prompt_tokens": 7048,
+        "completion_tokens": 225,
+        "total_tokens": 7273,
+        "completion_tokens_details": {
+          "reasoning_tokens": 114
+        }
+      }
+    }
+  ]
+}

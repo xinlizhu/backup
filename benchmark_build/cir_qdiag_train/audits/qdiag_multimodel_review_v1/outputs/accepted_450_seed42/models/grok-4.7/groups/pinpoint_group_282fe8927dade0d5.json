@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_282fe8927dade0d5",
+  "model": "grok-4.7",
+  "signature": "52913ea34ae01078c58f7a80fc2119b86ef4b6b3449e9e55b21816a5d5d1ccbd",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_282fe8927dade0d5_query_04547_attribute_add",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Adds one attribute, 'glossy finish,' while preserving the rest. Both positives are matte fabric—image 2 printed jersey and image 3 fuzzy knit—so the new fact is clearly false for every supplied positive."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.7",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "85d576b14cbaf3090b5b67ef62cdd7909622bd39e03a41d3f563421c640e836c",
+      "input_hash": "813971eef8d21e951f2a59d46853e54324db1484207b5fba8cbeae4e858a184f",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/grok-4.7/cache/validate_group/813971eef8d21e951f2a59d46853e54324db1484207b5fba8cbeae4e858a184f.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "265c60a6-f132-942a-802f-5890952993c8",
+      "usage": {
+        "prompt_tokens": 4131,
+        "completion_tokens": 93,
+        "total_tokens": 6101,
+        "prompt_tokens_details": {
+          "text_tokens": 2427,
+          "audio_tokens": 0,
+          "image_tokens": 1704,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1877,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 170100000
+      }
+    }
+  ],
+  "format_warnings": []
+}

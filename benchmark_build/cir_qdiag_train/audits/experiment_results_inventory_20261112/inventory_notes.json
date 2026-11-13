@@ -1,0 +1,113 @@
+{
+  "paper_table_1_and_2_rows_recovered": 18,
+  "historical_values_origin": "Recovered from preserved reports with row-specific file/line references; not newly recomputed from absent old outputs.",
+  "paper_qdiag_scope": "pilot500 / all: 499 groups with accepted edits, 1862 instructions, 5576 edits; 500 groups retained for calibration. Distinct from newer full-release 10131-edit rank-alignment audit.",
+  "pinpoint_units": "CSV exports multiply historical 0-1 PinPoint metrics by 100. CIRR and FashionIQ already percentages.",
+  "extra_models": "Four completed checkpoints: CLIP4CIR CIRR RN50x4, TEMA MCIRR, MagicLens CLIP Base and Large. QuRe CIRR was skipped because weights were unavailable.",
+  "head_protocol": {
+    "student": "OpenAI CLIP ViT-L/14, identical original checkpoint in all runs",
+    "teacher": "BGE-VL-MLLM-S2, revision 20137e245f277e7eca277bbb436ce7d632a16406",
+    "initialization": "Official randomly initialized heads; no published CIRR or MagicLens fine-tuned student weights",
+    "data": "CIRR train: 28225 queries, 16939 gallery images",
+    "objective": "Original CLIP-L OPRD: reverse KL, T=0.05, student top32 each epoch, force target, no teacher filtering",
+    "optimizer": "4 epochs, batch32, AdamW head1e-5/backbone5e-7, seed42, bf16",
+    "preprocessing": "Identical original HF CLIP preprocessing in all three experiments; this is an exact head architecture ablation on one backbone, not a reproduction of the full pretrained external systems",
+    "evaluations": [
+      "QDiag all and ADD/SUBSTITUTE/DELETE, hierarchical aggregation and bootstrap2000 seed42",
+      "CIRR val",
+      "FashionIQ val all categories",
+      "PinPoint full available gallery"
+    ],
+    "selection": "Fixed epoch4, no QDiag checkpoint selection",
+    "paths": {
+      "teacher_cache": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/outputs/on_policy_centered/cache/bge_mllm_s2_cirr_train"
+    }
+  },
+  "head_architecture_checks": {
+    "mmret_add": {
+      "maximum_error": 0.0,
+      "source_sha256": "19a630f89e381dcc0febad3c3d1c392fac7a241819432f08dee9a56a5b2d0689",
+      "parameters": 0
+    },
+    "clip4cir_combiner": {
+      "maximum_error": 0.0,
+      "parameters": 60314369,
+      "source_sha256": "8c7cf22aece540ca41c6540fc2f40cf43e7aaf3dbb6e8007b3285f5200db08be"
+    },
+    "magiclens": {
+      "forward_maximum_error": 3.527384251356125e-07,
+      "input_gradient_maximum_error": 5.0067901611328125e-06,
+      "parameter_gradient_maximum_error": 3.039836883544922e-05,
+      "gradient_tensor_count": 76,
+      "parameters": 37801152,
+      "official_configuration": {
+        "layers": 4,
+        "heads": 16,
+        "dim": 768,
+        "ffn": 3072,
+        "pool_attention_hidden_dim": 3072,
+        "pool_query_tokens": 1,
+        "dropout": 0,
+        "layernorm_eps": 1e-06,
+        "attention_logit_cap": 50,
+        "target_encoding": "same head(image, CLIP(empty text))"
+      }
+    }
+  },
+  "original_head_comparison_sources": {
+    "units": "all five performance columns are percentages",
+    "CRR_subset": "all; includes ADD, SUBSTITUTE, DELETE; not strict",
+    "common_recipe": "CLIP-L/14, BGE-VL-MLLM-S2, OPRD reverse KL T=0.05, on-policy K=32 with target insertion, seed42, epoch4",
+    "comparison_type": "Historical original-head results compared with new-head runs; not a same-run retraining of all four heads",
+    "sources": {
+      "original_residual_mlp": {
+        "run": "epoch_target_filter_e4/kl_all_inject",
+        "checkpoint_epoch": 4,
+        "CIRR": {
+          "file": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/epoch_target_filter.log",
+          "line": 1630
+        },
+        "FashionIQ": {
+          "file": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/epoch_target_filter.log",
+          "line": 1760
+        },
+        "PinPoint": {
+          "file": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/epoch_target_filter.log",
+          "line": 2766
+        },
+        "CRR": {
+          "file": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/PAPER_MAIN_TABLES.md",
+          "line": 887
+        },
+        "available_inference_weights": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/release_code/OPRD/checkpoints/clip_l_s2/model.safetensors",
+        "weight_sha256_verified": "8ed3aca8dfcb162ec88e5050529fc9597409383eff2373e56fce8b68dc521b64",
+        "historical_run_directory_present": false,
+        "rerun_in_current_environment": false
+      },
+      "mmret_add": {
+        "CIRR": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/outputs/head_ablation_oprd_20261109/mmret_add/retrieval/cirr_val/val_metrics.json",
+        "FashionIQ": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/outputs/head_ablation_oprd_20261109/mmret_add/retrieval/fashioniq_metrics.json",
+        "PinPoint": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/outputs/head_ablation_oprd_20261109/mmret_add/retrieval/pinpoint/metrics.json",
+        "CRR": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/outputs/head_ablation_oprd_20261109/mmret_add/qdiag_final/paper_metrics.csv"
+      },
+      "clip4cir_combiner": {
+        "CIRR": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/outputs/head_ablation_oprd_20261109/clip4cir_combiner/retrieval/cirr_val/val_metrics.json",
+        "FashionIQ": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/outputs/head_ablation_oprd_20261109/clip4cir_combiner/retrieval/fashioniq_metrics.json",
+        "PinPoint": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/outputs/head_ablation_oprd_20261109/clip4cir_combiner/retrieval/pinpoint/metrics.json",
+        "CRR": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/outputs/head_ablation_oprd_20261109/clip4cir_combiner/qdiag_final/paper_metrics.csv"
+      },
+      "magiclens": {
+        "CIRR": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/outputs/head_ablation_oprd_20261109/magiclens/retrieval/cirr_val/val_metrics.json",
+        "FashionIQ": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/outputs/head_ablation_oprd_20261109/magiclens/retrieval/fashioniq_metrics.json",
+        "PinPoint": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/outputs/head_ablation_oprd_20261109/magiclens/retrieval/pinpoint/metrics.json",
+        "CRR": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/outputs/head_ablation_oprd_20261109/magiclens/qdiag_final/paper_metrics.csv"
+      }
+    }
+  },
+  "limitations": [
+    "Some historical run directories are absent at their original paths. Their log/report values survive, but full per-query artifacts are not claimed for every historical model.",
+    "On-policy without target insertion has strict CRR=10.1565%; its all-operation CRR is not present in the located historical records and remains blank.",
+    "Use QWEN_COMPLETED_EXPERIMENTS_RESULTS.md for final trained Qwen rows; older Qwen rows in PAPER_MAIN_TABLES.md describe different earlier runs.",
+    "Original-head versus new-head comparison uses preserved historical original-head results and later new-head runs; it is not a same-run retraining of all four heads."
+  ]
+}

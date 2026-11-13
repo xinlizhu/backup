@@ -1,0 +1,86 @@
+{
+  "case_id": "case_e094164050be3794acce",
+  "audit_query_id": "audit_query_078",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_e094164050be3794acce",
+    "case_status": "source_invalid_or_uncertain",
+    "source_on_positive": {
+      "status": "contradicted",
+      "evidence": "T shows one marmot-like rodent sitting on a rock against a blue background. Its furry tail and body features indicate a marmot rather than the specified beaver."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows a beetle beside a large brown ball on sandy ground, with green vegetation behind it. There is no beaver sitting on a rock or visible blue sky."
+    },
+    "candidate_relation": "multiple_constraint_conflict",
+    "violated_source_constraints": [
+      "The depicted animal is one beaver.",
+      "The animal is sitting on a rock.",
+      "Blue sky is visible in the background."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_e094164050be3794acce",
+    "source_on_positive": {
+      "status": "contradicted",
+      "evidence": "One animal sits on a rock against a blue background, but it has the rounded ears, pale muzzle, and furry tail of a marmot or groundhog rather than a beaver."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "A beetle pushes a large brown ball across sandy ground with green vegetation behind it; there is no beaver sitting on a rock or visible blue sky."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "d326aedcf011983a59e8a29b2afde163a49b18a84ea2af1fa02900a2ffd7272a",
+      "input_hash": "eeb6a289eae98dea0dcd47d39695f80a8bf052d3da216156cc4b04131cc8ef58",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/eeb6a289eae98dea0dcd47d39695f80a8bf052d3da216156cc4b04131cc8ef58.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0a5ac30f3e0bb6de016af2be3c366487d286f5af1209b56a95",
+      "usage": {
+        "prompt_tokens": 7596,
+        "completion_tokens": 267,
+        "total_tokens": 7863,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 57
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "02dc7151405b6dc4cdd3c43c00c0ace02c90b0193a8960c97782dee38cd86876",
+      "input_hash": "4e47c568001def498b838a8627762ff8f3f5b2f571248dd9a3de89b47d81ebde",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/4e47c568001def498b838a8627762ff8f3f5b2f571248dd9a3de89b47d81ebde.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0e1e122e46e9676a016af2be48690087d1a9dcd7a68efcb80c",
+      "usage": {
+        "prompt_tokens": 7054,
+        "completion_tokens": 119,
+        "total_tokens": 7173
+      }
+    }
+  ]
+}

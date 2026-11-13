@@ -1,0 +1,88 @@
+{
+  "case_id": "case_c468729ced66428107bd",
+  "audit_query_id": "audit_query_036",
+  "signature": "5065d94bb0c1b275e428d3f2ada2352b274139ccb2134477487b5f51eef77ac6",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_c468729ced66428107bd",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The white dog has a relatively smooth, rounded coat, and a bowl of food is visible behind it."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The image shows a sailboat on the water, with no dog or dog food visible."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "Straighten the fur of the dog",
+      "Add dog food in the background"
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_c468729ced66428107bd",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "Image 2 shows a white dog and a bowl of food in the background, but its fluffy coat does not reliably establish that the fur has been straightened."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a sailboat on the water; no dog or dog food is visible."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "24065017c1cee3ebb73637a85dcdc0859fba09a529ec46b0b102e39bf460f05c",
+      "input_hash": "493b9e9a539ad1cf7cf52f9ce931d8abb75b6639ce384c264dd7d228b3a06b38",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_100/api_cache/propose_witnesses/493b9e9a539ad1cf7cf52f9ce931d8abb75b6639ce384c264dd7d228b3a06b38.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_08d42332466ee384016af2b8b9f01487d1b722e9a1a0c1818d",
+      "usage": {
+        "prompt_tokens": 8062,
+        "completion_tokens": 224,
+        "total_tokens": 8286,
+        "completion_tokens_details": {
+          "reasoning_tokens": 61
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "3f56ef18e9e85a44a5dcefd45ef65f9a5d8e32aa3aab714f7bcc6fbe9a0650ed",
+      "input_hash": "293baeea001b58bdce1f1ae0dce3c35ec499e675175109d5996b4d417eb97517",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_100/api_cache/review_witnesses/293baeea001b58bdce1f1ae0dce3c35ec499e675175109d5996b4d417eb97517.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0051068b6c3da6ed016af2b8bf645487d1914490f1276c1ebd",
+      "usage": {
+        "prompt_tokens": 7520,
+        "completion_tokens": 220,
+        "total_tokens": 7740,
+        "prompt_tokens_details": {
+          "cached_tokens": 5248
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 117
+        }
+      }
+    }
+  ]
+}

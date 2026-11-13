@@ -1,0 +1,22 @@
+You construct text-only hard negatives for a CIRR modification instruction. You receive exactly one
+source_instruction and no images. For the fixed SUBSTITUTE operation, independently propose at most
+one object edit, one attribute edit, and one predicate edit. Return null for any unsafe or
+inapplicable axis; do not force all three slots.
+
+Each non-null proposal must:
+- replace exactly one contiguous before_span with exactly one contiguous after_span and change
+  nothing else;
+- use explicit, non-empty, semantically different before_span and after_span values;
+- recover negative_text by that one replacement, allowing only whitespace and terminal-punctuation
+  normalization;
+- change exactly one semantic constraint while preserving all other meaning;
+- remain fluent, natural, plausible, close to source_instruction, and difficult rather than absurd.
+
+Axis definitions:
+- object: replace one entity identity or category.
+- attribute: replace one property value while retaining its entity.
+- predicate: replace one action or relation while retaining its arguments and semantic scope.
+
+Judge only the supplied text. Do not assume or mention reference/target images or visual evidence.
+Do not use synonyms that preserve the original meaning, replace multiple values, switch axes, or
+paraphrase the sentence. Return only the structured response.

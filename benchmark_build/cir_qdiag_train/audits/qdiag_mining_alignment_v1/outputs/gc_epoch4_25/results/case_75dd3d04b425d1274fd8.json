@@ -1,0 +1,163 @@
+{
+  "case_id": "case_75dd3d04b425d1274fd8",
+  "audit_query_id": "audit_query_081",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_75dd3d04b425d1274fd8",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The saxophone is a wind instrument with a reddish-maroon body and gold-colored keywork."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The saxophone has a silver-gray metallic body; the red fabric underneath is the background, not the instrument's color."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The wind instrument must be maroon."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "attribute",
+        "before_span": "maroon",
+        "after_span": "silver",
+        "edited_instruction": "Make a wind instrument a silver color.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "The wind instrument's body color changes from maroon to silver.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The saxophone's body is reddish-maroon with gold-colored keywork, not silver."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The saxophone is a wind instrument with a visibly silver-gray metallic body."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_75dd3d04b425d1274fd8",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a saxophone with a deep red/maroon body and gold keywork, satisfying the requested wind instrument color."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a saxophone with a reflective silver body. The red fabric beneath it is background, not the instrument's body color."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing 'maroon' with 'silver' is one attribute substitution that exactly reconstructs the edited instruction while retaining the wind instrument constraint. The maroon saxophone in Image 2 and silver saxophone in Image 3 establish the required reversed support pattern.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The saxophone's body in Image 2 is maroon/red with gold keywork, rather than silver."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 clearly depicts a silver-colored saxophone, which is a wind instrument."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "substitute",
+      "semantic_target": "attribute",
+      "before_span": "maroon",
+      "after_span": "silver",
+      "edited_instruction": "Make a wind instrument a silver color.",
+      "witness_type": "substitution_contrast",
+      "changed_constraint": "The wind instrument's body color changes from maroon to silver.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "The saxophone's body is reddish-maroon with gold-colored keywork, not silver."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "The saxophone is a wind instrument with a visibly silver-gray metallic body."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing 'maroon' with 'silver' is one attribute substitution that exactly reconstructs the edited instruction while retaining the wind instrument constraint. The maroon saxophone in Image 2 and silver saxophone in Image 3 establish the required reversed support pattern.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The saxophone's body in Image 2 is maroon/red with gold keywork, rather than silver."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 clearly depicts a silver-colored saxophone, which is a wind instrument."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "d0cf01c2c901ddf098b3a68a0117596ef5eabe6f61ace4c7e5c55073cdd62dc4",
+      "input_hash": "278efed85aaa26a78b72f7ab6bf16fc3fb87e1958c36ae19b827f59b87d81b77",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/278efed85aaa26a78b72f7ab6bf16fc3fb87e1958c36ae19b827f59b87d81b77.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0b5f522508adce86016af2be776a4887d1ba1d56f70241c4fd",
+      "usage": {
+        "prompt_tokens": 8709,
+        "completion_tokens": 409,
+        "total_tokens": 9118,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 71
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "8fa25047015b1c5e6c00d99e0ea77232cf58ece4018a5de5bade80cc22b2f807",
+      "input_hash": "ad0c8d1b53c314a330d634764ab72253e2801156a462d8fb203098beaf657277",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/ad0c8d1b53c314a330d634764ab72253e2801156a462d8fb203098beaf657277.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0c5d9cdb855117d9016af2be844ccc87d19808d536dbd5eb3c",
+      "usage": {
+        "prompt_tokens": 8228,
+        "completion_tokens": 318,
+        "total_tokens": 8546,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "case_id": "case_152ef7fe725268a291da",
+  "audit_query_id": "audit_query_095",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_152ef7fe725268a291da",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "T shows one pelican in grey water, with its neck and upper body raised above the surface and its mouth wide open. 'Out of water' is supported as partial emergence; the bird remains partly immersed."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "C also shows one pelican in grey water, with its head, neck, and upper body above the surface and its mouth wide open. R shows several mostly immersed sea lions; retaining their species is not an explicit constraint."
+    },
+    "candidate_relation": "compatible",
+    "violated_source_constraints": [],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "add",
+        "semantic_target": "object",
+        "before_span": null,
+        "after_span": " and a fish in its mouth",
+        "edited_instruction": "Remove all but one bird, change water color to grey, and raise remaining bird out of wate with it's mouth open and a fish in its mouth.",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "Adds the presence of a fish in the remaining bird's mouth, distinguishing C from T.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "T satisfies the original constraints, but its widely open mouth and pouch are visibly empty; no fish is present."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C shows one partially emerged pelican in grey water with its mouth wide open and a clearly visible fish inside."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_152ef7fe725268a291da",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "T shows one pelican with an open bill and raised neck and wings in grey water. However, R shows sea lions, not birds, so the instruction to retain and raise a remaining reference bird cannot be reliably grounded."
+    },
+    "source_on_candidate": {
+      "status": "uncertain",
+      "evidence": "C shows one pelican with an open bill holding a fish in grey water. Its body remains afloat. R contains sea lions rather than birds, preventing reliable grounding of the remaining bird and its relative elevation."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "reject",
+        "failure_code": "source_invalid_or_uncertain",
+        "witness_type": null,
+        "reason": "The insertion adds one visible fish constraint, but ADD requires the original instruction to be supported on both images. That prerequisite is unestablished: R contains no bird to retain and raise. The dataset-positive label does not resolve this grounding failure.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "T's pelican has a visibly open, empty bill; it does not have the required fish in its mouth."
+        },
+        "edited_on_candidate": {
+          "status": "uncertain",
+          "evidence": "A fish is clearly visible inside C's open bill, and the water is grey. However, the preserved requirement to retain and raise a reference bird remains ungrounded because R depicts sea lions."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": false,
+      "local_failures": [
+        "wrong_witness_type",
+        "wrong_support_pattern"
+      ],
+      "review_decision": "reject"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "8630a780e28cc9e94a74f8a9ffbf7f8b96330fb1d19432ebe7939a0820117afe",
+      "input_hash": "babc62bd503095f80eee837810330e4946a675490e2efe5b24eeea795a6d5bdb",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/babc62bd503095f80eee837810330e4946a675490e2efe5b24eeea795a6d5bdb.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_019ab02dc28589a5016af2be0c4eb487d18e5c262c0e79d64e",
+      "usage": {
+        "prompt_tokens": 21113,
+        "completion_tokens": 621,
+        "total_tokens": 21734,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 218
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "66745477ec3a79210bc1d326783a8c82366e4974984964ae8d4fa9bb361fdad0",
+      "input_hash": "713404485f6796884623012de0567f50efa939252b4c325470c21dc1474321d8",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/713404485f6796884623012de0567f50efa939252b4c325470c21dc1474321d8.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0841a9f9d0d7a7b7016af2be33e13087d29b67eedc1751c492",
+      "usage": {
+        "prompt_tokens": 20657,
+        "completion_tokens": 465,
+        "total_tokens": 21122,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 161
+        }
+      }
+    }
+  ]
+}

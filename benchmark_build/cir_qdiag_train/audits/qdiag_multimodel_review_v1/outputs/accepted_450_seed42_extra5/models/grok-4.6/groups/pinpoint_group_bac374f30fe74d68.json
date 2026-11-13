@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_bac374f30fe74d68",
+  "model": "grok-4.6",
+  "signature": "cb958fa178e5ebcdd33f446ebd46fe25a7c20417ca5539cc74de61fb4df99804",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_bac374f30fe74d68_query_07407_predicate_substitute",
+      "decision": "reject",
+      "failure_code": "not_visually_verifiable",
+      "reason": "Increase→Reduce is one fluent predicate edit, but the positives are static dress photos and do not show whether contrast was reduced or increased, so the new fact is not reliably false for every positive."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.6",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "33b33eda33460073c210f588ea06210f29b42b0ee999155646e0943d7849e8a5",
+      "input_hash": "550d860a34d16633d5a9fc97c92c8c8eee564de865ea776589201aae42a42ee3",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/grok-4.6/cache/validate_group/550d860a34d16633d5a9fc97c92c8c8eee564de865ea776589201aae42a42ee3.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "237717fc-cd93-9884-9a2a-0354afe19b0b",
+      "usage": {
+        "prompt_tokens": 4927,
+        "completion_tokens": 94,
+        "total_tokens": 11142,
+        "prompt_tokens_details": {
+          "text_tokens": 2564,
+          "audio_tokens": 0,
+          "image_tokens": 2363,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 6121,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 440720000
+      }
+    }
+  ],
+  "format_warnings": []
+}

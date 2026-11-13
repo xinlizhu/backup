@@ -1,0 +1,38 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 73.43it/s]
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+[gallery_features.npy] 24/109598 elapsed=20.6s
+[gallery_features.npy] 144/109598 elapsed=96.5s
+[gallery_features.npy] 264/109598 elapsed=183.6s
+[gallery_features.npy] 384/109598 elapsed=266.4s
+[gallery_features.npy] 504/109598 elapsed=357.7s
+[gallery_features.npy] 624/109598 elapsed=443.3s
+[gallery_features.npy] 744/109598 elapsed=518.9s
+[gallery_features.npy] 864/109598 elapsed=536.0s
+[gallery_features.npy] 984/109598 elapsed=566.9s
+[gallery_features.npy] 1104/109598 elapsed=628.7s
+[gallery_features.npy] 1224/109598 elapsed=687.4s
+[gallery_features.npy] 1344/109598 elapsed=759.3s
+[gallery_features.npy] 1464/109598 elapsed=837.2s
+[gallery_features.npy] 1584/109598 elapsed=855.0s
+[gallery_features.npy] 1704/109598 elapsed=876.3s
+[gallery_features.npy] 1824/109598 elapsed=941.9s
+[gallery_features.npy] 1944/109598 elapsed=1011.1s
+[gallery_features.npy] 2064/109598 elapsed=1077.9s
+Traceback (most recent call last):
+  File "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_rank_alignment_v1/scripts/encode_model.py", line 102, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_rank_alignment_v1/scripts/encode_model.py", line 81, in main
+    gf=encode_batches(out/'gallery_features.npy',len(gallery),adapter.dim,spec['image_batch_size'],image_batch,adapter.encode_images)
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_rank_alignment_v1/scripts/encode_model.py", line 35, in encode_batches
+    values=check_vectors(encode_batch(prepared),dim);assert len(values)==end-begin
+                         ^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/data/datasets/search_dataset/zxl/multi_modal_py3.12/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_rank_alignment_v1/src/alignment_models.py", line 57, in encode_images
+    return F.normalize(output[:,-1,:],dim=-1).float().cpu().numpy()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

@@ -1,0 +1,91 @@
+{
+  "case_id": "case_ddb769d833f5d4f7bee7",
+  "audit_query_id": "audit_query_094",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_ddb769d833f5d4f7bee7",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Relative to R's piglets on opposite flanks, T shows two piglets suckling together on the image-left side of an adult warthog. In context, 'boar' describes the warthog rather than establishing its sex."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows three warthogs, with one standing at image left and two reclining. No pair is suckling; the two animals flanking the central reclining animal are spread to its left and right, rather than together on the image-left side."
+    },
+    "candidate_relation": "multiple_constraint_conflict",
+    "violated_source_constraints": [
+      "The adult is nursing two babies.",
+      "The two babies are together on the same image-left side."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_ddb769d833f5d4f7bee7",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Two piglets press their snouts to the adult warthog's underside, both together on the left side of the image. This supports nursing on the same left side, unlike the reference's arrangement with one piglet on the near side and another partly hidden beneath the adult."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The candidate shows three young warthogs, two resting and one standing. The standing youngster touches another's snout; there is no adult nursing two babies on its left side."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "e623511101dc32617cd2603fb3b85faa20cf1013d557b275062d633ab0b87b30",
+      "input_hash": "662c62f0e20a18cdda322475a46b836af9899b8a7a8c5a8693ba5aff11dac949",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/662c62f0e20a18cdda322475a46b836af9899b8a7a8c5a8693ba5aff11dac949.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_037bb871b02a58a8016af2bd59ff4087d1ab8cab6eebac9699",
+      "usage": {
+        "prompt_tokens": 15400,
+        "completion_tokens": 501,
+        "total_tokens": 15901,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 268
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "3a7b72333267c56e86e9d4ee6e1a2001a2f317e17f56108b741b72333bd99fcf",
+      "input_hash": "6faf1f013b9dbc5c3623d18825963ffb8b0a983e282de19ddc963deb71da6d43",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/6faf1f013b9dbc5c3623d18825963ffb8b0a983e282de19ddc963deb71da6d43.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_07f77592f4e1703f016af2bd891b2c87d18750684fb94321f2",
+      "usage": {
+        "prompt_tokens": 14858,
+        "completion_tokens": 214,
+        "total_tokens": 15072,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 66
+        }
+      }
+    }
+  ]
+}

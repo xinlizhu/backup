@@ -1,0 +1,87 @@
+{
+  "case_id": "case_2da9339cd32396fa064a",
+  "audit_query_id": "audit_query_090",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_2da9339cd32396fa064a",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a car from the rear beside visible water."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a sailboat on water, not a car."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The requested object is a car; the candidate shows a sailboat."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_2da9339cd32396fa064a",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a car from a rear three-quarter angle, with its taillights, rear license plate, and rear bumper visible, traveling on a road directly beside a large body of water."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a sailboat on the water; no car is visible, so it does not show a car from the back by water."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "3a8f6937c568986d3ddbd154906590665d877336cad27e61cb15fe87cff3ccfc",
+      "input_hash": "ce2b671351f8c969d3efd7a99e685d0f65e227c8f82a3afae880d7f67d11aa56",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/ce2b671351f8c969d3efd7a99e685d0f65e227c8f82a3afae880d7f67d11aa56.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0d45c620cb8c023a016af2bf4a758887d2894ecf75756fe44a",
+      "usage": {
+        "prompt_tokens": 10905,
+        "completion_tokens": 370,
+        "total_tokens": 11275,
+        "prompt_tokens_details": {
+          "cached_tokens": 5888
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 217
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "7f8e560177ce818a4c43acaab47d021c5d4d11a0057ccf41c984d0afd4ed8c97",
+      "input_hash": "ffc18ed78174338818137371c3c17681ec77db114cf110c78d22ccb9aecf83a3",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/ffc18ed78174338818137371c3c17681ec77db114cf110c78d22ccb9aecf83a3.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_07c02a572592ed4b016af2bf5dd25887d19b54d6fa1bd837d4",
+      "usage": {
+        "prompt_tokens": 10199,
+        "completion_tokens": 121,
+        "total_tokens": 10320,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        }
+      }
+    }
+  ]
+}

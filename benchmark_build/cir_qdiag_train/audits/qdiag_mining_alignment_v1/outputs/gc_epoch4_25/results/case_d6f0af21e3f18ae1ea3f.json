@@ -1,0 +1,238 @@
+{
+  "case_id": "case_d6f0af21e3f18ae1ea3f",
+  "audit_query_id": "audit_query_084",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_d6f0af21e3f18ae1ea3f",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Like R, T shows dough from an oblique angle above the work surface. A wooden rolling pin is visible on the right."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C includes a rolling pin on the right, but its overhead viewpoint differs from R's oblique viewpoint."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The photograph must have an angle similar to R's oblique viewpoint."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "attribute",
+        "before_span": "Similar angled",
+        "after_span": "Overhead",
+        "edited_instruction": "Overhead photograph, must include rolling pin on the right hand side",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "Replace the viewpoint similar to R with an overhead viewpoint.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "T has the required rolling pin on the right, but shows the dough obliquely rather than directly overhead."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C shows the dough from overhead, with a wooden rolling pin along the right edge."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "operation": "delete",
+        "semantic_target": "attribute",
+        "before_span": "Similar angled photograph,",
+        "after_span": null,
+        "edited_instruction": "must include rolling pin on the right hand side",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "Remove the requirement for a photographic angle similar to R.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "T visibly includes a wooden rolling pin on the right side."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C visibly includes a wooden rolling pin along the right side."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_d6f0af21e3f18ae1ea3f",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows dough from an oblique angle, with front and upper surfaces visible, similar to the reference viewpoint. A wooden rolling pin is clearly positioned on the right."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 includes a wooden rolling pin on the right, but the dough and work surface are viewed from overhead rather than the reference's oblique angle."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "The exact replacement changes only the photograph's viewpoint from reference-like oblique to overhead. The rolling-pin constraint is preserved and supported in both images, while the viewpoint support reverses.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 has a clearly oblique viewpoint, showing the dough's front and the rolling pin's near end; it is not an overhead photograph."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows the dough and flour-covered surface from overhead, with a wooden rolling pin along the right side."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting the specified opening removes the single viewpoint constraint and its grammatical framing. The remaining instruction is meaningful and satisfied by both images. The candidate violates only the removed viewpoint requirement.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "A large wooden rolling pin is clearly visible on the right side of Image 2."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "A wooden rolling pin runs along the right side of Image 3."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "substitute",
+      "semantic_target": "attribute",
+      "before_span": "Similar angled",
+      "after_span": "Overhead",
+      "edited_instruction": "Overhead photograph, must include rolling pin on the right hand side",
+      "witness_type": "substitution_contrast",
+      "changed_constraint": "Replace the viewpoint similar to R with an overhead viewpoint.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "T has the required rolling pin on the right, but shows the dough obliquely rather than directly overhead."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C shows the dough from overhead, with a wooden rolling pin along the right edge."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "The exact replacement changes only the photograph's viewpoint from reference-like oblique to overhead. The rolling-pin constraint is preserved and supported in both images, while the viewpoint support reverses.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 has a clearly oblique viewpoint, showing the dough's front and the rolling pin's near end; it is not an overhead photograph."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows the dough and flour-covered surface from overhead, with a wooden rolling pin along the right side."
+        }
+      }
+    },
+    {
+      "witness_id": "w2",
+      "operation": "delete",
+      "semantic_target": "attribute",
+      "before_span": "Similar angled photograph,",
+      "after_span": null,
+      "edited_instruction": "must include rolling pin on the right hand side",
+      "witness_type": "deletion_relaxation",
+      "changed_constraint": "Remove the requirement for a photographic angle similar to R.",
+      "edited_on_positive": {
+        "status": "supported",
+        "evidence": "T visibly includes a wooden rolling pin on the right side."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C visibly includes a wooden rolling pin along the right side."
+      },
+      "independent_review": {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting the specified opening removes the single viewpoint constraint and its grammatical framing. The remaining instruction is meaningful and satisfied by both images. The candidate violates only the removed viewpoint requirement.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "A large wooden rolling pin is clearly visible on the right side of Image 2."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "A wooden rolling pin runs along the right side of Image 3."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    },
+    {
+      "witness_id": "w2",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "db01d5eae09f25744f7946e4d8708d7cd38433e9eb9571b3f632d5298556929a",
+      "input_hash": "31f74b7d2c481c4cf81d8a676b71b4f68ad72477f3010465722c27d192063dd4",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/31f74b7d2c481c4cf81d8a676b71b4f68ad72477f3010465722c27d192063dd4.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_099b37cc7182b061016af2be4e1ee487d2a64faca7a0176e90",
+      "usage": {
+        "prompt_tokens": 7277,
+        "completion_tokens": 707,
+        "total_tokens": 7984,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 184
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "ab002be8ab611c92253f8abac14a4fc7ee19dfad8b59a46a4bdba884c8b5ce5a",
+      "input_hash": "08e27522e8ddb21ddd8dbdcf89e0ca70e500cbfbc6c2f79c4c9a512d0710defa",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/08e27522e8ddb21ddd8dbdcf89e0ca70e500cbfbc6c2f79c4c9a512d0710defa.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0174763afec4a679016af2be6ff3f087d1ba8c29fc3eba9050",
+      "usage": {
+        "prompt_tokens": 6867,
+        "completion_tokens": 526,
+        "total_tokens": 7393,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 39
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,238 @@
+{
+  "case_id": "case_90718e7e1aa884a91e4a",
+  "audit_query_id": "audit_query_080",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_90718e7e1aa884a91e4a",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "A bright yellow flower stands in a white vase, supporting the requested decorative brightening relative to R's muted arrangement."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "A flower stands in a pale vase, but its spherical bloom is cream-white with green details, rather than yellow."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The flower must be yellow."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "attribute",
+        "before_span": "yellow",
+        "after_span": "white",
+        "edited_instruction": "Bright up the room with a white flower in a vase.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "The flower's color changes from yellow to white.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The flower's petals are yellow, not white; the white object is the vase."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "A cream-white spherical flower head with green details stands in a pale vase as a decorative arrangement."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "operation": "delete",
+        "semantic_target": "attribute",
+        "before_span": "yellow",
+        "after_span": null,
+        "edited_instruction": "Bright up the room with a flower in a vase.",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "Remove the requirement that the flower be yellow.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "A yellow flower in a white vase provides the requested floral decoration."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "A cream-white spherical flower on a green stem stands in a pale vase, satisfying the floral decoration request without a color restriction."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_90718e7e1aa884a91e4a",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a vivid yellow daffodil on a green stem in a white vase, supporting the requested yellow flower arrangement."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a pale white spherical flower head on a green stem in a vase. Its blossoms are white rather than yellow."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing 'yellow' with 'white' is one attribute substitution that preserves the flower, vase, and decorative intent. The visible flower colors establish the required contrast.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 has a yellow daffodil, not a white flower."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 has a spherical head of small white blossoms in a vase."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting 'yellow' removes one color constraint and reconstructs the edited instruction with whitespace normalization. Both images show a flower in a vase; the candidate violates only the removed yellow requirement.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 shows a yellow flower in a white vase, satisfying the instruction without a color restriction."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows a white flower head on a stem in a vase, satisfying the instruction without a color restriction."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "substitute",
+      "semantic_target": "attribute",
+      "before_span": "yellow",
+      "after_span": "white",
+      "edited_instruction": "Bright up the room with a white flower in a vase.",
+      "witness_type": "substitution_contrast",
+      "changed_constraint": "The flower's color changes from yellow to white.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "The flower's petals are yellow, not white; the white object is the vase."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "A cream-white spherical flower head with green details stands in a pale vase as a decorative arrangement."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing 'yellow' with 'white' is one attribute substitution that preserves the flower, vase, and decorative intent. The visible flower colors establish the required contrast.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 has a yellow daffodil, not a white flower."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 has a spherical head of small white blossoms in a vase."
+        }
+      }
+    },
+    {
+      "witness_id": "w2",
+      "operation": "delete",
+      "semantic_target": "attribute",
+      "before_span": "yellow",
+      "after_span": null,
+      "edited_instruction": "Bright up the room with a flower in a vase.",
+      "witness_type": "deletion_relaxation",
+      "changed_constraint": "Remove the requirement that the flower be yellow.",
+      "edited_on_positive": {
+        "status": "supported",
+        "evidence": "A yellow flower in a white vase provides the requested floral decoration."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "A cream-white spherical flower on a green stem stands in a pale vase, satisfying the floral decoration request without a color restriction."
+      },
+      "independent_review": {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting 'yellow' removes one color constraint and reconstructs the edited instruction with whitespace normalization. Both images show a flower in a vase; the candidate violates only the removed yellow requirement.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 shows a yellow flower in a white vase, satisfying the instruction without a color restriction."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows a white flower head on a stem in a vase, satisfying the instruction without a color restriction."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    },
+    {
+      "witness_id": "w2",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "5e6b26954e927ea749843b7f5798dc665f6be6428ad77e33331e6dc493c01a89",
+      "input_hash": "552385a9a9d2db3665a9490430c1b9de43adf6443f3eb3676315a05e41122b60",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/552385a9a9d2db3665a9490430c1b9de43adf6443f3eb3676315a05e41122b60.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0028a6cb7648b662016af2bd472f3487d1a0fbd4c11fcaf485",
+      "usage": {
+        "prompt_tokens": 7386,
+        "completion_tokens": 545,
+        "total_tokens": 7931,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 31
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "f99f072a1c4654d47ecd2a53b8d3bba70cbee626176f0f7a89e113e5f07b5c3d",
+      "input_hash": "0b3f63a082841ed43f0e43be6072af71d0be0521a98ab7be5569060afab2d4d2",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/0b3f63a082841ed43f0e43be6072af71d0be0521a98ab7be5569060afab2d4d2.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0707e9f0096a21e7016af2bd5523a887d1a6b5de8e41aa0c6d",
+      "usage": {
+        "prompt_tokens": 6971,
+        "completion_tokens": 482,
+        "total_tokens": 7453,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 23
+        }
+      }
+    }
+  ]
+}

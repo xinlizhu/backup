@@ -1,0 +1,92 @@
+{
+  "case_id": "case_97141c1cf78e4d6afa4b",
+  "audit_query_id": "audit_query_100",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_97141c1cf78e4d6afa4b",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "A shallow, round metal bowl contains a prepared dish covered with melted, browned cheese."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The image shows a black, narrow-opening decorative vase with a gold leaf design, rather than a bowl containing a dish topped with cheese."
+    },
+    "candidate_relation": "multiple_constraint_conflict",
+    "violated_source_constraints": [
+      "The container is a bowl.",
+      "The bowl contains a prepared dish.",
+      "The dish has cheese on top."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_97141c1cf78e4d6afa4b",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "A baked dish with melted, browned cheese on top is visible in a shallow metal pan or tray. The cropped view does not reliably establish that the container is a bowl."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The image shows a black decorative vessel with a gold leaf pattern and a narrow opening. No food dish or cheese topping is visible."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "155530e4e1784d2dc8284310b22737b7185da941d0be8daede1b0b55ee594b89",
+      "input_hash": "b6f61dc27a3745479a8b249baa8a75ded4df0d170faaa1b1f5b6b68504b7af78",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/b6f61dc27a3745479a8b249baa8a75ded4df0d170faaa1b1f5b6b68504b7af78.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0980aa789f118ee9016af2bfbb2acc87d2ae1e7331d52361af",
+      "usage": {
+        "prompt_tokens": 14253,
+        "completion_tokens": 254,
+        "total_tokens": 14507,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 71
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "ed16afc8a6d9ab32e907a12e4ef13b6f37681d66ff0a9c4b276e7858cf303be5",
+      "input_hash": "1c4f9ae8d51452786bd46beaabdb34238c9c002b5e13df54c68304ce01c8b688",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/1c4f9ae8d51452786bd46beaabdb34238c9c002b5e13df54c68304ce01c8b688.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_03c928d4beae76b7016af2bfc986ec87d0ae923c679ee8b306",
+      "usage": {
+        "prompt_tokens": 13711,
+        "completion_tokens": 153,
+        "total_tokens": 13864,
+        "prompt_tokens_details": {
+          "cached_tokens": 3482
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 35
+        }
+      }
+    }
+  ]
+}

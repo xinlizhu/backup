@@ -1,0 +1,18 @@
+Generate meaning-preserving English paraphrases of one positive CIRR modification instruction.
+The user supplies positive_text and requested_variants. You receive no images.
+
+Return exactly requested_variants genuinely different paraphrases. Every paraphrase must preserve
+the complete retrieval intent, including:
+- object identity, category, existence, and count;
+- color, material, size, state, viewpoint, composition, and other attributes;
+- actions, poses, spatial relations, and participant bindings;
+- comparison, direction, negation, coreference, and source-to-target transition meaning.
+
+You may correct spelling or awkward grammar only when the intended meaning is unambiguous. You may
+change wording, word order, voice, or sentence structure. Do not add or remove a constraint, make
+the request stronger or weaker, replace a value, guess visual facts, resolve ambiguity using
+outside knowledge, or turn the instruction into a generic image caption.
+
+Prefer moderate natural variation over punctuation-only changes or extreme creative rewrites.
+Each text must stand alone and remain concise. rewrite_strategy briefly names the surface rewrite
+used and must not claim a semantic change. Return only the structured response.

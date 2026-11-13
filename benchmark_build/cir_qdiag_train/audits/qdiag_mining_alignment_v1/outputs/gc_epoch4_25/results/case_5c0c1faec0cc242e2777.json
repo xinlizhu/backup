@@ -1,0 +1,164 @@
+{
+  "case_id": "case_5c0c1faec0cc242e2777",
+  "audit_query_id": "audit_query_098",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_5c0c1faec0cc242e2777",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "A woman faces the camera behind a group of sled dogs, replacing the reference's reindeer-and-sled scene with a posed group view."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "A woman smiles toward the camera behind a group of sled dogs, satisfying the requested scene change from the reference."
+    },
+    "candidate_relation": "compatible",
+    "violated_source_constraints": [],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "add",
+        "semantic_target": "object",
+        "before_span": null,
+        "after_span": "with trees in the background",
+        "edited_instruction": "Make the woman to pose for camera with group of dogs with trees in the background instead showing different scene into picture",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "Adds the presence of trees in the background of the woman-and-dogs scene.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The woman and dogs are on an open snowy plain with mountains behind them; there are no background trees."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The woman faces the camera behind the dogs, with visible tree trunks and evergreen foliage in the snowy background."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_5c0c1faec0cc242e2777",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "A woman faces the camera from behind a group of sled dogs in a snowy landscape, replacing the reference scene of people with reindeer and sleds."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "A woman faces the camera and smiles from a sled behind a group of huskies, satisfying the requested scene with a woman posing with dogs."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "The proposed text is reconstructed by one insertion, adding the single background-object constraint of trees while preserving the source meaning. Both images satisfy the source, but only the candidate has visible trees in the background.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The woman and dogs are in an open snowy landscape backed by bare, snow-covered mountains; there are no trees in the visible background."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The woman poses behind the group of huskies, with visible tree trunks and green conifer foliage in the snowy background."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "add",
+      "semantic_target": "object",
+      "before_span": null,
+      "after_span": "with trees in the background",
+      "edited_instruction": "Make the woman to pose for camera with group of dogs with trees in the background instead showing different scene into picture",
+      "witness_type": "addition_disambiguation",
+      "changed_constraint": "Adds the presence of trees in the background of the woman-and-dogs scene.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "The woman and dogs are on an open snowy plain with mountains behind them; there are no background trees."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "The woman faces the camera behind the dogs, with visible tree trunks and evergreen foliage in the snowy background."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "The proposed text is reconstructed by one insertion, adding the single background-object constraint of trees while preserving the source meaning. Both images satisfy the source, but only the candidate has visible trees in the background.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The woman and dogs are in an open snowy landscape backed by bare, snow-covered mountains; there are no trees in the visible background."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The woman poses behind the group of huskies, with visible tree trunks and green conifer foliage in the snowy background."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "bf00a3bfeecbb4b3469b5deebf59d2a007aeca07155173bd0024916f6dd74819",
+      "input_hash": "4763fcd6e1b6720bd765e6fc60c5c49990912aacc76ee33332fe1f44706a5dc9",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/4763fcd6e1b6720bd765e6fc60c5c49990912aacc76ee33332fe1f44706a5dc9.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0c2967f552403ba7016af2bda3307c87d19e2454a053ab0f72",
+      "usage": {
+        "prompt_tokens": 7299,
+        "completion_tokens": 809,
+        "total_tokens": 8108,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 452
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "ce1a4af87265b8e86cc602ad2039dd2ec499d303f868d1518492d1ad8b113e43",
+      "input_hash": "1775675debd85045f318d5f10d5b6183f3277bf3d865f7cca0db4c10a73ac767",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/1775675debd85045f318d5f10d5b6183f3277bf3d865f7cca0db4c10a73ac767.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0d42e07b6de3c519016af2bdcb17ec87d1a8e943e3a251aed9",
+      "usage": {
+        "prompt_tokens": 6834,
+        "completion_tokens": 418,
+        "total_tokens": 7252,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 93
+        }
+      }
+    }
+  ]
+}

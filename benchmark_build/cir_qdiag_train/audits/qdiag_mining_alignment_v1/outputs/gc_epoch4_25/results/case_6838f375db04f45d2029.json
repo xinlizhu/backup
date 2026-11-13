@@ -1,0 +1,157 @@
+{
+  "case_id": "case_6838f375db04f45d2029",
+  "audit_query_id": "audit_query_090",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_6838f375db04f45d2029",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "T shows an orange car from the rear beside a body of water."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows a white convertible from the front on a sandy shore beside the sea, not from the back."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "Show the car from the back; C shows it from the front."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "delete_predicate_back_view",
+        "operation": "delete",
+        "semantic_target": "predicate",
+        "before_span": "from back",
+        "after_span": null,
+        "edited_instruction": "Show car by water.",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "The rear-view requirement is removed; C contradicts this original constraint, while both images show a car by water.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "T shows a car beside a lake or reservoir."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C shows a car beside the sea."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_6838f375db04f45d2029",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a car from a rear three-quarter viewpoint, with its rear plate, taillights, and exhausts clearly visible, driving beside a large body of water."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a car beside turquoise water, but from a front three-quarter viewpoint with the grille and headlights visible, rather than from the back."
+    },
+    "verdicts": [
+      {
+        "witness_id": "delete_predicate_back_view",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting 'from back' removes exactly one viewpoint constraint and reconstructs the edited instruction after whitespace normalization. Both images show a car by water; the candidate violates only the removed rear-view requirement.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "The car in Image 2 is on a road directly beside a visible body of water."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The car in Image 3 is parked on sand beside clearly visible turquoise seawater."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "delete_predicate_back_view",
+      "operation": "delete",
+      "semantic_target": "predicate",
+      "before_span": "from back",
+      "after_span": null,
+      "edited_instruction": "Show car by water.",
+      "witness_type": "deletion_relaxation",
+      "changed_constraint": "The rear-view requirement is removed; C contradicts this original constraint, while both images show a car by water.",
+      "edited_on_positive": {
+        "status": "supported",
+        "evidence": "T shows a car beside a lake or reservoir."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C shows a car beside the sea."
+      },
+      "independent_review": {
+        "witness_id": "delete_predicate_back_view",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting 'from back' removes exactly one viewpoint constraint and reconstructs the edited instruction after whitespace normalization. Both images show a car by water; the candidate violates only the removed rear-view requirement.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "The car in Image 2 is on a road directly beside a visible body of water."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The car in Image 3 is parked on sand beside clearly visible turquoise seawater."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "delete_predicate_back_view",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "31669701eefedcc15b027b9c7abf7e97c56647650dbf13a2248b80bc9f8a17b3",
+      "input_hash": "66578ad0eba7bbf90891683a6edbd54211e81e9ef19851fdbf8f3377124e2b60",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/66578ad0eba7bbf90891683a6edbd54211e81e9ef19851fdbf8f3377124e2b60.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0392d3ba09af3c31016af2bef45c4c87d0ad975e4ff842bf6d",
+      "usage": {
+        "prompt_tokens": 11602,
+        "completion_tokens": 239,
+        "total_tokens": 11841
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "8eca2de2a5756d2b2a9776576e36dd50c5192c0d347d29051a62e684a31ce563",
+      "input_hash": "1e8b0c0190c707d0402d84455e7b27dff12805187ea3a486316ae9b79a6b30fa",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/1e8b0c0190c707d0402d84455e7b27dff12805187ea3a486316ae9b79a6b30fa.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_06ea82353ac8f0e9016af2befc15dc87d0a9bf1a160991e39b",
+      "usage": {
+        "prompt_tokens": 10956,
+        "completion_tokens": 313,
+        "total_tokens": 11269,
+        "prompt_tokens_details": {
+          "cached_tokens": 3482
+        }
+      }
+    }
+  ]
+}

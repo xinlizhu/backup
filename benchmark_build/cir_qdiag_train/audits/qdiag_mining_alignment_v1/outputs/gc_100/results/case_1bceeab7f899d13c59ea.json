@@ -1,0 +1,86 @@
+{
+  "case_id": "case_1bceeab7f899d13c59ea",
+  "audit_query_id": "audit_query_003",
+  "signature": "5065d94bb0c1b275e428d3f2ada2352b274139ccb2134477487b5f51eef77ac6",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_1bceeab7f899d13c59ea",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows two young children wearing white long-sleeved tops and close-fitting, legging-style pants."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a puppy wearing a collar, not child models in the specified clothing."
+    },
+    "candidate_relation": "multiple_constraint_conflict",
+    "violated_source_constraints": [
+      "Shows child models",
+      "Shows white long-sleeved shirts",
+      "Shows legging-style pants"
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_1bceeab7f899d13c59ea",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows two young children wearing white long-sleeved tops and fitted ankle-length pants."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a dog wearing a red collar, not child models wearing shirts and pants."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "190222e70cfd58bd7e85902ef34d8ec3da66b286b015cfff45df2617c47c89e6",
+      "input_hash": "a60e1ee14df3091254d797d6658cdef022a542c98c2de50f3fd2ff857ce00b78",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_100/api_cache/propose_witnesses/a60e1ee14df3091254d797d6658cdef022a542c98c2de50f3fd2ff857ce00b78.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0ec942af1fee2726016af2b893b61887d1b6bd85775d70f223",
+      "usage": {
+        "prompt_tokens": 5490,
+        "completion_tokens": 816,
+        "total_tokens": 6306,
+        "completion_tokens_details": {
+          "reasoning_tokens": 681
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "006bb33a8195eddeb7b33bb3088b05ebffca6bb5da82fd98949332255cff0107",
+      "input_hash": "8b10ae98b841721276cf2635815553c47fc5d304150c0381e9a1f096052fa0ea",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_100/api_cache/review_witnesses/8b10ae98b841721276cf2635815553c47fc5d304150c0381e9a1f096052fa0ea.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_02c3b054cbfbd69e016af2b89f8f3087d1839b24648ae9c0cd",
+      "usage": {
+        "prompt_tokens": 8337,
+        "completion_tokens": 126,
+        "total_tokens": 8463,
+        "completion_tokens_details": {
+          "reasoning_tokens": 31
+        }
+      }
+    }
+  ]
+}

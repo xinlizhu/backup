@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_2683bfd8a56f70d1",
+  "model": "grok-4.7",
+  "signature": "52913ea34ae01078c58f7a80fc2119b86ef4b6b3449e9e55b21816a5d5d1ccbd",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_2683bfd8a56f70d1_query_03926_object_substitute",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Substituting 'laundry room' with 'bathroom' reconstructs the text in one object edit. Every positive shows washers and laundry storage, so 'bathroom' is clearly false."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.7",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "1e0e56af79331579be60c8082e8f3b6e8891148150957e01a5edab485e32da84",
+      "input_hash": "62ac886b57b654eb5f77222545c692d174557ca6f8a20262bcb8e850740dd78b",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/grok-4.7/cache/validate_group/62ac886b57b654eb5f77222545c692d174557ca6f8a20262bcb8e850740dd78b.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "fedd00f0-ece3-9169-b761-e4204668b6f6",
+      "usage": {
+        "prompt_tokens": 4970,
+        "completion_tokens": 86,
+        "total_tokens": 6677,
+        "prompt_tokens_details": {
+          "text_tokens": 2426,
+          "audio_tokens": 0,
+          "image_tokens": 2544,
+          "cached_tokens": 1152
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1621,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 184540000
+      }
+    }
+  ],
+  "format_warnings": []
+}

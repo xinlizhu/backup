@@ -1,0 +1,245 @@
+{
+  "comparison": {
+    "command": [
+      "/mnt/data/datasets/search_dataset/zxl/multi_modal_py3.12/bin/python",
+      "/mnt/data/datasets/search_dataset/zxl/benchmark_build/diag_model_training/compare_models.py",
+      "--diagnostics-root",
+      "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_openai_cirr/outputs/cirr_train_pilot_500_v8/model_diagnostics",
+      "--models",
+      "BGE-VL-base,BGE-VL-large,BGE-VL-MLLM-S1,BGE-VL-MLLM-S2,Qwen3-VL-Embedding-2B,LinCIR,Pic2Word",
+      "--bootstrap-replicates",
+      "1000",
+      "--seed",
+      "42"
+    ],
+    "elapsed_seconds": 4.810460176318884,
+    "returncode": 0,
+    "stage": "compare",
+    "status": "ok"
+  },
+  "finished_at": "2026-08-03T07:14:59.103306+00:00",
+  "input": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_openai_cirr/outputs/cirr_train_pilot_500_v8/final.jsonl",
+  "models": {
+    "BGE-VL-MLLM-S1": {
+      "batch_size": 4,
+      "model_path": "/mnt/data/datasets/search_dataset/zxl/CIR_PLAY/models/checkpoints/BGE-VL-MLLM-S1",
+      "stages": [
+        {
+          "command": [
+            "/mnt/data/datasets/search_dataset/zxl/multi_modal_py3.12/bin/python",
+            "/mnt/data/datasets/search_dataset/zxl/benchmark_build/diag_model_training/probe_grid.py",
+            "--features-dir",
+            "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_openai_cirr/outputs/cirr_train_pilot_500_v8/model_diagnostics/BGE-VL-MLLM-S1",
+            "--output-dir",
+            "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_openai_cirr/outputs/cirr_train_pilot_500_v8/model_diagnostics/BGE-VL-MLLM-S1/analysis",
+            "--folds",
+            "5",
+            "--bootstrap-replicates",
+            "1000",
+            "--seed",
+            "42"
+          ],
+          "elapsed_seconds": 1104.9559705592692,
+          "returncode": 0,
+          "stage": "probe",
+          "status": "ok"
+        }
+      ],
+      "status": "ok"
+    },
+    "BGE-VL-MLLM-S2": {
+      "batch_size": 4,
+      "model_path": "/mnt/data/datasets/search_dataset/zxl/CIR_PLAY/models/checkpoints/BGE-VL-MLLM-S2",
+      "stages": [
+        {
+          "command": [
+            "/mnt/data/datasets/search_dataset/zxl/multi_modal_py3.12/bin/python",
+            "/mnt/data/datasets/search_dataset/zxl/benchmark_build/diag_model_training/probe_grid.py",
+            "--features-dir",
+            "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_openai_cirr/outputs/cirr_train_pilot_500_v8/model_diagnostics/BGE-VL-MLLM-S2",
+            "--output-dir",
+            "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_openai_cirr/outputs/cirr_train_pilot_500_v8/model_diagnostics/BGE-VL-MLLM-S2/analysis",
+            "--folds",
+            "5",
+            "--bootstrap-replicates",
+            "1000",
+            "--seed",
+            "42"
+          ],
+          "elapsed_seconds": 1154.4705205745995,
+          "returncode": 0,
+          "stage": "probe",
+          "status": "ok"
+        }
+      ],
+      "status": "ok"
+    },
+    "BGE-VL-base": {
+      "batch_size": 64,
+      "model_path": "/mnt/data/datasets/search_dataset/zxl/CIR_PLAY/models/checkpoints/BGE-VL-base",
+      "stages": [
+        {
+          "command": [
+            "/mnt/data/datasets/search_dataset/zxl/multi_modal_py3.12/bin/python",
+            "/mnt/data/datasets/search_dataset/zxl/benchmark_build/diag_model_training/probe_grid.py",
+            "--features-dir",
+            "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_openai_cirr/outputs/cirr_train_pilot_500_v8/model_diagnostics/BGE-VL-base",
+            "--output-dir",
+            "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_openai_cirr/outputs/cirr_train_pilot_500_v8/model_diagnostics/BGE-VL-base/analysis",
+            "--folds",
+            "5",
+            "--bootstrap-replicates",
+            "1000",
+            "--seed",
+            "42"
+          ],
+          "elapsed_seconds": 390.3036715686321,
+          "returncode": 0,
+          "stage": "probe",
+          "status": "ok"
+        }
+      ],
+      "status": "ok"
+    },
+    "BGE-VL-large": {
+      "batch_size": 32,
+      "model_path": "/mnt/data/datasets/search_dataset/zxl/CIR_PLAY/models/checkpoints/BGE-VL-large",
+      "stages": [
+        {
+          "command": [
+            "/mnt/data/datasets/search_dataset/zxl/multi_modal_py3.12/bin/python",
+            "/mnt/data/datasets/search_dataset/zxl/benchmark_build/diag_model_training/probe_grid.py",
+            "--features-dir",
+            "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_openai_cirr/outputs/cirr_train_pilot_500_v8/model_diagnostics/BGE-VL-large",
+            "--output-dir",
+            "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_openai_cirr/outputs/cirr_train_pilot_500_v8/model_diagnostics/BGE-VL-large/analysis",
+            "--folds",
+            "5",
+            "--bootstrap-replicates",
+            "1000",
+            "--seed",
+            "42"
+          ],
+          "elapsed_seconds": 404.8437919318676,
+          "returncode": 0,
+          "stage": "probe",
+          "status": "ok"
+        }
+      ],
+      "status": "ok"
+    },
+    "LinCIR": {
+      "batch_size": 64,
+      "model_path": "/mnt/data/datasets/search_dataset/zxl/CIR_PLAY/models/lincir/pretrained_models/lincir_large.pt",
+      "stages": [
+        {
+          "command": [
+            "/mnt/data/datasets/search_dataset/zxl/multi_modal_py3.12/bin/python",
+            "/mnt/data/datasets/search_dataset/zxl/benchmark_build/diag_model_training/probe_grid.py",
+            "--features-dir",
+            "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_openai_cirr/outputs/cirr_train_pilot_500_v8/model_diagnostics/LinCIR",
+            "--output-dir",
+            "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_openai_cirr/outputs/cirr_train_pilot_500_v8/model_diagnostics/LinCIR/analysis",
+            "--folds",
+            "5",
+            "--bootstrap-replicates",
+            "1000",
+            "--seed",
+            "42"
+          ],
+          "elapsed_seconds": 440.2031947635114,
+          "returncode": 0,
+          "stage": "probe",
+          "status": "ok"
+        }
+      ],
+      "status": "ok"
+    },
+    "Pic2Word": {
+      "batch_size": 64,
+      "model_path": "/mnt/data/datasets/search_dataset/zxl/CIR_PLAY/models/lincir/pretrained_models/pic2word_large.pt",
+      "stages": [
+        {
+          "command": [
+            "/mnt/data/datasets/search_dataset/zxl/multi_modal_py3.12/bin/python",
+            "/mnt/data/datasets/search_dataset/zxl/benchmark_build/diag_model_training/probe_grid.py",
+            "--features-dir",
+            "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_openai_cirr/outputs/cirr_train_pilot_500_v8/model_diagnostics/Pic2Word",
+            "--output-dir",
+            "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_openai_cirr/outputs/cirr_train_pilot_500_v8/model_diagnostics/Pic2Word/analysis",
+            "--folds",
+            "5",
+            "--bootstrap-replicates",
+            "1000",
+            "--seed",
+            "42"
+          ],
+          "elapsed_seconds": 413.25894648581743,
+          "returncode": 0,
+          "stage": "probe",
+          "status": "ok"
+        }
+      ],
+      "status": "ok"
+    },
+    "Qwen3-VL-Embedding-2B": {
+      "batch_size": 4,
+      "model_path": "/mnt/data/datasets/search_dataset/zxl/qw3/Qwen3-VL-Embedding-2B",
+      "stages": [
+        {
+          "command": [
+            "/mnt/data/datasets/search_dataset/zxl/multi_modal_py3.12/bin/python",
+            "/mnt/data/datasets/search_dataset/zxl/benchmark_build/diag_model_training/probe_grid.py",
+            "--features-dir",
+            "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_openai_cirr/outputs/cirr_train_pilot_500_v8/model_diagnostics/Qwen3-VL-Embedding-2B",
+            "--output-dir",
+            "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_openai_cirr/outputs/cirr_train_pilot_500_v8/model_diagnostics/Qwen3-VL-Embedding-2B/analysis",
+            "--folds",
+            "5",
+            "--bootstrap-replicates",
+            "1000",
+            "--seed",
+            "42"
+          ],
+          "elapsed_seconds": 787.3632392212749,
+          "returncode": 0,
+          "stage": "probe",
+          "status": "ok"
+        }
+      ],
+      "status": "ok"
+    }
+  },
+  "models_comparable": [
+    "BGE-VL-base",
+    "BGE-VL-large",
+    "BGE-VL-MLLM-S1",
+    "BGE-VL-MLLM-S2",
+    "Qwen3-VL-Embedding-2B",
+    "LinCIR",
+    "Pic2Word"
+  ],
+  "models_completed": [
+    "BGE-VL-base",
+    "BGE-VL-large",
+    "BGE-VL-MLLM-S1",
+    "BGE-VL-MLLM-S2",
+    "Qwen3-VL-Embedding-2B",
+    "LinCIR",
+    "Pic2Word"
+  ],
+  "models_failed": [],
+  "models_requested": [
+    "BGE-VL-base",
+    "BGE-VL-large",
+    "BGE-VL-MLLM-S1",
+    "BGE-VL-MLLM-S2",
+    "Qwen3-VL-Embedding-2B",
+    "LinCIR",
+    "Pic2Word"
+  ],
+  "paraphrases": null,
+  "schema_version": "1.0",
+  "started_at": "2026-08-03T05:56:36.296413+00:00",
+  "status": "completed"
+}

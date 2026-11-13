@@ -1,0 +1,57 @@
+{
+  "case_id": "pair_7a42e1e9f50458a9f0b0",
+  "signature": "f3a97f608e6addbd5531ad7795f5e06873610abdb12f716de8375d49eda4c022",
+  "simulated": false,
+  "status": "complete",
+  "judgment": {
+    "case_id": "pair_7a42e1e9f50458a9f0b0",
+    "constraints": [
+      {
+        "constraint": "Remove all but one bird; the remaining subject should be a bird.",
+        "A_status": "supported",
+        "B_status": "contradicted",
+        "A_evidence": "One bird, a pelican, is visible.",
+        "B_evidence": "The visible animal is a seal, not a bird."
+      },
+      {
+        "constraint": "Change the water color to grey.",
+        "A_status": "contradicted",
+        "B_status": "supported",
+        "A_evidence": "The water appears blue-grey rather than grey.",
+        "B_evidence": "The water appears grey."
+      },
+      {
+        "constraint": "Raise the remaining bird out of the water with its mouth open.",
+        "A_status": "supported",
+        "B_status": "uncertain",
+        "A_evidence": "The pelican is held high above the water with its beak open.",
+        "B_evidence": "The seal's head is raised and mouth open, but it is not a bird."
+      }
+    ],
+    "decision": "A",
+    "confidence": "medium",
+    "reason": "A preserves the requested bird and clearly shows it raised with its mouth open; B has greyer water, but depicts a seal instead of a bird."
+  },
+  "trace": {
+    "stage": "rank_pair_relative_preference",
+    "model_name": "gpt-5.6-terra",
+    "model_revision": null,
+    "provider": "openai-compatible-chat",
+    "reasoning_effort": null,
+    "prompt_version": "rank_preference_relative_v2",
+    "prompt_hash": "2dd99e2fdad1ab8b9c17f3024f9b5ba28b774d83f9401c9a39b7d05dc59cfe5f",
+    "input_hash": "e4fbf0cdc93c62366441548c7fcc78c1ebe85972cc761370f72d6428132011ad",
+    "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_rank_preference_v1/outputs/gc_epochs14_top3_relative/api_cache/rank_pair_relative_preference/e4fbf0cdc93c62366441548c7fcc78c1ebe85972cc761370f72d6428132011ad.json",
+    "cached": false,
+    "attempts": 1,
+    "request_id": "resp_a445ded551c9b60879c0d455d068a1d9e433eeef4c95873b",
+    "usage": {
+      "prompt_tokens": 11663,
+      "completion_tokens": 393,
+      "total_tokens": 12056,
+      "completion_tokens_details": {
+        "reasoning_tokens": 150
+      }
+    }
+  }
+}

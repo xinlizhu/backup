@@ -1,0 +1,87 @@
+{
+  "case_id": "case_d4bce5892bfc54f88ea8",
+  "audit_query_id": "audit_query_009",
+  "signature": "5065d94bb0c1b275e428d3f2ada2352b274139ccb2134477487b5f51eef77ac6",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_d4bce5892bfc54f88ea8",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "R shows two cattle; T shows one dog, water and wooded hills, with no visible grass on the ground."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows two horses, no dog, water, or hills, and visible grass on the ground."
+    },
+    "candidate_relation": "multiple_constraint_conflict",
+    "violated_source_constraints": [
+      "Remove one animal: C shows two horses, as R shows two cattle.",
+      "Change the cow for a dog: C shows horses, not a dog.",
+      "Add water and hills in the background: neither is visible in C.",
+      "Remove the grass on the ground: grass remains visible in C."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_d4bce5892bfc54f88ea8",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows one dog instead of the cow-and-calf scene, with water and a distant wooded shoreline/hills in the background, and a bare leaf-covered ground instead of grass."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a horse and carriage rather than the requested dog, with no visible water or hills in the background; the ground is bare rather than grassy, but the other requested changes are absent."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "1baaf9ac7ff2950e63813881ac2e81ef5a06bcb5bb7bffe26737c3931e478a33",
+      "input_hash": "23ccac0ed3507a1012ac5826e3c38e447e53fcf6f11d1395f7b1b7a689b24d71",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_100/api_cache/propose_witnesses/23ccac0ed3507a1012ac5826e3c38e447e53fcf6f11d1395f7b1b7a689b24d71.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_038b6753a7fc0545016af2b8fc85ec87d18fb06118708d3268",
+      "usage": {
+        "prompt_tokens": 4459,
+        "completion_tokens": 675,
+        "total_tokens": 5134,
+        "completion_tokens_details": {
+          "reasoning_tokens": 455
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "c946d1c02c5dac489879ff7585d38d3caf3bdc123a86abf8b21f2d82d248138e",
+      "input_hash": "6f7afb639b0ab4970c99726841d59de79bd4c88dd1d7e04a43765a2c607b3834",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_100/api_cache/review_witnesses/6f7afb639b0ab4970c99726841d59de79bd4c88dd1d7e04a43765a2c607b3834.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_04cfe5255fd09412016af2b90829c487d18efeb787e3b344c3",
+      "usage": {
+        "prompt_tokens": 7306,
+        "completion_tokens": 269,
+        "total_tokens": 7575,
+        "completion_tokens_details": {
+          "reasoning_tokens": 135
+        }
+      }
+    }
+  ]
+}

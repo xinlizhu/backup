@@ -1,0 +1,50 @@
+{
+  "case_id": "pair_4f13a33a4f48771e6d46",
+  "signature": "f3a97f608e6addbd5531ad7795f5e06873610abdb12f716de8375d49eda4c022",
+  "simulated": false,
+  "status": "complete",
+  "judgment": {
+    "case_id": "pair_4f13a33a4f48771e6d46",
+    "constraints": [
+      {
+        "constraint": "The photo should show two drums.",
+        "A_status": "contradicted",
+        "B_status": "contradicted",
+        "A_evidence": "Shows one glass bowl sink, not two drums.",
+        "B_evidence": "Shows one white basin on a metal stand, not two drums."
+      },
+      {
+        "constraint": "The drums should be silver.",
+        "A_status": "uncertain",
+        "B_status": "uncertain",
+        "A_evidence": "Chrome faucet and rim are silver-toned, but the basin is glass.",
+        "B_evidence": "The stand is silver-gray metal, but the basin is white; no silver drums are visible."
+      }
+    ],
+    "decision": "B",
+    "confidence": "low",
+    "reason": "Both candidates miss the requested pair of silver drums. B is marginally closer because its visible metal stand provides more silver-toned cylindrical forms than A's single chrome faucet, though these are stand legs rather than drums."
+  },
+  "trace": {
+    "stage": "rank_pair_relative_preference",
+    "model_name": "gpt-5.6-terra",
+    "model_revision": null,
+    "provider": "openai-compatible-chat",
+    "reasoning_effort": null,
+    "prompt_version": "rank_preference_relative_v2",
+    "prompt_hash": "f91078a96075625e0375995c58f9477d1ae61d4c16a42fc170a18c4e985e22cc",
+    "input_hash": "e279960447c03a8a5e962e017f6f20796bb78a5e471001871930ae9487e019e0",
+    "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_rank_preference_v1/outputs/gc_epochs14_top3_relative/api_cache/rank_pair_relative_preference/e279960447c03a8a5e962e017f6f20796bb78a5e471001871930ae9487e019e0.json",
+    "cached": false,
+    "attempts": 1,
+    "request_id": "resp_ft_e8f514052c2043829ecb79aee1835375",
+    "usage": {
+      "prompt_tokens": 6338,
+      "completion_tokens": 416,
+      "total_tokens": 6754,
+      "completion_tokens_details": {
+        "reasoning_tokens": 213
+      }
+    }
+  }
+}

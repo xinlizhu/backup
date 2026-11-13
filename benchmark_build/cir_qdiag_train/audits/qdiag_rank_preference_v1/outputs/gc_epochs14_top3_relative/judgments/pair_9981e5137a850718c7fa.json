@@ -1,0 +1,54 @@
+{
+  "case_id": "pair_9981e5137a850718c7fa",
+  "signature": "f3a97f608e6addbd5531ad7795f5e06873610abdb12f716de8375d49eda4c022",
+  "simulated": false,
+  "status": "complete",
+  "judgment": {
+    "case_id": "pair_9981e5137a850718c7fa",
+    "constraints": [
+      {
+        "constraint": "A woman poses for the camera",
+        "A_status": "uncertain",
+        "B_status": "contradicted",
+        "A_evidence": "A person is behind the dogs, but the face and clothing do not clearly establish that the person is a woman; they face generally toward the camera.",
+        "B_evidence": "A person stands beside a sled and dogs, but appears to be a man and is not clearly posing with the dogs."
+      },
+      {
+        "constraint": "A group of dogs is present with the woman",
+        "A_status": "supported",
+        "B_status": "supported",
+        "A_evidence": "A large group of dogs is lined up prominently in the foreground with the person behind them.",
+        "B_evidence": "Several dogs are visible around the sled and standing person."
+      },
+      {
+        "constraint": "Show the requested posed-with-dogs scene instead of the reference's different scene",
+        "A_status": "supported",
+        "B_status": "uncertain",
+        "A_evidence": "The person and many dogs are arranged together toward the camera, resembling a group pose.",
+        "B_evidence": "The scene remains a snowy sled expedition; the person and dogs are present, but not arranged as a group portrait."
+      }
+    ],
+    "decision": "A",
+    "confidence": "medium",
+    "reason": "A more directly depicts a person facing the camera with a prominent group of dogs gathered in front, matching the requested posed-with-dogs scene. B has a person and dogs but reads more as an expedition scene, and the person does not clearly appear to be a woman."
+  },
+  "trace": {
+    "stage": "rank_pair_relative_preference",
+    "model_name": "gpt-5.6-terra",
+    "model_revision": null,
+    "provider": "openai-compatible-chat",
+    "reasoning_effort": null,
+    "prompt_version": "rank_preference_relative_v2",
+    "prompt_hash": "fc25a154a83740c7d4d1b1d9c1f16fe61230db48e7032f590c49a4669fe68f6e",
+    "input_hash": "ebd3248e4f166198bae0fe37604b32364d8e8f14cabc79f3dee7017668f0bafe",
+    "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_rank_preference_v1/outputs/gc_epochs14_top3_relative/api_cache/rank_pair_relative_preference/ebd3248e4f166198bae0fe37604b32364d8e8f14cabc79f3dee7017668f0bafe.json",
+    "cached": false,
+    "attempts": 1,
+    "request_id": "resp_057b7b68c50c1020016af2dc482acc87d1b8027070ab626076",
+    "usage": {
+      "prompt_tokens": 7399,
+      "completion_tokens": 314,
+      "total_tokens": 7713
+    }
+  }
+}

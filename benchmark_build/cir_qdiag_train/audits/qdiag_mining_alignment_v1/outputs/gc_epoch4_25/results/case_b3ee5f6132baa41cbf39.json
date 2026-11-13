@@ -1,0 +1,86 @@
+{
+  "case_id": "case_b3ee5f6132baa41cbf39",
+  "audit_query_id": "audit_query_095",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_b3ee5f6132baa41cbf39",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows one remaining bird, gray-brown water, the bird raised above the shallow water, and its mouth open."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows two decorative pillows on bedding, with no visible bird or water."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "Remove all but one bird",
+      "Change the water color to grey",
+      "Raise the remaining bird out of water with its mouth open"
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_b3ee5f6132baa41cbf39",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "One pelican is visible in grey water, with its neck and upper body raised above the surface, wings lifted, and beak wide open. This supports the requested visible result, despite the reference showing sea lions rather than birds."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The candidate shows two decorative cushions, one pink and one blue, on white bedding. There is no bird, grey water, or raised bird with an open mouth."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "67043c5306adc5005393c0cb1bc7395d75f90f5b16376347b1b1d6ceef1c9c4c",
+      "input_hash": "a57b2180b86d2814c21637b44d71d56155fcde636fc98b9b37aadd3d4906c7ab",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/a57b2180b86d2814c21637b44d71d56155fcde636fc98b9b37aadd3d4906c7ab.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_ack_911f39d16941852384fc8c51b0920a79",
+      "usage": {
+        "prompt_tokens": 7958,
+        "completion_tokens": 547,
+        "total_tokens": 8505,
+        "completion_tokens_details": {
+          "reasoning_tokens": 406
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "06e1e0fcee884d224830ee133121c0b8fbbfd5a12a06cea4ce301bfacbe2edcf",
+      "input_hash": "ab41ed5593c8cc6e8b376f64709b3be601e6894464779c3743bc49e9b2b91b7d",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/ab41ed5593c8cc6e8b376f64709b3be601e6894464779c3743bc49e9b2b91b7d.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0e1a3144269f4c77016af2bf5c74ac87d2a2452ee7696bbd8c",
+      "usage": {
+        "prompt_tokens": 11628,
+        "completion_tokens": 132,
+        "total_tokens": 11760,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        }
+      }
+    }
+  ]
+}

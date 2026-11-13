@@ -1,0 +1,238 @@
+{
+  "case_id": "case_bef87cbcbde15e6a9ea1",
+  "audit_query_id": "audit_query_077",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_bef87cbcbde15e6a9ea1",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Read relative to R, the awkward instruction requests a television stand without an attached showcase. T shows a TV resting on a freestanding open-shelf stand, without an attached display case."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows a television on a base stand integrated with two tall glass-front display cases, conflicting with the request to avoid an attached showcase."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The television stand should not have an attached showcase."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "predicate",
+        "before_span": "rather making with",
+        "after_span": "with",
+        "edited_instruction": "Target on television stand with attached show case",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "Changes the stand's relationship to a showcase from excluding an attached showcase to having one attached.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "T has a low open-shelf television stand without an attached showcase."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C has a television stand with attached glass-front showcases on both sides."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "operation": "delete",
+        "semantic_target": "predicate",
+        "before_span": "rather making with attached show case",
+        "after_span": null,
+        "edited_instruction": "Target on television stand",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "Removes the exclusion of an attached showcase.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "T shows a television resting on a freestanding shelving stand."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C shows a television resting on the base of an integrated television stand and display unit."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_bef87cbcbde15e6a9ea1",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Read relative to the reference's integrated wall unit, the instruction requests a television stand without an attached showcase. Image 2 shows a television on a freestanding low stand with open storage shelves and no attached display cabinet."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a television unit with two attached tall, glass-fronted display cabinets containing decorative vases. These attached showcases violate the source instruction's exclusion."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "The single replacement reconstructs the edited instruction and reverses the attachment predicate from excluding an attached showcase to requiring one. It preserves the television-stand target. The visible attached display cabinets distinguish C from T.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 has a low television stand with open storage compartments, but no attached showcase."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The television stand in Image 3 is integrated with two tall glass-fronted showcases displaying vases."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting the specified contiguous phrase removes the single exclusion of an attached showcase, including its grammatical glue. The remaining television-stand requirement is supported by both images; C violates only the removed constraint.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 shows a television resting on a freestanding television stand."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows a television on the central platform of a television stand with lower drawers; its additional attached showcases are unrestricted after deletion."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "substitute",
+      "semantic_target": "predicate",
+      "before_span": "rather making with",
+      "after_span": "with",
+      "edited_instruction": "Target on television stand with attached show case",
+      "witness_type": "substitution_contrast",
+      "changed_constraint": "Changes the stand's relationship to a showcase from excluding an attached showcase to having one attached.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "T has a low open-shelf television stand without an attached showcase."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C has a television stand with attached glass-front showcases on both sides."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "The single replacement reconstructs the edited instruction and reverses the attachment predicate from excluding an attached showcase to requiring one. It preserves the television-stand target. The visible attached display cabinets distinguish C from T.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 has a low television stand with open storage compartments, but no attached showcase."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The television stand in Image 3 is integrated with two tall glass-fronted showcases displaying vases."
+        }
+      }
+    },
+    {
+      "witness_id": "w2",
+      "operation": "delete",
+      "semantic_target": "predicate",
+      "before_span": "rather making with attached show case",
+      "after_span": null,
+      "edited_instruction": "Target on television stand",
+      "witness_type": "deletion_relaxation",
+      "changed_constraint": "Removes the exclusion of an attached showcase.",
+      "edited_on_positive": {
+        "status": "supported",
+        "evidence": "T shows a television resting on a freestanding shelving stand."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C shows a television resting on the base of an integrated television stand and display unit."
+      },
+      "independent_review": {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting the specified contiguous phrase removes the single exclusion of an attached showcase, including its grammatical glue. The remaining television-stand requirement is supported by both images; C violates only the removed constraint.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 shows a television resting on a freestanding television stand."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows a television on the central platform of a television stand with lower drawers; its additional attached showcases are unrestricted after deletion."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    },
+    {
+      "witness_id": "w2",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "f6d108b033b824ee14bf6098e23d9053f48f3384f5805c0092d653687b78a03a",
+      "input_hash": "a1ab48346acb9076f0300ccbdbb4a83fea8dc35cd363bec3e8aca48424c20e39",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/a1ab48346acb9076f0300ccbdbb4a83fea8dc35cd363bec3e8aca48424c20e39.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_07345e4f908f18e8016af2be3ebc7487d1ba8237f6c24b754a",
+      "usage": {
+        "prompt_tokens": 7445,
+        "completion_tokens": 714,
+        "total_tokens": 8159,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 190
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "8529f1332b4f42e80358742a64e72e9f6c7f0e2fdbe69308e9f22c3d3ef91a07",
+      "input_hash": "f1fe0f2f4946b658c7399714c9beaa364abee4ec27e056dd4d9f8d988acd03bd",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/f1fe0f2f4946b658c7399714c9beaa364abee4ec27e056dd4d9f8d988acd03bd.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_07f0b50c52b51a99016af2be6eba0c87d1b14d4de19c8fe8d8",
+      "usage": {
+        "prompt_tokens": 7028,
+        "completion_tokens": 566,
+        "total_tokens": 7594,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 68
+        }
+      }
+    }
+  ]
+}

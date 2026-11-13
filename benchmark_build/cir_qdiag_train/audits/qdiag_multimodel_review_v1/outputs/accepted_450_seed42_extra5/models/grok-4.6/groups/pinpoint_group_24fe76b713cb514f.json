@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_24fe76b713cb514f",
+  "model": "grok-4.6",
+  "signature": "cb958fa178e5ebcdd33f446ebd46fe25a7c20417ca5539cc74de61fb4df99804",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_24fe76b713cb514f_query_07585_predicate_add",
+      "decision": "reject",
+      "failure_code": "wrong_semantic_target",
+      "reason": "Inserting 'that end at the wrists' only specifies the sleeves' endpoint/length, a property of an existing entity, so this is an attribute edit rather than a predicate."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.6",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "064935f2994ce0370e2afe40aba8dca37948a96179f0dced423bfdcccdc1a9ae",
+      "input_hash": "d61acd50912e733c22f587829e46ad471c93ab94027e2f41148ed8e1377d5531",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/grok-4.6/cache/validate_group/d61acd50912e733c22f587829e46ad471c93ab94027e2f41148ed8e1377d5531.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "57d7b27a-1746-91b5-aebb-67e2ab981298",
+      "usage": {
+        "prompt_tokens": 2693,
+        "completion_tokens": 89,
+        "total_tokens": 7717,
+        "prompt_tokens_details": {
+          "text_tokens": 2379,
+          "audio_tokens": 0,
+          "image_tokens": 314,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 4935,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 324580000
+      }
+    }
+  ],
+  "format_warnings": []
+}

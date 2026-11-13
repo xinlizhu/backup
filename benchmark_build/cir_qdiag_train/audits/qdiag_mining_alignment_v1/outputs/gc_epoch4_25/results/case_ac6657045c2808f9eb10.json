@@ -1,0 +1,89 @@
+{
+  "case_id": "case_ac6657045c2808f9eb10",
+  "audit_query_id": "audit_query_076",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_ac6657045c2808f9eb10",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Unlike the group of dogs in R, T shows one dog on a red carpet with a large bone at its mouth and front paws."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows a bookshop storefront and window display, with no visible dog, red carpet, or bone."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "Show exactly one dog.",
+      "Place the dog on a red carpet.",
+      "Give the dog a bone."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_ac6657045c2808f9eb10",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "One dog is visible, compared with the many dogs in the reference. It lies on a red carpet with a large bone held at its mouth and resting between its front paws."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The candidate shows the exterior of the Notting Hill Bookshop. No dog, red carpet, or bone is visible; it does not depict the required single dog on red carpet with a bone."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "7cc4871c485dcb5b721f59e4ebcdcc05cab4283cd9610c8b956a55a777400370",
+      "input_hash": "b8cf1e6d1a1d70dd81b702044c34d40705712f885547b87aedc7a97210925840",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/b8cf1e6d1a1d70dd81b702044c34d40705712f885547b87aedc7a97210925840.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0e65ed128089d4b2016af2be4a8cb487d1aacc7359c5e4639e",
+      "usage": {
+        "prompt_tokens": 27250,
+        "completion_tokens": 238,
+        "total_tokens": 27488,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 57
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "5f5105e6f7860043c64efe64a48b77b4545f2300fb83818f0689e128929b7306",
+      "input_hash": "8c7b1c03ba1865eb873e836b24d7e81d3fb70d456120ccb5f14c23a0ce240344",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/8c7b1c03ba1865eb873e836b24d7e81d3fb70d456120ccb5f14c23a0ce240344.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_06b5be68c1517f7e016af2be6e4c5487d18e52c7f778282a44",
+      "usage": {
+        "prompt_tokens": 26708,
+        "completion_tokens": 126,
+        "total_tokens": 26834,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        }
+      }
+    }
+  ]
+}

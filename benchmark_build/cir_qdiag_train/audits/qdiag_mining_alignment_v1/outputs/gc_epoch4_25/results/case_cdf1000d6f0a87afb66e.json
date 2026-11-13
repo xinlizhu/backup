@@ -1,0 +1,172 @@
+{
+  "case_id": "case_cdf1000d6f0a87afb66e",
+  "audit_query_id": "audit_query_081",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_cdf1000d6f0a87afb66e",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a wind instrument with a visibly reddish-maroon body."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows saxophone parts with a predominantly gold-colored metal body, not a maroon-colored instrument."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The wind instrument should be maroon; the visible saxophone parts in C are gold-colored."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "substitute_attribute_color",
+        "operation": "substitute",
+        "semantic_target": "attribute",
+        "before_span": "maroon",
+        "after_span": "golden",
+        "edited_instruction": "Make a wind instrument golden.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "Instrument body color changes from maroon to golden.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 shows a reddish-maroon instrument body, not a golden one."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows gold-colored saxophone parts."
+        }
+      },
+      {
+        "witness_id": "delete_attribute_color",
+        "operation": "delete",
+        "semantic_target": "attribute",
+        "before_span": "a maroon color",
+        "after_span": null,
+        "edited_instruction": "Make a wind instrument.",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "Removes the maroon-color requirement; the remaining instruction only specifies a wind instrument.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 depicts a wind instrument."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 depicts saxophone parts, which are parts of a wind instrument."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_cdf1000d6f0a87afb66e",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a saxophone with a distinctly deep red-maroon body."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows gold/brass-colored saxophone parts; no maroon-colored wind instrument is visible."
+    },
+    "verdicts": [
+      {
+        "witness_id": "substitute_attribute_color",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing only “maroon” with “golden” preserves the instrument and color-attribute roles. Image 2 is maroon rather than golden, while Image 3 visibly shows a golden/brass saxophone.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2's saxophone body is red-maroon, not golden."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 visibly shows gold/brass-colored saxophone parts."
+        }
+      },
+      {
+        "witness_id": "delete_attribute_color",
+        "decision": "reject",
+        "failure_code": "wrong_semantic_target",
+        "witness_type": null,
+        "reason": "Deleting “a maroon color” leaves “Make a wind instrument,” which changes the instruction from specifying the instrument’s color to making/creating an instrument; it does not preserve the unedited meaning.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 shows a wind instrument, a saxophone."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows parts of a wind instrument, a saxophone."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [],
+  "local_checks": [
+    {
+      "witness_id": "substitute_attribute_color",
+      "accepted": false,
+      "local_failures": [
+        "span_reconstruction_failed"
+      ],
+      "review_decision": "accept"
+    },
+    {
+      "witness_id": "delete_attribute_color",
+      "accepted": false,
+      "local_failures": [
+        "wrong_witness_type"
+      ],
+      "review_decision": "reject"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "1513c82ffe775c24d7ac5588c39e3181acf477ab2a9841c868ba6f5f4b850ebf",
+      "input_hash": "caf761a384545efaa253fd16b553d375b84d041733db410a990168a29a23b4d0",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/caf761a384545efaa253fd16b553d375b84d041733db410a990168a29a23b4d0.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0716a99c99e448fc016af2bf09326c87d1a4fa9bd55cb969f4",
+      "usage": {
+        "prompt_tokens": 9142,
+        "completion_tokens": 634,
+        "total_tokens": 9776,
+        "completion_tokens_details": {
+          "reasoning_tokens": 270
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "5c8482a22ecd12ce62d5ba0958265f94f4b451b7b9e757b1a37beab5665f5580",
+      "input_hash": "02a09157d24c80794682a0bf847cfb4def0338a24bad973c91ceabec4548a160",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/02a09157d24c80794682a0bf847cfb4def0338a24bad973c91ceabec4548a160.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_062a0f8f9e15ab91016af2bf170b2887d1af33770472cf4024",
+      "usage": {
+        "prompt_tokens": 8723,
+        "completion_tokens": 825,
+        "total_tokens": 9548,
+        "prompt_tokens_details": {
+          "cached_tokens": 5248
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 486
+        }
+      }
+    }
+  ]
+}

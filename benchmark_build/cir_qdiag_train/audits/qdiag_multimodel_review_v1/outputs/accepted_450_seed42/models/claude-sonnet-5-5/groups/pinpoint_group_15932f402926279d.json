@@ -1,0 +1,49 @@
+{
+  "group_id": "pinpoint_group_15932f402926279d",
+  "model": "claude-sonnet-5-5",
+  "signature": "aff20e5a5733d87f80fd7515c25d92c77cff20d4f50c9f8dbf4123bfdabed97b",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_15932f402926279d_query_04570_object_add",
+      "decision": "reject",
+      "failure_code": "not_visually_verifiable",
+      "reason": "The edit adds 'and a scarf' as a new object to the query. While the source_text references 'this same jacket' (resolvable from reference image 1), none of the four supplied positive images clearly show a scarf. The positive images show jackets with various styling but without visible scarves, making it impossible to verify whether adding this constraint would be clearly false for every positive image as required."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-sonnet-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "39c6570d8f78d1bf6561a9539faed6345f9ccf8ab79beb1e54f80feceb3941ff",
+      "input_hash": "1e3a4b10a7f9d888a90ba81ee41de2c786ca12beef448cc4eec4b03be73fc83d",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/claude-sonnet-5-5/cache/validate_group/1e3a4b10a7f9d888a90ba81ee41de2c786ca12beef448cc4eec4b03be73fc83d.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01ydjxCNfrTBmTNm3G9wiNVzSl",
+      "usage": {
+        "prompt_tokens": 9226,
+        "completion_tokens": 197,
+        "total_tokens": 9423,
+        "prompt_tokens_details": {
+          "cached_tokens": 7193,
+          "cache_creation_tokens": 2029
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_15932f402926279d_query_04570_object_add",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 416,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

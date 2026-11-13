@@ -1,0 +1,134 @@
+{
+  "case_id": "case_96b13ff3c4371551f020",
+  "audit_query_id": "audit_query_079",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_96b13ff3c4371551f020",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 visibly shows a dark, nearly black bowl-shaped sink."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows an indoor staircase and railings; no sink is visible."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "The candidate does not show a bowl sink; its visible subject is a staircase."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "substitute_object_staircase",
+        "operation": "substitute",
+        "semantic_target": "object",
+        "before_span": "black bowl sink",
+        "after_span": "staircase",
+        "edited_instruction": "Show a staircase.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "The requested object changes from a black bowl sink to a staircase; the sink request is contradicted by C.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 visibly shows a black bowl sink, not a staircase."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 visibly shows a staircase with railings."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_96b13ff3c4371551f020",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 clearly shows a black, bowl-shaped vessel sink beneath a running faucet."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a wooden staircase with white risers and railings; no black bowl sink is visible."
+    },
+    "verdicts": [
+      {
+        "witness_id": "substitute_object_staircase",
+        "decision": "reject",
+        "failure_code": "not_single_edit",
+        "witness_type": null,
+        "reason": "The spans reconstruct the proposed text, and the visual contrast holds, but replacing 'black bowl sink' with 'staircase' changes object identity and independently removes the explicit black attribute. One contiguous replacement does not make these a single semantic edit.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 depicts a vessel sink and faucet, with no staircase visible."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 prominently shows a staircase connecting multiple landings."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [],
+  "local_checks": [
+    {
+      "witness_id": "substitute_object_staircase",
+      "accepted": false,
+      "local_failures": [
+        "wrong_witness_type"
+      ],
+      "review_decision": "reject"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "d81578011915c1f2c31ca443775e83dfcf4f7e865a09e003dc0ed4d4aaf97eb8",
+      "input_hash": "ab91dfe5f3c6331a7c7915599834c0c30d48b927fca8537362db732c7d3fccf4",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/ab91dfe5f3c6331a7c7915599834c0c30d48b927fca8537362db732c7d3fccf4.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0e950403c1f2c94b016af2bf6990c487d2a6fa3eea98ee6215",
+      "usage": {
+        "prompt_tokens": 8560,
+        "completion_tokens": 521,
+        "total_tokens": 9081,
+        "prompt_tokens_details": {
+          "cached_tokens": 5888
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 274
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "2ccca25a75108d950b7b8fa2c340be8bffd152f25bc228be932275252f975889",
+      "input_hash": "92808426f3a70ad1dabde7caf4c7f48e1971bee655b9b58f2e80ccf4b0ebe1cf",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/92808426f3a70ad1dabde7caf4c7f48e1971bee655b9b58f2e80ccf4b0ebe1cf.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_09f1d896fd1f19bf016af2bf80da0087d1a90f3409377a3e1f",
+      "usage": {
+        "prompt_tokens": 7918,
+        "completion_tokens": 328,
+        "total_tokens": 8246,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 101
+        }
+      }
+    }
+  ]
+}

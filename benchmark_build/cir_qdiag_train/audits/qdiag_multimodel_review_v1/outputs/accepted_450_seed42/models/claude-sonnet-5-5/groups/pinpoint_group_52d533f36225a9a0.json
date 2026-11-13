@@ -1,0 +1,62 @@
+{
+  "group_id": "pinpoint_group_52d533f36225a9a0",
+  "model": "claude-sonnet-5-5",
+  "signature": "aff20e5a5733d87f80fd7515c25d92c77cff20d4f50c9f8dbf4123bfdabed97b",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_52d533f36225a9a0_query_02863_attribute_substitute",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "Image 2 shows a draped, flowing top that displays fitted elements in the bodice area. Image 5 depicts a linen wrap garment with structured, fitted proportions. Both positive images are compatible with 'fitted' as an attribute, making the substitution from 'layered' to 'fitted' not decisively false across all supplied positives."
+    },
+    {
+      "negative_id": "pinpoint_group_52d533f36225a9a0_query_02864_attribute_delete",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "The deletion removes exactly one semantic constraint ('layered') while preserving the core request structure and mood-matching intent. The negative text 'A top designed to align with this image's mood' is fluent, meaningful, and strictly weaker than the source. This is a valid single-edit deletion of an attribute constraint."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-sonnet-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "8004ae45f724435d6522e9666138d6f00ad2e6a1d411ee1634a6c8ff9f1d342d",
+      "input_hash": "12f20cc5aae9cc05a9cb5931540e5fbe32d9d139634c559cd357bededcc3ef42",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/claude-sonnet-5-5/cache/validate_group/12f20cc5aae9cc05a9cb5931540e5fbe32d9d139634c559cd357bededcc3ef42.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01gXBwcaiKRbGsZFZdqNWCz6g1",
+      "usage": {
+        "prompt_tokens": 9760,
+        "completion_tokens": 321,
+        "total_tokens": 10081,
+        "prompt_tokens_details": {
+          "cached_tokens": 7609,
+          "cache_creation_tokens": 2147
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_52d533f36225a9a0_query_02863_attribute_substitute",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 329,
+      "action": "full reason retained; decision and failure_code unchanged"
+    },
+    {
+      "negative_id": "pinpoint_group_52d533f36225a9a0_query_02864_attribute_delete",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 326,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

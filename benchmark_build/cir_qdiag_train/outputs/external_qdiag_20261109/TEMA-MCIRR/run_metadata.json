@@ -1,0 +1,43 @@
+{
+  "bootstrap_replicates": 2000,
+  "checkpoint": "/mnt/data/datasets/search_dataset/zxl/models/TEMA/TEMA_mcirr.pt",
+  "clip_checkpoint": null,
+  "complete": true,
+  "coverage": {
+    "group_count": 500,
+    "group_without_negative_count": 1,
+    "instruction_without_negative_count": 71,
+    "missing_images": [],
+    "negative_query_count": 5576,
+    "positive_query_count": 1933,
+    "reference_count_groups": {
+      "1": 428,
+      "2": 72
+    },
+    "target_images": 3506,
+    "unique_images": 3930
+  },
+  "device": "cuda:0",
+  "elapsed_seconds": 57.97754263877869,
+  "environment": {
+    "gpu": "NVIDIA H100 80GB HBM3",
+    "python": "3.12.13 | packaged by Anaconda, Inc. | (main, Mar 19 2026, 20:20:58) [GCC 14.3.0]",
+    "torch": "2.10.0+cu128"
+  },
+  "image_batch_size": 256,
+  "image_cache": "/mnt/data/datasets/search_dataset/zxl/pinpoint-dataset/image_cache",
+  "input": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_openai/outputs/pinpoint_pilot_500_v7/final.jsonl",
+  "metrics": "original group-balanced QDiag; all includes DELETE; original bootstrap and random-10 seeds",
+  "model": "tema",
+  "model_name": "TEMA-MCIRR",
+  "multi_reference": "arithmetic mean of native reference visual features/tokens BEFORE multimodal fusion; identical references reduce to the single-image path",
+  "output": "outputs/external_qdiag_20261109/TEMA-MCIRR",
+  "preflight_only": false,
+  "query_batch_size": 256,
+  "repository_commit": "f78ce9ede7cb224acfe7d0897ba96ee3f3944ff7",
+  "scoring": "normalized query-target dot product",
+  "seed": 42,
+  "smoke_only": false,
+  "tema_padding": "batch only equal token lengths to avoid unmasked padding in official entity mapper",
+  "workers": 24
+}

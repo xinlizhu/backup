@@ -1,0 +1,87 @@
+{
+  "case_id": "case_01b12898f3aaee999daf",
+  "audit_query_id": "audit_query_086",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_01b12898f3aaee999daf",
+    "case_status": "source_invalid_or_uncertain",
+    "source_on_positive": {
+      "status": "contradicted",
+      "evidence": "Image 2 shows a fox sitting upright on a stump, not standing; the upright posture resembles the seated cat in Image 1."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows two men playing saxophones, with no fox or matching upright animal posture."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "The positive fox is seated, contrary to the instruction that it be standing."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_01b12898f3aaee999daf",
+    "source_on_positive": {
+      "status": "contradicted",
+      "evidence": "Image 2 shows a fox sitting upright on a base, not standing; the wording's standing constraint is not visibly met."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows two people playing saxophones and no fox."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "47728ae52fa4eec8d849055888966b51a326b7c1f937a9a99fdc83ec32201fff",
+      "input_hash": "db88e8cbf91e53e9b23f6354535fb3c93f3ebd4b380013aebffd948fcd00cd5e",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/db88e8cbf91e53e9b23f6354535fb3c93f3ebd4b380013aebffd948fcd00cd5e.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_02b6eb4a2afe1401016af2bf63e35c87d2a6d5797ad0f2e75e",
+      "usage": {
+        "prompt_tokens": 7501,
+        "completion_tokens": 306,
+        "total_tokens": 7807,
+        "prompt_tokens_details": {
+          "cached_tokens": 5888
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 168
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "44094a4e938c8892e42dfb49e394b070cd0b07ae714b64ebafad550572d0293b",
+      "input_hash": "4e784732f75f91f858f41225f5bd0307befa99b437dcb0885658a6558741006e",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/4e784732f75f91f858f41225f5bd0307befa99b437dcb0885658a6558741006e.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0a4890c21cb29232016af2bf6df61887d191dd4f289569de2d",
+      "usage": {
+        "prompt_tokens": 3570,
+        "completion_tokens": 249,
+        "total_tokens": 3819,
+        "completion_tokens_details": {
+          "reasoning_tokens": 155
+        }
+      }
+    }
+  ]
+}

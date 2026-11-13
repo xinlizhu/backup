@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_d9c8839a6554a766",
+  "model": "grok-4.7",
+  "signature": "52913ea34ae01078c58f7a80fc2119b86ef4b6b3449e9e55b21816a5d5d1ccbd",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_d9c8839a6554a766_query_00187_predicate_add",
+      "decision": "reject",
+      "failure_code": "wrong_semantic_target",
+      "reason": "The added clause only gives the event a time of day. Nighttime is a temporal attribute of the event, not an action or relation, so it does not match the claimed predicate target."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.7",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "7efdc536300f82e77732d561e9de11a0715fdaeb95162734af4f1fe88e4b730b",
+      "input_hash": "020310377dacc07f20b3f9b7997ff305fbe00216a720ebc9657ab65fe13dcec6",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/grok-4.7/cache/validate_group/020310377dacc07f20b3f9b7997ff305fbe00216a720ebc9657ab65fe13dcec6.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "80f2b27f-cc6f-9049-ab49-89e8d76471ef",
+      "usage": {
+        "prompt_tokens": 5357,
+        "completion_tokens": 93,
+        "total_tokens": 10854,
+        "prompt_tokens_details": {
+          "text_tokens": 2498,
+          "audio_tokens": 0,
+          "image_tokens": 2859,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 5404,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 406240000
+      }
+    }
+  ],
+  "format_warnings": []
+}

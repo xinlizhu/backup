@@ -1,0 +1,232 @@
+{
+  "case_id": "case_c0b7866b4aa5b4f55681",
+  "audit_query_id": "audit_query_080",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_c0b7866b4aa5b4f55681",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "A bright yellow flower stands in a white vase, replacing the reference's pale branching arrangement and satisfying the requested decorative change."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "A flower stands in a tall vase, but its petals are red rather than the requested yellow."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The flower must be yellow."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "attribute",
+        "before_span": "yellow",
+        "after_span": "red",
+        "edited_instruction": "Bright up the room with a red flower in a vase.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "Flower color changes from yellow to red.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The flower in the white vase has yellow petals, not red petals."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "A vivid red flower is displayed in a tall vase."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "operation": "delete",
+        "semantic_target": "attribute",
+        "before_span": "yellow",
+        "after_span": null,
+        "edited_instruction": "Bright up the room with a flower in a vase.",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "Removes the requirement that the flower be yellow.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "A yellow flower is displayed in a white vase."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "A red flower is displayed in a tall vase; no flower color is now required."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_c0b7866b4aa5b4f55681",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a vivid yellow flower with its stem in a white vase, supporting the requested colorful floral display relative to the reference's muted pale blossoms."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a red flower in a tall metal-and-glass vase. The flower is red rather than the required yellow."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing 'yellow' with 'red' is one attribute substitution retaining the flower and vase requirements. The yellow flower in Image 2 supports the source and contradicts the edit; the red flower in Image 3 gives the reverse pattern.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2's flower is yellow, with no red flower visible."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 clearly displays a vivid red flower with its stem held in a vase."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting 'yellow' removes exactly one color constraint and reconstructs the fluent edited instruction. Both images show a flower in a vase; the candidate violates only the removed yellow requirement.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 shows a yellow flower in a white vase, satisfying the instruction without a specified flower color."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows a red flower in a metal-and-glass vase, satisfying the instruction once the yellow constraint is removed."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "substitute",
+      "semantic_target": "attribute",
+      "before_span": "yellow",
+      "after_span": "red",
+      "edited_instruction": "Bright up the room with a red flower in a vase.",
+      "witness_type": "substitution_contrast",
+      "changed_constraint": "Flower color changes from yellow to red.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "The flower in the white vase has yellow petals, not red petals."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "A vivid red flower is displayed in a tall vase."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing 'yellow' with 'red' is one attribute substitution retaining the flower and vase requirements. The yellow flower in Image 2 supports the source and contradicts the edit; the red flower in Image 3 gives the reverse pattern.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2's flower is yellow, with no red flower visible."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 clearly displays a vivid red flower with its stem held in a vase."
+        }
+      }
+    },
+    {
+      "witness_id": "w2",
+      "operation": "delete",
+      "semantic_target": "attribute",
+      "before_span": "yellow",
+      "after_span": null,
+      "edited_instruction": "Bright up the room with a flower in a vase.",
+      "witness_type": "deletion_relaxation",
+      "changed_constraint": "Removes the requirement that the flower be yellow.",
+      "edited_on_positive": {
+        "status": "supported",
+        "evidence": "A yellow flower is displayed in a white vase."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "A red flower is displayed in a tall vase; no flower color is now required."
+      },
+      "independent_review": {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting 'yellow' removes exactly one color constraint and reconstructs the fluent edited instruction. Both images show a flower in a vase; the candidate violates only the removed yellow requirement.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 shows a yellow flower in a white vase, satisfying the instruction without a specified flower color."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows a red flower in a metal-and-glass vase, satisfying the instruction once the yellow constraint is removed."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    },
+    {
+      "witness_id": "w2",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "4502a1525f86b50a5706d98348289e5493a6dcf2b9ae1c77856206d8e1e41ba7",
+      "input_hash": "7bf3d98729e5aabeba7c3483ff3554c7dff530085af925a3164d84a00f8e7cd5",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/7bf3d98729e5aabeba7c3483ff3554c7dff530085af925a3164d84a00f8e7cd5.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_01bed221733c2f46016af2be07e66487d1aeec1011c91d65f5",
+      "usage": {
+        "prompt_tokens": 7349,
+        "completion_tokens": 486,
+        "total_tokens": 7835,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "ecbcbf9d8df9bd097ad1988f464066fc15c6a8cdb5a6e12744fc0d4063977c10",
+      "input_hash": "61d24b03955e00026ea80888d143c0716c301ee62bef201046c97f9594344a18",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/61d24b03955e00026ea80888d143c0716c301ee62bef201046c97f9594344a18.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_079daf4cfae739c6016af2be30c80087d186022c18c96937dd",
+      "usage": {
+        "prompt_tokens": 6934,
+        "completion_tokens": 480,
+        "total_tokens": 7414,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        }
+      }
+    }
+  ]
+}

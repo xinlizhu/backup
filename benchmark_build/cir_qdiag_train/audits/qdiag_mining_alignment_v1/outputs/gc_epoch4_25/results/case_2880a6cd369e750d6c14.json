@@ -1,0 +1,163 @@
+{
+  "case_id": "case_2880a6cd369e750d6c14",
+  "audit_query_id": "audit_query_081",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_2880a6cd369e750d6c14",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The saxophone has a maroon-red body with gold keys, satisfying the requested wind-instrument color."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The saxophone has a gold/brass-colored body, not a maroon body; the pink-red area is the background."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The wind instrument must be maroon."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "attribute",
+        "before_span": "maroon",
+        "after_span": "gold",
+        "edited_instruction": "Make a wind instrument a gold color.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "The wind instrument's body color changes from maroon to gold.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The saxophone's body is maroon-red; its gold keywork does not make the body gold."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The saxophone's body and bell visibly have a gold/brass finish."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_2880a6cd369e750d6c14",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a wind instrument with a red-maroon body."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a wind instrument with a gold/brass-colored body, not maroon."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "The single attribute edit changes maroon to gold while retaining the instrument; Image 2 supports only the source color and Image 3 supports the edited color.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The instrument body in Image 2 is red-maroon rather than gold."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The saxophone body in Image 3 is visibly gold/brass-colored."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "substitute",
+      "semantic_target": "attribute",
+      "before_span": "maroon",
+      "after_span": "gold",
+      "edited_instruction": "Make a wind instrument a gold color.",
+      "witness_type": "substitution_contrast",
+      "changed_constraint": "The wind instrument's body color changes from maroon to gold.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "The saxophone's body is maroon-red; its gold keywork does not make the body gold."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "The saxophone's body and bell visibly have a gold/brass finish."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "The single attribute edit changes maroon to gold while retaining the instrument; Image 2 supports only the source color and Image 3 supports the edited color.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The instrument body in Image 2 is red-maroon rather than gold."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The saxophone body in Image 3 is visibly gold/brass-colored."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "4e5ad34c07daabee3560c812f06dba6bc29f5e3ac247fc79acda03fe29d3ffd3",
+      "input_hash": "d49d52c4046c0505b4e65fbf3aee02a42b3b8dd663777afeef12dee89ee34192",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/d49d52c4046c0505b4e65fbf3aee02a42b3b8dd663777afeef12dee89ee34192.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0034a590a5d94bff016af2bea7efac87d2ab7d68420305a593",
+      "usage": {
+        "prompt_tokens": 8748,
+        "completion_tokens": 499,
+        "total_tokens": 9247,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 155
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "a6d0b485c755d44913ba2d223de743c0457c2103f46c2ae561903edd82602bee",
+      "input_hash": "7bbae79b929f027965c01b7599567dc36f96eeaa97430478a7717809cfcc1f76",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/7bbae79b929f027965c01b7599567dc36f96eeaa97430478a7717809cfcc1f76.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_076e8964b88693ab016af2beb8e45087d191072769a8425e3c",
+      "usage": {
+        "prompt_tokens": 8431,
+        "completion_tokens": 287,
+        "total_tokens": 8718,
+        "completion_tokens_details": {
+          "reasoning_tokens": 83
+        }
+      }
+    }
+  ]
+}

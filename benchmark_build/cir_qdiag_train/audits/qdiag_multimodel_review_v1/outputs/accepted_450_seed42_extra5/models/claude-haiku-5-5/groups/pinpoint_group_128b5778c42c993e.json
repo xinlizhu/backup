@@ -1,0 +1,49 @@
+{
+  "group_id": "pinpoint_group_128b5778c42c993e",
+  "model": "claude-haiku-5-5",
+  "signature": "44bb4aae802e19564501a676b733c7e19828d9ced260b7da0428f08b1a359df2",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_128b5778c42c993e_query_04663_attribute_add",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "The added attribute 'in dark brown leather' is compatible with supplied positive images. Images 2, 3, 4, and 5 all show white cowboy boots, not dark brown leather boots. However, the source image (Image 1) clearly displays a white leather boot, making 'dark brown leather' factually false for the reference. The edit contradicts the visual evidence of the reference boot, but the negative text itself remains fluent and well-formed. The core issue is that this constraint cannot be verified as universally false across the positive set since the positives show white boots that do not support dark brown leather styling."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-haiku-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "f7a78146399c5cbc9b8461a2ad00410a64b44a8a8d9e5753ba0db1f13aa60be6",
+      "input_hash": "17c8824b8e4e41debd15430d8e467dfef904a6278d16c4d94fb32fb67c29df63",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/claude-haiku-5-5/cache/validate_group/17c8824b8e4e41debd15430d8e467dfef904a6278d16c4d94fb32fb67c29df63.json",
+      "cached": false,
+      "attempts": 2,
+      "request_id": "msg_01OscktTPzT12QAepw4xEcCXuY",
+      "usage": {
+        "prompt_tokens": 11262,
+        "completion_tokens": 260,
+        "total_tokens": 11522,
+        "prompt_tokens_details": {
+          "cached_tokens": 8781,
+          "cache_creation_tokens": 2477
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_128b5778c42c993e_query_04663_attribute_add",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 620,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

@@ -1,0 +1,164 @@
+{
+  "case_id": "case_80765681959b27a1d33e",
+  "audit_query_id": "audit_query_083",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_80765681959b27a1d33e",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Compared with the reference's multiple boxes, this image shows one cream container with one matching product box."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "One Avon Foot Works tube stands in front of an Avon cardboard box. The instruction does not require an individual retail carton."
+    },
+    "candidate_relation": "compatible",
+    "violated_source_constraints": [],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "add",
+        "semantic_target": "attribute",
+        "before_span": null,
+        "after_span": "orange-and-white",
+        "edited_instruction": "Leave a single orange-and-white product with its box",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "The product must be orange-and-white.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The single cream container is white with a silver cap and pink label details, rather than orange-and-white."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The single tube has a white upper portion and a prominent orange lower portion, with an Avon box behind it."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_80765681959b27a1d33e",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows one white body-cream tube accompanied by one matching pink retail box, satisfying a single product with its box."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "Image 3 shows one Foot Works tube with its matching white-and-orange retail box partly visible behind it on the left."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "Inserting 'orange-and-white' adds one product-color attribute and preserves the single-product and accompanying-box constraints. Both images satisfy the source instruction; only the candidate has an orange-and-white product.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The body-cream tube is white with pink markings and a silver-colored cap; it is not orange-and-white."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The single Foot Works tube has a white upper section and an orange lower section, and its matching box is visible behind it."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "add",
+      "semantic_target": "attribute",
+      "before_span": null,
+      "after_span": "orange-and-white",
+      "edited_instruction": "Leave a single orange-and-white product with its box",
+      "witness_type": "addition_disambiguation",
+      "changed_constraint": "The product must be orange-and-white.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "The single cream container is white with a silver cap and pink label details, rather than orange-and-white."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "The single tube has a white upper portion and a prominent orange lower portion, with an Avon box behind it."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "Inserting 'orange-and-white' adds one product-color attribute and preserves the single-product and accompanying-box constraints. Both images satisfy the source instruction; only the candidate has an orange-and-white product.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The body-cream tube is white with pink markings and a silver-colored cap; it is not orange-and-white."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The single Foot Works tube has a white upper section and an orange lower section, and its matching box is visible behind it."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "8691d3ac43950ba086071a3099867b58c119790afbdb4320ea934b3c2bb076ac",
+      "input_hash": "f56b39592c1e3b981f6d13ffc326d9b095c75d37ba17ee9081953fe29b999bb9",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/f56b39592c1e3b981f6d13ffc326d9b095c75d37ba17ee9081953fe29b999bb9.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_06523e5286e01058016af2bd91b22487d2890873d7fe440da8",
+      "usage": {
+        "prompt_tokens": 7582,
+        "completion_tokens": 562,
+        "total_tokens": 8144,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 234
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "4eeea7ba855779fb4e1e74ac5a678eab754b819ada7f83bf63da4f39d58776ef",
+      "input_hash": "9ed915f5b240b110b13e3ab5801a3439bb8bc6ed56b376bd63ccec775908bbcf",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/9ed915f5b240b110b13e3ab5801a3439bb8bc6ed56b376bd63ccec775908bbcf.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_01e55b72e958dc2b016af2bdb805bc87d28a645227cdcdaaa7",
+      "usage": {
+        "prompt_tokens": 7103,
+        "completion_tokens": 355,
+        "total_tokens": 7458,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 46
+        }
+      }
+    }
+  ]
+}

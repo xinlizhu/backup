@@ -1,0 +1,166 @@
+{
+  "case_id": "case_2219490106e83c27959f",
+  "audit_query_id": "audit_query_081",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_2219490106e83c27959f",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "T shows a saxophone with a maroon-red body and gold keys, supporting the requested color change from the saxophones in R."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows a wind instrument with a purple body, rather than a maroon body."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The wind instrument must be maroon."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "attribute",
+        "before_span": "maroon",
+        "after_span": "purple",
+        "edited_instruction": "Make a wind instrument a purple color.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "The wind instrument's body color changes from maroon to purple.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "T's saxophone body is maroon-red, not purple."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C shows a purple-bodied saxophone, satisfying the revised color constraint."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_2219490106e83c27959f",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a saxophone with a maroon-red body and gold keywork, satisfying the requested wind instrument color change from the reference."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a saxophone with a purple body and gold keywork; its body is purple rather than maroon."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing 'maroon' with 'purple' is one exact attribute substitution that preserves the wind instrument constraint. The visible body colors establish the required reversal between the positive and candidate.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The saxophone in Image 2 has a maroon-red body, not a purple body."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The saxophone in Image 3 has a clearly purple body, satisfying the edited color constraint."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "substitute",
+      "semantic_target": "attribute",
+      "before_span": "maroon",
+      "after_span": "purple",
+      "edited_instruction": "Make a wind instrument a purple color.",
+      "witness_type": "substitution_contrast",
+      "changed_constraint": "The wind instrument's body color changes from maroon to purple.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "T's saxophone body is maroon-red, not purple."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C shows a purple-bodied saxophone, satisfying the revised color constraint."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing 'maroon' with 'purple' is one exact attribute substitution that preserves the wind instrument constraint. The visible body colors establish the required reversal between the positive and candidate.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The saxophone in Image 2 has a maroon-red body, not a purple body."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The saxophone in Image 3 has a clearly purple body, satisfying the edited color constraint."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "a364c7fffb24c3e96bb697d8f16a37929bba29158a7f4335d89f7fa213fe7a2f",
+      "input_hash": "2325ac89e8ff532feec518af5dd4fd4b3bbc670a129f1a1409d7b39202ed6967",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/2325ac89e8ff532feec518af5dd4fd4b3bbc670a129f1a1409d7b39202ed6967.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_07f3d9fa149be83a016af2bd43b1c887d1ae3a69fd79e33259",
+      "usage": {
+        "prompt_tokens": 8266,
+        "completion_tokens": 393,
+        "total_tokens": 8659,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 62
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "a221d40a66419fcc4e5cffc3f5ac2ae814b00d89760339a958bced00ca843164",
+      "input_hash": "dba6b56693f2d825680d491c2936338a6ce1d34b46a48f1d89e24735613bb274",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/dba6b56693f2d825680d491c2936338a6ce1d34b46a48f1d89e24735613bb274.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_04066ea3e38612cb016af2bd5091d887d28197d72b3826f283",
+      "usage": {
+        "prompt_tokens": 7785,
+        "completion_tokens": 319,
+        "total_tokens": 8104,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 19
+        }
+      }
+    }
+  ]
+}

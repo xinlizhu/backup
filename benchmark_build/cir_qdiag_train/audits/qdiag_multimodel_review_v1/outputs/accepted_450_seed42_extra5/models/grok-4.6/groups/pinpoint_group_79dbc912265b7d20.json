@@ -1,0 +1,57 @@
+{
+  "group_id": "pinpoint_group_79dbc912265b7d20",
+  "model": "grok-4.6",
+  "signature": "cb958fa178e5ebcdd33f446ebd46fe25a7c20417ca5539cc74de61fb4df99804",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_79dbc912265b7d20_query_06923_predicate_substitute",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Replacing 'Take away' with 'Put on' is one predicate edit and reconstructs the text. Neither positive shows an HBO sticker, so the reversed action is clearly false."
+    },
+    {
+      "negative_id": "pinpoint_group_79dbc912265b7d20_query_06928_object_add",
+      "decision": "reject",
+      "failure_code": "not_fluent",
+      "reason": "The inserted clause is ungrammatical: 'is completely removed and a small publisher logo left in place' lacks a finite verb and is not natural English."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.6",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "ab82d6b34391c46150bbfbb54a402258ac8346ef8b936af49ae0098a1723779b",
+      "input_hash": "f950f0656d6ec6883a4e26bf90173c3fe4057badec730d18ddb4aa4f84b4a049",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/grok-4.6/cache/validate_group/f950f0656d6ec6883a4e26bf90173c3fe4057badec730d18ddb4aa4f84b4a049.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "42c0acd8-27d6-99ca-8c1e-44f15af55829",
+      "usage": {
+        "prompt_tokens": 3799,
+        "completion_tokens": 163,
+        "total_tokens": 10857,
+        "prompt_tokens_details": {
+          "text_tokens": 2626,
+          "audio_tokens": 0,
+          "image_tokens": 1173,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 6895,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 468740000
+      }
+    }
+  ],
+  "format_warnings": []
+}

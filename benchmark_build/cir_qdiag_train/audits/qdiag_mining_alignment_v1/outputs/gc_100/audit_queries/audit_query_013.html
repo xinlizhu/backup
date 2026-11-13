@@ -1,0 +1,1275 @@
+<!doctype html><meta charset="utf-8"><style>body{font:16px system-ui;margin:24px;max-width:1600px}img{max-width:100%;height:200px;object-fit:contain}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:16px}.card{border:1px solid #ccc;padding:12px}pre{white-space:pre-wrap;font:13px monospace}h2{margin-top:32px}</style><a href="../audit.html">返回汇总</a><h1>audit_query_013</h1><p>Focus camera with different angle targetting the image with cloudy background</p><div class="grid"><div class="card">Reference<br><img loading="lazy" src="../../../../../../../CIR_new/datasets/CIRR/train/18/train-1237-1-img1.png"></div><div class="card">Dataset target<br><img loading="lazy" src="../../../../../../../CIR_new/datasets/CIRR/train/29/train-7654-3-img0.png"></div></div><p>模型标注时不提供来源、排名和教师分数；本页仅供事后复核。</p><h2>mined</h2><div class="grid"><div class="card"><img loading="lazy" src="../../../../../../../CIR_new/datasets/CIRR/train/66/train-11940-1-img1.png"><p>case_4147c92d00abff4a2fba — pending</p><details><summary>判定及来源</summary><pre>{
+  &quot;membership&quot;: {
+    &quot;case_id&quot;: &quot;case_4147c92d00abff4a2fba&quot;,
+    &quot;audit_query_id&quot;: &quot;audit_query_013&quot;,
+    &quot;epoch&quot;: 1,
+    &quot;pair_id&quot;: 15837,
+    &quot;origin&quot;: &quot;mined&quot;,
+    &quot;candidate_position&quot;: 1,
+    &quot;candidate_image_id&quot;: &quot;train-11940-1-img1&quot;,
+    &quot;teacher_score_saved&quot;: 0.302734375,
+    &quot;teacher_target_score_saved&quot;: 0.296875,
+    &quot;teacher_margin_saved&quot;: -0.005859375,
+    &quot;teacher_margin_recomputed_fp32&quot;: -0.006603837013244629,
+    &quot;teacher_recomputed_source&quot;: &quot;FP32 dot product of the same frozen normalized FP16 embedding cache&quot;
+  },
+  &quot;result&quot;: {
+    &quot;status&quot;: &quot;pending&quot;
+  }
+}</pre></details></div><div class="card"><img loading="lazy" src="../../../../../../../CIR_new/datasets/CIRR/train/72/train-8374-1-img1.png"><p>case_e2c2bdc468118832ea29 — pending</p><details><summary>判定及来源</summary><pre>{
+  &quot;membership&quot;: {
+    &quot;case_id&quot;: &quot;case_e2c2bdc468118832ea29&quot;,
+    &quot;audit_query_id&quot;: &quot;audit_query_013&quot;,
+    &quot;epoch&quot;: 1,
+    &quot;pair_id&quot;: 15837,
+    &quot;origin&quot;: &quot;mined&quot;,
+    &quot;candidate_position&quot;: 2,
+    &quot;candidate_image_id&quot;: &quot;train-8374-1-img1&quot;,
+    &quot;teacher_score_saved&quot;: 0.33203125,
+    &quot;teacher_target_score_saved&quot;: 0.296875,
+    &quot;teacher_margin_saved&quot;: -0.03515625,
+    &quot;teacher_margin_recomputed_fp32&quot;: -0.034879982471466064,
+    &quot;teacher_recomputed_source&quot;: &quot;FP32 dot product of the same frozen normalized FP16 embedding cache&quot;
+  },
+  &quot;result&quot;: {
+    &quot;status&quot;: &quot;pending&quot;
+  }
+}</pre></details></div><div class="card"><img loading="lazy" src="../../../../../../../CIR_new/datasets/CIRR/train/72/train-9190-3-img0.png"><p>case_075c760e909b07523685 — complete</p><p><b>add / attribute</b>: Focus camera with different angle targetting the image with cloudy background and a snow-covered foreground</p><details><summary>判定及来源</summary><pre>{
+  &quot;membership&quot;: {
+    &quot;case_id&quot;: &quot;case_075c760e909b07523685&quot;,
+    &quot;audit_query_id&quot;: &quot;audit_query_013&quot;,
+    &quot;epoch&quot;: 1,
+    &quot;pair_id&quot;: 15837,
+    &quot;origin&quot;: &quot;mined&quot;,
+    &quot;candidate_position&quot;: 3,
+    &quot;candidate_image_id&quot;: &quot;train-9190-3-img0&quot;,
+    &quot;teacher_score_saved&quot;: 0.326171875,
+    &quot;teacher_target_score_saved&quot;: 0.296875,
+    &quot;teacher_margin_saved&quot;: -0.029296875,
+    &quot;teacher_margin_recomputed_fp32&quot;: -0.029111623764038086,
+    &quot;teacher_recomputed_source&quot;: &quot;FP32 dot product of the same frozen normalized FP16 embedding cache&quot;
+  },
+  &quot;result&quot;: {
+    &quot;case_id&quot;: &quot;case_075c760e909b07523685&quot;,
+    &quot;audit_query_id&quot;: &quot;audit_query_013&quot;,
+    &quot;signature&quot;: &quot;5065d94bb0c1b275e428d3f2ada2352b274139ccb2134477487b5f51eef77ac6&quot;,
+    &quot;simulated&quot;: false,
+    &quot;status&quot;: &quot;complete&quot;,
+    &quot;proposal&quot;: {
+      &quot;case_id&quot;: &quot;case_075c760e909b07523685&quot;,
+      &quot;case_status&quot;: &quot;source_valid&quot;,
+      &quot;source_on_positive&quot;: {
+        &quot;status&quot;: &quot;supported&quot;,
+        &quot;evidence&quot;: &quot;The penguins are shown from a different, low angle against a sky with visible clouds.&quot;
+      },
+      &quot;source_on_candidate&quot;: {
+        &quot;status&quot;: &quot;supported&quot;,
+        &quot;evidence&quot;: &quot;The penguins are shown from a different angle, with clouds over the snowy mountain background.&quot;
+      },
+      &quot;candidate_relation&quot;: &quot;compatible&quot;,
+      &quot;violated_source_constraints&quot;: [],
+      &quot;witnesses&quot;: [
+        {
+          &quot;witness_id&quot;: &quot;add_attribute_snowy_foreground&quot;,
+          &quot;operation&quot;: &quot;add&quot;,
+          &quot;semantic_target&quot;: &quot;attribute&quot;,
+          &quot;before_span&quot;: null,
+          &quot;after_span&quot;: &quot; and a snow-covered foreground&quot;,
+          &quot;edited_instruction&quot;: &quot;Focus camera with different angle targetting the image with cloudy background and a snow-covered foreground&quot;,
+          &quot;witness_type&quot;: &quot;addition_disambiguation&quot;,
+          &quot;changed_constraint&quot;: &quot;The foreground is snow-covered.&quot;,
+          &quot;edited_on_positive&quot;: {
+            &quot;status&quot;: &quot;contradicted&quot;,
+            &quot;evidence&quot;: &quot;The foreground shows surf and dark shoreline, not a snow-covered foreground.&quot;
+          },
+          &quot;edited_on_candidate&quot;: {
+            &quot;status&quot;: &quot;supported&quot;,
+            &quot;evidence&quot;: &quot;Snow covers the foreground around the penguins.&quot;
+          }
+        }
+      ]
+    },
+    &quot;review&quot;: {
+      &quot;case_id&quot;: &quot;case_075c760e909b07523685&quot;,
+      &quot;source_on_positive&quot;: {
+        &quot;status&quot;: &quot;supported&quot;,
+        &quot;evidence&quot;: &quot;Image 2 shows penguins from a different viewpoint than Image 1, under a blue sky with visible wispy clouds.&quot;
+      },
+      &quot;source_on_candidate&quot;: {
+        &quot;status&quot;: &quot;supported&quot;,
+        &quot;evidence&quot;: &quot;Image 3 shows penguins from a different viewpoint than Image 1, with cloudy sky in the background.&quot;
+      },
+      &quot;verdicts&quot;: [
+        {
+          &quot;witness_id&quot;: &quot;add_attribute_snowy_foreground&quot;,
+          &quot;decision&quot;: &quot;accept&quot;,
+          &quot;failure_code&quot;: null,
+          &quot;witness_type&quot;: &quot;addition_disambiguation&quot;,
+          &quot;reason&quot;: &quot;The added phrase is one new foreground attribute, and the edited instruction remains meaningful. Image 2 has a wet, rocky foreground rather than a snow-covered one; Image 3 has snow covering the foreground. The original constraints remain supported by both images.&quot;,
+          &quot;edited_on_positive&quot;: {
+            &quot;status&quot;: &quot;contradicted&quot;,
+            &quot;evidence&quot;: &quot;Image 2&#x27;s foreground is wet shoreline and water, not snow-covered.&quot;
+          },
+          &quot;edited_on_candidate&quot;: {
+            &quot;status&quot;: &quot;supported&quot;,
+            &quot;evidence&quot;: &quot;Image 3 visibly has a broad snow-covered foreground beneath the penguins.&quot;
+          }
+        }
+      ]
+    },
+    &quot;accepted_witnesses&quot;: [
+      {
+        &quot;witness_id&quot;: &quot;add_attribute_snowy_foreground&quot;,
+        &quot;operation&quot;: &quot;add&quot;,
+        &quot;semantic_target&quot;: &quot;attribute&quot;,
+        &quot;before_span&quot;: null,
+        &quot;after_span&quot;: &quot; and a snow-covered foreground&quot;,
+        &quot;edited_instruction&quot;: &quot;Focus camera with different angle targetting the image with cloudy background and a snow-covered foreground&quot;,
+        &quot;witness_type&quot;: &quot;addition_disambiguation&quot;,
+        &quot;changed_constraint&quot;: &quot;The foreground is snow-covered.&quot;,
+        &quot;edited_on_positive&quot;: {
+          &quot;status&quot;: &quot;contradicted&quot;,
+          &quot;evidence&quot;: &quot;The foreground shows surf and dark shoreline, not a snow-covered foreground.&quot;
+        },
+        &quot;edited_on_candidate&quot;: {
+          &quot;status&quot;: &quot;supported&quot;,
+          &quot;evidence&quot;: &quot;Snow covers the foreground around the penguins.&quot;
+        },
+        &quot;independent_review&quot;: {
+          &quot;witness_id&quot;: &quot;add_attribute_snowy_foreground&quot;,
+          &quot;decision&quot;: &quot;accept&quot;,
+          &quot;failure_code&quot;: null,
+          &quot;witness_type&quot;: &quot;addition_disambiguation&quot;,
+          &quot;reason&quot;: &quot;The added phrase is one new foreground attribute, and the edited instruction remains meaningful. Image 2 has a wet, rocky foreground rather than a snow-covered one; Image 3 has snow covering the foreground. The original constraints remain supported by both images.&quot;,
+          &quot;edited_on_positive&quot;: {
+            &quot;status&quot;: &quot;contradicted&quot;,
+            &quot;evidence&quot;: &quot;Image 2&#x27;s foreground is wet shoreline and water, not snow-covered.&quot;
+          },
+          &quot;edited_on_candidate&quot;: {
+            &quot;status&quot;: &quot;supported&quot;,
+            &quot;evidence&quot;: &quot;Image 3 visibly has a broad snow-covered foreground beneath the penguins.&quot;
+          }
+        }
+      }
+    ],
+    &quot;local_checks&quot;: [
+      {
+        &quot;witness_id&quot;: &quot;add_attribute_snowy_foreground&quot;,
+        &quot;accepted&quot;: true,
+        &quot;local_failures&quot;: [],
+        &quot;review_decision&quot;: &quot;accept&quot;
+      }
+    ],
+    &quot;traces&quot;: [
+      {
+        &quot;stage&quot;: &quot;propose_witnesses&quot;,
+        &quot;model_name&quot;: &quot;gpt-5.6-terra&quot;,
+        &quot;model_revision&quot;: null,
+        &quot;provider&quot;: &quot;openai-compatible-chat&quot;,
+        &quot;reasoning_effort&quot;: null,
+        &quot;prompt_version&quot;: &quot;qdiag_mining_alignment_v1&quot;,
+        &quot;prompt_hash&quot;: &quot;198e2a074fc215b78fdd8a84b003cc1802849c44fac8b96a777cf7128e7da2b3&quot;,
+        &quot;input_hash&quot;: &quot;bd4f2d84532737bcd41989fc6c657923ba5051371047e3c99420e235d1bd89eb&quot;,
+        &quot;raw_response_path&quot;: &quot;/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_100/api_cache/propose_witnesses/bd4f2d84532737bcd41989fc6c657923ba5051371047e3c99420e235d1bd89eb.json&quot;,
+        &quot;cached&quot;: false,
+        &quot;attempts&quot;: 1,
+        &quot;request_id&quot;: &quot;resp_0527dcd961c86f8a016af2b8e16f9c87d2a6f7eca1c747c24b&quot;,
+        &quot;usage&quot;: {
+          &quot;prompt_tokens&quot;: 10967,
+          &quot;completion_tokens&quot;: 584,
+          &quot;total_tokens&quot;: 11551,
+          &quot;completion_tokens_details&quot;: {
+            &quot;reasoning_tokens&quot;: 356
+          }
+        }
+      },
+      {
+        &quot;stage&quot;: &quot;review_witnesses&quot;,
+        &quot;model_name&quot;: &quot;gpt-5.6-terra&quot;,
+        &quot;model_revision&quot;: null,
+        &quot;provider&quot;: &quot;openai-compatible-chat&quot;,
+        &quot;reasoning_effort&quot;: null,
+        &quot;prompt_version&quot;: &quot;qdiag_mining_alignment_v1&quot;,
+        &quot;prompt_hash&quot;: &quot;c8d04ad743565cf264276c8b45708308ea5d9de3491db4a455a5a3cd68eaa057&quot;,
+        &quot;input_hash&quot;: &quot;3ab42230fa894061d4febd0e4e4852d7d2aa371edace2aa1240aeb5242376852&quot;,
+        &quot;raw_response_path&quot;: &quot;/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_100/api_cache/review_witnesses/3ab42230fa894061d4febd0e4e4852d7d2aa371edace2aa1240aeb5242376852.json&quot;,
+        &quot;cached&quot;: false,
+        &quot;attempts&quot;: 1,
+        &quot;request_id&quot;: &quot;resp_03963d7cc213ce83016af2b8f0219887d183001fd6bdf502eb&quot;,
+        &quot;usage&quot;: {
+          &quot;prompt_tokens&quot;: 10502,
+          &quot;completion_tokens&quot;: 400,
+          &quot;total_tokens&quot;: 10902,
+          &quot;prompt_tokens_details&quot;: {
+            &quot;cached_tokens&quot;: 5248
+          },
+          &quot;completion_tokens_details&quot;: {
+            &quot;reasoning_tokens&quot;: 163
+          }
+        }
+      }
+    ]
+  }
+}</pre></details></div><div class="card"><img loading="lazy" src="../../../../../../../CIR_new/datasets/CIRR/train/52/train-2850-2-img0.png"><p>case_79363b85d25d3b5e65b2 — pending</p><details><summary>判定及来源</summary><pre>{
+  &quot;membership&quot;: {
+    &quot;case_id&quot;: &quot;case_79363b85d25d3b5e65b2&quot;,
+    &quot;audit_query_id&quot;: &quot;audit_query_013&quot;,
+    &quot;epoch&quot;: 1,
+    &quot;pair_id&quot;: 15837,
+    &quot;origin&quot;: &quot;mined&quot;,
+    &quot;candidate_position&quot;: 4,
+    &quot;candidate_image_id&quot;: &quot;train-2850-2-img0&quot;,
+    &quot;teacher_score_saved&quot;: 0.357421875,
+    &quot;teacher_target_score_saved&quot;: 0.296875,
+    &quot;teacher_margin_saved&quot;: -0.060546875,
+    &quot;teacher_margin_recomputed_fp32&quot;: -0.05996882915496826,
+    &quot;teacher_recomputed_source&quot;: &quot;FP32 dot product of the same frozen normalized FP16 embedding cache&quot;
+  },
+  &quot;result&quot;: {
+    &quot;status&quot;: &quot;pending&quot;
+  }
+}</pre></details></div><div class="card"><img loading="lazy" src="../../../../../../../CIR_new/datasets/CIRR/train/81/train-5863-3-img0.png"><p>case_d2f1fd771b2b1ba215da — pending</p><details><summary>判定及来源</summary><pre>{
+  &quot;membership&quot;: {
+    &quot;case_id&quot;: &quot;case_d2f1fd771b2b1ba215da&quot;,
+    &quot;audit_query_id&quot;: &quot;audit_query_013&quot;,
+    &quot;epoch&quot;: 1,
+    &quot;pair_id&quot;: 15837,
+    &quot;origin&quot;: &quot;mined&quot;,
+    &quot;candidate_position&quot;: 5,
+    &quot;candidate_image_id&quot;: &quot;train-5863-3-img0&quot;,
+    &quot;teacher_score_saved&quot;: 0.294921875,
+    &quot;teacher_target_score_saved&quot;: 0.296875,
+    &quot;teacher_margin_saved&quot;: 0.001953125,
+    &quot;teacher_margin_recomputed_fp32&quot;: 0.0023581981658935547,
+    &quot;teacher_recomputed_source&quot;: &quot;FP32 dot product of the same frozen normalized FP16 embedding cache&quot;
+  },
+  &quot;result&quot;: {
+    &quot;status&quot;: &quot;pending&quot;
+  }
+}</pre></details></div><div class="card"><img loading="lazy" src="../../../../../../../CIR_new/datasets/CIRR/train/54/train-7103-3-img1.png"><p>case_ea8ec894f9e47aa75156 — pending</p><details><summary>判定及来源</summary><pre>{
+  &quot;membership&quot;: {
+    &quot;case_id&quot;: &quot;case_ea8ec894f9e47aa75156&quot;,
+    &quot;audit_query_id&quot;: &quot;audit_query_013&quot;,
+    &quot;epoch&quot;: 1,
+    &quot;pair_id&quot;: 15837,
+    &quot;origin&quot;: &quot;mined&quot;,
+    &quot;candidate_position&quot;: 6,
+    &quot;candidate_image_id&quot;: &quot;train-7103-3-img1&quot;,
+    &quot;teacher_score_saved&quot;: 0.28515625,
+    &quot;teacher_target_score_saved&quot;: 0.296875,
+    &quot;teacher_margin_saved&quot;: 0.01171875,
+    &quot;teacher_margin_recomputed_fp32&quot;: 0.01166445016860962,
+    &quot;teacher_recomputed_source&quot;: &quot;FP32 dot product of the same frozen normalized FP16 embedding cache&quot;
+  },
+  &quot;result&quot;: {
+    &quot;status&quot;: &quot;pending&quot;
+  }
+}</pre></details></div><div class="card"><img loading="lazy" src="../../../../../../../CIR_new/datasets/CIRR/train/86/train-10248-3-img1.png"><p>case_c90e2559c6dc91450614 — pending</p><details><summary>判定及来源</summary><pre>{
+  &quot;membership&quot;: {
+    &quot;case_id&quot;: &quot;case_c90e2559c6dc91450614&quot;,
+    &quot;audit_query_id&quot;: &quot;audit_query_013&quot;,
+    &quot;epoch&quot;: 1,
+    &quot;pair_id&quot;: 15837,
+    &quot;origin&quot;: &quot;mined&quot;,
+    &quot;candidate_position&quot;: 7,
+    &quot;candidate_image_id&quot;: &quot;train-10248-3-img1&quot;,
+    &quot;teacher_score_saved&quot;: 0.32421875,
+    &quot;teacher_target_score_saved&quot;: 0.296875,
+    &quot;teacher_margin_saved&quot;: -0.02734375,
+    &quot;teacher_margin_recomputed_fp32&quot;: -0.026794880628585815,
+    &quot;teacher_recomputed_source&quot;: &quot;FP32 dot product of the same frozen normalized FP16 embedding cache&quot;
+  },
+  &quot;result&quot;: {
+    &quot;status&quot;: &quot;pending&quot;
+  }
+}</pre></details></div><div class="card"><img loading="lazy" src="../../../../../../../CIR_new/datasets/CIRR/train/98/train-12144-1-img0.png"><p>case_24261326656f5f23ea17 — pending</p><details><summary>判定及来源</summary><pre>{
+  &quot;membership&quot;: {
+    &quot;case_id&quot;: &quot;case_24261326656f5f23ea17&quot;,
+    &quot;audit_query_id&quot;: &quot;audit_query_013&quot;,
+    &quot;epoch&quot;: 1,
+    &quot;pair_id&quot;: 15837,
+    &quot;origin&quot;: &quot;mined&quot;,
+    &quot;candidate_position&quot;: 8,
+    &quot;candidate_image_id&quot;: &quot;train-12144-1-img0&quot;,
+    &quot;teacher_score_saved&quot;: 0.32421875,
+    &quot;teacher_target_score_saved&quot;: 0.296875,
+    &quot;teacher_margin_saved&quot;: -0.02734375,
+    &quot;teacher_margin_recomputed_fp32&quot;: -0.028159409761428833,
+    &quot;teacher_recomputed_source&quot;: &quot;FP32 dot product of the same frozen normalized FP16 embedding cache&quot;
+  },
+  &quot;result&quot;: {
+    &quot;status&quot;: &quot;pending&quot;
+  }
+}</pre></details></div><div class="card"><img loading="lazy" src="../../../../../../../CIR_new/datasets/CIRR/train/86/train-10248-2-img0.png"><p>case_b347afa002c5c469a4a8 — pending</p><details><summary>判定及来源</summary><pre>{
+  &quot;membership&quot;: {
+    &quot;case_id&quot;: &quot;case_b347afa002c5c469a4a8&quot;,
+    &quot;audit_query_id&quot;: &quot;audit_query_013&quot;,
+    &quot;epoch&quot;: 1,
+    &quot;pair_id&quot;: 15837,
+    &quot;origin&quot;: &quot;mined&quot;,
+    &quot;candidate_position&quot;: 9,
+    &quot;candidate_image_id&quot;: &quot;train-10248-2-img0&quot;,
+    &quot;teacher_score_saved&quot;: 0.275390625,
+    &quot;teacher_target_score_saved&quot;: 0.296875,
+    &quot;teacher_margin_saved&quot;: 0.021484375,
+    &quot;teacher_margin_recomputed_fp32&quot;: 0.02145513892173767,
+    &quot;teacher_recomputed_source&quot;: &quot;FP32 dot product of the same frozen normalized FP16 embedding cache&quot;
+  },
+  &quot;result&quot;: {
+    &quot;status&quot;: &quot;pending&quot;
+  }
+}</pre></details></div><div class="card"><img loading="lazy" src="../../../../../../../CIR_new/datasets/CIRR/train/62/train-7552-2-img1.png"><p>case_1e190ad3b0492f4a5c5d — pending</p><details><summary>判定及来源</summary><pre>{
+  &quot;membership&quot;: {
+    &quot;case_id&quot;: &quot;case_1e190ad3b0492f4a5c5d&quot;,
+    &quot;audit_query_id&quot;: &quot;audit_query_013&quot;,
+    &quot;epoch&quot;: 1,
+    &quot;pair_id&quot;: 15837,
+    &quot;origin&quot;: &quot;mined&quot;,
+    &quot;candidate_position&quot;: 10,
+    &quot;candidate_image_id&quot;: &quot;train-7552-2-img1&quot;,
+    &quot;teacher_score_saved&quot;: 0.29296875,
+    &quot;teacher_target_score_saved&quot;: 0.296875,
+    &quot;teacher_margin_saved&quot;: 0.00390625,
+    &quot;teacher_margin_recomputed_fp32&quot;: 0.004446804523468018,
+    &quot;teacher_recomputed_source&quot;: &quot;FP32 dot product of the same frozen normalized FP16 embedding cache&quot;
+  },
+  &quot;result&quot;: {
+    &quot;status&quot;: &quot;pending&quot;
+  }
+}</pre></details></div><div class="card"><img loading="lazy" src="../../../../../../../CIR_new/datasets/CIRR/train/14/train-5981-1-img1.png"><p>case_f800c858b78502c456d1 — pending</p><details><summary>判定及来源</summary><pre>{
+  &quot;membership&quot;: {
+    &quot;case_id&quot;: &quot;case_f800c858b78502c456d1&quot;,
+    &quot;audit_query_id&quot;: &quot;audit_query_013&quot;,
+    &quot;epoch&quot;: 1,
+    &quot;pair_id&quot;: 15837,
+    &quot;origin&quot;: &quot;mined&quot;,
+    &quot;candidate_position&quot;: 11,
+    &quot;candidate_image_id&quot;: &quot;train-5981-1-img1&quot;,
+    &quot;teacher_score_saved&quot;: 0.291015625,
+    &quot;teacher_target_score_saved&quot;: 0.296875,
+    &quot;teacher_margin_saved&quot;: 0.005859375,
+    &quot;teacher_margin_recomputed_fp32&quot;: 0.006704539060592651,
+    &quot;teacher_recomputed_source&quot;: &quot;FP32 dot product of the same frozen normalized FP16 embedding cache&quot;
+  },
+  &quot;result&quot;: {
+    &quot;status&quot;: &quot;pending&quot;
+  }
+}</pre></details></div><div class="card"><img loading="lazy" src="../../../../../../../CIR_new/datasets/CIRR/train/55/train-7772-3-img0.png"><p>case_3e89dfdd67f549d4bef2 — pending</p><details><summary>判定及来源</summary><pre>{
+  &quot;membership&quot;: {
+    &quot;case_id&quot;: &quot;case_3e89dfdd67f549d4bef2&quot;,
+    &quot;audit_query_id&quot;: &quot;audit_query_013&quot;,
+    &quot;epoch&quot;: 1,
+    &quot;pair_id&quot;: 15837,
+    &quot;origin&quot;: &quot;mined&quot;,
+    &quot;candidate_position&quot;: 12,
+    &quot;candidate_image_id&quot;: &quot;train-7772-3-img0&quot;,
+    &quot;teacher_score_saved&quot;: 0.22265625,
+    &quot;teacher_target_score_saved&quot;: 0.296875,
+    &quot;teacher_margin_saved&quot;: 0.07421875,
+    &quot;teacher_margin_recomputed_fp32&quot;: 0.07448641955852509,
+    &quot;teacher_recomputed_source&quot;: &quot;FP32 dot product of the same frozen normalized FP16 embedding cache&quot;
+  },
+  &quot;result&quot;: {
+    &quot;status&quot;: &quot;pending&quot;
+  }
+}</pre></details></div><div class="card"><img loading="lazy" src="../../../../../../../CIR_new/datasets/CIRR/train/19/train-4319-3-img0.png"><p>case_28a8ae7a3d8cf9c491e5 — pending</p><details><summary>判定及来源</summary><pre>{
+  &quot;membership&quot;: {
+    &quot;case_id&quot;: &quot;case_28a8ae7a3d8cf9c491e5&quot;,
+    &quot;audit_query_id&quot;: &quot;audit_query_013&quot;,
+    &quot;epoch&quot;: 1,
+    &quot;pair_id&quot;: 15837,
+    &quot;origin&quot;: &quot;mined&quot;,
+    &quot;candidate_position&quot;: 13,
+    &quot;candidate_image_id&quot;: &quot;train-4319-3-img0&quot;,
+    &quot;teacher_score_saved&quot;: 0.22265625,
+    &quot;teacher_target_score_saved&quot;: 0.296875,
+    &quot;teacher_margin_saved&quot;: 0.07421875,
+    &quot;teacher_margin_recomputed_fp32&quot;: 0.07422319054603577,
+    &quot;teacher_recomputed_source&quot;: &quot;FP32 dot product of the same frozen normalized FP16 embedding cache&quot;
+  },
+  &quot;result&quot;: {
+    &quot;status&quot;: &quot;pending&quot;
+  }
+}</pre></details></div><div class="card"><img loading="lazy" src="../../../../../../../CIR_new/datasets/CIRR/train/56/train-3003-2-img0.png"><p>case_fd9dda4f23dd6eb68ccf — pending</p><details><summary>判定及来源</summary><pre>{
+  &quot;membership&quot;: {
+    &quot;case_id&quot;: &quot;case_fd9dda4f23dd6eb68ccf&quot;,
+    &quot;audit_query_id&quot;: &quot;audit_query_013&quot;,
+    &quot;epoch&quot;: 1,
+    &quot;pair_id&quot;: 15837,
+    &quot;origin&quot;: &quot;mined&quot;,
+    &quot;candidate_position&quot;: 14,
+    &quot;candidate_image_id&quot;: &quot;train-3003-2-img0&quot;,
+    &quot;teacher_score_saved&quot;: 0.2890625,
+    &quot;teacher_target_score_saved&quot;: 0.296875,
+    &quot;teacher_margin_saved&quot;: 0.0078125,
+    &quot;teacher_margin_recomputed_fp32&quot;: 0.008223950862884521,
+    &quot;teacher_recomputed_source&quot;: &quot;FP32 dot product of the same frozen normalized FP16 embedding cache&quot;
+  },
+  &quot;result&quot;: {
+    &quot;status&quot;: &quot;pending&quot;
+  }
+}</pre></details></div><div class="card"><img loading="lazy" src="../../../../../../../CIR_new/datasets/CIRR/train/46/train-10377-3-img1.png"><p>case_d10ea48db69b9fd80d16 — pending</p><details><summary>判定及来源</summary><pre>{
+  &quot;membership&quot;: {
+    &quot;case_id&quot;: &quot;case_d10ea48db69b9fd80d16&quot;,
+    &quot;audit_query_id&quot;: &quot;audit_query_013&quot;,
+    &quot;epoch&quot;: 1,
+    &quot;pair_id&quot;: 15837,
+    &quot;origin&quot;: &quot;mined&quot;,
+    &quot;candidate_position&quot;: 15,
+    &quot;candidate_image_id&quot;: &quot;train-10377-3-img1&quot;,
+    &quot;teacher_score_saved&quot;: 0.234375,
+    &quot;teacher_target_score_saved&quot;: 0.296875,
+    &quot;teacher_margin_saved&quot;: 0.0625,
+    &quot;teacher_margin_recomputed_fp32&quot;: 0.062451258301734924,
+    &quot;teacher_recomputed_source&quot;: &quot;FP32 dot product of the same frozen normalized FP16 embedding cache&quot;
+  },
+  &quot;result&quot;: {
+    &quot;status&quot;: &quot;pending&quot;
+  }
+}</pre></details></div><div class="card"><img loading="lazy" src="../../../../../../../CIR_new/datasets/CIRR/train/36/train-3638-1-img0.png"><p>case_156a355775ee87f10109 — pending</p><details><summary>判定及来源</summary><pre>{
+  &quot;membership&quot;: {
+    &quot;case_id&quot;: &quot;case_156a355775ee87f10109&quot;,
+    &quot;audit_query_id&quot;: &quot;audit_query_013&quot;,
+    &quot;epoch&quot;: 1,
+    &quot;pair_id&quot;: 15837,
+    &quot;origin&quot;: &quot;mined&quot;,
+    &quot;candidate_position&quot;: 16,
+    &quot;candidate_image_id&quot;: &quot;train-3638-1-img0&quot;,
+    &quot;teacher_score_saved&quot;: 0.26953125,
+    &quot;teacher_target_score_saved&quot;: 0.296875,
+    &quot;teacher_margin_saved&quot;: 0.02734375,
+    &quot;teacher_margin_recomputed_fp32&quot;: 0.02789992094039917,
+    &quot;teacher_recomputed_source&quot;: &quot;FP32 dot product of the same frozen normalized FP16 embedding cache&quot;
+  },
+  &quot;result&quot;: {
+    &quot;status&quot;: &quot;pending&quot;
+  }
+}</pre></details></div><div class="card"><img loading="lazy" src="../../../../../../../CIR_new/datasets/CIRR/train/46/train-5747-1-img0.png"><p>case_4063111a5003866c11e9 — pending</p><details><summary>判定及来源</summary><pre>{
+  &quot;membership&quot;: {
+    &quot;case_id&quot;: &quot;case_4063111a5003866c11e9&quot;,
+    &quot;audit_query_id&quot;: &quot;audit_query_013&quot;,
+    &quot;epoch&quot;: 1,
+    &quot;pair_id&quot;: 15837,
+    &quot;origin&quot;: &quot;mined&quot;,
+    &quot;candidate_position&quot;: 17,
+    &quot;candidate_image_id&quot;: &quot;train-5747-1-img0&quot;,
+    &quot;teacher_score_saved&quot;: 0.236328125,
+    &quot;teacher_target_score_saved&quot;: 0.296875,
+    &quot;teacher_margin_saved&quot;: 0.060546875,
+    &quot;teacher_margin_recomputed_fp32&quot;: 0.06017075479030609,
+    &quot;teacher_recomputed_source&quot;: &quot;FP32 dot product of the same frozen normalized FP16 embedding cache&quot;
+  },
+  &quot;result&quot;: {
+    &quot;status&quot;: &quot;pending&quot;
+  }
+}</pre></details></div><div class="card"><img loading="lazy" src="../../../../../../../CIR_new/datasets/CIRR/train/86/train-10248-1-img0.png"><p>case_0c3317a9ab39d9130f6c — pending</p><details><summary>判定及来源</summary><pre>{
+  &quot;membership&quot;: {
+    &quot;case_id&quot;: &quot;case_0c3317a9ab39d9130f6c&quot;,
+    &quot;audit_query_id&quot;: &quot;audit_query_013&quot;,
+    &quot;epoch&quot;: 1,
+    &quot;pair_id&quot;: 15837,
+    &quot;origin&quot;: &quot;mined&quot;,
+    &quot;candidate_position&quot;: 18,
+    &quot;candidate_image_id&quot;: &quot;train-10248-1-img0&quot;,
+    &quot;teacher_score_saved&quot;: 0.265625,
+    &quot;teacher_target_score_saved&quot;: 0.296875,
+    &quot;teacher_margin_saved&quot;: 0.03125,
+    &quot;teacher_margin_recomputed_fp32&quot;: 0.03135007619857788,
+    &quot;teacher_recomputed_source&quot;: &quot;FP32 dot product of the same frozen normalized FP16 embedding cache&quot;
+  },
+  &quot;result&quot;: {
+    &quot;status&quot;: &quot;pending&quot;
+  }
+}</pre></details></div><div class="card"><img loading="lazy" src="../../../../../../../CIR_new/datasets/CIRR/train/2/train-9799-0-img0.png"><p>case_a4b839e80fdd53d096c6 — pending</p><details><summary>判定及来源</summary><pre>{
+  &quot;membership&quot;: {
+    &quot;case_id&quot;: &quot;case_a4b839e80fdd53d096c6&quot;,
+    &quot;audit_query_id&quot;: &quot;audit_query_013&quot;,
+    &quot;epoch&quot;: 1,
+    &quot;pair_id&quot;: 15837,
+    &quot;origin&quot;: &quot;mined&quot;,
+    &quot;candidate_position&quot;: 19,
+    &quot;candidate_image_id&quot;: &quot;train-9799-0-img0&quot;,
+    &quot;teacher_score_saved&quot;: 0.2421875,
+    &quot;teacher_target_score_saved&quot;: 0.296875,
+    &quot;teacher_margin_saved&quot;: 0.0546875,
+    &quot;teacher_margin_recomputed_fp32&quot;: 0.05422985553741455,
+    &quot;teacher_recomputed_source&quot;: &quot;FP32 dot product of the same frozen normalized FP16 embedding cache&quot;
+  },
+  &quot;result&quot;: {
+    &quot;status&quot;: &quot;pending&quot;
+  }
+}</pre></details></div><div class="card"><img loading="lazy" src="../../../../../../../CIR_new/datasets/CIRR/train/49/train-11605-2-img1.png"><p>case_ec668dd6fcc77067b504 — pending</p><details><summary>判定及来源</summary><pre>{
+  &quot;membership&quot;: {
+    &quot;case_id&quot;: &quot;case_ec668dd6fcc77067b504&quot;,
+    &quot;audit_query_id&quot;: &quot;audit_query_013&quot;,
+    &quot;epoch&quot;: 1,
+    &quot;pair_id&quot;: 15837,
+    &quot;origin&quot;: &quot;mined&quot;,
+    &quot;candidate_position&quot;: 20,
+    &quot;candidate_image_id&quot;: &quot;train-11605-2-img1&quot;,
+    &quot;teacher_score_saved&quot;: 0.2216796875,
+    &quot;teacher_target_score_saved&quot;: 0.296875,
+    &quot;teacher_margin_saved&quot;: 0.0751953125,
+    &quot;teacher_margin_recomputed_fp32&quot;: 0.0755048394203186,
+    &quot;teacher_recomputed_source&quot;: &quot;FP32 dot product of the same frozen normalized FP16 embedding cache&quot;
+  },
+  &quot;result&quot;: {
+    &quot;status&quot;: &quot;pending&quot;
+  }
+}</pre></details></div><div class="card"><img loading="lazy" src="../../../../../../../CIR_new/datasets/CIRR/train/52/train-7019-2-img0.png"><p>case_d6bc52d2349d7643444d — pending</p><details><summary>判定及来源</summary><pre>{
+  &quot;membership&quot;: {
+    &quot;case_id&quot;: &quot;case_d6bc52d2349d7643444d&quot;,
+    &quot;audit_query_id&quot;: &quot;audit_query_013&quot;,
+    &quot;epoch&quot;: 1,
+    &quot;pair_id&quot;: 15837,
+    &quot;origin&quot;: &quot;mined&quot;,
+    &quot;candidate_position&quot;: 21,
+    &quot;candidate_image_id&quot;: &quot;train-7019-2-img0&quot;,
+    &quot;teacher_score_saved&quot;: 0.228515625,
+    &quot;teacher_target_score_saved&quot;: 0.296875,
+    &quot;teacher_margin_saved&quot;: 0.068359375,
+    &quot;teacher_margin_recomputed_fp32&quot;: 0.06854471564292908,
+    &quot;teacher_recomputed_source&quot;: &quot;FP32 dot product of the same frozen normalized FP16 embedding cache&quot;
+  },
+  &quot;result&quot;: {
+    &quot;status&quot;: &quot;pending&quot;
+  }
+}</pre></details></div><div class="card"><img loading="lazy" src="../../../../../../../CIR_new/datasets/CIRR/train/66/train-11749-2-img0.png"><p>case_27d51d910c08f4b44660 — pending</p><details><summary>判定及来源</summary><pre>{
+  &quot;membership&quot;: {
+    &quot;case_id&quot;: &quot;case_27d51d910c08f4b44660&quot;,
+    &quot;audit_query_id&quot;: &quot;audit_query_013&quot;,
+    &quot;epoch&quot;: 1,
+    &quot;pair_id&quot;: 15837,
+    &quot;origin&quot;: &quot;mined&quot;,
+    &quot;candidate_position&quot;: 22,
+    &quot;candidate_image_id&quot;: &quot;train-11749-2-img0&quot;,
+    &quot;teacher_score_saved&quot;: 0.2353515625,
+    &quot;teacher_target_score_saved&quot;: 0.296875,
+    &quot;teacher_margin_saved&quot;: 0.0615234375,
+    &quot;teacher_margin_recomputed_fp32&quot;: 0.06146100163459778,
+    &quot;teacher_recomputed_source&quot;: &quot;FP32 dot product of the same frozen normalized FP16 embedding cache&quot;
+  },
+  &quot;result&quot;: {
+    &quot;status&quot;: &quot;pending&quot;
+  }
+}</pre></details></div><div class="card"><img loading="lazy" src="../../../../../../../CIR_new/datasets/CIRR/train/92/train-8261-3-img0.png"><p>case_bac90b01b5623727163a — pending</p><details><summary>判定及来源</summary><pre>{
+  &quot;membership&quot;: {
+    &quot;case_id&quot;: &quot;case_bac90b01b5623727163a&quot;,
+    &quot;audit_query_id&quot;: &quot;audit_query_013&quot;,
+    &quot;epoch&quot;: 1,
+    &quot;pair_id&quot;: 15837,
+    &quot;origin&quot;: &quot;mined&quot;,
+    &quot;candidate_position&quot;: 23,
+    &quot;candidate_image_id&quot;: &quot;train-8261-3-img0&quot;,
+    &quot;teacher_score_saved&quot;: 0.1328125,
+    &quot;teacher_target_score_saved&quot;: 0.296875,
+    &quot;teacher_margin_saved&quot;: 0.1640625,
+    &quot;teacher_margin_recomputed_fp32&quot;: 0.16387350857257843,
+    &quot;teacher_recomputed_source&quot;: &quot;FP32 dot product of the same frozen normalized FP16 embedding cache&quot;
+  },
+  &quot;result&quot;: {
+    &quot;status&quot;: &quot;pending&quot;
+  }
+}</pre></details></div><div class="card"><img loading="lazy" src="../../../../../../../CIR_new/datasets/CIRR/train/41/train-371-1-img0.png"><p>case_27592d189bf569e17001 — pending</p><details><summary>判定及来源</summary><pre>{
+  &quot;membership&quot;: {
+    &quot;case_id&quot;: &quot;case_27592d189bf569e17001&quot;,
+    &quot;audit_query_id&quot;: &quot;audit_query_013&quot;,
+    &quot;epoch&quot;: 1,
+    &quot;pair_id&quot;: 15837,
+    &quot;origin&quot;: &quot;mined&quot;,
+    &quot;candidate_position&quot;: 24,
+    &quot;candidate_image_id&quot;: &quot;train-371-1-img0&quot;,
+    &quot;teacher_score_saved&quot;: 0.26953125,
+    &quot;teacher_target_score_saved&quot;: 0.296875,
+    &quot;teacher_margin_saved&quot;: 0.02734375,
+    &quot;teacher_margin_recomputed_fp32&quot;: 0.027992963790893555,
+    &quot;teacher_recomputed_source&quot;: &quot;FP32 dot product of the same frozen normalized FP16 embedding cache&quot;
+  },
+  &quot;result&quot;: {
+    &quot;status&quot;: &quot;pending&quot;
+  }
+}</pre></details></div><div class="card"><img loading="lazy" src="../../../../../../../CIR_new/datasets/CIRR/train/62/train-7552-0-img0.png"><p>case_ffad3f58cda1f4b4c183 — pending</p><details><summary>判定及来源</summary><pre>{
+  &quot;membership&quot;: {
+    &quot;case_id&quot;: &quot;case_ffad3f58cda1f4b4c183&quot;,
+    &quot;audit_query_id&quot;: &quot;audit_query_013&quot;,
+    &quot;epoch&quot;: 1,
+    &quot;pair_id&quot;: 15837,
+    &quot;origin&quot;: &quot;mined&quot;,
+    &quot;candidate_position&quot;: 25,
+    &quot;candidate_image_id&quot;: &quot;train-7552-0-img0&quot;,
+    &quot;teacher_score_saved&quot;: 0.2373046875,
+    &quot;teacher_target_score_saved&quot;: 0.296875,
+    &quot;teacher_margin_saved&quot;: 0.0595703125,
+    &quot;teacher_margin_recomputed_fp32&quot;: 0.05978253483772278,
+    &quot;teacher_recomputed_source&quot;: &quot;FP32 dot product of the same frozen normalized FP16 embedding cache&quot;
+  },
+  &quot;result&quot;: {
+    &quot;status&quot;: &quot;pending&quot;
+  }
+}</pre></details></div><div class="card"><img loading="lazy" src="../../../../../../../CIR_new/datasets/CIRR/train/2/train-5974-3-img0.png"><p>case_9afddce26315357d24ec — pending</p><details><summary>判定及来源</summary><pre>{
+  &quot;membership&quot;: {
+    &quot;case_id&quot;: &quot;case_9afddce26315357d24ec&quot;,
+    &quot;audit_query_id&quot;: &quot;audit_query_013&quot;,
+    &quot;epoch&quot;: 1,
+    &quot;pair_id&quot;: 15837,
+    &quot;origin&quot;: &quot;mined&quot;,
+    &quot;candidate_position&quot;: 26,
+    &quot;candidate_image_id&quot;: &quot;train-5974-3-img0&quot;,
+    &quot;teacher_score_saved&quot;: 0.201171875,
+    &quot;teacher_target_score_saved&quot;: 0.296875,
+    &quot;teacher_margin_saved&quot;: 0.095703125,
+    &quot;teacher_margin_recomputed_fp32&quot;: 0.09524917602539062,
+    &quot;teacher_recomputed_source&quot;: &quot;FP32 dot product of the same frozen normalized FP16 embedding cache&quot;
+  },
+  &quot;result&quot;: {
+    &quot;status&quot;: &quot;pending&quot;
+  }
+}</pre></details></div><div class="card"><img loading="lazy" src="../../../../../../../CIR_new/datasets/CIRR/train/16/train-11133-1-img1.png"><p>case_8fa40ade35ce11528ff4 — pending</p><details><summary>判定及来源</summary><pre>{
+  &quot;membership&quot;: {
+    &quot;case_id&quot;: &quot;case_8fa40ade35ce11528ff4&quot;,
+    &quot;audit_query_id&quot;: &quot;audit_query_013&quot;,
+    &quot;epoch&quot;: 1,
+    &quot;pair_id&quot;: 15837,
+    &quot;origin&quot;: &quot;mined&quot;,
+    &quot;candidate_position&quot;: 27,
+    &quot;candidate_image_id&quot;: &quot;train-11133-1-img1&quot;,
+    &quot;teacher_score_saved&quot;: 0.212890625,
+    &quot;teacher_target_score_saved&quot;: 0.296875,
+    &quot;teacher_margin_saved&quot;: 0.083984375,
+    &quot;teacher_margin_recomputed_fp32&quot;: 0.084429532289505,
+    &quot;teacher_recomputed_source&quot;: &quot;FP32 dot product of the same frozen normalized FP16 embedding cache&quot;
+  },
+  &quot;result&quot;: {
+    &quot;status&quot;: &quot;pending&quot;
+  }
+}</pre></details></div><div class="card"><img loading="lazy" src="../../../../../../../CIR_new/datasets/CIRR/train/86/train-7931-1-img1.png"><p>case_eb20e5ef3f9a8bc4aabb — pending</p><details><summary>判定及来源</summary><pre>{
+  &quot;membership&quot;: {
+    &quot;case_id&quot;: &quot;case_eb20e5ef3f9a8bc4aabb&quot;,
+    &quot;audit_query_id&quot;: &quot;audit_query_013&quot;,
+    &quot;epoch&quot;: 1,
+    &quot;pair_id&quot;: 15837,
+    &quot;origin&quot;: &quot;mined&quot;,
+    &quot;candidate_position&quot;: 28,
+    &quot;candidate_image_id&quot;: &quot;train-7931-1-img1&quot;,
+    &quot;teacher_score_saved&quot;: 0.212890625,
+    &quot;teacher_target_score_saved&quot;: 0.296875,
+    &quot;teacher_margin_saved&quot;: 0.083984375,
+    &quot;teacher_margin_recomputed_fp32&quot;: 0.084429532289505,
+    &quot;teacher_recomputed_source&quot;: &quot;FP32 dot product of the same frozen normalized FP16 embedding cache&quot;
+  },
+  &quot;result&quot;: {
+    &quot;status&quot;: &quot;pending&quot;
+  }
+}</pre></details></div><div class="card"><img loading="lazy" src="../../../../../../../CIR_new/datasets/CIRR/train/62/train-7552-1-img0.png"><p>case_ff6b9d4f171b95069f90 — pending</p><details><summary>判定及来源</summary><pre>{
+  &quot;membership&quot;: {
+    &quot;case_id&quot;: &quot;case_ff6b9d4f171b95069f90&quot;,
+    &quot;audit_query_id&quot;: &quot;audit_query_013&quot;,
+    &quot;epoch&quot;: 1,
+    &quot;pair_id&quot;: 15837,
+    &quot;origin&quot;: &quot;mined&quot;,
+    &quot;candidate_position&quot;: 29,
+    &quot;candidate_image_id&quot;: &quot;train-7552-1-img0&quot;,
+    &quot;teacher_score_saved&quot;: 0.2578125,
+    &quot;teacher_target_score_saved&quot;: 0.296875,
+    &quot;teacher_margin_saved&quot;: 0.0390625,
+    &quot;teacher_margin_recomputed_fp32&quot;: 0.03824862837791443,
+    &quot;teacher_recomputed_source&quot;: &quot;FP32 dot product of the same frozen normalized FP16 embedding cache&quot;
+  },
+  &quot;result&quot;: {
+    &quot;status&quot;: &quot;pending&quot;
+  }
+}</pre></details></div><div class="card"><img loading="lazy" src="../../../../../../../CIR_new/datasets/CIRR/train/25/train-12486-2-img1.png"><p>case_159f375e2e2307112eb2 — pending</p><details><summary>判定及来源</summary><pre>{
+  &quot;membership&quot;: {
+    &quot;case_id&quot;: &quot;case_159f375e2e2307112eb2&quot;,
+    &quot;audit_query_id&quot;: &quot;audit_query_013&quot;,
+    &quot;epoch&quot;: 1,
+    &quot;pair_id&quot;: 15837,
+    &quot;origin&quot;: &quot;mined&quot;,
+    &quot;candidate_position&quot;: 30,
+    &quot;candidate_image_id&quot;: &quot;train-12486-2-img1&quot;,
+    &quot;teacher_score_saved&quot;: 0.1845703125,
+    &quot;teacher_target_score_saved&quot;: 0.296875,
+    &quot;teacher_margin_saved&quot;: 0.1123046875,
+    &quot;teacher_margin_recomputed_fp32&quot;: 0.11183011531829834,
+    &quot;teacher_recomputed_source&quot;: &quot;FP32 dot product of the same frozen normalized FP16 embedding cache&quot;
+  },
+  &quot;result&quot;: {
+    &quot;status&quot;: &quot;pending&quot;
+  }
+}</pre></details></div><div class="card"><img loading="lazy" src="../../../../../../../CIR_new/datasets/CIRR/train/49/train-11605-1-img1.png"><p>case_9721e25e127e2e892e1b — pending</p><details><summary>判定及来源</summary><pre>{
+  &quot;membership&quot;: {
+    &quot;case_id&quot;: &quot;case_9721e25e127e2e892e1b&quot;,
+    &quot;audit_query_id&quot;: &quot;audit_query_013&quot;,
+    &quot;epoch&quot;: 1,
+    &quot;pair_id&quot;: 15837,
+    &quot;origin&quot;: &quot;mined&quot;,
+    &quot;candidate_position&quot;: 31,
+    &quot;candidate_image_id&quot;: &quot;train-11605-1-img1&quot;,
+    &quot;teacher_score_saved&quot;: 0.26171875,
+    &quot;teacher_target_score_saved&quot;: 0.296875,
+    &quot;teacher_margin_saved&quot;: 0.03515625,
+    &quot;teacher_margin_recomputed_fp32&quot;: 0.036005496978759766,
+    &quot;teacher_recomputed_source&quot;: &quot;FP32 dot product of the same frozen normalized FP16 embedding cache&quot;
+  },
+  &quot;result&quot;: {
+    &quot;status&quot;: &quot;pending&quot;
+  }
+}</pre></details></div></div><h2>random</h2><div class="grid"><div class="card"><img loading="lazy" src="../../../../../../../CIR_new/datasets/CIRR/train/78/train-5828-2-img0.png"><p>case_ea8248330c84a18ecdf6 — pending</p><details><summary>判定及来源</summary><pre>{
+  &quot;membership&quot;: {
+    &quot;case_id&quot;: &quot;case_ea8248330c84a18ecdf6&quot;,
+    &quot;audit_query_id&quot;: &quot;audit_query_013&quot;,
+    &quot;epoch&quot;: 1,
+    &quot;pair_id&quot;: 15837,
+    &quot;origin&quot;: &quot;random&quot;,
+    &quot;candidate_position&quot;: 1,
+    &quot;candidate_image_id&quot;: &quot;train-5828-2-img0&quot;,
+    &quot;teacher_score_saved&quot;: null,
+    &quot;teacher_target_score_saved&quot;: null,
+    &quot;teacher_margin_saved&quot;: null,
+    &quot;teacher_margin_recomputed_fp32&quot;: 0.17204877734184265,
+    &quot;teacher_recomputed_source&quot;: &quot;FP32 dot product of the same frozen normalized FP16 embedding cache&quot;
+  },
+  &quot;result&quot;: {
+    &quot;status&quot;: &quot;pending&quot;
+  }
+}</pre></details></div><div class="card"><img loading="lazy" src="../../../../../../../CIR_new/datasets/CIRR/train/92/train-11851-2-img0.png"><p>case_84fc36d88fa615d4152b — pending</p><details><summary>判定及来源</summary><pre>{
+  &quot;membership&quot;: {
+    &quot;case_id&quot;: &quot;case_84fc36d88fa615d4152b&quot;,
+    &quot;audit_query_id&quot;: &quot;audit_query_013&quot;,
+    &quot;epoch&quot;: 1,
+    &quot;pair_id&quot;: 15837,
+    &quot;origin&quot;: &quot;random&quot;,
+    &quot;candidate_position&quot;: 2,
+    &quot;candidate_image_id&quot;: &quot;train-11851-2-img0&quot;,
+    &quot;teacher_score_saved&quot;: null,
+    &quot;teacher_target_score_saved&quot;: null,
+    &quot;teacher_margin_saved&quot;: null,
+    &quot;teacher_margin_recomputed_fp32&quot;: 0.2924704849720001,
+    &quot;teacher_recomputed_source&quot;: &quot;FP32 dot product of the same frozen normalized FP16 embedding cache&quot;
+  },
+  &quot;result&quot;: {
+    &quot;status&quot;: &quot;pending&quot;
+  }
+}</pre></details></div><div class="card"><img loading="lazy" src="../../../../../../../CIR_new/datasets/CIRR/train/79/train-853-3-img1.png"><p>case_56aaed5d53cd4c869f71 — pending</p><details><summary>判定及来源</summary><pre>{
+  &quot;membership&quot;: {
+    &quot;case_id&quot;: &quot;case_56aaed5d53cd4c869f71&quot;,
+    &quot;audit_query_id&quot;: &quot;audit_query_013&quot;,
+    &quot;epoch&quot;: 1,
+    &quot;pair_id&quot;: 15837,
+    &quot;origin&quot;: &quot;random&quot;,
+    &quot;candidate_position&quot;: 3,
+    &quot;candidate_image_id&quot;: &quot;train-853-3-img1&quot;,
+    &quot;teacher_score_saved&quot;: null,
+    &quot;teacher_target_score_saved&quot;: null,
+    &quot;teacher_margin_saved&quot;: null,
+    &quot;teacher_margin_recomputed_fp32&quot;: 0.2729300558567047,
+    &quot;teacher_recomputed_source&quot;: &quot;FP32 dot product of the same frozen normalized FP16 embedding cache&quot;
+  },
+  &quot;result&quot;: {
+    &quot;status&quot;: &quot;pending&quot;
+  }
+}</pre></details></div><div class="card"><img loading="lazy" src="../../../../../../../CIR_new/datasets/CIRR/train/65/train-9804-1-img0.png"><p>case_2780a7c2a37a1f04cced — pending</p><details><summary>判定及来源</summary><pre>{
+  &quot;membership&quot;: {
+    &quot;case_id&quot;: &quot;case_2780a7c2a37a1f04cced&quot;,
+    &quot;audit_query_id&quot;: &quot;audit_query_013&quot;,
+    &quot;epoch&quot;: 1,
+    &quot;pair_id&quot;: 15837,
+    &quot;origin&quot;: &quot;random&quot;,
+    &quot;candidate_position&quot;: 4,
+    &quot;candidate_image_id&quot;: &quot;train-9804-1-img0&quot;,
+    &quot;teacher_score_saved&quot;: null,
+    &quot;teacher_target_score_saved&quot;: null,
+    &quot;teacher_margin_saved&quot;: null,
+    &quot;teacher_margin_recomputed_fp32&quot;: 0.26485490798950195,
+    &quot;teacher_recomputed_source&quot;: &quot;FP32 dot product of the same frozen normalized FP16 embedding cache&quot;
+  },
+  &quot;result&quot;: {
+    &quot;status&quot;: &quot;pending&quot;
+  }
+}</pre></details></div><div class="card"><img loading="lazy" src="../../../../../../../CIR_new/datasets/CIRR/train/94/train-9510-0-img1.png"><p>case_366059b07cee652b353d — pending</p><details><summary>判定及来源</summary><pre>{
+  &quot;membership&quot;: {
+    &quot;case_id&quot;: &quot;case_366059b07cee652b353d&quot;,
+    &quot;audit_query_id&quot;: &quot;audit_query_013&quot;,
+    &quot;epoch&quot;: 1,
+    &quot;pair_id&quot;: 15837,
+    &quot;origin&quot;: &quot;random&quot;,
+    &quot;candidate_position&quot;: 5,
+    &quot;candidate_image_id&quot;: &quot;train-9510-0-img1&quot;,
+    &quot;teacher_score_saved&quot;: null,
+    &quot;teacher_target_score_saved&quot;: null,
+    &quot;teacher_margin_saved&quot;: null,
+    &quot;teacher_margin_recomputed_fp32&quot;: 0.24832504987716675,
+    &quot;teacher_recomputed_source&quot;: &quot;FP32 dot product of the same frozen normalized FP16 embedding cache&quot;
+  },
+  &quot;result&quot;: {
+    &quot;status&quot;: &quot;pending&quot;
+  }
+}</pre></details></div><div class="card"><img loading="lazy" src="../../../../../../../CIR_new/datasets/CIRR/train/10/train-3481-3-img0.png"><p>case_1ab3abfdc354b0d2694e — pending</p><details><summary>判定及来源</summary><pre>{
+  &quot;membership&quot;: {
+    &quot;case_id&quot;: &quot;case_1ab3abfdc354b0d2694e&quot;,
+    &quot;audit_query_id&quot;: &quot;audit_query_013&quot;,
+    &quot;epoch&quot;: 1,
+    &quot;pair_id&quot;: 15837,
+    &quot;origin&quot;: &quot;random&quot;,
+    &quot;candidate_position&quot;: 6,
+    &quot;candidate_image_id&quot;: &quot;train-3481-3-img0&quot;,
+    &quot;teacher_score_saved&quot;: null,
+    &quot;teacher_target_score_saved&quot;: null,
+    &quot;teacher_margin_saved&quot;: null,
+    &quot;teacher_margin_recomputed_fp32&quot;: 0.25767982006073,
+    &quot;teacher_recomputed_source&quot;: &quot;FP32 dot product of the same frozen normalized FP16 embedding cache&quot;
+  },
+  &quot;result&quot;: {
+    &quot;status&quot;: &quot;pending&quot;
+  }
+}</pre></details></div><div class="card"><img loading="lazy" src="../../../../../../../CIR_new/datasets/CIRR/train/92/train-12463-2-img0.png"><p>case_3d376546aa2b4e34b05e — pending</p><details><summary>判定及来源</summary><pre>{
+  &quot;membership&quot;: {
+    &quot;case_id&quot;: &quot;case_3d376546aa2b4e34b05e&quot;,
+    &quot;audit_query_id&quot;: &quot;audit_query_013&quot;,
+    &quot;epoch&quot;: 1,
+    &quot;pair_id&quot;: 15837,
+    &quot;origin&quot;: &quot;random&quot;,
+    &quot;candidate_position&quot;: 7,
+    &quot;candidate_image_id&quot;: &quot;train-12463-2-img0&quot;,
+    &quot;teacher_score_saved&quot;: null,
+    &quot;teacher_target_score_saved&quot;: null,
+    &quot;teacher_margin_saved&quot;: null,
+    &quot;teacher_margin_recomputed_fp32&quot;: 0.2989109456539154,
+    &quot;teacher_recomputed_source&quot;: &quot;FP32 dot product of the same frozen normalized FP16 embedding cache&quot;
+  },
+  &quot;result&quot;: {
+    &quot;status&quot;: &quot;pending&quot;
+  }
+}</pre></details></div><div class="card"><img loading="lazy" src="../../../../../../../CIR_new/datasets/CIRR/train/16/train-12589-3-img1.png"><p>case_2e8a0417b4369f05f442 — pending</p><details><summary>判定及来源</summary><pre>{
+  &quot;membership&quot;: {
+    &quot;case_id&quot;: &quot;case_2e8a0417b4369f05f442&quot;,
+    &quot;audit_query_id&quot;: &quot;audit_query_013&quot;,
+    &quot;epoch&quot;: 1,
+    &quot;pair_id&quot;: 15837,
+    &quot;origin&quot;: &quot;random&quot;,
+    &quot;candidate_position&quot;: 8,
+    &quot;candidate_image_id&quot;: &quot;train-12589-3-img1&quot;,
+    &quot;teacher_score_saved&quot;: null,
+    &quot;teacher_target_score_saved&quot;: null,
+    &quot;teacher_margin_saved&quot;: null,
+    &quot;teacher_margin_recomputed_fp32&quot;: 0.14236970245838165,
+    &quot;teacher_recomputed_source&quot;: &quot;FP32 dot product of the same frozen normalized FP16 embedding cache&quot;
+  },
+  &quot;result&quot;: {
+    &quot;status&quot;: &quot;pending&quot;
+  }
+}</pre></details></div><div class="card"><img loading="lazy" src="../../../../../../../CIR_new/datasets/CIRR/train/31/train-3407-3-img0.png"><p>case_50de5c2722ef2c376764 — pending</p><details><summary>判定及来源</summary><pre>{
+  &quot;membership&quot;: {
+    &quot;case_id&quot;: &quot;case_50de5c2722ef2c376764&quot;,
+    &quot;audit_query_id&quot;: &quot;audit_query_013&quot;,
+    &quot;epoch&quot;: 1,
+    &quot;pair_id&quot;: 15837,
+    &quot;origin&quot;: &quot;random&quot;,
+    &quot;candidate_position&quot;: 9,
+    &quot;candidate_image_id&quot;: &quot;train-3407-3-img0&quot;,
+    &quot;teacher_score_saved&quot;: null,
+    &quot;teacher_target_score_saved&quot;: null,
+    &quot;teacher_margin_saved&quot;: null,
+    &quot;teacher_margin_recomputed_fp32&quot;: 0.26704615354537964,
+    &quot;teacher_recomputed_source&quot;: &quot;FP32 dot product of the same frozen normalized FP16 embedding cache&quot;
+  },
+  &quot;result&quot;: {
+    &quot;status&quot;: &quot;pending&quot;
+  }
+}</pre></details></div><div class="card"><img loading="lazy" src="../../../../../../../CIR_new/datasets/CIRR/train/2/train-7664-3-img0.png"><p>case_118b9331ace7aba007d9 — pending</p><details><summary>判定及来源</summary><pre>{
+  &quot;membership&quot;: {
+    &quot;case_id&quot;: &quot;case_118b9331ace7aba007d9&quot;,
+    &quot;audit_query_id&quot;: &quot;audit_query_013&quot;,
+    &quot;epoch&quot;: 1,
+    &quot;pair_id&quot;: 15837,
+    &quot;origin&quot;: &quot;random&quot;,
+    &quot;candidate_position&quot;: 10,
+    &quot;candidate_image_id&quot;: &quot;train-7664-3-img0&quot;,
+    &quot;teacher_score_saved&quot;: null,
+    &quot;teacher_target_score_saved&quot;: null,
+    &quot;teacher_margin_saved&quot;: null,
+    &quot;teacher_margin_recomputed_fp32&quot;: 0.2882469892501831,
+    &quot;teacher_recomputed_source&quot;: &quot;FP32 dot product of the same frozen normalized FP16 embedding cache&quot;
+  },
+  &quot;result&quot;: {
+    &quot;status&quot;: &quot;pending&quot;
+  }
+}</pre></details></div><div class="card"><img loading="lazy" src="../../../../../../../CIR_new/datasets/CIRR/train/98/train-5095-2-img0.png"><p>case_f6083a13c84b083a7970 — pending</p><details><summary>判定及来源</summary><pre>{
+  &quot;membership&quot;: {
+    &quot;case_id&quot;: &quot;case_f6083a13c84b083a7970&quot;,
+    &quot;audit_query_id&quot;: &quot;audit_query_013&quot;,
+    &quot;epoch&quot;: 1,
+    &quot;pair_id&quot;: 15837,
+    &quot;origin&quot;: &quot;random&quot;,
+    &quot;candidate_position&quot;: 11,
+    &quot;candidate_image_id&quot;: &quot;train-5095-2-img0&quot;,
+    &quot;teacher_score_saved&quot;: null,
+    &quot;teacher_target_score_saved&quot;: null,
+    &quot;teacher_margin_saved&quot;: null,
+    &quot;teacher_margin_recomputed_fp32&quot;: 0.13852445781230927,
+    &quot;teacher_recomputed_source&quot;: &quot;FP32 dot product of the same frozen normalized FP16 embedding cache&quot;
+  },
+  &quot;result&quot;: {
+    &quot;status&quot;: &quot;pending&quot;
+  }
+}</pre></details></div><div class="card"><img loading="lazy" src="../../../../../../../CIR_new/datasets/CIRR/train/9/train-8479-0-img1.png"><p>case_849c58282318baad9bee — pending</p><details><summary>判定及来源</summary><pre>{
+  &quot;membership&quot;: {
+    &quot;case_id&quot;: &quot;case_849c58282318baad9bee&quot;,
+    &quot;audit_query_id&quot;: &quot;audit_query_013&quot;,
+    &quot;epoch&quot;: 1,
+    &quot;pair_id&quot;: 15837,
+    &quot;origin&quot;: &quot;random&quot;,
+    &quot;candidate_position&quot;: 12,
+    &quot;candidate_image_id&quot;: &quot;train-8479-0-img1&quot;,
+    &quot;teacher_score_saved&quot;: null,
+    &quot;teacher_target_score_saved&quot;: null,
+    &quot;teacher_margin_saved&quot;: null,
+    &quot;teacher_margin_recomputed_fp32&quot;: 0.2913495898246765,
+    &quot;teacher_recomputed_source&quot;: &quot;FP32 dot product of the same frozen normalized FP16 embedding cache&quot;
+  },
+  &quot;result&quot;: {
+    &quot;status&quot;: &quot;pending&quot;
+  }
+}</pre></details></div><div class="card"><img loading="lazy" src="../../../../../../../CIR_new/datasets/CIRR/train/29/train-8712-0-img1.png"><p>case_6fd5d128beba491c17aa — pending</p><details><summary>判定及来源</summary><pre>{
+  &quot;membership&quot;: {
+    &quot;case_id&quot;: &quot;case_6fd5d128beba491c17aa&quot;,
+    &quot;audit_query_id&quot;: &quot;audit_query_013&quot;,
+    &quot;epoch&quot;: 1,
+    &quot;pair_id&quot;: 15837,
+    &quot;origin&quot;: &quot;random&quot;,
+    &quot;candidate_position&quot;: 13,
+    &quot;candidate_image_id&quot;: &quot;train-8712-0-img1&quot;,
+    &quot;teacher_score_saved&quot;: null,
+    &quot;teacher_target_score_saved&quot;: null,
+    &quot;teacher_margin_saved&quot;: null,
+    &quot;teacher_margin_recomputed_fp32&quot;: 0.16914689540863037,
+    &quot;teacher_recomputed_source&quot;: &quot;FP32 dot product of the same frozen normalized FP16 embedding cache&quot;
+  },
+  &quot;result&quot;: {
+    &quot;status&quot;: &quot;pending&quot;
+  }
+}</pre></details></div><div class="card"><img loading="lazy" src="../../../../../../../CIR_new/datasets/CIRR/train/61/train-10775-2-img1.png"><p>case_66d813b617bacb23c01a — pending</p><details><summary>判定及来源</summary><pre>{
+  &quot;membership&quot;: {
+    &quot;case_id&quot;: &quot;case_66d813b617bacb23c01a&quot;,
+    &quot;audit_query_id&quot;: &quot;audit_query_013&quot;,
+    &quot;epoch&quot;: 1,
+    &quot;pair_id&quot;: 15837,
+    &quot;origin&quot;: &quot;random&quot;,
+    &quot;candidate_position&quot;: 14,
+    &quot;candidate_image_id&quot;: &quot;train-10775-2-img1&quot;,
+    &quot;teacher_score_saved&quot;: null,
+    &quot;teacher_target_score_saved&quot;: null,
+    &quot;teacher_margin_saved&quot;: null,
+    &quot;teacher_margin_recomputed_fp32&quot;: 0.20548665523529053,
+    &quot;teacher_recomputed_source&quot;: &quot;FP32 dot product of the same frozen normalized FP16 embedding cache&quot;
+  },
+  &quot;result&quot;: {
+    &quot;status&quot;: &quot;pending&quot;
+  }
+}</pre></details></div><div class="card"><img loading="lazy" src="../../../../../../../CIR_new/datasets/CIRR/train/78/train-2901-2-img1.png"><p>case_e11e0e9993012520918b — pending</p><details><summary>判定及来源</summary><pre>{
+  &quot;membership&quot;: {
+    &quot;case_id&quot;: &quot;case_e11e0e9993012520918b&quot;,
+    &quot;audit_query_id&quot;: &quot;audit_query_013&quot;,
+    &quot;epoch&quot;: 1,
+    &quot;pair_id&quot;: 15837,
+    &quot;origin&quot;: &quot;random&quot;,
+    &quot;candidate_position&quot;: 15,
+    &quot;candidate_image_id&quot;: &quot;train-2901-2-img1&quot;,
+    &quot;teacher_score_saved&quot;: null,
+    &quot;teacher_target_score_saved&quot;: null,
+    &quot;teacher_margin_saved&quot;: null,
+    &quot;teacher_margin_recomputed_fp32&quot;: 0.26033318042755127,
+    &quot;teacher_recomputed_source&quot;: &quot;FP32 dot product of the same frozen normalized FP16 embedding cache&quot;
+  },
+  &quot;result&quot;: {
+    &quot;status&quot;: &quot;pending&quot;
+  }
+}</pre></details></div><div class="card"><img loading="lazy" src="../../../../../../../CIR_new/datasets/CIRR/train/73/train-192-0-img1.png"><p>case_21d0b279cc3298aa32db — pending</p><details><summary>判定及来源</summary><pre>{
+  &quot;membership&quot;: {
+    &quot;case_id&quot;: &quot;case_21d0b279cc3298aa32db&quot;,
+    &quot;audit_query_id&quot;: &quot;audit_query_013&quot;,
+    &quot;epoch&quot;: 1,
+    &quot;pair_id&quot;: 15837,
+    &quot;origin&quot;: &quot;random&quot;,
+    &quot;candidate_position&quot;: 16,
+    &quot;candidate_image_id&quot;: &quot;train-192-0-img1&quot;,
+    &quot;teacher_score_saved&quot;: null,
+    &quot;teacher_target_score_saved&quot;: null,
+    &quot;teacher_margin_saved&quot;: null,
+    &quot;teacher_margin_recomputed_fp32&quot;: 0.19490480422973633,
+    &quot;teacher_recomputed_source&quot;: &quot;FP32 dot product of the same frozen normalized FP16 embedding cache&quot;
+  },
+  &quot;result&quot;: {
+    &quot;status&quot;: &quot;pending&quot;
+  }
+}</pre></details></div><div class="card"><img loading="lazy" src="../../../../../../../CIR_new/datasets/CIRR/train/45/train-6903-0-img0.png"><p>case_69f7e854758dacfc5d92 — pending</p><details><summary>判定及来源</summary><pre>{
+  &quot;membership&quot;: {
+    &quot;case_id&quot;: &quot;case_69f7e854758dacfc5d92&quot;,
+    &quot;audit_query_id&quot;: &quot;audit_query_013&quot;,
+    &quot;epoch&quot;: 1,
+    &quot;pair_id&quot;: 15837,
+    &quot;origin&quot;: &quot;random&quot;,
+    &quot;candidate_position&quot;: 17,
+    &quot;candidate_image_id&quot;: &quot;train-6903-0-img0&quot;,
+    &quot;teacher_score_saved&quot;: null,
+    &quot;teacher_target_score_saved&quot;: null,
+    &quot;teacher_margin_saved&quot;: null,
+    &quot;teacher_margin_recomputed_fp32&quot;: 0.22928404808044434,
+    &quot;teacher_recomputed_source&quot;: &quot;FP32 dot product of the same frozen normalized FP16 embedding cache&quot;
+  },
+  &quot;result&quot;: {
+    &quot;status&quot;: &quot;pending&quot;
+  }
+}</pre></details></div><div class="card"><img loading="lazy" src="../../../../../../../CIR_new/datasets/CIRR/train/19/train-308-3-img1.png"><p>case_df61b48c84585e4b6717 — pending</p><details><summary>判定及来源</summary><pre>{
+  &quot;membership&quot;: {
+    &quot;case_id&quot;: &quot;case_df61b48c84585e4b6717&quot;,
+    &quot;audit_query_id&quot;: &quot;audit_query_013&quot;,
+    &quot;epoch&quot;: 1,
+    &quot;pair_id&quot;: 15837,
+    &quot;origin&quot;: &quot;random&quot;,
+    &quot;candidate_position&quot;: 18,
+    &quot;candidate_image_id&quot;: &quot;train-308-3-img1&quot;,
+    &quot;teacher_score_saved&quot;: null,
+    &quot;teacher_target_score_saved&quot;: null,
+    &quot;teacher_margin_saved&quot;: null,
+    &quot;teacher_margin_recomputed_fp32&quot;: 0.22278966009616852,
+    &quot;teacher_recomputed_source&quot;: &quot;FP32 dot product of the same frozen normalized FP16 embedding cache&quot;
+  },
+  &quot;result&quot;: {
+    &quot;status&quot;: &quot;pending&quot;
+  }
+}</pre></details></div><div class="card"><img loading="lazy" src="../../../../../../../CIR_new/datasets/CIRR/train/23/train-5685-1-img0.png"><p>case_970b10ee05f81aec4a46 — pending</p><details><summary>判定及来源</summary><pre>{
+  &quot;membership&quot;: {
+    &quot;case_id&quot;: &quot;case_970b10ee05f81aec4a46&quot;,
+    &quot;audit_query_id&quot;: &quot;audit_query_013&quot;,
+    &quot;epoch&quot;: 1,
+    &quot;pair_id&quot;: 15837,
+    &quot;origin&quot;: &quot;random&quot;,
+    &quot;candidate_position&quot;: 19,
+    &quot;candidate_image_id&quot;: &quot;train-5685-1-img0&quot;,
+    &quot;teacher_score_saved&quot;: null,
+    &quot;teacher_target_score_saved&quot;: null,
+    &quot;teacher_margin_saved&quot;: null,
+    &quot;teacher_margin_recomputed_fp32&quot;: 0.21534143388271332,
+    &quot;teacher_recomputed_source&quot;: &quot;FP32 dot product of the same frozen normalized FP16 embedding cache&quot;
+  },
+  &quot;result&quot;: {
+    &quot;status&quot;: &quot;pending&quot;
+  }
+}</pre></details></div><div class="card"><img loading="lazy" src="../../../../../../../CIR_new/datasets/CIRR/train/13/train-11277-3-img0.png"><p>case_cfc923d227c5e17fe36f — pending</p><details><summary>判定及来源</summary><pre>{
+  &quot;membership&quot;: {
+    &quot;case_id&quot;: &quot;case_cfc923d227c5e17fe36f&quot;,
+    &quot;audit_query_id&quot;: &quot;audit_query_013&quot;,
+    &quot;epoch&quot;: 1,
+    &quot;pair_id&quot;: 15837,
+    &quot;origin&quot;: &quot;random&quot;,
+    &quot;candidate_position&quot;: 20,
+    &quot;candidate_image_id&quot;: &quot;train-11277-3-img0&quot;,
+    &quot;teacher_score_saved&quot;: null,
+    &quot;teacher_target_score_saved&quot;: null,
+    &quot;teacher_margin_saved&quot;: null,
+    &quot;teacher_margin_recomputed_fp32&quot;: 0.2792586088180542,
+    &quot;teacher_recomputed_source&quot;: &quot;FP32 dot product of the same frozen normalized FP16 embedding cache&quot;
+  },
+  &quot;result&quot;: {
+    &quot;status&quot;: &quot;pending&quot;
+  }
+}</pre></details></div><div class="card"><img loading="lazy" src="../../../../../../../CIR_new/datasets/CIRR/train/78/train-3870-1-img0.png"><p>case_0fb16b22217bc38c9ca1 — pending</p><details><summary>判定及来源</summary><pre>{
+  &quot;membership&quot;: {
+    &quot;case_id&quot;: &quot;case_0fb16b22217bc38c9ca1&quot;,
+    &quot;audit_query_id&quot;: &quot;audit_query_013&quot;,
+    &quot;epoch&quot;: 1,
+    &quot;pair_id&quot;: 15837,
+    &quot;origin&quot;: &quot;random&quot;,
+    &quot;candidate_position&quot;: 21,
+    &quot;candidate_image_id&quot;: &quot;train-3870-1-img0&quot;,
+    &quot;teacher_score_saved&quot;: null,
+    &quot;teacher_target_score_saved&quot;: null,
+    &quot;teacher_margin_saved&quot;: null,
+    &quot;teacher_margin_recomputed_fp32&quot;: 0.20726394653320312,
+    &quot;teacher_recomputed_source&quot;: &quot;FP32 dot product of the same frozen normalized FP16 embedding cache&quot;
+  },
+  &quot;result&quot;: {
+    &quot;status&quot;: &quot;pending&quot;
+  }
+}</pre></details></div><div class="card"><img loading="lazy" src="../../../../../../../CIR_new/datasets/CIRR/train/7/train-2191-1-img1.png"><p>case_3e215a57d7b373c3aa8b — pending</p><details><summary>判定及来源</summary><pre>{
+  &quot;membership&quot;: {
+    &quot;case_id&quot;: &quot;case_3e215a57d7b373c3aa8b&quot;,
+    &quot;audit_query_id&quot;: &quot;audit_query_013&quot;,
+    &quot;epoch&quot;: 1,
+    &quot;pair_id&quot;: 15837,
+    &quot;origin&quot;: &quot;random&quot;,
+    &quot;candidate_position&quot;: 22,
+    &quot;candidate_image_id&quot;: &quot;train-2191-1-img1&quot;,
+    &quot;teacher_score_saved&quot;: null,
+    &quot;teacher_target_score_saved&quot;: null,
+    &quot;teacher_margin_saved&quot;: null,
+    &quot;teacher_margin_recomputed_fp32&quot;: 0.21041741967201233,
+    &quot;teacher_recomputed_source&quot;: &quot;FP32 dot product of the same frozen normalized FP16 embedding cache&quot;
+  },
+  &quot;result&quot;: {
+    &quot;status&quot;: &quot;pending&quot;
+  }
+}</pre></details></div><div class="card"><img loading="lazy" src="../../../../../../../CIR_new/datasets/CIRR/train/92/train-8856-3-img0.png"><p>case_32c645bb361acb404e75 — pending</p><details><summary>判定及来源</summary><pre>{
+  &quot;membership&quot;: {
+    &quot;case_id&quot;: &quot;case_32c645bb361acb404e75&quot;,
+    &quot;audit_query_id&quot;: &quot;audit_query_013&quot;,
+    &quot;epoch&quot;: 1,
+    &quot;pair_id&quot;: 15837,
+    &quot;origin&quot;: &quot;random&quot;,
+    &quot;candidate_position&quot;: 23,
+    &quot;candidate_image_id&quot;: &quot;train-8856-3-img0&quot;,
+    &quot;teacher_score_saved&quot;: null,
+    &quot;teacher_target_score_saved&quot;: null,
+    &quot;teacher_margin_saved&quot;: null,
+    &quot;teacher_margin_recomputed_fp32&quot;: 0.2821993827819824,
+    &quot;teacher_recomputed_source&quot;: &quot;FP32 dot product of the same frozen normalized FP16 embedding cache&quot;
+  },
+  &quot;result&quot;: {
+    &quot;status&quot;: &quot;pending&quot;
+  }
+}</pre></details></div><div class="card"><img loading="lazy" src="../../../../../../../CIR_new/datasets/CIRR/train/25/train-968-1-img0.png"><p>case_c116ede18ba9b5dc29f7 — pending</p><details><summary>判定及来源</summary><pre>{
+  &quot;membership&quot;: {
+    &quot;case_id&quot;: &quot;case_c116ede18ba9b5dc29f7&quot;,
+    &quot;audit_query_id&quot;: &quot;audit_query_013&quot;,
+    &quot;epoch&quot;: 1,
+    &quot;pair_id&quot;: 15837,
+    &quot;origin&quot;: &quot;random&quot;,
+    &quot;candidate_position&quot;: 24,
+    &quot;candidate_image_id&quot;: &quot;train-968-1-img0&quot;,
+    &quot;teacher_score_saved&quot;: null,
+    &quot;teacher_target_score_saved&quot;: null,
+    &quot;teacher_margin_saved&quot;: null,
+    &quot;teacher_margin_recomputed_fp32&quot;: 0.16204170882701874,
+    &quot;teacher_recomputed_source&quot;: &quot;FP32 dot product of the same frozen normalized FP16 embedding cache&quot;
+  },
+  &quot;result&quot;: {
+    &quot;status&quot;: &quot;pending&quot;
+  }
+}</pre></details></div><div class="card"><img loading="lazy" src="../../../../../../../CIR_new/datasets/CIRR/train/55/train-4517-3-img0.png"><p>case_19d0cdc11886a585e7ca — pending</p><details><summary>判定及来源</summary><pre>{
+  &quot;membership&quot;: {
+    &quot;case_id&quot;: &quot;case_19d0cdc11886a585e7ca&quot;,
+    &quot;audit_query_id&quot;: &quot;audit_query_013&quot;,
+    &quot;epoch&quot;: 1,
+    &quot;pair_id&quot;: 15837,
+    &quot;origin&quot;: &quot;random&quot;,
+    &quot;candidate_position&quot;: 25,
+    &quot;candidate_image_id&quot;: &quot;train-4517-3-img0&quot;,
+    &quot;teacher_score_saved&quot;: null,
+    &quot;teacher_target_score_saved&quot;: null,
+    &quot;teacher_margin_saved&quot;: null,
+    &quot;teacher_margin_recomputed_fp32&quot;: 0.29242292046546936,
+    &quot;teacher_recomputed_source&quot;: &quot;FP32 dot product of the same frozen normalized FP16 embedding cache&quot;
+  },
+  &quot;result&quot;: {
+    &quot;status&quot;: &quot;pending&quot;
+  }
+}</pre></details></div><div class="card"><img loading="lazy" src="../../../../../../../CIR_new/datasets/CIRR/train/92/train-4777-1-img1.png"><p>case_4d6c5386b47999daac1f — pending</p><details><summary>判定及来源</summary><pre>{
+  &quot;membership&quot;: {
+    &quot;case_id&quot;: &quot;case_4d6c5386b47999daac1f&quot;,
+    &quot;audit_query_id&quot;: &quot;audit_query_013&quot;,
+    &quot;epoch&quot;: 1,
+    &quot;pair_id&quot;: 15837,
+    &quot;origin&quot;: &quot;random&quot;,
+    &quot;candidate_position&quot;: 26,
+    &quot;candidate_image_id&quot;: &quot;train-4777-1-img1&quot;,
+    &quot;teacher_score_saved&quot;: null,
+    &quot;teacher_target_score_saved&quot;: null,
+    &quot;teacher_margin_saved&quot;: null,
+    &quot;teacher_margin_recomputed_fp32&quot;: 0.2269083708524704,
+    &quot;teacher_recomputed_source&quot;: &quot;FP32 dot product of the same frozen normalized FP16 embedding cache&quot;
+  },
+  &quot;result&quot;: {
+    &quot;status&quot;: &quot;pending&quot;
+  }
+}</pre></details></div><div class="card"><img loading="lazy" src="../../../../../../../CIR_new/datasets/CIRR/train/62/train-8894-2-img1.png"><p>case_5d5f260a2ee7b6ab11f6 — pending</p><details><summary>判定及来源</summary><pre>{
+  &quot;membership&quot;: {
+    &quot;case_id&quot;: &quot;case_5d5f260a2ee7b6ab11f6&quot;,
+    &quot;audit_query_id&quot;: &quot;audit_query_013&quot;,
+    &quot;epoch&quot;: 1,
+    &quot;pair_id&quot;: 15837,
+    &quot;origin&quot;: &quot;random&quot;,
+    &quot;candidate_position&quot;: 27,
+    &quot;candidate_image_id&quot;: &quot;train-8894-2-img1&quot;,
+    &quot;teacher_score_saved&quot;: null,
+    &quot;teacher_target_score_saved&quot;: null,
+    &quot;teacher_margin_saved&quot;: null,
+    &quot;teacher_margin_recomputed_fp32&quot;: 0.22646985948085785,
+    &quot;teacher_recomputed_source&quot;: &quot;FP32 dot product of the same frozen normalized FP16 embedding cache&quot;
+  },
+  &quot;result&quot;: {
+    &quot;status&quot;: &quot;pending&quot;
+  }
+}</pre></details></div><div class="card"><img loading="lazy" src="../../../../../../../CIR_new/datasets/CIRR/train/97/train-746-1-img0.png"><p>case_58022ec232c2e39a7366 — pending</p><details><summary>判定及来源</summary><pre>{
+  &quot;membership&quot;: {
+    &quot;case_id&quot;: &quot;case_58022ec232c2e39a7366&quot;,
+    &quot;audit_query_id&quot;: &quot;audit_query_013&quot;,
+    &quot;epoch&quot;: 1,
+    &quot;pair_id&quot;: 15837,
+    &quot;origin&quot;: &quot;random&quot;,
+    &quot;candidate_position&quot;: 28,
+    &quot;candidate_image_id&quot;: &quot;train-746-1-img0&quot;,
+    &quot;teacher_score_saved&quot;: null,
+    &quot;teacher_target_score_saved&quot;: null,
+    &quot;teacher_margin_saved&quot;: null,
+    &quot;teacher_margin_recomputed_fp32&quot;: 0.21281953155994415,
+    &quot;teacher_recomputed_source&quot;: &quot;FP32 dot product of the same frozen normalized FP16 embedding cache&quot;
+  },
+  &quot;result&quot;: {
+    &quot;status&quot;: &quot;pending&quot;
+  }
+}</pre></details></div><div class="card"><img loading="lazy" src="../../../../../../../CIR_new/datasets/CIRR/train/56/train-10849-3-img0.png"><p>case_6edb095d69c6cef19385 — pending</p><details><summary>判定及来源</summary><pre>{
+  &quot;membership&quot;: {
+    &quot;case_id&quot;: &quot;case_6edb095d69c6cef19385&quot;,
+    &quot;audit_query_id&quot;: &quot;audit_query_013&quot;,
+    &quot;epoch&quot;: 1,
+    &quot;pair_id&quot;: 15837,
+    &quot;origin&quot;: &quot;random&quot;,
+    &quot;candidate_position&quot;: 29,
+    &quot;candidate_image_id&quot;: &quot;train-10849-3-img0&quot;,
+    &quot;teacher_score_saved&quot;: null,
+    &quot;teacher_target_score_saved&quot;: null,
+    &quot;teacher_margin_saved&quot;: null,
+    &quot;teacher_margin_recomputed_fp32&quot;: 0.23589228093624115,
+    &quot;teacher_recomputed_source&quot;: &quot;FP32 dot product of the same frozen normalized FP16 embedding cache&quot;
+  },
+  &quot;result&quot;: {
+    &quot;status&quot;: &quot;pending&quot;
+  }
+}</pre></details></div><div class="card"><img loading="lazy" src="../../../../../../../CIR_new/datasets/CIRR/train/41/train-2717-2-img0.png"><p>case_9b6f09d58fb32c41fbd8 — pending</p><details><summary>判定及来源</summary><pre>{
+  &quot;membership&quot;: {
+    &quot;case_id&quot;: &quot;case_9b6f09d58fb32c41fbd8&quot;,
+    &quot;audit_query_id&quot;: &quot;audit_query_013&quot;,
+    &quot;epoch&quot;: 1,
+    &quot;pair_id&quot;: 15837,
+    &quot;origin&quot;: &quot;random&quot;,
+    &quot;candidate_position&quot;: 30,
+    &quot;candidate_image_id&quot;: &quot;train-2717-2-img0&quot;,
+    &quot;teacher_score_saved&quot;: null,
+    &quot;teacher_target_score_saved&quot;: null,
+    &quot;teacher_margin_saved&quot;: null,
+    &quot;teacher_margin_recomputed_fp32&quot;: 0.2236325740814209,
+    &quot;teacher_recomputed_source&quot;: &quot;FP32 dot product of the same frozen normalized FP16 embedding cache&quot;
+  },
+  &quot;result&quot;: {
+    &quot;status&quot;: &quot;pending&quot;
+  }
+}</pre></details></div><div class="card"><img loading="lazy" src="../../../../../../../CIR_new/datasets/CIRR/train/63/train-9500-1-img0.png"><p>case_34987f13e283b8430d45 — pending</p><details><summary>判定及来源</summary><pre>{
+  &quot;membership&quot;: {
+    &quot;case_id&quot;: &quot;case_34987f13e283b8430d45&quot;,
+    &quot;audit_query_id&quot;: &quot;audit_query_013&quot;,
+    &quot;epoch&quot;: 1,
+    &quot;pair_id&quot;: 15837,
+    &quot;origin&quot;: &quot;random&quot;,
+    &quot;candidate_position&quot;: 31,
+    &quot;candidate_image_id&quot;: &quot;train-9500-1-img0&quot;,
+    &quot;teacher_score_saved&quot;: null,
+    &quot;teacher_target_score_saved&quot;: null,
+    &quot;teacher_margin_saved&quot;: null,
+    &quot;teacher_margin_recomputed_fp32&quot;: 0.2526661455631256,
+    &quot;teacher_recomputed_source&quot;: &quot;FP32 dot product of the same frozen normalized FP16 embedding cache&quot;
+  },
+  &quot;result&quot;: {
+    &quot;status&quot;: &quot;pending&quot;
+  }
+}</pre></details></div></div>

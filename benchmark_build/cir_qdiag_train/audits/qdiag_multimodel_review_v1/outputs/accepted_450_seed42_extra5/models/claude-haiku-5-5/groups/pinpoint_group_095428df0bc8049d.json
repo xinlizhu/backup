@@ -1,0 +1,49 @@
+{
+  "group_id": "pinpoint_group_095428df0bc8049d",
+  "model": "claude-haiku-5-5",
+  "signature": "44bb4aae802e19564501a676b733c7e19828d9ced260b7da0428f08b1a359df2",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_095428df0bc8049d_query_03280_attribute_delete",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Single semantic constraint removed. Source 'Change this to an eastern setting' deletes the attribute 'eastern' to produce 'Change this to a setting', which is fluent, meaningful, and strictly weaker. All positive images depict eastern settings (Asian drums, traditional Chinese opera costume, Asian marketplace), confirming the edit removes a real constraint that applies across positives."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-haiku-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "b6b76dc0843c8cc40f57d1664f5d47856d6144ef6baf2ea9cac74e5eb935a296",
+      "input_hash": "76c5ebce5e901ca0d61171309d6b91f6e744b660c6838049db998611f66719e5",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/claude-haiku-5-5/cache/validate_group/76c5ebce5e901ca0d61171309d6b91f6e744b660c6838049db998611f66719e5.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01w5EL5wWXQw2HquFBRpGrNAUw",
+      "usage": {
+        "prompt_tokens": 8536,
+        "completion_tokens": 185,
+        "total_tokens": 8721,
+        "prompt_tokens_details": {
+          "cached_tokens": 6654,
+          "cache_creation_tokens": 1878
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_095428df0bc8049d_query_03280_attribute_delete",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 389,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

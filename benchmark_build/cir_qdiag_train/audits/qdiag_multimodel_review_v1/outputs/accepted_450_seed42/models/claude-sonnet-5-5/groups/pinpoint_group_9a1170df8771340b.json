@@ -1,0 +1,61 @@
+{
+  "group_id": "pinpoint_group_9a1170df8771340b",
+  "model": "claude-sonnet-5-5",
+  "signature": "aff20e5a5733d87f80fd7515c25d92c77cff20d4f50c9f8dbf4123bfdabed97b",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_9a1170df8771340b_query_01747_attribute_add",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Adds 'with long sleeves' as a single attribute constraint to the source text. The edit is clearly marked and fluent. All supplied positive images show short-sleeved graphic tshirts, making this new attribute false for every positive, satisfying the requirement."
+    },
+    {
+      "negative_id": "pinpoint_group_9a1170df8771340b_query_01747_predicate_add",
+      "decision": "reject",
+      "failure_code": "not_visually_verifiable",
+      "reason": "The predicate 'hanging' cannot be reliably judged from the supplied images. Images 2-5 show tshirts being worn or displayed flat, but the aesthetic state of 'hanging' is not clearly verifiable as false across all positives in a way that makes this a definitive subtle edit."
+    },
+    {
+      "negative_id": "pinpoint_group_9a1170df8771340b_query_01752_predicate_substitute",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Substitutes 'align with' to 'contrast with', reversing the semantic relationship from matching to opposing. This is exactly one predicate edit with clear semantic inversion. All supplied positive images show pop-art style graphic tshirts that align with the reference aesthetic, making them incompatible with 'contrast with' the aesthetic shown."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-sonnet-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "fad95a8d3e1e620ed829ce9396212a9542b00cd76d59bd68684ebce04a8734fc",
+      "input_hash": "91ed4c97cf05541af811bb9b030fcfbe3e0078d76405fde01c00f71417ca18e0",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/claude-sonnet-5-5/cache/validate_group/91ed4c97cf05541af811bb9b030fcfbe3e0078d76405fde01c00f71417ca18e0.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01tizxMsJXToul4pkgmPSE9nuY",
+      "usage": {
+        "prompt_tokens": 9984,
+        "completion_tokens": 433,
+        "total_tokens": 10417,
+        "prompt_tokens_details": {
+          "cached_tokens": 7784,
+          "cache_creation_tokens": 2196
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_9a1170df8771340b_query_01752_predicate_substitute",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 345,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

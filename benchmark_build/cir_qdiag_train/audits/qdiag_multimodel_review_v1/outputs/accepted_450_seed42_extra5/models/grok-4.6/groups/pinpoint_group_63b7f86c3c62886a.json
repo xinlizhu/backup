@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_63b7f86c3c62886a",
+  "model": "grok-4.6",
+  "signature": "cb958fa178e5ebcdd33f446ebd46fe25a7c20417ca5539cc74de61fb4df99804",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_63b7f86c3c62886a_query_06701_attribute_substitute",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Replacing textured with striped is one fluent attribute edit and reconstructs the negative. No supplied positive shows a striped sweater, so the new fact is clearly false for every positive."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.6",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "613bef349191d7e1a6c878c96f78179759bfbc3fb3a8ff2747468cd33e21f931",
+      "input_hash": "57398bee5c9f132e1012d9df2964cf3d28d358ab7d73eadff4f4fa5bd25e4a70",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/grok-4.6/cache/validate_group/57398bee5c9f132e1012d9df2964cf3d28d358ab7d73eadff4f4fa5bd25e4a70.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "c5f6a275-7d30-9216-96b7-efbb1528f66a",
+      "usage": {
+        "prompt_tokens": 5320,
+        "completion_tokens": 86,
+        "total_tokens": 8179,
+        "prompt_tokens_details": {
+          "text_tokens": 2584,
+          "audio_tokens": 0,
+          "image_tokens": 2736,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2773,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 247220000
+      }
+    }
+  ],
+  "format_warnings": []
+}

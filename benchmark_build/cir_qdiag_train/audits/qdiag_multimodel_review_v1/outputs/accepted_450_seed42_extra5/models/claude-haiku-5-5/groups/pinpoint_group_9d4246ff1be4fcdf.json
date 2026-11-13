@@ -1,0 +1,49 @@
+{
+  "group_id": "pinpoint_group_9d4246ff1be4fcdf",
+  "model": "claude-haiku-5-5",
+  "signature": "44bb4aae802e19564501a676b733c7e19828d9ced260b7da0428f08b1a359df2",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_9d4246ff1be4fcdf_query_00145_predicate_delete",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Valid DELETE operation. The negative_text 'dining room decor' removes exactly one semantic constraint: 'with the colors and textile approach of the reference image'. The remaining core concept is preserved, the text is fluent and meaningful, and produces a strictly weaker query. All supplied positive images (2-5) show dining room decor with burgundy/wine tones and textured textiles matching the reference skirt, so the weaker query without the specific reference constraint remains compatible with all positives."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-haiku-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "ac0708297fbf34ba9688915cbbdffc91acb47dbe75b243a05ed74585c96b0a38",
+      "input_hash": "0e641d22d62b6287c10cb3f86c36a1524cfe06de8b333f788b059fb21895be12",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/claude-haiku-5-5/cache/validate_group/0e641d22d62b6287c10cb3f86c36a1524cfe06de8b333f788b059fb21895be12.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01BaFUEw1qQ92bHcg5G7IvEHkM",
+      "usage": {
+        "prompt_tokens": 9519,
+        "completion_tokens": 229,
+        "total_tokens": 9748,
+        "prompt_tokens_details": {
+          "cached_tokens": 7421,
+          "cache_creation_tokens": 2094
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_9d4246ff1be4fcdf_query_00145_predicate_delete",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 515,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

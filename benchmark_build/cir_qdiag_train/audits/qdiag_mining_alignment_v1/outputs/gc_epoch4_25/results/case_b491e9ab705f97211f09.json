@@ -1,0 +1,235 @@
+{
+  "case_id": "case_b491e9ab705f97211f09",
+  "audit_query_id": "audit_query_095",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_b491e9ab705f97211f09",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "T shows one pelican with its neck and wings raised above grey water and its mouth wide open. These visible endpoint constraints are supported, although R's swimming animals are sea lions rather than birds."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows one pelican standing out of the water with its mouth wide open, but the surrounding water is distinctly blue rather than grey."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "Change water color to grey."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "attribute",
+        "before_span": "grey",
+        "after_span": "blue",
+        "edited_instruction": "Remove all but one bird, change water color to blue, and raise remaining bird out of wate with it's mouth open.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "Water color changes from grey to blue.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "T has grey water, not blue water; its single raised pelican has an open mouth."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C shows a single pelican standing above blue water with its mouth wide open."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "operation": "delete",
+        "semantic_target": "attribute",
+        "before_span": "change water color to grey, ",
+        "after_span": null,
+        "edited_instruction": "Remove all but one bird, and raise remaining bird out of wate with it's mouth open.",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "Remove the requirement that the water be grey.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "T shows one pelican raised upright above the water with its mouth wide open."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C shows one pelican standing out of the water with its mouth wide open; water color is now unrestricted."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_b491e9ab705f97211f09",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "T shows one bird with its beak open, raised above murky grey-brown water. The water is visibly less blue than in R."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows one bird with its beak open and above the water, but the water is visibly blue rather than grey."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "The single attribute substitution grey→blue preserves the water-color constraint's meaning and reconstructs the edited instruction. T's water is grey-brown, while C's water is blue; the other stated constraints remain supported.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "T's water is grey-brown, not blue."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C's water is visibly blue; it also shows one bird with its beak open above the water."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting the water-color clause is one constraint deletion; the remaining text is fluent and preserves the other meanings. C differs from T on the removed grey-water constraint, while the remaining constraints are supported in both.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "T shows one bird with its beak open, raised above the water; without the color clause, the edited instruction is satisfied."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C shows one bird with its beak open, raised above the water; without the color clause, the edited instruction is satisfied."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "substitute",
+      "semantic_target": "attribute",
+      "before_span": "grey",
+      "after_span": "blue",
+      "edited_instruction": "Remove all but one bird, change water color to blue, and raise remaining bird out of wate with it's mouth open.",
+      "witness_type": "substitution_contrast",
+      "changed_constraint": "Water color changes from grey to blue.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "T has grey water, not blue water; its single raised pelican has an open mouth."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C shows a single pelican standing above blue water with its mouth wide open."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "The single attribute substitution grey→blue preserves the water-color constraint's meaning and reconstructs the edited instruction. T's water is grey-brown, while C's water is blue; the other stated constraints remain supported.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "T's water is grey-brown, not blue."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C's water is visibly blue; it also shows one bird with its beak open above the water."
+        }
+      }
+    },
+    {
+      "witness_id": "w2",
+      "operation": "delete",
+      "semantic_target": "attribute",
+      "before_span": "change water color to grey, ",
+      "after_span": null,
+      "edited_instruction": "Remove all but one bird, and raise remaining bird out of wate with it's mouth open.",
+      "witness_type": "deletion_relaxation",
+      "changed_constraint": "Remove the requirement that the water be grey.",
+      "edited_on_positive": {
+        "status": "supported",
+        "evidence": "T shows one pelican raised upright above the water with its mouth wide open."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C shows one pelican standing out of the water with its mouth wide open; water color is now unrestricted."
+      },
+      "independent_review": {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting the water-color clause is one constraint deletion; the remaining text is fluent and preserves the other meanings. C differs from T on the removed grey-water constraint, while the remaining constraints are supported in both.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "T shows one bird with its beak open, raised above the water; without the color clause, the edited instruction is satisfied."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C shows one bird with its beak open, raised above the water; without the color clause, the edited instruction is satisfied."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    },
+    {
+      "witness_id": "w2",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "852cfa1aba6c995be764bf802995a09dd667e21342186610afdb94cfceffc3c4",
+      "input_hash": "177139aec963ad9e1f0ad2db996054b4fa78c2554b615f89a7d57bc5ed043f3e",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/177139aec963ad9e1f0ad2db996054b4fa78c2554b615f89a7d57bc5ed043f3e.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0a53b37fb5580968016af2bea9e5e087d18cb517d4a3675f82",
+      "usage": {
+        "prompt_tokens": 12284,
+        "completion_tokens": 877,
+        "total_tokens": 13161,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 323
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "c99ceffad1a6f2474c2cbcb7929899e3955155f78274060e05d622df0664460c",
+      "input_hash": "0efd18ac006b0a938fc5c78b04ba24df47e61c6b1539e2a3aa6c07ea4190da4a",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/0efd18ac006b0a938fc5c78b04ba24df47e61c6b1539e2a3aa6c07ea4190da4a.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0947bfa43cb43567016af2bec9d2fc87d194dd6ce4058b6d51",
+      "usage": {
+        "prompt_tokens": 12919,
+        "completion_tokens": 1532,
+        "total_tokens": 14451,
+        "completion_tokens_details": {
+          "reasoning_tokens": 772
+        }
+      }
+    }
+  ]
+}

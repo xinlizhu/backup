@@ -1,0 +1,57 @@
+{
+  "case_id": "pair_72237d0aee524c7d8d96",
+  "signature": "f3a97f608e6addbd5531ad7795f5e06873610abdb12f716de8375d49eda4c022",
+  "simulated": false,
+  "status": "complete",
+  "judgment": {
+    "case_id": "pair_72237d0aee524c7d8d96",
+    "constraints": [
+      {
+        "constraint": "Shows two animals",
+        "A_status": "contradicted",
+        "B_status": "supported",
+        "A_evidence": "One guinea pig is visible.",
+        "B_evidence": "Two guinea pigs are visible."
+      },
+      {
+        "constraint": "Shows the animals outdoors",
+        "A_status": "supported",
+        "B_status": "contradicted",
+        "A_evidence": "The guinea pig is on an outdoor-looking bed of leaves and twigs.",
+        "B_evidence": "The guinea pigs are against a plain studio-like white background."
+      },
+      {
+        "constraint": "Avoids the reference's one-animal indoor scene",
+        "A_status": "uncertain",
+        "B_status": "uncertain",
+        "A_evidence": "It changes the setting but still shows one animal.",
+        "B_evidence": "It changes the count but still appears indoors."
+      }
+    ],
+    "decision": "A",
+    "confidence": "low",
+    "reason": "The distinction is weak: A clearly supplies the requested outdoor setting but misses the requested pair, while B supplies the pair but appears to retain an indoor studio setting. I slightly prefer A because its outdoor context is directly visible."
+  },
+  "trace": {
+    "stage": "rank_pair_relative_preference",
+    "model_name": "gpt-5.6-terra",
+    "model_revision": null,
+    "provider": "openai-compatible-chat",
+    "reasoning_effort": null,
+    "prompt_version": "rank_preference_relative_v2",
+    "prompt_hash": "3abbe6315270248ae1f8e37f3da0b5588a39ed2cb07e90eb5f530edbfec45959",
+    "input_hash": "7b4d4f18af7e826c5bd257743791b234965541d6ed8507096d06215eff26fae0",
+    "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_rank_preference_v1/outputs/gc_epochs14_top3_relative/api_cache/rank_pair_relative_preference/7b4d4f18af7e826c5bd257743791b234965541d6ed8507096d06215eff26fae0.json",
+    "cached": false,
+    "attempts": 1,
+    "request_id": "resp_ack_0434f75d5d718317d893664c5f47c9ad",
+    "usage": {
+      "prompt_tokens": 1523,
+      "completion_tokens": 605,
+      "total_tokens": 2128,
+      "completion_tokens_details": {
+        "reasoning_tokens": 304
+      }
+    }
+  }
+}

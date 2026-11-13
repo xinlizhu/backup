@@ -1,0 +1,91 @@
+{
+  "case_id": "case_89961859f3d7a5aa9aaf",
+  "audit_query_id": "audit_query_094",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_89961859f3d7a5aa9aaf",
+    "case_status": "source_invalid_or_uncertain",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "T shows two piglets nursing together on the image-left side of an adult warthog, unlike their opposite-side arrangement in R. However, the stated change from a mother to a boar is not visually established; if 'boar' specifies a male, that constraint is unsupported."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows two larger pigs and one smaller juvenile gathered around a carcass. It does not show an adult nursing two babies together on its left side."
+    },
+    "candidate_relation": "multiple_constraint_conflict",
+    "violated_source_constraints": [
+      "The adult is nursing two babies.",
+      "Two babies are together on the adult's left side."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_89961859f3d7a5aa9aaf",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "Two piglets appear to nurse together beneath the adult on the image's left, unlike their separated positions in R. However, the adult's identity as a male boar is not visually established, and image-left does not establish the adult's anatomical left side."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The animals have their snouts lowered toward a carcass. No adult is visibly nursing two babies together on its left side; the required nursing scene is absent."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "5ca540f2934337c7f1dc54b521c72d20dfe931eb5bbf3ad207cee004086f5f58",
+      "input_hash": "9aea59ee59244b5a179295bc998d16b7e29176c6be6edc0083cd2db4ebdf49be",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/9aea59ee59244b5a179295bc998d16b7e29176c6be6edc0083cd2db4ebdf49be.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0462640300f76ec8016af2be6cbbec87d18fbe7c2a18f0e1a7",
+      "usage": {
+        "prompt_tokens": 15760,
+        "completion_tokens": 414,
+        "total_tokens": 16174,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 187
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "4d196fef3fe3980bb52e9371d99bdc5211507a38e99cbd1d8d685508c60c21f3",
+      "input_hash": "d4d61a325c85bd3a8fbd1dd22ae17911a6ba58f83d39fc364ba57b700c0c3122",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/d4d61a325c85bd3a8fbd1dd22ae17911a6ba58f83d39fc364ba57b700c0c3122.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_012db696ac4d0ab7016af2be93339487d1bd6c69d2715781c3",
+      "usage": {
+        "prompt_tokens": 15218,
+        "completion_tokens": 224,
+        "total_tokens": 15442,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 56
+        }
+      }
+    }
+  ]
+}

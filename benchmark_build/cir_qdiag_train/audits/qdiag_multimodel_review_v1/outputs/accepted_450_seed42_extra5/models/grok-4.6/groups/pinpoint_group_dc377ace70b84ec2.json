@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_dc377ace70b84ec2",
+  "model": "grok-4.6",
+  "signature": "cb958fa178e5ebcdd33f446ebd46fe25a7c20417ca5539cc74de61fb4df99804",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_dc377ace70b84ec2_query_06772_object_delete",
+      "decision": "reject",
+      "failure_code": "wrong_semantic_target",
+      "reason": "Deleting \"in the image\" reconstructs the text in one fluent edit, but that span is deictic grounding, not an object; the dress entity and every other constraint remain, so the object axis is wrong."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.6",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "284c466e9469c50829448c3ec64140864f2ea19f589f5e49ac9e18517ab8590b",
+      "input_hash": "3b7087df4ea9ad16dd106c84a8ec08251ac31ad9481004db1442ab0709a89f7f",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/grok-4.6/cache/validate_group/3b7087df4ea9ad16dd106c84a8ec08251ac31ad9481004db1442ab0709a89f7f.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "1bc0cc49-7b6b-999f-817d-55fcc72adec4",
+      "usage": {
+        "prompt_tokens": 4367,
+        "completion_tokens": 97,
+        "total_tokens": 6860,
+        "prompt_tokens_details": {
+          "text_tokens": 2570,
+          "audio_tokens": 0,
+          "image_tokens": 1797,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2396,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 206200000
+      }
+    }
+  ],
+  "format_warnings": []
+}

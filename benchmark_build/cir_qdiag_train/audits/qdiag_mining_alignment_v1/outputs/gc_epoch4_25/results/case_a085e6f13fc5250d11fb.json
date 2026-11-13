@@ -1,0 +1,166 @@
+{
+  "case_id": "case_a085e6f13fc5250d11fb",
+  "audit_query_id": "audit_query_096",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_a085e6f13fc5250d11fb",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Two school buses are shown from the front, parked side by side."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The school bus fronts are visible, but the buses are spaced apart in a parking lot rather than adjacent to each other."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "Park the school buses adjacent to each other."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "delete_predicate_adjacency",
+        "operation": "delete",
+        "semantic_target": "predicate",
+        "before_span": " and park them adjacent to each other",
+        "after_span": null,
+        "edited_instruction": "Show the front of the school buses.",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "Removes the requirement that the school buses be parked adjacent to each other.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "The fronts of two school buses are visible."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The fronts of multiple school buses are visible."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_a085e6f13fc5250d11fb",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 visibly shows the fronts of two school buses parked immediately beside each other."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows the fronts of multiple school buses, but they are parked in separate spaces with clear gaps rather than adjacent to each other."
+    },
+    "verdicts": [
+      {
+        "witness_id": "delete_predicate_adjacency",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "The witness deletes exactly the adjacency predicate, producing a fluent instruction. Image 2 supports the full query; Image 3 supports showing bus fronts but violates only the adjacency constraint.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 clearly shows school bus fronts."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 clearly shows the fronts of several school buses."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "delete_predicate_adjacency",
+      "operation": "delete",
+      "semantic_target": "predicate",
+      "before_span": " and park them adjacent to each other",
+      "after_span": null,
+      "edited_instruction": "Show the front of the school buses.",
+      "witness_type": "deletion_relaxation",
+      "changed_constraint": "Removes the requirement that the school buses be parked adjacent to each other.",
+      "edited_on_positive": {
+        "status": "supported",
+        "evidence": "The fronts of two school buses are visible."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "The fronts of multiple school buses are visible."
+      },
+      "independent_review": {
+        "witness_id": "delete_predicate_adjacency",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "The witness deletes exactly the adjacency predicate, producing a fluent instruction. Image 2 supports the full query; Image 3 supports showing bus fronts but violates only the adjacency constraint.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 clearly shows school bus fronts."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 clearly shows the fronts of several school buses."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "delete_predicate_adjacency",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "cf139ca5222265c56c1cf0794ac7d239a5f2e0ca168ac2b29d83aef19c14e3b4",
+      "input_hash": "54d27d453a03cd571a223f6c2467c1d6365179d51d4155fd5841e9ca06d23fd9",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/54d27d453a03cd571a223f6c2467c1d6365179d51d4155fd5841e9ca06d23fd9.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_08b9851c0e88a954016af2bedc0aac87d18beb556f004d7128",
+      "usage": {
+        "prompt_tokens": 7292,
+        "completion_tokens": 423,
+        "total_tokens": 7715,
+        "prompt_tokens_details": {
+          "cached_tokens": 5888
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 183
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "fe6d98ffea92925f055ef112f81395f8447f74dfa535bb45fd744c5e4f284870",
+      "input_hash": "1084a4ffdfebdc433213a1833236697d873e7a3deac922d536dda8301f9bee24",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/1084a4ffdfebdc433213a1833236697d873e7a3deac922d536dda8301f9bee24.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0a99be468a3d0700016af2beecf36987d1c182c07362057e6f",
+      "usage": {
+        "prompt_tokens": 110228,
+        "completion_tokens": 760,
+        "total_tokens": 110988,
+        "prompt_tokens_details": {
+          "cached_tokens": 89578
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 336
+        }
+      }
+    }
+  ]
+}

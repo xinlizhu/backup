@@ -1,0 +1,49 @@
+{
+  "group_id": "pinpoint_group_9e277f22faffcc39",
+  "model": "gpt-6.1-terra",
+  "signature": "08eff7f6139e72d377a59effd10853d9c15929bec5b0a3afebcc9b0ca4a1c2df",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_9e277f22faffcc39_query_05035_attribute_substitute",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "The edit changes only the border attribute from fun to colorful. Neither supplied positive shows a colorful border."
+    },
+    {
+      "negative_id": "pinpoint_group_9e277f22faffcc39_query_05039_object_delete",
+      "decision": "reject",
+      "failure_code": "wrong_semantic_target",
+      "reason": "Deleting “of the image” removes the reference for matching layout and color palette, not an object constraint."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "gpt-6.1-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "8b873bae57f16199d1cfd06a9bff63edee07fe0853a5696210a6c77bee90d914",
+      "input_hash": "b674f21c1a7c1ffa3e71fd561e5ed6d90cf8e03a0135940f613c305e3b75af6c",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/gpt-6.1-terra/cache/validate_group/b674f21c1a7c1ffa3e71fd561e5ed6d90cf8e03a0135940f613c305e3b75af6c.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_089bcd8d575a2f08016af42e53600887d185fc10beba24db17",
+      "usage": {
+        "prompt_tokens": 7132,
+        "completion_tokens": 429,
+        "total_tokens": 7561,
+        "prompt_tokens_details": {
+          "cached_tokens": 3566
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 301
+        }
+      }
+    }
+  ],
+  "format_warnings": []
+}

@@ -1,0 +1,64 @@
+{
+  "case_id": "pair_63072d1b6c29ee8610b0",
+  "signature": "f3a97f608e6addbd5531ad7795f5e06873610abdb12f716de8375d49eda4c022",
+  "simulated": false,
+  "status": "complete",
+  "judgment": {
+    "case_id": "pair_63072d1b6c29ee8610b0",
+    "constraints": [
+      {
+        "constraint": "Dog is outside",
+        "A_status": "supported",
+        "B_status": "supported",
+        "A_evidence": "The dog is visibly outdoors on grass with a natural leafy background.",
+        "B_evidence": "The dog is visibly outdoors in a grassy field."
+      },
+      {
+        "constraint": "Dog is laying down",
+        "A_status": "supported",
+        "B_status": "contradicted",
+        "A_evidence": "The dog is positioned low to the ground with its front legs extended, consistent with lying down.",
+        "B_evidence": "The dog is sitting upright with its torso raised."
+      },
+      {
+        "constraint": "Dog is facing right",
+        "A_status": "uncertain",
+        "B_status": "contradicted",
+        "A_evidence": "The dog faces mostly toward the camera with a slight side angle, but not clearly to the right.",
+        "B_evidence": "The dog faces directly toward the camera rather than to the right."
+      },
+      {
+        "constraint": "Dog has its tongue out",
+        "A_status": "supported",
+        "B_status": "contradicted",
+        "A_evidence": "The dog's tongue is clearly visible outside its mouth.",
+        "B_evidence": "The dog's mouth is closed and no tongue is visible."
+      }
+    ],
+    "decision": "A",
+    "confidence": "high",
+    "reason": "Candidate A clearly satisfies the outdoor, lying-down, and tongue-out requirements, while B is sitting and has no visible tongue. Neither clearly faces right, but A is substantially closer overall."
+  },
+  "trace": {
+    "stage": "rank_pair_relative_preference",
+    "model_name": "gpt-5.6-terra",
+    "model_revision": null,
+    "provider": "openai-compatible-chat",
+    "reasoning_effort": null,
+    "prompt_version": "rank_preference_relative_v2",
+    "prompt_hash": "fda2151b76b571a10236d464944b019dc05d5c2161c0e383180b8419aad770fe",
+    "input_hash": "0a8143a3a3f9e688f6dcdad1dd918cc9354620aef7b2006ac75be1b2e909212f",
+    "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_rank_preference_v1/outputs/gc_epochs14_top3_relative/api_cache/rank_pair_relative_preference/0a8143a3a3f9e688f6dcdad1dd918cc9354620aef7b2006ac75be1b2e909212f.json",
+    "cached": false,
+    "attempts": 1,
+    "request_id": "resp_07cb41cc3948ebd8016af2dc645e7487d1a89372508d4af0c3",
+    "usage": {
+      "prompt_tokens": 3114,
+      "completion_tokens": 853,
+      "total_tokens": 3967,
+      "completion_tokens_details": {
+        "reasoning_tokens": 284
+      }
+    }
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "case_id": "case_0c111fdf932d083948d8",
+  "audit_query_id": "audit_query_089",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_0c111fdf932d083948d8",
+    "case_status": "source_invalid_or_uncertain",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "Several school buses are parked together, with severe charring and exposed machinery at the fronts of central buses. However, three distinct buses with burned front ends cannot be reliably identified in this partly occluded view."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "One school bus is visible on a road behind a truck, with localized front-end collision damage. The scene does not show a bus parking lot or three buses with visibly fire-damaged fronts."
+    },
+    "candidate_relation": "multiple_constraint_conflict",
+    "violated_source_constraints": [
+      "The scene is a bus parking lot.",
+      "Three buses have fire-damaged front ends."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_0c111fdf932d083948d8",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "The image shows parked school buses with severe charring around the fronts of two central buses. A third bus with front-end fire damage cannot be reliably identified, so the specified count of three is not established."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The image shows one school bus on a road beside trucks and responders. Its front is against a truck, with no visible fire damage; it does not show three buses with burned front ends in a bus parking lot."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "6d7223a5e2ab124065df375c491024256f04d7f323571c55d64b838f107bb16a",
+      "input_hash": "1c49a7a9a58ee8775adc1cfae04a3a0c4c429692815586a9a0f24087e0cf0acf",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/1c49a7a9a58ee8775adc1cfae04a3a0c4c429692815586a9a0f24087e0cf0acf.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0ed7f6ae87138d84016af2bda3d34c87d19c34aae7dc44bc39",
+      "usage": {
+        "prompt_tokens": 7361,
+        "completion_tokens": 416,
+        "total_tokens": 7777,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 201
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "3fbc54364ac97172032da178b9ccdfa9cacf90319432b577dbe71cf80f421ea9",
+      "input_hash": "804066d485d789b92c2a1191c9fefa093013b4d98b5b5ddf896432c2e426f75e",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/804066d485d789b92c2a1191c9fefa093013b4d98b5b5ddf896432c2e426f75e.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0c7bbdc48c384465016af2bdc2f25c87d1921f281a3ac4dac3",
+      "usage": {
+        "prompt_tokens": 6819,
+        "completion_tokens": 177,
+        "total_tokens": 6996,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 37
+        }
+      }
+    }
+  ]
+}

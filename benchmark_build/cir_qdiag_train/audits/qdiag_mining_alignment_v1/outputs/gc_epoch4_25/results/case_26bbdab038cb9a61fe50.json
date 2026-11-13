@@ -1,0 +1,82 @@
+{
+  "case_id": "case_26bbdab038cb9a61fe50",
+  "audit_query_id": "audit_query_079",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_26bbdab038cb9a61fe50",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "A black bowl-shaped vessel sink is visible beneath a running faucet."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The image shows a cream-colored, long-haired dog outdoors, with no bowl sink visible."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "Show a bowl sink.",
+      "The requested sink must be black."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_26bbdab038cb9a61fe50",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 visibly shows a black, bowl-shaped vessel sink on a countertop, with water flowing into it from a faucet."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a cream-colored, long-haired dog sitting outdoors; no black bowl sink is visible."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "7fc412b9359016fbe432a463dc6a88243bb670c60e5991aff4ef4d6dce296074",
+      "input_hash": "190630b1665241415fc3b666e7438c37ef461685c448fc63eaef9ff6fcb7e774",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/190630b1665241415fc3b666e7438c37ef461685c448fc63eaef9ff6fcb7e774.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_081e50bea6a3fe24016af2bdf7f04087d1b5c10e55ce0192c0",
+      "usage": {
+        "prompt_tokens": 9927,
+        "completion_tokens": 153,
+        "total_tokens": 10080,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "830cad9e6277fd9dea8d5a6d985b2dd4129bae2bfdc310c25cb45e714f6f45b5",
+      "input_hash": "645704b1b71a5efcca05298263d71729957946d4315a3ef29d653b59e560daa3",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/645704b1b71a5efcca05298263d71729957946d4315a3ef29d653b59e560daa3.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_03e4b616fe70b113016af2be00400087d1a48d038ffebef992",
+      "usage": {
+        "prompt_tokens": 9385,
+        "completion_tokens": 98,
+        "total_tokens": 9483
+      }
+    }
+  ]
+}

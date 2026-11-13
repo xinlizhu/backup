@@ -1,0 +1,329 @@
+
+{"command": ["/mnt/data/datasets/search_dataset/zxl/multi_modal_py3.12/bin/python", "-u", "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/scripts/evaluate_external_retrieval.py", "--model", "oprd_head", "--model-name", "CLIP-L-OPRD-mmret_add", "--checkpoint", "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/outputs/head_ablation_oprd_20261109/mmret_add/checkpoint_epoch_004.pt", "--output", "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/outputs/head_ablation_oprd_20261109/mmret_add/retrieval", "--image-batch-size", "512", "--query-batch-size", "512"], "started": 1794234161.1756713}
+[load model] CLIP-L-OPRD-mmret_add
+[1mCLIPModel LOAD REPORT[0m from: /mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/models/clip-vit-large-patch14
+Key                                  | Status     |  | 
+-------------------------------------+------------+--+-
+vision_model.embeddings.position_ids | UNEXPECTED |  | 
+text_model.embeddings.position_ids   | UNEXPECTED |  | 
+
+[3mNotes:
+- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m
+[loaded] strict weights
+[cirr_val images] 512/2297 elapsed=9.0s
+[cirr_val images] 1024/2297 elapsed=11.9s
+[cirr_val images] 1536/2297 elapsed=15.1s
+[cirr_val images] 2048/2297 elapsed=17.8s
+[cirr_val images] 2297/2297 elapsed=19.0s
+[cirr_val queries] 512/4181 elapsed=19.2s
+[cirr_val queries] 1024/4181 elapsed=19.3s
+[cirr_val queries] 1536/4181 elapsed=19.4s
+[cirr_val queries] 2048/4181 elapsed=19.4s
+[cirr_val queries] 2560/4181 elapsed=19.5s
+[cirr_val queries] 3072/4181 elapsed=19.6s
+[cirr_val queries] 3584/4181 elapsed=19.6s
+[cirr_val queries] 4096/4181 elapsed=19.7s
+[cirr_val queries] 4181/4181 elapsed=19.8s
+/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/scripts/evaluate_cirr_original_adapter.py:268: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at /pytorch/torch/csrc/utils/tensor_numpy.cpp:213.)
+  gallery_device = torch.from_numpy(
+CLIP-L-OPRD-mmret_add CIRR-val scoring:   0%|          | 0/9 [00:00<?, ?it/s]CLIP-L-OPRD-mmret_add CIRR-val scoring:  11%|█         | 1/9 [00:00<00:01,  5.89it/s]CLIP-L-OPRD-mmret_add CIRR-val scoring:  33%|███▎      | 3/9 [00:00<00:00, 11.73it/s]CLIP-L-OPRD-mmret_add CIRR-val scoring:  56%|█████▌    | 5/9 [00:00<00:00, 14.35it/s]CLIP-L-OPRD-mmret_add CIRR-val scoring:  78%|███████▊  | 7/9 [00:00<00:00, 15.77it/s]CLIP-L-OPRD-mmret_add CIRR-val scoring: 100%|██████████| 9/9 [00:00<00:00, 15.91it/s]
+[metrics] cirr_val {"model": "CLIP-L-OPRD-mmret_add", "checkpoint": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/outputs/head_ablation_oprd_20261109/mmret_add/checkpoint_epoch_004.pt", "num_queries": 4181, "recall_at_1": 44.3435, "recall_at_5": 77.9239, "recall_at_10": 87.4432, "recall_at_50": 97.4169, "group_recall_at_1": 69.8637, "group_recall_at_2": 87.3475, "group_recall_at_3": 94.762}
+[fashioniq_dress images] 512/3817 elapsed=3.0s
+[fashioniq_dress images] 1024/3817 elapsed=5.3s
+[fashioniq_dress images] 1536/3817 elapsed=7.1s
+[fashioniq_dress images] 2048/3817 elapsed=9.3s
+[fashioniq_dress images] 2560/3817 elapsed=11.8s
+[fashioniq_dress images] 3072/3817 elapsed=15.0s
+[fashioniq_dress images] 3584/3817 elapsed=17.1s
+[fashioniq_dress images] 3817/3817 elapsed=18.3s
+[fashioniq_dress queries] 512/2017 elapsed=18.4s
+[fashioniq_dress queries] 1024/2017 elapsed=18.5s
+[fashioniq_dress queries] 1536/2017 elapsed=18.5s
+[fashioniq_dress queries] 2017/2017 elapsed=18.6s
+FashionIQ scoring:   0%|          | 0/4 [00:00<?, ?it/s]FashionIQ scoring: 100%|██████████| 4/4 [00:00<00:00, 667.64it/s]
+[metrics] fashioniq_dress {"num_queries": 2017, "gallery_size": 3817, "recall_at_1": 7.5359, "recall_at_5": 19.1373, "recall_at_10": 25.6817, "recall_at_50": 47.1492}
+[fashioniq_shirt images] 512/6346 elapsed=2.2s
+[fashioniq_shirt images] 1024/6346 elapsed=4.1s
+[fashioniq_shirt images] 1536/6346 elapsed=6.5s
+[fashioniq_shirt images] 2048/6346 elapsed=8.9s
+[fashioniq_shirt images] 2560/6346 elapsed=11.0s
+[fashioniq_shirt images] 3072/6346 elapsed=12.9s
+[fashioniq_shirt images] 3584/6346 elapsed=15.0s
+[fashioniq_shirt images] 4096/6346 elapsed=17.1s
+[fashioniq_shirt images] 4608/6346 elapsed=19.0s
+[fashioniq_shirt images] 5120/6346 elapsed=21.1s
+[fashioniq_shirt images] 5632/6346 elapsed=23.2s
+[fashioniq_shirt images] 6144/6346 elapsed=25.4s
+[fashioniq_shirt images] 6346/6346 elapsed=26.1s
+[fashioniq_shirt queries] 512/2038 elapsed=26.2s
+[fashioniq_shirt queries] 1024/2038 elapsed=26.3s
+[fashioniq_shirt queries] 1536/2038 elapsed=26.4s
+[fashioniq_shirt queries] 2038/2038 elapsed=26.4s
+FashionIQ scoring:   0%|          | 0/4 [00:00<?, ?it/s]FashionIQ scoring: 100%|██████████| 4/4 [00:00<00:00, 669.24it/s]
+[metrics] fashioniq_shirt {"num_queries": 2038, "gallery_size": 6346, "recall_at_1": 11.4328, "recall_at_5": 27.2326, "recall_at_10": 33.9549, "recall_at_50": 52.6006}
+[fashioniq_toptee images] 512/5373 elapsed=2.1s
+[fashioniq_toptee images] 1024/5373 elapsed=4.2s
+[fashioniq_toptee images] 1536/5373 elapsed=6.2s
+[fashioniq_toptee images] 2048/5373 elapsed=8.3s
+[fashioniq_toptee images] 2560/5373 elapsed=10.5s
+[fashioniq_toptee images] 3072/5373 elapsed=12.6s
+[fashioniq_toptee images] 3584/5373 elapsed=14.5s
+[fashioniq_toptee images] 4096/5373 elapsed=16.7s
+[fashioniq_toptee images] 4608/5373 elapsed=18.8s
+[fashioniq_toptee images] 5120/5373 elapsed=21.0s
+[fashioniq_toptee images] 5373/5373 elapsed=21.9s
+[fashioniq_toptee queries] 512/1961 elapsed=22.0s
+[fashioniq_toptee queries] 1024/1961 elapsed=22.1s
+[fashioniq_toptee queries] 1536/1961 elapsed=22.2s
+[fashioniq_toptee queries] 1961/1961 elapsed=22.2s
+FashionIQ scoring:   0%|          | 0/4 [00:00<?, ?it/s]FashionIQ scoring: 100%|██████████| 4/4 [00:00<00:00, 728.62it/s]
+[metrics] fashioniq_toptee {"num_queries": 1961, "gallery_size": 5373, "recall_at_1": 9.128, "recall_at_5": 24.2733, "recall_at_10": 32.2285, "recall_at_50": 53.6971}
+[pinpoint images] 512/109598 elapsed=2.5s
+[pinpoint images] 1024/109598 elapsed=4.9s
+[pinpoint images] 1536/109598 elapsed=6.9s
+[pinpoint images] 2048/109598 elapsed=9.3s
+[pinpoint images] 2560/109598 elapsed=11.7s
+[pinpoint images] 3072/109598 elapsed=14.1s
+[pinpoint images] 3584/109598 elapsed=16.2s
+[pinpoint images] 4096/109598 elapsed=18.6s
+[pinpoint images] 4608/109598 elapsed=20.9s
+[pinpoint images] 5120/109598 elapsed=23.1s
+[pinpoint images] 5632/109598 elapsed=25.4s
+[pinpoint images] 6144/109598 elapsed=27.8s
+[pinpoint images] 6656/109598 elapsed=30.1s
+[pinpoint images] 7168/109598 elapsed=32.3s
+[pinpoint images] 7680/109598 elapsed=34.6s
+[pinpoint images] 8192/109598 elapsed=37.0s
+[pinpoint images] 8704/109598 elapsed=39.1s
+[pinpoint images] 9216/109598 elapsed=41.5s
+[pinpoint images] 9728/109598 elapsed=43.9s
+[pinpoint images] 10240/109598 elapsed=46.3s
+[pinpoint images] 10752/109598 elapsed=48.4s
+[pinpoint images] 11264/109598 elapsed=50.8s
+[pinpoint images] 11776/109598 elapsed=53.3s
+[pinpoint images] 12288/109598 elapsed=55.4s
+[pinpoint images] 12800/109598 elapsed=57.9s
+[pinpoint images] 13312/109598 elapsed=60.2s
+[pinpoint images] 13824/109598 elapsed=62.6s
+[pinpoint images] 14336/109598 elapsed=64.7s
+[pinpoint images] 14848/109598 elapsed=67.1s
+[pinpoint images] 15360/109598 elapsed=69.5s
+[pinpoint images] 15872/109598 elapsed=71.6s
+[pinpoint images] 16384/109598 elapsed=74.0s
+[pinpoint images] 16896/109598 elapsed=76.3s
+[pinpoint images] 17408/109598 elapsed=78.6s
+[pinpoint images] 17920/109598 elapsed=81.0s
+[pinpoint images] 18432/109598 elapsed=83.4s
+[pinpoint images] 18944/109598 elapsed=85.8s
+[pinpoint images] 19456/109598 elapsed=88.1s
+[pinpoint images] 19968/109598 elapsed=90.3s
+[pinpoint images] 20480/109598 elapsed=92.6s
+[pinpoint images] 20992/109598 elapsed=95.0s
+[pinpoint images] 21504/109598 elapsed=97.1s
+[pinpoint images] 22016/109598 elapsed=99.5s
+[pinpoint images] 22528/109598 elapsed=101.8s
+[pinpoint images] 23040/109598 elapsed=104.1s
+[pinpoint images] 23552/109598 elapsed=106.2s
+[pinpoint images] 24064/109598 elapsed=108.6s
+[pinpoint images] 24576/109598 elapsed=111.0s
+[pinpoint images] 25088/109598 elapsed=113.4s
+[pinpoint images] 25600/109598 elapsed=115.5s
+[pinpoint images] 26112/109598 elapsed=117.9s
+[pinpoint images] 26624/109598 elapsed=120.2s
+[pinpoint images] 27136/109598 elapsed=122.3s
+[pinpoint images] 27648/109598 elapsed=124.7s
+[pinpoint images] 28160/109598 elapsed=127.1s
+[pinpoint images] 28672/109598 elapsed=129.5s
+[pinpoint images] 29184/109598 elapsed=131.6s
+[pinpoint images] 29696/109598 elapsed=134.1s
+[pinpoint images] 30208/109598 elapsed=136.5s
+[pinpoint images] 30720/109598 elapsed=138.6s
+[pinpoint images] 31232/109598 elapsed=141.0s
+[pinpoint images] 31744/109598 elapsed=143.4s
+[pinpoint images] 32256/109598 elapsed=145.7s
+[pinpoint images] 32768/109598 elapsed=147.8s
+[pinpoint images] 33280/109598 elapsed=150.2s
+[pinpoint images] 33792/109598 elapsed=152.6s
+[pinpoint images] 34304/109598 elapsed=154.7s
+[pinpoint images] 34816/109598 elapsed=157.1s
+[pinpoint images] 35328/109598 elapsed=159.4s
+[pinpoint images] 35840/109598 elapsed=161.8s
+[pinpoint images] 36352/109598 elapsed=163.9s
+[pinpoint images] 36864/109598 elapsed=166.3s
+[pinpoint images] 37376/109598 elapsed=168.7s
+[pinpoint images] 37888/109598 elapsed=171.0s
+[pinpoint images] 38400/109598 elapsed=173.3s
+[pinpoint images] 38912/109598 elapsed=175.6s
+[pinpoint images] 39424/109598 elapsed=178.0s
+[pinpoint images] 39936/109598 elapsed=180.1s
+[pinpoint images] 40448/109598 elapsed=182.5s
+[pinpoint images] 40960/109598 elapsed=184.8s
+[pinpoint images] 41472/109598 elapsed=187.2s
+[pinpoint images] 41984/109598 elapsed=189.2s
+[pinpoint images] 42496/109598 elapsed=191.6s
+[pinpoint images] 43008/109598 elapsed=194.0s
+[pinpoint images] 43520/109598 elapsed=196.1s
+[pinpoint images] 44032/109598 elapsed=198.4s
+[pinpoint images] 44544/109598 elapsed=200.8s
+[pinpoint images] 45056/109598 elapsed=203.2s
+[pinpoint images] 45568/109598 elapsed=205.3s
+[pinpoint images] 46080/109598 elapsed=207.7s
+[pinpoint images] 46592/109598 elapsed=210.1s
+[pinpoint images] 47104/109598 elapsed=212.2s
+[pinpoint images] 47616/109598 elapsed=214.6s
+[pinpoint images] 48128/109598 elapsed=217.0s
+[pinpoint images] 48640/109598 elapsed=219.3s
+[pinpoint images] 49152/109598 elapsed=221.7s
+[pinpoint images] 49664/109598 elapsed=224.2s
+[pinpoint images] 50176/109598 elapsed=226.6s
+[pinpoint images] 50688/109598 elapsed=229.0s
+[pinpoint images] 51200/109598 elapsed=231.1s
+[pinpoint images] 51712/109598 elapsed=233.4s
+[pinpoint images] 52224/109598 elapsed=235.8s
+[pinpoint images] 52736/109598 elapsed=238.0s
+[pinpoint images] 53248/109598 elapsed=240.4s
+[pinpoint images] 53760/109598 elapsed=242.8s
+[pinpoint images] 54272/109598 elapsed=245.4s
+[pinpoint images] 54784/109598 elapsed=247.5s
+[pinpoint images] 55296/109598 elapsed=249.9s
+[pinpoint images] 55808/109598 elapsed=252.3s
+[pinpoint images] 56320/109598 elapsed=254.5s
+[pinpoint images] 56832/109598 elapsed=256.9s
+[pinpoint images] 57344/109598 elapsed=259.3s
+[pinpoint images] 57856/109598 elapsed=261.7s
+[pinpoint images] 58368/109598 elapsed=263.8s
+[pinpoint images] 58880/109598 elapsed=266.2s
+[pinpoint images] 59392/109598 elapsed=268.6s
+[pinpoint images] 59904/109598 elapsed=270.9s
+[pinpoint images] 60416/109598 elapsed=273.1s
+[pinpoint images] 60928/109598 elapsed=275.5s
+[pinpoint images] 61440/109598 elapsed=277.9s
+[pinpoint images] 61952/109598 elapsed=280.0s
+[pinpoint images] 62464/109598 elapsed=282.3s
+[pinpoint images] 62976/109598 elapsed=284.7s
+[pinpoint images] 63488/109598 elapsed=287.1s
+[pinpoint images] 64000/109598 elapsed=289.2s
+[pinpoint images] 64512/109598 elapsed=291.6s
+[pinpoint images] 65024/109598 elapsed=294.0s
+[pinpoint images] 65536/109598 elapsed=296.3s
+[pinpoint images] 66048/109598 elapsed=298.5s
+[pinpoint images] 66560/109598 elapsed=300.9s
+[pinpoint images] 67072/109598 elapsed=303.3s
+[pinpoint images] 67584/109598 elapsed=305.4s
+[pinpoint images] 68096/109598 elapsed=307.8s
+[pinpoint images] 68608/109598 elapsed=310.2s
+[pinpoint images] 69120/109598 elapsed=312.5s
+[pinpoint images] 69632/109598 elapsed=314.7s
+[pinpoint images] 70144/109598 elapsed=317.1s
+[pinpoint images] 70656/109598 elapsed=319.5s
+[pinpoint images] 71168/109598 elapsed=321.9s
+[pinpoint images] 71680/109598 elapsed=324.0s
+[pinpoint images] 72192/109598 elapsed=326.4s
+[pinpoint images] 72704/109598 elapsed=328.8s
+[pinpoint images] 73216/109598 elapsed=330.9s
+[pinpoint images] 73728/109598 elapsed=333.3s
+[pinpoint images] 74240/109598 elapsed=335.7s
+[pinpoint images] 74752/109598 elapsed=338.1s
+[pinpoint images] 75264/109598 elapsed=340.2s
+[pinpoint images] 75776/109598 elapsed=342.6s
+[pinpoint images] 76288/109598 elapsed=345.0s
+[pinpoint images] 76800/109598 elapsed=347.4s
+[pinpoint images] 77312/109598 elapsed=349.5s
+[pinpoint images] 77824/109598 elapsed=351.9s
+[pinpoint images] 78336/109598 elapsed=354.3s
+[pinpoint images] 78848/109598 elapsed=356.4s
+[pinpoint images] 79360/109598 elapsed=358.8s
+[pinpoint images] 79872/109598 elapsed=361.2s
+[pinpoint images] 80384/109598 elapsed=363.8s
+[pinpoint images] 80896/109598 elapsed=365.9s
+[pinpoint images] 81408/109598 elapsed=368.3s
+[pinpoint images] 81920/109598 elapsed=370.6s
+[pinpoint images] 82432/109598 elapsed=372.7s
+[pinpoint images] 82944/109598 elapsed=375.1s
+[pinpoint images] 83456/109598 elapsed=377.4s
+[pinpoint images] 83968/109598 elapsed=379.5s
+[pinpoint images] 84480/109598 elapsed=381.9s
+[pinpoint images] 84992/109598 elapsed=384.3s
+[pinpoint images] 85504/109598 elapsed=386.7s
+[pinpoint images] 86016/109598 elapsed=388.9s
+[pinpoint images] 86528/109598 elapsed=391.2s
+[pinpoint images] 87040/109598 elapsed=393.7s
+[pinpoint images] 87552/109598 elapsed=396.1s
+[pinpoint images] 88064/109598 elapsed=398.2s
+[pinpoint images] 88576/109598 elapsed=400.5s
+[pinpoint images] 89088/109598 elapsed=402.9s
+[pinpoint images] 89600/109598 elapsed=405.1s
+[pinpoint images] 90112/109598 elapsed=407.6s
+[pinpoint images] 90624/109598 elapsed=409.9s
+[pinpoint images] 91136/109598 elapsed=412.3s
+[pinpoint images] 91648/109598 elapsed=414.5s
+[pinpoint images] 92160/109598 elapsed=416.9s
+[pinpoint images] 92672/109598 elapsed=419.3s
+[pinpoint images] 93184/109598 elapsed=421.6s
+[pinpoint images] 93696/109598 elapsed=423.8s
+[pinpoint images] 94208/109598 elapsed=426.1s
+[pinpoint images] 94720/109598 elapsed=428.5s
+[pinpoint images] 95232/109598 elapsed=430.6s
+[pinpoint images] 95744/109598 elapsed=433.0s
+[pinpoint images] 96256/109598 elapsed=435.4s
+[pinpoint images] 96768/109598 elapsed=437.8s
+[pinpoint images] 97280/109598 elapsed=439.9s
+[pinpoint images] 97792/109598 elapsed=442.3s
+[pinpoint images] 98304/109598 elapsed=444.7s
+[pinpoint images] 98816/109598 elapsed=447.0s
+[pinpoint images] 99328/109598 elapsed=449.1s
+[pinpoint images] 99840/109598 elapsed=451.6s
+[pinpoint images] 100352/109598 elapsed=454.0s
+[pinpoint images] 100864/109598 elapsed=456.1s
+[pinpoint images] 101376/109598 elapsed=458.5s
+[pinpoint images] 101888/109598 elapsed=460.8s
+[pinpoint images] 102400/109598 elapsed=463.2s
+[pinpoint images] 102912/109598 elapsed=465.3s
+[pinpoint images] 103424/109598 elapsed=467.7s
+[pinpoint images] 103936/109598 elapsed=470.2s
+[pinpoint images] 104448/109598 elapsed=472.3s
+[pinpoint images] 104960/109598 elapsed=474.6s
+[pinpoint images] 105472/109598 elapsed=476.9s
+[pinpoint images] 105984/109598 elapsed=479.3s
+[pinpoint images] 106496/109598 elapsed=481.4s
+[pinpoint images] 107008/109598 elapsed=483.8s
+[pinpoint images] 107520/109598 elapsed=486.2s
+[pinpoint images] 108032/109598 elapsed=488.5s
+[pinpoint images] 108544/109598 elapsed=490.7s
+[pinpoint images] 109056/109598 elapsed=493.1s
+[pinpoint images] 109568/109598 elapsed=495.5s
+[pinpoint images] 109598/109598 elapsed=495.6s
+[pinpoint queries] 512/7635 elapsed=495.7s
+[pinpoint queries] 1024/7635 elapsed=495.8s
+[pinpoint queries] 1536/7635 elapsed=495.9s
+[pinpoint queries] 2048/7635 elapsed=496.0s
+[pinpoint queries] 2560/7635 elapsed=496.1s
+[pinpoint queries] 3072/7635 elapsed=496.1s
+[pinpoint queries] 3584/7635 elapsed=496.2s
+[pinpoint queries] 4096/7635 elapsed=496.3s
+[pinpoint queries] 4608/7635 elapsed=496.4s
+[pinpoint queries] 5120/7635 elapsed=496.4s
+[pinpoint queries] 5632/7635 elapsed=496.5s
+[pinpoint queries] 6144/7635 elapsed=496.6s
+[pinpoint queries] 6656/7635 elapsed=496.7s
+[pinpoint queries] 7168/7635 elapsed=496.8s
+[pinpoint queries] 7635/7635 elapsed=496.8s
+[search] corpus_chunk=1/7 images=16384/109598
+[search] corpus_chunk=2/7 images=32768/109598
+[search] corpus_chunk=3/7 images=49152/109598
+[search] corpus_chunk=4/7 images=65536/109598
+[search] corpus_chunk=5/7 images=81920/109598
+[search] corpus_chunk=6/7 images=98304/109598
+[search] corpus_chunk=7/7 images=109598/109598
+[official-eval] /mnt/data/datasets/search_dataset/zxl/multi_modal_py3.12/bin/python /mnt/data/datasets/search_dataset/zxl/pinpoint-dataset/evaluate.py --results /mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/outputs/head_ablation_oprd_20261109/mmret_add/retrieval/pinpoint/CLIP-L-OPRD-mmret_add.json --ground_truth /mnt/data/datasets/search_dataset/zxl/pinpoint-dataset/pinpoint_licensed.parquet --output /mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/outputs/head_ablation_oprd_20261109/mmret_add/retrieval/pinpoint/official_metrics.csv
+Loading ground truth...
+Loaded 7635 queries
+Found 1 result file(s)
+
+Processing CLIP-L-OPRD-mmret_add...
+Evaluating CLIP-L-OPRD-mmret_add...
+  Matched 7635/7635 queries
+
+✅ Saved metrics to /mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/outputs/head_ablation_oprd_20261109/mmret_add/retrieval/pinpoint/official_metrics.csv
+[metrics] pinpoint {"model": "CLIP-L-OPRD-mmret_add", "precision@1": 0.0967, "precision@10": 0.1242, "NegRecall@10": 0.1543, "mAP@10": 0.0909, "mAP@10_noNeg": 0.1208, "delta_mAP@10_noNeg": 0.0299, "pct_increase_mAP@10_noNeg": 0.3292, "ling_sens_range": 0.1378, "total_queries": 7635, "mAP@1": 0.0967, "mAP@5": 0.0959, "mAP@50": 0.1081, "mAP@1_noNeg": 0.1904, "mAP@5_noNeg": 0.1355, "mAP@50_noNeg": 0.133, "NegRecall@1": 0.3703, "NegRecall@5": 0.1973, "NegRecall@50": 0.1259, "precision@5": 0.1438, "precision@50": 0.0564, "recall@1": 0.0134, "recall@5": 0.0962, "recall@10": 0.1575, "recall@50": 0.3208, "ling_sens_std": 0.0536}
+[done model] CLIP-L-OPRD-mmret_add

@@ -1,0 +1,157 @@
+{
+  "case_id": "case_fdd8ed6b7b921ceeaade",
+  "audit_query_id": "audit_query_079",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_fdd8ed6b7b921ceeaade",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "A black, bowl-shaped vessel sink is shown beneath a running faucet."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The image shows a black cylindrical barrel with a separate lid and retaining ring, rather than a bowl sink."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The depicted object must be a bowl sink."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "object",
+        "before_span": "bowl sink",
+        "after_span": "barrel",
+        "edited_instruction": "Show a black barrel.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "Replace the bowl-sink object category with a barrel, retaining the black color constraint.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The black object is a shallow vessel sink beneath a faucet, not a barrel."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "A black cylindrical barrel is shown with its lid and retaining ring."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_fdd8ed6b7b921ceeaade",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a black, round bowl-shaped vessel sink beneath a faucet pouring water into it."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a black cylindrical barrel with reinforcing ribs and a detached circular clamping ring, rather than a bowl sink."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing 'bowl sink' with 'barrel' is one object substitution that exactly reconstructs the edited instruction and preserves the black attribute. The positive shows a black bowl sink, while the candidate shows a black barrel, satisfying the substitution support pattern.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 depicts a shallow bowl-shaped sink with a running faucet; no black barrel is visible."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 visibly depicts a black cylindrical barrel with horizontal reinforcing ribs."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "substitute",
+      "semantic_target": "object",
+      "before_span": "bowl sink",
+      "after_span": "barrel",
+      "edited_instruction": "Show a black barrel.",
+      "witness_type": "substitution_contrast",
+      "changed_constraint": "Replace the bowl-sink object category with a barrel, retaining the black color constraint.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "The black object is a shallow vessel sink beneath a faucet, not a barrel."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "A black cylindrical barrel is shown with its lid and retaining ring."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing 'bowl sink' with 'barrel' is one object substitution that exactly reconstructs the edited instruction and preserves the black attribute. The positive shows a black bowl sink, while the candidate shows a black barrel, satisfying the substitution support pattern.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 depicts a shallow bowl-shaped sink with a running faucet; no black barrel is visible."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 visibly depicts a black cylindrical barrel with horizontal reinforcing ribs."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "b66a96b64716b15417365d0a851c7ad699e828cd735dcb3a48667b96edfdfff0",
+      "input_hash": "2de1fc32a5c8590595f212b9bc12e341d49ccc982166a6cac0592f9ba40c0f1d",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/2de1fc32a5c8590595f212b9bc12e341d49ccc982166a6cac0592f9ba40c0f1d.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0cc09547de6c78ea016af2bd32236487d181fb69d7b0e1ba8f",
+      "usage": {
+        "prompt_tokens": 7693,
+        "completion_tokens": 386,
+        "total_tokens": 8079,
+        "completion_tokens_details": {
+          "reasoning_tokens": 57
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "56bf930f0b8fd3162fdda068b7a90b3fed70271287a3b8946b3fd3f14dd8febc",
+      "input_hash": "ad21ac78d511158999049cdf5e5c2766dab7eb3a121bde519ab81cc855f25188",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/ad21ac78d511158999049cdf5e5c2766dab7eb3a121bde519ab81cc855f25188.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0b60c591fc2a6ff7016af2bd44138887d1bbf2525affccd858",
+      "usage": {
+        "prompt_tokens": 7211,
+        "completion_tokens": 236,
+        "total_tokens": 7447
+      }
+    }
+  ]
+}

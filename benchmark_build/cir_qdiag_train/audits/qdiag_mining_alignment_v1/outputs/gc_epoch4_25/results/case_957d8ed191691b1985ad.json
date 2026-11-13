@@ -1,0 +1,85 @@
+{
+  "case_id": "case_957d8ed191691b1985ad",
+  "audit_query_id": "audit_query_085",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_957d8ed191691b1985ad",
+    "case_status": "source_invalid_or_uncertain",
+    "source_on_positive": {
+      "status": "contradicted",
+      "evidence": "Several gorillas sit on separate fallen trunks and logs, but gorillas are apes, not the monkeys specified by the instruction and shown in R."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows balloons, illuminated palm trees, a swimming pool, and New Year decorations; no monkeys sitting on fallen tree trunks are visible."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "Monkeys are present.",
+      "Monkeys sit on different tree trunks on the ground."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_957d8ed191691b1985ad",
+    "source_on_positive": {
+      "status": "contradicted",
+      "evidence": "Image 2 shows gorillas, which are apes rather than monkeys, sitting on several intersecting logs above the soil. The explicit monkey identity is not satisfied."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a swimming pool, balloons, illuminated palms, and a Happy New Year display. No monkeys sitting on tree trunks are visible."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "fca728259052244a12ebaecc204a15fc8b135dc8fd21e1256221726f98693733",
+      "input_hash": "ed0abffee5e8b156890480e87421955ea22dea2c69a617a9b95375d02e5569d2",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/ed0abffee5e8b156890480e87421955ea22dea2c69a617a9b95375d02e5569d2.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_05254f4ccdc52844016af2bd5c07ac87d19636ea7ff5f7d068",
+      "usage": {
+        "prompt_tokens": 24494,
+        "completion_tokens": 216,
+        "total_tokens": 24710,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 26
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "bb8da5f68c657cb3c8f4a4fc4b18f00834643d467e982206fab49873a9afd074",
+      "input_hash": "d4504d86995aa5dad3bc3bd26054a136297bc68b99b743829f4739752fd7f448",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/d4504d86995aa5dad3bc3bd26054a136297bc68b99b743829f4739752fd7f448.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_09d7299741ed54dc016af2bd69b5dc87d19709137a889157f0",
+      "usage": {
+        "prompt_tokens": 23952,
+        "completion_tokens": 116,
+        "total_tokens": 24068
+      }
+    }
+  ]
+}

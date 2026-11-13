@@ -1,0 +1,88 @@
+{
+  "case_id": "case_977ccb8f79f60cc2bb5a",
+  "audit_query_id": "audit_query_100",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_977ccb8f79f60cc2bb5a",
+    "case_status": "source_invalid_or_uncertain",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "The food visibly has browned melted cheese on top, but its shallow metal container appears to be a baking pan or tray; the required bowl is not clearly supported."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Three orange crabs are individually wrapped in clear plastic bags with blue ties. They are not in a bowl and have no cheese topping."
+    },
+    "candidate_relation": "multiple_constraint_conflict",
+    "violated_source_constraints": [
+      "The dish is in a bowl.",
+      "The dish has cheese on top."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_977ccb8f79f60cc2bb5a",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "A shallow round metal bowl contains a prepared savory dish covered with melted white cheese and browned patches on top."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Three whole orange crabs are individually wrapped in clear plastic with blue bands. There is no bowl containing a dish topped with cheese."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "3d28b7a5953443621c9f8f75cafecdf7e7a9949ee5ccf979867e17b4ca02e4f5",
+      "input_hash": "ae2f95d5ba14ef4c8a3cc449a8635d2eddb835fabf40317fcc219270c2cd854b",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/ae2f95d5ba14ef4c8a3cc449a8635d2eddb835fabf40317fcc219270c2cd854b.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_07d214d000d46c43016af2be02d95c87d1a7030be33d355eda",
+      "usage": {
+        "prompt_tokens": 13153,
+        "completion_tokens": 284,
+        "total_tokens": 13437,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 91
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "b5ffb80bb13446410c97b537db6f38006143190acb8c709cd3edd63dfef80560",
+      "input_hash": "af3db49686065cfdffe43a10cd7e2bab913aa206e33636795dc45d79ffa68f54",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/af3db49686065cfdffe43a10cd7e2bab913aa206e33636795dc45d79ffa68f54.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_071f2c2178748dfc016af2be11a61c87d1b1d008f2bf03c5dc",
+      "usage": {
+        "prompt_tokens": 12611,
+        "completion_tokens": 101,
+        "total_tokens": 12712,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        }
+      }
+    }
+  ]
+}

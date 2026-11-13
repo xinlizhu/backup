@@ -1,0 +1,49 @@
+{
+  "group_id": "pinpoint_group_3912ee15eebc5286",
+  "model": "claude-haiku-5-5",
+  "signature": "44bb4aae802e19564501a676b733c7e19828d9ced260b7da0428f08b1a359df2",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_3912ee15eebc5286_query_01246_object_delete",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "The deletion of 'on this look' removes exactly one semantic constraint (the reference to a specific object/look) while preserving the core instruction about formality. The negative text 'Show a slightly more formal take' is fluent and meaningful, representing a weaker query that removes an object reference. All positive images show formal styling outcomes, supporting that the weaker version remains compatible with the domain."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-haiku-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "b724d2fc0440eaccf7184b0d6a4fc85b38a279be67e7e8709e3c8fcb4c236e8c",
+      "input_hash": "55da3c52d603fc7795a63d1f05870564fd31505c1cd909c10ab73bc626a84595",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/claude-haiku-5-5/cache/validate_group/55da3c52d603fc7795a63d1f05870564fd31505c1cd909c10ab73bc626a84595.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01CFlYrr92QH6QzzBo89AxN3AJ",
+      "usage": {
+        "prompt_tokens": 10498,
+        "completion_tokens": 199,
+        "total_tokens": 10697,
+        "prompt_tokens_details": {
+          "cached_tokens": 8185,
+          "cache_creation_tokens": 2309
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_3912ee15eebc5286_query_01246_object_delete",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 429,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

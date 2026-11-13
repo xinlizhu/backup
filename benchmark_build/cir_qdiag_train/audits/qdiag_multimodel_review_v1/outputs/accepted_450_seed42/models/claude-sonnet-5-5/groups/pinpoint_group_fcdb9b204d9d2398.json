@@ -1,0 +1,47 @@
+{
+  "group_id": "pinpoint_group_fcdb9b204d9d2398",
+  "model": "claude-sonnet-5-5",
+  "signature": "aff20e5a5733d87f80fd7515c25d92c77cff20d4f50c9f8dbf4123bfdabed97b",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_fcdb9b204d9d2398_query_05113_attribute_substitute",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "The substitution from 'olive' to 'green' cannot be verified as false across the supplied positive images. Image 3 shows a light blue skirt with no clear olive or green tones visible, making it impossible to confirm the new attribute contradicts all positives as required."
+    },
+    {
+      "negative_id": "pinpoint_group_fcdb9b204d9d2398_query_05116_object_add",
+      "decision": "reject",
+      "failure_code": "not_visually_verifiable",
+      "reason": "The addition of 'with a tassel tie at the neckline' cannot be reliably verified from the reference and positive images. The supplied positives show skirts and abstract art rather than peasant blouses, making it impossible to confirm whether the neckline detail contradicts the query constraint."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-sonnet-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "856c8be630ab507d4cdc5dfe1ead77a954ff2dd39349d4fdab76f7e0c733a0da",
+      "input_hash": "cc368f4091701cac9b09458c371beee5af4dd859cb42598a79688edd38c7f912",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/claude-sonnet-5-5/cache/validate_group/cc368f4091701cac9b09458c371beee5af4dd859cb42598a79688edd38c7f912.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01RH2P5I7STgKxeM1XTolzpRGf",
+      "usage": {
+        "prompt_tokens": 9368,
+        "completion_tokens": 285,
+        "total_tokens": 9653,
+        "prompt_tokens_details": {
+          "cached_tokens": 7303,
+          "cache_creation_tokens": 2061
+        }
+      }
+    }
+  ],
+  "format_warnings": []
+}

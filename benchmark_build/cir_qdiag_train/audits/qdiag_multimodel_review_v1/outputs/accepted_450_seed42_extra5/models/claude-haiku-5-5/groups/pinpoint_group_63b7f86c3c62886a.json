@@ -1,0 +1,49 @@
+{
+  "group_id": "pinpoint_group_63b7f86c3c62886a",
+  "model": "claude-haiku-5-5",
+  "signature": "44bb4aae802e19564501a676b733c7e19828d9ced260b7da0428f08b1a359df2",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_63b7f86c3c62886a_query_06701_attribute_substitute",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "The negative text substitutes 'textured' with 'striped'. However, Image 1 (reference) shows a sweater with a small-scale geometric/dot pattern, not striping. Images 2-5 (positives) show smooth stockinette sweaters. The edit claims to change from textured to striped, but 'striped' does not accurately describe the reference sweater's pattern, making the negative text incompatible with the reference and not a valid single semantic edit targeting the correct pattern type."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-haiku-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "613bef349191d7e1a6c878c96f78179759bfbc3fb3a8ff2747468cd33e21f931",
+      "input_hash": "2711b159852b143013c047d5f8f1e7ffff497f37b41af7a1091b3630e7dfe5de",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/claude-haiku-5-5/cache/validate_group/2711b159852b143013c047d5f8f1e7ffff497f37b41af7a1091b3630e7dfe5de.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01PviilrgrRFAD3LZSsKy3FUB3",
+      "usage": {
+        "prompt_tokens": 9087,
+        "completion_tokens": 223,
+        "total_tokens": 9310,
+        "prompt_tokens_details": {
+          "cached_tokens": 7084,
+          "cache_creation_tokens": 1999
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_63b7f86c3c62886a_query_06701_attribute_substitute",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 472,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

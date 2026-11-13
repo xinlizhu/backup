@@ -1,0 +1,57 @@
+{
+  "categories": {
+    "dress": {
+      "gallery_size": 3817,
+      "num_queries": 2017,
+      "recall_at_1": 7.2385,
+      "recall_at_10": 25.7809,
+      "recall_at_5": 18.3937,
+      "recall_at_50": 46.703
+    },
+    "shirt": {
+      "gallery_size": 6346,
+      "num_queries": 2038,
+      "recall_at_1": 10.7458,
+      "recall_at_10": 32.63,
+      "recall_at_5": 24.5829,
+      "recall_at_50": 52.9441
+    },
+    "toptee": {
+      "gallery_size": 5373,
+      "num_queries": 1961,
+      "recall_at_1": 11.6267,
+      "recall_at_10": 33.4523,
+      "recall_at_5": 25.5482,
+      "recall_at_50": 56.6038
+    }
+  },
+  "macro_average": {
+    "recall_at_1": 9.8703,
+    "recall_at_10": 30.6211,
+    "recall_at_5": 22.8416,
+    "recall_at_50": 52.0836
+  },
+  "micro_average": {
+    "recall_at_1": 9.857,
+    "recall_at_10": 30.6017,
+    "recall_at_5": 22.8225,
+    "recall_at_50": 52.0446
+  },
+  "model": "MagicLens-CLIP-Large",
+  "model_source": "/mnt/data/datasets/search_dataset/zxl/models/MagicLens/models/magic_lens_clip_large.pkl",
+  "num_queries": 6016,
+  "protocol": {
+    "caption_composition": "strip('.?, ') then caption_1 + ' and ' + caption_2",
+    "categories": [
+      "dress",
+      "shirt",
+      "toptee"
+    ],
+    "category_specific_gallery": true,
+    "dataset": "FashionIQ",
+    "reference_image_excluded": false,
+    "split": "val",
+    "standard_summary": "macro average over dress, shirt, and toptee"
+  },
+  "schema_version": 1
+}

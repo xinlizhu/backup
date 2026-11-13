@@ -1,0 +1,90 @@
+{
+  "case_id": "case_8f2808dfa9be2b5fed5a",
+  "audit_query_id": "audit_query_086",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_8f2808dfa9be2b5fed5a",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "T shows a fox with an upright torso and straight forelegs, matching the prominent reference cat's seated, upright pose. In context, 'standing in the same gesture' describes this posture."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows a television setup with a partially obscured tabby cat beneath the stand, rather than a fox. The obstruction prevents reliable assessment of the cat's full pose."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The requested animal must be a fox."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_8f2808dfa9be2b5fed5a",
+    "source_on_positive": {
+      "status": "contradicted",
+      "evidence": "The fox is seated upright on its haunches with its front legs straight, resembling the prominent reference cat's seated posture. It is not standing as explicitly requested."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The image shows two televisions and a cat beneath the television stand; it does not show a fox in the requested posture."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "e10d6ae1046a79d9ab130bca4fd5d74b3159aa1f2d1f6b859619491b62af2a8b",
+      "input_hash": "6373418c9a6c6d32bddf6fac20e7501d1a2cbdf141bed4303421a8a639220839",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/6373418c9a6c6d32bddf6fac20e7501d1a2cbdf141bed4303421a8a639220839.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0308d839d1b72757016af2bd49059087d18393d9115a2aa669",
+      "usage": {
+        "prompt_tokens": 6532,
+        "completion_tokens": 452,
+        "total_tokens": 6984,
+        "prompt_tokens_details": {
+          "cached_tokens": 5383
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 257
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "89a82a75691f9646deba1136305ce1d8812fae81799b15918f2efda334b71062",
+      "input_hash": "5a584ba059cbdb3f12aaba5faa50ef73fe3da287a7dda64baf5c7d69f409ab00",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/5a584ba059cbdb3f12aaba5faa50ef73fe3da287a7dda64baf5c7d69f409ab00.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0e261ea8ba9869a4016af2bd5d78b487d1b862f4b478da868a",
+      "usage": {
+        "prompt_tokens": 5990,
+        "completion_tokens": 175,
+        "total_tokens": 6165,
+        "prompt_tokens_details": {
+          "cached_tokens": 4928
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 59
+        }
+      }
+    }
+  ]
+}

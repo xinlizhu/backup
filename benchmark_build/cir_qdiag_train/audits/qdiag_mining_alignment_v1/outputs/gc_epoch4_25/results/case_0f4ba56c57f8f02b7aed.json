@@ -1,0 +1,85 @@
+{
+  "case_id": "case_0f4ba56c57f8f02b7aed",
+  "audit_query_id": "audit_query_082",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_0f4ba56c57f8f02b7aed",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The positive shows a locomotive oriented toward the back/left relative to the reference and has prominent white diagonal strips on its front."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The candidate locomotive faces toward the foreground/front-left rather than the reference's back corner, and its visible striping is orange, red, and blue rather than white."
+    },
+    "candidate_relation": "multiple_constraint_conflict",
+    "violated_source_constraints": [
+      "Turn to face back corner",
+      "Add white strips"
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_0f4ba56c57f8f02b7aed",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "Image 2 visibly has white diagonal stripes on the locomotive’s front and faces the opposite direction from Image 1, but the specific orientation constraint “face back corner” is not reliably identifiable."
+    },
+    "source_on_candidate": {
+      "status": "uncertain",
+      "evidence": "Image 3 shows a locomotive facing left and has colored side stripes, but the intended “back corner” orientation is ambiguous and the white-strip constraint is not clearly established."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "5532089926c788f57f940edab417af6e3f038c395afdcff51b3b16ac8e584341",
+      "input_hash": "3481a0988afe3d662e123162ae8650d707cfba9b559d28ccce37139b491ac9d5",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/3481a0988afe3d662e123162ae8650d707cfba9b559d28ccce37139b491ac9d5.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_ft_ecb4a3be53674b85bf2982d8e79cc1a6",
+      "usage": {
+        "prompt_tokens": 6698,
+        "completion_tokens": 584,
+        "total_tokens": 7282,
+        "completion_tokens_details": {
+          "reasoning_tokens": 438
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "60d427c1b115bbf4f67e94e15ad5b9af922075f07eaf6f21a02c3cfd84a1702d",
+      "input_hash": "a08ea226158cc3074e94360ab6d9a94ae6e84ac8572d135baeb353cda11de4a1",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/a08ea226158cc3074e94360ab6d9a94ae6e84ac8572d135baeb353cda11de4a1.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_c745a1eeca8e2bc2783d4c07d8b7830d8fa4fd1c92943fad",
+      "usage": {
+        "prompt_tokens": 6158,
+        "completion_tokens": 470,
+        "total_tokens": 6628,
+        "completion_tokens_details": {
+          "reasoning_tokens": 340
+        }
+      }
+    }
+  ]
+}

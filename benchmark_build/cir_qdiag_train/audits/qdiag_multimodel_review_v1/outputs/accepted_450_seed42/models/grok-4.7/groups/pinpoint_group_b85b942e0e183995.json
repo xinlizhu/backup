@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_b85b942e0e183995",
+  "model": "grok-4.7",
+  "signature": "52913ea34ae01078c58f7a80fc2119b86ef4b6b3449e9e55b21816a5d5d1ccbd",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_b85b942e0e183995_query_07431_predicate_add",
+      "decision": "reject",
+      "failure_code": "wrong_semantic_target",
+      "reason": "Adding that the sleeves end at the wrists specifies sleeve length, a property of the existing sleeves, so this is an attribute addition rather than a predicate."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.7",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "b22fe74601031113c204aed567a0a5cffbd8a31df2c03f15d9760c3f6dba6ead",
+      "input_hash": "3d5554909aa37e9f0b5672e6d72263033757da1f64c50f8b98e5ba7599bb0e91",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/grok-4.7/cache/validate_group/3d5554909aa37e9f0b5672e6d72263033757da1f64c50f8b98e5ba7599bb0e91.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "2e1b5248-7c0c-9ff8-b583-570e7f2b31c2",
+      "usage": {
+        "prompt_tokens": 2998,
+        "completion_tokens": 84,
+        "total_tokens": 6160,
+        "prompt_tokens_details": {
+          "text_tokens": 2394,
+          "audio_tokens": 0,
+          "image_tokens": 604,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 3078,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 218960000
+      }
+    }
+  ],
+  "format_warnings": []
+}

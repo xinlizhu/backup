@@ -1,0 +1,87 @@
+{
+  "case_id": "case_735aea6ee3b2b018eb07",
+  "audit_query_id": "audit_query_035",
+  "signature": "5065d94bb0c1b275e428d3f2ada2352b274139ccb2134477487b5f51eef77ac6",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_735aea6ee3b2b018eb07",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The reference shows a smoothie in a glass with bananas behind it; the positive shows pale lemonade in a different container, with a lemon and no visible bananas."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The candidate shows a meal spread with people eating, not lemonade in a changed glass with the banana background removed and a lemon added."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "Change the smoothie to lemonade",
+      "Change the glass",
+      "Remove the bananas in the background",
+      "Add a lemon"
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_735aea6ee3b2b018eb07",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows pale yellow lemonade in a small handled jar, visibly different from Image 1's tall glass of brown smoothie; a lemon is present and no bananas are visible."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a table of dishes and diners, with no lemonade, changed drink glass, banana background, or lemon visible."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "3d23a146190bf7424a0ce1d09bdd88950531a29a3675321f4ad5889e605af040",
+      "input_hash": "4d90c7260b1ee67bda1343516a37bc6d22ef1f120502934a4bda3af1847c517c",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_100/api_cache/propose_witnesses/4d90c7260b1ee67bda1343516a37bc6d22ef1f120502934a4bda3af1847c517c.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_076c2a4819002512016af2b90cef5c87d2b39a8b5716d22807",
+      "usage": {
+        "prompt_tokens": 9072,
+        "completion_tokens": 265,
+        "total_tokens": 9337,
+        "completion_tokens_details": {
+          "reasoning_tokens": 114
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "1f93e9171b28c209998e4ff6106497aff371685f75770b6e529c89ebadbd3806",
+      "input_hash": "1e90459dbe2db6627e593529f7035a18d5bc191f7941d83316d5c91b10d12cc3",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_100/api_cache/review_witnesses/1e90459dbe2db6627e593529f7035a18d5bc191f7941d83316d5c91b10d12cc3.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_05de2d0fd1fdd1bd016af2b91763a087d18b81e9efd3943579",
+      "usage": {
+        "prompt_tokens": 8530,
+        "completion_tokens": 210,
+        "total_tokens": 8740,
+        "completion_tokens_details": {
+          "reasoning_tokens": 93
+        }
+      }
+    }
+  ]
+}

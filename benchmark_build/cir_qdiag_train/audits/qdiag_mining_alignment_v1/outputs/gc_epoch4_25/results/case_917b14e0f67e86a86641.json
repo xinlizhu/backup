@@ -1,0 +1,157 @@
+{
+  "case_id": "case_917b14e0f67e86a86641",
+  "audit_query_id": "audit_query_079",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_917b14e0f67e86a86641",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The image shows a black, bowl-shaped vessel sink beneath a running faucet."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The image shows a predominantly black dog wearing a costume outdoors; no bowl sink is visible."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "A bowl sink must be shown."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "object",
+        "before_span": "bowl sink",
+        "after_span": "dog",
+        "edited_instruction": "Show a black dog.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "Replace the requested object category, bowl sink, with dog, retaining the black color constraint.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The image shows a black vessel sink, with no dog visible."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "A predominantly black dog with small pale facial markings is visible wearing a colorful costume."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_917b14e0f67e86a86641",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a black, round bowl-shaped vessel sink beneath a running faucet."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a costumed dog outdoors; no bowl sink is present."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing 'bowl sink' with 'dog' reconstructs the edited instruction with one object substitution and preserves the black attribute. Image 2 depicts the black bowl sink and no dog; Image 3 depicts a black dog wearing a colorful costume and no sink.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 contains a sink and faucet, with no dog visible."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows a dog with visibly black facial fur, wearing a red-and-yellow costume and black furry headpiece."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "substitute",
+      "semantic_target": "object",
+      "before_span": "bowl sink",
+      "after_span": "dog",
+      "edited_instruction": "Show a black dog.",
+      "witness_type": "substitution_contrast",
+      "changed_constraint": "Replace the requested object category, bowl sink, with dog, retaining the black color constraint.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "The image shows a black vessel sink, with no dog visible."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "A predominantly black dog with small pale facial markings is visible wearing a colorful costume."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing 'bowl sink' with 'dog' reconstructs the edited instruction with one object substitution and preserves the black attribute. Image 2 depicts the black bowl sink and no dog; Image 3 depicts a black dog wearing a colorful costume and no sink.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 contains a sink and faucet, with no dog visible."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows a dog with visibly black facial fur, wearing a red-and-yellow costume and black furry headpiece."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "9286962cd4220d9b9d3efb0b8a53a34c69ed49e2a1ec20817be766d28b7920d6",
+      "input_hash": "24c6736cc4e75c17f2c77e56b9eca8662d1a79447274f3962b76d1c5c42b7bc3",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/24c6736cc4e75c17f2c77e56b9eca8662d1a79447274f3962b76d1c5c42b7bc3.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0c17e312012d0b88016af2bd320a7887d181944371f92be478",
+      "usage": {
+        "prompt_tokens": 7808,
+        "completion_tokens": 478,
+        "total_tokens": 8286,
+        "completion_tokens_details": {
+          "reasoning_tokens": 154
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "f0036cc535cf184f58ae9a7e76e7cff77f06f6770e212adab158c556b8711ed1",
+      "input_hash": "73f17486d6dbc8b61186692af486d6ca522a87ebd96f59162f99e84442a44d96",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/73f17486d6dbc8b61186692af486d6ca522a87ebd96f59162f99e84442a44d96.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_060d759cbb8797a0016af2bd43831487d187060c6f52854d72",
+      "usage": {
+        "prompt_tokens": 7325,
+        "completion_tokens": 231,
+        "total_tokens": 7556
+      }
+    }
+  ]
+}

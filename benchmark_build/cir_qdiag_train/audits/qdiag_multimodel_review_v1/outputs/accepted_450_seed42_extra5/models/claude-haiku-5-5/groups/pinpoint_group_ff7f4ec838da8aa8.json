@@ -1,0 +1,62 @@
+{
+  "group_id": "pinpoint_group_ff7f4ec838da8aa8",
+  "model": "claude-haiku-5-5",
+  "signature": "44bb4aae802e19564501a676b733c7e19828d9ced260b7da0428f08b1a359df2",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_ff7f4ec838da8aa8_query_05059_attribute_add",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "The negative text 'this colorful tattoo on foot' adds the attribute 'colorful'. However, images 2, 3, and 4 all show tattoos on feet that appear to be simple line/symbol designs in dark ink - none display multiple colors or vibrant coloring. The added constraint 'colorful' is not clearly false for all supplied positives; the monochromatic tattoos shown are compatible with being described as non-colorful, but the addition of 'colorful' as a positive attribute is not demonstrably false."
+    },
+    {
+      "negative_id": "pinpoint_group_ff7f4ec838da8aa8_query_05060_predicate_substitute",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "The source text 'Put this tattoo on my foot' uses the predicate 'Put...on', while the negative text 'Remove this tattoo from my foot' substitutes this with 'Remove...from'. This is exactly one semantic edit changing the action from application to removal. The negative text is fluent and meaningful. The span operation correctly transforms the predicate. All supplied positive images show tattoos present on feet, making the removal predicate clearly false for every positive."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-haiku-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "2dc3961d127fc5b2457c4bd34b48162968ccc8e4c67093a68fc4761b3571996b",
+      "input_hash": "874396da0bb084315853dc7a74b21f9b2a9e17772c548845b4c1854a5927a2cb",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/claude-haiku-5-5/cache/validate_group/874396da0bb084315853dc7a74b21f9b2a9e17772c548845b4c1854a5927a2cb.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01rP4dXFpnSwqa8FuJbABcnNAP",
+      "usage": {
+        "prompt_tokens": 9101,
+        "completion_tokens": 415,
+        "total_tokens": 9516,
+        "prompt_tokens_details": {
+          "cached_tokens": 7095,
+          "cache_creation_tokens": 2002
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_ff7f4ec838da8aa8_query_05059_attribute_add",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 489,
+      "action": "full reason retained; decision and failure_code unchanged"
+    },
+    {
+      "negative_id": "pinpoint_group_ff7f4ec838da8aa8_query_05060_predicate_substitute",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 476,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

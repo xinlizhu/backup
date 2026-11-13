@@ -1,0 +1,163 @@
+{
+  "case_id": "case_15cf8bc1b0940a9ce583",
+  "audit_query_id": "audit_query_090",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_15cf8bc1b0940a9ce583",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The orange car is shown from the rear beside a visible body of water."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The car is shown from the rear, but it is on a dark reflective surface with no clearly visible body of water."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The car is by water; no body of water is clearly visible in C."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "delete_predicate_water",
+        "operation": "delete",
+        "semantic_target": "predicate",
+        "before_span": " by water",
+        "after_span": null,
+        "edited_instruction": "Show car from back.",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "Removes the constraint that the car be by water; both images show a car from the back.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "The orange car is visibly shown from the rear."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The white convertible is visibly shown from the rear."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_15cf8bc1b0940a9ce583",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a car from the rear beside a clearly visible lake."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows the car from the rear, but it is on wet pavement; no adjacent body of water is visible."
+    },
+    "verdicts": [
+      {
+        "witness_id": "delete_predicate_water",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting “ by water” is one fluent edit that removes the location constraint. The candidate visibly retains the rear view and car, and its only unmet source constraint is being by a body of water.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 shows the car from the rear, satisfying “Show car from back.”"
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 clearly shows the car from the rear."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "delete_predicate_water",
+      "operation": "delete",
+      "semantic_target": "predicate",
+      "before_span": " by water",
+      "after_span": null,
+      "edited_instruction": "Show car from back.",
+      "witness_type": "deletion_relaxation",
+      "changed_constraint": "Removes the constraint that the car be by water; both images show a car from the back.",
+      "edited_on_positive": {
+        "status": "supported",
+        "evidence": "The orange car is visibly shown from the rear."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "The white convertible is visibly shown from the rear."
+      },
+      "independent_review": {
+        "witness_id": "delete_predicate_water",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting “ by water” is one fluent edit that removes the location constraint. The candidate visibly retains the rear view and car, and its only unmet source constraint is being by a body of water.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 shows the car from the rear, satisfying “Show car from back.”"
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 clearly shows the car from the rear."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "delete_predicate_water",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "a59c4fd9b882816ae28a97302b49a82177424e84229d20da0d072b0766231ec4",
+      "input_hash": "87cfe7003a0eccc3ff049b26d7ecfeafb35c8d01d95fd7eb6280ff6ff466cfeb",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/87cfe7003a0eccc3ff049b26d7ecfeafb35c8d01d95fd7eb6280ff6ff466cfeb.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_01dcac57d3012d97016af2bee2919c87d09be76d171a0ac6bf",
+      "usage": {
+        "prompt_tokens": 11447,
+        "completion_tokens": 436,
+        "total_tokens": 11883,
+        "prompt_tokens_details": {
+          "cached_tokens": 4171
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 190
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "dce1505bf1e6b57e50b1fe7e8e709da7ca3df4478527a215a352607860f24dd3",
+      "input_hash": "189d1e07ae15068da02cdf3b42de86d6eea393eb859798d031419857f39cd2ca",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/189d1e07ae15068da02cdf3b42de86d6eea393eb859798d031419857f39cd2ca.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0c5054f545981e2f016af2beecc5cc87d1ba5d2c63e98ffc58",
+      "usage": {
+        "prompt_tokens": 10964,
+        "completion_tokens": 375,
+        "total_tokens": 11339,
+        "completion_tokens_details": {
+          "reasoning_tokens": 156
+        }
+      }
+    }
+  ]
+}

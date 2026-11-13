@@ -1,0 +1,49 @@
+{
+  "group_id": "pinpoint_group_f30e85c721db9857",
+  "model": "claude-sonnet-5-5",
+  "signature": "aff20e5a5733d87f80fd7515c25d92c77cff20d4f50c9f8dbf4123bfdabed97b",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_f30e85c721db9857_query_02870_predicate_delete",
+      "decision": "reject",
+      "failure_code": "invalid_delete",
+      "reason": "The deletion removes a meaningful predicate constraint ('that are appropriate to wear in this location') which is central to the query's semantic purpose. The source query specifically requests t-shirts filtered by appropriateness to the setting shown in the reference image (a beach). The negative text 'Please show t-shirts' removes this critical filtering criterion entirely, making it a fundamentally weaker query that changes the semantic axis from context-appropriate selection to generic t-shirt retrieval. This violates the requirement that a valid DELETE must preserve the core semantic intent."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-sonnet-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "372edd0c206c9bebfa462fe4bf9da7a1c74a0e4d699766b4fd994c739d41c4d3",
+      "input_hash": "ef203d2590d7d2759c95aa5b1aebb71c74a98f85a15f92fefaaf8da2724cde8f",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/claude-sonnet-5-5/cache/validate_group/ef203d2590d7d2759c95aa5b1aebb71c74a98f85a15f92fefaaf8da2724cde8f.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01fOoxKLnsROidtBwMkU3zLGGx",
+      "usage": {
+        "prompt_tokens": 9418,
+        "completion_tokens": 254,
+        "total_tokens": 9672,
+        "prompt_tokens_details": {
+          "cached_tokens": 7342,
+          "cache_creation_tokens": 2072
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_f30e85c721db9857_query_02870_predicate_delete",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 603,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "case_id": "case_9ed90b547c71a06a548a",
+  "audit_query_id": "audit_query_077",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_9ed90b547c71a06a548a",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Read relative to R's integrated wall-panel unit, the instruction requests a television on a stand instead of an attached showcase arrangement. T visibly has a television resting on a freestanding shelving stand."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C's television is mounted on the wall above two floating shelves; it does not rest on a television stand."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The television should be on a television stand."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_9ed90b547c71a06a548a",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Relative to the reference's integrated wooden TV wall panel and shelving, Image 2 shows the television resting on its pedestal atop a freestanding TV stand, without an attached display showcase."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a wall-mounted television above two floating shelves. The television does not rest on a television stand, violating the requested placement."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "916d54b0a0a734daddc14cf8c91bfb33716cf2483a4d1c825cd9fbbd7df380d0",
+      "input_hash": "abab5c4e81eb4d854c6114088e9dd86def949eea5b383fb1ecfdfe4e2fa215cd",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/abab5c4e81eb4d854c6114088e9dd86def949eea5b383fb1ecfdfe4e2fa215cd.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0b4b23696f631a73016af2be37eb8887d19522ac80d13a4efe",
+      "usage": {
+        "prompt_tokens": 7424,
+        "completion_tokens": 319,
+        "total_tokens": 7743,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 136
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "110a86a563dd6b10573b3bfc18c0a7d02671f12e914f94f13e2b7e189b3a4d02",
+      "input_hash": "ffce61f95e5e7c6770db7795a5d421ebd73d3a6495cce9250454f42a4e2f6855",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/ffce61f95e5e7c6770db7795a5d421ebd73d3a6495cce9250454f42a4e2f6855.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0b63d1230958270c016af2be45954c87d1a4a0206e0e518a61",
+      "usage": {
+        "prompt_tokens": 6882,
+        "completion_tokens": 118,
+        "total_tokens": 7000,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        }
+      }
+    }
+  ]
+}

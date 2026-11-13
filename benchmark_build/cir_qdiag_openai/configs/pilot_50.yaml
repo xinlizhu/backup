@@ -1,0 +1,36 @@
+data:
+  parquet_path: /mnt/data/datasets/search_dataset/zxl/pinpoint-dataset/pinpoint_licensed.parquet
+  image_root: /mnt/data/datasets/search_dataset/zxl/pinpoint-dataset/image_cache
+  min_group_size: 2
+  max_group_size: 6
+
+sampling:
+  limit: 5
+  seed: 42
+  strategy: random
+
+model:
+  backend: openai
+  api_base: ${OPENAI_BASE_URL}
+  api_key: ${OPENAI_API_KEY}
+  timeout_seconds: 600
+  max_retries: 2
+  image_detail: high
+  structured_output_mode: prompt
+  generation_model: gpt-5.6-terra
+  selection_model: gpt-5.6-terra
+  generation_reasoning_effort: null
+  selection_reasoning_effort: null
+
+generation:
+  max_output_tokens: 2048
+
+selection:
+  max_output_tokens: 16384
+  max_positive_images: 8
+
+runtime:
+  output_dir: outputs/pinpoint_pilot_500_v7
+  prompt_version: v7
+  resume: true
+  max_workers: 2

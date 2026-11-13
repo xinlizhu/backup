@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_85e5ff0a20effca9",
+  "model": "grok-4.7",
+  "signature": "52913ea34ae01078c58f7a80fc2119b86ef4b6b3449e9e55b21816a5d5d1ccbd",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_85e5ff0a20effca9_query_00129_object_substitute",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Replacing 'this outfit' with 'this room' is one fluent object edit and reconstructs the negative exactly. The reference shows a person in an outfit, not a room, so 'inspired by this room' is clearly false for all four positive decor images."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.7",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "ea95c83e8ada0af4e4d1b1de5fa1ab4205f3b008165f3b1084be285484ccdbc2",
+      "input_hash": "a24fa4fe037045ec575d4ac6624d0135349efbeef85ee8896ff99607794786ac",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/grok-4.7/cache/validate_group/a24fa4fe037045ec575d4ac6624d0135349efbeef85ee8896ff99607794786ac.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "3eb224b1-c40b-988f-b6b9-785debf70b3b",
+      "usage": {
+        "prompt_tokens": 4835,
+        "completion_tokens": 103,
+        "total_tokens": 7981,
+        "prompt_tokens_details": {
+          "text_tokens": 2556,
+          "audio_tokens": 0,
+          "image_tokens": 2279,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 3043,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 254740000
+      }
+    }
+  ],
+  "format_warnings": []
+}

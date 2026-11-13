@@ -1,0 +1,92 @@
+{
+  "case_id": "case_2e0d06a49334e8da6b10",
+  "audit_query_id": "audit_query_088",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_2e0d06a49334e8da6b10",
+    "case_status": "source_invalid_or_uncertain",
+    "source_on_positive": {
+      "status": "contradicted",
+      "evidence": "T shows a large bird with a visibly longer, dark neck than R on rocky dirt, but it is standing on extended legs rather than sitting."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows purple knitted fingerless gloves against a white background, with no bird or rocky dirt area."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "Shows another large bird.",
+      "The bird has a longer black neck relative to R.",
+      "The bird is sitting in a rocky dirt area."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_2e0d06a49334e8da6b10",
+    "source_on_positive": {
+      "status": "contradicted",
+      "evidence": "Image 2 shows a large bird with a long black neck, visibly longer than the reference bird's neck, on rocky dirt. However, it is standing upright on visible legs rather than sitting, contradicting the sitting constraint."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows purple knitted fingerless gloves against a white background. It contains no bird, black neck, or rocky dirt setting."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "25f3a7462d0656540ddb91b146d3e1a445ef0b7f9af71145a1d2de1c563788aa",
+      "input_hash": "3c3e48100006b4b916925f88b5c0e8f8dbf1366e7f0bc1110906cb803572b9c6",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/3c3e48100006b4b916925f88b5c0e8f8dbf1366e7f0bc1110906cb803572b9c6.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_03f329ce08500800016af2be72f82087d1b890a8b1de208cd7",
+      "usage": {
+        "prompt_tokens": 17341,
+        "completion_tokens": 223,
+        "total_tokens": 17564,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 25
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "961af33577030987b6d98980b2a25c12a094d4e114e67ac1a93844f537a3b04e",
+      "input_hash": "3b11473f01dbd306f7764ae6106eaa73b99e17d3faa66904543189cf1e60047b",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/3b11473f01dbd306f7764ae6106eaa73b99e17d3faa66904543189cf1e60047b.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_050f42674009a2b0016af2be7adb1887d19afbdcaebec70332",
+      "usage": {
+        "prompt_tokens": 16799,
+        "completion_tokens": 148,
+        "total_tokens": 16947,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 16
+        }
+      }
+    }
+  ]
+}

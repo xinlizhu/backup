@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_e6ab0e3d0b28e9ce",
+  "model": "grok-4.7",
+  "signature": "52913ea34ae01078c58f7a80fc2119b86ef4b6b3449e9e55b21816a5d5d1ccbd",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_e6ab0e3d0b28e9ce_query_04180_object_delete",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Deleting “bouquet” removes exactly one object constraint; the preceding space is only its glue. The result is fluent, strictly weaker, and still asks for a bigger version of the referent."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.7",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "1867be49c3f5d9235e68efe48559726366d881d78eb7ebb9555ee37be6583cad",
+      "input_hash": "00dcc9824aca0d3ab7563bcf2d64f8ef0ac7f04de6059972a8a2e14b3f18c93d",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/grok-4.7/cache/validate_group/00dcc9824aca0d3ab7563bcf2d64f8ef0ac7f04de6059972a8a2e14b3f18c93d.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "c456608f-b36f-96ab-911e-3a79e70ccb5b",
+      "usage": {
+        "prompt_tokens": 5573,
+        "completion_tokens": 90,
+        "total_tokens": 8193,
+        "prompt_tokens_details": {
+          "text_tokens": 2492,
+          "audio_tokens": 0,
+          "image_tokens": 3081,
+          "cached_tokens": 2304
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2530,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 234100000
+      }
+    }
+  ],
+  "format_warnings": []
+}

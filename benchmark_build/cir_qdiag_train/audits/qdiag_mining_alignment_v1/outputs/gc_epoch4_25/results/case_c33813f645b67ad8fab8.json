@@ -1,0 +1,130 @@
+{
+  "case_id": "case_c33813f645b67ad8fab8",
+  "audit_query_id": "audit_query_088",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_c33813f645b67ad8fab8",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a large bird with a long black neck standing on rocky dirt; relative to the bird in Image 1, its neck is longer."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "Image 3 shows large birds, including a foreground bird with a long black neck, among grass and rocks; the neck is longer than the bird's in Image 1."
+    },
+    "candidate_relation": "compatible",
+    "violated_source_constraints": [],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "add",
+        "semantic_target": "object",
+        "before_span": null,
+        "after_span": " and it is a Canada goose",
+        "edited_instruction": "Shows another large bird with a longer black necksitting in a rocky dirt area and it is a Canada goose.",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "The bird is a Canada goose; the foreground bird in Image 3 has the characteristic black neck and white cheek patch, while the bird in Image 2 is a vulture.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 shows a vulture, not a Canada goose."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The foreground bird in Image 3 has a black neck and white cheek patch, visibly characteristic of a Canada goose."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_c33813f645b67ad8fab8",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "Image 2 shows a large bird with a long dark neck in a rocky area, but it is standing. The source text joins “neck” and “sitting,” so whether sitting is an intended constraint is unclear."
+    },
+    "source_on_candidate": {
+      "status": "uncertain",
+      "evidence": "Image 3 shows a large bird with a black neck in a rocky area, but it is standing. The joined wording “necksitting” makes the intended constraint unclear."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "reject",
+        "failure_code": "source_invalid_or_uncertain",
+        "witness_type": null,
+        "reason": "The original instruction is not reliably established on the positive because the joined wording leaves an ambiguous sitting constraint; the required ADD support pattern cannot be verified.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 shows a vulture, not a Canada goose."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 visibly shows Canada geese, including a large bird with a black neck, in a rocky area."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": false,
+      "local_failures": [
+        "wrong_witness_type",
+        "wrong_support_pattern"
+      ],
+      "review_decision": "reject"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "929b7dadde5ce9de4dac8d35791045b5ff092dc59f51ff0740e5fa32e240f060",
+      "input_hash": "17bcbfe2aee04e32d11ca591366ad5380d29aa3db825bb37a464443e9ebf810a",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/17bcbfe2aee04e32d11ca591366ad5380d29aa3db825bb37a464443e9ebf810a.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0a30c1d95a1ae024016af2bf177e8087d19e4b5ff0c9dbf77d",
+      "usage": {
+        "prompt_tokens": 7100,
+        "completion_tokens": 807,
+        "total_tokens": 7907,
+        "completion_tokens_details": {
+          "reasoning_tokens": 504
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "c9b1cef61e3d14200b2d61a044d2404610c8ed5ad8824056b5e7faf978f51740",
+      "input_hash": "9181cee23ad9b37bd711f4a54d8214ecb4059e2404d2e06b51770288c0eeb79a",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/9181cee23ad9b37bd711f4a54d8214ecb4059e2404d2e06b51770288c0eeb79a.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_07fe25af310c2e31016af2bf28789487d1890d005a440e50c7",
+      "usage": {
+        "prompt_tokens": 6636,
+        "completion_tokens": 459,
+        "total_tokens": 7095,
+        "prompt_tokens_details": {
+          "cached_tokens": 5248
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 206
+        }
+      }
+    }
+  ]
+}

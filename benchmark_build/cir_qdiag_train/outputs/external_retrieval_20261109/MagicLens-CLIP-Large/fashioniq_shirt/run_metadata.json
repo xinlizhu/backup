@@ -1,0 +1,32 @@
+{
+  "checkpoint": "/mnt/data/datasets/search_dataset/zxl/models/MagicLens/models/magic_lens_clip_large.pkl",
+  "complete": true,
+  "environment": "/mnt/data/datasets/search_dataset/zxl/magic_lens311/bin/python",
+  "feature_seconds": 57.180569887161255,
+  "features_complete": true,
+  "gallery_count": 6346,
+  "image_batch_size": 128,
+  "jax_devices": "[CudaDevice(id=0)]",
+  "jax_version": "0.10.2",
+  "metrics": {
+    "gallery_size": 6346,
+    "num_queries": 2038,
+    "recall_at_1": 10.7458,
+    "recall_at_10": 32.63,
+    "recall_at_5": 24.5829,
+    "recall_at_50": 52.9441
+  },
+  "model": "MagicLens-CLIP-Large",
+  "preprocessing": "native MagicLens max-normalization + antialiased bilinear square resize",
+  "query_count": 2038,
+  "reference_feature_pooling": "mean raw CLIP image embeddings before multimodal Transformer",
+  "scoring_protocol": {
+    "caption_composition": "strip('.?, ') then caption_1 + ' and ' + caption_2",
+    "category": "shirt",
+    "exclude_reference": false,
+    "split": "val"
+  },
+  "target_encoding": "image + empty text through full multimodal model",
+  "text_batch_size": 512,
+  "truncated_query_count": 0
+}

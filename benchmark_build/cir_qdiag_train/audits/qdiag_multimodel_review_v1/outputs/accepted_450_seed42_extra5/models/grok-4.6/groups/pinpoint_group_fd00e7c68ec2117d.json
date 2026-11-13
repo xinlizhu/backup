@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_fd00e7c68ec2117d",
+  "model": "grok-4.6",
+  "signature": "cb958fa178e5ebcdd33f446ebd46fe25a7c20417ca5539cc74de61fb4df99804",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_fd00e7c68ec2117d_query_02581_object_add",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Adds exactly one object, a telescope, while preserving the original request. No supplied positive room contains a telescope, so the added fact is clearly false for every positive."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.6",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "1ec9cac2cf847d206910a33fc4aab6113b1f0aaf8b29b2845457145b8ee2bb6f",
+      "input_hash": "9b501351275db5a84b4d4d5a80724365ec4d9e7e66e8b272b17fc6a76620f763",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/grok-4.6/cache/validate_group/9b501351275db5a84b4d4d5a80724365ec4d9e7e66e8b272b17fc6a76620f763.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "d10594f5-0dbd-96f9-82b1-bfb4abf58291",
+      "usage": {
+        "prompt_tokens": 3984,
+        "completion_tokens": 83,
+        "total_tokens": 5601,
+        "prompt_tokens_details": {
+          "text_tokens": 2487,
+          "audio_tokens": 0,
+          "image_tokens": 1497,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1534,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 145980000
+      }
+    }
+  ],
+  "format_warnings": []
+}

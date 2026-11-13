@@ -1,0 +1,61 @@
+{
+  "case_id": "pair_f24a339f475d922121a1",
+  "signature": "f91b95909684e2ecf5207ab608279749c891c56633f2fa7c877aa09c2d59f3d4",
+  "simulated": false,
+  "status": "complete",
+  "judgment": {
+    "case_id": "pair_f24a339f475d922121a1",
+    "constraints": [
+      {
+        "constraint": "The subject is a carriage.",
+        "A_status": "supported",
+        "B_status": "supported",
+        "A_evidence": "A wheeled passenger carriage with padded seats and a footwell is visible.",
+        "B_evidence": "A wheeled passenger carriage with a seating compartment is visible."
+      },
+      {
+        "constraint": "The carriage has smaller wheels than the reference, relative to its body.",
+        "A_status": "contradicted",
+        "B_status": "supported",
+        "A_evidence": "The tall spoked wheels remain large relative to the carriage body, comparable to the reference.",
+        "B_evidence": "The wheels, especially the front pair, are smaller relative to the carriage body than the reference's large wheels."
+      },
+      {
+        "constraint": "The carriage has a protective cover over the passenger area.",
+        "A_status": "contradicted",
+        "B_status": "supported",
+        "A_evidence": "The passenger seats are open above, with no roof or protective hood.",
+        "B_evidence": "A raised black fabric hood covers the passenger compartment, although the fabric is visibly damaged."
+      }
+    ],
+    "A_status": "contradicted",
+    "B_status": "supported",
+    "decision": "B_only",
+    "reason": "B has smaller wheels relative to its body and a protective passenger hood; A retains large wheels and has no overhead cover."
+  },
+  "trace": {
+    "stage": "rank_pair_judgment",
+    "model_name": "gpt-5.6-terra",
+    "model_revision": null,
+    "provider": "openai-compatible-chat",
+    "reasoning_effort": null,
+    "prompt_version": "rank_preference_v1",
+    "prompt_hash": "061020fafe3cac60d5a69026411ce1bab503bfafe9030a544679f6f5efb221d0",
+    "input_hash": "87b464fffb1d0b8919af81614076161640e31b64565a10fae1c70e5e7d89e690",
+    "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_rank_preference_v1/outputs/gc_epochs14_top3/api_cache/rank_pair_judgment/87b464fffb1d0b8919af81614076161640e31b64565a10fae1c70e5e7d89e690.json",
+    "cached": false,
+    "attempts": 1,
+    "request_id": "resp_0ba3313324bc40c9016af2ccdcef7887d1b9bedb1057f56a6e",
+    "usage": {
+      "prompt_tokens": 6959,
+      "completion_tokens": 302,
+      "total_tokens": 7261,
+      "prompt_tokens_details": {
+        "cached_tokens": 4864
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 35
+      }
+    }
+  }
+}

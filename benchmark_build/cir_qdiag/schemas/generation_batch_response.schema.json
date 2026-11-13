@@ -1,0 +1,104 @@
+{
+  "$defs": {
+    "CandidateProposal": {
+      "additionalProperties": false,
+      "description": "One complete negative caption produced directly by a generation call.",
+      "properties": {
+        "after_span": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "After Span"
+        },
+        "before_span": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Before Span"
+        },
+        "change_summary": {
+          "maxLength": 400,
+          "minLength": 1,
+          "title": "Change Summary",
+          "type": "string"
+        },
+        "negative_text": {
+          "minLength": 1,
+          "title": "Negative Text",
+          "type": "string"
+        },
+        "visual_basis": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Visual Basis"
+        }
+      },
+      "required": [
+        "negative_text",
+        "before_span",
+        "after_span",
+        "change_summary",
+        "visual_basis"
+      ],
+      "title": "CandidateProposal",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "description": "Three nullable semantic targets for one fixed mode and operation.",
+  "properties": {
+    "attribute": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/CandidateProposal"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "object": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/CandidateProposal"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "predicate": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/CandidateProposal"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  },
+  "required": [
+    "object",
+    "attribute",
+    "predicate"
+  ],
+  "title": "GenerationBatchResponse",
+  "type": "object"
+}

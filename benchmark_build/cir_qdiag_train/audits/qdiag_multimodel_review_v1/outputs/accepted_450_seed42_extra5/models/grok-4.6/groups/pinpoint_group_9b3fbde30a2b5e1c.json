@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_9b3fbde30a2b5e1c",
+  "model": "grok-4.6",
+  "signature": "cb958fa178e5ebcdd33f446ebd46fe25a7c20417ca5539cc74de61fb4df99804",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_9b3fbde30a2b5e1c_query_05908_attribute_add",
+      "decision": "reject",
+      "failure_code": "not_visually_verifiable",
+      "reason": "The single added attribute 'relaxed silhouette' cannot be judged: positives 3–6 show only pillows and blankets, with no worn outfit or garment silhouette, so the new fact is neither clearly false nor visually verifiable."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.6",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "ce8e3162d346339729aedc1d1ba664fe2ec7baa0e97c6a7610fda77937f809d9",
+      "input_hash": "07ddee57324f4c93d017319fd6fa87bb0252e7fd8ac3fba25594a3e11400cfe4",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/grok-4.6/cache/validate_group/07ddee57324f4c93d017319fd6fa87bb0252e7fd8ac3fba25594a3e11400cfe4.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "e697714d-93a9-9fbb-aba6-74d62fbb3eda",
+      "usage": {
+        "prompt_tokens": 6398,
+        "completion_tokens": 104,
+        "total_tokens": 9192,
+        "prompt_tokens_details": {
+          "text_tokens": 2660,
+          "audio_tokens": 0,
+          "image_tokens": 3738,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2690,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 264880000
+      }
+    }
+  ],
+  "format_warnings": []
+}

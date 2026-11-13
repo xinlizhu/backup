@@ -1,0 +1,85 @@
+{
+  "case_id": "case_a0605a27ccbffd310328",
+  "audit_query_id": "audit_query_083",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_a0605a27ccbffd310328",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Relative to the reference's tube and multiple boxes, T shows a single cream tube alongside one matching product box."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows a bakery display containing many loaves and pastries, rather than a single product alongside its box."
+    },
+    "candidate_relation": "multiple_constraint_conflict",
+    "violated_source_constraints": [
+      "A single product is shown.",
+      "The product is accompanied by its box."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_a0605a27ccbffd310328",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows one body cream container alongside its matching pink retail box, satisfying the request for a single product with its box."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a bakery display containing many breads and pastries, rather than a single product accompanied by its box."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "8193fb78155d38720d21d6d5fb3d13032bb069d6e638ddfd1652a6c8cdab6482",
+      "input_hash": "ea804e4d5272c24e3c7a7daebfa07a4ea6fa844afa2b501ea8dd51987218b8ab",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/ea804e4d5272c24e3c7a7daebfa07a4ea6fa844afa2b501ea8dd51987218b8ab.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0743ec46e019c0d8016af2be6df84c87d28f1c5eb5a84d61a5",
+      "usage": {
+        "prompt_tokens": 8065,
+        "completion_tokens": 167,
+        "total_tokens": 8232,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "cfb07132648b89e88a275cef241055a5fd39e5089ccb480e8f01a786d40331fd",
+      "input_hash": "7e799295424abcddf7e133f8fe33843148cb6b2ec8bb3997a9c61522ab7e26ac",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/7e799295424abcddf7e133f8fe33843148cb6b2ec8bb3997a9c61522ab7e26ac.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0ab63ca240b95c3c016af2be7538d887d1a8815541b1751b8a",
+      "usage": {
+        "prompt_tokens": 7523,
+        "completion_tokens": 99,
+        "total_tokens": 7622,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        }
+      }
+    }
+  ]
+}

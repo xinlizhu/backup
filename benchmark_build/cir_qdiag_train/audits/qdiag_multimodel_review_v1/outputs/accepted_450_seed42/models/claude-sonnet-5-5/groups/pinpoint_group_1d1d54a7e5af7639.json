@@ -1,0 +1,62 @@
+{
+  "group_id": "pinpoint_group_1d1d54a7e5af7639",
+  "model": "claude-sonnet-5-5",
+  "signature": "aff20e5a5733d87f80fd7515c25d92c77cff20d4f50c9f8dbf4123bfdabed97b",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_1d1d54a7e5af7639_query_07639_object_add",
+      "decision": "reject",
+      "failure_code": "not_single_edit",
+      "reason": "The negative text adds 'and a hat is present' but no hat is visible in any of the positive images (2, 3, 4, 5). None of the positive images show a hat on the person or in the scene, making this a factually false addition that cannot be verified as a single coherent edit to the source query about the sweater alone."
+    },
+    {
+      "negative_id": "pinpoint_group_1d1d54a7e5af7639_query_07641_predicate_substitute",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "The substitution changes 'without any graphic prints' to 'with graphic prints', inverting the graphic constraint. Image 5 shows a plain yellow sweater with no visible graphics, directly supporting the original 'without' constraint. This substitution creates a predicate that contradicts at least one supplied positive image."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-sonnet-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "5c6bcba580f68573b7226fcbf493cd80d4a17e8a053de60a7dd0fd775a5bae38",
+      "input_hash": "b29eb1fc98d438b82da5431192341d1be1e35d7c64ef6116f11ab8bd568e8504",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/claude-sonnet-5-5/cache/validate_group/b29eb1fc98d438b82da5431192341d1be1e35d7c64ef6116f11ab8bd568e8504.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01ieSti5BHRJaKquw1DFyekShB",
+      "usage": {
+        "prompt_tokens": 10221,
+        "completion_tokens": 318,
+        "total_tokens": 10539,
+        "prompt_tokens_details": {
+          "cached_tokens": 7969,
+          "cache_creation_tokens": 2248
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_1d1d54a7e5af7639_query_07639_object_add",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 315,
+      "action": "full reason retained; decision and failure_code unchanged"
+    },
+    {
+      "negative_id": "pinpoint_group_1d1d54a7e5af7639_query_07641_predicate_substitute",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 324,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "group_id": "pinpoint_group_46ebe243d8cbebf9",
+  "model": "grok-4.7",
+  "signature": "52913ea34ae01078c58f7a80fc2119b86ef4b6b3449e9e55b21816a5d5d1ccbd",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_46ebe243d8cbebf9_query_02941_object_add",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Adds only the sofa. The reference and all four positives show tatami, floor cushions, a bed, or a papasan chair, never a sofa, so the added fact is clearly false."
+    },
+    {
+      "negative_id": "pinpoint_group_46ebe243d8cbebf9_query_02941_object_substitute",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Replaces only room with office. The reference and every positive are living, sleeping, or tea spaces with no desk or office setup, so calling them an office is clearly false."
+    },
+    {
+      "negative_id": "pinpoint_group_46ebe243d8cbebf9_query_02942_attribute_substitute",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Changes only minimalism to maximalism. All supplied interiors are sparse and calm, with no abundant pattern or clutter, so maximalism is clearly false."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.7",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "1702845917c7eaaf5cde5118d30de2b526bbc7f87d31861c1624bfa4522a6453",
+      "input_hash": "516e8071367f34e369fe526d5d20e99ce7f5a21358820819e313c443d2df234a",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/grok-4.7/cache/validate_group/516e8071367f34e369fe526d5d20e99ce7f5a21358820819e313c443d2df234a.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "761b54fb-8942-9c11-af30-13c9ad16f8f5",
+      "usage": {
+        "prompt_tokens": 6174,
+        "completion_tokens": 244,
+        "total_tokens": 8886,
+        "prompt_tokens_details": {
+          "text_tokens": 2688,
+          "audio_tokens": 0,
+          "image_tokens": 3486,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2468,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 255480000
+      }
+    }
+  ],
+  "format_warnings": []
+}

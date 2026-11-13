@@ -1,0 +1,135 @@
+{
+  "case_id": "case_1dc1c18c6c24e72ae102",
+  "audit_query_id": "audit_query_081",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_1dc1c18c6c24e72ae102",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The saxophone is a wind instrument with a maroon-red body and gold keywork."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The flutes are wind instruments, but their bodies are orange-brown, dark brown, and black rather than maroon. The red fabric is the background."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The wind instrument must be maroon."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "attribute",
+        "before_span": "maroon",
+        "after_span": "brown",
+        "edited_instruction": "Make a wind instrument a brown color.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "Change the required instrument body color from maroon to brown.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The saxophone body is maroon-red, not brown."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The middle flute has a dark brown body with silver keywork."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_1dc1c18c6c24e72ae102",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "The saxophone has a glossy red finish with lighter copper-red areas and darker red reflections. It is visibly a wind instrument, but its finish cannot reliably be identified as maroon rather than red."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The three flutes have orange-brown, dark brown, and nearly black bodies. None visibly has a maroon body; the red fabric behind them is not part of an instrument."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "reject",
+        "failure_code": "source_invalid_or_uncertain",
+        "witness_type": null,
+        "reason": "Replacing 'maroon' with 'brown' is a single fluent attribute edit, and the candidate contains a visibly brown wind instrument. However, the original maroon constraint cannot reliably be established on the positive, so the required substitution support pattern is not established.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The saxophone's body is red, with gold keywork; it does not have a brown body."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The middle flute has a clearly dark brown wooden body with silver keys, satisfying the instruction to show a brown wind instrument."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": false,
+      "local_failures": [
+        "wrong_witness_type",
+        "wrong_support_pattern"
+      ],
+      "review_decision": "reject"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "fbfa71b161d6547184a4d2f8911cb3caf033762f625ffba4fc3006bf6481d749",
+      "input_hash": "9efdea17d6cb40fa7a01e5c366992dbdcfb97d05b471dc5e0c858fd0a4e9b26d",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/9efdea17d6cb40fa7a01e5c366992dbdcfb97d05b471dc5e0c858fd0a4e9b26d.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0233d21876c865bd016af2be0cc9e887d1886549635256ae6c",
+      "usage": {
+        "prompt_tokens": 8922,
+        "completion_tokens": 472,
+        "total_tokens": 9394,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 135
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "e2f42f431fdc90685f7e9ad829443c2357a30cfb160a4149be9b3b64985a295f",
+      "input_hash": "b20fdeb405fbb29524d0a09d4be66fd170cca88694ca7be935caf8b751ca3090",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/b20fdeb405fbb29524d0a09d4be66fd170cca88694ca7be935caf8b751ca3090.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_087821f952824e6a016af2be315fc887d1ba3ebebdbbf2459c",
+      "usage": {
+        "prompt_tokens": 8441,
+        "completion_tokens": 431,
+        "total_tokens": 8872,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 81
+        }
+      }
+    }
+  ]
+}

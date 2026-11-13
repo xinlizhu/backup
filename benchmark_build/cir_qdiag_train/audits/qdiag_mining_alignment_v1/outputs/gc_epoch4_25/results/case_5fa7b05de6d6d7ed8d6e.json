@@ -1,0 +1,91 @@
+{
+  "case_id": "case_5fa7b05de6d6d7ed8d6e",
+  "audit_query_id": "audit_query_087",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_5fa7b05de6d6d7ed8d6e",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "A clownfish with deeper orange coloration than the reference's yellow-orange areas is nestled among tentacles in the middle of a sea anemone, consistent with swimming through it."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The image shows a fluffy tan dog lying on carpet beside a toy; there is no clownfish or sea anemone."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "Shows a clownfish.",
+      "Shows the fish swimming through the middle of a sea anemone."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_5fa7b05de6d6d7ed8d6e",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows an orange clownfish, visibly darker and more saturated than the yellow-orange clownfish in Image 1, swimming amid the central sea-anemone tentacles."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a dog on carpet, with no clownfish or sea anemone."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "5f619704b80f53c746555a0c4d5c3d5be10d547175a02747697fc637d360c41f",
+      "input_hash": "9b07badf4640100437191020d16f845feed28ea752585855345f2207811687db",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/9b07badf4640100437191020d16f845feed28ea752585855345f2207811687db.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0b821f58b0cc71cb016af2bfd4087487d18611c736b28c8a1f",
+      "usage": {
+        "prompt_tokens": 8880,
+        "completion_tokens": 295,
+        "total_tokens": 9175,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 98
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "6991a543800456d81e2e02998cde22a1b74ccb7f414e9d91744325a5ceb51346",
+      "input_hash": "4c7855cf603a1fb637fddd5822fe8a80083c481becff20933905ca33ce4ee07e",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/4c7855cf603a1fb637fddd5822fe8a80083c481becff20933905ca33ce4ee07e.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_07e25348be04a2a3016af2bfeae96887d0b5c4da0791d9fcbd",
+      "usage": {
+        "prompt_tokens": 8502,
+        "completion_tokens": 207,
+        "total_tokens": 8709,
+        "prompt_tokens_details": {
+          "cached_tokens": 5248
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 92
+        }
+      }
+    }
+  ]
+}

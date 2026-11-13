@@ -1,0 +1,93 @@
+{
+  "case_id": "case_6edfc978b4f8946e667f",
+  "audit_query_id": "audit_query_095",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_6edfc978b4f8946e667f",
+    "case_status": "source_invalid_or_uncertain",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "T shows one pelican raised above grey water with its mouth open. However, R shows sea lions, not birds, so removing all but one bird and raising the remaining bird cannot be reliably grounded in R."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows a woman in pale pink clothing against a grey studio background, with no bird or water. It does not show the requested remaining bird raised out of grey water with its mouth open."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "Show one remaining bird.",
+      "Show grey water.",
+      "Show the remaining bird raised out of the water.",
+      "Show the remaining bird with its mouth open."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_6edfc978b4f8946e667f",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows one pelican in grey water, with its neck, upper body, and spread wings raised above the surface and its beak wide open. These visible target constraints are satisfied, although the animals in the reference are sea lions rather than birds."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a woman wearing pale pink clothing against a grey studio background. There is no bird, water, or raised bird with an open mouth."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "83062852d3fb9dc8681878bb195e04e592c724bb2a901e018b79e8183455d1c0",
+      "input_hash": "a454dce86776657ff245d4c7fcad81a48fe7eb3027bb5107a19b3884367698e2",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/a454dce86776657ff245d4c7fcad81a48fe7eb3027bb5107a19b3884367698e2.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0aeea93f37d90309016af2bdcdb99487d1b84f90b88ad6170b",
+      "usage": {
+        "prompt_tokens": 11576,
+        "completion_tokens": 431,
+        "total_tokens": 12007,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 201
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "0894996c8859b0e8ce828a1cca59ae1cf7721a32c65f6a9d2bb65c8047835a3d",
+      "input_hash": "758bbad3478a69068d0286176636f2841e47c22cd74604e8d376122c39bc919e",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/758bbad3478a69068d0286176636f2841e47c22cd74604e8d376122c39bc919e.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_083960ebcb7ccaf6016af2bdf5881087d19743c77e6afd206a",
+      "usage": {
+        "prompt_tokens": 11034,
+        "completion_tokens": 208,
+        "total_tokens": 11242,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 69
+        }
+      }
+    }
+  ]
+}

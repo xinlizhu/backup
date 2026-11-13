@@ -1,0 +1,87 @@
+{
+  "case_id": "case_ad9f174307bbe61c19b4",
+  "audit_query_id": "audit_query_100",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_ad9f174307bbe61c19b4",
+    "case_status": "source_invalid_or_uncertain",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "Image 2 shows a cheesy baked dish in a shallow baking pan, but the wording “a bowl with a dish” does not clearly match the visible container or food."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a layered dessert in a glass trifle bowl with cream and chocolate pieces; no cheese or separate dish is visible."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "cheese on top"
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_ad9f174307bbe61c19b4",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a baked dish in a shallow round dish, covered with melted cheese browned in places."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a layered dessert in a glass bowl, topped with cream and chocolate pieces rather than cheese."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "212ed71e5e910f860e83a740bb3b4daedae3a76d938f61b86b94893e3a9ede50",
+      "input_hash": "777a1c9d53749147d244ce2fa7cacb4ab5fadba2bed990bb88708d2a1742c410",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/777a1c9d53749147d244ce2fa7cacb4ab5fadba2bed990bb88708d2a1742c410.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0de9acffa49dc0cd016af2bed96e7c87d1a0e916559d98ee01",
+      "usage": {
+        "prompt_tokens": 14152,
+        "completion_tokens": 366,
+        "total_tokens": 14518,
+        "prompt_tokens_details": {
+          "cached_tokens": 5888
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 222
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "32659f0ffc8eba92f4bf51924a2772c96cc3c297b678ceb140f0122b860d22b8",
+      "input_hash": "edab7b1a466e875371312e27a7ff4b3ae90ced67015dad3a96b55a6bf812fa62",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/edab7b1a466e875371312e27a7ff4b3ae90ced67015dad3a96b55a6bf812fa62.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_08e8626ede310672016af2bee660cc87d1ac545bc5d9568f22",
+      "usage": {
+        "prompt_tokens": 13610,
+        "completion_tokens": 316,
+        "total_tokens": 13926,
+        "completion_tokens_details": {
+          "reasoning_tokens": 219
+        }
+      }
+    }
+  ]
+}

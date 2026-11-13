@@ -1,0 +1,49 @@
+{
+  "group_id": "pinpoint_group_1d1d54a7e5af7639",
+  "model": "gpt-5.6-sol",
+  "signature": "a57b789e04ba3d6bbe705981086bec8e891cf1699d5f6b8c834fa4b2218c5f3a",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_1d1d54a7e5af7639_query_07639_object_add",
+      "decision": "reject",
+      "failure_code": "not_visually_verifiable",
+      "reason": "The added hat is a single object constraint, but images 4 and 5 are cropped and cannot reliably establish that no hat is present. The addition is not clearly false for every supplied positive."
+    },
+    {
+      "negative_id": "pinpoint_group_1d1d54a7e5af7639_query_07641_predicate_substitute",
+      "decision": "reject",
+      "failure_code": "wrong_semantic_target",
+      "reason": "Replacing absence of graphic prints with their presence changes an attribute of the existing sweater, not an action or relation with the same arguments and scope."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "gpt-5.6-sol",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "5c6bcba580f68573b7226fcbf493cd80d4a17e8a053de60a7dd0fd775a5bae38",
+      "input_hash": "cbfceaff534d04638007bdefe3893fe6e1b0645ba9c023ba6367049c5bb0c733",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/gpt-5.6-sol/cache/validate_group/cbfceaff534d04638007bdefe3893fe6e1b0645ba9c023ba6367049c5bb0c733.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_077f8f623325a0d2016af42d37548c87d2a2cf90bcdb0c100e",
+      "usage": {
+        "prompt_tokens": 23194,
+        "completion_tokens": 283,
+        "total_tokens": 23477,
+        "prompt_tokens_details": {
+          "cached_tokens": 23191
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 118
+        }
+      }
+    }
+  ],
+  "format_warnings": []
+}

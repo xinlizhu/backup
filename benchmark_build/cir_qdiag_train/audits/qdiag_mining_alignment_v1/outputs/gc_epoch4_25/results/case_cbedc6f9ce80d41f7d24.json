@@ -1,0 +1,90 @@
+{
+  "case_id": "case_cbedc6f9ce80d41f7d24",
+  "audit_query_id": "audit_query_094",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_cbedc6f9ce80d41f7d24",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The adult warthog has piglets at its underside; two appear to nurse along the same visible side."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The adult warthogs and piglets are visible, but none appears to be nursing."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The boar is nursing two babies on the same left side."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_cbedc6f9ce80d41f7d24",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "Two piglets appear to nurse together at the adult warthog's underside on the image-left side. However, the claimed change from a mother to a boar is not visibly established: tusks do not establish male sex, and 'left side' does not specify image-left versus the animal's anatomical left."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The warthogs are standing or foraging separately. No two babies are visibly nursing at an adult's underside on the same left side; the foreground juvenile has its snout toward the ground."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "926b19805aa096711725570e3db618c7a964b5ac9589605b1967025f419a1741",
+      "input_hash": "b3aa4081357c59ab944f83dde0eceb766db7ef012ab820d0265422f713ac3f8f",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/b3aa4081357c59ab944f83dde0eceb766db7ef012ab820d0265422f713ac3f8f.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0f006ca07b3609ad016af2bf98e36487d1ac090ff0e5ff470f",
+      "usage": {
+        "prompt_tokens": 17328,
+        "completion_tokens": 637,
+        "total_tokens": 17965,
+        "prompt_tokens_details": {
+          "cached_tokens": 5888
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 507
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "5a8ca7f76cd35dbddcce57935111cd0c58cf39f50b08c1e8f796c6c222097f40",
+      "input_hash": "9d1707d9034df551d89ad3e52b275565600e9e45476ae7d3a243c67a7c2414e6",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/9d1707d9034df551d89ad3e52b275565600e9e45476ae7d3a243c67a7c2414e6.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0fb37b38f7157632016af2bfbb660087d293a3cb0ade67c778",
+      "usage": {
+        "prompt_tokens": 16622,
+        "completion_tokens": 192,
+        "total_tokens": 16814,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 32
+        }
+      }
+    }
+  ]
+}

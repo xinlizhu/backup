@@ -1,0 +1,177 @@
+{
+  "case_id": "case_dec88a9bb2f5055cc832",
+  "audit_query_id": "audit_query_087",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_dec88a9bb2f5055cc832",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The clownfish has a deeper orange color than the yellow-orange fish in R and is surrounded and partly obscured by tentacles in the middle of the anemone."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The clownfish is deeper orange than the fish in R, but it swims above the anemone rather than through its middle."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The clownfish swims through the middle of a sea anemone."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "predicate",
+        "before_span": "through the middle of",
+        "after_span": "above",
+        "edited_instruction": "Shows a darker colored clown fish swimming above a sea anemone.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "The fish's position changes from within the middle of the anemone to above it.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The deeper-orange clownfish is nestled among tentacles that surround and overlap its body, rather than swimming above the anemone."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The deeper-orange clownfish swims above the anemone, whose tentacles occupy the lower-right portion of the image."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "operation": "delete",
+        "semantic_target": "predicate",
+        "before_span": "through the middle of a sea anemone",
+        "after_span": null,
+        "edited_instruction": "Shows a darker colored clown fish swimming.",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "Removes the requirement that the clownfish swim through the middle of a sea anemone.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "A deeper-orange clownfish than the fish in R is shown swimming among anemone tentacles."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "A deeper-orange clownfish than the fish in R is shown swimming with its body and fins extended above the anemone."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_dec88a9bb2f5055cc832",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "The clownfish is visibly nestled among anemone tentacles, supporting the spatial constraint. However, its bright orange coloring is not reliably darker than the reference fish, which has yellow-orange areas and substantial dark markings."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The prominent clownfish is swimming above the anemone's tentacles rather than through their middle. Whether its orange coloring is darker than the reference is also unclear."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "reject",
+        "failure_code": "source_invalid_or_uncertain",
+        "witness_type": null,
+        "reason": "The spatial replacement is a single fluent predicate edit, but the required darker-than-reference coloring cannot be reliably established on T. The visible spatial contrast alone cannot establish the required full support pattern.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The fish is embedded among tentacles that surround and overlap its body, rather than swimming above the anemone."
+        },
+        "edited_on_candidate": {
+          "status": "uncertain",
+          "evidence": "The prominent fish is above the anemone, but the retained requirement that it be darker than the reference fish is not reliably established."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "decision": "reject",
+        "failure_code": "source_invalid_or_uncertain",
+        "witness_type": null,
+        "reason": "The deletion reconstructs the proposed instruction, but it retains the ambiguous darker-color requirement. The source is not reliably supported on T, and neither image reliably supports the full edited instruction.",
+        "edited_on_positive": {
+          "status": "uncertain",
+          "evidence": "A clownfish is visible among anemone tentacles, but its bright orange body does not establish that it is darker than the reference fish."
+        },
+        "edited_on_candidate": {
+          "status": "uncertain",
+          "evidence": "A clownfish is visibly swimming above the tentacles, but its coloring is not unambiguously darker than the yellow-orange and dark-marked reference fish."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": false,
+      "local_failures": [
+        "wrong_witness_type",
+        "wrong_support_pattern"
+      ],
+      "review_decision": "reject"
+    },
+    {
+      "witness_id": "w2",
+      "accepted": false,
+      "local_failures": [
+        "wrong_witness_type",
+        "wrong_support_pattern"
+      ],
+      "review_decision": "reject"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "a98d3d7b158ed21bea9cebc4dc2f5ef097ca17e7a533959a6d2a4c559dcbf2f3",
+      "input_hash": "186fcf75d466c7ee80ac72248616ef0e52373485a9c068d80d57c640c2c227c3",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/186fcf75d466c7ee80ac72248616ef0e52373485a9c068d80d57c640c2c227c3.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_006fde03b62a56f9016af2bf829d6487d0824aefca15721438",
+      "usage": {
+        "prompt_tokens": 8203,
+        "completion_tokens": 767,
+        "total_tokens": 8970,
+        "prompt_tokens_details": {
+          "cached_tokens": 3830
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 185
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "51ef6c37cd7880ba2bcda9e4575274169b80e5e7febdcdb056336360bd4d88b6",
+      "input_hash": "8384256af47fdea142b8103856c55d71b2e47705c581b5a1094352f559164ef0",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/8384256af47fdea142b8103856c55d71b2e47705c581b5a1094352f559164ef0.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_01ba0833f6d9cded016af2bf99d8f087d086121afb3f047fd3",
+      "usage": {
+        "prompt_tokens": 7798,
+        "completion_tokens": 533,
+        "total_tokens": 8331,
+        "prompt_tokens_details": {
+          "cached_tokens": 3482
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 108
+        }
+      }
+    }
+  ]
+}

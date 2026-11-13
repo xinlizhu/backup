@@ -1,0 +1,39 @@
+method: tg_cir_v1
+seed: 42
+output_dir: outputs/tg_cir_clip_l_e4
+model:
+  pretrained_model_name_or_path: models/clip-vit-large-patch14
+  global_tokens: 4
+  local_tokens: 8
+  temperature: 0.05
+  gradient_checkpointing: true
+data:
+  image_root: /mnt/data/datasets/search_dataset/zxl/CIR_new/datasets/CIRR
+  train_annotation_path: /mnt/data/datasets/search_dataset/zxl/CIR_new/datasets/CIRR/cirr/captions/cap.rc2.train.json
+  train_image_split_path: /mnt/data/datasets/search_dataset/zxl/CIR_new/datasets/CIRR/cirr/image_splits/split.rc2.train.json
+  val_annotation_path: /mnt/data/datasets/search_dataset/zxl/CIR_new/datasets/CIRR/cirr/captions/cap.rc2.val.json
+  val_image_split_path: /mnt/data/datasets/search_dataset/zxl/CIR_new/datasets/CIRR/cirr/image_splits/split.rc2.val.json
+training:
+  epochs: 4
+  batch_size: 32
+  num_workers: 8
+  prefetch_factor: 2
+  clip_learning_rate: 1.0e-5
+  learning_rate: 1.0e-4
+  weight_decay: 0.01
+  mixed_precision: fp16
+  save_every_steps: 100
+  log_every_steps: 20
+# Same CIRR losses as the B/16 implementation; both branches share CLIP-L.
+loss_weights:
+  stu_rank: 1.0
+  tea_rank: 1.0
+  tea_mask: 1.0
+  ortho: 0.1
+  ckd: 1.0
+  kl: 0.1
+evaluation:
+  batch_size: 128
+  num_workers: 8
+  prefetch_factor: 2
+  fashioniq_root: /mnt/data/datasets/search_dataset/zxl/CIR_new/datasets/fashion-iq

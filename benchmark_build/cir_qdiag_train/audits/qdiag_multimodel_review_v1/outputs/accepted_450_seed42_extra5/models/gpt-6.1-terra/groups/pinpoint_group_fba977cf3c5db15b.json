@@ -1,0 +1,55 @@
+{
+  "group_id": "pinpoint_group_fba977cf3c5db15b",
+  "model": "gpt-6.1-terra",
+  "signature": "08eff7f6139e72d377a59effd10853d9c15929bec5b0a3afebcc9b0ca4a1c2df",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_fba977cf3c5db15b_query_00252_predicate_add",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Adds one fluent action constraint; the positive shows the garment being worn, not laid flat."
+    },
+    {
+      "negative_id": "pinpoint_group_fba977cf3c5db15b_query_00254_attribute_substitute",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Changes only the palette attribute; the reference and positive both show multicolored designs, not a monochrome palette."
+    },
+    {
+      "negative_id": "pinpoint_group_fba977cf3c5db15b_query_00255_predicate_substitute",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Changes only the requested action from designing to sketching; the positive is a photograph of finished garments, not a sketch."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "gpt-6.1-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "8b6e4cdbf96ead292048084b86d365b9e88e97f16468ba28dadda132769d099f",
+      "input_hash": "d1f026a818ff330cc9f13c29e42aebe09d0c2e65db308cbc44832118d134a051",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/gpt-6.1-terra/cache/validate_group/d1f026a818ff330cc9f13c29e42aebe09d0c2e65db308cbc44832118d134a051.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_074c9de5a24df451016af42e62e29087d089c6e8d0e2b144ae",
+      "usage": {
+        "prompt_tokens": 6299,
+        "completion_tokens": 407,
+        "total_tokens": 6706,
+        "prompt_tokens_details": {
+          "cached_tokens": 3733
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 220
+        }
+      }
+    }
+  ],
+  "format_warnings": []
+}

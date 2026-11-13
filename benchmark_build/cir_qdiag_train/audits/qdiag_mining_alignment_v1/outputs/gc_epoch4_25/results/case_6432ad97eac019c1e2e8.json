@@ -1,0 +1,92 @@
+{
+  "case_id": "case_6432ad97eac019c1e2e8",
+  "audit_query_id": "audit_query_095",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_6432ad97eac019c1e2e8",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows one pelican with its beak open, raised above grayish water."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a crab underwater, not a bird raised above water with its mouth open; the visible underwater scene is not gray water."
+    },
+    "candidate_relation": "multiple_constraint_conflict",
+    "violated_source_constraints": [
+      "There is one remaining bird; the candidate shows a crab and no bird.",
+      "The water is gray; the candidate shows a colorful underwater scene.",
+      "The remaining bird is raised out of the water with its mouth open; the candidate shows no bird."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_6432ad97eac019c1e2e8",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a single bird with its body raised above shallow grey water and its mouth open."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a crab on a rocky seabed, not a bird raised above grey water with its mouth open."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "c484548ad32a857da9237fbca74e3b9e54cec600e69cd5582282b116b9bd8d73",
+      "input_hash": "e26daccb7b63c2067218322b8e4f75d025bd38514272924498cab6d5029d6296",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/e26daccb7b63c2067218322b8e4f75d025bd38514272924498cab6d5029d6296.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0f3d4a809201b51a016af2bec3d6b887d18c4339513a729c82",
+      "usage": {
+        "prompt_tokens": 12155,
+        "completion_tokens": 481,
+        "total_tokens": 12636,
+        "prompt_tokens_details": {
+          "cached_tokens": 5888
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 309
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "436eef20d1137f845e296f59f2414e54d5c6e51b3694ef767cc9009d36e2c84f",
+      "input_hash": "d9c7e866fa6c32a3034bbaf1900b086f6168a638d91e2dc12c548992c1ab2672",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/d9c7e866fa6c32a3034bbaf1900b086f6168a638d91e2dc12c548992c1ab2672.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_024e305cb8f2d42e016af2bed1dca087d1a0e78d3142cf1bb1",
+      "usage": {
+        "prompt_tokens": 11613,
+        "completion_tokens": 173,
+        "total_tokens": 11786,
+        "prompt_tokens_details": {
+          "cached_tokens": 5248
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 72
+        }
+      }
+    }
+  ]
+}

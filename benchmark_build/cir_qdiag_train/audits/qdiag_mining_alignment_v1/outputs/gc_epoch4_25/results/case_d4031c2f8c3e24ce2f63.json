@@ -1,0 +1,161 @@
+{
+  "case_id": "case_d4031c2f8c3e24ce2f63",
+  "audit_query_id": "audit_query_079",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_d4031c2f8c3e24ce2f63",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "T shows a black, bowl-shaped vessel sink beneath a chrome faucet."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "C shows a bowl-shaped vessel sink with a black exterior and white interior; the instruction does not require an entirely black sink."
+    },
+    "candidate_relation": "compatible",
+    "violated_source_constraints": [],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "add",
+        "semantic_target": "attribute",
+        "before_span": null,
+        "after_span": "with a white interior",
+        "edited_instruction": "Show a black bowl sink with a white interior.",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "The sink has a white interior.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "T's black bowl sink has a dark interior, not a white interior."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C's bowl sink has a black exterior and a clearly visible white interior."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_d4031c2f8c3e24ce2f63",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a black, bowl-shaped vessel sink beneath a running faucet."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "Image 3 shows a bowl-shaped vessel sink with a black exterior and a white interior. Its black exterior supports the source color constraint."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "Inserting 'with a white interior' adds one visible attribute to the same sink and preserves the original constraints. Both images satisfy the source, but only the candidate has a white interior, establishing the required ADD support pattern.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The sink in Image 2 has a dark interior; the pale patches are reflections rather than a white interior finish."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The bowl sink in Image 3 visibly combines a black exterior with a white interior."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "add",
+      "semantic_target": "attribute",
+      "before_span": null,
+      "after_span": "with a white interior",
+      "edited_instruction": "Show a black bowl sink with a white interior.",
+      "witness_type": "addition_disambiguation",
+      "changed_constraint": "The sink has a white interior.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "T's black bowl sink has a dark interior, not a white interior."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C's bowl sink has a black exterior and a clearly visible white interior."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "Inserting 'with a white interior' adds one visible attribute to the same sink and preserves the original constraints. Both images satisfy the source, but only the candidate has a white interior, establishing the required ADD support pattern.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The sink in Image 2 has a dark interior; the pale patches are reflections rather than a white interior finish."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The bowl sink in Image 3 visibly combines a black exterior with a white interior."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "e52a5838896e831a0c82516903ce6c1267cfb57aaa017d09eec3e49eca25870a",
+      "input_hash": "026b5e7399a104bdf8d1949b9c3df39a50757a42aed8876225d5fabe6f8239ef",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/026b5e7399a104bdf8d1949b9c3df39a50757a42aed8876225d5fabe6f8239ef.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_01bb5c812acc0b58016af2bdd86b2c87d2a924350a1986fd2e",
+      "usage": {
+        "prompt_tokens": 10239,
+        "completion_tokens": 383,
+        "total_tokens": 10622,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 71
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "12b25f43ad008e2766833102b1f17c421dc3374ae125dd731dcf8c6e0c06552d",
+      "input_hash": "4c4091550615ce54b9571d022a475eea05758268f59bbb1fea58030cda9e0874",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/4c4091550615ce54b9571d022a475eea05758268f59bbb1fea58030cda9e0874.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0d291b35ad8b6e5d016af2bdf56fc087d19b1a9eebfd1db391",
+      "usage": {
+        "prompt_tokens": 9760,
+        "completion_tokens": 300,
+        "total_tokens": 10060,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        }
+      }
+    }
+  ]
+}

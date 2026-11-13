@@ -1,0 +1,91 @@
+{
+  "case_id": "case_2af80414cb209ff6ab8e",
+  "audit_query_id": "audit_query_095",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_2af80414cb209ff6ab8e",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "T shows one pelican with its body and spread wings raised above grey water and its beak wide open. R shows several swimming animals; the requested bird category is visible in T."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows two pelicans, including a partially cropped bird at left, and the prominent pelican has its beak closed. Its body rests low on the water. The water's grey-green coloration does not establish a clear color violation."
+    },
+    "candidate_relation": "multiple_constraint_conflict",
+    "violated_source_constraints": [
+      "Only one bird should remain; C visibly contains two birds.",
+      "The remaining bird should have its mouth open; the prominent bird in C has its beak closed."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_2af80414cb209ff6ab8e",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "One pelican is visible in grey water, with its neck, chest, and spread wings raised above the surface and its bill wide open, satisfying the requested visible result."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "At least two pelicans are visible, including a partial bird at the left edge. The main pelican's bill is closed and its body rests low in the water, contradicting the single-bird and open-mouth requirements."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "30eaa45a8aeb698593af8335aec65f480d440ff3410c21a5ef8ac2f1e09f94ea",
+      "input_hash": "cd5738253d9abefce77a46a75eebe74ee0cb519a34e39e9e861264c279f8c90e",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/cd5738253d9abefce77a46a75eebe74ee0cb519a34e39e9e861264c279f8c90e.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_073eb1a91bcdae98016af2bde1450487d189283da2136c83ac",
+      "usage": {
+        "prompt_tokens": 11594,
+        "completion_tokens": 342,
+        "total_tokens": 11936,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 111
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "e4303918891e37273782d71107cfcc51d05170fb6776336cbf711f1a36a9b9ad",
+      "input_hash": "ca609c928cd327baab195be0f8316c868c3ef3bc51087fac4aed82d89a5979b2",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/ca609c928cd327baab195be0f8316c868c3ef3bc51087fac4aed82d89a5979b2.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0a46bb38fe7b7326016af2bdf41d3487d296f4249c6bd271ae",
+      "usage": {
+        "prompt_tokens": 11052,
+        "completion_tokens": 214,
+        "total_tokens": 11266,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 54
+        }
+      }
+    }
+  ]
+}

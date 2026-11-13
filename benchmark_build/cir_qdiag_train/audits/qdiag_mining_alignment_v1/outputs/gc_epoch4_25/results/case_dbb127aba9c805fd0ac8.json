@@ -1,0 +1,90 @@
+{
+  "case_id": "case_dbb127aba9c805fd0ac8",
+  "audit_query_id": "audit_query_098",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_dbb127aba9c805fd0ac8",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Unlike the reference's reindeer-and-sled scene, this image shows people facing the camera behind a large group of dogs, including an apparent woman looking toward the camera."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "A woman appears to pose toward the camera alongside other people outside a building, but there is no group of dogs."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The woman must pose with a group of dogs."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_dbb127aba9c805fd0ac8",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The positive shows a person in a red jacket facing the camera behind a large group of dogs, consistent with posing with them."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The candidate shows people in business attire in front of a building, with no dogs."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "55385871ad5546a9b6763214b59a27fbabc37e73d61096f27f66f34e0500f6b9",
+      "input_hash": "098f870e67a0bc876782a21d8241421c4a5b12abc6170b665a014b22a32b82a8",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/098f870e67a0bc876782a21d8241421c4a5b12abc6170b665a014b22a32b82a8.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0a496c3b411215dc016af2bfa0bc9487d09993033c21237ace",
+      "usage": {
+        "prompt_tokens": 7083,
+        "completion_tokens": 437,
+        "total_tokens": 7520,
+        "prompt_tokens_details": {
+          "cached_tokens": 3830
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 258
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "a5aee2ec097702a24671ab4c394f9416e77b6c5e2d3d6a9c25c5ac3e40a7655e",
+      "input_hash": "e0db221975ffe0beba04cc164fcb989d9b1eca9987b521f952b47572148d90d3",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/e0db221975ffe0beba04cc164fcb989d9b1eca9987b521f952b47572148d90d3.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_04caf29970ee6255016af2bfb732f487d19b1c7df69c1e2aad",
+      "usage": {
+        "prompt_tokens": 6705,
+        "completion_tokens": 335,
+        "total_tokens": 7040,
+        "prompt_tokens_details": {
+          "cached_tokens": 5248
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 239
+        }
+      }
+    }
+  ]
+}

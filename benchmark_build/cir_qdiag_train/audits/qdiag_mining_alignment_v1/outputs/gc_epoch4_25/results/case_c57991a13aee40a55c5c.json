@@ -1,0 +1,88 @@
+{
+  "case_id": "case_c57991a13aee40a55c5c",
+  "audit_query_id": "audit_query_096",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_c57991a13aee40a55c5c",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Both school buses have clearly visible fronts and are parked immediately beside each other, unlike the side views in R."
+    },
+    "source_on_candidate": {
+      "status": "uncertain",
+      "evidence": "The nearest school bus clearly shows its front and is parked beside another bus. However, the neighboring bus's front is outside the frame or obscured, so the requested view of the buses' fronts is not fully established."
+    },
+    "candidate_relation": "uncertain",
+    "violated_source_constraints": [],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_c57991a13aee40a55c5c",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Two school buses are parked adjacent to each other, with both front faces, windshields, and headlights visible."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The buses are parked adjacent to each other, but only the foreground bus has its front visible. The bus on the left is shown from the side, with its front outside the frame or obscured."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "236aa386deac1f10486c9355373629c045ad962b1d65cbbc5ce431cd16145b5d",
+      "input_hash": "cfaa0a25acca7659c6c8b5e73915a04109d0f9a207e601d9470ac28ca2dbb510",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/cfaa0a25acca7659c6c8b5e73915a04109d0f9a207e601d9470ac28ca2dbb510.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0c9a4b6c72b66920016af2bdf6789887d1a548d4700562a268",
+      "usage": {
+        "prompt_tokens": 7309,
+        "completion_tokens": 514,
+        "total_tokens": 7823,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 341
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "4ea3fcd6253a4d29921e02792bd4835a995e99ed6256d9a8cd10aaabe938d8ba",
+      "input_hash": "74ba5af34c4a90a7b11a87f89a8d16dd70c4b54e4abfef9078361a6fc4437967",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/74ba5af34c4a90a7b11a87f89a8d16dd70c4b54e4abfef9078361a6fc4437967.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0edfb18621614c88016af2be11ccc487d1959038f1d63776fa",
+      "usage": {
+        "prompt_tokens": 6767,
+        "completion_tokens": 174,
+        "total_tokens": 6941,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 55
+        }
+      }
+    }
+  ]
+}

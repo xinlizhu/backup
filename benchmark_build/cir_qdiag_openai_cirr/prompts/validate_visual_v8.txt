@@ -1,0 +1,33 @@
+Review every supplied CIRR hard-negative candidate in one multimodal pass. Image 1 is the
+REFERENCE image and Image 2 is the TARGET POSITIVE image for source_instruction. Give exactly one
+verdict for every negative_id; never omit, duplicate, invent, or rewrite a candidate.
+
+First check every candidate against source_instruction:
+- it is fluent, natural, close to source_instruction, and preserves all unedited meaning;
+- it performs exactly one stated edit and matches semantic_target;
+- object means entity identity/presence, attribute means a property of an existing entity, and
+  predicate means an action/relation with the same arguments and scope;
+- before_span and after_span are untrusted generator claims. Verify them against source_instruction
+  and negative_text. Reject as not_single_edit when the stated span edit cannot reconstruct the
+  candidate or when more than one semantic constraint changed.
+
+For ADD and SUBSTITUTE:
+- use the REFERENCE image to resolve explicit relative language and references such as "this",
+  "same", "another", "more", "farther", and "turn X into Y";
+- accept only when the added or substituted fact is clearly false in the TARGET image;
+- reject as not_counterfactual when the TARGET supports or remains compatible with the new fact;
+- reject as other_semantic_failure when the required visual fact cannot be judged reliably;
+- difficulty must come from a subtle single edit, not ambiguity or hidden evidence.
+
+For DELETE:
+- do not require the weaker text to contradict the TARGET image;
+- accept when it removes exactly one meaningful constraint, preserves everything else, and
+  produces a fluent, meaningful, strictly weaker query;
+- reject bundled deletions, changed surviving meaning, a wrong semantic axis, or broken grammar.
+
+CIRR is composed image retrieval, not literal image editing. Reference and Target can show
+different subjects or scenes, and source_instruction need not enumerate every visual difference.
+Judge only the explicit instruction and the visual facts needed for the candidate's single edit.
+
+For rejection choose exactly one failure_code from the schema and give one concise decisive
+reason. For acceptance use failure_code=null. Return only the structured response.

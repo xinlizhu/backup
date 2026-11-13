@@ -1,0 +1,84 @@
+{
+  "case_id": "case_ebb636c988eefe3eff1c",
+  "audit_query_id": "audit_query_099",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_ebb636c988eefe3eff1c",
+    "case_status": "source_invalid_or_uncertain",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "The ground cover appears to be reddish-brown and yellowish needles or straw, but it is not clearly grass."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The dog is on concrete beside brick steps; no grass is visible."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The image has reddish and yellowish grass."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_ebb636c988eefe3eff1c",
+    "source_on_positive": {
+      "status": "contradicted",
+      "evidence": "Image 2 shows a skunk on dark ground covered with dry pine needles and some green plants, not grass that is visibly both reddish and yellowish."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a dog on a concrete walkway and steps; no grass is visible."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "6a79fe0c282136ecf7b11bb54e772ea8c696a6a4fb16d10c41835a6e8bf8bf63",
+      "input_hash": "f67074c75fda65ba818160b37a0de00356ff3cb7edfa16cd085d56ad3669fccc",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/f67074c75fda65ba818160b37a0de00356ff3cb7edfa16cd085d56ad3669fccc.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0a3067d4f11e7027016af2bf410f2c87d19433cb98d7e6b6f9",
+      "usage": {
+        "prompt_tokens": 3298,
+        "completion_tokens": 618,
+        "total_tokens": 3916,
+        "completion_tokens_details": {
+          "reasoning_tokens": 494
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "17c914872c64f365df82b3fcae405e74be3981f6c35b6ef31f8116cfc2ee5286",
+      "input_hash": "2ebd4a4b6f33acf28c0cbcee248b615dab4df4044585e5059782f126a6d6d827",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/2ebd4a4b6f33acf28c0cbcee248b615dab4df4044585e5059782f126a6d6d827.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0cb7733a83b40416016af2bf4b5af887d1adf360b99b14743c",
+      "usage": {
+        "prompt_tokens": 6145,
+        "completion_tokens": 245,
+        "total_tokens": 6390,
+        "completion_tokens_details": {
+          "reasoning_tokens": 140
+        }
+      }
+    }
+  ]
+}

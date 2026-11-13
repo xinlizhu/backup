@@ -1,0 +1,160 @@
+{
+  "case_id": "case_477aa798bb7d8a85181f",
+  "audit_query_id": "audit_query_083",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_477aa798bb7d8a85181f",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows one body-cream tube beside its pink product box."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows both body wash and body cream in one gift package, not a single product."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "single product"
+    ],
+    "witnesses": [
+      {
+        "witness_id": "substitute_object_gift_set",
+        "operation": "substitute",
+        "semantic_target": "object",
+        "before_span": "a single product",
+        "after_span": "a gift set",
+        "edited_instruction": "Leave a gift set with its box",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "The original requires one product; the replacement specifies a gift set, which is visible in the candidate but not the positive.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 shows one body-cream tube with its carton, not a gift set."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows body wash and body cream presented together in decorative gift packaging."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_477aa798bb7d8a85181f",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows one body-cream tube beside its matching pink box."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a gift set containing both a body-wash bottle and a body-cream tube in a package, not a single product."
+    },
+    "verdicts": [
+      {
+        "witness_id": "substitute_object_gift_set",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "The replacement is one contiguous object phrase, preserves the box constraint, and the edited instruction matches the gift set visibly shown in Image 3 but not Image 2.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 shows one body-cream tube and its box, not a gift set."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 visibly presents a body-wash bottle and body-cream tube together in a gift package."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "substitute_object_gift_set",
+      "operation": "substitute",
+      "semantic_target": "object",
+      "before_span": "a single product",
+      "after_span": "a gift set",
+      "edited_instruction": "Leave a gift set with its box",
+      "witness_type": "substitution_contrast",
+      "changed_constraint": "The original requires one product; the replacement specifies a gift set, which is visible in the candidate but not the positive.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "Image 2 shows one body-cream tube with its carton, not a gift set."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "Image 3 shows body wash and body cream presented together in decorative gift packaging."
+      },
+      "independent_review": {
+        "witness_id": "substitute_object_gift_set",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "The replacement is one contiguous object phrase, preserves the box constraint, and the edited instruction matches the gift set visibly shown in Image 3 but not Image 2.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 shows one body-cream tube and its box, not a gift set."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 visibly presents a body-wash bottle and body-cream tube together in a gift package."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "substitute_object_gift_set",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "05e347e3125b5abfbd023f171190e4c37d93af5d07e9cca8c559b386a6efee33",
+      "input_hash": "6b4a28e50d9de3e85844176767dfcbeea317d4ed14ab01bc7fd215690411d5fe",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/6b4a28e50d9de3e85844176767dfcbeea317d4ed14ab01bc7fd215690411d5fe.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_5975057a097b69afc8caa975e6375e70",
+      "usage": {
+        "prompt_tokens": 4514,
+        "completion_tokens": 1947,
+        "total_tokens": 6461
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "b091dd957249b66f7388e0b42dcff8edd6912e2b8fa16f3d13a421fea68287d2",
+      "input_hash": "de1333e00a58cff30571236ff30db7f916ebf5f84536eda97683df2eee5df191",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/de1333e00a58cff30571236ff30db7f916ebf5f84536eda97683df2eee5df191.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_04964b058015ba52016af2bf95043487d1a721da90c62e25b6",
+      "usage": {
+        "prompt_tokens": 8416,
+        "completion_tokens": 362,
+        "total_tokens": 8778,
+        "prompt_tokens_details": {
+          "cached_tokens": 5248
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 133
+        }
+      }
+    }
+  ]
+}

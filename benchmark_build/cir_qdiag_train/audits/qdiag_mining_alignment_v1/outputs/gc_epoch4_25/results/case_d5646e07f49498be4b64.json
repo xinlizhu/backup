@@ -1,0 +1,88 @@
+{
+  "case_id": "case_d5646e07f49498be4b64",
+  "audit_query_id": "audit_query_082",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_d5646e07f49498be4b64",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a locomotive with conspicuous white diagonal strips on its front, oriented at an angle relative to the reference."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a dog outdoors, not a locomotive with white strips; the requested train orientation is not assessable."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "The locomotive is absent, so the requested orientation cannot be present.",
+      "White strips on the locomotive are absent."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_d5646e07f49498be4b64",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "Image 2 shows a locomotive with prominent white diagonal stripes on its front, but the requested orientation toward a “back corner” cannot be reliably established from the image and reference."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a dog outdoors, not a locomotive with white strips."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "9e40c4865adceaacf4a0f60bf61da095b77c7bb9eff3083061ddbc5d5367e490",
+      "input_hash": "5c9c72b97c7b18ce16dc0e2cff23e7e502a7324b7eb75044912b23841595ab00",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/5c9c72b97c7b18ce16dc0e2cff23e7e502a7324b7eb75044912b23841595ab00.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_09973a78356f87de016af2bedafc3c87d1b370910eb4b57b7b",
+      "usage": {
+        "prompt_tokens": 6915,
+        "completion_tokens": 355,
+        "total_tokens": 7270,
+        "prompt_tokens_details": {
+          "cached_tokens": 5888
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 212
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "0e6f7a775c9fa3a30d64e1771e2cb0f1bf5f105cca68cd78bf8ee0cdba479309",
+      "input_hash": "518a403088fd52247660c40242b34006bf882838abd756f450a00bc9425bad2e",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/518a403088fd52247660c40242b34006bf882838abd756f450a00bc9425bad2e.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0d65ce63a1b5c7e5016af2bee7265c87d1b927e9f2ee8d4ec8",
+      "usage": {
+        "prompt_tokens": 6373,
+        "completion_tokens": 263,
+        "total_tokens": 6636,
+        "completion_tokens_details": {
+          "reasoning_tokens": 157
+        }
+      }
+    }
+  ]
+}

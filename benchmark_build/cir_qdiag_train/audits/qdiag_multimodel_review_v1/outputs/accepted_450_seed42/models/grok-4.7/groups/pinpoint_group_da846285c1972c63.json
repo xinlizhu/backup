@@ -1,0 +1,57 @@
+{
+  "group_id": "pinpoint_group_da846285c1972c63",
+  "model": "grok-4.7",
+  "signature": "52913ea34ae01078c58f7a80fc2119b86ef4b6b3449e9e55b21816a5d5d1ccbd",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_da846285c1972c63_query_05691_object_add",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Adds exactly one object, a belt, while preserving the romantic tulle skirt and coral-red constraint. No supplied positive shows a belt, so the added fact is clearly false."
+    },
+    {
+      "negative_id": "pinpoint_group_da846285c1972c63_query_05692_attribute_substitute",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Substitutes only the skirt color from coral red to crimson red. Every supplied positive skirt is pink or white, so crimson red is clearly false."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.7",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "4ccbfec3e7108d36e83b251a7ae37021e3f69b29b35ac555d35f390f3b276ebf",
+      "input_hash": "aa457fd30e39c41471510862b35f31443acc01925b21736739fba6bbb18f2778",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/grok-4.7/cache/validate_group/aa457fd30e39c41471510862b35f31443acc01925b21736739fba6bbb18f2778.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "ed8c9a2a-da23-99de-affa-29d040a09870",
+      "usage": {
+        "prompt_tokens": 5399,
+        "completion_tokens": 157,
+        "total_tokens": 9321,
+        "prompt_tokens_details": {
+          "text_tokens": 2769,
+          "audio_tokens": 0,
+          "image_tokens": 2630,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 3765,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 312580000
+      }
+    }
+  ],
+  "format_warnings": []
+}

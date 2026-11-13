@@ -1,0 +1,129 @@
+{
+  "case_id": "case_3a07d4b9a9e623635fa9",
+  "audit_query_id": "audit_query_084",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_3a07d4b9a9e623635fa9",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows dough in a similar angled work-surface photograph, with a rolling pin on the right."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows dough from an angled view, but no rolling pin is visible on the right or elsewhere."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The image must include a rolling pin on the right-hand side."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "delete_1",
+        "operation": "delete",
+        "semantic_target": "object",
+        "before_span": "must include rolling pin on the right hand side",
+        "after_span": null,
+        "edited_instruction": "Similar angled photograph",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "The requirement to include a rolling pin on the right-hand side is removed.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 shows dough in a similar angled photograph."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows dough in an angled photograph on a work surface."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_3a07d4b9a9e623635fa9",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows dough and a rolling pin on the right; its oblique view is broadly similar to the reference."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows dough from an oblique angle, but no rolling pin is visible, so the requirement to include one is not met."
+    },
+    "verdicts": [
+      {
+        "witness_id": "delete_1",
+        "decision": "reject",
+        "failure_code": "not_single_edit",
+        "witness_type": null,
+        "reason": "The deleted span bundles the rolling-pin presence requirement with its right-side location; removing it deletes more than one independent constraint.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 is an oblique photograph of dough, broadly similar in angle to the reference."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 is an oblique photograph of dough, broadly similar in angle to the reference."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [],
+  "local_checks": [
+    {
+      "witness_id": "delete_1",
+      "accepted": false,
+      "local_failures": [
+        "span_reconstruction_failed",
+        "wrong_witness_type"
+      ],
+      "review_decision": "reject"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "e04c09c7d8846d1c8b1d7b6b4fd47231017d049b6ca869c997a686101497aded",
+      "input_hash": "6273c8499e064f7439c361662ccc51dd2f17c51b0f068b33be2e78d662b60c40",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/6273c8499e064f7439c361662ccc51dd2f17c51b0f068b33be2e78d662b60c40.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0408a950c7af5357016af2bed6166087d1a936a74aa4f84585",
+      "usage": {
+        "prompt_tokens": 8055,
+        "completion_tokens": 1289,
+        "total_tokens": 9344,
+        "completion_tokens_details": {
+          "reasoning_tokens": 1034
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "3321dd6fa1e7915881391013fb437988912ac4db2b2666491a2a461cc2757b38",
+      "input_hash": "b0eaa746c187c5911617d2e0e6dc0095da80f724be53f10cf764fb81a9841e09",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/b0eaa746c187c5911617d2e0e6dc0095da80f724be53f10cf764fb81a9841e09.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_03df030a329b45b9016af2beecbf1087d290d98e5ff9187941",
+      "usage": {
+        "prompt_tokens": 11083,
+        "completion_tokens": 1095,
+        "total_tokens": 12178,
+        "completion_tokens_details": {
+          "reasoning_tokens": 519
+        }
+      }
+    }
+  ]
+}

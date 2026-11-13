@@ -1,0 +1,55 @@
+{
+  "group_id": "pinpoint_group_a56abc90dd6f516f",
+  "model": "claude-haiku-5-5",
+  "signature": "44bb4aae802e19564501a676b733c7e19828d9ced260b7da0428f08b1a359df2",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_a56abc90dd6f516f_query_05256_attribute_delete",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Deletes exactly one attribute constraint ('elegant') from the source text. The negative text 'Keep <img1> layout using <img2> orange blue palette' removes the elegance descriptor while preserving all other semantic content and maintaining fluency. This is a valid single attribute deletion."
+    },
+    {
+      "negative_id": "pinpoint_group_a56abc90dd6f516f_query_05256_predicate_substitute",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "The substitution from 'using' to 'with' changes the relational predicate, but both phrasings remain semantically compatible with the positive image. Both 'layout using palette' and 'layout with palette' describe the same conceptual relationship and do not contradict the reference images, making this distinction insufficient for acceptance."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-haiku-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "610a4431d624f2e7a8002f95c6d6008b7cddf79ab79de86358cd144796728c9d",
+      "input_hash": "8e698bbe27b99f56a709bf0792ebcf9187e7078ef8f5fbd1f9df08db31a49bdf",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/claude-haiku-5-5/cache/validate_group/8e698bbe27b99f56a709bf0792ebcf9187e7078ef8f5fbd1f9df08db31a49bdf.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01LAez1DzNSF2jEKvCasc2O43t",
+      "usage": {
+        "prompt_tokens": 7900,
+        "completion_tokens": 310,
+        "total_tokens": 8210,
+        "prompt_tokens_details": {
+          "cached_tokens": 6158,
+          "cache_creation_tokens": 1738
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_a56abc90dd6f516f_query_05256_predicate_substitute",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 341,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

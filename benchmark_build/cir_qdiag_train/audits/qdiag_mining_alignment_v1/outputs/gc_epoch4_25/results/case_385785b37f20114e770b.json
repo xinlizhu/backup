@@ -1,0 +1,87 @@
+{
+  "case_id": "case_385785b37f20114e770b",
+  "audit_query_id": "audit_query_085",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_385785b37f20114e770b",
+    "case_status": "source_invalid_or_uncertain",
+    "source_on_positive": {
+      "status": "contradicted",
+      "evidence": "The animals sitting on several logs are gorillas, which are apes rather than monkeys. The requested animal category is therefore not supported."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "An adult monkey sits with an infant held against its body on a leaf-covered forest floor; they are not sitting on separate tree trunks."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The monkeys sit on different tree trunks on the ground."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_385785b37f20114e770b",
+    "source_on_positive": {
+      "status": "contradicted",
+      "evidence": "Several gorillas sit on separate fallen or angled tree trunks near the ground. The animals are gorillas (apes), rather than monkeys as specified in the instruction and shown in the reference."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "An adult monkey sits with an infant held against its body on a leaf-covered forest floor. They are not sitting on different tree trunks."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "55a6691e136ef6e6f75ebb0b05319d7e5ba6dc6ad863f0d8f5a72844818d7a58",
+      "input_hash": "7cb77800b89c3f1ff2ce01954bcc716ab7f8e8fe7ac36103a1302bdea92abab4",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/7cb77800b89c3f1ff2ce01954bcc716ab7f8e8fe7ac36103a1302bdea92abab4.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_05479b013ef0b863016af2be07731887d291fdfb809bbed4c4",
+      "usage": {
+        "prompt_tokens": 9010,
+        "completion_tokens": 244,
+        "total_tokens": 9254,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 62
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "254618491bbae2136af575c2ac8c16a2a65ca3ddfc2a61d2672b2491446f84ea",
+      "input_hash": "d1aab7e7a20340fc40af227862155bc1940ca627eb21c718476f69db6ef1543a",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/d1aab7e7a20340fc40af227862155bc1940ca627eb21c718476f69db6ef1543a.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0550dbe212140c07016af2be12e18487d288356e2ba26e96a6",
+      "usage": {
+        "prompt_tokens": 8468,
+        "completion_tokens": 185,
+        "total_tokens": 8653,
+        "completion_tokens_details": {
+          "reasoning_tokens": 65
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,158 @@
+{
+  "case_id": "case_f491431b5c36e3cd6bd4",
+  "audit_query_id": "audit_query_080",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_f491431b5c36e3cd6bd4",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a yellow flower in a vase against a bright, uncluttered setting."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "Image 3 shows yellow flowers in a tall glass vase in a bright indoor setting."
+    },
+    "candidate_relation": "compatible",
+    "violated_source_constraints": [],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "add",
+        "semantic_target": "object",
+        "before_span": null,
+        "after_span": "alongside red flowers",
+        "edited_instruction": "Bright up the room with a yellow flower in a vase alongside red flowers.",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "Red flowers are present alongside the yellow flower.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 shows a single yellow flower and no visible red flowers."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows red flowers beside the tall vase containing yellow flowers."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_f491431b5c36e3cd6bd4",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 clearly shows a yellow flower in a vase; the brightening wording is an intended effect, not a separately verifiable visual constraint."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "Image 3 shows yellow flowers arranged in a tall clear vase, consistent with the source request."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "The insertion of “alongside red flowers” is one new object constraint. Image 2 has no visible red flowers, while Image 3 visibly has red flowers beside the yellow flowers in the vase; the remaining source constraints are preserved.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 shows only a single yellow flower in a vase, with no red flowers alongside it."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows yellow flowers in a clear vase and red flowers arranged immediately beside it."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "add",
+      "semantic_target": "object",
+      "before_span": null,
+      "after_span": "alongside red flowers",
+      "edited_instruction": "Bright up the room with a yellow flower in a vase alongside red flowers.",
+      "witness_type": "addition_disambiguation",
+      "changed_constraint": "Red flowers are present alongside the yellow flower.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "Image 2 shows a single yellow flower and no visible red flowers."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "Image 3 shows red flowers beside the tall vase containing yellow flowers."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "The insertion of “alongside red flowers” is one new object constraint. Image 2 has no visible red flowers, while Image 3 visibly has red flowers beside the yellow flowers in the vase; the remaining source constraints are preserved.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 shows only a single yellow flower in a vase, with no red flowers alongside it."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows yellow flowers in a clear vase and red flowers arranged immediately beside it."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "f346ac0735fdc53605ca635369eee7ef829d7027e80dee1b41679c328a988757",
+      "input_hash": "044f0f8670324f65338fd28446f8ae6cb2feb2b7ca0f34f6a81ab41021bfb24e",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/044f0f8670324f65338fd28446f8ae6cb2feb2b7ca0f34f6a81ab41021bfb24e.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_ack_5917ce71f950c00e4bababc08d5350c4",
+      "usage": {
+        "prompt_tokens": 3832,
+        "completion_tokens": 575,
+        "total_tokens": 4407,
+        "completion_tokens_details": {
+          "reasoning_tokens": 345
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "6ace9feb0205f620734a26f01b4457cd6fbe587d55119838a7f784d1ec34b750",
+      "input_hash": "952e8eeee1342a641f4512406eb24b929e6d587ff1e7f072a8af23cd85a98b50",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/952e8eeee1342a641f4512406eb24b929e6d587ff1e7f072a8af23cd85a98b50.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0c2ba58a80c98852016af2bf01441087d188d6de221f101fdc",
+      "usage": {
+        "prompt_tokens": 7734,
+        "completion_tokens": 460,
+        "total_tokens": 8194,
+        "completion_tokens_details": {
+          "reasoning_tokens": 219
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_85d59859a3a65505",
+  "model": "grok-4.6",
+  "signature": "cb958fa178e5ebcdd33f446ebd46fe25a7c20417ca5539cc74de61fb4df99804",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_85d59859a3a65505_query_00111_object_substitute",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Single fluent object swap of “photo frame” to “mirror”; all supplied positives are frames, not mirrors, so the new fact is clearly false for every one."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.6",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "87e5d12e8eb05ec8308c7e6d612497ef33b6be612a197e8f9d8b67009651e384",
+      "input_hash": "ee13bb29b4ca60a120e6607a7431cedf3658df365d90c86e4f3a9860ba6a67dd",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/grok-4.6/cache/validate_group/ee13bb29b4ca60a120e6607a7431cedf3658df365d90c86e4f3a9860ba6a67dd.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "9816d85c-ed0f-9bef-90bd-702ea85fee0d",
+      "usage": {
+        "prompt_tokens": 4930,
+        "completion_tokens": 82,
+        "total_tokens": 6681,
+        "prompt_tokens_details": {
+          "text_tokens": 2504,
+          "audio_tokens": 0,
+          "image_tokens": 2426,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1669,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 172940000
+      }
+    }
+  ],
+  "format_warnings": []
+}

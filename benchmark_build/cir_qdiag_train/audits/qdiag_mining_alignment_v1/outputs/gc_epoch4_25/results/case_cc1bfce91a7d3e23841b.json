@@ -1,0 +1,90 @@
+{
+  "case_id": "case_cc1bfce91a7d3e23841b",
+  "audit_query_id": "audit_query_086",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_cc1bfce91a7d3e23841b",
+    "case_status": "source_invalid_or_uncertain",
+    "source_on_positive": {
+      "status": "contradicted",
+      "evidence": "T shows a fox seated on its haunches with straight forelegs, resembling the prominent seated cat in R. The matching pose is supported, but the explicit requirement that the fox be standing is contradicted."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows a fox reclining on a wooden support with its forelegs extended forward. It is neither standing nor in the upright seated pose of the prominent cat in R."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The fox must be standing in the same gesture as the reference; C instead has a reclining pose."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_cc1bfce91a7d3e23841b",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "Image 2 shows a fox upright on its haunches with straight forelegs, resembling the prominent seated cat in Image 1. It appears seated rather than standing; the combined requirement of standing in the same gesture is therefore not reliably established."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a fox reclining sideways on a mounted support, with its forelegs extended across the support. This does not match the upright posture of the prominent cat in Image 1 and does not show a standing fox."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "88c37413e9be8934274c893223de0a461e9f4edc916e17476ee4a29e681e8a19",
+      "input_hash": "60bd84d03f245bac7ce3da6130298cba20f583470f9bcadbd4b971b3ef77754c",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/60bd84d03f245bac7ce3da6130298cba20f583470f9bcadbd4b971b3ef77754c.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_00ecebe8b4902696016af2be16dd4487d1a9952c46319c4535",
+      "usage": {
+        "prompt_tokens": 6814,
+        "completion_tokens": 329,
+        "total_tokens": 7143,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 115
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "8f857d9732339307ee6d1c81168a3f284385a9b44b22709750e325b57cc751ff",
+      "input_hash": "bc6905b40cef7edba264c2875c52376d404282d5b118b9616aecffbfed38880d",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/bc6905b40cef7edba264c2875c52376d404282d5b118b9616aecffbfed38880d.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0fa415c46a83a3f4016af2be30b52887d18d6c82d3c7f093df",
+      "usage": {
+        "prompt_tokens": 6272,
+        "completion_tokens": 199,
+        "total_tokens": 6471,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 48
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "group_id": "pinpoint_group_0c83e558b46d9d84",
+  "model": "claude-haiku-5-5",
+  "signature": "44bb4aae802e19564501a676b733c7e19828d9ced260b7da0428f08b1a359df2",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_0c83e558b46d9d84_query_07432_object_delete",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "The deletion of 'mermaid' is a single semantic edit removing one object descriptor. The source text specifies 'royal blue mermaid dress design' and the negative removes the mermaid silhouette constraint while preserving all other elements: the royal blue color, the puff-to-fitted sleeve transformation, and the overall request structure. The negative text remains fluent and meaningful. Image 2 shows a royal blue dress without a mermaid silhouette (it has a full gathered skirt), confirming the edit produces a valid weaker query compatible with the positive image."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-haiku-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "53f3c030bbcd3f7cd49da32ea773e23aa484ac533ec901dcc74b47ff1b1e902d",
+      "input_hash": "be2f2171a9f4feb67bdeff5d77c3683c685ead57b1667fb988569109263faaaa",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/claude-haiku-5-5/cache/validate_group/be2f2171a9f4feb67bdeff5d77c3683c685ead57b1667fb988569109263faaaa.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01XupBs45vSKq2emg7R0QHEcqa",
+      "usage": {
+        "prompt_tokens": 6492,
+        "completion_tokens": 243,
+        "total_tokens": 6735,
+        "prompt_tokens_details": {
+          "cached_tokens": 5060,
+          "cache_creation_tokens": 1428
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_0c83e558b46d9d84_query_07432_object_delete",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 567,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

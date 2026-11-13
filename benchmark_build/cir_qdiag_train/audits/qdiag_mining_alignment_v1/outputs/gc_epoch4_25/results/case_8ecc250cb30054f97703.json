@@ -1,0 +1,161 @@
+{
+  "case_id": "case_8ecc250cb30054f97703",
+  "audit_query_id": "audit_query_083",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_8ecc250cb30054f97703",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Relative to the reference's tube and multiple boxes, T shows one cream container with one matching box."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "C shows one perfume bottle with one matching box, satisfying the requested single-product arrangement."
+    },
+    "candidate_relation": "compatible",
+    "violated_source_constraints": [],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "add",
+        "semantic_target": "predicate",
+        "before_span": null,
+        "after_span": ", with a visible gap between them",
+        "edited_instruction": "Leave a single product with its box, with a visible gap between them",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "The product and its box must have a visible gap between them.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The cream container overlaps the box in the image; there is no visible gap between them."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The single perfume bottle stands beside its matching box with a clearly visible background gap between them."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_8ecc250cb30054f97703",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows one body cream tube with one matching pink box, satisfying the requested single product and its box."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "Image 3 shows one perfume bottle with one matching box; both display the same essence nature branding and face-and-rose design."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "The appended phrase adds one spatial predicate between the existing product and box while preserving the source instruction. Both images satisfy the source; only Image 3 shows a visible gap between the product and its box.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The body cream tube overlaps and occludes the right side of its pink box, with no visible separating gap."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "A clear strip of white background separates the perfume bottle on the right from its matching box on the left."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "add",
+      "semantic_target": "predicate",
+      "before_span": null,
+      "after_span": ", with a visible gap between them",
+      "edited_instruction": "Leave a single product with its box, with a visible gap between them",
+      "witness_type": "addition_disambiguation",
+      "changed_constraint": "The product and its box must have a visible gap between them.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "The cream container overlaps the box in the image; there is no visible gap between them."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "The single perfume bottle stands beside its matching box with a clearly visible background gap between them."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "The appended phrase adds one spatial predicate between the existing product and box while preserving the source instruction. Both images satisfy the source; only Image 3 shows a visible gap between the product and its box.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The body cream tube overlaps and occludes the right side of its pink box, with no visible separating gap."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "A clear strip of white background separates the perfume bottle on the right from its matching box on the left."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "f08b78c197fcc9d66e9e461a71fca7fe34e29a7b9070b683b718e53b7d1bd471",
+      "input_hash": "b45941689b6469227fd3290b9d02c8b2a49740e3e0ba3d91d3511676274a09b1",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/b45941689b6469227fd3290b9d02c8b2a49740e3e0ba3d91d3511676274a09b1.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0b972011346fc235016af2bdf684b887d29636b5517698a68c",
+      "usage": {
+        "prompt_tokens": 8417,
+        "completion_tokens": 626,
+        "total_tokens": 9043,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 302
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "890f48cb9fccc7707db50df7426e477cd5e70be0d7e55ce133b13f408aaaee29",
+      "input_hash": "c47f93941c6ec1aca8a4267ef11ef9200aa188f0fc30d9d188a2b1ab718f64c5",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/c47f93941c6ec1aca8a4267ef11ef9200aa188f0fc30d9d188a2b1ab718f64c5.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_04be6c07e42e6752016af2be0aba2087d1a5fc4c60aa7e9b0f",
+      "usage": {
+        "prompt_tokens": 7945,
+        "completion_tokens": 235,
+        "total_tokens": 8180,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        }
+      }
+    }
+  ]
+}

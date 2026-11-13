@@ -1,0 +1,89 @@
+{
+  "case_id": "case_18f519c9c29d972332ee",
+  "audit_query_id": "audit_query_076",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_18f519c9c29d972332ee",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows one dog on a reddish carpet with a large bone in its mouth."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a shoe on a white background, with no visible dog, carpet, or bone."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "The image should show one dog.",
+      "The dog should be set up on red carpet.",
+      "A bone should be given to the dog."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_18f519c9c29d972332ee",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Compared with the many dogs in the reference, Image 2 shows one dog on a red carpet, chewing a large bone held between its front paws."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a single athletic shoe against a white background. There is no dog, red carpet, or bone."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "923a4628ac098d07e6beeb958295ed4f04f1ac4cfbc710b50ea9e76eae715315",
+      "input_hash": "1298023ad28ada7e9ebc792d3609948dcfe570192898ff44af547b3c129a0c50",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/1298023ad28ada7e9ebc792d3609948dcfe570192898ff44af547b3c129a0c50.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_00a15eb7d9bf7239016af2bfbb949087d0818bd4297b84fe38",
+      "usage": {
+        "prompt_tokens": 28354,
+        "completion_tokens": 247,
+        "total_tokens": 28601,
+        "prompt_tokens_details": {
+          "cached_tokens": 5888
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 109
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "b90acc11a722f49c023d724c14b60da6c8a76b138692b32b99f1ea9ff7810120",
+      "input_hash": "d02e6068f48f76a345ed069f352f4a9fb89c149931e5f7a48c247d60373b4783",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/d02e6068f48f76a345ed069f352f4a9fb89c149931e5f7a48c247d60373b4783.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_08bba699eb958507016af2bfc99dc887d09b5b9c7a1d77969a",
+      "usage": {
+        "prompt_tokens": 27648,
+        "completion_tokens": 107,
+        "total_tokens": 27755,
+        "prompt_tokens_details": {
+          "cached_tokens": 3482
+        }
+      }
+    }
+  ]
+}

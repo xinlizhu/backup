@@ -1,0 +1,92 @@
+{
+  "case_id": "case_f478ae284ee4a49d51f3",
+  "audit_query_id": "audit_query_100",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_f478ae284ee4a49d51f3",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "A shallow, round metal serving bowl contains a prepared dish covered with melted, browned cheese."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The image shows a black athletic shoe on a plain background, with no bowl, prepared dish, or cheese topping."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "A bowl is present.",
+      "The bowl contains a prepared dish.",
+      "The dish has cheese on top."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_f478ae284ee4a49d51f3",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "A round, bowl-like metal vessel contains a cooked dish covered with melted cheese browned on top."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The image shows a black athletic shoe against a light background, with no bowl, food dish, or cheese."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "93682d33319b33ed19e3c81a73a5f62162ad120fee0f65f16852d3f1e345f23a",
+      "input_hash": "0dd952ae21bec617048ad4f86e471cbabfbdf62191c9572fbb7ce97c519aa0e9",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/0dd952ae21bec617048ad4f86e471cbabfbdf62191c9572fbb7ce97c519aa0e9.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0fd4d1a4eaea769b016af2bdf8f20c87d28e49fb66243ea6dd",
+      "usage": {
+        "prompt_tokens": 15673,
+        "completion_tokens": 192,
+        "total_tokens": 15865,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 17
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "71dbf13f3b9e6474a2982f0591304a22764693ed792afd9ce066bfbc49922264",
+      "input_hash": "94bef9cb938fd21d2169ad7daa5d7e9cd094bb04f635b16d388ebdef465cb908",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/94bef9cb938fd21d2169ad7daa5d7e9cd094bb04f635b16d388ebdef465cb908.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_08c2f4861a9336e4016af2be03735087d2b60eff43e67c7c13",
+      "usage": {
+        "prompt_tokens": 15131,
+        "completion_tokens": 137,
+        "total_tokens": 15268,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 41
+        }
+      }
+    }
+  ]
+}

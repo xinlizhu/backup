@@ -1,0 +1,49 @@
+{
+  "group_id": "pinpoint_group_bda1b78dd427c65e",
+  "model": "claude-sonnet-5-5",
+  "signature": "aff20e5a5733d87f80fd7515c25d92c77cff20d4f50c9f8dbf4123bfdabed97b",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_bda1b78dd427c65e_query_07364_attribute_delete",
+      "decision": "reject",
+      "failure_code": "not_single_edit",
+      "reason": "The deletion of 'tartan' removes a pattern attribute, but the reference image (Image 1) shows a coat with mixed patterns including tartan plaid. The positive images (2-5) all display tartan plaid coats. Removing 'tartan' from the query fundamentally changes the semantic constraint from a specific pattern match to a generic coat search, making this more than a single attribute deletion—it's a constraint removal that alters the surviving meaning of the query."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-sonnet-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "9563d38eed1acb6d3c2d2259138286f469882720cda5c52045c0086374750e46",
+      "input_hash": "49226386e950673506c63753cf9b462209773ed112d37a618a737fe900ae68c7",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/claude-sonnet-5-5/cache/validate_group/49226386e950673506c63753cf9b462209773ed112d37a618a737fe900ae68c7.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01TX8CF54ZQt2tiMnnmxT57xau",
+      "usage": {
+        "prompt_tokens": 8290,
+        "completion_tokens": 217,
+        "total_tokens": 8507,
+        "prompt_tokens_details": {
+          "cached_tokens": 6463,
+          "cache_creation_tokens": 1823
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_bda1b78dd427c65e_query_07364_attribute_delete",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 461,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

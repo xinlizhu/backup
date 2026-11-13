@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_3bc3d8a38dd5bad1",
+  "model": "grok-4.7",
+  "signature": "52913ea34ae01078c58f7a80fc2119b86ef4b6b3449e9e55b21816a5d5d1ccbd",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_3bc3d8a38dd5bad1_query_02588_object_delete",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Deleting “kitchen” is one object constraint; the result is fluent, reconstructs the source, and is a strictly weaker request that preserves all remaining meaning."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.7",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "7bc679308a65c969869ce1227fbe1813d587fa8f249fd64dd2042f8b6d85f1f5",
+      "input_hash": "ac1f73582db11ff2d3cb20cfd1751b41c132123d5e668b9eb77f52d525d0def2",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/grok-4.7/cache/validate_group/ac1f73582db11ff2d3cb20cfd1751b41c132123d5e668b9eb77f52d525d0def2.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "db6ad6a6-763d-9461-9d43-5076eadf2d73",
+      "usage": {
+        "prompt_tokens": 3155,
+        "completion_tokens": 82,
+        "total_tokens": 4636,
+        "prompt_tokens_details": {
+          "text_tokens": 2371,
+          "audio_tokens": 0,
+          "image_tokens": 784,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1399,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 121240000
+      }
+    }
+  ],
+  "format_warnings": []
+}

@@ -1,0 +1,177 @@
+{
+  "case_id": "case_94a3aeac18c26f7052ec",
+  "audit_query_id": "audit_query_082",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_94a3aeac18c26f7052ec",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The locomotive is viewed from its cab-end rear corner, with the long hood extending away to the right. Multiple white stripes mark the end and lower side, compared with the reference's single horizontal stripe."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The candidate shows the locomotive's front nose and windshield from a front corner, rather than its rear corner. Multiple white horizontal stripes are visible along the side."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "Show the locomotive from its back corner."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "attribute",
+        "before_span": "back",
+        "after_span": "front",
+        "edited_instruction": "Turn to face front corner and add white strips.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "Change the locomotive's displayed orientation from a back-corner view to a front-corner view.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The visible end is the cab-end rear corner, with the long hood extending away; it is not a front-corner view. White stripes are present."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The nose, front windshield, and one side are visible in a front-corner view. Multiple white stripes run along the side."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "operation": "delete",
+        "semantic_target": "attribute",
+        "before_span": "Turn to face back corner and",
+        "after_span": null,
+        "edited_instruction": "add white strips.",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "Remove the required back-corner orientation while retaining the addition of white stripes.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Numerous white diagonal stripes appear on the locomotive's end and lower side, beyond the reference's single horizontal stripe."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Multiple white horizontal stripes run along the blue locomotive's side, compared with the reference's single horizontal stripe."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_94a3aeac18c26f7052ec",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "T visibly has white diagonal stripes and shows an end and side of a locomotive. However, the visible end cannot reliably be identified as the requested 'back corner' relative to R; a reversed screen direction alone does not establish a rear view."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows the locomotive's front nose, windshields, and front pilot in a three-quarter view, rather than a back corner. White horizontal stripes are visible along its side."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "reject",
+        "failure_code": "source_invalid_or_uncertain",
+        "witness_type": null,
+        "reason": "Replacing 'back' with 'front' is a single textual change, and C visibly presents a front corner with white stripes. But T's required back-corner view is not reliably established, so neither source support on T nor the necessary opposing viewpoint pattern is verified.",
+        "edited_on_positive": {
+          "status": "uncertain",
+          "evidence": "White diagonal stripes are clear, but the image does not reliably establish whether the visible locomotive end is its front or back relative to the requested viewpoint."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C presents a clear front three-quarter view, including the nose and front windshields, and has white horizontal side stripes."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "decision": "reject",
+        "failure_code": "source_invalid_or_uncertain",
+        "witness_type": null,
+        "reason": "The deletion reconstructs 'add white strips.' and both images visibly satisfy that remaining constraint. Nevertheless, deletion relaxation requires verified support for the original instruction on T, whose back-corner constraint remains uncertain.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "T has conspicuous white diagonal stripes across the visible end and along the locomotive's lower side."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C has white horizontal stripes along the blue locomotive's side."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": false,
+      "local_failures": [
+        "wrong_witness_type",
+        "wrong_support_pattern"
+      ],
+      "review_decision": "reject"
+    },
+    {
+      "witness_id": "w2",
+      "accepted": false,
+      "local_failures": [
+        "wrong_witness_type",
+        "wrong_support_pattern"
+      ],
+      "review_decision": "reject"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "d9540589dbfc6360fd9a08da550a78d4b7d99f928ec20a6d05e5a705c5e04a6a",
+      "input_hash": "2243dba1f20c7dcfa44ddb8ab0bb31889208beccca3c3a887a2ec242f784c173",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/2243dba1f20c7dcfa44ddb8ab0bb31889208beccca3c3a887a2ec242f784c173.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_023faa95df5ca81b016af2be3f7a7887d18d1f6270a822794f",
+      "usage": {
+        "prompt_tokens": 7055,
+        "completion_tokens": 819,
+        "total_tokens": 7874,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 241
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "206ace0b9d50175a612a466aba9519dd8d252b6ca36956b5fb92066c0fb32fb4",
+      "input_hash": "158d4f0ee4c02146fbf11e19b6882816eeffadef98171a0b16eaa06e318cfcbd",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/158d4f0ee4c02146fbf11e19b6882816eeffadef98171a0b16eaa06e318cfcbd.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_05288360fb98a559016af2be6d1f4487d2ba1b5e00fae6582b",
+      "usage": {
+        "prompt_tokens": 6636,
+        "completion_tokens": 696,
+        "total_tokens": 7332,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 168
+        }
+      }
+    }
+  ]
+}

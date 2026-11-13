@@ -1,0 +1,57 @@
+{
+  "group_id": "pinpoint_group_cbe3528dc63e5180",
+  "model": "grok-4.6",
+  "signature": "cb958fa178e5ebcdd33f446ebd46fe25a7c20417ca5539cc74de61fb4df99804",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_cbe3528dc63e5180_query_00915_object_add",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Adding \"with a blazer\" is one fluent object edit and reconstructs the text. No supplied positive shows a blazer, so the added fact is clearly false."
+    },
+    {
+      "negative_id": "pinpoint_group_cbe3528dc63e5180_query_00917_attribute_substitute",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Replacing \"casual\" with \"formal\" is a single attribute edit. Every supplied positive shows casual or athletic clothing, not men's formal attire."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.6",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "0e8c176c622017694b394dac5dd935a6620f43b09ae3a1536da318a386e85c11",
+      "input_hash": "9912ed18560e8aa1ac08828f25de2a6e5180251b5765083e851845a0990627fc",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/grok-4.6/cache/validate_group/9912ed18560e8aa1ac08828f25de2a6e5180251b5765083e851845a0990627fc.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "a743d427-30b8-9bed-aee9-434a29aa30f8",
+      "usage": {
+        "prompt_tokens": 5032,
+        "completion_tokens": 157,
+        "total_tokens": 7854,
+        "prompt_tokens_details": {
+          "text_tokens": 2646,
+          "audio_tokens": 0,
+          "image_tokens": 2386,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2665,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 239240000
+      }
+    }
+  ],
+  "format_warnings": []
+}

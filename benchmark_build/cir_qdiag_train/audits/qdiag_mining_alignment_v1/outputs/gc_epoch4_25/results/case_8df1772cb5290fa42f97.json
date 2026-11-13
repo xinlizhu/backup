@@ -1,0 +1,88 @@
+{
+  "case_id": "case_8df1772cb5290fa42f97",
+  "audit_query_id": "audit_query_084",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_8df1772cb5290fa42f97",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The dough is photographed from an oblique, slightly elevated angle similar to R, and a wooden rolling pin is clearly visible on the right."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows a dog outdoors in a side-on view rather than a similarly angled dough scene, and no rolling pin is visible on the right."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "Must include a rolling pin on the right-hand side.",
+      "The photograph must have an angle similar to R."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_8df1772cb5290fa42f97",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows dough photographed at an angle, with a rolling pin clearly visible on the right; Image 1 also shows dough from an angled view."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a dog in a field, not a similar angled photograph of dough with a rolling pin on the right."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "f348ec3d8d9d83d82b61748a1c658431440a38657159ee1e9440ac12809d6772",
+      "input_hash": "930159761928e06aa6776bef169179274bcd120a5fa84e8de5519fe4802a574b",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/930159761928e06aa6776bef169179274bcd120a5fa84e8de5519fe4802a574b.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0ecb9647e08c7813016af2bfa07cb087d099580323c23d2690",
+      "usage": {
+        "prompt_tokens": 7371,
+        "completion_tokens": 290,
+        "total_tokens": 7661,
+        "prompt_tokens_details": {
+          "cached_tokens": 3830
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 100
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "c01db2130bcde3552557ae7d929bf716592a71c8ed0ab38c45bef3532f175baa",
+      "input_hash": "33a9ebcec9774f23f709913ea46f887a161bd35c1d2bf4999455ac0ee791e134",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/33a9ebcec9774f23f709913ea46f887a161bd35c1d2bf4999455ac0ee791e134.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_01ed4b1962e874ec016af2bfab61e087d19f8c8b7da68e2a55",
+      "usage": {
+        "prompt_tokens": 3604,
+        "completion_tokens": 250,
+        "total_tokens": 3854,
+        "completion_tokens_details": {
+          "reasoning_tokens": 139
+        }
+      }
+    }
+  ]
+}

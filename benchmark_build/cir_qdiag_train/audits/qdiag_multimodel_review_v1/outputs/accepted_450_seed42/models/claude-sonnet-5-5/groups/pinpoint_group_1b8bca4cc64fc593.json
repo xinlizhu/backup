@@ -1,0 +1,49 @@
+{
+  "group_id": "pinpoint_group_1b8bca4cc64fc593",
+  "model": "claude-sonnet-5-5",
+  "signature": "aff20e5a5733d87f80fd7515c25d92c77cff20d4f50c9f8dbf4123bfdabed97b",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_1b8bca4cc64fc593_query_05329_object_substitute",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "The substitute changes 'silhouettes' to 'portraits'. Image 1 shows a person in minimalist clothing (white/navy outfit), which can be interpreted as either a silhouette or portrait. Multiple positive images (3, 4, 5, 6) show clothing items with floral and patterned designs in warm/tomato tones. The term 'portraits' remains compatible with retrieving images of people wearing clothing in warm tomato tones, as seen in the positives, making this edit not definitively false across all supplied positives."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-sonnet-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "b35c7bb7b7a8bdfb3b5a957a7a64abcae794a01a08eeb40a87c1ba0239f7c629",
+      "input_hash": "6eaf5d0d7c6ef2e600178a3348f19faeccc8b3e75822da9c28827c7b5ca90b1e",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/claude-sonnet-5-5/cache/validate_group/6eaf5d0d7c6ef2e600178a3348f19faeccc8b3e75822da9c28827c7b5ca90b1e.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01NZY2DtrmTwmje4xXBiCtbDwe",
+      "usage": {
+        "prompt_tokens": 9507,
+        "completion_tokens": 227,
+        "total_tokens": 9734,
+        "prompt_tokens_details": {
+          "cached_tokens": 7412,
+          "cache_creation_tokens": 2091
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_1b8bca4cc64fc593_query_05329_object_substitute",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 503,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

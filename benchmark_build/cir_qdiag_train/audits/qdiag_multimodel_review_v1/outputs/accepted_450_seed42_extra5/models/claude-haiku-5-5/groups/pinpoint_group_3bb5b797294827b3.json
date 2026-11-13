@@ -1,0 +1,49 @@
+{
+  "group_id": "pinpoint_group_3bb5b797294827b3",
+  "model": "claude-haiku-5-5",
+  "signature": "44bb4aae802e19564501a676b733c7e19828d9ced260b7da0428f08b1a359df2",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_3bb5b797294827b3_query_06606_predicate_add",
+      "decision": "reject",
+      "failure_code": "not_visually_verifiable",
+      "reason": "The added predicate 'with the boots angled inward' cannot be reliably verified from the supplied positive images. Images 2-5 show boots from various angles (rear, front, side views) but none clearly demonstrate toe-inward angle positioning in a way that definitively distinguishes this as a verifiable visual constraint versus ambiguous perspective."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-haiku-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "d442908f995b56feb32743365a083bbc3cfb1a98780a619394eaba8f70b26da0",
+      "input_hash": "3bf0480042c4394b0caf6a1360486ae282b2b6fbd75b42787fd0e5d444f11aaa",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/claude-haiku-5-5/cache/validate_group/3bf0480042c4394b0caf6a1360486ae282b2b6fbd75b42787fd0e5d444f11aaa.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01P6BP1DcPSje8EnhYFKgQ4xNb",
+      "usage": {
+        "prompt_tokens": 7865,
+        "completion_tokens": 175,
+        "total_tokens": 8040,
+        "prompt_tokens_details": {
+          "cached_tokens": 6131,
+          "cache_creation_tokens": 1730
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_3bb5b797294827b3_query_06606_predicate_add",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 349,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

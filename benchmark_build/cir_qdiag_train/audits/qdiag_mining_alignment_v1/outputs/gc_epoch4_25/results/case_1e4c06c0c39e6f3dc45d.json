@@ -1,0 +1,89 @@
+{
+  "case_id": "case_1e4c06c0c39e6f3dc45d",
+  "audit_query_id": "audit_query_088",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_1e4c06c0c39e6f3dc45d",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a large bird with a long, dark neck standing on rocky dirt; relative to the bird in Image 1, it is another bird."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows colorful, smaller-looking parrots among branches, with no visible long black neck or rocky dirt setting."
+    },
+    "candidate_relation": "multiple_constraint_conflict",
+    "violated_source_constraints": [
+      "large bird",
+      "longer black neck",
+      "sitting in a rocky dirt area"
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_1e4c06c0c39e6f3dc45d",
+    "source_on_positive": {
+      "status": "contradicted",
+      "evidence": "The large bird has a visibly longer, dark neck than the reference and is on rocky dirt, but it is standing upright on its legs rather than sitting."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The candidate shows colorful parrots perched among leafy tree branches, without long black necks or a rocky dirt setting."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "849b1203f273e4bd8d430c55a085dfabd63d6b3fd7817c26e2dbea515c141c5b",
+      "input_hash": "ef5e46341bfe3c0b1abefea7fe38e0b26e6cecaa03fffeb0e67522544f950abd",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/ef5e46341bfe3c0b1abefea7fe38e0b26e6cecaa03fffeb0e67522544f950abd.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0d3d1f1f0a3dc621016af2bfb7518487d19fa868da0ff392b0",
+      "usage": {
+        "prompt_tokens": 7825,
+        "completion_tokens": 385,
+        "total_tokens": 8210,
+        "completion_tokens_details": {
+          "reasoning_tokens": 233
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "fcc8666efc04ad77e5c763a1dd119597dc03a7fac3f24f92b1e6f3d36a71577b",
+      "input_hash": "7b693d2049ba14284856e191e69045e19d4ddb73a16adb544fc0289fea4787ab",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/7b693d2049ba14284856e191e69045e19d4ddb73a16adb544fc0289fea4787ab.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0571903d44b11f4a016af2bfc2e58487d2ac31066a1ce057d6",
+      "usage": {
+        "prompt_tokens": 7119,
+        "completion_tokens": 141,
+        "total_tokens": 7260,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 25
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "case_id": "case_22e62e4800808cd30182",
+  "audit_query_id": "audit_query_095",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_22e62e4800808cd30182",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows one bird with its body raised above the water and its mouth open; the water appears grey."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a dark marine animal holding prey, not one bird with its mouth open above the water; the water appears greyish."
+    },
+    "candidate_relation": "multiple_constraint_conflict",
+    "violated_source_constraints": [
+      "Only one bird remains: Image 3 shows no bird.",
+      "The remaining bird is raised out of the water with its mouth open: no such bird is visible in Image 3."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_22e62e4800808cd30182",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "Image 2 shows one bird with its wings spread, beak open, and grey-brown water. It does not clearly show the bird raised out of the water; that constraint is visually ambiguous."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a dark animal in the water holding or eating prey; no bird is visible, and the water appears grey-brown."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "df0177e3cc521bb1360061b287b48215e5f4a0d3cfdf643a44fdd4016e0e8bb4",
+      "input_hash": "26d38c8b1139bc47889d45c3b0932610e327f13abecc083dc15eb3e5c899ddbd",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/26d38c8b1139bc47889d45c3b0932610e327f13abecc083dc15eb3e5c899ddbd.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_00037629ec3d9760016af2bf09237887d18f819c227bbbff8e",
+      "usage": {
+        "prompt_tokens": 11726,
+        "completion_tokens": 460,
+        "total_tokens": 12186,
+        "prompt_tokens_details": {
+          "cached_tokens": 5888
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 299
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "79a3653107963c5148265f38f61616addf076c296b655e6324ed415fff63229a",
+      "input_hash": "8805801dce29d856d2a72c182795faab2470d851ba45f033bb8d847a462e7d92",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/8805801dce29d856d2a72c182795faab2470d851ba45f033bb8d847a462e7d92.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_07b415a8871c83eb016af2bf1c53a087d0bd63e847557318a9",
+      "usage": {
+        "prompt_tokens": 11184,
+        "completion_tokens": 121,
+        "total_tokens": 11305
+      }
+    }
+  ]
+}

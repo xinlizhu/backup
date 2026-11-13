@@ -1,0 +1,63 @@
+{
+  "group_id": "pinpoint_group_8c6f5fb07a4318b3",
+  "model": "grok-4.7",
+  "signature": "52913ea34ae01078c58f7a80fc2119b86ef4b6b3449e9e55b21816a5d5d1ccbd",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_8c6f5fb07a4318b3_query_05536_predicate_add",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Adding “beside it” is one fluent spatial-predicate edit. None of the bedroom positives shows the garden scene with the crochet beside it, so the new fact is clearly false."
+    },
+    {
+      "negative_id": "pinpoint_group_8c6f5fb07a4318b3_query_05536_predicate_substitute",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Replacing “with” with “beside” is a single relation edit and remains fluent. No positive shows the garden beside the crochet, so the substituted fact is clearly false."
+    },
+    {
+      "negative_id": "pinpoint_group_8c6f5fb07a4318b3_query_05539_attribute_add",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "“Oversized” is not clearly false for every positive: images 4 and 6 have large, stacked pillow arrangements compatible with oversized pillows."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.7",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "f1400ffdbf732ad8b98d76a42e0833ee76ad568e79bf378e86c21cec64f83afd",
+      "input_hash": "c6d831f1b87b378f8cf9c16393f72128785c3ac28879a6ecdf07ff307425bf26",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/grok-4.7/cache/validate_group/c6d831f1b87b378f8cf9c16393f72128785c3ac28879a6ecdf07ff307425bf26.json",
+      "cached": false,
+      "attempts": 2,
+      "request_id": "06ca00d4-9a78-97ea-8748-3a13b7d02fa0",
+      "usage": {
+        "prompt_tokens": 7037,
+        "completion_tokens": 254,
+        "total_tokens": 11305,
+        "prompt_tokens_details": {
+          "text_tokens": 2793,
+          "audio_tokens": 0,
+          "image_tokens": 4244,
+          "cached_tokens": 6912
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 4014,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 293140000
+      }
+    }
+  ],
+  "format_warnings": []
+}

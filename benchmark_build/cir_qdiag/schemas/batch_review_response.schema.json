@@ -1,0 +1,50 @@
+{
+  "$defs": {
+    "CandidateReview": {
+      "additionalProperties": false,
+      "properties": {
+        "negative_id": {
+          "minLength": 1,
+          "title": "Negative Id",
+          "type": "string"
+        },
+        "reason": {
+          "maxLength": 400,
+          "minLength": 1,
+          "title": "Reason",
+          "type": "string"
+        }
+      },
+      "required": [
+        "negative_id",
+        "reason"
+      ],
+      "title": "CandidateReview",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "description": "A single partition of all generated candidates.",
+  "properties": {
+    "rejected": {
+      "items": {
+        "$ref": "#/$defs/CandidateReview"
+      },
+      "title": "Rejected",
+      "type": "array"
+    },
+    "selected": {
+      "items": {
+        "$ref": "#/$defs/CandidateReview"
+      },
+      "title": "Selected",
+      "type": "array"
+    }
+  },
+  "required": [
+    "selected",
+    "rejected"
+  ],
+  "title": "BatchReviewResponse",
+  "type": "object"
+}

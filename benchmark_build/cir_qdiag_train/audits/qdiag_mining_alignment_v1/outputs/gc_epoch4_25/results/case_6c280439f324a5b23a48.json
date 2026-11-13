@@ -1,0 +1,164 @@
+{
+  "case_id": "case_6c280439f324a5b23a48",
+  "audit_query_id": "audit_query_096",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_6c280439f324a5b23a48",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Two yellow school buses are parked beside one another, with both fronts clearly visible."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "Several yellow school buses are parked adjacent to one another in a row, facing the camera with their fronts visible."
+    },
+    "candidate_relation": "compatible",
+    "violated_source_constraints": [],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "add",
+        "semantic_target": "object",
+        "before_span": null,
+        "after_span": ", with at least four buses visible",
+        "edited_instruction": "Show the front of the school buses and park them adjacent to each other, with at least four buses visible.",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "Adds a minimum visible count of four buses; the original instruction specifies no such minimum.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Only two buses are visible, although their fronts and adjacent parking satisfy the retained constraints."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "At least four buses are clearly visible, parked alongside one another with their fronts facing the camera."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_6c280439f324a5b23a48",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Two yellow school buses are parked beside each other, with both fronts clearly visible."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "A row of yellow school buses is parked side by side, facing the camera with their fronts visible."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "The supplied span inserts one new object-count constraint while preserving the front-view and adjacency requirements. Both images satisfy the original instruction; only the candidate satisfies the added minimum of four visible buses.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Only two school buses are visible, so the requirement for at least four visible buses fails."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "At least four complete bus fronts are visible in the adjacent row, with additional partial buses at the image edges."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "add",
+      "semantic_target": "object",
+      "before_span": null,
+      "after_span": ", with at least four buses visible",
+      "edited_instruction": "Show the front of the school buses and park them adjacent to each other, with at least four buses visible.",
+      "witness_type": "addition_disambiguation",
+      "changed_constraint": "Adds a minimum visible count of four buses; the original instruction specifies no such minimum.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "Only two buses are visible, although their fronts and adjacent parking satisfy the retained constraints."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "At least four buses are clearly visible, parked alongside one another with their fronts facing the camera."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "The supplied span inserts one new object-count constraint while preserving the front-view and adjacency requirements. Both images satisfy the original instruction; only the candidate satisfies the added minimum of four visible buses.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Only two school buses are visible, so the requirement for at least four visible buses fails."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "At least four complete bus fronts are visible in the adjacent row, with additional partial buses at the image edges."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "8f45b195883741a23e32e93c92c3a389e9e90af384e1279a390e4aea17836534",
+      "input_hash": "5f9a60b97f9af35fa1107b715ccead78ab3c842eacb5e855c868cc27cc3feff0",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/5f9a60b97f9af35fa1107b715ccead78ab3c842eacb5e855c868cc27cc3feff0.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_055a7d2be7bfe248016af2be85b2c087d1a0f4b8d62b92e1bd",
+      "usage": {
+        "prompt_tokens": 7720,
+        "completion_tokens": 586,
+        "total_tokens": 8306,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 247
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "e1423121ba4238c03a40ed940ecd00200a4aec22440b0c91f90229e33cca3c89",
+      "input_hash": "d70da7a489df6e72f8318907805f8bd2bffccad0ef61d292b79a9a8ece937e23",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/d70da7a489df6e72f8318907805f8bd2bffccad0ef61d292b79a9a8ece937e23.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0b4180cd1fea2c14016af2beab09a487d1b74e84e9301ad209",
+      "usage": {
+        "prompt_tokens": 7255,
+        "completion_tokens": 312,
+        "total_tokens": 7567,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 26
+        }
+      }
+    }
+  ]
+}

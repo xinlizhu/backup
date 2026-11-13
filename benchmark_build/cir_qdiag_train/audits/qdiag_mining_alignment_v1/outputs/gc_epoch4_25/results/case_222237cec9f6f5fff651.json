@@ -1,0 +1,91 @@
+{
+  "case_id": "case_222237cec9f6f5fff651",
+  "audit_query_id": "audit_query_088",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_222237cec9f6f5fff651",
+    "case_status": "source_invalid_or_uncertain",
+    "source_on_positive": {
+      "status": "contradicted",
+      "evidence": "T shows a large bird with a visibly longer, dark neck than R on rocky dirt, but it is standing on visible legs rather than sitting."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows a large penguin standing on rocky ground, rather than sitting. Its neck has conspicuous gray, yellow, and white areas rather than the specified black neck; greater neck length relative to R is unclear."
+    },
+    "candidate_relation": "multiple_constraint_conflict",
+    "violated_source_constraints": [
+      "The bird is sitting.",
+      "The bird has a black neck."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_222237cec9f6f5fff651",
+    "source_on_positive": {
+      "status": "contradicted",
+      "evidence": "The large bird has a visibly longer, dark neck than the reference and is on rocky dirt, but it is standing on visible legs rather than sitting."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The penguin is standing on visible feet on rocky ground rather than sitting. Its neck is gray with black and yellow markings, and does not show the elongated black neck requested relative to the reference."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "8070fa03a4f2b2332826a2e27b30c4d5943bc0c1ac9c6c7cb128514d2769ec7c",
+      "input_hash": "3d18fbfa12804a728f4e139464b189f62c2f20e55e522ca6af6b0fa8faa9b000",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/3d18fbfa12804a728f4e139464b189f62c2f20e55e522ca6af6b0fa8faa9b000.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_09d1f1cbd7888b21016af2be09f58487d2bcadaf95ca1c2e13",
+      "usage": {
+        "prompt_tokens": 8740,
+        "completion_tokens": 278,
+        "total_tokens": 9018,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 75
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "bd8fa53a0441ecc61110eb1d03ed4bf50530c8988ae18beacd1e1b3efa5695f7",
+      "input_hash": "8e486f46b86192c5b201803fb3ee5072b0f47f9b26a70adf89f65061ea0ebe62",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/8e486f46b86192c5b201803fb3ee5072b0f47f9b26a70adf89f65061ea0ebe62.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0487a37729d57e4f016af2be2ffd3487d1afbbe8a42db30e80",
+      "usage": {
+        "prompt_tokens": 8198,
+        "completion_tokens": 155,
+        "total_tokens": 8353,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 30
+        }
+      }
+    }
+  ]
+}

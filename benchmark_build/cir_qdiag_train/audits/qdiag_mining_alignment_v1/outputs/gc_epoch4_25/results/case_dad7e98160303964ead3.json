@@ -1,0 +1,163 @@
+{
+  "case_id": "case_dad7e98160303964ead3",
+  "audit_query_id": "audit_query_080",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_dad7e98160303964ead3",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "A bright yellow flower stands in a white vase, providing the colorful decorative accent requested relative to the reference's pale blossoms."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The vase holds bare branches decorated with glowing yellow lights; no yellow flower is visible."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The vase decoration must include a yellow flower."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "object",
+        "before_span": "flower",
+        "after_span": "light arrangement",
+        "edited_instruction": "Bright up the room with a yellow light arrangement in a vase.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "The yellow decoration in the vase changes from a flower to a light arrangement.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The vase contains a yellow flower, with no light arrangement visible."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Branches held in a floor vase carry numerous glowing yellow lights, forming a light arrangement that brightens the room."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_dad7e98160303964ead3",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a bright yellow flower with green leaves in a white vase, replacing the reference's pale blossoms with a yellow floral accent."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows bare branches strung with glowing yellow lights in a floor vase. There is no yellow flower."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing 'flower' with 'light arrangement' reconstructs the edited instruction through one object substitution. The yellow attribute and vase relation remain intact. The positive contains a yellow flower, while the candidate contains an arrangement of yellow lights.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The white vase holds a yellow flower and leaves, with no light arrangement."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Numerous glowing yellow lights are arranged along branches held in a gray floor vase, providing a bright decorative accent in the room."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "substitute",
+      "semantic_target": "object",
+      "before_span": "flower",
+      "after_span": "light arrangement",
+      "edited_instruction": "Bright up the room with a yellow light arrangement in a vase.",
+      "witness_type": "substitution_contrast",
+      "changed_constraint": "The yellow decoration in the vase changes from a flower to a light arrangement.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "The vase contains a yellow flower, with no light arrangement visible."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "Branches held in a floor vase carry numerous glowing yellow lights, forming a light arrangement that brightens the room."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing 'flower' with 'light arrangement' reconstructs the edited instruction through one object substitution. The yellow attribute and vase relation remain intact. The positive contains a yellow flower, while the candidate contains an arrangement of yellow lights.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The white vase holds a yellow flower and leaves, with no light arrangement."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Numerous glowing yellow lights are arranged along branches held in a gray floor vase, providing a bright decorative accent in the room."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "72d08d729e895c051cfa8a8a823d298fb8592d768f80c809ef73f0010ba766e2",
+      "input_hash": "c8fa339308fa94fc736a747fe85fb70c1762639973870fe730bacd44aeda0f30",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/c8fa339308fa94fc736a747fe85fb70c1762639973870fe730bacd44aeda0f30.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0aa0d12f531d7b28016af2bd928ac487d1bd8a76b03a6bc8f3",
+      "usage": {
+        "prompt_tokens": 8083,
+        "completion_tokens": 558,
+        "total_tokens": 8641,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 215
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "a320903c6d1c98a7cf5d230bafe931dad4b022291dcbd67765aa542779a88a2a",
+      "input_hash": "9401da92d62a3cd3c1f6a1335183d1feae845312847ef8cd63ff95620d826d10",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/9401da92d62a3cd3c1f6a1335183d1feae845312847ef8cd63ff95620d826d10.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0b49b34be7a6432e016af2bda32c0c87d1ab7f788d614980fc",
+      "usage": {
+        "prompt_tokens": 7607,
+        "completion_tokens": 306,
+        "total_tokens": 7913,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        }
+      }
+    }
+  ]
+}

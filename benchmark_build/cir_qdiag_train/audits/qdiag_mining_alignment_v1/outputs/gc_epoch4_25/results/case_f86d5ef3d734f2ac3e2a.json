@@ -1,0 +1,92 @@
+{
+  "case_id": "case_f86d5ef3d734f2ac3e2a",
+  "audit_query_id": "audit_query_089",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_f86d5ef3d734f2ac3e2a",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows several buses, including a heavily fire-damaged bus with charring around its front; the scene is consistent with a bus lot."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a train at a station and a water ATM, not a bus lot or buses with fire damage."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "bus parking lot",
+      "three buses",
+      "fire damage to the front ends"
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_f86d5ef3d734f2ac3e2a",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "The photo shows parked school buses with severe charring and exposed structures at the fronts of central buses. However, three distinct buses with burned front ends cannot be reliably counted because the buses overlap and are partly obscured."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The photo shows a passenger train beside a covered railway platform and a drinking-water vending machine, rather than a bus parking lot with three fire-damaged buses."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "c387b12ea8eb4a186930df2ec03e921df1a6587db05cfe6c405ed6c433f18228",
+      "input_hash": "5d9fd2cc18a7152afa87cdab6fb95ed4d8c2c81d70507915f237983e74ea043e",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/5d9fd2cc18a7152afa87cdab6fb95ed4d8c2c81d70507915f237983e74ea043e.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0eacef50ac4afb6b016af2bf504dec87d293f1b4a1fa7ede30",
+      "usage": {
+        "prompt_tokens": 7328,
+        "completion_tokens": 398,
+        "total_tokens": 7726,
+        "prompt_tokens_details": {
+          "cached_tokens": 5888
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 254
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "99d7e0b87114fe9f7399ef4897d605c14e8fa4ed6a6bb0353c18da772a41137e",
+      "input_hash": "59793a3f59012613986b95d27765e810d17bf6d2ca6e3b92a0ee5f2b15bd648b",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/59793a3f59012613986b95d27765e810d17bf6d2ca6e3b92a0ee5f2b15bd648b.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_03720af648cf140b016af2bf597c8887d186a405bef5306e7e",
+      "usage": {
+        "prompt_tokens": 6622,
+        "completion_tokens": 207,
+        "total_tokens": 6829,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 74
+        }
+      }
+    }
+  ]
+}

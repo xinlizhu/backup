@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_155ac83280a75ef6",
+  "model": "grok-4.6",
+  "signature": "cb958fa178e5ebcdd33f446ebd46fe25a7c20417ca5539cc74de61fb4df99804",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_155ac83280a75ef6_query_00060_object_delete",
+      "decision": "reject",
+      "failure_code": "wrong_semantic_target",
+      "reason": "Deleting “wall” leaves the artwork entity intact and only removes its wall location/type, so this is an attribute weakening rather than an object deletion."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.6",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "ab1de0bd697e4caf4f615cae797518c7a3f139d99d77b9779cfc3f54694d859e",
+      "input_hash": "988dcb0602e7f1374cb5d5efb8a06d8fae7359530e0f83671b30bc00779c1745",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/grok-4.6/cache/validate_group/988dcb0602e7f1374cb5d5efb8a06d8fae7359530e0f83671b30bc00779c1745.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "3267dbdf-26ac-9930-af06-71cf03fdc9ca",
+      "usage": {
+        "prompt_tokens": 4805,
+        "completion_tokens": 83,
+        "total_tokens": 7513,
+        "prompt_tokens_details": {
+          "text_tokens": 2589,
+          "audio_tokens": 0,
+          "image_tokens": 2216,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2625,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 227860000
+      }
+    }
+  ],
+  "format_warnings": []
+}

@@ -1,0 +1,57 @@
+{
+  "group_id": "pinpoint_group_67f3ebcdb9560826",
+  "model": "grok-4.6",
+  "signature": "cb958fa178e5ebcdd33f446ebd46fe25a7c20417ca5539cc74de61fb4df99804",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_67f3ebcdb9560826_query_04463_attribute_substitute",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Single fluent substitution of black to navy. No supplied positive shows navy pants; all are cream, white, beige, or a tan belt."
+    },
+    {
+      "negative_id": "pinpoint_group_67f3ebcdb9560826_query_04464_attribute_substitute",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Replacing black with dark navy is one color-attribute edit and reconstructs the text. Dark navy is clearly false for every supplied positive."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.6",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "3d443e67919a7c4ef6f0ec8f779fe5840a6d34d255c6155874193deeb3e020e6",
+      "input_hash": "d16953a55ea470b048a80669d43c91033b7a0ce0a9c4d18ea2a00fe0acde173d",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/grok-4.6/cache/validate_group/d16953a55ea470b048a80669d43c91033b7a0ce0a9c4d18ea2a00fe0acde173d.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "4509098b-3565-9d00-b45f-c45bd6c4a17b",
+      "usage": {
+        "prompt_tokens": 5080,
+        "completion_tokens": 148,
+        "total_tokens": 8853,
+        "prompt_tokens_details": {
+          "text_tokens": 2619,
+          "audio_tokens": 0,
+          "image_tokens": 2461,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 3625,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 297260000
+      }
+    }
+  ],
+  "format_warnings": []
+}

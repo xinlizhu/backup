@@ -1,0 +1,49 @@
+{
+  "group_id": "pinpoint_group_1b9ba5f0aebfc669",
+  "model": "claude-haiku-5-5",
+  "signature": "44bb4aae802e19564501a676b733c7e19828d9ced260b7da0428f08b1a359df2",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_1b9ba5f0aebfc669_query_02250_object_substitute",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "The negative text substitutes 'living room' with 'bedroom', but all four positive images (2-5) show living rooms, not bedrooms. However, the instruction to 'furnish' a space for 'this mood' remains semantically compatible—a bedroom could be furnished for the same aesthetic mood as the reference image (warm, rustic, mid-century modern tones). The edit targets room type (object identity), but the mood-based furnishing constraint does not inherently reject bedroom applicability, making the negative compatible with the positive set."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-haiku-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "a19cb2950b2da6377c146bf55e2792c81f64f5b4a46a5000b2cd92075f257ea1",
+      "input_hash": "7d9ece4378b8460860977b747bd66efac988b79bcb209a7841c9f5c9d8a2de00",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/claude-haiku-5-5/cache/validate_group/7d9ece4378b8460860977b747bd66efac988b79bcb209a7841c9f5c9d8a2de00.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01BmD0fBmWQ5ut4ADUlb4ctPv1",
+      "usage": {
+        "prompt_tokens": 8401,
+        "completion_tokens": 240,
+        "total_tokens": 8641,
+        "prompt_tokens_details": {
+          "cached_tokens": 6549,
+          "cache_creation_tokens": 1848
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_1b9ba5f0aebfc669_query_02250_object_substitute",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 534,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

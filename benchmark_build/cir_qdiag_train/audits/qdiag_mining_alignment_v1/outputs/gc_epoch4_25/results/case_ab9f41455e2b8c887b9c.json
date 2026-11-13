@@ -1,0 +1,91 @@
+{
+  "case_id": "case_ab9f41455e2b8c887b9c",
+  "audit_query_id": "audit_query_095",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_ab9f41455e2b8c887b9c",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "One pelican is visible in grey water, with its upper body raised above the surface, wings lifted, and bill wide open. These visible results support the instruction despite its calling the reference animals birds."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "One pelican floats in grey-blue water with its bill closed and body resting low at the surface, rather than raised out of the water with its mouth open."
+    },
+    "candidate_relation": "multiple_constraint_conflict",
+    "violated_source_constraints": [
+      "Raise the remaining bird out of the water.",
+      "The remaining bird must have its mouth open."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_ab9f41455e2b8c887b9c",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "One pelican is visible in grey water, with its neck and chest raised above the surface, wings lifted, and bill wide open. This supports the requested single animal, grey water, raised posture, and open mouth."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "One pelican is visible, but its bill is closed and its body rests low in the water rather than being raised out of it. The water also appears blue-green rather than grey."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "c2ce5f009160357682d4b4e6ef793a3926a56d8d558ef22e8f48005b0162a89b",
+      "input_hash": "37d285d678d75f933f675e6a027b242e7ef565db92af261ba9b1246a7b8dc8a9",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/37d285d678d75f933f675e6a027b242e7ef565db92af261ba9b1246a7b8dc8a9.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_00cd1175733149d8016af2be8f425c87d19bda6ae72e96d6fc",
+      "usage": {
+        "prompt_tokens": 12479,
+        "completion_tokens": 286,
+        "total_tokens": 12765,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 79
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "06094bd3bff3af0c1ab7d3baa5100cf8ae9e4a8d14917fd6de3dd20b73e83ede",
+      "input_hash": "041611767e7183bbbd1874dc05db55b97c885f1557fe2792dbef502f7aae7490",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/041611767e7183bbbd1874dc05db55b97c885f1557fe2792dbef502f7aae7490.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_00063448f6e4cfa0016af2beaa8da487d18d5b2f0f2997f524",
+      "usage": {
+        "prompt_tokens": 11937,
+        "completion_tokens": 177,
+        "total_tokens": 12114,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 39
+        }
+      }
+    }
+  ]
+}

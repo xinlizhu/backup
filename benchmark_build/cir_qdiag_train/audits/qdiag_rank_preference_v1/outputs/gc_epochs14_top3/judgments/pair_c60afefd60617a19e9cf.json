@@ -1,0 +1,69 @@
+{
+  "case_id": "pair_c60afefd60617a19e9cf",
+  "signature": "f91b95909684e2ecf5207ab608279749c891c56633f2fa7c877aa09c2d59f3d4",
+  "simulated": false,
+  "status": "complete",
+  "judgment": {
+    "case_id": "pair_c60afefd60617a19e9cf",
+    "constraints": [
+      {
+        "constraint": "Remove one of the reference's two animals, leaving one animal.",
+        "A_status": "contradicted",
+        "B_status": "contradicted",
+        "A_evidence": "Two animals are visible: an adult buffalo and a nursing calf.",
+        "B_evidence": "Multiple cattle and a dog are visible, exceeding the reference's two animals."
+      },
+      {
+        "constraint": "Replace the cow with a dog.",
+        "A_status": "contradicted",
+        "B_status": "contradicted",
+        "A_evidence": "The adult animal is a horned buffalo; no dog is visible.",
+        "B_evidence": "A dog is present at the right, but multiple cattle remain; the cow has not been replaced by a dog."
+      },
+      {
+        "constraint": "Include water in the background.",
+        "A_status": "contradicted",
+        "B_status": "contradicted",
+        "A_evidence": "The background consists of vegetation and an earthen bank; a small wet area at the lower right is in the foreground.",
+        "B_evidence": "Trees and a fence form the background; no water is visible."
+      },
+      {
+        "constraint": "Include hills in the background.",
+        "A_status": "contradicted",
+        "B_status": "contradicted",
+        "A_evidence": "A close vegetated bank is visible behind the animals, with no background hills.",
+        "B_evidence": "The background shows trees and fencing without visible hills."
+      },
+      {
+        "constraint": "Remove the grass from the ground.",
+        "A_status": "contradicted",
+        "B_status": "contradicted",
+        "A_evidence": "Although much of the foreground is bare earth, substantial grass remains on the ground beside and behind the animals.",
+        "B_evidence": "The cattle and dog stand on a broad grassy area."
+      }
+    ],
+    "A_status": "contradicted",
+    "B_status": "contradicted",
+    "decision": "neither",
+    "reason": "Neither candidate leaves a single dog in place of the two bovines, and both lack the requested background water and hills while retaining grass."
+  },
+  "trace": {
+    "stage": "rank_pair_judgment",
+    "model_name": "gpt-5.6-terra",
+    "model_revision": null,
+    "provider": "openai-compatible-chat",
+    "reasoning_effort": null,
+    "prompt_version": "rank_preference_v1",
+    "prompt_hash": "31b3db7c46ffe900b5b39cb89590a4379516a8a870863846db3b9394f6510b11",
+    "input_hash": "459603510e0492c886c24efad8a5561c34fb24948cdf55ef475ca3d37b307c6b",
+    "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_rank_preference_v1/outputs/gc_epochs14_top3/api_cache/rank_pair_judgment/459603510e0492c886c24efad8a5561c34fb24948cdf55ef475ca3d37b307c6b.json",
+    "cached": false,
+    "attempts": 1,
+    "request_id": "resp_0b665e88294f9587016af2ccc99e4c87d08d5d70c360a630f3",
+    "usage": {
+      "prompt_tokens": 10754,
+      "completion_tokens": 398,
+      "total_tokens": 11152
+    }
+  }
+}

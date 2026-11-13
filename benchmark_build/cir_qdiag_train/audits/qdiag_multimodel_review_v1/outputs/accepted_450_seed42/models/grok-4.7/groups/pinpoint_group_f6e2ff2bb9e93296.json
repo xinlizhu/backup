@@ -1,0 +1,57 @@
+{
+  "group_id": "pinpoint_group_f6e2ff2bb9e93296",
+  "model": "grok-4.7",
+  "signature": "52913ea34ae01078c58f7a80fc2119b86ef4b6b3449e9e55b21816a5d5d1ccbd",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_f6e2ff2bb9e93296_query_06492_predicate_add",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Adds one predicate, folded neatly, to the source noun phrase. No supplied positive shows the pants folded neatly, so the added fact is clearly false."
+    },
+    {
+      "negative_id": "pinpoint_group_f6e2ff2bb9e93296_query_06495_object_delete",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Deletes only the blue-pants object phrase; on is glue for that constraint. The result is fluent, meaningful, and strictly weaker while preserving the remaining request."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.7",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "25cca8f8d8af9e7d9c38386092532946e87c7a87061c5ef05a7394192784cf68",
+      "input_hash": "1eb0722365a021ea05e82a9eaf89f971c4ef7113ab324eecc9570a2d279acf8f",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/grok-4.7/cache/validate_group/1eb0722365a021ea05e82a9eaf89f971c4ef7113ab324eecc9570a2d279acf8f.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "171a8b1e-87e5-9de7-8cec-fbbe3e96f3c9",
+      "usage": {
+        "prompt_tokens": 4414,
+        "completion_tokens": 160,
+        "total_tokens": 9008,
+        "prompt_tokens_details": {
+          "text_tokens": 2597,
+          "audio_tokens": 0,
+          "image_tokens": 1817,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 4434,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 333200000
+      }
+    }
+  ],
+  "format_warnings": []
+}

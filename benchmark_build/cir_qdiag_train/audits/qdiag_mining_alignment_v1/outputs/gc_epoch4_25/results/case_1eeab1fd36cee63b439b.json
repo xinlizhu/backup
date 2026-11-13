@@ -1,0 +1,91 @@
+{
+  "case_id": "case_1eeab1fd36cee63b439b",
+  "audit_query_id": "audit_query_089",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_1eeab1fd36cee63b439b",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Several school buses are parked together, with three adjacent buses showing heavily blackened, burned-out front ends."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The image is a close-up of a hyena with its mouth open; it does not depict a bus parking lot or three buses with burned front ends."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "The photo depicts a bus parking lot.",
+      "Three buses have fire-damaged front ends."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_1eeab1fd36cee63b439b",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "Several school buses are parked together, and the central buses show severe charring and exposed front structures. However, three distinct buses with fire damage specifically at their front ends cannot be reliably identified in this view."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The image shows a hyena with its mouth open outdoors; there is no bus parking lot or any fire-damaged buses."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "feaa44ee65d498f5214d16b3f05c751bf52a0cbeaaa40d16097ba8542f5d0cc3",
+      "input_hash": "7cbb1b58dd5198b8b1279d1ab4013ba2187b9e451333051d654e489209129d1e",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/7cbb1b58dd5198b8b1279d1ab4013ba2187b9e451333051d654e489209129d1e.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0b7bdd2fa07bce06016af2bf97d39087d1afbfbdffb3526ab3",
+      "usage": {
+        "prompt_tokens": 7067,
+        "completion_tokens": 214,
+        "total_tokens": 7281,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 32
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "a0e910c369ebe09d82835982a979d56db83167e6bd9b7ae0a1c135631d631670",
+      "input_hash": "8682c21817e58b2e8d4c26c6c2ec3e30e04cea3d491ea5ddcf97bd9252fa9932",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/8682c21817e58b2e8d4c26c6c2ec3e30e04cea3d491ea5ddcf97bd9252fa9932.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_05294c123f4ca5a7016af2bf9f1a2087d2ad75f29aba30346b",
+      "usage": {
+        "prompt_tokens": 6525,
+        "completion_tokens": 167,
+        "total_tokens": 6692,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 45
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "group_id": "pinpoint_group_6ed299f567faf885",
+  "model": "claude-haiku-5-5",
+  "signature": "44bb4aae802e19564501a676b733c7e19828d9ced260b7da0428f08b1a359df2",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_6ed299f567faf885_query_05128_predicate_delete",
+      "decision": "reject",
+      "failure_code": "invalid_delete",
+      "reason": "The deletion removes 'to match <img1>', which is a semantic constraint about coordination/matching. However, this constraint is central to the query's meaning—it specifies that the hobo should match a reference item. Removing it changes the surviving meaning by eliminating the matching requirement, which is not a valid DELETE operation per guidelines. A valid DELETE must preserve everything else without changing surviving meaning."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-haiku-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "b91d4fdc81f6a2fc494106d772fca9c075a58238e70583e5f5c3b14329714bf4",
+      "input_hash": "8a6f47a10bff5b33a72dcc624f21f2e03468e296ee18f515ede9ea1f9b44af58",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/claude-haiku-5-5/cache/validate_group/8a6f47a10bff5b33a72dcc624f21f2e03468e296ee18f515ede9ea1f9b44af58.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01CdBp7tBFSvAuiH73SvWEbmST",
+      "usage": {
+        "prompt_tokens": 9521,
+        "completion_tokens": 203,
+        "total_tokens": 9724,
+        "prompt_tokens_details": {
+          "cached_tokens": 7423,
+          "cache_creation_tokens": 2094
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_6ed299f567faf885_query_05128_predicate_delete",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 434,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

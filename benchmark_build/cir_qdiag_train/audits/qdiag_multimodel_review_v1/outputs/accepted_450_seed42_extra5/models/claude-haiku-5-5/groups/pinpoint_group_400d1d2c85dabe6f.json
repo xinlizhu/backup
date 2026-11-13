@@ -1,0 +1,49 @@
+{
+  "group_id": "pinpoint_group_400d1d2c85dabe6f",
+  "model": "claude-haiku-5-5",
+  "signature": "44bb4aae802e19564501a676b733c7e19828d9ced260b7da0428f08b1a359df2",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_400d1d2c85dabe6f_query_05127_attribute_add",
+      "decision": "reject",
+      "failure_code": "not_visually_verifiable",
+      "reason": "The added attribute specifies 'black sequins arranged in diagonal rows,' but the positive images (makeup looks and fashion items) do not show sequined hobo bags with black sequins in diagonal arrangements. The positive images contain makeup tutorials and a plain black leather hobo bag, none of which display the specific sequin pattern claimed. This attribute cannot be verified as false against the supplied positives."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-haiku-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "8b242b8f3954bbc4c4ae531ddd5e6703000eba2641431a6ee6600ef6d0c19e18",
+      "input_hash": "961112755025e3c9657debb1e7c0b9872f478e0dad4f2f28d87584b4fa3ad0e9",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/claude-haiku-5-5/cache/validate_group/961112755025e3c9657debb1e7c0b9872f478e0dad4f2f28d87584b4fa3ad0e9.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01l7HnygUIQjWe99BJRzNjw32y",
+      "usage": {
+        "prompt_tokens": 11125,
+        "completion_tokens": 203,
+        "total_tokens": 11328,
+        "prompt_tokens_details": {
+          "cached_tokens": 8674,
+          "cache_creation_tokens": 2447
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_400d1d2c85dabe6f_query_05127_attribute_add",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 420,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

@@ -1,0 +1,233 @@
+{
+  "case_id": "case_cb64c37dd0cfdb30386c",
+  "audit_query_id": "audit_query_079",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_cb64c37dd0cfdb30386c",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "T shows a glossy black, bowl-shaped sink with a faucet."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "C shows a black, bowl-shaped sink decorated with white motifs."
+    },
+    "candidate_relation": "compatible",
+    "violated_source_constraints": [],
+    "witnesses": [
+      {
+        "witness_id": "add_attribute",
+        "operation": "add",
+        "semantic_target": "attribute",
+        "before_span": null,
+        "after_span": "with white decorative motifs",
+        "edited_instruction": "Show a black bowl sink with white decorative motifs.",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "The sink has white decorative motifs.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "T's black bowl has reflections but no white decorative motifs."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C's black bowl has prominent white decorative motifs on its exterior."
+        }
+      },
+      {
+        "witness_id": "add_predicate",
+        "operation": "add",
+        "semantic_target": "predicate",
+        "before_span": null,
+        "after_span": "mounted on a pedestal",
+        "edited_instruction": "Show a black bowl sink mounted on a pedestal.",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "The sink is mounted on a pedestal.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "T's bowl rests on a broad countertop rather than a pedestal."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C's bowl is mounted above a tall, narrow black pedestal."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_cb64c37dd0cfdb30386c",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a glossy black, bowl-shaped sink on a countertop beneath a running faucet."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "Image 3 shows a black bowl-shaped sink with white decorations, supported by a tall pedestal."
+    },
+    "verdicts": [
+      {
+        "witness_id": "add_attribute",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "One insertion adds a single decorative attribute to the sink while preserving the original constraints. Both images support the source instruction; only the candidate has white decorative motifs.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The black bowl in Image 2 has a plain glossy surface. Its bright patches are reflections, not white decorative motifs."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "White filled and outlined decorative motifs are clearly visible on the black bowl in Image 3."
+        }
+      },
+      {
+        "witness_id": "add_predicate",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "One insertion adds a single mounting relation with the sink as its subject. Both images satisfy the source instruction, but only the candidate's sink is mounted on a pedestal.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The bowl in Image 2 rests directly on a broad countertop, rather than on a pedestal."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 clearly shows the bowl supported by a circular top and a tall black pedestal extending to the floor."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "add_attribute",
+      "operation": "add",
+      "semantic_target": "attribute",
+      "before_span": null,
+      "after_span": "with white decorative motifs",
+      "edited_instruction": "Show a black bowl sink with white decorative motifs.",
+      "witness_type": "addition_disambiguation",
+      "changed_constraint": "The sink has white decorative motifs.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "T's black bowl has reflections but no white decorative motifs."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C's black bowl has prominent white decorative motifs on its exterior."
+      },
+      "independent_review": {
+        "witness_id": "add_attribute",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "One insertion adds a single decorative attribute to the sink while preserving the original constraints. Both images support the source instruction; only the candidate has white decorative motifs.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The black bowl in Image 2 has a plain glossy surface. Its bright patches are reflections, not white decorative motifs."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "White filled and outlined decorative motifs are clearly visible on the black bowl in Image 3."
+        }
+      }
+    },
+    {
+      "witness_id": "add_predicate",
+      "operation": "add",
+      "semantic_target": "predicate",
+      "before_span": null,
+      "after_span": "mounted on a pedestal",
+      "edited_instruction": "Show a black bowl sink mounted on a pedestal.",
+      "witness_type": "addition_disambiguation",
+      "changed_constraint": "The sink is mounted on a pedestal.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "T's bowl rests on a broad countertop rather than a pedestal."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C's bowl is mounted above a tall, narrow black pedestal."
+      },
+      "independent_review": {
+        "witness_id": "add_predicate",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "One insertion adds a single mounting relation with the sink as its subject. Both images satisfy the source instruction, but only the candidate's sink is mounted on a pedestal.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The bowl in Image 2 rests directly on a broad countertop, rather than on a pedestal."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 clearly shows the bowl supported by a circular top and a tall black pedestal extending to the floor."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "add_attribute",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    },
+    {
+      "witness_id": "add_predicate",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "acb4051092da25b1976164183c4479b83b405657d193970e46d448456b8cd69b",
+      "input_hash": "cb4d714a8db8562277f050b27a16c566be97cfc3614290ab85c4fdcebd13a340",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/cb4d714a8db8562277f050b27a16c566be97cfc3614290ab85c4fdcebd13a340.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0aa828379c3a271e016af2bde04be487d19eb064c97c34ac4b",
+      "usage": {
+        "prompt_tokens": 7740,
+        "completion_tokens": 594,
+        "total_tokens": 8334,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 142
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "4063f12299cca8dd72815c75d7926db8bc9594e2b68478a4adb0a2d9efc55248",
+      "input_hash": "de08b4b2249e5fe1088a39b4897be3806e1173608f09a82e411b60e4a0018c2a",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/de08b4b2249e5fe1088a39b4897be3806e1173608f09a82e411b60e4a0018c2a.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0a87a90e8effce45016af2bdf5c0a087d199f47eeb5cb7b00b",
+      "usage": {
+        "prompt_tokens": 7326,
+        "completion_tokens": 446,
+        "total_tokens": 7772,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,174 @@
+{
+  "case_id": "case_76cc7535d26c800eb206",
+  "audit_query_id": "audit_query_100",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_76cc7535d26c800eb206",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "A shallow round metal bowl contains a prepared dish covered with melted, browned cheese."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The glass bowl contains a layered dessert topped with whipped cream and berries rather than cheese."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The dish has cheese on top."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "object",
+        "before_span": "cheese",
+        "after_span": "whipped cream",
+        "edited_instruction": "A bowl with a dish and whipped cream on top.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "The topping is changed from cheese to whipped cream.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The dish is topped with melted, browned cheese, not whipped cream."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The layered dessert in the glass bowl has a visible white whipped-cream topping."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "operation": "delete",
+        "semantic_target": "object",
+        "before_span": "and cheese on top",
+        "after_span": null,
+        "edited_instruction": "A bowl with a dish.",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "Removes the requirement for cheese on top.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "A prepared savory dish fills the shallow metal bowl."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "A prepared layered dessert fills the glass bowl."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_76cc7535d26c800eb206",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "Image 2 clearly shows cheese on top of food in a round dish, but does not clearly show a bowl or a bowl containing a separate dish as the instruction says."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a glass bowl of layered dessert with whipped cream and fruit on top, not cheese."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "reject",
+        "failure_code": "source_invalid_or_uncertain",
+        "witness_type": null,
+        "reason": "The edit is a single substitution, and whipped cream is visible on Image 3, but the original instruction cannot be reliably established on Image 2 because its bowl-related description is unclear.",
+        "edited_on_positive": {
+          "status": "uncertain",
+          "evidence": "Image 2 shows cheese on a round dish, not clearly a bowl with a dish."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows whipped cream on top of dessert in a glass bowl."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "decision": "reject",
+        "failure_code": "source_invalid_or_uncertain",
+        "witness_type": null,
+        "reason": "The deletion reconstructs the edited text, but the original instruction cannot be reliably established on Image 2 because its bowl-related description is unclear.",
+        "edited_on_positive": {
+          "status": "uncertain",
+          "evidence": "Image 2 shows food in a round dish, but not clearly a bowl as required by the edited instruction."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 visibly contains dessert in a glass bowl."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": false,
+      "local_failures": [
+        "wrong_witness_type",
+        "wrong_support_pattern"
+      ],
+      "review_decision": "reject"
+    },
+    {
+      "witness_id": "w2",
+      "accepted": false,
+      "local_failures": [
+        "wrong_witness_type",
+        "wrong_support_pattern"
+      ],
+      "review_decision": "reject"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "d18aefa4fabaeb820504bbd43ef76871536ecf67385649ee24620b72cf4a8693",
+      "input_hash": "b6f0c93f406e987e093e4d0c05462d24a7d5532e3246562e56d870786c261ffb",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/b6f0c93f406e987e093e4d0c05462d24a7d5532e3246562e56d870786c261ffb.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0e3f25f8e4a61c7d016af2bea9d10c87d184b2a305aa7c007b",
+      "usage": {
+        "prompt_tokens": 13142,
+        "completion_tokens": 580,
+        "total_tokens": 13722,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 106
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "27d870ec8295c7f37ad6b5a353604a7aa7255f9d5b33cfc15ad9bad9ba544814",
+      "input_hash": "92b2614030e56b7885fa8f5b72acdd2dfee2a377d077933f95ba7aa1052c823a",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/92b2614030e56b7885fa8f5b72acdd2dfee2a377d077933f95ba7aa1052c823a.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_ack_9b0bc43ef04738264a128742510a3f87",
+      "usage": {
+        "prompt_tokens": 8515,
+        "completion_tokens": 840,
+        "total_tokens": 9355,
+        "completion_tokens_details": {
+          "reasoning_tokens": 389
+        }
+      }
+    }
+  ]
+}

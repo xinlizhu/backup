@@ -1,0 +1,62 @@
+{
+  "group_id": "pinpoint_group_8e755de27d64093a",
+  "model": "kimi-k3",
+  "signature": "7bcee9a6a15f47b49de535c2997e213c18a83885fbb254d34ea6aaed145faa23",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_8e755de27d64093a_query_05888_object_add",
+      "decision": "reject",
+      "failure_code": "not_visually_verifiable",
+      "reason": "Most supplied positives (images 3, 5, 6) show no handbag at all, so the presence/absence of a scarf on the handbag cannot be reliably judged; image 6 also has ambiguous neckwear."
+    },
+    {
+      "negative_id": "pinpoint_group_8e755de27d64093a_query_05888_predicate_add",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Single fluent predicate ADD; no supplied positive shows a handbag displayed beside the <img1> floral painting, so the new fact is false for every positive."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "kimi-k3",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "1776131fc0dbbb634d78b694d4a9ea2493d757c8ec8c35b806cab60f520f3a99",
+      "input_hash": "a8f101710e4f3cda540178f7494f2d6c41852fd8a78c701fc72b734f061cf832",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/kimi-k3/cache/validate_group/a8f101710e4f3cda540178f7494f2d6c41852fd8a78c701fc72b734f061cf832.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "01a1c9ba54af70628010b993c3b9f412",
+      "usage": {
+        "prompt_tokens": 5159,
+        "completion_tokens": 447,
+        "total_tokens": 5606,
+        "prompt_cache_hit_tokens": 768,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "text_tokens": 0,
+          "audio_tokens": 0,
+          "image_tokens": 0
+        },
+        "completion_tokens_details": {
+          "text_tokens": 0,
+          "audio_tokens": 0,
+          "image_tokens": 0,
+          "reasoning_tokens": 0
+        },
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "input_tokens_details": null,
+        "claude_cache_creation_5_m_tokens": 0,
+        "claude_cache_creation_1_h_tokens": 0,
+        "credit": 3.35
+      }
+    }
+  ],
+  "format_warnings": []
+}

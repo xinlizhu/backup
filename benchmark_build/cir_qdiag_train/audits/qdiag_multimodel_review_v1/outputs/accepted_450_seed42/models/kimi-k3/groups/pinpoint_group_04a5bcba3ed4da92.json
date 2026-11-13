@@ -1,0 +1,61 @@
+{
+  "group_id": "pinpoint_group_04a5bcba3ed4da92",
+  "model": "kimi-k3",
+  "signature": "7bcee9a6a15f47b49de535c2997e213c18a83885fbb254d34ea6aaed145faa23",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_04a5bcba3ed4da92_query_00712_predicate_substitute",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Single predicate substitution ('look like'->'are next to') is fluent and reconstructs the text. No supplied positive shows a light positioned next to the earring piece; all show standalone lights resembling it, so the new relation is false for every positive."
+    },
+    {
+      "negative_id": "pinpoint_group_04a5bcba3ed4da92_query_00714_object_substitute",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Single object substitution ('earrings'->'necklaces') is fluent. The reference clearly shows earrings, not necklaces, and all positives are lights derived from the earrings' colors/silhouette, so the new object reference is false for every positive."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "kimi-k3",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "b79f6282a5eba09a19b6ac19caf2d99c52eecff5a1a5ec08440ff665cddd4aac",
+      "input_hash": "5a579d098bed26b857cd22fb82ea74e05faddb68ad667ce0d788667af9ef0731",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/kimi-k3/cache/validate_group/5a579d098bed26b857cd22fb82ea74e05faddb68ad667ce0d788667af9ef0731.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "01a1c9b93fd57e249252da430430787a",
+      "usage": {
+        "prompt_tokens": 3817,
+        "completion_tokens": 360,
+        "total_tokens": 4177,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "text_tokens": 0,
+          "audio_tokens": 0,
+          "image_tokens": 0
+        },
+        "completion_tokens_details": {
+          "text_tokens": 0,
+          "audio_tokens": 0,
+          "image_tokens": 0,
+          "reasoning_tokens": 0
+        },
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "input_tokens_details": null,
+        "claude_cache_creation_5_m_tokens": 0,
+        "claude_cache_creation_1_h_tokens": 0,
+        "credit": 2.81
+      }
+    }
+  ],
+  "format_warnings": []
+}

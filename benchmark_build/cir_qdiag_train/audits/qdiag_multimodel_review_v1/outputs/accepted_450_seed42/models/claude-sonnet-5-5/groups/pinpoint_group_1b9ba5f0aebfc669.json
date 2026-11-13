@@ -1,0 +1,49 @@
+{
+  "group_id": "pinpoint_group_1b9ba5f0aebfc669",
+  "model": "claude-sonnet-5-5",
+  "signature": "aff20e5a5733d87f80fd7515c25d92c77cff20d4f50c9f8dbf4123bfdabed97b",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_1b9ba5f0aebfc669_query_02250_object_substitute",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "The negative text 'Furnish a bedroom for this mood' is compatible with the supplied positive images. Images 2, 3, 4, and 5 all show living rooms, but a bedroom can share the same material aesthetic, color palette, and mood as these living room references. The edit does not create a fact that is clearly false for every supplied positive image—furniture and design principles can transfer across room types."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-sonnet-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "a19cb2950b2da6377c146bf55e2792c81f64f5b4a46a5000b2cd92075f257ea1",
+      "input_hash": "be45e1fe6f62d3550c349c3989a6ac8b273bf5beaf6b6e2ba0080b9de6623347",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/claude-sonnet-5-5/cache/validate_group/be45e1fe6f62d3550c349c3989a6ac8b273bf5beaf6b6e2ba0080b9de6623347.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01ycuekg5kQ5CDvmCe8SGEYQe6",
+      "usage": {
+        "prompt_tokens": 8373,
+        "completion_tokens": 203,
+        "total_tokens": 8576,
+        "prompt_tokens_details": {
+          "cached_tokens": 6527,
+          "cache_creation_tokens": 1842
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_1b9ba5f0aebfc669_query_02250_object_substitute",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 407,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

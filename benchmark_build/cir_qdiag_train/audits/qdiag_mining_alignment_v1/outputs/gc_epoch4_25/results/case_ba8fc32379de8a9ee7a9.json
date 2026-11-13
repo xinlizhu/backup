@@ -1,0 +1,232 @@
+{
+  "case_id": "case_ba8fc32379de8a9ee7a9",
+  "audit_query_id": "audit_query_081",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_ba8fc32379de8a9ee7a9",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 visibly shows a wind instrument, specifically a saxophone, with a maroon/red body."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 visibly shows a wind instrument, but its body is dark purple rather than maroon."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The wind instrument is not maroon; it is dark purple."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "attribute",
+        "before_span": "maroon color",
+        "after_span": "purple color",
+        "edited_instruction": "Make a wind instrument a purple color.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "The instrument color changes from maroon to purple.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 shows a maroon/red saxophone, not a purple one."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows a wind instrument with a visibly dark purple body."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "operation": "delete",
+        "semantic_target": "attribute",
+        "before_span": "a maroon color",
+        "after_span": null,
+        "edited_instruction": "Make a wind instrument.",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "The maroon color requirement is removed.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 visibly contains a wind instrument, a saxophone."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 visibly contains a wind instrument, a saxophone."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_ba8fc32379de8a9ee7a9",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a wind instrument with a distinctly red, dark-red lacquer body, reasonably matching the requested maroon color."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a wind instrument with a dark purple body, not a maroon one."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing “maroon color” with “purple color” is one attribute edit, retains the instrument entity, and produces a fluent instruction. Image 2 is red/maroon rather than purple; Image 3 is visibly purple.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The instrument body in Image 2 is red rather than purple."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The instrument body in Image 3 is dark purple."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting the single attribute phrase “a maroon color” yields the fluent instruction “Make a wind instrument.” Both images show wind instruments, and Image 3 violates only the removed color constraint.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 visibly depicts a wind instrument."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 visibly depicts a wind instrument."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "substitute",
+      "semantic_target": "attribute",
+      "before_span": "maroon color",
+      "after_span": "purple color",
+      "edited_instruction": "Make a wind instrument a purple color.",
+      "witness_type": "substitution_contrast",
+      "changed_constraint": "The instrument color changes from maroon to purple.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "Image 2 shows a maroon/red saxophone, not a purple one."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "Image 3 shows a wind instrument with a visibly dark purple body."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing “maroon color” with “purple color” is one attribute edit, retains the instrument entity, and produces a fluent instruction. Image 2 is red/maroon rather than purple; Image 3 is visibly purple.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The instrument body in Image 2 is red rather than purple."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The instrument body in Image 3 is dark purple."
+        }
+      }
+    },
+    {
+      "witness_id": "w2",
+      "operation": "delete",
+      "semantic_target": "attribute",
+      "before_span": "a maroon color",
+      "after_span": null,
+      "edited_instruction": "Make a wind instrument.",
+      "witness_type": "deletion_relaxation",
+      "changed_constraint": "The maroon color requirement is removed.",
+      "edited_on_positive": {
+        "status": "supported",
+        "evidence": "Image 2 visibly contains a wind instrument, a saxophone."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "Image 3 visibly contains a wind instrument, a saxophone."
+      },
+      "independent_review": {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting the single attribute phrase “a maroon color” yields the fluent instruction “Make a wind instrument.” Both images show wind instruments, and Image 3 violates only the removed color constraint.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 visibly depicts a wind instrument."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 visibly depicts a wind instrument."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    },
+    {
+      "witness_id": "w2",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "dff662ad01b7959c5830846e4ee2a18ef4d61834037247598c3c988a8fabdf9f",
+      "input_hash": "ccad10a1ff57a170d7fe3ceed552189906d1a898db9d3711946fc514d2175ebd",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/ccad10a1ff57a170d7fe3ceed552189906d1a898db9d3711946fc514d2175ebd.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_ack_26fdc940ca23f64a5f153beff0cd5444",
+      "usage": {
+        "prompt_tokens": 4153,
+        "completion_tokens": 729,
+        "total_tokens": 4882,
+        "completion_tokens_details": {
+          "reasoning_tokens": 369
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "4324a85bf58624a9397d7bab9e56298dab5a26127dcd7c19e3c9254386549571",
+      "input_hash": "e4465d67185d6978dc19294c8bc868f23544694ecba7341c3c9e15d00919949b",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/e4465d67185d6978dc19294c8bc868f23544694ecba7341c3c9e15d00919949b.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_ack_4dd1a14c98c205ff3c1fa116ca26a2bb",
+      "usage": {
+        "prompt_tokens": 3734,
+        "completion_tokens": 567,
+        "total_tokens": 4301,
+        "completion_tokens_details": {
+          "reasoning_tokens": 233
+        }
+      }
+    }
+  ]
+}

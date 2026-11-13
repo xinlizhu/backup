@@ -1,0 +1,134 @@
+{
+  "case_id": "case_2a0152c44a38e0360d08",
+  "audit_query_id": "audit_query_087",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_2a0152c44a38e0360d08",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The clownfish has deeper orange coloration than the reference fish's bright yellow-orange areas and is nestled centrally among the anemone's tentacles in a swimming posture."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "The foreground clownfish has deeper orange coloration than the reference fish's yellow-orange areas and is swimming amid the anemone's surrounding tentacles."
+    },
+    "candidate_relation": "compatible",
+    "violated_source_constraints": [],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "add",
+        "semantic_target": "object",
+        "before_span": null,
+        "after_span": "with another clown fish visible nearby",
+        "edited_instruction": "Shows a darker colored clown fish swimming through the middle of a sea anemone, with another clown fish visible nearby.",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "An additional clownfish is visible nearby.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Only one clownfish is visible among the tentacles. The partially visible gray fish at the upper right is not a clownfish."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The darker orange foreground clownfish is among the anemone tentacles, and a second orange-and-white clownfish is clearly visible at the upper right."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_2a0152c44a38e0360d08",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "A single orange-and-white clownfish is nestled among the anemone's central tentacles. However, it is not reliably darker than the reference fish, which has substantial dark body patches and a yellow-orange face. The required relative color difference is ambiguous."
+    },
+    "source_on_candidate": {
+      "status": "uncertain",
+      "evidence": "An orange-and-white clownfish appears amid anemone tentacles, with a second clownfish at the upper right. Although the scene is dimmer, the main fish is not clearly darker in coloration than the dark-patched reference fish."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "reject",
+        "failure_code": "source_invalid_or_uncertain",
+        "witness_type": null,
+        "reason": "The insertion adds one fluent, visibly distinguishable constraint: another clownfish nearby. But ADD requires the original query to be supported on both images. The darker-color comparison with the reference cannot be reliably established on T or C, so the required support pattern fails.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Only one clownfish is visible among the anemone tentacles. The partially visible gray fish at the upper right is not another clownfish, so the added constraint is contradicted."
+        },
+        "edited_on_candidate": {
+          "status": "uncertain",
+          "evidence": "A second orange-and-white clownfish is clearly visible near the main fish at the upper right, supporting the added constraint. The retained requirement that the main clownfish be darker than the reference remains uncertain."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": false,
+      "local_failures": [
+        "span_reconstruction_failed",
+        "wrong_witness_type",
+        "wrong_support_pattern"
+      ],
+      "review_decision": "reject"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "d8baa5b90f9b2076c24e43cdd3e48ed69be02229e75adf64aef2956aa485bf41",
+      "input_hash": "a8dae53951c424184545cad5cf8d83841b44ce221b9e811e7e1862079c59671e",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/a8dae53951c424184545cad5cf8d83841b44ce221b9e811e7e1862079c59671e.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_01770b5414d74f4c016af2bd59ecb887d1ae3fd540e04867bf",
+      "usage": {
+        "prompt_tokens": 8382,
+        "completion_tokens": 591,
+        "total_tokens": 8973,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 213
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "8534cafdf24320423a6a278eafe605e6491b9a67a5a83898b7592c2879ca2f10",
+      "input_hash": "2678c58f4abac6b970afbf2653467d6b2e19f6a72dbfb8017c2463276ebeda40",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/2678c58f4abac6b970afbf2653467d6b2e19f6a72dbfb8017c2463276ebeda40.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_06aa122949b9bbc0016af2bd85a0b087d1a0565ac78a321eae",
+      "usage": {
+        "prompt_tokens": 7919,
+        "completion_tokens": 478,
+        "total_tokens": 8397,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 72
+        }
+      }
+    }
+  ]
+}

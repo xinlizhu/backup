@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_2521d0a6ace4094a",
+  "model": "grok-4.6",
+  "signature": "cb958fa178e5ebcdd33f446ebd46fe25a7c20417ca5539cc74de61fb4df99804",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_2521d0a6ace4094a_query_06574_object_add",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "One fluent object add: appending \", with a matching clutch\" reconstructs the negative and preserves the rest. Both positives visibly contain no clutch, so the added fact is clearly false for every supplied positive."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.6",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "ce54487e3b04eaceff99d624e8b4eb6c2bc39e21a80d21dbe66acfa7b150ad7f",
+      "input_hash": "4e86320732294bc1481a6e34715f634d739d6c6e2637d4ba3cdf7fdca65fc8f2",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/grok-4.6/cache/validate_group/4e86320732294bc1481a6e34715f634d739d6c6e2637d4ba3cdf7fdca65fc8f2.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "2eba7e2e-8b9a-9dd2-93b3-30c5e3e834c6",
+      "usage": {
+        "prompt_tokens": 3276,
+        "completion_tokens": 91,
+        "total_tokens": 7719,
+        "prompt_tokens_details": {
+          "text_tokens": 2410,
+          "audio_tokens": 0,
+          "image_tokens": 866,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 4352,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 301380000
+      }
+    }
+  ],
+  "format_warnings": []
+}

@@ -1,0 +1,49 @@
+{
+  "group_id": "pinpoint_group_3f3501892aa6be92",
+  "model": "claude-sonnet-5-5",
+  "signature": "aff20e5a5733d87f80fd7515c25d92c77cff20d4f50c9f8dbf4123bfdabed97b",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_3f3501892aa6be92_query_06568_attribute_delete",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Valid single attribute deletion. Removes 'shiny' descriptor while preserving all other constraints (silver, slip dress, silhouette, draped-to-straight neckline change). The negative text remains fluent and meaningful, representing a weaker query that removes exactly one material/finish attribute. No positive images show a dress that requires the 'shiny' descriptor to match the query."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-sonnet-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "ad97b9d27dc6bb9d75cb234347303576ddaaaf661cbe87b88d6e2dec6c32f2de",
+      "input_hash": "9e1608de494af52c6303afcc6eb4a52c0fc05fe601586fa4e557f341cd3f68d9",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/claude-sonnet-5-5/cache/validate_group/9e1608de494af52c6303afcc6eb4a52c0fc05fe601586fa4e557f341cd3f68d9.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01jGypNji1ShGSLDwWt3AY1nhs",
+      "usage": {
+        "prompt_tokens": 7570,
+        "completion_tokens": 192,
+        "total_tokens": 7762,
+        "prompt_tokens_details": {
+          "cached_tokens": 5901,
+          "cache_creation_tokens": 1665
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_3f3501892aa6be92_query_06568_attribute_delete",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 386,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

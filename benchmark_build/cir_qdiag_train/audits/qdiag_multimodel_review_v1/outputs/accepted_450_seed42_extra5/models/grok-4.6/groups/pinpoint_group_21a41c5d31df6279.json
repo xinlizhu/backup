@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_21a41c5d31df6279",
+  "model": "grok-4.6",
+  "signature": "cb958fa178e5ebcdd33f446ebd46fe25a7c20417ca5539cc74de61fb4df99804",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_21a41c5d31df6279_query_01384_attribute_substitute",
+      "decision": "reject",
+      "failure_code": "not_visually_verifiable",
+      "reason": "Glossy→matte is one fluent attribute edit, but positive image 4 is only a sunset with no dress or fabric, so the matte finish cannot be judged clearly false for every supplied positive."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.6",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "7b1f91e2bd2b1062b16ca47984fb1cba9ba8dbb13ea28f4c300513a4df5ffbef",
+      "input_hash": "4ebd7d2190a285d05fdf01a76d5165fa34c636b4ca629e03fad55bc61c816c9e",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/grok-4.6/cache/validate_group/4ebd7d2190a285d05fdf01a76d5165fa34c636b4ca629e03fad55bc61c816c9e.json",
+      "cached": false,
+      "attempts": 2,
+      "request_id": "6dd7d63f-cf67-9723-ab5b-a12bb4cfe1f7",
+      "usage": {
+        "prompt_tokens": 5583,
+        "completion_tokens": 99,
+        "total_tokens": 9524,
+        "prompt_tokens_details": {
+          "text_tokens": 2561,
+          "audio_tokens": 0,
+          "image_tokens": 3022,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 3842,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 317400000
+      }
+    }
+  ],
+  "format_warnings": []
+}

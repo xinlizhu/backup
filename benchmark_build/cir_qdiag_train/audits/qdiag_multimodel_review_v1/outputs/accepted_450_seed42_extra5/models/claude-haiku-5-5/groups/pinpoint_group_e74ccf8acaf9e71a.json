@@ -1,0 +1,49 @@
+{
+  "group_id": "pinpoint_group_e74ccf8acaf9e71a",
+  "model": "claude-haiku-5-5",
+  "signature": "44bb4aae802e19564501a676b733c7e19828d9ced260b7da0428f08b1a359df2",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_e74ccf8acaf9e71a_query_04569_predicate_substitute",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "The substitution from 'unzip' to 'zip up' is compatible with multiple supplied positive images. Images 2, 3, 4, and 5 all show jackets with visible zippers in closed/zipped positions, which would be consistent with a request to 'zip up' a jacket. The negative text remains visually plausible given the positive set."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-haiku-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "7af95c13f91e1850afd6f6e449f3e8453334e8ada92a12cb28bb2d54625a0ce5",
+      "input_hash": "20c5e7d51bca460d140ad30b12abc3a8224c8ec0399434de2acfd22da5e85e47",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/claude-haiku-5-5/cache/validate_group/20c5e7d51bca460d140ad30b12abc3a8224c8ec0399434de2acfd22da5e85e47.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01MTEfJnH9RyKN4izUGBtZlQWo",
+      "usage": {
+        "prompt_tokens": 10354,
+        "completion_tokens": 172,
+        "total_tokens": 10526,
+        "prompt_tokens_details": {
+          "cached_tokens": 8073,
+          "cache_creation_tokens": 2277
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_e74ccf8acaf9e71a_query_04569_predicate_substitute",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 315,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

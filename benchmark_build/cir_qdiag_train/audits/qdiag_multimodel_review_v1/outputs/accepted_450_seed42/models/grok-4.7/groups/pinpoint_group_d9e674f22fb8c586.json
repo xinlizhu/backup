@@ -1,0 +1,57 @@
+{
+  "group_id": "pinpoint_group_d9e674f22fb8c586",
+  "model": "grok-4.7",
+  "signature": "52913ea34ae01078c58f7a80fc2119b86ef4b6b3449e9e55b21816a5d5d1ccbd",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_d9e674f22fb8c586_query_07178_attribute_delete",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Deletes only the color attribute \"black,\" leaving a fluent, strictly weaker query that still asks for the same sequin dress in an A-line cut."
+    },
+    {
+      "negative_id": "pinpoint_group_d9e674f22fb8c586_query_07180_attribute_add",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Adds only the sleeve-length attribute \"with long sleeves.\" Every supplied positive is sleeveless or short-sleeved, so the new fact is clearly false for all of them."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.7",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "d440cc3b8b80574e5381e64c618dc3acd29f2b96dcbf1f3f5dca793353147ac6",
+      "input_hash": "686b33e1c1137af6ca18136fad7369d32afaa8b80213d6caee4348288fc53a88",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/grok-4.7/cache/validate_group/686b33e1c1137af6ca18136fad7369d32afaa8b80213d6caee4348288fc53a88.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "7b577c91-f619-9c16-a63e-8ccb69dacc5e",
+      "usage": {
+        "prompt_tokens": 4624,
+        "completion_tokens": 166,
+        "total_tokens": 7800,
+        "prompt_tokens_details": {
+          "text_tokens": 2698,
+          "audio_tokens": 0,
+          "image_tokens": 1926,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 3010,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 252320000
+      }
+    }
+  ],
+  "format_warnings": []
+}

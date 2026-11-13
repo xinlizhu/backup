@@ -1,0 +1,92 @@
+{
+  "case_id": "case_a3fec00669889669e03e",
+  "audit_query_id": "audit_query_094",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_a3fec00669889669e03e",
+    "case_status": "source_invalid_or_uncertain",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "T shows an adult warthog with two piglets appearing to nurse together on the image-left side, unlike their opposite-side placement in R. However, the requested change from mother to boar, if specifying a male animal, is not visibly supported."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows two padded sports accessories, one black and one white, against a white background; there is no adult animal, no babies, and no nursing."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "An adult boar is present.",
+      "Two babies are present.",
+      "The adult is nursing the two babies together on the same left side."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_a3fec00669889669e03e",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "Two piglets appear to nurse together on the image-left side of an adult warthog, unlike the opposite-side arrangement in R. However, the claimed change from mother to boar is not visibly established; tusks do not establish male sex. 'Left side' is also ambiguous between image coordinates and the adult's anatomical side."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows two sports wristbands, one black and one white. There is no adult warthog, no babies, and no nursing interaction."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "0fabdc9939550dc2af9a9dbb1b2533e6dc0745db62a29f807d574b0f7601126e",
+      "input_hash": "b4f2f5965930b02bbcfb28acb0e11df710d90122e7a28d558e71b8a77c02b577",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/b4f2f5965930b02bbcfb28acb0e11df710d90122e7a28d558e71b8a77c02b577.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_06ae899ce9233f60016af2be77d58887d1a20124c654e6acba",
+      "usage": {
+        "prompt_tokens": 15493,
+        "completion_tokens": 290,
+        "total_tokens": 15783,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 65
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "35bfae24b07a0117c9042f3fdf9de1fbaf1bad6823e827fd2b4758851a4d9957",
+      "input_hash": "eb41b7ec91cc7b743bd56a572065531930cb03f273f494b068f50f7da6ee56a6",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/eb41b7ec91cc7b743bd56a572065531930cb03f273f494b068f50f7da6ee56a6.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_00629130fa90e37d016af2be92c95887d18f97c2e348277d13",
+      "usage": {
+        "prompt_tokens": 14951,
+        "completion_tokens": 189,
+        "total_tokens": 15140,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 39
+        }
+      }
+    }
+  ]
+}

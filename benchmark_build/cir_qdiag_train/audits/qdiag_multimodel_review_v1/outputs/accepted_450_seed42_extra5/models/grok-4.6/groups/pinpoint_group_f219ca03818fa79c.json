@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_f219ca03818fa79c",
+  "model": "grok-4.6",
+  "signature": "cb958fa178e5ebcdd33f446ebd46fe25a7c20417ca5539cc74de61fb4df99804",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_f219ca03818fa79c_query_04985_object_substitute",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "Mumbai→Delhi is one fluent substitution, but positive image 2 is a generic vegetable biryani/pulao also typical in Delhi, so the new fact is not clearly false for every positive."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.6",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "93e6e36601dd243667f85eb153b31d60f1578f0f068e80cd9d92884e8b4f9f1b",
+      "input_hash": "de9776689b0c97ae467506856408a7e102f4bb42fb6ba287e06f24c662a8cfc6",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/grok-4.6/cache/validate_group/de9776689b0c97ae467506856408a7e102f4bb42fb6ba287e06f24c662a8cfc6.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "59b6948f-6189-9c31-baf6-7a3a2564c767",
+      "usage": {
+        "prompt_tokens": 4756,
+        "completion_tokens": 92,
+        "total_tokens": 7907,
+        "prompt_tokens_details": {
+          "text_tokens": 2503,
+          "audio_tokens": 0,
+          "image_tokens": 2253,
+          "cached_tokens": 2304
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 3059,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 249620000
+      }
+    }
+  ],
+  "format_warnings": []
+}

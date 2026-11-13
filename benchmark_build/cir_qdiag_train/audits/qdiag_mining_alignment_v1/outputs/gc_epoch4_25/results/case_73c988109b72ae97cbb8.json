@@ -1,0 +1,85 @@
+{
+  "case_id": "case_73c988109b72ae97cbb8",
+  "audit_query_id": "audit_query_096",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_73c988109b72ae97cbb8",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 visibly shows the front ends of two school buses parked side by side with little space between them."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows chimpanzees in vegetation; no school buses or adjacent parked buses are visible."
+    },
+    "candidate_relation": "multiple_constraint_conflict",
+    "violated_source_constraints": [
+      "Show the front of the school buses",
+      "Park the school buses adjacent to each other"
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_73c988109b72ae97cbb8",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows two school buses with their fronts visible, parked side by side."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows chimpanzees outdoors, not school buses; the requested bus fronts and adjacent parking are absent."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "e37218e470f176c8c46348f27118003e7b78c80c9c2c94a762201613ca402e03",
+      "input_hash": "e837d39938c723b11cf50aa48ed9af1bcccf077ab50792311e5c88066cc45d6a",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/e837d39938c723b11cf50aa48ed9af1bcccf077ab50792311e5c88066cc45d6a.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_ack_1a38c60305c827061d8ed230977937c3",
+      "usage": {
+        "prompt_tokens": 3123,
+        "completion_tokens": 516,
+        "total_tokens": 3639,
+        "completion_tokens_details": {
+          "reasoning_tokens": 382
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "26c15e61693588ffc8738c9a44883d5b179999390f46198df3d1e89475092469",
+      "input_hash": "ed8854188d93dc5a5085509f2aeafbf93ca4570b1f721dc58285f498f2d8d6e6",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/ed8854188d93dc5a5085509f2aeafbf93ca4570b1f721dc58285f498f2d8d6e6.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_09e99ed298c21fdb016af2bf1f04a087d181e226fb943b1a42",
+      "usage": {
+        "prompt_tokens": 6957,
+        "completion_tokens": 131,
+        "total_tokens": 7088,
+        "completion_tokens_details": {
+          "reasoning_tokens": 36
+        }
+      }
+    }
+  ]
+}

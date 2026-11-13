@@ -1,0 +1,132 @@
+{
+  "case_id": "case_bda9f8faad7892475247",
+  "audit_query_id": "audit_query_089",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_bda9f8faad7892475247",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Several buses are parked together; a bus near the center has extensive black fire damage around its front area."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Buses are parked in rows, but they appear intact; no fire damage is visible."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "Three buses had a fire in the front ends; the candidate shows no visible fire damage."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "delete-predicate-1",
+        "operation": "delete",
+        "semantic_target": "predicate",
+        "before_span": " where three buses had a fire in the front ends",
+        "after_span": null,
+        "edited_instruction": "The target photo is of a bus parking lot.",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "The removed clause specifies that three buses had a fire in their front ends; the candidate shows intact buses without visible fire damage.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "The positive shows buses parked together in a lot."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The candidate shows buses parked in rows."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_bda9f8faad7892475247",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "The photo shows parked school buses and severely charred buses in the center. Two burned bus fronts are clearly distinguishable, but a third burned front cannot be reliably identified. The required count of three is therefore unverified."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Rows of intact yellow buses occupy a parking area. The visible fronts show no fire damage; the image does not depict three buses with burned front ends."
+    },
+    "verdicts": [
+      {
+        "witness_id": "delete-predicate-1",
+        "decision": "reject",
+        "failure_code": "source_invalid_or_uncertain",
+        "witness_type": null,
+        "reason": "The deletion reconstructs the proposed fluent instruction, and both images support a bus parking lot. However, the positive image does not reliably establish three buses with fire-damaged front ends, so the required original-query support pattern is not established.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Several school buses are parked together in an outdoor lot."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Yellow buses are parked in closely spaced rows along a marked lane."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [],
+  "local_checks": [
+    {
+      "witness_id": "delete-predicate-1",
+      "accepted": false,
+      "local_failures": [
+        "wrong_witness_type",
+        "wrong_support_pattern"
+      ],
+      "review_decision": "reject"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "6e34232b0cae2202e7d0ed81e3a9b0c6c9d3e367afa345b53bfc2ed6f8ace548",
+      "input_hash": "f354b04efc12553d8415fa18b4676e956d0963e3abc80b6a05560a6982fd0bf7",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/f354b04efc12553d8415fa18b4676e956d0963e3abc80b6a05560a6982fd0bf7.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0e73eae566067454016af2beb43a6487d2967ebacbcbb3b3ed",
+      "usage": {
+        "prompt_tokens": 7285,
+        "completion_tokens": 779,
+        "total_tokens": 8064,
+        "completion_tokens_details": {
+          "reasoning_tokens": 516
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "9eb48e50279a602fa8da6b4c44d054d9c2e05d42851f7e6621e6df650da02502",
+      "input_hash": "eca5f65e1125fdbcb45761e6b983c82889ff4e0ddd8bf1ca84d7e0187b6c30f3",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/eca5f65e1125fdbcb45761e6b983c82889ff4e0ddd8bf1ca84d7e0187b6c30f3.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0c8f7759f5ac3782016af2bec480fc87d0858968da1da1c99b",
+      "usage": {
+        "prompt_tokens": 6652,
+        "completion_tokens": 425,
+        "total_tokens": 7077,
+        "prompt_tokens_details": {
+          "cached_tokens": 3482
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 104
+        }
+      }
+    }
+  ]
+}

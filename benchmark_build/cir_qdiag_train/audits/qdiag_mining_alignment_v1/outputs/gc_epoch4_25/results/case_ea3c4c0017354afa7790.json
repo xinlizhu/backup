@@ -1,0 +1,91 @@
+{
+  "case_id": "case_ea3c4c0017354afa7790",
+  "audit_query_id": "audit_query_089",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_ea3c4c0017354afa7790",
+    "case_status": "source_invalid_or_uncertain",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "The parking area contains school buses with severely charred front sections, but only two burned bus fronts are clearly distinguishable. A third bus with front-end fire damage cannot be verified."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The parking lot shows one prominent yellow school bus with an intact, uncharred front section, rather than three buses with burned front ends."
+    },
+    "candidate_relation": "multiple_constraint_conflict",
+    "violated_source_constraints": [
+      "Three buses are shown with the specified damage.",
+      "The buses have fire damage at their front ends."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_ea3c4c0017354afa7790",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "The photo shows parked school buses with extensive charring and destroyed front ends on the central buses. However, three distinct buses with burned front ends cannot be reliably identified; the flanking yellow buses obscure parts of the scene."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The photo shows a yellow school bus in a parking lot with traffic cones. Its visible front and body are intact, with no visible fire damage, and there are not three buses with burned front ends."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "67f7d1358bdf23c2c43dfebe0cf34c66a873512fff0460dcf3f2306dc05a0922",
+      "input_hash": "c4d98b764706fa707a07511651af3a26a3191b9c51b263073016ea678b45355f",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/c4d98b764706fa707a07511651af3a26a3191b9c51b263073016ea678b45355f.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_05e896f37d6aa9be016af2be16fe6887d18776683b56261aff",
+      "usage": {
+        "prompt_tokens": 7127,
+        "completion_tokens": 361,
+        "total_tokens": 7488,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 159
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "feaf91378cd1766e3b4a553e371641e92599b2a8b0f7132f95399a2fa0d423da",
+      "input_hash": "ee06166e57b717b5d2164cf85b43de6a9c02939d8702a3b68af83c974c0d25f2",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/ee06166e57b717b5d2164cf85b43de6a9c02939d8702a3b68af83c974c0d25f2.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_019270370cce79a2016af2be31aa5487d1aa92fbee0581eb78",
+      "usage": {
+        "prompt_tokens": 6585,
+        "completion_tokens": 176,
+        "total_tokens": 6761,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 36
+        }
+      }
+    }
+  ]
+}

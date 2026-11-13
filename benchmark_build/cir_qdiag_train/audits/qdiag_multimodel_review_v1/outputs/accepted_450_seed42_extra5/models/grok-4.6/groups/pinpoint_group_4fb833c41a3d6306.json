@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_4fb833c41a3d6306",
+  "model": "grok-4.6",
+  "signature": "cb958fa178e5ebcdd33f446ebd46fe25a7c20417ca5539cc74de61fb4df99804",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_4fb833c41a3d6306_query_03566_object_add",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "The append adds exactly one object, a small chest pocket, and reconstructs the negative text. Every supplied plain white tee clearly has no chest pocket, so the added fact is false for all positives."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.6",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "94453c5c0badbed3e214f2343706be4f2551d748cb7462e621b93948f4652508",
+      "input_hash": "1685d1ccddfe2a7c1dff8d1e586c241e3fe57ec6eea9d43834b2314ea4da1f03",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/grok-4.6/cache/validate_group/1685d1ccddfe2a7c1dff8d1e586c241e3fe57ec6eea9d43834b2314ea4da1f03.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "69bf149f-7102-969a-8c7e-a3e2112faa57",
+      "usage": {
+        "prompt_tokens": 6093,
+        "completion_tokens": 90,
+        "total_tokens": 7979,
+        "prompt_tokens_details": {
+          "text_tokens": 2610,
+          "audio_tokens": 0,
+          "image_tokens": 3483,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1796,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 204300000
+      }
+    }
+  ],
+  "format_warnings": []
+}

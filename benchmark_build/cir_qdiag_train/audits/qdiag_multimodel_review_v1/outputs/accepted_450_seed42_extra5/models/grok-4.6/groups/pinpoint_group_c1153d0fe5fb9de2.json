@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_c1153d0fe5fb9de2",
+  "model": "grok-4.6",
+  "signature": "cb958fa178e5ebcdd33f446ebd46fe25a7c20417ca5539cc74de61fb4df99804",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_c1153d0fe5fb9de2_query_05503_attribute_delete",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Deletes only the attribute \"watercolor\" from the floral motifs; the result is fluent, reconstructs cleanly, and is strictly weaker while preserving the necktie, motifs, and suit-complement relation."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.6",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "3829335d83b60d619d7b8b3343b916120bb8a5b8ad51fdfd2d88a7aea8feb78b",
+      "input_hash": "8663a2f427312d33fdaa3edf1f2179ce26d199093cd6d8a803c827800772f291",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/grok-4.6/cache/validate_group/8663a2f427312d33fdaa3edf1f2179ce26d199093cd6d8a803c827800772f291.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "d3c3dd0c-3bb3-9401-b4d4-825327d7b5c6",
+      "usage": {
+        "prompt_tokens": 6472,
+        "completion_tokens": 90,
+        "total_tokens": 7577,
+        "prompt_tokens_details": {
+          "text_tokens": 2596,
+          "audio_tokens": 0,
+          "image_tokens": 3876,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1015,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 165020000
+      }
+    }
+  ],
+  "format_warnings": []
+}

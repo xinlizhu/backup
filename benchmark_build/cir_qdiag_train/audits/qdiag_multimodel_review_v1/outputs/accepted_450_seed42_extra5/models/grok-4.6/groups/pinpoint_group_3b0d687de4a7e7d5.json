@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_3b0d687de4a7e7d5",
+  "model": "grok-4.6",
+  "signature": "cb958fa178e5ebcdd33f446ebd46fe25a7c20417ca5539cc74de61fb4df99804",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_3b0d687de4a7e7d5_query_04909_predicate_substitute",
+      "decision": "reject",
+      "failure_code": "not_visually_verifiable",
+      "reason": "Enlarge→Shrink is one fluent predicate swap, but shrink vs enlarge is an editing action. The positives are independent photos of large sectionals with no before/after, so the new fact cannot be judged false for every positive."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.6",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "75b7eaf12bd0cf1a7c458a72b3d3f0e506940cda7964d34f9056c15773e80ace",
+      "input_hash": "e4536445d72bb38fffb43be5ad7954ab91f540389e30f349b43e3af59c6cc0a9",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/grok-4.6/cache/validate_group/e4536445d72bb38fffb43be5ad7954ab91f540389e30f349b43e3af59c6cc0a9.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "843bb78c-2073-94bc-9dae-f6a0559ee8f3",
+      "usage": {
+        "prompt_tokens": 3760,
+        "completion_tokens": 105,
+        "total_tokens": 8416,
+        "prompt_tokens_details": {
+          "text_tokens": 2453,
+          "audio_tokens": 0,
+          "image_tokens": 1307,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 4551,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 323840000
+      }
+    }
+  ],
+  "format_warnings": []
+}

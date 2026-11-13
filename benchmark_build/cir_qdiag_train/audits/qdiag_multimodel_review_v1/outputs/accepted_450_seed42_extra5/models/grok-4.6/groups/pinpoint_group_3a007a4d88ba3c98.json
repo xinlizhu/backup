@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_3a007a4d88ba3c98",
+  "model": "grok-4.6",
+  "signature": "cb958fa178e5ebcdd33f446ebd46fe25a7c20417ca5539cc74de61fb4df99804",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_3a007a4d88ba3c98_query_04758_object_add",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Adds exactly one object, a bomber jacket, and the insertion reconstructs the text fluently. None of the four positives shows a bomber jacket, so the added fact is clearly false for every positive."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.6",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "4a6cd4f8b590e5ef06b787dfb9be2ea29ddd68e50ed05a8d377dcf5e913dc9f1",
+      "input_hash": "fe69c33734ef50ef3ad7544d8af1867047827485141cb53040bf6bbe8007dc5f",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/grok-4.6/cache/validate_group/fe69c33734ef50ef3ad7544d8af1867047827485141cb53040bf6bbe8007dc5f.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "e3792624-8afa-9309-b156-6b63d0edaa0c",
+      "usage": {
+        "prompt_tokens": 5520,
+        "completion_tokens": 91,
+        "total_tokens": 7579,
+        "prompt_tokens_details": {
+          "text_tokens": 2483,
+          "audio_tokens": 0,
+          "image_tokens": 3037,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1968,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 203220000
+      }
+    }
+  ],
+  "format_warnings": []
+}

@@ -1,0 +1,161 @@
+{
+  "case_id": "case_65078033e8163e379eb0",
+  "audit_query_id": "audit_query_083",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_65078033e8163e379eb0",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows one body-cream tube beside its pink box."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "Image 3 shows one perfume bottle beside its box."
+    },
+    "candidate_relation": "compatible",
+    "violated_source_constraints": [],
+    "witnesses": [
+      {
+        "witness_id": "add_object_perfume",
+        "operation": "add",
+        "semantic_target": "object",
+        "before_span": null,
+        "after_span": "perfume ",
+        "edited_instruction": "Leave a single perfume product with its box",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "The product is a perfume; this added object-category constraint is visible in Image 3 and false of the body-cream product in Image 2.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 shows body cream, not a perfume."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows a perfume bottle with its box."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_65078033e8163e379eb0",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows one body-cream tube alongside one matching box, satisfying the requested single product with its box."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "Image 3 shows one Acorelle perfume bottle alongside its matching box, also satisfying the requested single product with its box."
+    },
+    "verdicts": [
+      {
+        "witness_id": "add_object_perfume",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "Inserting 'perfume ' before 'product' adds one object-category constraint while preserving the single-product and matching-box requirements. Both images satisfy the original query; only Image 3 satisfies the added perfume constraint.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 contains a tube and matching carton explicitly labeled 'Body Cream & Skin Care', rather than a perfume product."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 contains a single perfume spray bottle and matching Acorelle carton; both visibly bear 'EAU DE PARFUM' labeling."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "add_object_perfume",
+      "operation": "add",
+      "semantic_target": "object",
+      "before_span": null,
+      "after_span": "perfume ",
+      "edited_instruction": "Leave a single perfume product with its box",
+      "witness_type": "addition_disambiguation",
+      "changed_constraint": "The product is a perfume; this added object-category constraint is visible in Image 3 and false of the body-cream product in Image 2.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "Image 2 shows body cream, not a perfume."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "Image 3 shows a perfume bottle with its box."
+      },
+      "independent_review": {
+        "witness_id": "add_object_perfume",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "Inserting 'perfume ' before 'product' adds one object-category constraint while preserving the single-product and matching-box requirements. Both images satisfy the original query; only Image 3 satisfies the added perfume constraint.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 contains a tube and matching carton explicitly labeled 'Body Cream & Skin Care', rather than a perfume product."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 contains a single perfume spray bottle and matching Acorelle carton; both visibly bear 'EAU DE PARFUM' labeling."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "add_object_perfume",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "ec294af7aabc1bbcb95f9d7e7117f8b180f943e12d8da502e47ed6de6a79410b",
+      "input_hash": "34f322240b0ac5e1c0f9469d2fe579604bc778f70a95733f3537e7d42178bdf3",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/34f322240b0ac5e1c0f9469d2fe579604bc778f70a95733f3537e7d42178bdf3.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_074934d7723d90e6016af2bf4a03e087d29bb804b15df0d887",
+      "usage": {
+        "prompt_tokens": 8889,
+        "completion_tokens": 541,
+        "total_tokens": 9430,
+        "prompt_tokens_details": {
+          "cached_tokens": 5888
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 305
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "58f2e5284ccdf7f5cbb970b07070c78108953c235191048204b95d0124b3b672",
+      "input_hash": "bc5bb5f9df3aa82ea11c284a3c2531d7975ae0fdd4a1227b4f744d65bee3f0c3",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/bc5bb5f9df3aa82ea11c284a3c2531d7975ae0fdd4a1227b4f744d65bee3f0c3.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0d2784867b9b03ae016af2bf58c19487d19a9cfb500bddecbe",
+      "usage": {
+        "prompt_tokens": 8245,
+        "completion_tokens": 314,
+        "total_tokens": 8559,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        }
+      }
+    }
+  ]
+}

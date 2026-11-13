@@ -1,0 +1,131 @@
+{
+  "case_id": "case_e6a3ed189951d8b0a05d",
+  "audit_query_id": "audit_query_092",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_e6a3ed189951d8b0a05d",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows one panda resting its head on a paw above a branch, matching the described resting posture."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows one panda sitting upright and eating bamboo, not lying down resting on its paw on a branch."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The panda is laying down on its paw, resting on a branch."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "delete-predicate-resting-posture",
+        "operation": "delete",
+        "semantic_target": "predicate",
+        "before_span": "laying down on his paw resting on a branch",
+        "after_span": null,
+        "edited_instruction": "Goes from a panda in a tree eating something to a single panda.",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "Removes the target posture and resting-on-a-branch relation; the remaining instruction specifies a single panda.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 shows a single panda."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows a single panda."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_e6a3ed189951d8b0a05d",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The single panda is reclined with its head resting on its black forepaw above a thick supporting branch, matching the requested resting posture."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The single panda is sitting upright eating bamboo, with a raised paw holding food; it is not lying with its head resting on its paw on a branch."
+    },
+    "verdicts": [
+      {
+        "witness_id": "delete-predicate-resting-posture",
+        "decision": "reject",
+        "failure_code": "not_single_edit",
+        "witness_type": null,
+        "reason": "The span deletion reconstructs the proposed text, but removes multiple independently testable constraints: lying down, resting on its paw, and resting on a branch. The candidate violates multiple removed requirements, so this is not a single-constraint deletion witness despite satisfying the overall support pattern.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 shows a single panda, satisfying the remaining target description."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows a single panda, satisfying the remaining target description."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [],
+  "local_checks": [
+    {
+      "witness_id": "delete-predicate-resting-posture",
+      "accepted": false,
+      "local_failures": [
+        "wrong_witness_type"
+      ],
+      "review_decision": "reject"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "d82f8089c20de692edf6d4b1d03ba3c36b66a7c0d1c04b7e9d27f3ad7728d411",
+      "input_hash": "2015b3c33a0b97962e278e6b9f81a252488263936a55cc7019f41fe7c6e68225",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/2015b3c33a0b97962e278e6b9f81a252488263936a55cc7019f41fe7c6e68225.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_05ff6faf9ef050b8016af2bf51e17087d1b4c88c8e8d0e4077",
+      "usage": {
+        "prompt_tokens": 8570,
+        "completion_tokens": 775,
+        "total_tokens": 9345,
+        "completion_tokens_details": {
+          "reasoning_tokens": 420
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "10489c5c3eefe70d58a16ab7c279743a32e47b08cf57689ec258f71706c1190c",
+      "input_hash": "b51db7301d02ce9192245c98a3179e2ad1bd43725b11abf4c4c3ffad7a8dfac0",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/b51db7301d02ce9192245c98a3179e2ad1bd43725b11abf4c4c3ffad7a8dfac0.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0b74e82117b2412a016af2bf6538cc87d091d92fcfa8c43c92",
+      "usage": {
+        "prompt_tokens": 7944,
+        "completion_tokens": 352,
+        "total_tokens": 8296,
+        "prompt_tokens_details": {
+          "cached_tokens": 3482
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 33
+        }
+      }
+    }
+  ]
+}

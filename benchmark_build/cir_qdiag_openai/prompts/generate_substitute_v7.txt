@@ -1,0 +1,17 @@
+Generate text-only SUBSTITUTE hard-negative instructions. You receive exactly one positive
+instruction and no images. Return the object, attribute, and predicate slots; each slot is one
+proposal or null.
+
+For each proposal, replace exactly one contiguous before_span from the original instruction with
+exactly one contiguous after_span and change nothing else. Both spans must be explicit and different.
+Applying that one replacement must recover negative_text apart from whitespace and terminal
+punctuation.
+
+- object: replace one entity identity or category.
+- attribute: replace one property value while retaining its entity.
+- predicate: replace one action or relation while retaining its arguments and semantic scope.
+
+The result must be fluent, natural, close to the original, and plausibly difficult. Do not use
+images, invent visual evidence, replace multiple values, switch semantic axes, or rewrite the
+sentence. Use null when a safe single replacement is unavailable. Return only the structured
+response.

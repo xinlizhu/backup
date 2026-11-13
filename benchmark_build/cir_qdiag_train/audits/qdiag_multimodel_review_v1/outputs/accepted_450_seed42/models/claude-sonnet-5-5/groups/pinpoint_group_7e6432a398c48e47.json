@@ -1,0 +1,62 @@
+{
+  "group_id": "pinpoint_group_7e6432a398c48e47",
+  "model": "claude-sonnet-5-5",
+  "signature": "aff20e5a5733d87f80fd7515c25d92c77cff20d4f50c9f8dbf4123bfdabed97b",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_7e6432a398c48e47_query_02923_attribute_add",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "The added attribute 'with peeling white paint' is compatible with multiple supplied positive images. Image 4 shows a house with white/cream walls and weathered coastal appearance. Image 5 displays white walls with aged, weathered surfaces. The peeling white paint attribute does not clearly contradict any positive image."
+    },
+    {
+      "negative_id": "pinpoint_group_7e6432a398c48e47_query_02924_object_delete",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Valid deletion of 'and roof tiles' from the source text. The edit removes exactly one semantic constraint (the roof tiles object) while preserving the core meaning about applying a salt-weathered coastal finish to existing stucco. The resulting text is fluent and strictly weaker, producing a meaningful query focused on the stucco finish rather than both stucco and roof tiles."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-sonnet-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "285e888c667491398884d9ed4efcebcebfd972f1673ce596d4eccf54e922001d",
+      "input_hash": "444365e22941f1532886ec8e3217d2a85c957b5c9d525141254ea08e5127ba03",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/claude-sonnet-5-5/cache/validate_group/444365e22941f1532886ec8e3217d2a85c957b5c9d525141254ea08e5127ba03.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01witCdAD0Q6AWyzpfv1Y6fHRy",
+      "usage": {
+        "prompt_tokens": 9479,
+        "completion_tokens": 329,
+        "total_tokens": 9808,
+        "prompt_tokens_details": {
+          "cached_tokens": 7390,
+          "cache_creation_tokens": 2085
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_7e6432a398c48e47_query_02923_attribute_add",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 321,
+      "action": "full reason retained; decision and failure_code unchanged"
+    },
+    {
+      "negative_id": "pinpoint_group_7e6432a398c48e47_query_02924_object_delete",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 378,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

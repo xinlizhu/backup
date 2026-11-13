@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cir-qdiag-train"
+version = "0.1.0"
+description = "InfoNCE training with CIRR composed queries and CIR-QDiag hard-negative texts"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.26",
+  "pandas>=2",
+  "Pillow>=10",
+  "PyYAML>=6",
+  "pydantic>=2.7,<3",
+  "peft>=0.13",
+  "qwen-vl-utils>=0.0.14",
+  "torch>=2.4",
+  "transformers>=4.57",
+  "tqdm>=4.66",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.5"]
+tg-cir = ["torch>=2.6", "torchvision>=0.21", "ftfy>=6", "transformers>=4.57,<5"]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"

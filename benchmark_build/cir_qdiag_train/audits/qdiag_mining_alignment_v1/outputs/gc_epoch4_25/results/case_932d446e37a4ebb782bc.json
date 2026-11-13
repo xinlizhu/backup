@@ -1,0 +1,233 @@
+{
+  "case_id": "case_932d446e37a4ebb782bc",
+  "audit_query_id": "audit_query_083",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_932d446e37a4ebb782bc",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Relative to the reference's multiple boxes, T shows one body-cream container with one matching box."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "C shows one Bio-Oil bottle with one matching box, satisfying the requested single product with its box."
+    },
+    "candidate_relation": "compatible",
+    "violated_source_constraints": [],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "add",
+        "semantic_target": "object",
+        "before_span": null,
+        "after_span": "oil",
+        "edited_instruction": "Leave a single oil product with its box",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "The product must be an oil product; the original instruction did not specify a product category.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "T shows a single product with its box, but its label identifies it as body cream rather than oil."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C shows one bottle labeled Bio-Oil and Specialist Skincare Oil alongside its matching box."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "operation": "add",
+        "semantic_target": "attribute",
+        "before_span": null,
+        "after_span": "white-capped",
+        "edited_instruction": "Leave a single white-capped product with its box",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "The product must have a white cap; the original instruction did not specify cap color.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "T has one product and its box, but the container's cap is metallic silver."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C has one Bio-Oil bottle with a white cap and its matching box."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_932d446e37a4ebb782bc",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows one body-cream tube beside its matching branded box, satisfying the single-product and box requirements."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "Image 3 shows one Bio-Oil bottle beside its matching Bio-Oil box, satisfying the single-product and box requirements."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "Inserting 'oil' adds one product-category constraint while preserving the single-product and matching-box requirements. Both images satisfy the original instruction; only the candidate shows an oil product.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The tube and box are labeled 'Body Cream & Skin Care'; the single product is a cream rather than an oil."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The single bottle and matching box visibly carry Bio-Oil branding and identify the product as specialist skincare oil."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "Inserting 'white-capped' adds one visible attribute of the existing product. Both images satisfy the original instruction, while the cap color distinguishes the candidate from the positive.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The body-cream tube has a metallic silver cap at its base, not a white cap, and stands beside its matching box."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The single Bio-Oil bottle has a white cylindrical cap and stands beside its matching box."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "add",
+      "semantic_target": "object",
+      "before_span": null,
+      "after_span": "oil",
+      "edited_instruction": "Leave a single oil product with its box",
+      "witness_type": "addition_disambiguation",
+      "changed_constraint": "The product must be an oil product; the original instruction did not specify a product category.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "T shows a single product with its box, but its label identifies it as body cream rather than oil."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C shows one bottle labeled Bio-Oil and Specialist Skincare Oil alongside its matching box."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "Inserting 'oil' adds one product-category constraint while preserving the single-product and matching-box requirements. Both images satisfy the original instruction; only the candidate shows an oil product.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The tube and box are labeled 'Body Cream & Skin Care'; the single product is a cream rather than an oil."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The single bottle and matching box visibly carry Bio-Oil branding and identify the product as specialist skincare oil."
+        }
+      }
+    },
+    {
+      "witness_id": "w2",
+      "operation": "add",
+      "semantic_target": "attribute",
+      "before_span": null,
+      "after_span": "white-capped",
+      "edited_instruction": "Leave a single white-capped product with its box",
+      "witness_type": "addition_disambiguation",
+      "changed_constraint": "The product must have a white cap; the original instruction did not specify cap color.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "T has one product and its box, but the container's cap is metallic silver."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C has one Bio-Oil bottle with a white cap and its matching box."
+      },
+      "independent_review": {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "Inserting 'white-capped' adds one visible attribute of the existing product. Both images satisfy the original instruction, while the cap color distinguishes the candidate from the positive.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The body-cream tube has a metallic silver cap at its base, not a white cap, and stands beside its matching box."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The single Bio-Oil bottle has a white cylindrical cap and stands beside its matching box."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    },
+    {
+      "witness_id": "w2",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "65b138700aa33ee337319fd5cab068a2f4e95875a64ee4002122c6934462a103",
+      "input_hash": "31cf3f9d276a6f6455aa5351ae3f71d30115b8d05497f33cef8910837ba6a09d",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/31cf3f9d276a6f6455aa5351ae3f71d30115b8d05497f33cef8910837ba6a09d.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0171d57900ea1e5e016af2be18316487d18cf2ee163e90f27a",
+      "usage": {
+        "prompt_tokens": 7573,
+        "completion_tokens": 820,
+        "total_tokens": 8393,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 317
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "08061e4115ac00c37843763ed97ef9949e40ad4ef1879014c5c6e133d6f33fb0",
+      "input_hash": "4bbd19b485e4e12b13240c5d1ba9e4eafab1dd6bf918c03faef4a3c4ceec0b3a",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/4bbd19b485e4e12b13240c5d1ba9e4eafab1dd6bf918c03faef4a3c4ceec0b3a.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_049885cabfd3b0c5016af2be3467e887d28f4244db8cd97f39",
+      "usage": {
+        "prompt_tokens": 7154,
+        "completion_tokens": 510,
+        "total_tokens": 7664,
+        "completion_tokens_details": {
+          "reasoning_tokens": 42
+        }
+      }
+    }
+  ]
+}

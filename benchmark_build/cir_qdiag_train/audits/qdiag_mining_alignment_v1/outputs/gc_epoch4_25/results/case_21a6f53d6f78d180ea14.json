@@ -1,0 +1,235 @@
+{
+  "case_id": "case_21a6f53d6f78d180ea14",
+  "audit_query_id": "audit_query_097",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_21a6f53d6f78d180ea14",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "T shows a saxophone with a blue body and gold keys, replacing the conventional gold finish seen in R."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows a saxophone with a purple body and gold keys, rather than a blue body."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The saxophone must be blue."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "attribute",
+        "before_span": "blue",
+        "after_span": "purple",
+        "edited_instruction": "be a purple saxophone instead of a regular one.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "The saxophone's body color changes from blue to purple.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "T has a blue body, not a purple body."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C has a visibly purple body, contrasting with R's conventional gold finish."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "operation": "delete",
+        "semantic_target": "attribute",
+        "before_span": "blue",
+        "after_span": null,
+        "edited_instruction": "be a saxophone instead of a regular one.",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "Remove the requirement that the saxophone be blue, retaining the contrast with R's conventional gold saxophone.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "T is a saxophone with an unconventional blue finish instead of R's conventional gold finish."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C is a saxophone with an unconventional purple finish instead of R's conventional gold finish."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_21a6f53d6f78d180ea14",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 visibly shows a saxophone with a blue body and gold-colored keys."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a saxophone with a purple body, not a blue one."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing only “blue” with “purple” preserves the saxophone and contrast phrasing. Image 2 is blue, while Image 3 is visibly purple.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2’s saxophone body is blue, not purple."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3’s saxophone body is purple."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting only “blue” leaves a fluent, broader saxophone instruction. Both images show saxophones; the candidate’s only conflict with the original is its purple rather than blue body.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 visibly depicts a saxophone."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 visibly depicts a saxophone."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "substitute",
+      "semantic_target": "attribute",
+      "before_span": "blue",
+      "after_span": "purple",
+      "edited_instruction": "be a purple saxophone instead of a regular one.",
+      "witness_type": "substitution_contrast",
+      "changed_constraint": "The saxophone's body color changes from blue to purple.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "T has a blue body, not a purple body."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C has a visibly purple body, contrasting with R's conventional gold finish."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing only “blue” with “purple” preserves the saxophone and contrast phrasing. Image 2 is blue, while Image 3 is visibly purple.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2’s saxophone body is blue, not purple."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3’s saxophone body is purple."
+        }
+      }
+    },
+    {
+      "witness_id": "w2",
+      "operation": "delete",
+      "semantic_target": "attribute",
+      "before_span": "blue",
+      "after_span": null,
+      "edited_instruction": "be a saxophone instead of a regular one.",
+      "witness_type": "deletion_relaxation",
+      "changed_constraint": "Remove the requirement that the saxophone be blue, retaining the contrast with R's conventional gold saxophone.",
+      "edited_on_positive": {
+        "status": "supported",
+        "evidence": "T is a saxophone with an unconventional blue finish instead of R's conventional gold finish."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C is a saxophone with an unconventional purple finish instead of R's conventional gold finish."
+      },
+      "independent_review": {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting only “blue” leaves a fluent, broader saxophone instruction. Both images show saxophones; the candidate’s only conflict with the original is its purple rather than blue body.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 visibly depicts a saxophone."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 visibly depicts a saxophone."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    },
+    {
+      "witness_id": "w2",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "1c1e3933e746fb2295bd18fda253dd18129b67b99acfe5a5dd6fd2007397cda7",
+      "input_hash": "173d3ead7a59458a2ee32d16b0f19eef8dcf5390fbb12608213e5cb7ab717da0",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/173d3ead7a59458a2ee32d16b0f19eef8dcf5390fbb12608213e5cb7ab717da0.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_01bc179e771a13a4016af2bf9a5cb087d1af55071693b60423",
+      "usage": {
+        "prompt_tokens": 7516,
+        "completion_tokens": 508,
+        "total_tokens": 8024,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "153d4159ca07b4960a1a8bc7b13362930c2b38840fa64bde5e91d88e7556f524",
+      "input_hash": "6db62939371ce4d12d6df92e7afc9ecbabb94b2eaa631fe94ca8d35de4e40c11",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/6db62939371ce4d12d6df92e7afc9ecbabb94b2eaa631fe94ca8d35de4e40c11.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0b5c975774b42657016af2bfa9529087d28e1d86d9b95fcdc1",
+      "usage": {
+        "prompt_tokens": 7263,
+        "completion_tokens": 468,
+        "total_tokens": 7731,
+        "prompt_tokens_details": {
+          "cached_tokens": 5248
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 161
+        }
+      }
+    }
+  ]
+}

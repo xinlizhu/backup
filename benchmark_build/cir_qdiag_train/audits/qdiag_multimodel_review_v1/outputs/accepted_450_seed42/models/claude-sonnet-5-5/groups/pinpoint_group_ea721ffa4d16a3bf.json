@@ -1,0 +1,80 @@
+{
+  "group_id": "pinpoint_group_ea721ffa4d16a3bf",
+  "model": "claude-sonnet-5-5",
+  "signature": "aff20e5a5733d87f80fd7515c25d92c77cff20d4f50c9f8dbf4123bfdabed97b",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_ea721ffa4d16a3bf_query_02262_object_delete",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Removes exactly one semantic constraint (the 'home bar' object) while preserving 'Create a setting for this mood'. The resulting text is fluent and meaningfully weaker. All positive images show home bar settings, so the deleted object is clearly false for every supplied positive."
+    },
+    {
+      "negative_id": "pinpoint_group_ea721ffa4d16a3bf_query_02262_object_substitute",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "Image 5 shows a suit with pinstripes and formal styling. A home office with professional, refined furniture and neutral/formal color palettes could plausibly echo the suit's aesthetic. The substitution is not clearly false for all supplied positives."
+    },
+    {
+      "negative_id": "pinpoint_group_ea721ffa4d16a3bf_query_02263_attribute_add",
+      "decision": "reject",
+      "failure_code": "not_close_or_hard",
+      "reason": "The source text is 'Reference image mood home bar' which is already fragmentary. Adding 'with warm wood cabinetry' creates unclear antecedent reference. The edit is difficult to verify against malformed source text rather than a subtle single constraint."
+    },
+    {
+      "negative_id": "pinpoint_group_ea721ffa4d16a3bf_query_02266_predicate_delete",
+      "decision": "reject",
+      "failure_code": "not_single_edit",
+      "reason": "Deletes a substantial predicate clause 'echoing the color palette, pattern approach, and overall aesthetic in this suit' reducing the source to only 'A refined home bar interior.' This bundled deletion removes multiple related semantic constraints (color palette echoing, pattern approach echoing, aesthetic echoing) rather than exactly one."
+    },
+    {
+      "negative_id": "pinpoint_group_ea721ffa4d16a3bf_query_02266_object_substitute",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "Substituting 'suit' with 'dress' preserves the core predicate structure about echoing aesthetic qualities. Image 5 shows formal menswear, but the positive images include various bar aesthetics (modern gray, dark marble with gold, dark with wood and burgundy) that could plausibly echo a dress's aesthetic. The substitution is not clearly false for all supplied positives."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-sonnet-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "d4301730d48e55960bff08bb5169299f40c88f7e32d09a982393fb3b3d11d76d",
+      "input_hash": "140d08a84189fcf22ffc2f5326beeca2efe2ed751f9f23d8c819270205f7cb55",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/claude-sonnet-5-5/cache/validate_group/140d08a84189fcf22ffc2f5326beeca2efe2ed751f9f23d8c819270205f7cb55.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01jR9VsjusQjq1IABhiu9BxPxg",
+      "usage": {
+        "prompt_tokens": 10761,
+        "completion_tokens": 726,
+        "total_tokens": 11487,
+        "prompt_tokens_details": {
+          "cached_tokens": 8390,
+          "cache_creation_tokens": 2367
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_ea721ffa4d16a3bf_query_02266_predicate_delete",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 341,
+      "action": "full reason retained; decision and failure_code unchanged"
+    },
+    {
+      "negative_id": "pinpoint_group_ea721ffa4d16a3bf_query_02266_object_substitute",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 371,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

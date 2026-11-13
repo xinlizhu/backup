@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_0c83e558b46d9d84",
+  "model": "grok-4.7",
+  "signature": "52913ea34ae01078c58f7a80fc2119b86ef4b6b3449e9e55b21816a5d5d1ccbd",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_0c83e558b46d9d84_query_07432_object_delete",
+      "decision": "reject",
+      "failure_code": "wrong_semantic_target",
+      "reason": "'mermaid' is a silhouette/style property of the existing dress, not a separate entity. Deleting it removes one attribute constraint, so the stated object target is the wrong semantic axis."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.7",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "53f3c030bbcd3f7cd49da32ea773e23aa484ac533ec901dcc74b47ff1b1e902d",
+      "input_hash": "873fe9725b7a46e0e26f7028d84a48b1aa21311fb7adf0372cdee9f106d71ee3",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/grok-4.7/cache/validate_group/873fe9725b7a46e0e26f7028d84a48b1aa21311fb7adf0372cdee9f106d71ee3.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "2522a412-3a51-9710-b8f6-5e7a4e047468",
+      "usage": {
+        "prompt_tokens": 2972,
+        "completion_tokens": 93,
+        "total_tokens": 5240,
+        "prompt_tokens_details": {
+          "text_tokens": 2388,
+          "audio_tokens": 0,
+          "image_tokens": 584,
+          "cached_tokens": 1152
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2175,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 178240000
+      }
+    }
+  ],
+  "format_warnings": []
+}

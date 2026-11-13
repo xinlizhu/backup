@@ -1,0 +1,64 @@
+{
+  "analysis": {
+    "bootstrap_replicates": 1000,
+    "cell_counts": {
+      "attribute|add": 401,
+      "attribute|delete": 387,
+      "attribute|substitute": 474,
+      "object|add": 315,
+      "object|delete": 109,
+      "object|substitute": 411,
+      "predicate|add": 545,
+      "predicate|delete": 283,
+      "predicate|substitute": 476
+    },
+    "delta_identity_max_abs_error": 6.351619958877563e-07,
+    "descriptive_only": true,
+    "grouped_by": "pair_id",
+    "mode_counts": {
+      "text_only_editable": 2498,
+      "vision_grounded": 903
+    },
+    "reference_ablation_available": true,
+    "reference_contribution_identity_max_abs_error": 2.9802322387695312e-08,
+    "seed": 42
+  },
+  "extraction": {
+    "batch_size": 32,
+    "completed": true,
+    "delta_identity_max_abs_error": 6.351619958877563e-07,
+    "device": "cuda:0",
+    "dtype": "auto",
+    "elapsed_seconds": 93.60177993774414,
+    "embedding_dimension": 4096,
+    "files": {
+      "features": "features.npz",
+      "rows": "rows.jsonl",
+      "scores": "scores.csv"
+    },
+    "input_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag/outputs/pilot_500_v5/final.jsonl",
+    "input_sha256": "bb5602a2986b4f42b1192ef5a01faa9ecbc49b566cd90a57a5e614c21bee3007",
+    "limit_samples": null,
+    "model_name": "BGE-VL-MLLM-S1",
+    "model_path": "/mnt/data/datasets/search_dataset/zxl/CIR_PLAY/models/checkpoints/BGE-VL-MLLM-S1",
+    "negative_count": 3401,
+    "normalization_max_abs_error": 1.1920928955078125e-07,
+    "python": "3.12.13",
+    "reference_baseline_protocol": {
+      "content": [
+        "reference_image"
+      ],
+      "implementation": "query_role_with_task_prompt_and_none_modification",
+      "role": "query",
+      "version": "1"
+    },
+    "reference_contribution_identity_max_abs_error": 2.9802322387695312e-08,
+    "sample_count": 459,
+    "schema_version": "1.1"
+  },
+  "files": {
+    "delta_by_cell": "delta_by_cell.csv",
+    "reference_ablation_by_cell": "reference_ablation_by_cell.csv"
+  },
+  "schema_version": "1.0"
+}

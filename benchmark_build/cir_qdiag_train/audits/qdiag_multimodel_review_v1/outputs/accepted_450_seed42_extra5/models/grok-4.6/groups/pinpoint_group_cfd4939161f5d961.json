@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_cfd4939161f5d961",
+  "model": "grok-4.6",
+  "signature": "cb958fa178e5ebcdd33f446ebd46fe25a7c20417ca5539cc74de61fb4df99804",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_cfd4939161f5d961_query_07371_object_substitute",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Replacing 'shirt dress' with 'sweater dress' is one fluent object substitution that keeps every other constraint. The new garment type is clearly false for all supplied positives: the red positive is a woven button-front shirt dress, and the handbag and striped-fabric images are not dresses."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.6",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "dff38b2182709b7a0442a14199e0960cfb74b152d0eb9a8e1a4b5201678337cb",
+      "input_hash": "83ddb8a0b0d40d9be6d595db3c38a8a62394092ba95ee92d5a1d904b01e91a1a",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/grok-4.6/cache/validate_group/83ddb8a0b0d40d9be6d595db3c38a8a62394092ba95ee92d5a1d904b01e91a1a.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "ccb79251-6c43-9511-a512-fd8652e9b6d0",
+      "usage": {
+        "prompt_tokens": 4552,
+        "completion_tokens": 108,
+        "total_tokens": 8253,
+        "prompt_tokens_details": {
+          "text_tokens": 2438,
+          "audio_tokens": 0,
+          "image_tokens": 2114,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 3593,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 282380000
+      }
+    }
+  ],
+  "format_warnings": []
+}

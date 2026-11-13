@@ -1,0 +1,238 @@
+{
+  "case_id": "case_39631203713182f169de",
+  "audit_query_id": "audit_query_076",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_39631203713182f169de",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Compared with the group of dogs in R, T shows one dog on red carpet with a large bone at its mouth."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows one dog with a rawhide bone among the chews in front of it, but the carpet is light beige rather than red."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The carpet must be red."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "attribute",
+        "before_span": "red",
+        "after_span": "beige",
+        "edited_instruction": "Remove all but one dog, set up on beige carpet, and give a bone.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "Change the carpet color from red to beige.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "T has one dog with a bone, but its carpet is red, not beige."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C shows one dog on beige carpet with a rawhide bone among the chews in front of it."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "operation": "delete",
+        "semantic_target": "attribute",
+        "before_span": "red",
+        "after_span": null,
+        "edited_instruction": "Remove all but one dog, set up on carpet, and give a bone.",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "Remove the requirement that the carpet be red.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "T shows one dog on carpet with a large bone at its mouth."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C shows one dog on carpet with a rawhide bone among the chews in front of it; carpet color is unrestricted."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_39631203713182f169de",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows one dog on a red carpet with a large bone in its mouth."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows one dog and several bones, but the dog is on light beige carpet rather than red carpet."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing “red” with “beige” is one fluent attribute substitution; Image 2 has red carpet and Image 3 has beige carpet, while both show one dog and a bone.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2's carpet is red, not beige."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows one dog on light beige carpet with bones visible."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting “red” leaves a fluent carpet constraint; both images show one dog on carpet with a bone, and Image 3 violates only the removed color constraint.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 shows one dog on carpet with a bone."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows one dog on carpet with bones visible."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "substitute",
+      "semantic_target": "attribute",
+      "before_span": "red",
+      "after_span": "beige",
+      "edited_instruction": "Remove all but one dog, set up on beige carpet, and give a bone.",
+      "witness_type": "substitution_contrast",
+      "changed_constraint": "Change the carpet color from red to beige.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "T has one dog with a bone, but its carpet is red, not beige."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C shows one dog on beige carpet with a rawhide bone among the chews in front of it."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing “red” with “beige” is one fluent attribute substitution; Image 2 has red carpet and Image 3 has beige carpet, while both show one dog and a bone.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2's carpet is red, not beige."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows one dog on light beige carpet with bones visible."
+        }
+      }
+    },
+    {
+      "witness_id": "w2",
+      "operation": "delete",
+      "semantic_target": "attribute",
+      "before_span": "red",
+      "after_span": null,
+      "edited_instruction": "Remove all but one dog, set up on carpet, and give a bone.",
+      "witness_type": "deletion_relaxation",
+      "changed_constraint": "Remove the requirement that the carpet be red.",
+      "edited_on_positive": {
+        "status": "supported",
+        "evidence": "T shows one dog on carpet with a large bone at its mouth."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C shows one dog on carpet with a rawhide bone among the chews in front of it; carpet color is unrestricted."
+      },
+      "independent_review": {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting “red” leaves a fluent carpet constraint; both images show one dog on carpet with a bone, and Image 3 violates only the removed color constraint.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 shows one dog on carpet with a bone."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows one dog on carpet with bones visible."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    },
+    {
+      "witness_id": "w2",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "d94ac0883b1f322172d0d03f3e5f691d609b86663200d5deb032eb274d323103",
+      "input_hash": "715c6dcecc128abd8dad312dd9596cc48c11201194d77fdc7d5fcc97ef892f6e",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/715c6dcecc128abd8dad312dd9596cc48c11201194d77fdc7d5fcc97ef892f6e.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0b158fdb821322f1016af2bead4bfc87d1aa0b465b2070d775",
+      "usage": {
+        "prompt_tokens": 29191,
+        "completion_tokens": 593,
+        "total_tokens": 29784,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 65
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "a4859bd46a6693076039387ba539e06ba09c0d478c0a6fdcad5842f4f1d4305e",
+      "input_hash": "90dfcc18faff6e15f5202265ad11c83fe9be64cf3968a511686c8e30f8e2a764",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/90dfcc18faff6e15f5202265ad11c83fe9be64cf3968a511686c8e30f8e2a764.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_061ae36f5c7f73fe016af2bec8ee8087d189fac8c0d006bbae",
+      "usage": {
+        "prompt_tokens": 28951,
+        "completion_tokens": 478,
+        "total_tokens": 29429,
+        "prompt_tokens_details": {
+          "cached_tokens": 906
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 159
+        }
+      }
+    }
+  ]
+}

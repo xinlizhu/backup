@@ -1,0 +1,163 @@
+{
+  "case_id": "case_3c7224e2016fccacd19e",
+  "audit_query_id": "audit_query_096",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_3c7224e2016fccacd19e",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Two school buses face the viewer and are parked side by side."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The school buses are lined up alongside each other, but their fronts are not shown."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "Show the front of the school buses"
+    ],
+    "witnesses": [
+      {
+        "witness_id": "delete-front-view",
+        "operation": "delete",
+        "semantic_target": "predicate",
+        "before_span": "Show the front of the school buses and",
+        "after_span": null,
+        "edited_instruction": "park them adjacent to each other.",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "Removes the requirement to show the fronts of the school buses; both images show school buses parked adjacent to each other.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Two school buses are parked beside one another."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Multiple school buses are lined up alongside one another."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_3c7224e2016fccacd19e",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Two yellow school buses are parked beside one another, and both buses' fronts, including windshields, headlights, and SCHOOL BUS signs, are clearly visible."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "School buses are parked adjacent to one another in closely spaced rows, but the view looks along their sides and shows rear ends farther down the aisle rather than displaying their fronts."
+    },
+    "verdicts": [
+      {
+        "witness_id": "delete-front-view",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting the specified opening clause removes the single front-view requirement and its coordinating glue. The remaining imperative is fluent, with 'them' grounded in the reference buses. Both images support adjacent parking; the candidate violates only the removed front-view constraint.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "The two school buses are parked side by side with a small gap between them."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The school buses are parked close together in neighboring rows alongside a narrow aisle."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "delete-front-view",
+      "operation": "delete",
+      "semantic_target": "predicate",
+      "before_span": "Show the front of the school buses and",
+      "after_span": null,
+      "edited_instruction": "park them adjacent to each other.",
+      "witness_type": "deletion_relaxation",
+      "changed_constraint": "Removes the requirement to show the fronts of the school buses; both images show school buses parked adjacent to each other.",
+      "edited_on_positive": {
+        "status": "supported",
+        "evidence": "Two school buses are parked beside one another."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "Multiple school buses are lined up alongside one another."
+      },
+      "independent_review": {
+        "witness_id": "delete-front-view",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting the specified opening clause removes the single front-view requirement and its coordinating glue. The remaining imperative is fluent, with 'them' grounded in the reference buses. Both images support adjacent parking; the candidate violates only the removed front-view constraint.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "The two school buses are parked side by side with a small gap between them."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The school buses are parked close together in neighboring rows alongside a narrow aisle."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "delete-front-view",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "4604e71b14637ddb3b5ecfb293986cb9e1ef3bacefa810410762a6fa577ee86d",
+      "input_hash": "82cfc7ce4b9a6572f8959baa5d88990a12279d67e6c435fb63aeab26690cd580",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/82cfc7ce4b9a6572f8959baa5d88990a12279d67e6c435fb63aeab26690cd580.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0a6b2dacd60e26a5016af2bfa4b23087d1ad961f5c12d2dc8c",
+      "usage": {
+        "prompt_tokens": 7173,
+        "completion_tokens": 436,
+        "total_tokens": 7609,
+        "prompt_tokens_details": {
+          "cached_tokens": 5888
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 198
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "d31bb9187878aad9ad68897a6a87ddf666eb59deaf1cc5411c86de8b0045935e",
+      "input_hash": "3fa3b254063e5a9fc7aab2fdfc90cb47a66b6040c43e96c3573161eb5d232c4b",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/3fa3b254063e5a9fc7aab2fdfc90cb47a66b6040c43e96c3573161eb5d232c4b.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_07ac50065509f4f0016af2bfbab84087d2980131f0a0b1e006",
+      "usage": {
+        "prompt_tokens": 6533,
+        "completion_tokens": 385,
+        "total_tokens": 6918,
+        "completion_tokens_details": {
+          "reasoning_tokens": 66
+        }
+      }
+    }
+  ]
+}

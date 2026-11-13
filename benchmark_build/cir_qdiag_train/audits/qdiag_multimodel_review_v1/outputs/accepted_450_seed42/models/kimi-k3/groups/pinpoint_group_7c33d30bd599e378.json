@@ -1,0 +1,68 @@
+{
+  "group_id": "pinpoint_group_7c33d30bd599e378",
+  "model": "kimi-k3",
+  "signature": "7bcee9a6a15f47b49de535c2997e213c18a83885fbb254d34ea6aaed145faa23",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_7c33d30bd599e378_query_06173_predicate_substitute",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Single predicate substitution 'removing'->'adding' reconstructs the text exactly and 'adding the flare' contradicts every supplied flare-free column positive."
+    },
+    {
+      "negative_id": "pinpoint_group_7c33d30bd599e378_query_06174_attribute_add",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "Added attribute 'sweetheart neckline' is visibly true of the reference pink strapless gown, so the new fact is not false across the group."
+    },
+    {
+      "negative_id": "pinpoint_group_7c33d30bd599e378_query_06175_predicate_delete",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Deletes exactly one predicate constraint ('drop the tulle flare') while preserving the straight-column request, yielding a fluent strictly weaker query."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "kimi-k3",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "6d3527f1042018910d644a9742a95081d6e0e0924ac0178be8fae92cf7fc01b2",
+      "input_hash": "d7a9f2be0d7d70840d78b9c8d955df76fe26d1f61609ba291602df4d9b737b96",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/kimi-k3/cache/validate_group/d7a9f2be0d7d70840d78b9c8d955df76fe26d1f61609ba291602df4d9b737b96.json",
+      "cached": false,
+      "attempts": 2,
+      "request_id": "01a1c9bab7037208887aeb8290083c50",
+      "usage": {
+        "prompt_tokens": 6236,
+        "completion_tokens": 1097,
+        "total_tokens": 7333,
+        "prompt_cache_hit_tokens": 6224,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "text_tokens": 0,
+          "audio_tokens": 0,
+          "image_tokens": 0
+        },
+        "completion_tokens_details": {
+          "text_tokens": 0,
+          "audio_tokens": 0,
+          "image_tokens": 0,
+          "reasoning_tokens": 0
+        },
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "input_tokens_details": null,
+        "claude_cache_creation_5_m_tokens": 0,
+        "claude_cache_creation_1_h_tokens": 0,
+        "credit": 3.06
+      }
+    }
+  ],
+  "format_warnings": []
+}

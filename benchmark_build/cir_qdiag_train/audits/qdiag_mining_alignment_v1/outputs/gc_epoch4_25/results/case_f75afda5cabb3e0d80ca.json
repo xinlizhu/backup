@@ -1,0 +1,85 @@
+{
+  "case_id": "case_f75afda5cabb3e0d80ca",
+  "audit_query_id": "audit_query_090",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_f75afda5cabb3e0d80ca",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "An orange car is shown from a rear three-quarter viewpoint on a road directly beside a large body of water."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The image depicts a jellyfish-like form containing a front-facing masked human face underwater; no car or rear view of a car is visible."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "Show a car.",
+      "Show the car from the back."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_f75afda5cabb3e0d80ca",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The car is shown from a rear three-quarter angle, with its rear lights, license plate, and exhausts visible, on a road directly beside a large body of water."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The image depicts a jellyfish-like form with a diver's masked face underwater. No car or rear view of a car is present."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "3074e169ace6daf6b2edfba86da871ece193e05bcc90c6d2075f99a61e539e87",
+      "input_hash": "66a9ffd19d679fef8e41d82f9830b6e9ad79172bb4ac68f5279c098f21df8880",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/66a9ffd19d679fef8e41d82f9830b6e9ad79172bb4ac68f5279c098f21df8880.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0b3f8438c896f939016af2be16f85087d1b149752cabd8c406",
+      "usage": {
+        "prompt_tokens": 11295,
+        "completion_tokens": 173,
+        "total_tokens": 11468,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "713df9e4c55fa1ab75a20bd4e9aea81864ea662722a7786b50f4a2700c3866c9",
+      "input_hash": "e8913ab6a8396f80de5d64af0cdca9e9f1bb77fb035481fc05e73f334fe6f2a9",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/e8913ab6a8396f80de5d64af0cdca9e9f1bb77fb035481fc05e73f334fe6f2a9.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_078fa334c5b35c09016af2be3073d487d1863bc85e732a300d",
+      "usage": {
+        "prompt_tokens": 10753,
+        "completion_tokens": 116,
+        "total_tokens": 10869,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        }
+      }
+    }
+  ]
+}

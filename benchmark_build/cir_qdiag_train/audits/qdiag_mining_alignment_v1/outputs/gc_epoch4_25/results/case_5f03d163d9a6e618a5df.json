@@ -1,0 +1,92 @@
+{
+  "case_id": "case_5f03d163d9a6e618a5df",
+  "audit_query_id": "audit_query_094",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_5f03d163d9a6e618a5df",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "T shows an adult warthog with two piglets nursing together on the image-left side, unlike their opposite-side arrangement in R. Here 'boar' is read as a general label for the warthog, not a visually established claim of male sex."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows a pizza advertisement with food ingredients; it contains no adult warthog or nursing piglets."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "The target contains a boar or warthog.",
+      "The adult is nursing two babies.",
+      "The two babies are together on the same image-left side."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_5f03d163d9a6e618a5df",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "Two piglets appear to nurse together on the adult warthog's visible flank, at image left. However, the claimed change from a mother to a boar is not visually established; tusks alone do not establish male sex. 'Left side' also lacks a clear anatomical versus image-relative interpretation."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The candidate shows a pizza with assorted toppings and Round Table branding, with no adult warthog or nursing piglets."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "69e70e9459b7a8d6ed3b2121a74731b53bcaa899d4541527c5e9f314b853eec5",
+      "input_hash": "c076da7d130afaf5de598a55c0ea82e766f76ba1ad8cb6a82d5bb3357a3e77d3",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/c076da7d130afaf5de598a55c0ea82e766f76ba1ad8cb6a82d5bb3357a3e77d3.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_09e41b246dcfa2a8016af2bda3823487d1885abaabba22655b",
+      "usage": {
+        "prompt_tokens": 15267,
+        "completion_tokens": 267,
+        "total_tokens": 15534,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 45
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "9237d4aec86cdf07ae1060a605b0cfdddc3653aae53d672364ee9ef32beb61ed",
+      "input_hash": "165f975c08e4a4d2d78d6b8a6e120d052663eba8738deaf0fa8de4a6d5122814",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/165f975c08e4a4d2d78d6b8a6e120d052663eba8738deaf0fa8de4a6d5122814.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0c56968883859cd8016af2bdb9e68887d1bf65f0824984c751",
+      "usage": {
+        "prompt_tokens": 14725,
+        "completion_tokens": 209,
+        "total_tokens": 14934,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 39
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,166 @@
+{
+  "case_id": "case_81e900bf985b0b91b42c",
+  "audit_query_id": "audit_query_081",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_81e900bf985b0b91b42c",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The saxophone has a maroon-red body with gold-colored keys, supporting the requested body-color change from the reference instruments."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The saxophone has a tarnished metallic brass-colored body; the pink-red color belongs to the background fabric."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The wind instrument must be maroon."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "attribute",
+        "before_span": "maroon",
+        "after_span": "brass",
+        "edited_instruction": "Make a wind instrument a brass color.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "The instrument's body color changes from maroon to brass.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The saxophone's body is maroon-red, although its keys are gold-colored."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The saxophone's body is visibly brass-colored, with tarnished and reflective areas."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_81e900bf985b0b91b42c",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The saxophone has a maroon-red lacquered body, neck, and bell, with gold-colored keys. It is visibly a wind instrument."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The saxophone has a tarnished brass-colored metallic body and bell, rather than a maroon finish. The pink-red color belongs to the surrounding cloth."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing 'maroon' with 'brass' reconstructs the edited instruction through one color-attribute substitution while preserving the wind-instrument constraint. The positive has a maroon-red body; the candidate has a brass-colored body, satisfying the required contrast.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Although its keys are gold-colored, the saxophone's main body, neck, and bell are maroon-red rather than brass-colored."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The candidate is a saxophone with a visibly brass-colored, tarnished metallic body and bell."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "substitute",
+      "semantic_target": "attribute",
+      "before_span": "maroon",
+      "after_span": "brass",
+      "edited_instruction": "Make a wind instrument a brass color.",
+      "witness_type": "substitution_contrast",
+      "changed_constraint": "The instrument's body color changes from maroon to brass.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "The saxophone's body is maroon-red, although its keys are gold-colored."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "The saxophone's body is visibly brass-colored, with tarnished and reflective areas."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing 'maroon' with 'brass' reconstructs the edited instruction through one color-attribute substitution while preserving the wind-instrument constraint. The positive has a maroon-red body; the candidate has a brass-colored body, satisfying the required contrast.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Although its keys are gold-colored, the saxophone's main body, neck, and bell are maroon-red rather than brass-colored."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The candidate is a saxophone with a visibly brass-colored, tarnished metallic body and bell."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "dae67bd85007413157016674617bf962171e2df633aeda44c8c85f080555197f",
+      "input_hash": "8668868f66c16fe911c8d2d4806ede8655459fdfeff6ada80123c06f9eec0bb5",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/8668868f66c16fe911c8d2d4806ede8655459fdfeff6ada80123c06f9eec0bb5.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0c46a68e45845793016af2bd7eefd487d19bfdcc917cf64760",
+      "usage": {
+        "prompt_tokens": 9354,
+        "completion_tokens": 520,
+        "total_tokens": 9874,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 177
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "aa1929089c5de1e451c8a0c69275113a73977f60d0f11b79fdaea9ed88c1c4ec",
+      "input_hash": "02008b4f4d2992fe722b89694a84a65f7f60af21fe7c1f65767a97a6c10eacb5",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/02008b4f4d2992fe722b89694a84a65f7f60af21fe7c1f65767a97a6c10eacb5.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0c7b77d9924507c5016af2bd92ee5887d280ad332174eab1bc",
+      "usage": {
+        "prompt_tokens": 8874,
+        "completion_tokens": 391,
+        "total_tokens": 9265,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 59
+        }
+      }
+    }
+  ]
+}

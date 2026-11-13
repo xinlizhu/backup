@@ -1,0 +1,161 @@
+{
+  "case_id": "case_d07c67964dcce646af3e",
+  "audit_query_id": "audit_query_096",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_d07c67964dcce646af3e",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Two school buses are parked beside each other, with both fronts clearly visible, unlike the side views in R."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "School buses are parked beside one another in a row, with their fronts visible from an oblique angle. The instruction does not require an exclusively frontal view."
+    },
+    "candidate_relation": "compatible",
+    "violated_source_constraints": [],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "add",
+        "semantic_target": "attribute",
+        "before_span": null,
+        "after_span": ", with the nearest bus having a long-nosed design",
+        "edited_instruction": "Show the front of the school buses and park them adjacent to each other, with the nearest bus having a long-nosed design.",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "The nearest bus must have a long-nosed design.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The nearest bus has a flat front without a projecting engine hood."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The nearest bus has a long projecting hood. The buses remain adjacent, and their fronts are visible."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_d07c67964dcce646af3e",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Two yellow school buses are parked side by side, with both front windshields, lights, and front panels clearly visible."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "Several yellow school buses are parked adjacent to one another in a row. Their fronts are visible from an oblique angle, including the nearest bus's windshield, hood, grille, and headlights."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "The single insertion adds one design attribute to the nearest bus while preserving the original front-view and adjacency constraints. Both images satisfy the source instruction; only the candidate has a nearest bus with a visibly projecting long nose.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The nearest bus has a flat front, with its windshield above a nearly vertical front panel and no projecting engine hood."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The nearest bus has a prominent hood extending forward from the windshield to the grille. Its front is visible, and it is parked beside the other school buses."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "add",
+      "semantic_target": "attribute",
+      "before_span": null,
+      "after_span": ", with the nearest bus having a long-nosed design",
+      "edited_instruction": "Show the front of the school buses and park them adjacent to each other, with the nearest bus having a long-nosed design.",
+      "witness_type": "addition_disambiguation",
+      "changed_constraint": "The nearest bus must have a long-nosed design.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "The nearest bus has a flat front without a projecting engine hood."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "The nearest bus has a long projecting hood. The buses remain adjacent, and their fronts are visible."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "The single insertion adds one design attribute to the nearest bus while preserving the original front-view and adjacency constraints. Both images satisfy the source instruction; only the candidate has a nearest bus with a visibly projecting long nose.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The nearest bus has a flat front, with its windshield above a nearly vertical front panel and no projecting engine hood."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The nearest bus has a prominent hood extending forward from the windshield to the grille. Its front is visible, and it is parked beside the other school buses."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "17e336a67246b0c1fc4ed88c09b779c428e8d602e653410ca9227c5fa1d25a77",
+      "input_hash": "06649ca0c5e74f2c6b7d04d52c35b5007770842e03da1b77b0e840a20dc2c7a3",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/06649ca0c5e74f2c6b7d04d52c35b5007770842e03da1b77b0e840a20dc2c7a3.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0d4426591ef5f686016af2bf7f92a087d19654522205618906",
+      "usage": {
+        "prompt_tokens": 7553,
+        "completion_tokens": 598,
+        "total_tokens": 8151,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 247
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "a56408143ae7302e1584b31d7b5f05e7df241e8cd4cd43426f44a33feb2b3e6c",
+      "input_hash": "0917c6ce0496ddef49e38fcf9d997433c1fe4e5328d533a9dd8a8c201e3c0482",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/0917c6ce0496ddef49e38fcf9d997433c1fe4e5328d533a9dd8a8c201e3c0482.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_01f716df45a3ef61016af2bf99bfb087d2a3c17b820755ce17",
+      "usage": {
+        "prompt_tokens": 7096,
+        "completion_tokens": 263,
+        "total_tokens": 7359,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        }
+      }
+    }
+  ]
+}

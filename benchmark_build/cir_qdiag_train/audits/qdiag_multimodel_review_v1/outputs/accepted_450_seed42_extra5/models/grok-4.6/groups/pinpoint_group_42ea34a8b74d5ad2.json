@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_42ea34a8b74d5ad2",
+  "model": "grok-4.6",
+  "signature": "cb958fa178e5ebcdd33f446ebd46fe25a7c20417ca5539cc74de61fb4df99804",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_42ea34a8b74d5ad2_query_04975_attribute_add",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Adds only the pillow attribute \"striped\" (article is grammatical glue). Both positive pillows are pictorial dog-and-flower prints, so striped is clearly false for every supplied positive."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.6",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "874e755b836875e96d9c9f308cd321c98c182c1fe5d59ced9a3dc7d8ff7fd4d7",
+      "input_hash": "626fd214719c3487627bde428f31836ecfedff43d2f65b36d1d569d9f5c69b2c",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/grok-4.6/cache/validate_group/626fd214719c3487627bde428f31836ecfedff43d2f65b36d1d569d9f5c69b2c.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "66b70334-039b-9b24-a293-61ec64a721b4",
+      "usage": {
+        "prompt_tokens": 4029,
+        "completion_tokens": 88,
+        "total_tokens": 5852,
+        "prompt_tokens_details": {
+          "text_tokens": 2436,
+          "audio_tokens": 0,
+          "image_tokens": 1593,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1735,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 159240000
+      }
+    }
+  ],
+  "format_warnings": []
+}

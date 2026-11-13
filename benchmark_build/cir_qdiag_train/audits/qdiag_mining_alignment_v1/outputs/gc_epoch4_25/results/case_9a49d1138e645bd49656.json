@@ -1,0 +1,238 @@
+{
+  "case_id": "case_9a49d1138e645bd49656",
+  "audit_query_id": "audit_query_079",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_9a49d1138e645bd49656",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "T shows a black, broad, rounded bowl-shaped sink beneath a faucet."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows a sink with a black exterior, but its tall body and large side handle give it a cup shape rather than a bowl shape."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The sink must be bowl-shaped."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "attribute",
+        "before_span": "bowl",
+        "after_span": "cup-shaped",
+        "edited_instruction": "Show a black cup-shaped sink.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "The sink's shape changes from bowl-shaped to cup-shaped.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "T has a broad, low bowl-shaped basin, without the tall handled form of a cup."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C shows a black sink shaped like a tall cup with a large side handle."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "operation": "delete",
+        "semantic_target": "attribute",
+        "before_span": "bowl",
+        "after_span": null,
+        "edited_instruction": "Show a black sink.",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "Removes the requirement that the sink be bowl-shaped.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "T shows a black sink beneath a running faucet."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C shows a sink with a black exterior beneath a wall-mounted faucet."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_9a49d1138e645bd49656",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a black sink with a broad, rounded, shallow bowl-shaped basin."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a sink with a black exterior and white interior, shaped as a tall cup with a large side handle rather than a bowl."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing 'bowl' with 'cup-shaped' makes one shape-attribute edit while preserving the black color and sink identity. The broad bowl in Image 2 and tall handled cup in Image 3 visibly support the required contrast.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 has a broad, shallow bowl-shaped basin, without the tall body and side handle of a cup."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows a black-exterior sink explicitly shaped like a cup, with a tall tapered body and large loop handle."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting 'bowl' removes only the shape constraint and exactly yields the proposed instruction. Both images show black sinks; the candidate's cup shape is its only violation of the original instruction.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 clearly shows a black sink beneath a running faucet."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows a sink beneath a wall-mounted faucet with a predominantly black exterior; its white interior does not negate the black sink description."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "substitute",
+      "semantic_target": "attribute",
+      "before_span": "bowl",
+      "after_span": "cup-shaped",
+      "edited_instruction": "Show a black cup-shaped sink.",
+      "witness_type": "substitution_contrast",
+      "changed_constraint": "The sink's shape changes from bowl-shaped to cup-shaped.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "T has a broad, low bowl-shaped basin, without the tall handled form of a cup."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C shows a black sink shaped like a tall cup with a large side handle."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing 'bowl' with 'cup-shaped' makes one shape-attribute edit while preserving the black color and sink identity. The broad bowl in Image 2 and tall handled cup in Image 3 visibly support the required contrast.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 has a broad, shallow bowl-shaped basin, without the tall body and side handle of a cup."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows a black-exterior sink explicitly shaped like a cup, with a tall tapered body and large loop handle."
+        }
+      }
+    },
+    {
+      "witness_id": "w2",
+      "operation": "delete",
+      "semantic_target": "attribute",
+      "before_span": "bowl",
+      "after_span": null,
+      "edited_instruction": "Show a black sink.",
+      "witness_type": "deletion_relaxation",
+      "changed_constraint": "Removes the requirement that the sink be bowl-shaped.",
+      "edited_on_positive": {
+        "status": "supported",
+        "evidence": "T shows a black sink beneath a running faucet."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C shows a sink with a black exterior beneath a wall-mounted faucet."
+      },
+      "independent_review": {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting 'bowl' removes only the shape constraint and exactly yields the proposed instruction. Both images show black sinks; the candidate's cup shape is its only violation of the original instruction.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 clearly shows a black sink beneath a running faucet."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows a sink beneath a wall-mounted faucet with a predominantly black exterior; its white interior does not negate the black sink description."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    },
+    {
+      "witness_id": "w2",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "150037024f2d6cb2c4b05555e3f8a1b7cf727fd871afbf8ece690543d2dbfcff",
+      "input_hash": "6ed1a72381b50e3ea1a12d1c6552ee183eb8e7cbb144e8b4a52e91c5d2063ad1",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/6ed1a72381b50e3ea1a12d1c6552ee183eb8e7cbb144e8b4a52e91c5d2063ad1.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_007779fc1ce9f37b016af2bd7ea56087d1b9cf654c04d17f34",
+      "usage": {
+        "prompt_tokens": 8176,
+        "completion_tokens": 565,
+        "total_tokens": 8741,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 74
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "4db352160c3b6a32e52a20ccdf52002a8600923532e2ddea125562feb9541f3a",
+      "input_hash": "bbf0ebb921fc93af58e8242c2419a4f919f80affb4ede03a8c1205dcb0155809",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/bbf0ebb921fc93af58e8242c2419a4f919f80affb4ede03a8c1205dcb0155809.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_04634390ecb04c94016af2bd8f371087d1ae15a39144209996",
+      "usage": {
+        "prompt_tokens": 7753,
+        "completion_tokens": 535,
+        "total_tokens": 8288,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 52
+        }
+      }
+    }
+  ]
+}

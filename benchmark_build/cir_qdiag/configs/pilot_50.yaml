@@ -1,0 +1,50 @@
+data:
+  annotation_path: /mnt/data/datasets/search_dataset/zxl/CIR_new/datasets/CIRR/cirr/captions/cap.rc2.val.json
+  image_split_path: /mnt/data/datasets/search_dataset/zxl/CIR_new/datasets/CIRR/cirr/image_splits/split.rc2.val.json
+  image_root: /mnt/data/datasets/search_dataset/zxl/CIR_new/datasets/CIRR
+  split: val
+
+sampling:
+  limit: 50
+  seed: 42
+  strategy: random
+
+model:
+  backend: vllm
+  name: qwen3.6-27b
+  name_or_path: /mnt/data/datasets/search_dataset/zxl/QW/Qwen3.6-27B
+  api_base: http://127.0.0.1:8000/v1
+  api_key: EMPTY
+  device: cuda
+  dtype: bfloat16
+  trust_remote_code: false
+  timeout_seconds: 300
+  max_retries: 2
+  disable_thinking: true
+  mm_processor_kwargs:
+    max_pixels: 4194304
+
+screening:
+  temperature: 0.0
+  max_new_tokens: 8192
+
+generation:
+  temperature: 0.0
+  max_new_tokens: 8192
+
+selection:
+  temperature: 0.0
+  max_new_tokens: 8192
+
+paraphrase:
+  num_variants: 5
+  generation_temperature: 0.3
+  generation_max_new_tokens: 8192
+  review_temperature: 0.0
+  review_max_new_tokens: 8192
+
+runtime:
+  output_dir: outputs/pilot_50_v5
+  prompt_version: v5
+  resume: true
+  max_workers: 2

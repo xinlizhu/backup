@@ -1,0 +1,57 @@
+{
+  "model": "claude-haiku-5-5",
+  "text_ok": true,
+  "visual_review_ok": true,
+  "errors": {},
+  "hello_reply": "Hey there. I'm Claude, made by Anthropic. What can I help you with today?",
+  "reported_model": "claude-haiku-5-5",
+  "usage": {
+    "prompt_tokens": 4361,
+    "completion_tokens": 20,
+    "total_tokens": 4381,
+    "prompt_tokens_details": {
+      "cached_tokens": 3398,
+      "cache_creation_tokens": 959
+    }
+  },
+  "probe_group_id": "pinpoint_group_fcdb9b204d9d2398",
+  "probe_negative_id": "pinpoint_group_fcdb9b204d9d2398_query_05113_attribute_substitute",
+  "image_count": 6,
+  "review_decision": "rejected",
+  "review_reason": "The substitution of 'olive' to 'green' is not clearly false for all supplied positive images. Image 6 shows a light blue/periwinkle colored garment, and images 3-5 display light blue tones. While these are not green, the edit does not create a factually false statement that contradicts every positive image; green could reasonably describe some hues present or be compatible with neutral/cool color palettes shown.",
+  "trace": {
+    "stage": "validate_group",
+    "model_name": "claude-haiku-5-5",
+    "model_revision": null,
+    "provider": "openai-compatible-chat",
+    "reasoning_effort": null,
+    "prompt_version": "v7",
+    "prompt_hash": "f1621ddcbb12117a094d3a4d260b0203e674bb9c678a94cb31d15f04e135bda0",
+    "input_hash": "2677142dde6e4e9dad23ad2cdc0ffb823f40a75386ba7049d01726fa3d18794a",
+    "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/probes/claude-haiku-5-5/cache/validate_group/2677142dde6e4e9dad23ad2cdc0ffb823f40a75386ba7049d01726fa3d18794a.json",
+    "cached": true,
+    "attempts": 1,
+    "request_id": "msg_01jAB3KP1BTGAcZZNxDC2bJv6g",
+    "usage": {
+      "prompt_tokens": 9127,
+      "completion_tokens": 202,
+      "total_tokens": 9329,
+      "prompt_tokens_details": {
+        "cached_tokens": 7115,
+        "cache_creation_tokens": 2008
+      }
+    }
+  },
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_fcdb9b204d9d2398_query_05113_attribute_substitute",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 415,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ],
+  "ready_for_audit": true,
+  "readiness_basis": "Successful actual multimodal review; hello is an auxiliary diagnostic",
+  "limit": "A valid multimodal response verifies request/response compatibility, not that the provider/model reliably used the images."
+}

@@ -1,0 +1,57 @@
+{
+  "group_id": "pinpoint_group_1af6e4a2ba54a76d",
+  "model": "grok-4.6",
+  "signature": "cb958fa178e5ebcdd33f446ebd46fe25a7c20417ca5539cc74de61fb4df99804",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_1af6e4a2ba54a76d_query_06071_object_delete",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Deletes only the sweater-type constraint from “sweater dress,” and the result is fluent, strictly weaker, and otherwise unchanged."
+    },
+    {
+      "negative_id": "pinpoint_group_1af6e4a2ba54a76d_query_06075_object_substitute",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "The substituted cardigan is not false for every positive: the third and fourth images are button-front cardigans, so the new object remains compatible."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.6",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "e09cc173a3c1bd0caf42a54f5cec6d19f85093055a09877d8dcdd08374af7949",
+      "input_hash": "436c4ee8e9dd32e91f23bcd4ffb3e1fb4b532c24b8480f3ebcb965c51cada7a5",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/grok-4.6/cache/validate_group/436c4ee8e9dd32e91f23bcd4ffb3e1fb4b532c24b8480f3ebcb965c51cada7a5.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "d7500831-103d-9d9d-aa42-1a2c19266e6e",
+      "usage": {
+        "prompt_tokens": 5532,
+        "completion_tokens": 159,
+        "total_tokens": 11784,
+        "prompt_tokens_details": {
+          "text_tokens": 2796,
+          "audio_tokens": 0,
+          "image_tokens": 2736,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 6093,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 455040000
+      }
+    }
+  ],
+  "format_warnings": []
+}

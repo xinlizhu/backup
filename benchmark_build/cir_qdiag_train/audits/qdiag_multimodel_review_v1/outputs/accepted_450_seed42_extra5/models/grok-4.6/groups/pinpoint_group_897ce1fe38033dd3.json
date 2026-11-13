@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_897ce1fe38033dd3",
+  "model": "grok-4.6",
+  "signature": "cb958fa178e5ebcdd33f446ebd46fe25a7c20417ca5539cc74de61fb4df99804",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_897ce1fe38033dd3_query_04632_predicate_substitute",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Single fluent predicate swap of wearing→holding. Both positives show the ring worn on the finger, so holding is clearly false for every supplied positive."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.6",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "5183275bc9f8694e19b77f488e33adbd484dfcd45004e45d76431b16145033ca",
+      "input_hash": "641ce5963e5c849ea82aa5aad832f95fd24eac0c56d54d9708867915fdcf36ee",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/grok-4.6/cache/validate_group/641ce5963e5c849ea82aa5aad832f95fd24eac0c56d54d9708867915fdcf36ee.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "7af248db-6197-97c5-ab8e-867d7a5e9724",
+      "usage": {
+        "prompt_tokens": 3865,
+        "completion_tokens": 77,
+        "total_tokens": 6745,
+        "prompt_tokens_details": {
+          "text_tokens": 2501,
+          "audio_tokens": 0,
+          "image_tokens": 1364,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2803,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 219380000
+      }
+    }
+  ],
+  "format_warnings": []
+}

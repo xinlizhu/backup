@@ -1,0 +1,61 @@
+{
+  "case_id": "pair_b71daf6f4ac11d5dc281",
+  "signature": "f3a97f608e6addbd5531ad7795f5e06873610abdb12f716de8375d49eda4c022",
+  "simulated": false,
+  "status": "complete",
+  "judgment": {
+    "case_id": "pair_b71daf6f4ac11d5dc281",
+    "constraints": [
+      {
+        "constraint": "Remove one animal from the reference, leaving one animal.",
+        "A_status": "supported",
+        "B_status": "supported",
+        "A_evidence": "Shows one animal, a buffalo.",
+        "B_evidence": "Shows one animal, a dog."
+      },
+      {
+        "constraint": "Change the cow to a dog.",
+        "A_status": "contradicted",
+        "B_status": "supported",
+        "A_evidence": "The animal is a buffalo, not a dog.",
+        "B_evidence": "Clearly shows a dog."
+      },
+      {
+        "constraint": "Add water and hills in the background.",
+        "A_status": "contradicted",
+        "B_status": "supported",
+        "A_evidence": "No visible water or hills; a fenced, vegetated area is behind the animal.",
+        "B_evidence": "Water and distant hills are visible behind the dog."
+      },
+      {
+        "constraint": "Remove the grass on the ground.",
+        "A_status": "contradicted",
+        "B_status": "supported",
+        "A_evidence": "Grass and other vegetation remain on the ground.",
+        "B_evidence": "No green grass is visible on the ground, which is mostly bare and covered with debris."
+      }
+    ],
+    "decision": "B",
+    "confidence": "high",
+    "reason": "B fulfills the central requested change by showing a dog instead of cattle, and also includes the requested water and hills with grass removed. A shows a single animal, but it is a buffalo, and the requested background and ground changes are absent."
+  },
+  "trace": {
+    "stage": "rank_pair_relative_preference",
+    "model_name": "gpt-5.6-terra",
+    "model_revision": null,
+    "provider": "openai-compatible-chat",
+    "reasoning_effort": null,
+    "prompt_version": "rank_preference_relative_v2",
+    "prompt_hash": "5f48a761b913ebe9fdce6e1dfea1a995c202ad7d4d8e160752273ca5af9f8e61",
+    "input_hash": "e515a51b5df2677a7c68e603c9598226b964223ef9c0607c87d9bbd5f17f9e90",
+    "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_rank_preference_v1/outputs/gc_epochs14_top3_relative/api_cache/rank_pair_relative_preference/e515a51b5df2677a7c68e603c9598226b964223ef9c0607c87d9bbd5f17f9e90.json",
+    "cached": false,
+    "attempts": 1,
+    "request_id": "resp_0221f064fbb9b250016af2dc65b7b487d081126280ee74cb74",
+    "usage": {
+      "prompt_tokens": 6909,
+      "completion_tokens": 378,
+      "total_tokens": 7287
+    }
+  }
+}

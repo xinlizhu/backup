@@ -1,0 +1,233 @@
+{
+  "case_id": "case_2d484a47767f4e3cc557",
+  "audit_query_id": "audit_query_081",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_2d484a47767f4e3cc557",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The saxophone has a maroon-red body with gold-colored keys, satisfying the requested color change from the reference instruments."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "The flute is a wind instrument with a reddish-maroon body and lighter bands. The instruction does not require retaining the saxophone category."
+    },
+    "candidate_relation": "compatible",
+    "violated_source_constraints": [],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "add",
+        "semantic_target": "object",
+        "before_span": null,
+        "after_span": "that is a flute",
+        "edited_instruction": "Make a wind instrument that is a flute a maroon color.",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "The wind instrument must be a flute.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The maroon instrument is a saxophone with a curved neck, keyed body, and flared bell, rather than a flute."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The reddish-maroon instrument is a straight flute with exposed finger holes."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "operation": "add",
+        "semantic_target": "attribute",
+        "before_span": null,
+        "after_span": "wooden",
+        "edited_instruction": "Make a wooden wind instrument a maroon color.",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "The wind instrument must be wooden.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The saxophone has a glossy metal body and metal keywork, rather than a wooden body."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The reddish-maroon flute has a visibly wooden or bamboo tube with finger holes and pale bands."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_2d484a47767f4e3cc557",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The saxophone is a wind instrument with a glossy maroon-red body and gold keys, unlike the gold and black bodies in the reference."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "The finger-holed flute is a wind instrument with a reddish-brown, maroon-colored body. Its lighter decorative bands do not negate the body color."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "Inserting 'that is a flute' adds one object-identity constraint while preserving the wind-instrument and maroon-color requirements. Both images support the source; only the candidate depicts a flute.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The maroon instrument has a reed mouthpiece, extensive metal keywork, curved tubing, and a flared bell identifying it as a saxophone, not a flute."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The candidate shows a maroon-colored straight flute with open finger holes."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "Inserting 'wooden' adds one material attribute to the same wind instrument and preserves the color requirement. The candidate's wood or bamboo body distinguishes it from the positive's lacquered metal saxophone.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The saxophone has a glossy lacquered metal body, metal tubing, a rolled bell rim, and gold keywork; its body is not wooden."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The flute has a visibly wood or bamboo tube with natural brown surface texture, drilled finger holes, and a maroon-red finish."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "add",
+      "semantic_target": "object",
+      "before_span": null,
+      "after_span": "that is a flute",
+      "edited_instruction": "Make a wind instrument that is a flute a maroon color.",
+      "witness_type": "addition_disambiguation",
+      "changed_constraint": "The wind instrument must be a flute.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "The maroon instrument is a saxophone with a curved neck, keyed body, and flared bell, rather than a flute."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "The reddish-maroon instrument is a straight flute with exposed finger holes."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "Inserting 'that is a flute' adds one object-identity constraint while preserving the wind-instrument and maroon-color requirements. Both images support the source; only the candidate depicts a flute.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The maroon instrument has a reed mouthpiece, extensive metal keywork, curved tubing, and a flared bell identifying it as a saxophone, not a flute."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The candidate shows a maroon-colored straight flute with open finger holes."
+        }
+      }
+    },
+    {
+      "witness_id": "w2",
+      "operation": "add",
+      "semantic_target": "attribute",
+      "before_span": null,
+      "after_span": "wooden",
+      "edited_instruction": "Make a wooden wind instrument a maroon color.",
+      "witness_type": "addition_disambiguation",
+      "changed_constraint": "The wind instrument must be wooden.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "The saxophone has a glossy metal body and metal keywork, rather than a wooden body."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "The reddish-maroon flute has a visibly wooden or bamboo tube with finger holes and pale bands."
+      },
+      "independent_review": {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "Inserting 'wooden' adds one material attribute to the same wind instrument and preserves the color requirement. The candidate's wood or bamboo body distinguishes it from the positive's lacquered metal saxophone.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The saxophone has a glossy lacquered metal body, metal tubing, a rolled bell rim, and gold keywork; its body is not wooden."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The flute has a visibly wood or bamboo tube with natural brown surface texture, drilled finger holes, and a maroon-red finish."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    },
+    {
+      "witness_id": "w2",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "99e96833b5fe976c33e306c87fe4626d3ee44f1d6dc9ad858eb0d414cc4fdcc1",
+      "input_hash": "47aa5fb42d8952e7aa2335ece97e9cb3bf8f3170ad3c3493e87e48e6b515306a",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/47aa5fb42d8952e7aa2335ece97e9cb3bf8f3170ad3c3493e87e48e6b515306a.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0b51cba351901df1016af2bda4ff8087d198389fb086232dd0",
+      "usage": {
+        "prompt_tokens": 8213,
+        "completion_tokens": 756,
+        "total_tokens": 8969,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 250
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "baf4ec3414d1a7367c721fe5b4814dcd0ddf0865029ba84eeadda9556a98b6bb",
+      "input_hash": "2ec75b34bb0bc915c090226627319aea67aac3b04458807f5ae216fb089ab911",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/2ec75b34bb0bc915c090226627319aea67aac3b04458807f5ae216fb089ab911.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_07ac36645012a332016af2bdc1358c87d1a93708a9fab12e43",
+      "usage": {
+        "prompt_tokens": 7799,
+        "completion_tokens": 623,
+        "total_tokens": 8422,
+        "completion_tokens_details": {
+          "reasoning_tokens": 117
+        }
+      }
+    }
+  ]
+}

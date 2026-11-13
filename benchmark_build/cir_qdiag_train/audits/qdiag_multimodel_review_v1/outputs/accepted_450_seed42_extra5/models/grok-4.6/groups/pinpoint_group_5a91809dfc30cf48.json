@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_5a91809dfc30cf48",
+  "model": "grok-4.6",
+  "signature": "cb958fa178e5ebcdd33f446ebd46fe25a7c20417ca5539cc74de61fb4df99804",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_5a91809dfc30cf48_query_02737_object_add",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Adds exactly one object, a candle, while preserving the original question. No supplied positive coral decor image contains a candle, so the added fact is clearly false for every positive."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.6",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "4d665be90f2533502fe3dc9386337aa4f79bbd2b0b10f455e85ae3985ab8411a",
+      "input_hash": "16efb8c988680c412d3fd3502cc5e504bd80734a72a3e6f271ffa1face09b359",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/grok-4.6/cache/validate_group/16efb8c988680c412d3fd3502cc5e504bd80734a72a3e6f271ffa1face09b359.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "63d2759d-e50b-9f6d-8828-cb1ed3240314",
+      "usage": {
+        "prompt_tokens": 5236,
+        "completion_tokens": 84,
+        "total_tokens": 7319,
+        "prompt_tokens_details": {
+          "text_tokens": 2489,
+          "audio_tokens": 0,
+          "image_tokens": 2747,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1999,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 198980000
+      }
+    }
+  ],
+  "format_warnings": []
+}

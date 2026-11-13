@@ -1,0 +1,57 @@
+{
+  "group_id": "pinpoint_group_6fac090874a8df23",
+  "model": "grok-4.7",
+  "signature": "52913ea34ae01078c58f7a80fc2119b86ef4b6b3449e9e55b21816a5d5d1ccbd",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_6fac090874a8df23_query_07481_attribute_add",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Adds one color attribute in a fluent sentence. The supplied positive hoodie is red, so 'keep the hoodie black' is clearly false."
+    },
+    {
+      "negative_id": "pinpoint_group_6fac090874a8df23_query_07486_predicate_delete",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Deletes only the removal-method predicate, leaving a fluent, strictly weaker request that the front be pocketless."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.7",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "0b4f4cbb9877815581fd770b69711b356c05d0e1c63007657a1f0bf0f27c5272",
+      "input_hash": "f4baa08781b10dc68c21daf253158c0cd51815e767edcf6dd00c82358a9b17c0",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/grok-4.7/cache/validate_group/f4baa08781b10dc68c21daf253158c0cd51815e767edcf6dd00c82358a9b17c0.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "31b5707e-c0b4-95f4-8f43-2b6efb49f0f0",
+      "usage": {
+        "prompt_tokens": 3628,
+        "completion_tokens": 141,
+        "total_tokens": 7729,
+        "prompt_tokens_details": {
+          "text_tokens": 2539,
+          "audio_tokens": 0,
+          "image_tokens": 1089,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 3960,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 287900000
+      }
+    }
+  ],
+  "format_warnings": []
+}

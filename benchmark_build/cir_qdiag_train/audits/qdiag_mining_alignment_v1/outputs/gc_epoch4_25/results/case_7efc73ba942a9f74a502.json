@@ -1,0 +1,161 @@
+{
+  "case_id": "case_7efc73ba942a9f74a502",
+  "audit_query_id": "audit_query_083",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_7efc73ba942a9f74a502",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "T shows one body-cream container with one matching box, satisfying the requested single-product arrangement relative to R's multiple boxes."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "C shows one sunscreen bottle beside its matching box. The instruction does not constrain brand, color, or container type."
+    },
+    "candidate_relation": "compatible",
+    "violated_source_constraints": [],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "add",
+        "semantic_target": "attribute",
+        "before_span": null,
+        "after_span": "orange-labeled",
+        "edited_instruction": "Leave a single orange-labeled product with its box",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "The product must have orange labeling.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "T has one product with its box, but its container label is white with black and pink graphics, without orange labeling."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C has one bottle with its matching box; the bottle visibly carries orange RIVELA lettering and orange label graphics."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_7efc73ba942a9f74a502",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows one body-cream tube alongside one matching pink box, satisfying a single product with its box."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "Image 3 shows one Rivela sunscreen pump bottle alongside its matching retail box, satisfying a single product with its box."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "Inserting 'orange-labeled' adds one visible product attribute while preserving the single-product and matching-box constraints. Both images support the original instruction; only the candidate supports the added orange labeling constraint.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The single tube has a white label with black and pink printing and a pink heart; it does not have orange labeling."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The single pump bottle has prominent orange 'RIVELA' and 'SUNSCREEN LOTION' lettering and orange curved graphics on its label, and stands beside its matching box."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "add",
+      "semantic_target": "attribute",
+      "before_span": null,
+      "after_span": "orange-labeled",
+      "edited_instruction": "Leave a single orange-labeled product with its box",
+      "witness_type": "addition_disambiguation",
+      "changed_constraint": "The product must have orange labeling.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "T has one product with its box, but its container label is white with black and pink graphics, without orange labeling."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C has one bottle with its matching box; the bottle visibly carries orange RIVELA lettering and orange label graphics."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "Inserting 'orange-labeled' adds one visible product attribute while preserving the single-product and matching-box constraints. Both images support the original instruction; only the candidate supports the added orange labeling constraint.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The single tube has a white label with black and pink printing and a pink heart; it does not have orange labeling."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The single pump bottle has prominent orange 'RIVELA' and 'SUNSCREEN LOTION' lettering and orange curved graphics on its label, and stands beside its matching box."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "c79f222c15535c903c9fc1d7446fcfd29e07f0d156f10f1495a0ccf016dd6a1c",
+      "input_hash": "f437de11dbb67a9b6670a5e782b8d20665ed902960a5cfc17fb6e244339914ce",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/f437de11dbb67a9b6670a5e782b8d20665ed902960a5cfc17fb6e244339914ce.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0f356b0ad1c55e11016af2be727b5c87d191c3e8b3d88d4c6c",
+      "usage": {
+        "prompt_tokens": 9779,
+        "completion_tokens": 537,
+        "total_tokens": 10316,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 201
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "0eff0d79c4f16bf3020892418477ff3f000c53c41dd449928cf4d9f91c48a1ac",
+      "input_hash": "9b0872669b171ef1c32434c902539f7942681dc1195ff19834048b5dd6cc7ccb",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/9b0872669b171ef1c32434c902539f7942681dc1195ff19834048b5dd6cc7ccb.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_03ce2fff6cb94f75016af2be8f76cc87d1944ecc9c3eaa9f47",
+      "usage": {
+        "prompt_tokens": 9300,
+        "completion_tokens": 251,
+        "total_tokens": 9551,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,238 @@
+{
+  "case_id": "case_9fcb2723e27adfede716",
+  "audit_query_id": "audit_query_095",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_9fcb2723e27adfede716",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "One pelican is visible in grey water, with its head, neck, upper body and spread wings raised above the surface and its bill wide open."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "One pelican stands out of the water on a ledge with grey water behind it, but its bill is closed."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The remaining bird must have its mouth open."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "attribute",
+        "before_span": "open",
+        "after_span": "closed",
+        "edited_instruction": "Remove all but one bird, change water color to grey, and raise remaining bird out of wate with it's mouth closed.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "Change the remaining bird's mouth state from open to closed.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The single pelican is raised above grey water, but its bill is visibly wide open rather than closed."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The single pelican stands above the water on a ledge, has a closed bill, and is backed by grey water."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "operation": "delete",
+        "semantic_target": "attribute",
+        "before_span": " with it's mouth open",
+        "after_span": null,
+        "edited_instruction": "Remove all but one bird, change water color to grey, and raise remaining bird out of wate.",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "Remove the requirement that the remaining bird's mouth be open.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "One pelican has its head, neck, upper body and spread wings raised above grey water."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "One pelican stands fully out of the water on a ledge, with grey water in the background."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_9fcb2723e27adfede716",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a single pelican with its head, neck, upper body, and spread wings raised above grey water, and its bill visibly wide open. This supports the requested final scene, although the animals in the reference are sea lions rather than birds."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows one pelican standing fully out of the water on a ledge, with grey water behind it. Its bill is visibly closed, contradicting the requested open mouth."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing 'open' with 'closed' is one attribute substitution that preserves the bird and all other constraints. The positive has an unmistakably open bill; the candidate has a closed bill and satisfies the remaining constraints.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The single pelican is raised above grey water, but its upper and lower bill are widely separated, contradicting 'mouth closed'."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "One pelican stands out of the water on a ledge against grey water, with its upper and lower bill closed together."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "The specified deletion removes only the mouth-state constraint and its grammatical glue. Both images satisfy the remaining single-bird, grey-water, and raised-above-water requirements. The candidate's only source violation is its closed mouth.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 contains one pelican with its neck, upper body, and wings elevated above grey water; mouth state is no longer constrained."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 contains one pelican standing fully above the water on a ledge, with grey water visible behind it; mouth state is no longer constrained."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "substitute",
+      "semantic_target": "attribute",
+      "before_span": "open",
+      "after_span": "closed",
+      "edited_instruction": "Remove all but one bird, change water color to grey, and raise remaining bird out of wate with it's mouth closed.",
+      "witness_type": "substitution_contrast",
+      "changed_constraint": "Change the remaining bird's mouth state from open to closed.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "The single pelican is raised above grey water, but its bill is visibly wide open rather than closed."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "The single pelican stands above the water on a ledge, has a closed bill, and is backed by grey water."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing 'open' with 'closed' is one attribute substitution that preserves the bird and all other constraints. The positive has an unmistakably open bill; the candidate has a closed bill and satisfies the remaining constraints.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The single pelican is raised above grey water, but its upper and lower bill are widely separated, contradicting 'mouth closed'."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "One pelican stands out of the water on a ledge against grey water, with its upper and lower bill closed together."
+        }
+      }
+    },
+    {
+      "witness_id": "w2",
+      "operation": "delete",
+      "semantic_target": "attribute",
+      "before_span": " with it's mouth open",
+      "after_span": null,
+      "edited_instruction": "Remove all but one bird, change water color to grey, and raise remaining bird out of wate.",
+      "witness_type": "deletion_relaxation",
+      "changed_constraint": "Remove the requirement that the remaining bird's mouth be open.",
+      "edited_on_positive": {
+        "status": "supported",
+        "evidence": "One pelican has its head, neck, upper body and spread wings raised above grey water."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "One pelican stands fully out of the water on a ledge, with grey water in the background."
+      },
+      "independent_review": {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "The specified deletion removes only the mouth-state constraint and its grammatical glue. Both images satisfy the remaining single-bird, grey-water, and raised-above-water requirements. The candidate's only source violation is its closed mouth.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 contains one pelican with its neck, upper body, and wings elevated above grey water; mouth state is no longer constrained."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 contains one pelican standing fully above the water on a ledge, with grey water visible behind it; mouth state is no longer constrained."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    },
+    {
+      "witness_id": "w2",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "c0c74e55e51e7f522e108e6af5b26b6dedd3dae4a5b403d7173bdc36cf0d1d3e",
+      "input_hash": "163db5d0ea0a8e6960079619d325df6591fd90cfa7966720b1673310181e9780",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/163db5d0ea0a8e6960079619d325df6591fd90cfa7966720b1673310181e9780.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0b1f07cf60822d12016af2bdc1d4a087d1861a2ed507a6bc0b",
+      "usage": {
+        "prompt_tokens": 11935,
+        "completion_tokens": 669,
+        "total_tokens": 12604,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 103
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "4ad5ea50002d7c07a60033bd40cef36e8e2b156b05c8502d7d96e5e8b8dc0fef",
+      "input_hash": "56541c4ba2861c00650cec2f0f75e5aae7a952f29057f6ef7206c4a3469ebbbf",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/56541c4ba2861c00650cec2f0f75e5aae7a952f29057f6ef7206c4a3469ebbbf.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_025f7939a2362c27016af2bdd3c51887d1aea8462b5302a89c",
+      "usage": {
+        "prompt_tokens": 11546,
+        "completion_tokens": 619,
+        "total_tokens": 12165,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 69
+        }
+      }
+    }
+  ]
+}

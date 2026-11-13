@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_682fe6c7a618296c",
+  "model": "grok-4.6",
+  "signature": "cb958fa178e5ebcdd33f446ebd46fe25a7c20417ca5539cc74de61fb4df99804",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_682fe6c7a618296c_query_03641_object_add",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Adds exactly one object, a cabin, while preserving the mountain-backdrop request. No supplied positive shows a cabin in its mountain scene, so the added fact is clearly false."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.6",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "923004e8e2fdfc4902cbb031a6cd1e1a1e6c206cbbe0bf1c6d7ee83cacbe8a93",
+      "input_hash": "b616abbc154736991663ffb2b0f5b6051b1e1c6c8ae61ac564943762d822fb3c",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/grok-4.6/cache/validate_group/b616abbc154736991663ffb2b0f5b6051b1e1c6c8ae61ac564943762d822fb3c.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "86c0d73a-1293-9a1a-b931-efb6bd2f953c",
+      "usage": {
+        "prompt_tokens": 4607,
+        "completion_tokens": 84,
+        "total_tokens": 7020,
+        "prompt_tokens_details": {
+          "text_tokens": 2464,
+          "audio_tokens": 0,
+          "image_tokens": 2143,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2329,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 206200000
+      }
+    }
+  ],
+  "format_warnings": []
+}

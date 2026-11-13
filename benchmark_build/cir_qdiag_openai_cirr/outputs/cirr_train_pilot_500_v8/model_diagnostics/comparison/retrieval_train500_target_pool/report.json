@@ -1,0 +1,30 @@
+{
+  "evaluation_pool": "train500_target_pool",
+  "files": {
+    "model_summary": "model_summary.csv",
+    "negative_retrieval": "negative_retrieval.csv",
+    "negative_subset_summary": "negative_subset_summary.csv",
+    "positive_retrieval": "positive_retrieval.csv"
+  },
+  "gallery_size": 493,
+  "input": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_openai_cirr/outputs/cirr_train_pilot_500_v8/final.jsonl",
+  "k": [
+    1,
+    5,
+    10,
+    50
+  ],
+  "models": [
+    "BGE-VL-base",
+    "BGE-VL-large",
+    "BGE-VL-MLLM-S1",
+    "BGE-VL-MLLM-S2",
+    "Qwen3-VL-Embedding-2B",
+    "LinCIR",
+    "Pic2Word"
+  ],
+  "reference_images_excluded_when_present": true,
+  "schema_version": "1.0",
+  "standard_cirr_metric": false,
+  "text_jaccard_computed": false
+}

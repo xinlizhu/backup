@@ -1,0 +1,49 @@
+{
+  "group_id": "pinpoint_group_3b0d687de4a7e7d5",
+  "model": "claude-haiku-5-5",
+  "signature": "44bb4aae802e19564501a676b733c7e19828d9ced260b7da0428f08b1a359df2",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_3b0d687de4a7e7d5_query_04909_predicate_substitute",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "The negative text 'Shrink the main subject' is compatible with the positive images. Images 2, 3, and 4 all show sectional sofas of varying sizes—some are notably smaller/more compact than others. The instruction to shrink could plausibly apply to any of these, making the edit not clearly false for all supplied positives."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-haiku-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "75b7eaf12bd0cf1a7c458a72b3d3f0e506940cda7964d34f9056c15773e80ace",
+      "input_hash": "7037327cee0325f1021b561b161f03d4b8d4bbe746dc7cae000ddc8fd3497977",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/claude-haiku-5-5/cache/validate_group/7037327cee0325f1021b561b161f03d4b8d4bbe746dc7cae000ddc8fd3497977.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01ptbJUtWaQlWAuFGwqQ50D54q",
+      "usage": {
+        "prompt_tokens": 7398,
+        "completion_tokens": 178,
+        "total_tokens": 7576,
+        "prompt_tokens_details": {
+          "cached_tokens": 5767,
+          "cache_creation_tokens": 1627
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_3b0d687de4a7e7d5_query_04909_predicate_substitute",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 322,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

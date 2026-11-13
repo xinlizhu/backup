@@ -1,0 +1,90 @@
+{
+  "case_id": "case_0ba4d1ae83d952bfeeb4",
+  "audit_query_id": "audit_query_095",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_0ba4d1ae83d952bfeeb4",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "T shows one pelican with its neck, upper body, and spread wings raised above grey water and its bill wide open. R shows several swimming animals; the requested single-bird result is visible in T."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows an indoor dining table and stools, with no bird or body of water, so it does not depict the requested single bird raised above grey water with its mouth open."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "One bird remains.",
+      "The water is grey.",
+      "The remaining bird is raised out of the water.",
+      "The remaining bird has its mouth open."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_0ba4d1ae83d952bfeeb4",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "One pelican is visible in grey water, with its head, neck, upper body and spread wings raised above the surface and its bill wide open. This supports the requested single bird and raised, open-mouth pose."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The candidate shows an indoor dining table with stools on a patterned rug. There is no bird or water, so the required single bird raised above grey water with its mouth open is absent."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "d94c1635bccf0f74ede59eb9283ecca9dc32dea9e517423f7ddba1650ffa0784",
+      "input_hash": "06cbf86a9906b97e12242cd873c428a42ebfc1e42a87cc8bfe72de56b1f2355e",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/06cbf86a9906b97e12242cd873c428a42ebfc1e42a87cc8bfe72de56b1f2355e.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_043484d4c7a882f3016af2bd8df40487d1af838ce026f5e36a",
+      "usage": {
+        "prompt_tokens": 11683,
+        "completion_tokens": 293,
+        "total_tokens": 11976,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 70
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "07295006442c6eeb3c3f3017f3704d8edcc15b6db5968321786c68a5507ea1ed",
+      "input_hash": "35c19f4b71b4c760ba80e2bf28f336afc47cf8822077b9c3519113ca80169313",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/35c19f4b71b4c760ba80e2bf28f336afc47cf8822077b9c3519113ca80169313.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_047cc9f266b0adf1016af2bdd23e3087d18ef8923be2e72d9a",
+      "usage": {
+        "prompt_tokens": 11141,
+        "completion_tokens": 135,
+        "total_tokens": 11276,
+        "prompt_tokens_details": {
+          "cached_tokens": 9141
+        }
+      }
+    }
+  ]
+}

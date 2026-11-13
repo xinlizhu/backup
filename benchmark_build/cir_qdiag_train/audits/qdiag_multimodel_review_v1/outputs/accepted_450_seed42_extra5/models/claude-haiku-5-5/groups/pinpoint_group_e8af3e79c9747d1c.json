@@ -1,0 +1,49 @@
+{
+  "group_id": "pinpoint_group_e8af3e79c9747d1c",
+  "model": "claude-haiku-5-5",
+  "signature": "44bb4aae802e19564501a676b733c7e19828d9ced260b7da0428f08b1a359df2",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_e8af3e79c9747d1c_query_06831_predicate_substitute",
+      "decision": "reject",
+      "failure_code": "wrong_semantic_target",
+      "reason": "The edit changes 'minus' to 'with', which reverses the semantic intent from removal to inclusion. This is not a predicate edit; it fundamentally inverts the operation's meaning. The source requests exclusion of the jacket; the negative requests inclusion. This violates the stated semantic_target of 'predicate' and creates a contradictory instruction."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-haiku-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "929b98b1307db2cba25554bb40b720af814182054b60e0e28f5b83990d264577",
+      "input_hash": "bd86389ac0064e9afd76239fb744e2bdc45b366b5a3778ad26642e127cf11fd7",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/claude-haiku-5-5/cache/validate_group/bd86389ac0064e9afd76239fb744e2bdc45b366b5a3778ad26642e127cf11fd7.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01QHbZi1G7TwALkDfZARu3eCDA",
+      "usage": {
+        "prompt_tokens": 8037,
+        "completion_tokens": 183,
+        "total_tokens": 8220,
+        "prompt_tokens_details": {
+          "cached_tokens": 6265,
+          "cache_creation_tokens": 1768
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_e8af3e79c9747d1c_query_06831_predicate_substitute",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 352,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

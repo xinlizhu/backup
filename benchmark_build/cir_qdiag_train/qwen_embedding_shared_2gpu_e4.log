@@ -1,0 +1,156 @@
+nohup: ignoring input
+[0] qwen2_embedding_shared_oprd_s2: rank_kd; shared all-linear LoRA; live candidates=student; no fixed gallery; batch=16 x 1; GPUs=2; global_batch=32; candidate_chunk=32; epochs=4; workers=8; filter=None; output=/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/outputs/qwen_embedding_shared_2gpu_e4/qwen2_embedding_shared_oprd_s2
+[1] qwen2_embedding_shared_oprd_qwen8: rank_kd; shared all-linear LoRA; live candidates=student; no fixed gallery; batch=16 x 1; GPUs=2; global_batch=32; candidate_chunk=32; epochs=4; workers=8; filter=None; output=/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/outputs/qwen_embedding_shared_2gpu_e4/qwen2_embedding_shared_oprd_qwen8
+[2] qwen2_embedding_shared_infonce: candidate_infonce; shared all-linear LoRA; live candidates=random; no fixed gallery; batch=16 x 1; GPUs=2; global_batch=32; candidate_chunk=32; epochs=4; workers=8; filter=None; output=/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/outputs/qwen_embedding_shared_2gpu_e4/qwen2_embedding_shared_infonce
+[3] qwen2_embedding_shared_cmse_s2: centered_mse; shared all-linear LoRA; live candidates=random; no fixed gallery; batch=16 x 1; GPUs=2; global_batch=32; candidate_chunk=32; epochs=4; workers=8; filter=None; output=/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/outputs/qwen_embedding_shared_2gpu_e4/qwen2_embedding_shared_cmse_s2
+[4] qwen2_embedding_shared_cmse_qwen8: centered_mse; shared all-linear LoRA; live candidates=random; no fixed gallery; batch=16 x 1; GPUs=2; global_batch=32; candidate_chunk=32; epochs=4; workers=8; filter=None; output=/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/outputs/qwen_embedding_shared_2gpu_e4/qwen2_embedding_shared_cmse_qwen8
+[command] /mnt/data/datasets/search_dataset/zxl/multi_modal_py3.12/bin/python -m torch.distributed.run --standalone --nproc_per_node=2 --max_restarts=0 /mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/scripts/train_qwen_on_policy_distillation.py --config /mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/configs/qwen2_embedding_shared_oprd_s2.yaml
+
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+`torch_dtype` is deprecated! Use `dtype` instead!
+`torch_dtype` is deprecated! Use `dtype` instead!
+[gradient sync] overlap=True; prefetch=2; workers_per_rank=8
+Qwen Embedding synchronized training: 2 GPUs x 16 queries; global_batch=32; accumulation=1; K=32
+[reuse mining] /mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/outputs/qwen_embedding_shared_2gpu_e4/qwen2_embedding_shared_oprd_s2/on_policy/epoch_001
+
+Qwen Embedding 2GPU train epoch 1:   0%|          | 0/883 [00:00<?, ?it/s][gradient sync] buckets launched during backward: 12/12
+
+Qwen Embedding 2GPU train epoch 1:   0%|          | 1/883 [01:59<29:22:20, 119.89s/it]
+Qwen Embedding 2GPU train epoch 1:   0%|          | 2/883 [02:21<15:14:44, 62.30s/it] 
+Qwen Embedding 2GPU train epoch 1:   0%|          | 3/883 [02:42<10:36:40, 43.41s/it]
+Qwen Embedding 2GPU train epoch 1:   0%|          | 4/883 [03:04<8:30:07, 34.82s/it] 
+Qwen Embedding 2GPU train epoch 1:   1%|          | 5/883 [03:25<7:19:09, 30.01s/it]
+Qwen Embedding 2GPU train epoch 1:   1%|          | 6/883 [03:47<6:35:51, 27.08s/it]
+Qwen Embedding 2GPU train epoch 1:   1%|          | 7/883 [04:09<6:10:10, 25.35s/it]
+Qwen Embedding 2GPU train epoch 1:   1%|          | 8/883 [04:31<5:54:10, 24.29s/it]
+Qwen Embedding 2GPU train epoch 1:   1%|          | 9/883 [04:52<5:41:16, 23.43s/it]
+Qwen Embedding 2GPU train epoch 1:   1%|          | 10/883 [05:13<5:31:08, 22.76s/it]
+Qwen Embedding 2GPU train epoch 1:   1%|          | 11/883 [05:35<5:26:41, 22.48s/it]
+Qwen Embedding 2GPU train epoch 1:   1%|▏         | 12/883 [05:57<5:22:16, 22.20s/it]
+Qwen Embedding 2GPU train epoch 1:   1%|▏         | 13/883 [06:19<5:19:50, 22.06s/it]
+Qwen Embedding 2GPU train epoch 1:   2%|▏         | 14/883 [06:40<5:15:11, 21.76s/it]
+Qwen Embedding 2GPU train epoch 1:   2%|▏         | 15/883 [07:01<5:12:11, 21.58s/it]
+Qwen Embedding 2GPU train epoch 1:   2%|▏         | 16/883 [07:22<5:10:48, 21.51s/it]
+Qwen Embedding 2GPU train epoch 1:   2%|▏         | 17/883 [07:44<5:13:31, 21.72s/it]
+Qwen Embedding 2GPU train epoch 1:   2%|▏         | 18/883 [08:06<5:13:23, 21.74s/it]
+Qwen Embedding 2GPU train epoch 1:   2%|▏         | 19/883 [08:27<5:08:39, 21.43s/it]{"epoch_number": 1, "global_step": 20, "global_batch_size": 32, "learning_rate": 2.3863636363636367e-06, "mining_raw_target_recall_at_k": 0.7954295837023915, "centered_response_loss": 0.0, "centered_response_mae": 0.0, "loss": 0.306009, "rank_kl_is_reverse": 1.0, "rank_loss": 0.306009, "raw_mining_target_recall_at_k": 0.7828125, "student_rank_entropy": 3.0794721, "student_target_margin": -0.0592739, "student_target_top1_rate": 0.20625, "student_teacher_top1_agreement": 0.275, "teacher_rank_entropy": 3.1256101, "teacher_target_margin": -0.0136185, "teacher_target_mean_rank": 5.9453125, "teacher_target_top10_rate": 0.825, "teacher_target_top1_rate": 0.3453125, "valid_teacher_rate": 1.0}
+
+Qwen Embedding 2GPU train epoch 1:   2%|▏         | 20/883 [08:48<5:08:45, 21.47s/it]
+Qwen Embedding 2GPU train epoch 1:   2%|▏         | 21/883 [09:10<5:10:19, 21.60s/it]/mnt/data/datasets/search_dataset/zxl/multi_modal_py3.12/lib/python3.12/site-packages/PIL/Image.py:3574: DecompressionBombWarning: Image size (92150000 pixels) exceeds limit of 89478485 pixels, could be decompression bomb DOS attack.
+  warnings.warn(
+
+Qwen Embedding 2GPU train epoch 1:   2%|▏         | 22/883 [09:32<5:09:51, 21.59s/it]
+Qwen Embedding 2GPU train epoch 1:   3%|▎         | 23/883 [09:54<5:10:41, 21.68s/it]
+Qwen Embedding 2GPU train epoch 1:   3%|▎         | 24/883 [10:15<5:09:55, 21.65s/it]
+Qwen Embedding 2GPU train epoch 1:   3%|▎         | 25/883 [10:37<5:10:43, 21.73s/it]
+Qwen Embedding 2GPU train epoch 1:   3%|▎         | 26/883 [10:59<5:09:10, 21.65s/it]
+Qwen Embedding 2GPU train epoch 1:   3%|▎         | 27/883 [11:20<5:08:36, 21.63s/it]
+Qwen Embedding 2GPU train epoch 1:   3%|▎         | 28/883 [11:42<5:07:59, 21.61s/it]
+Qwen Embedding 2GPU train epoch 1:   3%|▎         | 29/883 [12:04<5:07:41, 21.62s/it]
+Qwen Embedding 2GPU train epoch 1:   3%|▎         | 30/883 [12:25<5:06:48, 21.58s/it]
+Qwen Embedding 2GPU train epoch 1:   4%|▎         | 31/883 [12:46<5:05:16, 21.50s/it]
+nohup: ignoring input
+[0] qwen2_embedding_shared_oprd_s2: rank_kd; shared all-linear LoRA; live candidates=student; no fixed gallery; batch=16 x 1; GPUs=2; global_batch=32; candidate_chunk=32; epochs=4; workers=8; filter=None; output=/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/outputs/qwen_embedding_shared_2gpu_e4/qwen2_embedding_shared_oprd_s2
+[1] qwen2_embedding_shared_oprd_qwen8: rank_kd; shared all-linear LoRA; live candidates=student; no fixed gallery; batch=16 x 1; GPUs=2; global_batch=32; candidate_chunk=32; epochs=4; workers=8; filter=None; output=/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/outputs/qwen_embedding_shared_2gpu_e4/qwen2_embedding_shared_oprd_qwen8
+[2] qwen2_embedding_shared_infonce: candidate_infonce; shared all-linear LoRA; live candidates=random; no fixed gallery; batch=16 x 1; GPUs=2; global_batch=32; candidate_chunk=32; epochs=4; workers=8; filter=None; output=/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/outputs/qwen_embedding_shared_2gpu_e4/qwen2_embedding_shared_infonce
+[3] qwen2_embedding_shared_cmse_s2: centered_mse; shared all-linear LoRA; live candidates=random; no fixed gallery; batch=16 x 1; GPUs=2; global_batch=32; candidate_chunk=32; epochs=4; workers=8; filter=None; output=/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/outputs/qwen_embedding_shared_2gpu_e4/qwen2_embedding_shared_cmse_s2
+[4] qwen2_embedding_shared_cmse_qwen8: centered_mse; shared all-linear LoRA; live candidates=random; no fixed gallery; batch=16 x 1; GPUs=2; global_batch=32; candidate_chunk=32; epochs=4; workers=8; filter=None; output=/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/outputs/qwen_embedding_shared_2gpu_e4/qwen2_embedding_shared_cmse_qwen8
+[command] /mnt/data/datasets/search_dataset/zxl/multi_modal_py3.12/bin/python -m torch.distributed.run --standalone --nproc_per_node=2 --max_restarts=0 /mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/scripts/train_qwen_on_policy_distillation.py --config /mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/configs/qwen2_embedding_shared_oprd_s2.yaml
+
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+`torch_dtype` is deprecated! Use `dtype` instead!
+`torch_dtype` is deprecated! Use `dtype` instead!
+[profile] process steps 5..14; per-rank files: /mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/outputs/qwen_embedding_shared_2gpu_e4/qwen2_embedding_shared_oprd_s2/step_profile_rank*.jsonl
+[gradient sync] overlap=True; prefetch=2; workers_per_rank=8
+Qwen Embedding synchronized training: 2 GPUs x 16 queries; global_batch=32; accumulation=1; K=32
+[reuse mining] /mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/outputs/qwen_embedding_shared_2gpu_e4/qwen2_embedding_shared_oprd_s2/on_policy/epoch_001
+
+Qwen Embedding 2GPU train epoch 1:   0%|          | 0/883 [00:00<?, ?it/s][gradient sync] buckets launched during backward: 12/12
+
+Qwen Embedding 2GPU train epoch 1:   0%|          | 1/883 [02:03<30:12:24, 123.29s/it]
+Qwen Embedding 2GPU train epoch 1:   0%|          | 2/883 [02:24<15:31:23, 63.43s/it] 
+Qwen Embedding 2GPU train epoch 1:   0%|          | 3/883 [02:45<10:45:54, 44.04s/it]
+Qwen Embedding 2GPU train epoch 1:   0%|          | 4/883 [03:07<8:33:16, 35.04s/it] [step profile] {"rank": 1, "pid": 134264, "epoch": 1, "global_step": 5, "process_step": 5, "local_queries": 16, "overlap": true, "buckets_launched_during_backward": 12, "candidate_images": 512, "candidate_chunks": 16, "query_padded_tokens": 286, "candidate_max_padded_tokens": 278, "data_wait_s": 0.000155, "forward_loss_host_s": 7.977683, "backward_replay_host_s": 13.26179, "gradient_finish_host_s": 0.112161, "optimizer_host_s": 0.013636, "metrics_host_s": 0.000269, "forward_loss_cuda_stream_s": 7.977915, "backward_replay_cuda_stream_s": 13.262313, "gradient_finish_cuda_stream_s": 0.11217, "optimizer_cuda_stream_s": 0.013638, "metrics_cuda_stream_s": 0.000271, "step_wall_s": 21.365735}
+[step profile] {"rank": 0, "pid": 134263, "epoch": 1, "global_step": 5, "process_step": 5, "local_queries": 16, "overlap": true, "buckets_launched_during_backward": 12, "candidate_images": 499, "candidate_chunks": 16, "query_padded_tokens": 291, "candidate_max_padded_tokens": 278, "data_wait_s": 0.000142, "forward_loss_host_s": 8.305112, "backward_replay_host_s": 12.902764, "gradient_finish_host_s": 0.145383, "optimizer_host_s": 0.01409, "metrics_host_s": 0.000283, "forward_loss_cuda_stream_s": 8.305335, "backward_replay_cuda_stream_s": 12.903277, "gradient_finish_cuda_stream_s": 0.145391, "optimizer_cuda_stream_s": 0.014091, "metrics_cuda_stream_s": 0.000285, "step_wall_s": 21.367815}
+
+Qwen Embedding 2GPU train epoch 1:   1%|          | 5/883 [03:28<7:20:35, 30.11s/it][step profile] {"rank": 0, "pid": 134263, "epoch": 1, "global_step": 6, "process_step": 6, "local_queries": 16, "overlap": true, "buckets_launched_during_backward": 12, "candidate_images": 491, "candidate_chunks": 16, "query_padded_tokens": 301, "candidate_max_padded_tokens": 278, "data_wait_s": 0.000322, "forward_loss_host_s": 7.740213, "backward_replay_host_s": 13.045321, "gradient_finish_host_s": 0.1295, "optimizer_host_s": 0.013073, "metrics_host_s": 0.000273, "forward_loss_cuda_stream_s": 7.740486, "backward_replay_cuda_stream_s": 13.045829, "gradient_finish_cuda_stream_s": 0.129516, "optimizer_cuda_stream_s": 0.013074, "metrics_cuda_stream_s": 0.000275, "step_wall_s": 20.928739}
+
+Qwen Embedding 2GPU train epoch 1:   1%|          | 6/883 [03:49<6:34:28, 26.99s/it][step profile] {"rank": 1, "pid": 134264, "epoch": 1, "global_step": 6, "process_step": 6, "local_queries": 16, "overlap": true, "buckets_launched_during_backward": 12, "candidate_images": 503, "candidate_chunks": 16, "query_padded_tokens": 298, "candidate_max_padded_tokens": 278, "data_wait_s": 0.000289, "forward_loss_host_s": 7.818844, "backward_replay_host_s": 12.984437, "gradient_finish_host_s": 0.111916, "optimizer_host_s": 0.014551, "metrics_host_s": 0.000272, "forward_loss_cuda_stream_s": 7.819117, "backward_replay_cuda_stream_s": 12.984945, "gradient_finish_cuda_stream_s": 0.111925, "optimizer_cuda_stream_s": 0.014553, "metrics_cuda_stream_s": 0.000274, "step_wall_s": 20.930347}
+[step profile] {"rank": 1, "pid": 134264, "epoch": 1, "global_step": 7, "process_step": 7, "local_queries": 16, "overlap": true, "buckets_launched_during_backward": 12, "candidate_images": 494, "candidate_chunks": 16, "query_padded_tokens": 283, "candidate_max_padded_tokens": 278, "data_wait_s": 0.000123, "forward_loss_host_s": 7.636357, "backward_replay_host_s": 12.826916, "gradient_finish_host_s": 1.662186, "optimizer_host_s": 0.014297, "metrics_host_s": 0.000291, "forward_loss_cuda_stream_s": 7.636625, "backward_replay_cuda_stream_s": 12.827411, "gradient_finish_cuda_stream_s": 1.662259, "optimizer_cuda_stream_s": 0.014299, "metrics_cuda_stream_s": 0.000294, "step_wall_s": 22.140201}
+[step profile] {"rank": 0, "pid": 134263, "epoch": 1, "global_step": 7, "process_step": 7, "local_queries": 16, "overlap": true, "buckets_launched_during_backward": 12, "candidate_images": 512, "candidate_chunks": 16, "query_padded_tokens": 293, "candidate_max_padded_tokens": 278, "data_wait_s": 0.000131, "forward_loss_host_s": 8.574612, "backward_replay_host_s": 13.44712, "gradient_finish_host_s": 0.104135, "optimizer_host_s": 0.013184, "metrics_host_s": 0.000307, "forward_loss_cuda_stream_s": 8.574918, "backward_replay_cuda_stream_s": 13.447653, "gradient_finish_cuda_stream_s": 0.104141, "optimizer_cuda_stream_s": 0.013185, "metrics_cuda_stream_s": 0.000309, "step_wall_s": 22.139522}
+
+Qwen Embedding 2GPU train epoch 1:   1%|          | 7/883 [04:11<6:10:54, 25.40s/it][step profile] {"rank": 1, "pid": 134264, "epoch": 1, "global_step": 8, "process_step": 8, "local_queries": 16, "overlap": true, "buckets_launched_during_backward": 12, "candidate_images": 507, "candidate_chunks": 16, "query_padded_tokens": 287, "candidate_max_padded_tokens": 278, "data_wait_s": 0.000154, "forward_loss_host_s": 7.891393, "backward_replay_host_s": 13.367967, "gradient_finish_host_s": 0.107226, "optimizer_host_s": 0.012938, "metrics_host_s": 0.000273, "forward_loss_cuda_stream_s": 7.891671, "backward_replay_cuda_stream_s": 13.368492, "gradient_finish_cuda_stream_s": 0.107235, "optimizer_cuda_stream_s": 0.012939, "metrics_cuda_stream_s": 0.000275, "step_wall_s": 21.379982}
+[step profile] {"rank": 0, "pid": 134263, "epoch": 1, "global_step": 8, "process_step": 8, "local_queries": 16, "overlap": true, "buckets_launched_during_backward": 12, "candidate_images": 511, "candidate_chunks": 16, "query_padded_tokens": 289, "candidate_max_padded_tokens": 278, "data_wait_s": 0.000137, "forward_loss_host_s": 8.088052, "backward_replay_host_s": 13.152826, "gradient_finish_host_s": 0.126059, "optimizer_host_s": 0.014534, "metrics_host_s": 0.000273, "forward_loss_cuda_stream_s": 8.088339, "backward_replay_cuda_stream_s": 13.153345, "gradient_finish_cuda_stream_s": 0.126068, "optimizer_cuda_stream_s": 0.014535, "metrics_cuda_stream_s": 0.000276, "step_wall_s": 21.381913}
+
+Qwen Embedding 2GPU train epoch 1:   1%|          | 8/883 [04:32<5:51:49, 24.13s/it][step profile] {"rank": 0, "pid": 134263, "epoch": 1, "global_step": 9, "process_step": 9, "local_queries": 16, "overlap": true, "buckets_launched_during_backward": 12, "candidate_images": 511, "candidate_chunks": 16, "query_padded_tokens": 294, "candidate_max_padded_tokens": 278, "data_wait_s": 0.000333, "forward_loss_host_s": 8.341844, "backward_replay_host_s": 13.038325, "gradient_finish_host_s": 0.104163, "optimizer_host_s": 0.013247, "metrics_host_s": 0.000264, "forward_loss_cuda_stream_s": 8.342164, "backward_replay_cuda_stream_s": 13.039932, "gradient_finish_cuda_stream_s": 0.104169, "optimizer_cuda_stream_s": 0.013248, "metrics_cuda_stream_s": 0.000267, "step_wall_s": 21.498209}
+
+Qwen Embedding 2GPU train epoch 1:   1%|          | 9/883 [04:54<5:39:28, 23.30s/it][step profile] {"rank": 1, "pid": 134264, "epoch": 1, "global_step": 9, "process_step": 9, "local_queries": 16, "overlap": true, "buckets_launched_during_backward": 12, "candidate_images": 506, "candidate_chunks": 16, "query_padded_tokens": 290, "candidate_max_padded_tokens": 278, "data_wait_s": 0.000294, "forward_loss_host_s": 7.544095, "backward_replay_host_s": 13.822112, "gradient_finish_host_s": 0.118954, "optimizer_host_s": 0.014479, "metrics_host_s": 0.000293, "forward_loss_cuda_stream_s": 7.54438, "backward_replay_cuda_stream_s": 13.823746, "gradient_finish_cuda_stream_s": 0.118962, "optimizer_cuda_stream_s": 0.014481, "metrics_cuda_stream_s": 0.000295, "step_wall_s": 21.500266}
+[step profile] {"rank": 1, "pid": 134264, "epoch": 1, "global_step": 10, "process_step": 10, "local_queries": 16, "overlap": true, "buckets_launched_during_backward": 12, "candidate_images": 502, "candidate_chunks": 16, "query_padded_tokens": 296, "candidate_max_padded_tokens": 278, "data_wait_s": 0.000257, "forward_loss_host_s": 7.829694, "backward_replay_host_s": 13.181608, "gradient_finish_host_s": 0.112984, "optimizer_host_s": 0.014638, "metrics_host_s": 0.000309, "forward_loss_cuda_stream_s": 7.829993, "backward_replay_cuda_stream_s": 13.182165, "gradient_finish_cuda_stream_s": 0.112993, "optimizer_cuda_stream_s": 0.014639, "metrics_cuda_stream_s": 0.000311, "step_wall_s": 21.139522}
+[step profile] {"rank": 0, "pid": 134263, "epoch": 1, "global_step": 10, "process_step": 10, "local_queries": 16, "overlap": true, "buckets_launched_during_backward": 12, "candidate_images": 489, "candidate_chunks": 16, "query_padded_tokens": 295, "candidate_max_padded_tokens": 278, "data_wait_s": 0.000139, "forward_loss_host_s": 7.605939, "backward_replay_host_s": 12.837114, "gradient_finish_host_s": 0.683628, "optimizer_host_s": 0.015652, "metrics_host_s": 0.000306, "forward_loss_cuda_stream_s": 7.60623, "backward_replay_cuda_stream_s": 12.837663, "gradient_finish_cuda_stream_s": 0.683656, "optimizer_cuda_stream_s": 0.015655, "metrics_cuda_stream_s": 0.000309, "step_wall_s": 21.142812}
+
+Qwen Embedding 2GPU train epoch 1:   1%|          | 10/883 [05:15<5:29:23, 22.64s/it][step profile] {"rank": 0, "pid": 134263, "epoch": 1, "global_step": 11, "process_step": 11, "local_queries": 16, "overlap": true, "buckets_launched_during_backward": 12, "candidate_images": 482, "candidate_chunks": 16, "query_padded_tokens": 297, "candidate_max_padded_tokens": 278, "data_wait_s": 0.00018, "forward_loss_host_s": 8.122759, "backward_replay_host_s": 13.723024, "gradient_finish_host_s": 0.101002, "optimizer_host_s": 0.014608, "metrics_host_s": 0.000275, "forward_loss_cuda_stream_s": 8.123071, "backward_replay_cuda_stream_s": 13.72361, "gradient_finish_cuda_stream_s": 0.101007, "optimizer_cuda_stream_s": 0.014605, "metrics_cuda_stream_s": 0.000282, "step_wall_s": 21.961882}
+
+Qwen Embedding 2GPU train epoch 1:   1%|          | 11/883 [05:37<5:26:01, 22.43s/it][step profile] {"rank": 1, "pid": 134264, "epoch": 1, "global_step": 11, "process_step": 11, "local_queries": 16, "overlap": true, "buckets_launched_during_backward": 12, "candidate_images": 507, "candidate_chunks": 16, "query_padded_tokens": 297, "candidate_max_padded_tokens": 278, "data_wait_s": 0.000157, "forward_loss_host_s": 7.972873, "backward_replay_host_s": 13.333826, "gradient_finish_host_s": 0.642869, "optimizer_host_s": 0.015103, "metrics_host_s": 0.000326, "forward_loss_cuda_stream_s": 7.973177, "backward_replay_cuda_stream_s": 13.33439, "gradient_finish_cuda_stream_s": 0.6429, "optimizer_cuda_stream_s": 0.015104, "metrics_cuda_stream_s": 0.00033, "step_wall_s": 21.965188}
+[step profile] {"rank": 0, "pid": 134263, "epoch": 1, "global_step": 12, "process_step": 12, "local_queries": 16, "overlap": true, "buckets_launched_during_backward": 12, "candidate_images": 499, "candidate_chunks": 16, "query_padded_tokens": 300, "candidate_max_padded_tokens": 278, "data_wait_s": 0.000146, "forward_loss_host_s": 8.017052, "backward_replay_host_s": 12.968502, "gradient_finish_host_s": 0.104966, "optimizer_host_s": 0.013243, "metrics_host_s": 0.000294, "forward_loss_cuda_stream_s": 8.017359, "backward_replay_cuda_stream_s": 12.969055, "gradient_finish_cuda_stream_s": 0.104972, "optimizer_cuda_stream_s": 0.013245, "metrics_cuda_stream_s": 0.000296, "step_wall_s": 21.104237}
+
+Qwen Embedding 2GPU train epoch 1:   1%|▏         | 12/883 [05:58<5:19:47, 22.03s/it][step profile] {"rank": 1, "pid": 134264, "epoch": 1, "global_step": 12, "process_step": 12, "local_queries": 16, "overlap": true, "buckets_launched_during_backward": 12, "candidate_images": 502, "candidate_chunks": 16, "query_padded_tokens": 287, "candidate_max_padded_tokens": 278, "data_wait_s": 0.000161, "forward_loss_host_s": 7.568207, "backward_replay_host_s": 13.382593, "gradient_finish_host_s": 0.136719, "optimizer_host_s": 0.015285, "metrics_host_s": 0.000295, "forward_loss_cuda_stream_s": 7.568495, "backward_replay_cuda_stream_s": 13.383159, "gradient_finish_cuda_stream_s": 0.136728, "optimizer_cuda_stream_s": 0.015286, "metrics_cuda_stream_s": 0.000297, "step_wall_s": 21.103293}
+[step profile] {"rank": 1, "pid": 134264, "epoch": 1, "global_step": 13, "process_step": 13, "local_queries": 16, "overlap": true, "buckets_launched_during_backward": 12, "candidate_images": 507, "candidate_chunks": 16, "query_padded_tokens": 302, "candidate_max_padded_tokens": 278, "data_wait_s": 0.000131, "forward_loss_host_s": 7.991512, "backward_replay_host_s": 13.207794, "gradient_finish_host_s": 0.11757, "optimizer_host_s": 0.014707, "metrics_host_s": 0.000267, "forward_loss_cuda_stream_s": 7.991818, "backward_replay_cuda_stream_s": 13.208352, "gradient_finish_cuda_stream_s": 0.117579, "optimizer_cuda_stream_s": 0.014708, "metrics_cuda_stream_s": 0.000269, "step_wall_s": 21.332012}
+[step profile] {"rank": 0, "pid": 134263, "epoch": 1, "global_step": 13, "process_step": 13, "local_queries": 16, "overlap": true, "buckets_launched_during_backward": 12, "candidate_images": 486, "candidate_chunks": 16, "query_padded_tokens": 287, "candidate_max_padded_tokens": 278, "data_wait_s": 0.000136, "forward_loss_host_s": 8.232821, "backward_replay_host_s": 12.853573, "gradient_finish_host_s": 0.231417, "optimizer_host_s": 0.015314, "metrics_host_s": 0.000297, "forward_loss_cuda_stream_s": 8.233138, "backward_replay_cuda_stream_s": 12.854099, "gradient_finish_cuda_stream_s": 0.231449, "optimizer_cuda_stream_s": 0.015316, "metrics_cuda_stream_s": 0.000299, "step_wall_s": 21.333592}
+
+Qwen Embedding 2GPU train epoch 1:   1%|▏         | 13/883 [06:19<5:16:23, 21.82s/it][step profile] {"rank": 0, "pid": 134263, "epoch": 1, "global_step": 14, "process_step": 14, "local_queries": 16, "overlap": true, "buckets_launched_during_backward": 12, "candidate_images": 493, "candidate_chunks": 16, "query_padded_tokens": 281, "candidate_max_padded_tokens": 278, "data_wait_s": 0.000167, "forward_loss_host_s": 8.270202, "backward_replay_host_s": 12.662005, "gradient_finish_host_s": 0.097892, "optimizer_host_s": 0.013314, "metrics_host_s": 0.000311, "forward_loss_cuda_stream_s": 8.270519, "backward_replay_cuda_stream_s": 12.662546, "gradient_finish_cuda_stream_s": 0.097897, "optimizer_cuda_stream_s": 0.013316, "metrics_cuda_stream_s": 0.000313, "step_wall_s": 21.043925}
+
+Qwen Embedding 2GPU train epoch 1:   2%|▏         | 14/883 [06:40<5:12:42, 21.59s/it][step profile] {"rank": 1, "pid": 134264, "epoch": 1, "global_step": 14, "process_step": 14, "local_queries": 16, "overlap": true, "buckets_launched_during_backward": 12, "candidate_images": 494, "candidate_chunks": 16, "query_padded_tokens": 291, "candidate_max_padded_tokens": 278, "data_wait_s": 0.000127, "forward_loss_host_s": 7.696789, "backward_replay_host_s": 12.831053, "gradient_finish_host_s": 0.502989, "optimizer_host_s": 0.015913, "metrics_host_s": 0.000272, "forward_loss_cuda_stream_s": 7.697085, "backward_replay_cuda_stream_s": 12.831595, "gradient_finish_cuda_stream_s": 0.503012, "optimizer_cuda_stream_s": 0.015915, "metrics_cuda_stream_s": 0.000275, "step_wall_s": 21.047176}
+
+Qwen Embedding 2GPU train epoch 1:   2%|▏         | 15/883 [07:01<5:09:20, 21.38s/it]
+Qwen Embedding 2GPU train epoch 1:   2%|▏         | 16/883 [07:23<5:08:24, 21.34s/it]
+Qwen Embedding 2GPU train epoch 1:   2%|▏         | 17/883 [07:44<5:08:26, 21.37s/it]
+Qwen Embedding 2GPU train epoch 1:   2%|▏         | 18/883 [08:05<5:06:53, 21.29s/it]
+Qwen Embedding 2GPU train epoch 1:   2%|▏         | 19/883 [08:26<5:03:35, 21.08s/it]{"epoch_number": 1, "global_step": 20, "global_batch_size": 32, "learning_rate": 2.3863636363636367e-06, "mining_raw_target_recall_at_k": 0.7954295837023915, "centered_response_loss": 0.0, "centered_response_mae": 0.0, "loss": 0.3060939, "rank_kl_is_reverse": 1.0, "rank_loss": 0.3060939, "raw_mining_target_recall_at_k": 0.7828125, "student_rank_entropy": 3.0802456, "student_target_margin": -0.0592364, "student_target_top1_rate": 0.2109375, "student_teacher_top1_agreement": 0.26875, "teacher_rank_entropy": 3.1256101, "teacher_target_margin": -0.0136185, "teacher_target_mean_rank": 5.9453125, "teacher_target_top10_rate": 0.825, "teacher_target_top1_rate": 0.3453125, "valid_teacher_rate": 1.0}
+
+Qwen Embedding 2GPU train epoch 1:   2%|▏         | 20/883 [08:48<5:06:23, 21.30s/it]
+Qwen Embedding 2GPU train epoch 1:   2%|▏         | 21/883 [09:09<5:06:49, 21.36s/it]/mnt/data/datasets/search_dataset/zxl/multi_modal_py3.12/lib/python3.12/site-packages/PIL/Image.py:3574: DecompressionBombWarning: Image size (92150000 pixels) exceeds limit of 89478485 pixels, could be decompression bomb DOS attack.
+  warnings.warn(
+
+Qwen Embedding 2GPU train epoch 1:   2%|▏         | 22/883 [09:30<5:05:52, 21.32s/it]
+Qwen Embedding 2GPU train epoch 1:   3%|▎         | 23/883 [09:52<5:08:16, 21.51s/it]
+Qwen Embedding 2GPU train epoch 1:   3%|▎         | 24/883 [10:13<5:04:58, 21.30s/it]
+Qwen Embedding 2GPU train epoch 1:   3%|▎         | 25/883 [10:35<5:06:01, 21.40s/it]
+Qwen Embedding 2GPU train epoch 1:   3%|▎         | 26/883 [10:56<5:05:06, 21.36s/it]
+Qwen Embedding 2GPU train epoch 1:   3%|▎         | 27/883 [11:17<5:04:03, 21.31s/it]
+Qwen Embedding 2GPU train epoch 1:   3%|▎         | 28/883 [11:38<5:01:37, 21.17s/it]
+Qwen Embedding 2GPU train epoch 1:   3%|▎         | 29/883 [11:59<5:01:25, 21.18s/it]
+Qwen Embedding 2GPU train epoch 1:   3%|▎         | 30/883 [12:20<5:00:03, 21.11s/it]
+Qwen Embedding 2GPU train epoch 1:   4%|▎         | 31/883 [12:41<5:00:44, 21.18s/it]
+Qwen Embedding 2GPU train epoch 1:   4%|▎         | 32/883 [13:03<5:02:23, 21.32s/it]
+Qwen Embedding 2GPU train epoch 1:   4%|▎         | 33/883 [13:25<5:05:28, 21.56s/it]
+Qwen Embedding 2GPU train epoch 1:   4%|▍         | 34/883 [13:46<5:00:11, 21.22s/it]
+Qwen Embedding 2GPU train epoch 1:   4%|▍         | 35/883 [14:07<4:59:07, 21.16s/it]
+Qwen Embedding 2GPU train epoch 1:   4%|▍         | 36/883 [14:28<5:00:20, 21.28s/it]
+Qwen Embedding 2GPU train epoch 1:   4%|▍         | 37/883 [14:50<5:00:32, 21.31s/it]
+Qwen Embedding 2GPU train epoch 1:   4%|▍         | 38/883 [15:11<4:59:07, 21.24s/it]
+Qwen Embedding 2GPU train epoch 1:   4%|▍         | 39/883 [15:33<5:02:27, 21.50s/it]{"epoch_number": 1, "global_step": 40, "global_batch_size": 32, "learning_rate": 4.6590909090909095e-06, "mining_raw_target_recall_at_k": 0.7954295837023915, "centered_response_loss": 0.0, "centered_response_mae": 0.0, "loss": 0.2833843, "rank_kl_is_reverse": 1.0, "rank_loss": 0.2833843, "raw_mining_target_recall_at_k": 0.803125, "student_rank_entropy": 3.0458045, "student_target_margin": -0.049127, "student_target_top1_rate": 0.2640625, "student_teacher_top1_agreement": 0.3140625, "teacher_rank_entropy": 3.1047576, "teacher_target_margin": -0.0129562, "teacher_target_mean_rank": 6.0046875, "teacher_target_top10_rate": 0.809375, "teacher_target_top1_rate": 0.378125, "valid_teacher_rate": 1.0}
+
+Qwen Embedding 2GPU train epoch 1:   5%|▍         | 40/883 [15:54<5:01:58, 21.49s/it]
+Qwen Embedding 2GPU train epoch 1:   5%|▍         | 41/883 [16:15<5:00:25, 21.41s/it]
+Qwen Embedding 2GPU train epoch 1:   5%|▍         | 42/883 [16:37<5:00:49, 21.46s/it]
+Qwen Embedding 2GPU train epoch 1:   5%|▍         | 43/883 [16:59<5:00:59, 21.50s/it]
+Qwen Embedding 2GPU train epoch 1:   5%|▍         | 44/883 [17:20<4:59:56, 21.45s/it]
+Qwen Embedding 2GPU train epoch 1:   5%|▌         | 45/883 [17:41<4:58:04, 21.34s/it]
+Qwen Embedding 2GPU train epoch 1:   5%|▌         | 46/883 [18:03<4:59:11, 21.45s/it]
+Qwen Embedding 2GPU train epoch 1:   5%|▌         | 47/883 [18:24<4:56:06, 21.25s/it]
+Qwen Embedding 2GPU train epoch 1:   5%|▌         | 48/883 [18:45<4:57:26, 21.37s/it]
+Qwen Embedding 2GPU train epoch 1:   6%|▌         | 49/883 [19:07<4:56:40, 21.34s/it]
+Qwen Embedding 2GPU train epoch 1:   6%|▌         | 50/883 [19:27<4:54:11, 21.19s/it]
+Qwen Embedding 2GPU train epoch 1:   6%|▌         | 51/883 [19:49<4:55:25, 21.30s/it]/mnt/data/datasets/search_dataset/zxl/multi_modal_py3.12/lib/python3.12/site-packages/PIL/Image.py:3574: DecompressionBombWarning: Image size (92150000 pixels) exceeds limit of 89478485 pixels, could be decompression bomb DOS attack.
+  warnings.warn(
+
+Qwen Embedding 2GPU train epoch 1:   6%|▌         | 52/883 [20:10<4:53:43, 21.21s/it]
+Qwen Embedding 2GPU train epoch 1:   6%|▌         | 53/883 [20:32<4:56:06, 21.41s/it]
+Qwen Embedding 2GPU train epoch 1:   6%|▌         | 54/883 [20:52<4:52:51, 21.20s/it]
+Qwen Embedding 2GPU train epoch 1:   6%|▌         | 55/883 [21:14<4:55:23, 21.41s/it]
+Qwen Embedding 2GPU train epoch 1:   6%|▋         | 56/883 [21:37<4:59:45, 21.75s/it]
+Qwen Embedding 2GPU train epoch 1:   6%|▋         | 57/883 [21:58<4:56:46, 21.56s/it]

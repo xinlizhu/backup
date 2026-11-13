@@ -1,0 +1,166 @@
+{
+  "case_id": "case_0c0508a777dd05c5a3b1",
+  "audit_query_id": "audit_query_097",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_0c0508a777dd05c5a3b1",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The saxophone has a blue body and bell with gold-colored keys, replacing the reference's conventional gold-colored finish."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The candidate shows a saxophone with a reflective brass-colored body, not a blue body; the blue material surrounding it is fabric."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The saxophone must be blue."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "attribute",
+        "before_span": "blue",
+        "after_span": "brass-colored",
+        "edited_instruction": "be a brass-colored saxophone instead of a regular one.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "The saxophone's body color changes from blue to brass-colored.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The saxophone's body and bell are blue; its brass-colored keys do not make the body brass-colored."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The saxophone's curved body and bell have a reflective brass-colored finish."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_0c0508a777dd05c5a3b1",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a saxophone with a distinctly blue neck, body, and bell, contrasting with the reference's conventional gold/brass finish."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a saxophone with a reflective pale gold/brass body and bell, not a blue instrument. The blue visible around it is fabric."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing 'blue' with 'brass-colored' is one attribute substitution and exactly reconstructs the edited instruction. The saxophone identity and remaining meaning are preserved. The blue positive and brass-colored candidate support the required reversed color contrast.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The positive saxophone's body and bell are blue; its gold-colored keys do not make the instrument brass-colored overall."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The candidate saxophone has a reflective brass-colored body and bell, with pale highlights and some silver-colored key components."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "substitute",
+      "semantic_target": "attribute",
+      "before_span": "blue",
+      "after_span": "brass-colored",
+      "edited_instruction": "be a brass-colored saxophone instead of a regular one.",
+      "witness_type": "substitution_contrast",
+      "changed_constraint": "The saxophone's body color changes from blue to brass-colored.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "The saxophone's body and bell are blue; its brass-colored keys do not make the body brass-colored."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "The saxophone's curved body and bell have a reflective brass-colored finish."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing 'blue' with 'brass-colored' is one attribute substitution and exactly reconstructs the edited instruction. The saxophone identity and remaining meaning are preserved. The blue positive and brass-colored candidate support the required reversed color contrast.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The positive saxophone's body and bell are blue; its gold-colored keys do not make the instrument brass-colored overall."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The candidate saxophone has a reflective brass-colored body and bell, with pale highlights and some silver-colored key components."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "6ccbd09bdbd9cdd5a6dd635caadc9a5e7763d293fa5b76d8321dcd876cad2506",
+      "input_hash": "3b6320de4df77cd36e1b36cd1d322d280f186c80f55aeb8aee5f2c685f9907e1",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/3b6320de4df77cd36e1b36cd1d322d280f186c80f55aeb8aee5f2c685f9907e1.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_093e3c116cef49d3016af2bdfb4d7087d19913f55a5a82b7a5",
+      "usage": {
+        "prompt_tokens": 7653,
+        "completion_tokens": 523,
+        "total_tokens": 8176,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 169
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "5d12b6f08d7b230410a9e1d8120d808cb37200323bcf625d785fd88a330d7d00",
+      "input_hash": "303f5547c800c602b41847eabd26330888cc89e360efad86ea2b826378376e79",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/303f5547c800c602b41847eabd26330888cc89e360efad86ea2b826378376e79.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_04cee4fa93ac9425016af2be0a997487d1a9ab12f894268f02",
+      "usage": {
+        "prompt_tokens": 7177,
+        "completion_tokens": 365,
+        "total_tokens": 7542,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 35
+        }
+      }
+    }
+  ]
+}

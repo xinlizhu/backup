@@ -1,0 +1,84 @@
+{
+  "case_id": "case_af5475e80247d18ab1e8",
+  "audit_query_id": "audit_query_099",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_af5475e80247d18ab1e8",
+    "case_status": "source_invalid_or_uncertain",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "The skunk is surrounded by reddish-brown and yellowish needle-like ground cover on wood and gravel. This appears to be fallen pine needles; reddish and yellowish grass is not reliably identifiable."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The image shows a dense group of sea lions with no visible grass, including no reddish or yellowish grass."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "Has reddish and yellowish grass."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_af5475e80247d18ab1e8",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "R shows green grass. T shows reddish-brown and yellowish dry needle-like material scattered over wood and ground, but it cannot reliably be identified as grass rather than pine needles."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows a dense group of sea lions with no visible reddish or yellowish grass."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "ff14ea66f837e6e06e24f84a0b5ef3d711111d0d2620b755f63a370990206d91",
+      "input_hash": "a0a9032135aef64d1ad502be73695fa13e7cf0f2d6a2a40d7763e69a86cf1970",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/a0a9032135aef64d1ad502be73695fa13e7cf0f2d6a2a40d7763e69a86cf1970.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0575a5159ff48a48016af2be17061887d187f6dee2f6347137",
+      "usage": {
+        "prompt_tokens": 7225,
+        "completion_tokens": 252,
+        "total_tokens": 7477,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 69
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "4764410af43496d27f4c92e8d0d0ec60d5739fbdd1d113b9d91dfcf298ec156d",
+      "input_hash": "e033471b27cd5bcfa5f42dd5f8a480efdd21dca73323afa03bd17a56fbf2aa06",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/e033471b27cd5bcfa5f42dd5f8a480efdd21dca73323afa03bd17a56fbf2aa06.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_076b8664bc72e959016af2be3033d887d1a00f5b0ec438ff12",
+      "usage": {
+        "prompt_tokens": 6683,
+        "completion_tokens": 107,
+        "total_tokens": 6790
+      }
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "group_id": "pinpoint_group_d2b7fb0936fb18a7",
+  "model": "grok-4.6",
+  "signature": "cb958fa178e5ebcdd33f446ebd46fe25a7c20417ca5539cc74de61fb4df99804",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_d2b7fb0936fb18a7_query_01212_predicate_add",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Adds exactly one predicate, 'by making it glow,' and reconstructs the source. No supplied positive glows, so the added fact is clearly false for every positive."
+    },
+    {
+      "negative_id": "pinpoint_group_d2b7fb0936fb18a7_query_01214_attribute_add",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "The added black-color constraint is not clearly false for positive image 2, whose dark studded tee remains compatible with black."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.6",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "147470f8662a778c102f86bf90e6ea10dafcb67becb858e96c06273d5ad67f00",
+      "input_hash": "fd85f81392c4e7b08807a2d55f740613f5ebf1f5cf96a15833b4555bae9acac3",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/grok-4.6/cache/validate_group/fd85f81392c4e7b08807a2d55f740613f5ebf1f5cf96a15833b4555bae9acac3.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "ec73f594-3a83-9844-8a63-66260fde36b3",
+      "usage": {
+        "prompt_tokens": 5634,
+        "completion_tokens": 161,
+        "total_tokens": 9313,
+        "prompt_tokens_details": {
+          "text_tokens": 2549,
+          "audio_tokens": 0,
+          "image_tokens": 3085,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 3518,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 302700000
+      }
+    }
+  ],
+  "format_warnings": []
+}

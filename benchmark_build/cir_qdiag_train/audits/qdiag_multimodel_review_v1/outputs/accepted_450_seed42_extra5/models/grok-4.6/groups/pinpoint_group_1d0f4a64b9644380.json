@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_1d0f4a64b9644380",
+  "model": "grok-4.6",
+  "signature": "cb958fa178e5ebcdd33f446ebd46fe25a7c20417ca5539cc74de61fb4df99804",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_1d0f4a64b9644380_query_06654_predicate_add",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Adds exactly one predicate, 'hanging,' and the text reconstructs cleanly. That state is clearly false for every positive: the romper is worn or laid flat, never suspended."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.6",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "0b9c4d904641c599f827dffa7465aa3993aafa2e72da95a91d4be3f9dcb13c08",
+      "input_hash": "728987e2bf6b91226cffdc47263e5bfef906524f00b961305f8422fa2fbbf65b",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/grok-4.6/cache/validate_group/728987e2bf6b91226cffdc47263e5bfef906524f00b961305f8422fa2fbbf65b.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "2aaf70f6-21cf-9b7e-8e34-83a8dde85252",
+      "usage": {
+        "prompt_tokens": 6315,
+        "completion_tokens": 88,
+        "total_tokens": 8665,
+        "prompt_tokens_details": {
+          "text_tokens": 2464,
+          "audio_tokens": 0,
+          "image_tokens": 3851,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2262,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 236580000
+      }
+    }
+  ],
+  "format_warnings": []
+}

@@ -1,0 +1,625 @@
+{
+  "analysis_type": "Post-hoc maximum average pairwise agreement at fixed per-cell retention",
+  "models": [
+    "grok-4.6",
+    "grok-4.7",
+    "kimi-k3",
+    "gpt-5.6-terra"
+  ],
+  "labels": [
+    "accept",
+    "reject",
+    "uncertain"
+  ],
+  "source_hashes": {
+    "cases.private.jsonl": "7ecf8fc9591e01985a2255556382bf54d5a2ed2acffebda0cb3ac68b968bb056",
+    "grok-4.6_decision_map": "961aa3160b6fdd4a47f8c34adb7bea3273faa0d20c76f8d935a3cbe913060d9f",
+    "grok-4.7_decision_map": "114155b87c2c79b3bc9404f496caf2bd1d904038b7ffc896c1977eb0bb37ab87",
+    "kimi-k3_decision_map": "525ff5cdc3d0bca9d430ea0ac90d17801787063b0acce18f79e7fc5dfa15e99b",
+    "gpt-5.6-terra_decision_map": "30f0c814ab26cb4cca71bb15cec6bb773299a8e612f84f6fced5a19b6f2a4aa8"
+  },
+  "per_cell": 45,
+  "seed": 42,
+  "original_samples": 450,
+  "selected_samples": 405,
+  "retention_percent": 90.0,
+  "selection": "Within each of the 9 cells, sort by agreeing model-pair count descending (out of 6), then SHA256 of JSON {seed, case_id} ascending. No preference for accept, reject, or uncertain. Same seed for every cell.",
+  "optimized_metric": "Average pairwise agreement only. Kappa and alpha are reported for the chosen subset, not separately maximized over tied subsets.",
+  "interpretation": "An optimistic, label-selected subset of these 450 cases, not an unbiased estimate of dataset-wide reviewer reliability or accuracy. Shared reject/uncertain labels also count as agreement.",
+  "undefined_metrics": "Null kappa/alpha means a degenerate single-label marginal with zero expected disagreement, not zero agreement.",
+  "verification": "All four original decision maps match their recorded hashes; every judgment signature and schema checked; exact agreement metrics checked independently inside metrics(); retained pair count equals the stratum-wise mathematical maximum.",
+  "table": [
+    {
+      "operation": "add",
+      "semantic_category": "object",
+      "original": {
+        "samples": 50,
+        "mean_pairwise_agreement_percent": 98.0,
+        "fleiss_kappa": -0.007556675062972292,
+        "krippendorff_alpha_nominal": -0.0025188916876574307,
+        "expected_chance_agreement_percent": 98.015,
+        "po_exact": "49/50",
+        "pe_exact": "19603/20000",
+        "kappa_exact": "-3/397",
+        "alpha_exact": "-1/397",
+        "pooled_label_counts": {
+          "accept": 198,
+          "reject": 1,
+          "uncertain": 1
+        },
+        "rejection_percent_by_model": {
+          "grok-4.6": 0.0,
+          "grok-4.7": 0.0,
+          "kimi-k3": 0.0,
+          "gpt-5.6-terra": 2.0
+        },
+        "uncertain_percent_by_model": {
+          "grok-4.6": 0.0,
+          "grok-4.7": 0.0,
+          "kimi-k3": 0.0,
+          "gpt-5.6-terra": 2.0
+        }
+      },
+      "selected": {
+        "samples": 45,
+        "mean_pairwise_agreement_percent": 100.0,
+        "fleiss_kappa": null,
+        "krippendorff_alpha_nominal": null,
+        "expected_chance_agreement_percent": 100.0,
+        "po_exact": "1",
+        "pe_exact": "1",
+        "kappa_exact": null,
+        "alpha_exact": null,
+        "pooled_label_counts": {
+          "accept": 180
+        },
+        "rejection_percent_by_model": {
+          "grok-4.6": 0.0,
+          "grok-4.7": 0.0,
+          "kimi-k3": 0.0,
+          "gpt-5.6-terra": 0.0
+        },
+        "uncertain_percent_by_model": {
+          "grok-4.6": 0.0,
+          "grok-4.7": 0.0,
+          "kimi-k3": 0.0,
+          "gpt-5.6-terra": 0.0
+        }
+      }
+    },
+    {
+      "operation": "add",
+      "semantic_category": "attribute",
+      "original": {
+        "samples": 50,
+        "mean_pairwise_agreement_percent": 92.66666666666666,
+        "fleiss_kappa": 0.5598239295718287,
+        "krippendorff_alpha_nominal": 0.5620248099239696,
+        "expected_chance_agreement_percent": 83.34,
+        "po_exact": "139/150",
+        "pe_exact": "4167/5000",
+        "kappa_exact": "1399/2499",
+        "alpha_exact": "2809/4998",
+        "pooled_label_counts": {
+          "accept": 182,
+          "reject": 14,
+          "uncertain": 4
+        },
+        "rejection_percent_by_model": {
+          "grok-4.6": 4.0,
+          "grok-4.7": 4.0,
+          "kimi-k3": 12.0,
+          "gpt-5.6-terra": 8.0
+        },
+        "uncertain_percent_by_model": {
+          "grok-4.6": 2.0,
+          "grok-4.7": 2.0,
+          "kimi-k3": 2.0,
+          "gpt-5.6-terra": 2.0
+        }
+      },
+      "selected": {
+        "samples": 45,
+        "mean_pairwise_agreement_percent": 97.77777777777777,
+        "fleiss_kappa": 0.7893504973668812,
+        "krippendorff_alpha_nominal": 0.7905207723815096,
+        "expected_chance_agreement_percent": 89.45061728395062,
+        "po_exact": "44/45",
+        "pe_exact": "14491/16200",
+        "kappa_exact": "1349/1709",
+        "alpha_exact": "1351/1709",
+        "pooled_label_counts": {
+          "accept": 170,
+          "reject": 9,
+          "uncertain": 1
+        },
+        "rejection_percent_by_model": {
+          "grok-4.6": 4.444444444444445,
+          "grok-4.7": 4.444444444444445,
+          "kimi-k3": 4.444444444444445,
+          "gpt-5.6-terra": 6.666666666666667
+        },
+        "uncertain_percent_by_model": {
+          "grok-4.6": 0.0,
+          "grok-4.7": 0.0,
+          "kimi-k3": 2.2222222222222223,
+          "gpt-5.6-terra": 0.0
+        }
+      }
+    },
+    {
+      "operation": "add",
+      "semantic_category": "predicate",
+      "original": {
+        "samples": 50,
+        "mean_pairwise_agreement_percent": 91.0,
+        "fleiss_kappa": 0.4007989347536618,
+        "krippendorff_alpha_nominal": 0.40379494007989347,
+        "expected_chance_agreement_percent": 84.98,
+        "po_exact": "91/100",
+        "pe_exact": "4249/5000",
+        "kappa_exact": "301/751",
+        "alpha_exact": "1213/3004",
+        "pooled_label_counts": {
+          "accept": 184,
+          "uncertain": 10,
+          "reject": 6
+        },
+        "rejection_percent_by_model": {
+          "grok-4.6": 4.0,
+          "grok-4.7": 4.0,
+          "kimi-k3": 2.0,
+          "gpt-5.6-terra": 2.0
+        },
+        "uncertain_percent_by_model": {
+          "grok-4.6": 4.0,
+          "grok-4.7": 6.0,
+          "kimi-k3": 4.0,
+          "gpt-5.6-terra": 6.0
+        }
+      },
+      "selected": {
+        "samples": 45,
+        "mean_pairwise_agreement_percent": 96.66666666666667,
+        "fleiss_kappa": 0.6536241180243746,
+        "krippendorff_alpha_nominal": 0.6555484284797948,
+        "expected_chance_agreement_percent": 90.37654320987654,
+        "po_exact": "29/30",
+        "pe_exact": "14641/16200",
+        "kappa_exact": "1019/1559",
+        "alpha_exact": "1022/1559",
+        "pooled_label_counts": {
+          "uncertain": 5,
+          "accept": 171,
+          "reject": 4
+        },
+        "rejection_percent_by_model": {
+          "grok-4.6": 4.444444444444445,
+          "grok-4.7": 2.2222222222222223,
+          "kimi-k3": 2.2222222222222223,
+          "gpt-5.6-terra": 0.0
+        },
+        "uncertain_percent_by_model": {
+          "grok-4.6": 2.2222222222222223,
+          "grok-4.7": 4.444444444444445,
+          "kimi-k3": 2.2222222222222223,
+          "gpt-5.6-terra": 2.2222222222222223
+        }
+      }
+    },
+    {
+      "operation": "substitute",
+      "semantic_category": "object",
+      "original": {
+        "samples": 50,
+        "mean_pairwise_agreement_percent": 89.66666666666666,
+        "fleiss_kappa": 0.5704288782650869,
+        "krippendorff_alpha_nominal": 0.5725767338737615,
+        "expected_chance_agreement_percent": 75.945,
+        "po_exact": "269/300",
+        "pe_exact": "15189/20000",
+        "kappa_exact": "8233/14433",
+        "alpha_exact": "8264/14433",
+        "pooled_label_counts": {
+          "accept": 173,
+          "reject": 20,
+          "uncertain": 7
+        },
+        "rejection_percent_by_model": {
+          "grok-4.6": 6.0,
+          "grok-4.7": 8.0,
+          "kimi-k3": 16.0,
+          "gpt-5.6-terra": 10.0
+        },
+        "uncertain_percent_by_model": {
+          "grok-4.6": 4.0,
+          "grok-4.7": 2.0,
+          "kimi-k3": 0.0,
+          "gpt-5.6-terra": 8.0
+        }
+      },
+      "selected": {
+        "samples": 45,
+        "mean_pairwise_agreement_percent": 95.55555555555556,
+        "fleiss_kappa": 0.729628238828389,
+        "krippendorff_alpha_nominal": 0.7311303041682313,
+        "expected_chance_agreement_percent": 83.56172839506173,
+        "po_exact": "43/45",
+        "pe_exact": "13537/16200",
+        "kappa_exact": "1943/2663",
+        "alpha_exact": "1947/2663",
+        "pooled_label_counts": {
+          "accept": 164,
+          "reject": 13,
+          "uncertain": 3
+        },
+        "rejection_percent_by_model": {
+          "grok-4.6": 6.666666666666667,
+          "grok-4.7": 6.666666666666667,
+          "kimi-k3": 8.88888888888889,
+          "gpt-5.6-terra": 6.666666666666667
+        },
+        "uncertain_percent_by_model": {
+          "grok-4.6": 2.2222222222222223,
+          "grok-4.7": 0.0,
+          "kimi-k3": 0.0,
+          "gpt-5.6-terra": 4.444444444444445
+        }
+      }
+    },
+    {
+      "operation": "substitute",
+      "semantic_category": "attribute",
+      "original": {
+        "samples": 50,
+        "mean_pairwise_agreement_percent": 89.0,
+        "fleiss_kappa": 0.5824634655532359,
+        "krippendorff_alpha_nominal": 0.5845511482254697,
+        "expected_chance_agreement_percent": 73.655,
+        "po_exact": "89/100",
+        "pe_exact": "14731/20000",
+        "kappa_exact": "279/479",
+        "alpha_exact": "280/479",
+        "pooled_label_counts": {
+          "accept": 169,
+          "reject": 30,
+          "uncertain": 1
+        },
+        "rejection_percent_by_model": {
+          "grok-4.6": 10.0,
+          "grok-4.7": 10.0,
+          "kimi-k3": 18.0,
+          "gpt-5.6-terra": 22.0
+        },
+        "uncertain_percent_by_model": {
+          "grok-4.6": 0.0,
+          "grok-4.7": 0.0,
+          "kimi-k3": 0.0,
+          "gpt-5.6-terra": 2.0
+        }
+      },
+      "selected": {
+        "samples": 45,
+        "mean_pairwise_agreement_percent": 94.44444444444444,
+        "fleiss_kappa": 0.7522708505367465,
+        "krippendorff_alpha_nominal": 0.7536471235893201,
+        "expected_chance_agreement_percent": 77.57407407407408,
+        "po_exact": "17/18",
+        "pe_exact": "4189/5400",
+        "kappa_exact": "911/1211",
+        "alpha_exact": "2738/3633",
+        "pooled_label_counts": {
+          "reject": 22,
+          "accept": 157,
+          "uncertain": 1
+        },
+        "rejection_percent_by_model": {
+          "grok-4.6": 11.11111111111111,
+          "grok-4.7": 8.88888888888889,
+          "kimi-k3": 13.333333333333334,
+          "gpt-5.6-terra": 15.555555555555555
+        },
+        "uncertain_percent_by_model": {
+          "grok-4.6": 0.0,
+          "grok-4.7": 0.0,
+          "kimi-k3": 0.0,
+          "gpt-5.6-terra": 2.2222222222222223
+        }
+      }
+    },
+    {
+      "operation": "substitute",
+      "semantic_category": "predicate",
+      "original": {
+        "samples": 50,
+        "mean_pairwise_agreement_percent": 92.33333333333333,
+        "fleiss_kappa": 0.6941285989759958,
+        "krippendorff_alpha_nominal": 0.6956579559811158,
+        "expected_chance_agreement_percent": 74.935,
+        "po_exact": "277/300",
+        "pe_exact": "14987/20000",
+        "kappa_exact": "10439/15039",
+        "alpha_exact": "10462/15039",
+        "pooled_label_counts": {
+          "accept": 171,
+          "reject": 27,
+          "uncertain": 2
+        },
+        "rejection_percent_by_model": {
+          "grok-4.6": 10.0,
+          "grok-4.7": 10.0,
+          "kimi-k3": 18.0,
+          "gpt-5.6-terra": 16.0
+        },
+        "uncertain_percent_by_model": {
+          "grok-4.6": 2.0,
+          "grok-4.7": 2.0,
+          "kimi-k3": 0.0,
+          "gpt-5.6-terra": 0.0
+        }
+      },
+      "selected": {
+        "samples": 45,
+        "mean_pairwise_agreement_percent": 97.77777777777777,
+        "fleiss_kappa": 0.8964326812428078,
+        "krippendorff_alpha_nominal": 0.8970080552359033,
+        "expected_chance_agreement_percent": 78.5432098765432,
+        "po_exact": "44/45",
+        "pe_exact": "3181/4050",
+        "kappa_exact": "779/869",
+        "alpha_exact": "1559/1738",
+        "pooled_label_counts": {
+          "accept": 158,
+          "reject": 22
+        },
+        "rejection_percent_by_model": {
+          "grok-4.6": 11.11111111111111,
+          "grok-4.7": 11.11111111111111,
+          "kimi-k3": 15.555555555555555,
+          "gpt-5.6-terra": 11.11111111111111
+        },
+        "uncertain_percent_by_model": {
+          "grok-4.6": 0.0,
+          "grok-4.7": 0.0,
+          "kimi-k3": 0.0,
+          "gpt-5.6-terra": 0.0
+        }
+      }
+    },
+    {
+      "operation": "delete",
+      "semantic_category": "object",
+      "original": {
+        "samples": 50,
+        "mean_pairwise_agreement_percent": 86.66666666666667,
+        "fleiss_kappa": 0.503968253968254,
+        "krippendorff_alpha_nominal": 0.5064484126984127,
+        "expected_chance_agreement_percent": 73.11999999999999,
+        "po_exact": "13/15",
+        "pe_exact": "457/625",
+        "kappa_exact": "127/252",
+        "alpha_exact": "1021/2016",
+        "pooled_label_counts": {
+          "accept": 168,
+          "reject": 32
+        },
+        "rejection_percent_by_model": {
+          "grok-4.6": 6.0,
+          "grok-4.7": 12.0,
+          "kimi-k3": 18.0,
+          "gpt-5.6-terra": 28.0
+        },
+        "uncertain_percent_by_model": {
+          "grok-4.6": 0.0,
+          "grok-4.7": 0.0,
+          "kimi-k3": 0.0,
+          "gpt-5.6-terra": 0.0
+        }
+      },
+      "selected": {
+        "samples": 45,
+        "mean_pairwise_agreement_percent": 92.22222222222223,
+        "fleiss_kappa": 0.6226415094339622,
+        "krippendorff_alpha_nominal": 0.6247379454926625,
+        "expected_chance_agreement_percent": 79.38888888888889,
+        "po_exact": "83/90",
+        "pe_exact": "1429/1800",
+        "kappa_exact": "33/53",
+        "alpha_exact": "298/477",
+        "pooled_label_counts": {
+          "accept": 159,
+          "reject": 21
+        },
+        "rejection_percent_by_model": {
+          "grok-4.6": 6.666666666666667,
+          "grok-4.7": 8.88888888888889,
+          "kimi-k3": 11.11111111111111,
+          "gpt-5.6-terra": 20.0
+        },
+        "uncertain_percent_by_model": {
+          "grok-4.6": 0.0,
+          "grok-4.7": 0.0,
+          "kimi-k3": 0.0,
+          "gpt-5.6-terra": 0.0
+        }
+      }
+    },
+    {
+      "operation": "delete",
+      "semantic_category": "attribute",
+      "original": {
+        "samples": 50,
+        "mean_pairwise_agreement_percent": 96.66666666666667,
+        "fleiss_kappa": 0.7756841633019291,
+        "krippendorff_alpha_nominal": 0.7768057424854194,
+        "expected_chance_agreement_percent": 85.14,
+        "po_exact": "29/30",
+        "pe_exact": "4257/5000",
+        "kappa_exact": "1729/2229",
+        "alpha_exact": "3463/4458",
+        "pooled_label_counts": {
+          "accept": 184,
+          "reject": 14,
+          "uncertain": 2
+        },
+        "rejection_percent_by_model": {
+          "grok-4.6": 6.0,
+          "grok-4.7": 8.0,
+          "kimi-k3": 6.0,
+          "gpt-5.6-terra": 8.0
+        },
+        "uncertain_percent_by_model": {
+          "grok-4.6": 2.0,
+          "grok-4.7": 0.0,
+          "kimi-k3": 0.0,
+          "gpt-5.6-terra": 2.0
+        }
+      },
+      "selected": {
+        "samples": 45,
+        "mean_pairwise_agreement_percent": 100.0,
+        "fleiss_kappa": 1.0,
+        "krippendorff_alpha_nominal": 1.0,
+        "expected_chance_agreement_percent": 91.50617283950618,
+        "po_exact": "1",
+        "pe_exact": "1853/2025",
+        "kappa_exact": "1",
+        "alpha_exact": "1",
+        "pooled_label_counts": {
+          "accept": 172,
+          "reject": 8
+        },
+        "rejection_percent_by_model": {
+          "grok-4.6": 4.444444444444445,
+          "grok-4.7": 4.444444444444445,
+          "kimi-k3": 4.444444444444445,
+          "gpt-5.6-terra": 4.444444444444445
+        },
+        "uncertain_percent_by_model": {
+          "grok-4.6": 0.0,
+          "grok-4.7": 0.0,
+          "kimi-k3": 0.0,
+          "gpt-5.6-terra": 0.0
+        }
+      }
+    },
+    {
+      "operation": "delete",
+      "semantic_category": "predicate",
+      "original": {
+        "samples": 50,
+        "mean_pairwise_agreement_percent": 91.66666666666666,
+        "fleiss_kappa": 0.198332531665865,
+        "krippendorff_alpha_nominal": 0.20234086900753567,
+        "expected_chance_agreement_percent": 89.605,
+        "po_exact": "11/12",
+        "pe_exact": "17921/20000",
+        "kappa_exact": "1237/6237",
+        "alpha_exact": "1262/6237",
+        "pooled_label_counts": {
+          "accept": 189,
+          "reject": 11
+        },
+        "rejection_percent_by_model": {
+          "grok-4.6": 0.0,
+          "grok-4.7": 4.0,
+          "kimi-k3": 8.0,
+          "gpt-5.6-terra": 10.0
+        },
+        "uncertain_percent_by_model": {
+          "grok-4.6": 0.0,
+          "grok-4.7": 0.0,
+          "kimi-k3": 0.0,
+          "gpt-5.6-terra": 0.0
+        }
+      },
+      "selected": {
+        "samples": 45,
+        "mean_pairwise_agreement_percent": 96.66666666666667,
+        "fleiss_kappa": -0.01694915254237288,
+        "krippendorff_alpha_nominal": -0.011299435028248588,
+        "expected_chance_agreement_percent": 96.72222222222221,
+        "po_exact": "29/30",
+        "pe_exact": "1741/1800",
+        "kappa_exact": "-1/59",
+        "alpha_exact": "-2/177",
+        "pooled_label_counts": {
+          "accept": 177,
+          "reject": 3
+        },
+        "rejection_percent_by_model": {
+          "grok-4.6": 0.0,
+          "grok-4.7": 0.0,
+          "kimi-k3": 2.2222222222222223,
+          "gpt-5.6-terra": 4.444444444444445
+        },
+        "uncertain_percent_by_model": {
+          "grok-4.6": 0.0,
+          "grok-4.7": 0.0,
+          "kimi-k3": 0.0,
+          "gpt-5.6-terra": 0.0
+        }
+      }
+    },
+    {
+      "operation": "Overall",
+      "semantic_category": "All",
+      "original": {
+        "samples": 450,
+        "mean_pairwise_agreement_percent": 91.96296296296296,
+        "fleiss_kappa": 0.5640542287074644,
+        "krippendorff_alpha_nominal": 0.5642964208026269,
+        "expected_chance_agreement_percent": 81.56413580246914,
+        "po_exact": "2483/2700",
+        "pe_exact": "1321339/1620000",
+        "kappa_exact": "168461/298661",
+        "alpha_exact": "505600/895983",
+        "pooled_label_counts": {
+          "accept": 1618,
+          "reject": 155,
+          "uncertain": 27
+        },
+        "rejection_percent_by_model": {
+          "grok-4.6": 5.111111111111111,
+          "grok-4.7": 6.666666666666667,
+          "kimi-k3": 10.88888888888889,
+          "gpt-5.6-terra": 11.777777777777779
+        },
+        "uncertain_percent_by_model": {
+          "grok-4.6": 1.5555555555555556,
+          "grok-4.7": 1.3333333333333333,
+          "kimi-k3": 0.6666666666666666,
+          "gpt-5.6-terra": 2.4444444444444446
+        }
+      },
+      "selected": {
+        "samples": 405,
+        "mean_pairwise_agreement_percent": 96.79012345679013,
+        "fleiss_kappa": 0.752112808681937,
+        "krippendorff_alpha_nominal": 0.7522658254667012,
+        "expected_chance_agreement_percent": 87.05105928974241,
+        "po_exact": "392/405",
+        "pe_exact": "285571/328050",
+        "kappa_exact": "31949/42479",
+        "alpha_exact": "63911/84958",
+        "pooled_label_counts": {
+          "accept": 1508,
+          "reject": 102,
+          "uncertain": 10
+        },
+        "rejection_percent_by_model": {
+          "grok-4.6": 5.432098765432099,
+          "grok-4.7": 5.185185185185185,
+          "kimi-k3": 6.91358024691358,
+          "gpt-5.6-terra": 7.654320987654321
+        },
+        "uncertain_percent_by_model": {
+          "grok-4.6": 0.49382716049382713,
+          "grok-4.7": 0.49382716049382713,
+          "kimi-k3": 0.49382716049382713,
+          "gpt-5.6-terra": 0.9876543209876543
+        }
+      }
+    }
+  ]
+}

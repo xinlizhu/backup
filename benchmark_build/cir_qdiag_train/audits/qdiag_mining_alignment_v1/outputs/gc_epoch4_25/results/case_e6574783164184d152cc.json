@@ -1,0 +1,163 @@
+{
+  "case_id": "case_e6574783164184d152cc",
+  "audit_query_id": "audit_query_079",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_e6574783164184d152cc",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "T shows a black, bowl-shaped vessel sink beneath a running faucet."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows a black snowplow blade with mounting hardware, not a bowl sink."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The depicted object must be a bowl sink."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "object",
+        "before_span": "bowl sink",
+        "after_span": "snowplow blade",
+        "edited_instruction": "Show a black snowplow blade.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "Replace the bowl sink category with a snowplow blade while retaining the black color constraint.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "T depicts a black vessel sink with a faucet, not a snowplow blade."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C depicts a wide black snowplow blade with mounting hardware and red edge markers."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_e6574783164184d152cc",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 clearly shows a dark black bowl-shaped sink with a faucet."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a black snowplow blade, not a bowl sink."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing “bowl sink” with “snowplow blade” is one object substitution; the black attribute is preserved, and the edited instruction matches Image 3 rather than Image 2.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 shows a bowl sink, not a snowplow blade."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 clearly shows a black snowplow blade."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "substitute",
+      "semantic_target": "object",
+      "before_span": "bowl sink",
+      "after_span": "snowplow blade",
+      "edited_instruction": "Show a black snowplow blade.",
+      "witness_type": "substitution_contrast",
+      "changed_constraint": "Replace the bowl sink category with a snowplow blade while retaining the black color constraint.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "T depicts a black vessel sink with a faucet, not a snowplow blade."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C depicts a wide black snowplow blade with mounting hardware and red edge markers."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing “bowl sink” with “snowplow blade” is one object substitution; the black attribute is preserved, and the edited instruction matches Image 3 rather than Image 2.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 shows a bowl sink, not a snowplow blade."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 clearly shows a black snowplow blade."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "8a2ebb4da61634f7e3e0643004a1fd0bd39a586182ada7959eec425eb9d93f71",
+      "input_hash": "1e45efb3ad07421ef00cb69620857112414fdeda4ce71199bf5ba43a166fcbe3",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/1e45efb3ad07421ef00cb69620857112414fdeda4ce71199bf5ba43a166fcbe3.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_052cb1b62d278667016af2bf00640487d08063da38e53de0ea",
+      "usage": {
+        "prompt_tokens": 8821,
+        "completion_tokens": 373,
+        "total_tokens": 9194,
+        "prompt_tokens_details": {
+          "cached_tokens": 3830
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 40
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "e140d5043ba41f9186eb29b818edb4148f5238342889485a19753eb6ae4635fb",
+      "input_hash": "3312113fc474d9df31d48d9edd75bc74ed6c8e66fdf00cf85915895341e5d3bd",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/3312113fc474d9df31d48d9edd75bc74ed6c8e66fdf00cf85915895341e5d3bd.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0f5207083ceb3b55016af2bf1058ec87d0829bc5050db9e42f",
+      "usage": {
+        "prompt_tokens": 7088,
+        "completion_tokens": 641,
+        "total_tokens": 7729,
+        "completion_tokens_details": {
+          "reasoning_tokens": 125
+        }
+      }
+    }
+  ]
+}

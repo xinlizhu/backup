@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_63b7f86c3c62886a",
+  "model": "grok-4.7",
+  "signature": "52913ea34ae01078c58f7a80fc2119b86ef4b6b3449e9e55b21816a5d5d1ccbd",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_63b7f86c3c62886a_query_06701_attribute_substitute",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Replacing only 'textured' with 'striped' reconstructs the negative exactly and remains fluent. No supplied positive has a striped sweater: the garments are solid orange knits, a plain orange tee, or a solid pink dress, so the striped fact is clearly false for every positive."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.7",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "613bef349191d7e1a6c878c96f78179759bfbc3fb3a8ff2747468cd33e21f931",
+      "input_hash": "ce7f7dad1a0e5fa0f039288dc36af990a1b832b81a66dc247d0d87b6ccbdcd8f",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/grok-4.7/cache/validate_group/ce7f7dad1a0e5fa0f039288dc36af990a1b832b81a66dc247d0d87b6ccbdcd8f.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "36b46a64-1cc1-9dc6-8a87-27c04adae562",
+      "usage": {
+        "prompt_tokens": 5320,
+        "completion_tokens": 110,
+        "total_tokens": 8828,
+        "prompt_tokens_details": {
+          "text_tokens": 2584,
+          "audio_tokens": 0,
+          "image_tokens": 2736,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 3398,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 286160000
+      }
+    }
+  ],
+  "format_warnings": []
+}

@@ -1,0 +1,68 @@
+{
+  "case_id": "pair_5b7af085451d7913e644",
+  "signature": "f91b95909684e2ecf5207ab608279749c891c56633f2fa7c877aa09c2d59f3d4",
+  "simulated": false,
+  "status": "complete",
+  "judgment": {
+    "case_id": "pair_5b7af085451d7913e644",
+    "constraints": [
+      {
+        "constraint": "A pillow is present.",
+        "A_status": "supported",
+        "B_status": "supported",
+        "A_evidence": "Decorative patterned pillows are visible on the seat.",
+        "B_evidence": "Two light-colored pillows with lace bands are visible."
+      },
+      {
+        "constraint": "A grey turkey towel is present as the intended supporting surface.",
+        "A_status": "contradicted",
+        "B_status": "contradicted",
+        "A_evidence": "The visible supporting surface is upholstered seating; no grey towel is shown.",
+        "B_evidence": "The visible supporting surface is an upholstered seat; no grey towel is shown."
+      },
+      {
+        "constraint": "The pillow is placed on the towel.",
+        "A_status": "contradicted",
+        "B_status": "contradicted",
+        "A_evidence": "The pillows rest directly on the upholstered seat, with no towel underneath.",
+        "B_evidence": "The pillows rest directly on the upholstered seat, with no towel underneath."
+      },
+      {
+        "constraint": "The scene has a window background effect.",
+        "A_status": "supported",
+        "B_status": "supported",
+        "A_evidence": "A large bright window is visible behind the pillows.",
+        "B_evidence": "A window with blinds and curtains is visible behind the pillows."
+      }
+    ],
+    "A_status": "contradicted",
+    "B_status": "contradicted",
+    "decision": "neither",
+    "reason": "Both candidates show pillows with windows behind them, but neither shows a pillow placed on the required grey towel."
+  },
+  "trace": {
+    "stage": "rank_pair_judgment",
+    "model_name": "gpt-5.6-terra",
+    "model_revision": null,
+    "provider": "openai-compatible-chat",
+    "reasoning_effort": null,
+    "prompt_version": "rank_preference_v1",
+    "prompt_hash": "4f6bc02c7993f99b0fcf9703bde6ac52c429da654873f136d53a912fe85f5bfe",
+    "input_hash": "c6dc4f3c386ff8a107e26310db58913e38cecd2d412db06f87c9ef809277387c",
+    "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_rank_preference_v1/outputs/gc_epochs14_top3/api_cache/rank_pair_judgment/c6dc4f3c386ff8a107e26310db58913e38cecd2d412db06f87c9ef809277387c.json",
+    "cached": false,
+    "attempts": 1,
+    "request_id": "resp_050c34bd057d3a0b016af2ccdf4e5887d186b8ddf53bc5ab82",
+    "usage": {
+      "prompt_tokens": 10595,
+      "completion_tokens": 474,
+      "total_tokens": 11069,
+      "prompt_tokens_details": {
+        "cached_tokens": 4864
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 89
+      }
+    }
+  }
+}

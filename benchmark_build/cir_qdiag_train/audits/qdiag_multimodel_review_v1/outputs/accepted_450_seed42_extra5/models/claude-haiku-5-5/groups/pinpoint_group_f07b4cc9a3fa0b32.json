@@ -1,0 +1,49 @@
+{
+  "group_id": "pinpoint_group_f07b4cc9a3fa0b32",
+  "model": "claude-haiku-5-5",
+  "signature": "44bb4aae802e19564501a676b733c7e19828d9ced260b7da0428f08b1a359df2",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_f07b4cc9a3fa0b32_query_06413_attribute_delete",
+      "decision": "reject",
+      "failure_code": "not_visually_verifiable",
+      "reason": "The reference image (Image 1) shows a blue floral shirt with distinct pattern elements. Image 2 (positive) displays a similar floral patterned shirt with multiple colored flowers. Image 3 (positive) shows a person in a red polo shirt without a floral pattern. The term 'expressive' as applied to a floral pattern is subjective and cannot be reliably verified as present or absent from the images. Determining whether the deletion of 'and more expressive' creates a meaningful semantic distinction that contradicts the positive examples requires judgment that cannot be made with visual certainty."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-haiku-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "676f84bc0392b4f8ccbd078098d218904687a7f3f7f4ee0c3895711005c19fcb",
+      "input_hash": "952829778f7e07e7cc18cd4b7b8d9647bd028e8e54ae1cdb6a4572a7c6b32b55",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/claude-haiku-5-5/cache/validate_group/952829778f7e07e7cc18cd4b7b8d9647bd028e8e54ae1cdb6a4572a7c6b32b55.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01joAjCOPoSAGXVpiwReYa48La",
+      "usage": {
+        "prompt_tokens": 8004,
+        "completion_tokens": 251,
+        "total_tokens": 8255,
+        "prompt_tokens_details": {
+          "cached_tokens": 6240,
+          "cache_creation_tokens": 1760
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_f07b4cc9a3fa0b32_query_06413_attribute_delete",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 596,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

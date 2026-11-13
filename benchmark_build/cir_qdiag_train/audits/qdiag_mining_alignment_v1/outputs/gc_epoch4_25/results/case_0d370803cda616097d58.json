@@ -1,0 +1,85 @@
+{
+  "case_id": "case_0d370803cda616097d58",
+  "audit_query_id": "audit_query_100",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_0d370803cda616097d58",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "A shallow, round metal bowl contains a prepared food dish covered with melted, browned cheese."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The image shows two children's pajama sets laid flat; there is no bowl, food dish, or cheese topping."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "A bowl containing a food dish.",
+      "Cheese on top of the food dish."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_0d370803cda616097d58",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "A food dish is visibly covered with melted, browned cheese. Its container appears to be a shallow round metal baking pan; the close crop does not reliably establish that it is a bowl."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The image shows two children's pajama sets with cat designs and pink trousers. There is no bowl, food dish, or cheese topping."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "f7991f76c3c079b931780da31151fabee5550b105498b942dc38166d7c0b06c9",
+      "input_hash": "b636155ed7ef13f101cadfdc46e10926b24d041da14fa91d706aa150a6d9ad5c",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/b636155ed7ef13f101cadfdc46e10926b24d041da14fa91d706aa150a6d9ad5c.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_02901ed817094111016af2bfd4942c87d1849b42a0c9c25a05",
+      "usage": {
+        "prompt_tokens": 18836,
+        "completion_tokens": 167,
+        "total_tokens": 19003,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "3aab2c5778308e887f3c0ddbe441c60a1d02a28ea5a90cda39f2ef509312a0f7",
+      "input_hash": "9cdc7be9b9449fb9dfdb872a8b602b5fad1fd63aaa99ce7644a77719a8367c90",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/9cdc7be9b9449fb9dfdb872a8b602b5fad1fd63aaa99ce7644a77719a8367c90.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_04c5a4d6a1ccc88d016af2bffef40487d2bea7d8729096b5f8",
+      "usage": {
+        "prompt_tokens": 18294,
+        "completion_tokens": 141,
+        "total_tokens": 18435,
+        "completion_tokens_details": {
+          "reasoning_tokens": 22
+        }
+      }
+    }
+  ]
+}

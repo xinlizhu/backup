@@ -1,0 +1,85 @@
+{
+  "case_id": "case_7002a03d847dfc5ce6a4",
+  "audit_query_id": "audit_query_089",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_7002a03d847dfc5ce6a4",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a bus lot with three buses, including heavily fire-damaged front sections."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a woman and patterned pajama pants, not a bus lot or fire-damaged buses."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "The target photo is of a bus parking lot.",
+      "Three buses had a fire in their front ends."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_7002a03d847dfc5ce6a4",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows multiple buses in a lot; three bus front ends appear fire-damaged and charred."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a woman and patterned pants, not a bus parking lot or fire-damaged buses."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "5c9ba968d108c1410ef60cba1a6438de24770aa2fde97b18ce2aebb3878a005d",
+      "input_hash": "f29728ef17621cad708785d2b1c8b38ebf625cd50acf0cf6dbfb65f9457faa40",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/f29728ef17621cad708785d2b1c8b38ebf625cd50acf0cf6dbfb65f9457faa40.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0965666835ceaa57016af2bfb7286487d2b148dc3fba5b94d2",
+      "usage": {
+        "prompt_tokens": 7480,
+        "completion_tokens": 313,
+        "total_tokens": 7793,
+        "prompt_tokens_details": {
+          "cached_tokens": 5888
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 177
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "51a97a37e52e3a83f270a28a4263aaf61b181888015d9eb827423792d724eee3",
+      "input_hash": "bce8e8383416166409a1cfc81f33490890f95c8a67c5fba99a5c3fb0ad8eb824",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/bce8e8383416166409a1cfc81f33490890f95c8a67c5fba99a5c3fb0ad8eb824.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_acd50ff06597f5e9e364b84d16da03e8",
+      "usage": {
+        "prompt_tokens": 2562,
+        "completion_tokens": 211,
+        "total_tokens": 2773
+      }
+    }
+  ]
+}

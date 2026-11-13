@@ -1,0 +1,172 @@
+{
+  "case_id": "case_2b32d946e35e908dfe1d",
+  "audit_query_id": "audit_query_087",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_2b32d946e35e908dfe1d",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The clownfish has a deeper orange body than the yellow-orange fish in R and is positioned among the anemone's central tentacles, consistent with swimming through them."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "The clownfish has darker orange and extensive black coloring compared with R and is swimming amid surrounding anemone tentacles."
+    },
+    "candidate_relation": "compatible",
+    "violated_source_constraints": [],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "add",
+        "semantic_target": "attribute",
+        "before_span": null,
+        "after_span": "with thick black borders around its white bands",
+        "edited_instruction": "Shows a darker colored clown fish with thick black borders around its white bands swimming through the middle of a sea anemone.",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "The white bands have thick black borders.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The fish meets the original description, but its white bands have thin black outlines rather than thick black borders."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The darker clownfish is amid anemone tentacles, and broad black borders visibly surround its white bands."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "operation": "add",
+        "semantic_target": "object",
+        "before_span": null,
+        "after_span": ", with no other fish visible",
+        "edited_instruction": "Shows a darker colored clown fish swimming through the middle of a sea anemone, with no other fish visible.",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "No additional fish are visible.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "A second, gray fish is visibly present at the upper-right edge beside the anemone."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Only the darker clownfish is visible among the anemone tentacles; no additional fish appear."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_2b32d946e35e908dfe1d",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "The clownfish is among the anemone's central tentacles, but its bright orange body does not clearly establish a darker overall coloration than the yellow-orange and black reference fish. Differences in hue and illumination make the relative darkness uncertain."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "The clownfish sits amid surrounding anemone tentacles and has extensive black areas and deep orange body patches, visibly giving it a darker coloration than the reference fish."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "reject",
+        "failure_code": "source_invalid_or_uncertain",
+        "witness_type": null,
+        "reason": "The insertion adds a single visible band-border attribute, but ADD requires the original instruction to be supported on both images. The positive image does not reliably establish the required darker coloration relative to the reference.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The white bands have narrow black outlines, rather than the thick black borders required by the added phrase."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Broad black borders surround the white bands of the darker orange clownfish, which is positioned among the anemone tentacles."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "decision": "reject",
+        "failure_code": "source_invalid_or_uncertain",
+        "witness_type": null,
+        "reason": "The original darker-color constraint is uncertain on the positive, preventing acceptance. Independently, 'no other fish visible' adds a scene-level absence predicate, rather than changing an object as declared.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Another gray fish is visibly present at the upper-right edge, contradicting the added requirement that no other fish be visible."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Only one fish is visible: the darker orange-and-black clownfish surrounded by anemone tentacles."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": false,
+      "local_failures": [
+        "wrong_witness_type",
+        "wrong_support_pattern"
+      ],
+      "review_decision": "reject"
+    },
+    {
+      "witness_id": "w2",
+      "accepted": false,
+      "local_failures": [
+        "wrong_witness_type",
+        "wrong_support_pattern"
+      ],
+      "review_decision": "reject"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "ae3de27312dd531cb9e25f909e5fc89bc356621d6bb9e517450da53350e2e70f",
+      "input_hash": "ca0949f646625184964ed5c31df61ec43822bbee877faf887ca922ae894cf763",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/ca0949f646625184964ed5c31df61ec43822bbee877faf887ca922ae894cf763.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0074747327195fb0016af2bd90c58087d1b8aa5265d5810f39",
+      "usage": {
+        "prompt_tokens": 8310,
+        "completion_tokens": 733,
+        "total_tokens": 9043,
+        "completion_tokens_details": {
+          "reasoning_tokens": 184
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "883f47e015a765643caac6f2428a94f1ce717622fa4ccaf4405de8c41c2a1e5a",
+      "input_hash": "33c673dcfc8e83b96a376c6488ae1d26616ef3db5d2a91605dcf60a9aa8f107c",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/33c673dcfc8e83b96a376c6488ae1d26616ef3db5d2a91605dcf60a9aa8f107c.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_09fb3b06b57d123a016af2bda8199887d2bf5890ee14b9fc57",
+      "usage": {
+        "prompt_tokens": 7928,
+        "completion_tokens": 672,
+        "total_tokens": 8600,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 157
+        }
+      }
+    }
+  ]
+}

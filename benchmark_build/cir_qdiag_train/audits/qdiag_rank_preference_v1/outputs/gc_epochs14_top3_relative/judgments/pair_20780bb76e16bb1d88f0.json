@@ -1,0 +1,50 @@
+{
+  "case_id": "pair_20780bb76e16bb1d88f0",
+  "signature": "f3a97f608e6addbd5531ad7795f5e06873610abdb12f716de8375d49eda4c022",
+  "simulated": false,
+  "status": "complete",
+  "judgment": {
+    "case_id": "pair_20780bb76e16bb1d88f0",
+    "constraints": [
+      {
+        "constraint": "The object should be a wind instrument.",
+        "A_status": "supported",
+        "B_status": "supported",
+        "A_evidence": "A silver saxophone, a wind instrument, is shown.",
+        "B_evidence": "A saxophone, a wind instrument, is shown."
+      },
+      {
+        "constraint": "The wind instrument should be maroon.",
+        "A_status": "contradicted",
+        "B_status": "uncertain",
+        "A_evidence": "The instrument is metallic silver; the red is its background.",
+        "B_evidence": "The instrument body is purple rather than clearly maroon, but it is closer to the requested color than A's silver instrument."
+      }
+    ],
+    "decision": "B",
+    "confidence": "medium",
+    "reason": "Both candidates show a wind instrument, but B colors its saxophone body purple, which is at least closer to maroon than A's silver saxophone. B does not clearly achieve maroon."
+  },
+  "trace": {
+    "stage": "rank_pair_relative_preference",
+    "model_name": "gpt-5.6-terra",
+    "model_revision": null,
+    "provider": "openai-compatible-chat",
+    "reasoning_effort": null,
+    "prompt_version": "rank_preference_relative_v2",
+    "prompt_hash": "f7291a6599672743bfedd9bbc26b40eb787cbe3e1c616d4515a718fb1d5effc5",
+    "input_hash": "3f45756f6a04150612c570373312b982e706ebbaf207c3bf76296238337f22a5",
+    "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_rank_preference_v1/outputs/gc_epochs14_top3_relative/api_cache/rank_pair_relative_preference/3f45756f6a04150612c570373312b982e706ebbaf207c3bf76296238337f22a5.json",
+    "cached": false,
+    "attempts": 1,
+    "request_id": "resp_099a2d33ab679072016af2dc539a3887d1ab85f672b32d1f84",
+    "usage": {
+      "prompt_tokens": 4796,
+      "completion_tokens": 732,
+      "total_tokens": 5528,
+      "completion_tokens_details": {
+        "reasoning_tokens": 197
+      }
+    }
+  }
+}

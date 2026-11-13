@@ -1,0 +1,84 @@
+{
+  "case_id": "case_e3ba042bf4a7be825fe9",
+  "audit_query_id": "audit_query_077",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_e3ba042bf4a7be825fe9",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Interpreting the awkward wording as requesting a television on a freestanding stand instead of an attached display unit: T shows a television resting on a low shelving stand, whereas R shows a television integrated into a large wall-mounted wooden unit."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows a white convertible in a parking lot, with no television or television stand."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "Show a television on a television stand."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_e3ba042bf4a7be825fe9",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a television resting on a freestanding open shelving stand, unlike the television integrated into the large wall-mounted wooden display panel in Image 1. This supports the requested stand rather than attached showcase arrangement."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a white convertible car in a parking lot, with no television or television stand."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "0a9285fabf277b4fc016806d8f10917183b8013764f044c9bd40ebfb16cb450f",
+      "input_hash": "0f90fe9adc427a8808929f1becc3e78f21f9d3b70487f459dc9a0e5009dcefee",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/0f90fe9adc427a8808929f1becc3e78f21f9d3b70487f459dc9a0e5009dcefee.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0d2227ad429cc2c1016af2bdf6484087d281b150ab994e2708",
+      "usage": {
+        "prompt_tokens": 8468,
+        "completion_tokens": 210,
+        "total_tokens": 8678,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 27
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "ec7d9d3f5d7ac438f48e641f224d690d221b7e7476d750cb65758f5a81bad588",
+      "input_hash": "0aecd432cc48a1b607dcc71ca1d2ccb92a39312b56cdb631383ab5b92ed22bef",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/0aecd432cc48a1b607dcc71ca1d2ccb92a39312b56cdb631383ab5b92ed22bef.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0bd671d88a4bfe4d016af2bdfd497487d189a33a1973609373",
+      "usage": {
+        "prompt_tokens": 7926,
+        "completion_tokens": 116,
+        "total_tokens": 8042
+      }
+    }
+  ]
+}

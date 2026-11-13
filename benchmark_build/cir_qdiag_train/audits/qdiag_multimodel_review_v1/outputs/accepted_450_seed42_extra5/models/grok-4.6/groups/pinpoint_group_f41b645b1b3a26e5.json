@@ -1,0 +1,57 @@
+{
+  "group_id": "pinpoint_group_f41b645b1b3a26e5",
+  "model": "grok-4.6",
+  "signature": "cb958fa178e5ebcdd33f446ebd46fe25a7c20417ca5539cc74de61fb4df99804",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_f41b645b1b3a26e5_query_02760_object_add",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Adds exactly one object, a clock, to an otherwise unchanged gadget request. None of the supplied positives visibly features a clock."
+    },
+    {
+      "negative_id": "pinpoint_group_f41b645b1b3a26e5_query_02763_attribute_add",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Inserts exactly one attribute, handheld, while preserving the rest. Every supplied positive is mounted or tabletop, so none is a handheld gadget."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.6",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "58584a916b9b94ec839674aad92abe847841e8b752f8e27384e1e2b86dc9657e",
+      "input_hash": "0651ccdade7576cc5ff9410b9213f954ef8b9929eda51a7ce53f1b441a4cbcaf",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/grok-4.6/cache/validate_group/0651ccdade7576cc5ff9410b9213f954ef8b9929eda51a7ce53f1b441a4cbcaf.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "eda401f3-e1eb-969c-8f2b-746482db3edf",
+      "usage": {
+        "prompt_tokens": 5034,
+        "completion_tokens": 154,
+        "total_tokens": 7255,
+        "prompt_tokens_details": {
+          "text_tokens": 2669,
+          "audio_tokens": 0,
+          "image_tokens": 2365,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2067,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 203220000
+      }
+    }
+  ],
+  "format_warnings": []
+}

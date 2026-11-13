@@ -1,0 +1,92 @@
+{
+  "case_id": "case_cbc4bac1874b74d3cd29",
+  "audit_query_id": "audit_query_089",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_cbc4bac1874b74d3cd29",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Three buses parked side by side have heavily blackened, burned-out front sections, with intact yellow school buses alongside them."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The image shows a pug swimming in a blue swimming pool, not a bus parking lot containing three buses with fire-damaged front ends."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "The scene is a bus parking lot.",
+      "Three buses are present.",
+      "The buses have fire damage at their front ends."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_cbc4bac1874b74d3cd29",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "The photo shows several school buses parked together, with extensive charring and exposed structure on central buses. However, three distinct buses with fire damage specifically at their front ends cannot be reliably identified from this view."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The photo shows a pug swimming in a pool, with a person's feet beside the pool. There is no bus parking lot or fire-damaged bus."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "7b0865341c9ab300268715c8be67e2e6382606a315c3509306f754753ac73f4c",
+      "input_hash": "c9b7006ab7b0d384f8410bc151cd9f907d03607ca3fbd56a2018106128762a0f",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/c9b7006ab7b0d384f8410bc151cd9f907d03607ca3fbd56a2018106128762a0f.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0f7d1c3e1aff7aaf016af2bdc4703c87d1be9ddaf71891596b",
+      "usage": {
+        "prompt_tokens": 7299,
+        "completion_tokens": 298,
+        "total_tokens": 7597,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 109
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "f82cac14dfad2d91830b1d2a649f01f7813751b5a073c380307d632148b30acc",
+      "input_hash": "e5d42215616aeb7b77e82dcba99556dc7a2076628115a24a87e01c5c6b4a6e99",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/e5d42215616aeb7b77e82dcba99556dc7a2076628115a24a87e01c5c6b4a6e99.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_03011ee3d38b62b6016af2bdf3e58887d18e3256d9174796d2",
+      "usage": {
+        "prompt_tokens": 6757,
+        "completion_tokens": 162,
+        "total_tokens": 6919,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 35
+        }
+      }
+    }
+  ]
+}

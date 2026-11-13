@@ -1,0 +1,55 @@
+{
+  "group_id": "pinpoint_group_b537caa6b91b1684",
+  "model": "gpt-6.1-terra",
+  "signature": "08eff7f6139e72d377a59effd10853d9c15929bec5b0a3afebcc9b0ca4a1c2df",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_b537caa6b91b1684_query_07838_predicate_add",
+      "decision": "reject",
+      "failure_code": "not_visually_verifiable",
+      "reason": "The positive shows the flamingo in water without visible sand, so whether it faces sand cannot be reliably determined."
+    },
+    {
+      "negative_id": "pinpoint_group_b537caa6b91b1684_query_07838_attribute_delete",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Deletes the requirement that both legs be present while preserving the remaining fluent query."
+    },
+    {
+      "negative_id": "pinpoint_group_b537caa6b91b1684_query_07839_object_delete",
+      "decision": "reject",
+      "failure_code": "wrong_semantic_target",
+      "reason": "Removing “from the image” drops a reference qualifier, not the flamingo object constraint."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "gpt-6.1-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "b7a26ee777549b5a150ee785cd041109511589733e7821df270c485d2e23c669",
+      "input_hash": "f07b26ebec3a0b3b5553a354a878600af1c915b28462988925fe27652f9b800b",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/gpt-6.1-terra/cache/validate_group/f07b26ebec3a0b3b5553a354a878600af1c915b28462988925fe27652f9b800b.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_011e0176aca0bf54016af42e579c6887d1831f31dc0e5a2f46",
+      "usage": {
+        "prompt_tokens": 6858,
+        "completion_tokens": 420,
+        "total_tokens": 7278,
+        "prompt_tokens_details": {
+          "cached_tokens": 3621
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 239
+        }
+      }
+    }
+  ],
+  "format_warnings": []
+}

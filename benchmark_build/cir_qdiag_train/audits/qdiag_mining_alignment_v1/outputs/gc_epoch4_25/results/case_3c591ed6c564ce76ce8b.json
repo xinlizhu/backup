@@ -1,0 +1,135 @@
+{
+  "case_id": "case_3c591ed6c564ce76ce8b",
+  "audit_query_id": "audit_query_083",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_3c591ed6c564ce76ce8b",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows one cream tube beside its pink product box."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows several cosmetic containers rather than a single product; a pink package is also visible."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "single product"
+    ],
+    "witnesses": [
+      {
+        "witness_id": "delete_object_single",
+        "operation": "delete",
+        "semantic_target": "object",
+        "before_span": "single",
+        "after_span": null,
+        "edited_instruction": "Leave a product with its box",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "The original requires a single product; deleting “single” relaxes that count constraint.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 shows a cream tube with its pink box, satisfying the weaker instruction."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows cosmetic products alongside a pink package, satisfying the weaker instruction to leave a product with its box."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_3c591ed6c564ce76ce8b",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows one body-cream tube beside one matching pink retail box, satisfying the single-product-with-box instruction."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows several cosmetic containers, including two tall bottles and a shorter container, contradicting the requirement for a single product."
+    },
+    "verdicts": [
+      {
+        "witness_id": "delete_object_single",
+        "decision": "reject",
+        "failure_code": "wrong_semantic_target",
+        "witness_type": null,
+        "reason": "Deleting 'single' reconstructs the proposed instruction, but changes the product's quantity constraint, not its object identity, so the declared object target is incorrect. The candidate also lacks a clearly identifiable product box; its rear packaging appears to be a pouch, so the deletion support pattern is not established.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "The body-cream tube is displayed with its matching retail box."
+        },
+        "edited_on_candidate": {
+          "status": "uncertain",
+          "evidence": "Several cosmetic products are visible with what appears to be a toiletry pouch behind them. A product's matching box cannot be reliably identified."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [],
+  "local_checks": [
+    {
+      "witness_id": "delete_object_single",
+      "accepted": false,
+      "local_failures": [
+        "wrong_witness_type",
+        "wrong_support_pattern"
+      ],
+      "review_decision": "reject"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "917cc6c8bd8ef6fd339473a72bbbaa67d93c67df9db34430865e347c2e6451ea",
+      "input_hash": "31390224e592642b01f29abb5245a0a3f9d5c49e1b06f094515cce32b994baf4",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/31390224e592642b01f29abb5245a0a3f9d5c49e1b06f094515cce32b994baf4.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_093064f155f61fd7016af2bfb7121087d1bcd8f7a60dc4acb4",
+      "usage": {
+        "prompt_tokens": 7759,
+        "completion_tokens": 745,
+        "total_tokens": 8504,
+        "prompt_tokens_details": {
+          "cached_tokens": 5888
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 415
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "5535085b6352134cafbd521d549337265cfcd78f5ce32b89979b4d050675c30b",
+      "input_hash": "6e214fbcfd2138359e7db66ba6841f7044d99372b9e58d2a81c48c8e37ec5cf0",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/6e214fbcfd2138359e7db66ba6841f7044d99372b9e58d2a81c48c8e37ec5cf0.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_07df705f334a5cb9016af2bfc85b8487d0a46fcd5ba7eef2d4",
+      "usage": {
+        "prompt_tokens": 7112,
+        "completion_tokens": 450,
+        "total_tokens": 7562,
+        "prompt_tokens_details": {
+          "cached_tokens": 3482
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 126
+        }
+      }
+    }
+  ]
+}

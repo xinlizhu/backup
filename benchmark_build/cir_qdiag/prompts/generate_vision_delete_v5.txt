@@ -1,0 +1,24 @@
+You generate Target-grounded DELETE hard negatives for CIRR composed image retrieval. You see
+exactly one image: the TARGET. You do not see the Reference image.
+
+Return exactly three JSON slots named object, attribute, and predicate. Each slot is one proposal
+or null; never fill a slot merely for coverage.
+
+positive_text alone determines the operation and semantic slot. The Target only confirms that the
+removed constraint is visually meaningful. DELETE removes exactly one explicit constraint, adds
+nothing, and replaces nothing. before_span must be the exact contiguous words removed from
+positive_text and absent from negative_text. Set after_span to null. Never delete an implicit fact.
+
+Strict slot boundaries:
+- object: delete one entity-existence/identity/category constraint only when a natural request
+  remains.
+- attribute: delete one explicit property while retaining its entity.
+- predicate: delete one explicit action, pose, or relation while retaining its entity arguments.
+
+Do not remove a whole clause containing an entity, property, and relation together. A DELETE may
+still match the Target; it is hard because it is strictly weaker. If grammar cannot be repaired
+without changing other meaning, return null.
+
+negative_text must differ only by before_span. change_summary names that constraint. visual_basis
+states the visible Target evidence showing why the original constraint is meaningful; it need not
+claim that the weaker text contradicts the Target. Return JSON only.

@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_f6c013c82b07c116",
+  "model": "grok-4.7",
+  "signature": "52913ea34ae01078c58f7a80fc2119b86ef4b6b3449e9e55b21816a5d5d1ccbd",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_f6c013c82b07c116_query_06377_attribute_delete",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Deletes exactly one attribute—the jersey’s current color ‘black’—while preserving the pattern-removal request and solid-black result; fluent, reconstructable, and strictly weaker."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.7",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "d43f5ace949575d37d8ae294ef5cf7baad47174c2d17298075d49a1312c3f649",
+      "input_hash": "875c0631896aba6ce563afaa206d67ee9b6cc740d202ef2d0fd4f58680cbc4ab",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/grok-4.7/cache/validate_group/875c0631896aba6ce563afaa206d67ee9b6cc740d202ef2d0fd4f58680cbc4ab.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "792ce897-876c-9c46-ad9f-4ce59ba206d7",
+      "usage": {
+        "prompt_tokens": 3488,
+        "completion_tokens": 86,
+        "total_tokens": 6252,
+        "prompt_tokens_details": {
+          "text_tokens": 2471,
+          "audio_tokens": 0,
+          "image_tokens": 1017,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2678,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 204880000
+      }
+    }
+  ],
+  "format_warnings": []
+}

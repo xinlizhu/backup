@@ -1,0 +1,84 @@
+{
+  "case_id": "case_b1a86e5db68798d7f5aa",
+  "audit_query_id": "audit_query_077",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_b1a86e5db68798d7f5aa",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The television is placed on a freestanding stand with open shelves; it is not part of a wall-mounted unit with an attached showcase."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The image shows a dog outdoors, with no television stand or attached showcase."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "The target should be a television stand rather than a unit with an attached showcase."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_b1a86e5db68798d7f5aa",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a television resting on a freestanding stand; unlike Image 1's wall-mounted unit, it has no attached showcase."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a dog outdoors, with no television or television stand."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "ebf97174dbce1751091221d96d919d2215d66cb8fac048a0edffe627d5bf0a90",
+      "input_hash": "b03ba7d3f037725417e2fd5f5c11ed63e7ec1e600aba03cd34bf50d3e2485227",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/b03ba7d3f037725417e2fd5f5c11ed63e7ec1e600aba03cd34bf50d3e2485227.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_2ca1d255e4a4bd1d84897edfbd80286ec6ca129043c0aed6",
+      "usage": {
+        "prompt_tokens": 7298,
+        "completion_tokens": 260,
+        "total_tokens": 7558,
+        "completion_tokens_details": {
+          "reasoning_tokens": 127
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "48cf6b0f07f5598891555290bd8c7ccea05aa64c258b1f2e660309e62a0f731a",
+      "input_hash": "4fb34bb96d3be8673ad57986c9cb24d7cfdd283e24a1438c17ceea056ca78c60",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/4fb34bb96d3be8673ad57986c9cb24d7cfdd283e24a1438c17ceea056ca78c60.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_ft_fdb4488d743c2766cc1c905c752bac62",
+      "usage": {
+        "prompt_tokens": 2378,
+        "completion_tokens": 398,
+        "total_tokens": 2776,
+        "completion_tokens_details": {
+          "reasoning_tokens": 298
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,163 @@
+{
+  "case_id": "case_75b5462ebfab30d91dbb",
+  "audit_query_id": "audit_query_090",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_75b5462ebfab30d91dbb",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "A car is shown from the rear three-quarter view beside visible water."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The car is shown from the rear, but the scene shows pavement and grass rather than visible water."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "by water: no water is visible around the car in C."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "delete_by_water",
+        "operation": "delete",
+        "semantic_target": "predicate",
+        "before_span": " by water",
+        "after_span": null,
+        "edited_instruction": "Show car from back.",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "The removed location relation is that the car is by water; C lacks visible water, while the relaxed instruction fits both images.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "The positive shows a car from the rear three-quarter view."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The candidate shows a car from the rear three-quarter view."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_75b5462ebfab30d91dbb",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows an orange car from the rear beside a body of water."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a car from the rear, but it is on pavement beside grass and trees, with no visible water."
+    },
+    "verdicts": [
+      {
+        "witness_id": "delete_by_water",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting “ by water” is one exact deletion, yielding fluent text and removing only the location constraint. The candidate retains the rear view and car, and its only visible mismatch with the source is the absent water.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 shows a car from the rear; removing the water constraint leaves its visible car and view compatible."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 clearly shows a car from the rear; the edited instruction no longer requires water."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "delete_by_water",
+      "operation": "delete",
+      "semantic_target": "predicate",
+      "before_span": " by water",
+      "after_span": null,
+      "edited_instruction": "Show car from back.",
+      "witness_type": "deletion_relaxation",
+      "changed_constraint": "The removed location relation is that the car is by water; C lacks visible water, while the relaxed instruction fits both images.",
+      "edited_on_positive": {
+        "status": "supported",
+        "evidence": "The positive shows a car from the rear three-quarter view."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "The candidate shows a car from the rear three-quarter view."
+      },
+      "independent_review": {
+        "witness_id": "delete_by_water",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting “ by water” is one exact deletion, yielding fluent text and removing only the location constraint. The candidate retains the rear view and car, and its only visible mismatch with the source is the absent water.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 shows a car from the rear; removing the water constraint leaves its visible car and view compatible."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 clearly shows a car from the rear; the edited instruction no longer requires water."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "delete_by_water",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "f5e9306075d050c17ad1bc5ffbca8dbacd7b6689acce7d96ee46d81b678b3cf1",
+      "input_hash": "7761b8b3c15c82a0c3c38e6db634c80ffe549a0f518032621065b2147840a6e4",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/7761b8b3c15c82a0c3c38e6db634c80ffe549a0f518032621065b2147840a6e4.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0a887c6830d1b1a8016af2bf8a787887d183dfdb0019b6016b",
+      "usage": {
+        "prompt_tokens": 8789,
+        "completion_tokens": 761,
+        "total_tokens": 9550,
+        "completion_tokens_details": {
+          "reasoning_tokens": 516
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "594abde422b67f55f27dd6aa9f7c9002d6b7d670917278e30ceab5a9651f505a",
+      "input_hash": "93cc426f68d0670d85f5710ca30519eff9f7f441e97c8beb2024cbecfe23b8b4",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/93cc426f68d0670d85f5710ca30519eff9f7f441e97c8beb2024cbecfe23b8b4.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0757fec3e676c717016af2bf970fe887d1af6c24c538803ea6",
+      "usage": {
+        "prompt_tokens": 11694,
+        "completion_tokens": 456,
+        "total_tokens": 12150,
+        "prompt_tokens_details": {
+          "cached_tokens": 5248
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 223
+        }
+      }
+    }
+  ]
+}

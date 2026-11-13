@@ -1,0 +1,85 @@
+{
+  "case_id": "case_f52fbe13fa3973941ec7",
+  "audit_query_id": "audit_query_082",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_f52fbe13fa3973941ec7",
+    "case_status": "source_invalid_or_uncertain",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "Image 2 shows a locomotive with white strips, but the relative direction 'face back corner' is ambiguous and cannot be reliably confirmed from the images."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a horse-drawn carriage and person, not a locomotive, and no white strips are visible."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "The referenced locomotive is absent; the candidate shows a horse-drawn carriage instead.",
+      "White strips are not visible on the candidate."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_f52fbe13fa3973941ec7",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "Image 2 shows a locomotive with prominent white diagonal stripes, but “face back corner” has no reliably identifiable corner or orientation relative to the reference."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a horse-drawn carriage, not the locomotive in the reference; no white strips are visible."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "d4b8103ffee116b3f3a05cc994997d089ae4cda4d6cf859b7147b40fef964fe7",
+      "input_hash": "6b558fe5e110d4a9ea0fa0708efac47a0b31fede9bd726ee80d23c49055b91ca",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/6b558fe5e110d4a9ea0fa0708efac47a0b31fede9bd726ee80d23c49055b91ca.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0f851c6eb8048dc5016af2beb45bf487d1a553b79031829033",
+      "usage": {
+        "prompt_tokens": 6479,
+        "completion_tokens": 457,
+        "total_tokens": 6936,
+        "completion_tokens_details": {
+          "reasoning_tokens": 303
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "c609d5eb7881cc38e0eafafd4cc600e118baaca736152c0c241b88dd4bacb704",
+      "input_hash": "1cafe269b8af9f5ef7c93c4df1063a3c9f5ceeda7b53911757eea2da959d4cf6",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/1cafe269b8af9f5ef7c93c4df1063a3c9f5ceeda7b53911757eea2da959d4cf6.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_04aef96b30c62739016af2bebdf52487d1acb8a28cbca2a06f",
+      "usage": {
+        "prompt_tokens": 5937,
+        "completion_tokens": 328,
+        "total_tokens": 6265,
+        "completion_tokens_details": {
+          "reasoning_tokens": 220
+        }
+      }
+    }
+  ]
+}

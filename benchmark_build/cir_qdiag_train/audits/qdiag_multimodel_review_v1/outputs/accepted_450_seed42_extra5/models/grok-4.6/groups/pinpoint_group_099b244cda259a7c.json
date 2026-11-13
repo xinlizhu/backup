@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_099b244cda259a7c",
+  "model": "grok-4.6",
+  "signature": "cb958fa178e5ebcdd33f446ebd46fe25a7c20417ca5539cc74de61fb4df99804",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_099b244cda259a7c_query_04170_attribute_add",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Adding \"dressed in black\" is one fluent attribute edit. Every positive trio wears bright non-black costumes, so the new fact is clearly false for all supplied positives."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.6",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "1ce5db15799af139c932cb2e1bf42289b395c23fa68f51abb080b2ed74997dd4",
+      "input_hash": "86d9c3dd9160990d8c703bab6c3cb17a779a29c5267d27c671b5c2dbcb34c989",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/grok-4.6/cache/validate_group/86d9c3dd9160990d8c703bab6c3cb17a779a29c5267d27c671b5c2dbcb34c989.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "ee0a54cd-94a3-9db6-a7f9-c699783aa8df",
+      "usage": {
+        "prompt_tokens": 5348,
+        "completion_tokens": 84,
+        "total_tokens": 7410,
+        "prompt_tokens_details": {
+          "text_tokens": 2485,
+          "audio_tokens": 0,
+          "image_tokens": 2863,
+          "cached_tokens": 1152
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1978,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 213400000
+      }
+    }
+  ],
+  "format_warnings": []
+}

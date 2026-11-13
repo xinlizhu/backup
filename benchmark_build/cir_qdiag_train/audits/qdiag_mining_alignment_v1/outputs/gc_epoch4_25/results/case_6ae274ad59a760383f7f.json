@@ -1,0 +1,85 @@
+{
+  "case_id": "case_6ae274ad59a760383f7f",
+  "audit_query_id": "audit_query_093",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_6ae274ad59a760383f7f",
+    "case_status": "source_invalid_or_uncertain",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "A pillow rests against a grey textured textile, but it is not visibly identifiable as a turkey towel; the pale background could be window-like, but that is unclear."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The pillow is on white bedding against a plain grey wall; no grey towel or window-like background is visible."
+    },
+    "candidate_relation": "multiple_constraint_conflict",
+    "violated_source_constraints": [
+      "Place the pillow on a grey turkey towel",
+      "Use a window background effect"
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_6ae274ad59a760383f7f",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a pillow nestled against a grey-green textured textile, with a light paneled/window-like background behind it."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a white pillow on a bed against a plain taupe wall; no grey towel or window-like background is visible."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "0e68bf1cf6ab8c084e68527adb4112fc61684be4f36152d7ce53bc49f61a256c",
+      "input_hash": "738e426f325fcd26972bb0415640aa4b22d5424d47eb848c10fbdc824c6d2bd8",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/738e426f325fcd26972bb0415640aa4b22d5424d47eb848c10fbdc824c6d2bd8.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_031c1cfa5097cab2016af2bf210e9887d1a39c6c5b58eebe75",
+      "usage": {
+        "prompt_tokens": 4173,
+        "completion_tokens": 1046,
+        "total_tokens": 5219,
+        "completion_tokens_details": {
+          "reasoning_tokens": 857
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "2420d056122d10ff01b0d804eb3632b1faf233b5ee28fe7b543b47b7af5f7f95",
+      "input_hash": "fc6f46cf4be964747a47c3d9e2b1817820e587b1f946f4654b7bfa13bf7f8375",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/fc6f46cf4be964747a47c3d9e2b1817820e587b1f946f4654b7bfa13bf7f8375.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_ack_0e4cdf4282d67819a3e996708529c21d",
+      "usage": {
+        "prompt_tokens": 2644,
+        "completion_tokens": 271,
+        "total_tokens": 2915,
+        "completion_tokens_details": {
+          "reasoning_tokens": 164
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,163 @@
+{
+  "case_id": "case_92685306f288f3e26f15",
+  "audit_query_id": "audit_query_079",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_92685306f288f3e26f15",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "T shows a black, bowl-shaped vessel sink beneath a running faucet."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows a boat with a dark hull, deck, and keel, rather than a bowl sink."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The depicted object must be a bowl sink."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "object",
+        "before_span": "bowl sink",
+        "after_span": "boat",
+        "edited_instruction": "Show a black boat.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "Replace the bowl-sink object category with a boat, retaining the black color constraint.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "T depicts a black bowl sink with a faucet, not a boat."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C depicts a boat with a black or dark charcoal hull and white trim."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_92685306f288f3e26f15",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a black, bowl-shaped vessel sink with a faucet pouring water into it."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a boat with a dark hull, white trim, and brown decking; it does not show a bowl sink."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing 'bowl sink' with 'boat' makes exactly one object substitution and preserves the black attribute. The positive shows a black sink, while the candidate shows a black-hulled boat, satisfying the required contrast.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 depicts a bowl sink and faucet, with no boat visible."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 depicts a boat with a broad black or dark charcoal hull panel, consistent with the black hull coloring in the reference."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "substitute",
+      "semantic_target": "object",
+      "before_span": "bowl sink",
+      "after_span": "boat",
+      "edited_instruction": "Show a black boat.",
+      "witness_type": "substitution_contrast",
+      "changed_constraint": "Replace the bowl-sink object category with a boat, retaining the black color constraint.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "T depicts a black bowl sink with a faucet, not a boat."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C depicts a boat with a black or dark charcoal hull and white trim."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing 'bowl sink' with 'boat' makes exactly one object substitution and preserves the black attribute. The positive shows a black sink, while the candidate shows a black-hulled boat, satisfying the required contrast.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 depicts a bowl sink and faucet, with no boat visible."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 depicts a boat with a broad black or dark charcoal hull panel, consistent with the black hull coloring in the reference."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "7aa547f48686b7ea06f9423afe89a8931df0db5a625af09764ced9665983ebd0",
+      "input_hash": "2996158e23ae68b4c1c09b8a473e170ca9fe76c12e82bcb36e38c6734a84ad03",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/2996158e23ae68b4c1c09b8a473e170ca9fe76c12e82bcb36e38c6734a84ad03.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0a8d286132da11f9016af2bdc278bc87d1b5ef416a38fbeb34",
+      "usage": {
+        "prompt_tokens": 7938,
+        "completion_tokens": 445,
+        "total_tokens": 8383,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 118
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "d73de607b59269294355e37f863a07dd6cf1861d8006a684fb47937be512a60a",
+      "input_hash": "903508e9bc5cfc08443de98d4f18376c6b387a99e3b7be2492988d31826e2dd6",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/903508e9bc5cfc08443de98d4f18376c6b387a99e3b7be2492988d31826e2dd6.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_06b97ad03c92be9a016af2bde022d487d189f94d70e4fdcb17",
+      "usage": {
+        "prompt_tokens": 7455,
+        "completion_tokens": 302,
+        "total_tokens": 7757,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        }
+      }
+    }
+  ]
+}

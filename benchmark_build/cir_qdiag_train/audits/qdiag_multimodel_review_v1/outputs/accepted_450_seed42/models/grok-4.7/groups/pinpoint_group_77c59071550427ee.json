@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_77c59071550427ee",
+  "model": "grok-4.7",
+  "signature": "52913ea34ae01078c58f7a80fc2119b86ef4b6b3449e9e55b21816a5d5d1ccbd",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_77c59071550427ee_query_07794_attribute_add",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Adds exactly one mane-color attribute while preserving the pure-white request. Every supplied positive horse has a white or pale mane, so a black mane is clearly false for all of them."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.7",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "8d0177248b12ab5f10665d3347a3324be36931a52d5b21ccfa1ca5a5b621eb5b",
+      "input_hash": "a5d3a5a505760d633cd2c26da107c1bfc719b767bcd02c60e95779a2e5b20494",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/grok-4.7/cache/validate_group/a5d3a5a505760d633cd2c26da107c1bfc719b767bcd02c60e95779a2e5b20494.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "d2d4a805-c969-9ed2-93b6-95a95d0c5e34",
+      "usage": {
+        "prompt_tokens": 5461,
+        "completion_tokens": 85,
+        "total_tokens": 7230,
+        "prompt_tokens_details": {
+          "text_tokens": 2573,
+          "audio_tokens": 0,
+          "image_tokens": 2888,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1684,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 184640000
+      }
+    }
+  ],
+  "format_warnings": []
+}

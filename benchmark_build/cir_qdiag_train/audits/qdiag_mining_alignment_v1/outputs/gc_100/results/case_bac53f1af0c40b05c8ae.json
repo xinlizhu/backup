@@ -1,0 +1,160 @@
+{
+  "case_id": "case_bac53f1af0c40b05c8ae",
+  "audit_query_id": "audit_query_072",
+  "signature": "5065d94bb0c1b275e428d3f2ada2352b274139ccb2134477487b5f51eef77ac6",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_bac53f1af0c40b05c8ae",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 visibly shows exactly two barber chairs in a barber shop, with decor distinct from the reference's larger tiled salon."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 is a barber shop with decor distinct from the reference, but visibly contains more than two barber chairs."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The candidate does not show only two chairs; it shows three visible barber chairs."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "object",
+        "before_span": "only two chairs",
+        "after_span": "three chairs",
+        "edited_instruction": "Shows three chairs in a barber shop with different decoration.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "The chair count changes from exactly two chairs to three chairs.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 visibly shows two barber chairs, not three; it remains a barber shop with distinct decoration."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 visibly shows three barber chairs in a barber shop with decoration distinct from the reference."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_bac53f1af0c40b05c8ae",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 visibly shows a barber shop with exactly two barber chairs and decor differing from Image 1."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 is a decorated barber shop, but visibly shows three barber chairs rather than only two."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "The witness makes one object-count substitution from \"only two chairs\" to \"three chairs\"; Image 2 supports the original count, while Image 3 supports the edited count.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 visibly has two barber chairs, not three."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 visibly shows three barber chairs in the barber shop."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "substitute",
+      "semantic_target": "object",
+      "before_span": "only two chairs",
+      "after_span": "three chairs",
+      "edited_instruction": "Shows three chairs in a barber shop with different decoration.",
+      "witness_type": "substitution_contrast",
+      "changed_constraint": "The chair count changes from exactly two chairs to three chairs.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "Image 2 visibly shows two barber chairs, not three; it remains a barber shop with distinct decoration."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "Image 3 visibly shows three barber chairs in a barber shop with decoration distinct from the reference."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "The witness makes one object-count substitution from \"only two chairs\" to \"three chairs\"; Image 2 supports the original count, while Image 3 supports the edited count.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 visibly has two barber chairs, not three."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 visibly shows three barber chairs in the barber shop."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "fe59fa22cb7435cfe11fc11eb56ae8e7b9d8c81490d855233f394b28e7210873",
+      "input_hash": "3c1e80f0f044be8f9daec4e9622632ac7f4febde4984a5fa33727ce2005be28f",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_100/api_cache/propose_witnesses/3c1e80f0f044be8f9daec4e9622632ac7f4febde4984a5fa33727ce2005be28f.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_05c22dd1405d137e016af2b90adab487d2974691564662bd5c",
+      "usage": {
+        "prompt_tokens": 8067,
+        "completion_tokens": 1088,
+        "total_tokens": 9155,
+        "completion_tokens_details": {
+          "reasoning_tokens": 812
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "b4695241c7d43990ebab4a4831b0dcb7f86376ec6696be3beda108ec02bb1afb",
+      "input_hash": "6574ae6c334ebaa2cdb86e36a02d3dbd5b5f0626901e34a5276e2c87415c8c9b",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_100/api_cache/review_witnesses/6574ae6c334ebaa2cdb86e36a02d3dbd5b5f0626901e34a5276e2c87415c8c9b.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_09ca33d35baff0a7016af2b93c389087d1ad2ae5071da70ea4",
+      "usage": {
+        "prompt_tokens": 7591,
+        "completion_tokens": 345,
+        "total_tokens": 7936,
+        "completion_tokens_details": {
+          "reasoning_tokens": 132
+        }
+      }
+    }
+  ]
+}

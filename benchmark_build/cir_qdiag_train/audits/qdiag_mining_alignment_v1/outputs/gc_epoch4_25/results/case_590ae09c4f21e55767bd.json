@@ -1,0 +1,133 @@
+{
+  "case_id": "case_590ae09c4f21e55767bd",
+  "audit_query_id": "audit_query_098",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_590ae09c4f21e55767bd",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "A woman faces the camera behind a large group of dogs in the snow, replacing the reference's reindeer-and-sled scene with the requested woman-and-dogs composition."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "A woman seated on a sled faces the camera with a group of dogs in front of her. This supports the requested composition; the instruction does not require a particular stance or stationary dogs."
+    },
+    "candidate_relation": "compatible",
+    "violated_source_constraints": [],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "add",
+        "semantic_target": "attribute",
+        "before_span": null,
+        "after_span": "a black-and-white",
+        "edited_instruction": "Make the woman to pose for camera with group of dogs instead showing different scene into a black-and-white picture",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "The picture must be black-and-white, a property not specified by the original instruction.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The woman-and-dogs composition is present, but the photograph is in color, with blue snow shadows and red clothing."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The woman faces the camera with a group of dogs, and the photograph is black-and-white."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_590ae09c4f21e55767bd",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "The color photograph shows people on a sled behind a group of dogs. The foreground person is turned sideways; the rear person faces forward, but it is unclear whether a woman is posing for the camera rather than riding or operating the sled."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "A woman sits facing the camera on a sled behind a group of dogs, replacing the reference's reindeer-centered scene."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "reject",
+        "failure_code": "source_invalid_or_uncertain",
+        "witness_type": null,
+        "reason": "The insertion adds a single picture attribute, and the candidate is black-and-white while the positive is in color. However, the positive does not reliably establish the original requirement that a woman pose for the camera, so the required ADD support pattern cannot be established.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The positive visibly contains blue sky and snow shadows, red clothing, and colored dog coats; it is not a black-and-white picture."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The candidate is a black-and-white photograph of a woman facing the camera while seated behind a group of dogs."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": false,
+      "local_failures": [
+        "wrong_witness_type",
+        "wrong_support_pattern"
+      ],
+      "review_decision": "reject"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "14966183306fdbd41146ee93683fbf5509af2335684c57399c612b546252a3b9",
+      "input_hash": "cc34b352436f16538bcb45d10d89ecdec80b1be5abcbf9ea3bdb34757414e4d7",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/cc34b352436f16538bcb45d10d89ecdec80b1be5abcbf9ea3bdb34757414e4d7.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_02c06048464391ce016af2be78366087d1993e970c7e551857",
+      "usage": {
+        "prompt_tokens": 7200,
+        "completion_tokens": 692,
+        "total_tokens": 7892,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 316
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "be416c9d6ed030bf54a478e8e423c3ffd0c1a12b186949520f5747a9c8cd4ed7",
+      "input_hash": "f5e8ef4c5359220aa7297159d80afd66f31aca1604dbfedaa118af3322e9f315",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/f5e8ef4c5359220aa7297159d80afd66f31aca1604dbfedaa118af3322e9f315.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0486d5f258e4a6eb016af2beaa508c87d1acccfd598cd31e84",
+      "usage": {
+        "prompt_tokens": 6733,
+        "completion_tokens": 444,
+        "total_tokens": 7177,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 164
+        }
+      }
+    }
+  ]
+}

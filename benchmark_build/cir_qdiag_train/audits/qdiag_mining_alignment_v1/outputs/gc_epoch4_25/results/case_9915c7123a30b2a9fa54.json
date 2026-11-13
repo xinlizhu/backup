@@ -1,0 +1,166 @@
+{
+  "case_id": "case_9915c7123a30b2a9fa54",
+  "audit_query_id": "audit_query_097",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_9915c7123a30b2a9fa54",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Relative to the reference's conventional gold saxophone, T shows a saxophone with a clearly blue body and bell."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows a saxophone, but its body and bell are gold rather than blue."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The saxophone must be blue."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "attribute",
+        "before_span": "blue",
+        "after_span": "gold",
+        "edited_instruction": "be a gold saxophone instead of a regular one.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "The saxophone's body color changes from blue to gold.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "T has a blue body and bell; its gold keywork does not make it a gold-bodied saxophone."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C shows a saxophone with a gold body and bell."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_9915c7123a30b2a9fa54",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a saxophone with a clearly blue body and gold-colored keys, matching the requested blue saxophone relative to the regular gold saxophone in Image 1."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a gold-colored saxophone body, like the regular saxophone in Image 1, rather than a blue one."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "The single replacement changes the color attribute from blue to gold, preserving the saxophone and the rest of the instruction. Image 2 is blue-bodied; Image 3 is gold-bodied.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2's saxophone body is blue, not gold."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows a gold-colored saxophone."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "substitute",
+      "semantic_target": "attribute",
+      "before_span": "blue",
+      "after_span": "gold",
+      "edited_instruction": "be a gold saxophone instead of a regular one.",
+      "witness_type": "substitution_contrast",
+      "changed_constraint": "The saxophone's body color changes from blue to gold.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "T has a blue body and bell; its gold keywork does not make it a gold-bodied saxophone."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C shows a saxophone with a gold body and bell."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "The single replacement changes the color attribute from blue to gold, preserving the saxophone and the rest of the instruction. Image 2 is blue-bodied; Image 3 is gold-bodied.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2's saxophone body is blue, not gold."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows a gold-colored saxophone."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "b3dbb6da8a780db1334736a6eff292f6e27e70233883f8d3a3ff01f4a7f529d5",
+      "input_hash": "d6fcf147cfa33472a5e203ef1558eaf625e2316ee3bc3acb55b83f206897d11b",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/d6fcf147cfa33472a5e203ef1558eaf625e2316ee3bc3acb55b83f206897d11b.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0174dba7847bf876016af2beaa190087d2885376f70ddc7d09",
+      "usage": {
+        "prompt_tokens": 8132,
+        "completion_tokens": 594,
+        "total_tokens": 8726,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 257
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "be3f8d6c07ace6addb47f484262994bf796324caca16355c2752e7dd39e8ebd3",
+      "input_hash": "b3b68deb5809ce96f25e591a771a0592918b9ef450dcf4815c1e6f53431df320",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/b3b68deb5809ce96f25e591a771a0592918b9ef450dcf4815c1e6f53431df320.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_07d1c7124c889a09016af2bebb49cc87d281302320ecc203f3",
+      "usage": {
+        "prompt_tokens": 7817,
+        "completion_tokens": 365,
+        "total_tokens": 8182,
+        "prompt_tokens_details": {
+          "cached_tokens": 5248
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 132
+        }
+      }
+    }
+  ]
+}

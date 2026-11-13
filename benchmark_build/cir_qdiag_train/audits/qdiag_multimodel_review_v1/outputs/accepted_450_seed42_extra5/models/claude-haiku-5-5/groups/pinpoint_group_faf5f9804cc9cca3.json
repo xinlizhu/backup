@@ -1,0 +1,62 @@
+{
+  "group_id": "pinpoint_group_faf5f9804cc9cca3",
+  "model": "claude-haiku-5-5",
+  "signature": "44bb4aae802e19564501a676b733c7e19828d9ced260b7da0428f08b1a359df2",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_faf5f9804cc9cca3_query_06951_predicate_add",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Single predicate ADD is fluent and verifiable. The source text ends with 'while keeping the lights' (incomplete phrase). The negative adds 'framing the border' as a prepositional phrase specifying the predicate relation of the lights. This is a single semantic constraint addition that is clearly false for all supplied positives—none show lights framing any border; they show lights embedded within or around garlands/flowers, not framing borders."
+    },
+    {
+      "negative_id": "pinpoint_group_faf5f9804cc9cca3_query_06951_object_substitute",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "The substitution of 'mirror garland' to 'ribbon garland' is incompatible with rejection criteria. Image 1 (reference) shows a mirror frame with a mixed-flower garland. The negative text substitutes the object to 'ribbon garland'. However, a ribbon garland could be used to frame a mirror identically to how the floral garland does in the reference, making the new fact compatible with all positives. The constraint change cannot be reliably rejected as false."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-haiku-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "bb2d065957cf0ffccc1c1b81e97a1f27ce490c9c33c7aef5c3e8310574883f4b",
+      "input_hash": "bd98aa543bac33ada50933efa3d3856d8881b39f294b10e84fbcdbb75ede932b",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/claude-haiku-5-5/cache/validate_group/bd98aa543bac33ada50933efa3d3856d8881b39f294b10e84fbcdbb75ede932b.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_0135xDZpXpToC7eoXd8YhGOmLB",
+      "usage": {
+        "prompt_tokens": 8444,
+        "completion_tokens": 391,
+        "total_tokens": 8835,
+        "prompt_tokens_details": {
+          "cached_tokens": 6583,
+          "cache_creation_tokens": 1857
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_faf5f9804cc9cca3_query_06951_predicate_add",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 448,
+      "action": "full reason retained; decision and failure_code unchanged"
+    },
+    {
+      "negative_id": "pinpoint_group_faf5f9804cc9cca3_query_06951_object_substitute",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 459,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

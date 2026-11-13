@@ -1,0 +1,91 @@
+{
+  "case_id": "case_ddeb9424fe2792789fa8",
+  "audit_query_id": "audit_query_091",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_ddeb9424fe2792789fa8",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a wooden sink cabinet with a dark, veined marble countertop."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a person driving a dog sled through snow, with no visible sink or marble surface."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "wooden sink",
+      "black marble surface"
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_ddeb9424fe2792789fa8",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a wooden vanity with a dark black marble countertop and an inset sink."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a dog sled team in a snowy forest, with no sink, wooden vanity, or marble surface."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "d3ee141655234499150b04ab1725245ae824c6a23ecd208d01850747b2d63f3c",
+      "input_hash": "46c91550c4986a5e2646453d61149a23639bc14369c385d9ddd411e2ba482289",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/46c91550c4986a5e2646453d61149a23639bc14369c385d9ddd411e2ba482289.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0cbbcc601066fe8c016af2bf42abb487d294a2180d2ccd3caf",
+      "usage": {
+        "prompt_tokens": 7460,
+        "completion_tokens": 215,
+        "total_tokens": 7675,
+        "prompt_tokens_details": {
+          "cached_tokens": 5888
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 98
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "855161477b1ce9f3243d2e7042ff6008b4c004d9ab14bc82fbd161d5276445af",
+      "input_hash": "3071d70ea5fc0ff70c9d2d1c78b47f322e51562632a614ae2de9a005594fb708",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/3071d70ea5fc0ff70c9d2d1c78b47f322e51562632a614ae2de9a005594fb708.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_06544b8c14820270016af2bf4b9c2c87d1a37a255dc3c37de2",
+      "usage": {
+        "prompt_tokens": 6918,
+        "completion_tokens": 147,
+        "total_tokens": 7065,
+        "prompt_tokens_details": {
+          "cached_tokens": 5248
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 52
+        }
+      }
+    }
+  ]
+}

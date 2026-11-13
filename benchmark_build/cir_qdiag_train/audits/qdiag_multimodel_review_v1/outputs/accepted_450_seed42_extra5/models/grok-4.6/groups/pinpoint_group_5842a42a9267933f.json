@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_5842a42a9267933f",
+  "model": "grok-4.6",
+  "signature": "cb958fa178e5ebcdd33f446ebd46fe25a7c20417ca5539cc74de61fb4df99804",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_5842a42a9267933f_query_05943_object_add",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Adds exactly one object, 'a brass floor lamp,' and the span reconstructs the negative while preserving the rest. Images 3-5 are knit close-ups with no floor lamp, so the new fact is clearly false for every supplied positive."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.6",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "55a73d04b9bd4bdeb06e4fee259f9a1fe66cb68fe4103c45fbfb4b4c6e294f14",
+      "input_hash": "c0f1adc8010bc7286ad7f13475fc01e6172b72610363a35c54649c31c4f49a84",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/grok-4.6/cache/validate_group/c0f1adc8010bc7286ad7f13475fc01e6172b72610363a35c54649c31c4f49a84.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "db99014c-3e3c-901a-8fda-26ccf45decac",
+      "usage": {
+        "prompt_tokens": 5155,
+        "completion_tokens": 99,
+        "total_tokens": 9142,
+        "prompt_tokens_details": {
+          "text_tokens": 2545,
+          "audio_tokens": 0,
+          "image_tokens": 2610,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 3888,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 311600000
+      }
+    }
+  ],
+  "format_warnings": []
+}

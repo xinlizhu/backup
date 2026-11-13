@@ -1,0 +1,161 @@
+{
+  "case_id": "case_02072f92f50292cf9bfb",
+  "audit_query_id": "audit_query_096",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_02072f92f50292cf9bfb",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Two yellow school buses are parked beside each other, with both fronts clearly visible."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "Three yellow school buses are parked adjacent to one another, with their fronts clearly visible. The instruction does not specify a bus count."
+    },
+    "candidate_relation": "compatible",
+    "violated_source_constraints": [],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "add",
+        "semantic_target": "attribute",
+        "before_span": null,
+        "after_span": "with rectangular headlights",
+        "edited_instruction": "Show the front of the school buses with rectangular headlights and park them adjacent to each other.",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "The buses must have rectangular headlights.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The adjacent buses have visible fronts, but their headlights are round rather than rectangular."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The three adjacent buses show their fronts and have rectangular headlights in their lower front panels."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_02072f92f50292cf9bfb",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Two yellow school buses are parked side by side, with both fronts visible, unlike the side views in the reference."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "Three yellow school buses are parked immediately adjacent to one another, with their fronts clearly visible."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "One insertion adds a single headlight-shape attribute while preserving the front-view and adjacent-parking requirements. Both images satisfy the source instruction; rectangular headlights distinguish the candidate from the positive.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Both buses have round headlights on their front panels, rather than rectangular headlights."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "All three adjacent, front-facing school buses have visibly rectangular headlights in their lower front panels."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "add",
+      "semantic_target": "attribute",
+      "before_span": null,
+      "after_span": "with rectangular headlights",
+      "edited_instruction": "Show the front of the school buses with rectangular headlights and park them adjacent to each other.",
+      "witness_type": "addition_disambiguation",
+      "changed_constraint": "The buses must have rectangular headlights.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "The adjacent buses have visible fronts, but their headlights are round rather than rectangular."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "The three adjacent buses show their fronts and have rectangular headlights in their lower front panels."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "One insertion adds a single headlight-shape attribute while preserving the front-view and adjacent-parking requirements. Both images satisfy the source instruction; rectangular headlights distinguish the candidate from the positive.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Both buses have round headlights on their front panels, rather than rectangular headlights."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "All three adjacent, front-facing school buses have visibly rectangular headlights in their lower front panels."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "bfd98902f62dbb5652993cdd4cc71f30a2a0d2fafd5849e628c7143c278c9b65",
+      "input_hash": "5241197d031b7103b71a5c86c7ca92164385ffb2c83a3200c32e1141d553d773",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/5241197d031b7103b71a5c86c7ca92164385ffb2c83a3200c32e1141d553d773.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_08897db8732a51c1016af2bdf70f2087d1af7eb586e48566fc",
+      "usage": {
+        "prompt_tokens": 8144,
+        "completion_tokens": 531,
+        "total_tokens": 8675,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 209
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "65dd82690c908850110f3c5a5865133315f055a0e5ec9b2952dead7410ee605a",
+      "input_hash": "b4c1f12e71112a9c2083e2f7e513374b17f42dc8d89c2ba3b1eb000b6368afbb",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/b4c1f12e71112a9c2083e2f7e513374b17f42dc8d89c2ba3b1eb000b6368afbb.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0fdf4312e8042818016af2be08b74487d192cf74522d8d9cf5",
+      "usage": {
+        "prompt_tokens": 7672,
+        "completion_tokens": 281,
+        "total_tokens": 7953,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        }
+      }
+    }
+  ]
+}

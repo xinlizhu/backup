@@ -1,0 +1,166 @@
+{
+  "case_id": "case_467ed8a1cb78b3cb38bb",
+  "audit_query_id": "audit_query_091",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_467ed8a1cb78b3cb38bb",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Relative to the reference's ceramic pedestal sink, T shows a sink in a wooden vanity with a black, visibly veined marble countertop. 'Wooden sink' is supported as a description of the vanity assembly."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C has a sink on a wooden vanity, but its countertop is visibly white, not black marble. The hammered metal basin does not itself violate the contextual reading of 'wooden sink' established by T."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The sink assembly must have a black marble surface."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "delete",
+        "semantic_target": "attribute",
+        "before_span": "with black marble surface",
+        "after_span": null,
+        "edited_instruction": "change to a wooden sink",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "Remove the requirement for a black marble surface.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "T shows a sink installed in a wooden vanity, replacing the reference's ceramic pedestal arrangement."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C shows a vessel sink on a visibly wooden vanity. With the countertop requirement removed, this supports the same contextual reading of 'wooden sink' as T."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_467ed8a1cb78b3cb38bb",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The sink installation has a visibly wood-grained vanity and a glossy black countertop with pale marble veining. In this context, 'wooden sink' describes the vanity assembly rather than the basin itself."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The sink installation includes a wood-grained vanity beneath the countertop, but its countertop is light cream, not black marble. The dark vessel basin has a hammered metallic surface."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting 'with black marble surface' exactly produces the proposed instruction and removes one surface constraint. Both images show wooden sink vanities under the same interpretation; the candidate violates only the removed black-marble constraint.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "The basin is installed in a visibly wooden vanity with prominent grain across its front and legs."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The vessel basin sits above a visibly wood-grained vanity, seen beneath the light countertop."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "delete",
+      "semantic_target": "attribute",
+      "before_span": "with black marble surface",
+      "after_span": null,
+      "edited_instruction": "change to a wooden sink",
+      "witness_type": "deletion_relaxation",
+      "changed_constraint": "Remove the requirement for a black marble surface.",
+      "edited_on_positive": {
+        "status": "supported",
+        "evidence": "T shows a sink installed in a wooden vanity, replacing the reference's ceramic pedestal arrangement."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C shows a vessel sink on a visibly wooden vanity. With the countertop requirement removed, this supports the same contextual reading of 'wooden sink' as T."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting 'with black marble surface' exactly produces the proposed instruction and removes one surface constraint. Both images show wooden sink vanities under the same interpretation; the candidate violates only the removed black-marble constraint.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "The basin is installed in a visibly wooden vanity with prominent grain across its front and legs."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The vessel basin sits above a visibly wood-grained vanity, seen beneath the light countertop."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "3f9a9654876dc5657bfdf00c16cf650639b0c6516ccf64262c9b44be868f10d6",
+      "input_hash": "4b065608c419b7a25859f652922b7261ebb2bc846a8e2d73db9bc0ea80fc4c82",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/4b065608c419b7a25859f652922b7261ebb2bc846a8e2d73db9bc0ea80fc4c82.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_03e5a40854d7b702016af2bdcd9f1087d1b5a0f96e9501c4a6",
+      "usage": {
+        "prompt_tokens": 7866,
+        "completion_tokens": 528,
+        "total_tokens": 8394,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 138
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "a1bb36c078afb912b71257230801082e1cb98227538b442bc7cfe972ed30423c",
+      "input_hash": "14cf67f665dc1ff3c8e44d962448254a71fe13115b30724bd9838124a781e8af",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/14cf67f665dc1ff3c8e44d962448254a71fe13115b30724bd9838124a781e8af.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_07ba63e78557d53c016af2bdf46ef087d1a1cabd7d352cc667",
+      "usage": {
+        "prompt_tokens": 7384,
+        "completion_tokens": 401,
+        "total_tokens": 7785,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 76
+        }
+      }
+    }
+  ]
+}

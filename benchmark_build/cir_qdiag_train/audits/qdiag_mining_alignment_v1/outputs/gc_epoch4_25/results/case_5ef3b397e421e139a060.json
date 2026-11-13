@@ -1,0 +1,129 @@
+{
+  "case_id": "case_5ef3b397e421e139a060",
+  "audit_query_id": "audit_query_086",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_5ef3b397e421e139a060",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The fox has an upright torso and lowered forelegs, matching the prominent reference cat's upright pose. In context, 'standing' describes this upright posture rather than a strict four-legged stance."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The candidate shows a guinea pig specimen with an upright body and lowered forelegs, broadly matching the reference pose, but it is not a fox."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The replacement animal must be a fox."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "object",
+        "before_span": "fox",
+        "after_span": "guinea pig",
+        "edited_instruction": "change to a guinea pig standing in the same gesture",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "Replace the required animal category, fox, with guinea pig.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The positive shows a fox with pointed ears, a narrow muzzle, and reddish fur, rather than a guinea pig."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The candidate shows a guinea pig specimen held upright, with its forelegs lowered beside its torso, broadly matching the prominent reference cat's upright gesture."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_5ef3b397e421e139a060",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a fox upright on its haunches, with its forelegs extending downward, matching the seated upright gesture of the prominent cat in Image 1."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a guinea pig rather than a fox. It is also raised on its hind feet on a person's hand, with its forepaws hanging, rather than seated like the reference cat."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "reject",
+        "failure_code": "remaining_constraints_violated",
+        "witness_type": null,
+        "reason": "Replacing 'fox' with 'guinea pig' is a valid single object edit, but the candidate also differs in the retained gesture: it balances on extended hind legs with dangling forepaws, whereas the reference cat and positive fox sit on their haunches with forelegs reaching the surface.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 depicts a fox, not a guinea pig."
+        },
+        "edited_on_candidate": {
+          "status": "contradicted",
+          "evidence": "The animal is a guinea pig, but its raised hind-leg stance and hanging forepaws do not preserve the reference cat's seated gesture."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": false,
+      "local_failures": [
+        "wrong_witness_type",
+        "wrong_support_pattern"
+      ],
+      "review_decision": "reject"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "4206c9e2f74ffba942f1fe0cbfbf6aa689bfae14312f81bc09d6fb035c9d38da",
+      "input_hash": "0abfa21c0dd8779e92153f7ebeb2aa08f5acdbbcdaa33f62f4d08eb637ff3c4d",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/0abfa21c0dd8779e92153f7ebeb2aa08f5acdbbcdaa33f62f4d08eb637ff3c4d.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_05646585a76016ce016af2bdcadcc887d2bcec962de30d2f1a",
+      "usage": {
+        "prompt_tokens": 6330,
+        "completion_tokens": 592,
+        "total_tokens": 6922,
+        "completion_tokens_details": {
+          "reasoning_tokens": 209
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "5dcfa68bf5de11bb9e843451d3a98792bf01ea6477f03f39b265454fdfcacb46",
+      "input_hash": "603250624af42bef4affa9f14204685245a1894fd3f0b4dbd9838310cd5a7f2e",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/603250624af42bef4affa9f14204685245a1894fd3f0b4dbd9838310cd5a7f2e.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_008d4bbc6bb2a320016af2bdf6be5c87d19da5b8ef2cf9149e",
+      "usage": {
+        "prompt_tokens": 5853,
+        "completion_tokens": 489,
+        "total_tokens": 6342,
+        "completion_tokens_details": {
+          "reasoning_tokens": 204
+        }
+      }
+    }
+  ]
+}

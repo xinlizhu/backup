@@ -1,0 +1,57 @@
+{
+  "group_id": "pinpoint_group_9e277f22faffcc39",
+  "model": "grok-4.7",
+  "signature": "52913ea34ae01078c58f7a80fc2119b86ef4b6b3449e9e55b21816a5d5d1ccbd",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_9e277f22faffcc39_query_05035_attribute_substitute",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Single fluent substitution of the border attribute fun→colorful. Both positives have plain wood or metal frames, so a colorful border is clearly false."
+    },
+    {
+      "negative_id": "pinpoint_group_9e277f22faffcc39_query_05039_object_delete",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Deletes only the image anchor, with spacing as glue. The result is fluent and strictly weaker while preserving the layout, palette, and border request."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.7",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "8b873bae57f16199d1cfd06a9bff63edee07fe0853a5696210a6c77bee90d914",
+      "input_hash": "5f001100ba38891e70315a5fa9b805aac8f87b5064d80e9f4804cdd10775fb6b",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/grok-4.7/cache/validate_group/5f001100ba38891e70315a5fa9b805aac8f87b5064d80e9f4804cdd10775fb6b.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "0b523c16-e033-949c-9657-e862efb3e3a8",
+      "usage": {
+        "prompt_tokens": 3940,
+        "completion_tokens": 152,
+        "total_tokens": 9006,
+        "prompt_tokens_details": {
+          "text_tokens": 2530,
+          "audio_tokens": 0,
+          "image_tokens": 1410,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 4914,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 352040000
+      }
+    }
+  ],
+  "format_warnings": []
+}

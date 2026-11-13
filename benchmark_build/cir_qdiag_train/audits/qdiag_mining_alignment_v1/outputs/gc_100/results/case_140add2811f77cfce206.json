@@ -1,0 +1,84 @@
+{
+  "case_id": "case_140add2811f77cfce206",
+  "audit_query_id": "audit_query_023",
+  "signature": "5065d94bb0c1b275e428d3f2ada2352b274139ccb2134477487b5f51eef77ac6",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_140add2811f77cfce206",
+    "case_status": "source_invalid_or_uncertain",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "A small dog is on a stone step with greenery behind, but distinct trees are not visible and whether it sits on the ledge is unclear."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The small dog stands on grass rather than sitting on a ledge; green vegetation is visible, but no distinct trees are apparent."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The dog sits on a ledge; the candidate dog is standing on grass."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_140add2811f77cfce206",
+    "source_on_positive": {
+      "status": "contradicted",
+      "evidence": "Image 2 shows a small dog seated on a stone ledge, but the green background is grass; no green trees are visibly established."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a small dog standing on grass, not sitting on a ledge; green grass is visible, but trees are not established."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "13abfe855287857e0b623ef6f713970d082c6a823f513c93dc17638a99442bdd",
+      "input_hash": "51ab06c8f263bf42f599d8ee5cb86af8d5c4dbc06970ed540a45fb5c9d4f1f73",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_100/api_cache/propose_witnesses/51ab06c8f263bf42f599d8ee5cb86af8d5c4dbc06970ed540a45fb5c9d4f1f73.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_01b08e3a2002a877016af2b96269b487d1b1864debf1406e90",
+      "usage": {
+        "prompt_tokens": 5703,
+        "completion_tokens": 1165,
+        "total_tokens": 6868,
+        "completion_tokens_details": {
+          "reasoning_tokens": 1017
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "45f94660cfdda9d2ba529c913fc4fe0bb5340b63a7c0dd28408a3aeed5fcdcda",
+      "input_hash": "7a6b74fbbcb226b1b94f4559f306fa2368ecdb12845b92b3a0b5c3529435095d",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_100/api_cache/review_witnesses/7a6b74fbbcb226b1b94f4559f306fa2368ecdb12845b92b3a0b5c3529435095d.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_081044aa75bcbfa2016af2b974350087d19998603b489c39c4",
+      "usage": {
+        "prompt_tokens": 5161,
+        "completion_tokens": 249,
+        "total_tokens": 5410,
+        "completion_tokens_details": {
+          "reasoning_tokens": 137
+        }
+      }
+    }
+  ]
+}

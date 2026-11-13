@@ -1,0 +1,49 @@
+{
+  "group_id": "pinpoint_group_2a92c71071174542",
+  "model": "claude-sonnet-5-5",
+  "signature": "aff20e5a5733d87f80fd7515c25d92c77cff20d4f50c9f8dbf4123bfdabed97b",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_2a92c71071174542_query_02888_predicate_add",
+      "decision": "reject",
+      "failure_code": "not_single_edit",
+      "reason": "The added phrase 'and is displayed beside the image' does not constitute a single semantic edit. It introduces a display/presentation constraint that is orthogonal to the dress palette requirement and creates a compound query about both the dress AND its presentation context, which is fundamentally different from the original single-axis query."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-sonnet-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "27b14018d933c08d97ad8d646a760cdb3e8b163bfafcc9f5d96731a96d3ba9de",
+      "input_hash": "b955aff6feac6137408d06546fe504bdb5df3a2a0430943e8c598e51063f1a7d",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/claude-sonnet-5-5/cache/validate_group/b955aff6feac6137408d06546fe504bdb5df3a2a0430943e8c598e51063f1a7d.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01QsR6LZ1OQHqqyOo7EtX9aJyf",
+      "usage": {
+        "prompt_tokens": 9168,
+        "completion_tokens": 174,
+        "total_tokens": 9342,
+        "prompt_tokens_details": {
+          "cached_tokens": 7147,
+          "cache_creation_tokens": 2017
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_2a92c71071174542_query_02888_predicate_add",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 346,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

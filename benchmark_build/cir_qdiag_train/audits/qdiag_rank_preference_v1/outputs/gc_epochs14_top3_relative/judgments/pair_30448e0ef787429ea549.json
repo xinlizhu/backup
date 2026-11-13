@@ -1,0 +1,57 @@
+{
+  "case_id": "pair_30448e0ef787429ea549",
+  "signature": "f3a97f608e6addbd5531ad7795f5e06873610abdb12f716de8375d49eda4c022",
+  "simulated": false,
+  "status": "complete",
+  "judgment": {
+    "case_id": "pair_30448e0ef787429ea549",
+    "constraints": [
+      {
+        "constraint": "A small dog is present",
+        "A_status": "supported",
+        "B_status": "supported",
+        "A_evidence": "A clearly shows a small schnauzer-like dog outdoors.",
+        "B_evidence": "B clearly shows a small schnauzer-like dog."
+      },
+      {
+        "constraint": "The dog sits on a ledge",
+        "A_status": "uncertain",
+        "B_status": "contradicted",
+        "A_evidence": "The dog is positioned directly in front of a wooden bench or ledge, but its body appears standing rather than clearly sitting.",
+        "B_evidence": "The dog is visibly standing on ground; no ledge is apparent."
+      },
+      {
+        "constraint": "Green trees are behind the dog",
+        "A_status": "supported",
+        "B_status": "contradicted",
+        "A_evidence": "Green foliage and trees are visibly present behind and around the dog.",
+        "B_evidence": "A stacked stone wall is behind the dog, with no visible green trees."
+      }
+    ],
+    "decision": "A",
+    "confidence": "high",
+    "reason": "Candidate A more directly matches the requested outdoor setting, with green trees and a visible bench-like ledge behind the small dog; B lacks the trees and ledge and shows the dog standing on the ground."
+  },
+  "trace": {
+    "stage": "rank_pair_relative_preference",
+    "model_name": "gpt-5.6-terra",
+    "model_revision": null,
+    "provider": "openai-compatible-chat",
+    "reasoning_effort": null,
+    "prompt_version": "rank_preference_relative_v2",
+    "prompt_hash": "42641c5d01a7ebc8e0ddffe7bd5dbcf7a2ef441f949b4b45f9189f4bbb59129d",
+    "input_hash": "003e740f2669b867a737e0fbc5d696accae952801f0cfaec1be9461ebb376e8d",
+    "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_rank_preference_v1/outputs/gc_epochs14_top3_relative/api_cache/rank_pair_relative_preference/003e740f2669b867a737e0fbc5d696accae952801f0cfaec1be9461ebb376e8d.json",
+    "cached": false,
+    "attempts": 1,
+    "request_id": "resp_ack_18abcc748fe0dfe58c76fd39e25fcd8c",
+    "usage": {
+      "prompt_tokens": 1762,
+      "completion_tokens": 424,
+      "total_tokens": 2186,
+      "completion_tokens_details": {
+        "reasoning_tokens": 167
+      }
+    }
+  }
+}

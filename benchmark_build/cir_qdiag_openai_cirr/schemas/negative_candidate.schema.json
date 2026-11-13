@@ -1,0 +1,138 @@
+{
+  "$defs": {
+    "EditOperation": {
+      "enum": [
+        "add",
+        "delete",
+        "substitute"
+      ],
+      "title": "EditOperation",
+      "type": "string"
+    },
+    "ReviewFailureCode": {
+      "enum": [
+        "not_single_edit",
+        "wrong_semantic_target",
+        "not_fluent",
+        "not_close_or_hard",
+        "not_counterfactual",
+        "invalid_delete",
+        "other_semantic_failure"
+      ],
+      "title": "ReviewFailureCode",
+      "type": "string"
+    },
+    "SemanticTarget": {
+      "enum": [
+        "object",
+        "attribute",
+        "predicate"
+      ],
+      "title": "SemanticTarget",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "after_span": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "After Span"
+    },
+    "before_span": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Before Span"
+    },
+    "construction_mode": {
+      "const": "text_only_editable",
+      "default": "text_only_editable",
+      "title": "Construction Mode",
+      "type": "string"
+    },
+    "edit_operation": {
+      "$ref": "#/$defs/EditOperation"
+    },
+    "generation_attempts": {
+      "default": 1,
+      "minimum": 1,
+      "title": "Generation Attempts",
+      "type": "integer"
+    },
+    "negative_id": {
+      "minLength": 1,
+      "title": "Negative Id",
+      "type": "string"
+    },
+    "rejection_code": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/ReviewFailureCode"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "selection_reason": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Selection Reason"
+    },
+    "semantic_target": {
+      "$ref": "#/$defs/SemanticTarget"
+    },
+    "source_text": {
+      "minLength": 1,
+      "title": "Source Text",
+      "type": "string"
+    },
+    "status": {
+      "default": "generated",
+      "enum": [
+        "generated",
+        "accepted",
+        "rejected",
+        "failed"
+      ],
+      "title": "Status",
+      "type": "string"
+    },
+    "text": {
+      "minLength": 1,
+      "title": "Text",
+      "type": "string"
+    }
+  },
+  "required": [
+    "negative_id",
+    "source_text",
+    "text",
+    "semantic_target",
+    "edit_operation",
+    "before_span",
+    "after_span"
+  ],
+  "title": "NegativeCandidate",
+  "type": "object"
+}

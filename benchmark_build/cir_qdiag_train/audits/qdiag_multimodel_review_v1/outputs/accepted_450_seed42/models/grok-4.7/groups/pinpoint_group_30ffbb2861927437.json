@@ -1,0 +1,69 @@
+{
+  "group_id": "pinpoint_group_30ffbb2861927437",
+  "model": "grok-4.7",
+  "signature": "52913ea34ae01078c58f7a80fc2119b86ef4b6b3449e9e55b21816a5d5d1ccbd",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_30ffbb2861927437_query_07629_object_delete",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Deletes only the pleated-skirt preservation constraint; the result is fluent, strictly weaker, and keeps the sock-removal and grey-sneaker constraints."
+    },
+    {
+      "negative_id": "pinpoint_group_30ffbb2861927437_query_07629_attribute_substitute",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Single color swap from grey to black knit sneakers. Neither positive shows black knit sneakers, so the new fact is clearly false."
+    },
+    {
+      "negative_id": "pinpoint_group_30ffbb2861927437_query_07630_object_delete",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Removes only the black pleated skirt from the keep-list. Grammar and all other constraints stay intact, yielding a strictly weaker query."
+    },
+    {
+      "negative_id": "pinpoint_group_30ffbb2861927437_query_07630_attribute_substitute",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "Image 3's floor-length skirt covers the ankle area, so covered ankles is compatible with a supplied positive."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.7",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "472a5ac002459936818e0c8f5d6d010c0b1c685cd823d15d20831f8bfb9d2c73",
+      "input_hash": "7b56555bf6cf573eec0f8dfbdc6adb945d11f598b1a2ca9ff281480fa74f3e95",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/grok-4.7/cache/validate_group/7b56555bf6cf573eec0f8dfbdc6adb945d11f598b1a2ca9ff281480fa74f3e95.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "cc80b03e-c381-932a-b96a-4d7b8edfe672",
+      "usage": {
+        "prompt_tokens": 3426,
+        "completion_tokens": 285,
+        "total_tokens": 10022,
+        "prompt_tokens_details": {
+          "text_tokens": 2800,
+          "audio_tokens": 0,
+          "image_tokens": 626,
+          "cached_tokens": 1152
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 6311,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 447000000
+      }
+    }
+  ],
+  "format_warnings": []
+}

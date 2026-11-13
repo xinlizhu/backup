@@ -1,0 +1,237 @@
+[
+  {
+    "model": "gpt-5.6-sol",
+    "text_ok": true,
+    "visual_review_ok": true,
+    "errors": {},
+    "hello_reply": "Hello! How can I help?",
+    "reported_model": "gpt-5.6-sol",
+    "usage": {
+      "prompt_tokens": 18301,
+      "completion_tokens": 11,
+      "total_tokens": 18312,
+      "prompt_tokens_details": {
+        "cached_tokens": 18298
+      }
+    },
+    "probe_group_id": "pinpoint_group_fcdb9b204d9d2398",
+    "probe_negative_id": "pinpoint_group_fcdb9b204d9d2398_query_05113_attribute_substitute",
+    "image_count": 6,
+    "review_decision": "rejected",
+    "review_reason": "The olive-to-green substitution changes one color attribute, but positives 4 and 5 show shoes and a denim close-up, respectively. Neither allows a top's color to be assessed, so the new fact cannot be verified as false across all supplied positives.",
+    "trace": {
+      "stage": "validate_group",
+      "model_name": "gpt-5.6-sol",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "f1621ddcbb12117a094d3a4d260b0203e674bb9c678a94cb31d15f04e135bda0",
+      "input_hash": "e049b563563f1882967cba3cc7eed0b7b276c63aaf69121a91d79cfa052748ef",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/probes/gpt-5.6-sol/cache/validate_group/e049b563563f1882967cba3cc7eed0b7b276c63aaf69121a91d79cfa052748ef.json",
+      "cached": true,
+      "attempts": 1,
+      "request_id": "resp_0feed666d09c05e9016af42cd951b487d09a88ebf55605ea24",
+      "usage": {
+        "prompt_tokens": 22640,
+        "completion_tokens": 223,
+        "total_tokens": 22863,
+        "completion_tokens_details": {
+          "reasoning_tokens": 119
+        }
+      }
+    },
+    "format_warnings": [],
+    "ready_for_audit": true,
+    "readiness_basis": "Successful actual multimodal review; hello is an auxiliary diagnostic",
+    "limit": "A valid multimodal response verifies request/response compatibility, not that the provider/model reliably used the images."
+  },
+  {
+    "model": "gpt-5.6-luna",
+    "text_ok": true,
+    "visual_review_ok": true,
+    "errors": {},
+    "hello_reply": "Hello! How can I help?",
+    "reported_model": "gpt-5.6-luna",
+    "usage": {
+      "prompt_tokens": 18301,
+      "completion_tokens": 11,
+      "total_tokens": 18312,
+      "prompt_tokens_details": {
+        "cached_tokens": 18298
+      }
+    },
+    "probe_group_id": "pinpoint_group_fcdb9b204d9d2398",
+    "probe_negative_id": "pinpoint_group_fcdb9b204d9d2398_query_05113_attribute_substitute",
+    "image_count": 6,
+    "review_decision": "rejected",
+    "review_reason": "The olive-to-green substitution is a single attribute edit, but positives 4 and 5 show shoes and denim without a visible top. Its color cannot be assessed, so green cannot be established as false for every supplied positive.",
+    "trace": {
+      "stage": "validate_group",
+      "model_name": "gpt-5.6-luna",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "f1621ddcbb12117a094d3a4d260b0203e674bb9c678a94cb31d15f04e135bda0",
+      "input_hash": "a0f390afa517ea2d0e80ae60a839239905efcf3ae9bca61c12a674857018bd4e",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/probes/gpt-5.6-luna/cache/validate_group/a0f390afa517ea2d0e80ae60a839239905efcf3ae9bca61c12a674857018bd4e.json",
+      "cached": true,
+      "attempts": 1,
+      "request_id": "resp_0712e6d7e302bd3b016af42ce0abd087d094f8e2b13fea20ba",
+      "usage": {
+        "prompt_tokens": 22640,
+        "completion_tokens": 289,
+        "total_tokens": 22929,
+        "prompt_tokens_details": {
+          "cached_tokens": 22637
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 191
+        }
+      }
+    },
+    "format_warnings": [],
+    "ready_for_audit": true,
+    "readiness_basis": "Successful actual multimodal review; hello is an auxiliary diagnostic",
+    "limit": "A valid multimodal response verifies request/response compatibility, not that the provider/model reliably used the images."
+  },
+  {
+    "model": "gpt-6.1-terra",
+    "text_ok": false,
+    "visual_review_ok": false,
+    "errors": {
+      "hello": "Client error '429 Too Many Requests' for url 'https://ai.gs88.shop/v1/chat/completions'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429",
+      "visual_review": "VLM stage validate_group failed after 1 attempt(s): attempt 1: ChatCompletionsHTTPError: Error code: 429 - {'error': {'message': 'All available accounts are currently rate-limited. Please retry later.', 'type': 'rate_limit_error'}}"
+    },
+    "ready_for_audit": false,
+    "readiness_basis": "Successful actual multimodal review; hello is an auxiliary diagnostic",
+    "limit": "A valid multimodal response verifies request/response compatibility, not that the provider/model reliably used the images."
+  },
+  {
+    "model": "grok-4.6",
+    "text_ok": true,
+    "visual_review_ok": true,
+    "errors": {},
+    "hello_reply": "Hello. How can I help you today?",
+    "reported_model": "grok-4.6",
+    "usage": {
+      "prompt_tokens": 1243,
+      "completion_tokens": 9,
+      "total_tokens": 1284,
+      "prompt_tokens_details": {
+        "text_tokens": 1243,
+        "audio_tokens": 0,
+        "image_tokens": 0,
+        "cached_tokens": 1152
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 32,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      },
+      "num_sources_used": 0,
+      "cost_in_usd_ticks": 10040000
+    },
+    "probe_group_id": "pinpoint_group_fcdb9b204d9d2398",
+    "probe_negative_id": "pinpoint_group_fcdb9b204d9d2398_query_05113_attribute_substitute",
+    "image_count": 6,
+    "review_decision": "accepted",
+    "review_reason": "Single attribute substitution of olive→green exactly reconstructs the query and preserves the rest. None of the four positives shows a green garment or colorway, so the new color is clearly false for every positive.",
+    "trace": {
+      "stage": "validate_group",
+      "model_name": "grok-4.6",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "f1621ddcbb12117a094d3a4d260b0203e674bb9c678a94cb31d15f04e135bda0",
+      "input_hash": "87dd43c24223218229df979408544f437829c78b49afb7f5045571b48ba14d37",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/probes/grok-4.6/cache/validate_group/87dd43c24223218229df979408544f437829c78b49afb7f5045571b48ba14d37.json",
+      "cached": true,
+      "attempts": 1,
+      "request_id": "4962cd6d-5048-977c-bb3d-c112df43a16e",
+      "usage": {
+        "prompt_tokens": 5346,
+        "completion_tokens": 91,
+        "total_tokens": 9528,
+        "prompt_tokens_details": {
+          "text_tokens": 2580,
+          "audio_tokens": 0,
+          "image_tokens": 2766,
+          "cached_tokens": 1152
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 4091,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 340560000
+      }
+    },
+    "format_warnings": [],
+    "ready_for_audit": true,
+    "readiness_basis": "Successful actual multimodal review; hello is an auxiliary diagnostic",
+    "limit": "A valid multimodal response verifies request/response compatibility, not that the provider/model reliably used the images."
+  },
+  {
+    "model": "claude-haiku-5-5",
+    "text_ok": true,
+    "visual_review_ok": true,
+    "errors": {},
+    "hello_reply": "Hey there. I'm Claude, made by Anthropic. What can I help you with today?",
+    "reported_model": "claude-haiku-5-5",
+    "usage": {
+      "prompt_tokens": 4361,
+      "completion_tokens": 20,
+      "total_tokens": 4381,
+      "prompt_tokens_details": {
+        "cached_tokens": 3398,
+        "cache_creation_tokens": 959
+      }
+    },
+    "probe_group_id": "pinpoint_group_fcdb9b204d9d2398",
+    "probe_negative_id": "pinpoint_group_fcdb9b204d9d2398_query_05113_attribute_substitute",
+    "image_count": 6,
+    "review_decision": "rejected",
+    "review_reason": "The substitution of 'olive' to 'green' is not clearly false for all supplied positive images. Image 6 shows a light blue/periwinkle colored garment, and images 3-5 display light blue tones. While these are not green, the edit does not create a factually false statement that contradicts every positive image; green could reasonably describe some hues present or be compatible with neutral/cool color palettes shown.",
+    "trace": {
+      "stage": "validate_group",
+      "model_name": "claude-haiku-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "f1621ddcbb12117a094d3a4d260b0203e674bb9c678a94cb31d15f04e135bda0",
+      "input_hash": "2677142dde6e4e9dad23ad2cdc0ffb823f40a75386ba7049d01726fa3d18794a",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/probes/claude-haiku-5-5/cache/validate_group/2677142dde6e4e9dad23ad2cdc0ffb823f40a75386ba7049d01726fa3d18794a.json",
+      "cached": true,
+      "attempts": 1,
+      "request_id": "msg_01jAB3KP1BTGAcZZNxDC2bJv6g",
+      "usage": {
+        "prompt_tokens": 9127,
+        "completion_tokens": 202,
+        "total_tokens": 9329,
+        "prompt_tokens_details": {
+          "cached_tokens": 7115,
+          "cache_creation_tokens": 2008
+        }
+      }
+    },
+    "format_warnings": [
+      {
+        "negative_id": "pinpoint_group_fcdb9b204d9d2398_query_05113_attribute_substitute",
+        "kind": "reason_exceeds_requested_length",
+        "requested_max_characters": 300,
+        "actual_characters": 415,
+        "action": "full reason retained; decision and failure_code unchanged"
+      }
+    ],
+    "ready_for_audit": true,
+    "readiness_basis": "Successful actual multimodal review; hello is an auxiliary diagnostic",
+    "limit": "A valid multimodal response verifies request/response compatibility, not that the provider/model reliably used the images."
+  }
+]

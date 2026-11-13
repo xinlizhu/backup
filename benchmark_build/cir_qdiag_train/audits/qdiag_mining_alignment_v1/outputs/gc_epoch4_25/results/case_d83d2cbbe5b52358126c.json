@@ -1,0 +1,160 @@
+{
+  "case_id": "case_d83d2cbbe5b52358126c",
+  "audit_query_id": "audit_query_097",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_d83d2cbbe5b52358126c",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The saxophone has a vivid blue body and bell, contrasting with the reference's conventional gold-colored finish."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The saxophones have brass-colored finishes; the blue belongs to the background, not the instruments."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The saxophone must be blue."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "attribute",
+        "before_span": "blue",
+        "after_span": "tarnished",
+        "edited_instruction": "be a tarnished saxophone instead of a regular one.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "Replace the blue finish requirement with a tarnished finish requirement.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The blue saxophone has a glossy body and bright gold-colored hardware, without visible tarnishing."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The brass saxophones show dull, uneven darkened surfaces and tarnish, contrasting with the reference's polished gold-colored finish."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_d83d2cbbe5b52358126c",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a saxophone with a vivid blue body, neck, and bell, contrasting with the reference's conventional gold finish."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows brass-colored saxophones with uneven, darkened finishes. Their bodies are not blue; the blue area is the background."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing 'blue' with 'tarnished' changes one finish attribute while preserving the saxophone entity and remaining meaning. The positive has a glossy blue finish, whereas the candidate's brass saxophones visibly show dull, mottled darkening consistent with tarnish.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The saxophone has a glossy blue body and bright gold hardware, without visible tarnishing."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The brass saxophones show uneven brown and dark patches, particularly around their bells and curved bodies, visibly supporting a tarnished finish."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "substitute",
+      "semantic_target": "attribute",
+      "before_span": "blue",
+      "after_span": "tarnished",
+      "edited_instruction": "be a tarnished saxophone instead of a regular one.",
+      "witness_type": "substitution_contrast",
+      "changed_constraint": "Replace the blue finish requirement with a tarnished finish requirement.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "The blue saxophone has a glossy body and bright gold-colored hardware, without visible tarnishing."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "The brass saxophones show dull, uneven darkened surfaces and tarnish, contrasting with the reference's polished gold-colored finish."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing 'blue' with 'tarnished' changes one finish attribute while preserving the saxophone entity and remaining meaning. The positive has a glossy blue finish, whereas the candidate's brass saxophones visibly show dull, mottled darkening consistent with tarnish.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The saxophone has a glossy blue body and bright gold hardware, without visible tarnishing."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The brass saxophones show uneven brown and dark patches, particularly around their bells and curved bodies, visibly supporting a tarnished finish."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "0baa6b9f4c7a98331251611b6d9566e87abe3e55acf93388b7cabac024458cc0",
+      "input_hash": "f465dfca0a6da12f7a56f659b0eab2638bc039a715fce6397b5ed682ac76cf1a",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/f465dfca0a6da12f7a56f659b0eab2638bc039a715fce6397b5ed682ac76cf1a.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_044f86310cde89ad016af2bdc8671c87d194761534562f6eab",
+      "usage": {
+        "prompt_tokens": 7669,
+        "completion_tokens": 590,
+        "total_tokens": 8259,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 242
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "9a362fd4ce4aaaf3c581902adcd1637a58deaddd5675202727acdd62431f2741",
+      "input_hash": "24debffd62e16aadc989882e6cd3ae5dcd65e87e7a0cd40a7ecfaa77e529e903",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/24debffd62e16aadc989882e6cd3ae5dcd65e87e7a0cd40a7ecfaa77e529e903.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_08e2c97594b3066c016af2bdf5ac6887d1b722b891336dff84",
+      "usage": {
+        "prompt_tokens": 7193,
+        "completion_tokens": 323,
+        "total_tokens": 7516
+      }
+    }
+  ]
+}

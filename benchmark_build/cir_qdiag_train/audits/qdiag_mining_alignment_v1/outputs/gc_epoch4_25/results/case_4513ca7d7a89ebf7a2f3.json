@@ -1,0 +1,82 @@
+{
+  "case_id": "case_4513ca7d7a89ebf7a2f3",
+  "audit_query_id": "audit_query_080",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_4513ca7d7a89ebf7a2f3",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "A bright yellow flower stands in a white vase, replacing the reference's pale blossoms and dark patterned vase and supporting the requested decorative brightening."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The image shows two black padded sports sleeves with white logos; no flower or vase is present."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "A yellow flower must be present.",
+      "The flower must be in a vase."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_4513ca7d7a89ebf7a2f3",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a bright yellow flower with green leaves in a white vase, supporting the requested yellow flower arrangement relative to the reference's pale blossoms."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows two black Mizuno sports pads with white logos; there is no yellow flower or vase."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "e293408bdc4725753964d1be2e680de06a7ea154a37fc285d066bd19bdf0b583",
+      "input_hash": "1125220e48d745b064ec1ede2c42eaf1994f0686439084f38dab52c1d9ea10d5",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/1125220e48d745b064ec1ede2c42eaf1994f0686439084f38dab52c1d9ea10d5.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_027e9ab31d201aa9016af2bd8b02fc87d1b1ad25b68f82da9a",
+      "usage": {
+        "prompt_tokens": 7715,
+        "completion_tokens": 177,
+        "total_tokens": 7892,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "f71bb4fd4e454a76fbf557313902f2a6dcc1f17dbb1d4b4a26e6a46d9ad3b9bf",
+      "input_hash": "1ba82be3aa3bd0cf10fe2989a546c894f4b000e94fc3a53f5558e13b3afbc8f6",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/1ba82be3aa3bd0cf10fe2989a546c894f4b000e94fc3a53f5558e13b3afbc8f6.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_045d3ecb03b63044016af2bd91826087d1bf7c06d162c302e5",
+      "usage": {
+        "prompt_tokens": 7173,
+        "completion_tokens": 109,
+        "total_tokens": 7282
+      }
+    }
+  ]
+}

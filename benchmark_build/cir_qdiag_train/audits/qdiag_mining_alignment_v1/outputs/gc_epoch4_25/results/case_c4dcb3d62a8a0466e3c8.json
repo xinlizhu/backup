@@ -1,0 +1,92 @@
+{
+  "case_id": "case_c4dcb3d62a8a0466e3c8",
+  "audit_query_id": "audit_query_089",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_c4dcb3d62a8a0466e3c8",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Three buses are visible together; one is heavily charred, consistent with the described fire damage."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Two buses are visible at a nighttime roadway crash scene, not in a bus parking lot; no fire damage is apparent."
+    },
+    "candidate_relation": "multiple_constraint_conflict",
+    "violated_source_constraints": [
+      "bus parking lot",
+      "three buses",
+      "fire in the front ends"
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_c4dcb3d62a8a0466e3c8",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "Three buses are visible, but the image does not clearly establish that all three had fires in their front ends; the prominent damage is on the sides/front area of the central buses."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The image shows buses involved in a nighttime road collision with responders, not a bus parking lot with three buses burned at their front ends."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "0f4e2c48ea779784a2d8148544dd23e590f61530b73e1f7a204e0b34500a4f75",
+      "input_hash": "d7894655f8464dabd996e2a7e39e23a3889068b36f346f91e75c7431cd15255e",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/d7894655f8464dabd996e2a7e39e23a3889068b36f346f91e75c7431cd15255e.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0e68f4fcda3e6ab5016af2bf69736087d1ad87525b6fffae3a",
+      "usage": {
+        "prompt_tokens": 8183,
+        "completion_tokens": 416,
+        "total_tokens": 8599,
+        "prompt_tokens_details": {
+          "cached_tokens": 5888
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 281
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "e7f97311a2682e1a42c73e19682590bbb0192011d79fbba55b72df104a57953a",
+      "input_hash": "451517f7f05b5d130defc1f9d39dd821109a41f7287cd02017a8e83e2275edbd",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/451517f7f05b5d130defc1f9d39dd821109a41f7287cd02017a8e83e2275edbd.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0560135f6d8c9a24016af2bf76c13487d190088906a14f9b81",
+      "usage": {
+        "prompt_tokens": 7641,
+        "completion_tokens": 438,
+        "total_tokens": 8079,
+        "prompt_tokens_details": {
+          "cached_tokens": 5248
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 315
+        }
+      }
+    }
+  ]
+}

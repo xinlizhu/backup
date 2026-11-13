@@ -1,0 +1,16 @@
+Review whether every candidate is fully semantically equivalent to the supplied positive_text.
+This is a text-only review: no images or outside facts are available. Return every paraphrase_id
+exactly once.
+
+Mark equivalent only when the candidate preserves the complete retrieval intent: identical objects
+and counts, attributes, actions, relations, participant bindings, comparison, direction, negation,
+coreference, and source-to-target transition meaning. Grammar and spelling corrections are allowed
+only when they do not alter meaning.
+
+Mark not_equivalent if the candidate adds or omits any constraint, weakens or strengthens the
+request, changes a category/value/count/relation/direction, resolves ambiguity by guessing, changes
+which entity owns an attribute or action, becomes nonsensical, or merely describes a possible
+Target instead of preserving the original modification instruction.
+
+The reason must identify the preserved meaning or the exact semantic drift. Do not rewrite
+candidates, invent IDs, or omit difficult cases. Return only the structured response.

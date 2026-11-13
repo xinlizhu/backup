@@ -1,0 +1,62 @@
+{
+  "group_id": "pinpoint_group_beb5e83bfb5c2dc6",
+  "model": "claude-haiku-5-5",
+  "signature": "44bb4aae802e19564501a676b733c7e19828d9ced260b7da0428f08b1a359df2",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_beb5e83bfb5c2dc6_query_02112_attribute_add",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Single attribute edit adding 'narrow cut' specification. The negative text is fluent and preserves the source meaning while adding exactly one new constraint about necktie width. Both positive images show neckties but neither contradicts a narrow cut—image 2 shows a standard width tie and image 3 shows a textured tie, neither explicitly wide. The edit is verifiable and represents a meaningful single semantic constraint."
+    },
+    {
+      "negative_id": "pinpoint_group_beb5e83bfb5c2dc6_query_02114_object_add",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "The added object 'matching pocket square' is compatible with the positive images. Image 2 shows a single necktie without a pocket square visible, but this does not contradict the request for both a matching tie and pocket square together. A pocket square is a standard accessory that could accompany either positive result, making this edit insufficiently constrained by the visual evidence."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-haiku-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "dff9709ea50b5d53593fd5c7b0f9ad0e4d88c023d0b0a25be5b25f9df394c6f7",
+      "input_hash": "952ebfaa047a3b8e31c120c54da11b263831497855b1caf6ae15b430611c9e67",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/claude-haiku-5-5/cache/validate_group/952ebfaa047a3b8e31c120c54da11b263831497855b1caf6ae15b430611c9e67.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01DjXLE3OPRyC5GtnkuzgKdNXE",
+      "usage": {
+        "prompt_tokens": 7408,
+        "completion_tokens": 362,
+        "total_tokens": 7770,
+        "prompt_tokens_details": {
+          "cached_tokens": 5775,
+          "cache_creation_tokens": 1629
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_beb5e83bfb5c2dc6_query_02112_attribute_add",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 423,
+      "action": "full reason retained; decision and failure_code unchanged"
+    },
+    {
+      "negative_id": "pinpoint_group_beb5e83bfb5c2dc6_query_02114_object_add",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 391,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

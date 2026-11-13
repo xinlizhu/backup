@@ -1,0 +1,88 @@
+{
+  "case_id": "case_4a43df17351cb32d758c",
+  "audit_query_id": "audit_query_095",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_4a43df17351cb32d758c",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows one pelican in greyish water, with its body raised above the water and its beak open."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a seal, not a bird, in blue water; the seal is raised above the surface with its mouth open."
+    },
+    "candidate_relation": "multiple_constraint_conflict",
+    "violated_source_constraints": [
+      "Remove all but one bird: the candidate shows a seal rather than a bird.",
+      "Change water color to grey: the candidate's water is visibly blue."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_4a43df17351cb32d758c",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows one bird with its body raised above the water and its beak open; the water appears grey."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a seal, not a bird, emerging from visibly blue water; it is holding an octopus with its mouth open."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "69e2faaef8d40bef3558b8c83c9877dd8f0dcf868a106bbb0eb0f664d17a964f",
+      "input_hash": "475a17a87ae638ab1cbbe71c83a22e01ab8be36a7942aee6bdbf2290672641eb",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/475a17a87ae638ab1cbbe71c83a22e01ab8be36a7942aee6bdbf2290672641eb.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_ack_8cc247a35fa75042f143f662e55d767d",
+      "usage": {
+        "prompt_tokens": 8159,
+        "completion_tokens": 457,
+        "total_tokens": 8616,
+        "completion_tokens_details": {
+          "reasoning_tokens": 299
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "13a796da50c3154441986d0bb2506c6ad4d26e70814fe0968efc6a83fbdeb342",
+      "input_hash": "5a3abaa92286454d9cfabdaafc3e72bcd58d9f0e6bd5beb4b663ae5a5ad703ee",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/5a3abaa92286454d9cfabdaafc3e72bcd58d9f0e6bd5beb4b663ae5a5ad703ee.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_ft_fd62fbe2a3fb4ab7a640bf8ccec8ea38",
+      "usage": {
+        "prompt_tokens": 11993,
+        "completion_tokens": 178,
+        "total_tokens": 12171,
+        "prompt_tokens_details": {
+          "cached_tokens": 3449
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 71
+        }
+      }
+    }
+  ]
+}

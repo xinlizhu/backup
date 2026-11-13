@@ -1,0 +1,175 @@
+{
+  "case_id": "case_ba411dde4581749e156d",
+  "audit_query_id": "audit_query_098",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_ba411dde4581749e156d",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "A woman faces the camera behind a group of sled dogs in a snowy landscape, replacing the reference's reindeer-and-sleigh scene."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "The collage's bottom photograph shows women facing the camera with a group of dogs. The instruction does not require snow, sled dogs, or a single photograph."
+    },
+    "candidate_relation": "compatible",
+    "violated_source_constraints": [],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "add",
+        "semantic_target": "attribute",
+        "before_span": null,
+        "after_span": "short-legged",
+        "edited_instruction": "Make the woman to pose for camera with group of short-legged dogs instead showing different scene into picture",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "The dogs must be short-legged.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The sled dogs have ordinary, relatively long legs rather than the conspicuously short legs specified by the edit."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The women in the bottom group photograph pose with low-bodied, short-legged basset hounds, also shown elsewhere in the collage."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "operation": "add",
+        "semantic_target": "predicate",
+        "before_span": null,
+        "after_span": "on grass",
+        "edited_instruction": "Make the woman to pose for camera on grass with group of dogs instead showing different scene into picture",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "The woman must pose with the dogs on grass.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The woman and dogs are on snow, with no grassy posing area visible."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The bottom photograph shows women facing the camera with dogs on a green lawn."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_ba411dde4581749e156d",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "A team of dogs stands in snow with bundled people on a sled behind them. Although one person faces toward the camera, the image does not clearly establish a woman posing with the dogs rather than people riding or handling the sled."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "The bottom-right photograph in the collage shows women standing together facing the camera with a group of basset hounds, supporting the requested woman posing with dogs."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "reject",
+        "failure_code": "source_invalid_or_uncertain",
+        "witness_type": null,
+        "reason": "The insertion adds one visible dog attribute, and the candidate's basset hounds have short legs. However, ADD requires the original instruction to be supported on both images; the positive does not reliably establish a woman posing for the camera with the dogs.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The sled dogs have ordinary, relatively long legs rather than the short-legged build requested by the addition."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The bottom-right group portrait includes women facing the camera with multiple visibly short-legged basset hounds."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "decision": "reject",
+        "failure_code": "source_invalid_or_uncertain",
+        "witness_type": null,
+        "reason": "The insertion adds a single location constraint, but the required original-query support on the positive remains uncertain. The clear snow-versus-grass distinction cannot establish the original woman-posing constraint.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The people, sled, and dogs are on snow, with no grass visible beneath them."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "In the bottom-right photograph, women pose with a group of dogs on a visibly green grassy area beside a paved path."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": false,
+      "local_failures": [
+        "wrong_witness_type",
+        "wrong_support_pattern"
+      ],
+      "review_decision": "reject"
+    },
+    {
+      "witness_id": "w2",
+      "accepted": false,
+      "local_failures": [
+        "wrong_witness_type",
+        "wrong_support_pattern"
+      ],
+      "review_decision": "reject"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "2e140670dbde31e7069402b1cb816ce9fbdd069efd318673a6095dbfa88ba67c",
+      "input_hash": "318d8f3f2d38a011bf5f3c94e677f37808311a4122e921f68441f65b804b8c2c",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/318d8f3f2d38a011bf5f3c94e677f37808311a4122e921f68441f65b804b8c2c.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_06ddd21bbdd942c5016af2be6e60e487d1bbf8afaaecc96092",
+      "usage": {
+        "prompt_tokens": 8714,
+        "completion_tokens": 850,
+        "total_tokens": 9564,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 323
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "e23ee7a6ab9b9e416d1577d65d63bbf7bb7371f9871c39747458e03c742ba899",
+      "input_hash": "10c0b0bb94e4cc15f5e1df5c64ebbf34d19238c0f6de67d5dd61d38b338948c2",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/10c0b0bb94e4cc15f5e1df5c64ebbf34d19238c0f6de67d5dd61d38b338948c2.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0ed25faec5df5ffb016af2be909d7487d2a4eedf7c4b6ea948",
+      "usage": {
+        "prompt_tokens": 8315,
+        "completion_tokens": 662,
+        "total_tokens": 8977,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 153
+        }
+      }
+    }
+  ]
+}

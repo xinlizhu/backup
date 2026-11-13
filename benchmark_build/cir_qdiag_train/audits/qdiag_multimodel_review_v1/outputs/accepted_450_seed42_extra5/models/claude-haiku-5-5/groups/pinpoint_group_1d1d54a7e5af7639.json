@@ -1,0 +1,62 @@
+{
+  "group_id": "pinpoint_group_1d1d54a7e5af7639",
+  "model": "claude-haiku-5-5",
+  "signature": "44bb4aae802e19564501a676b733c7e19828d9ced260b7da0428f08b1a359df2",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_1d1d54a7e5af7639_query_07639_object_add",
+      "decision": "reject",
+      "failure_code": "not_single_edit",
+      "reason": "The negative text adds 'and a hat is present' to the source, but examining all supplied positive images (2-5), none show a hat on the wearer. The source instruction is about modifying the sweater only. Adding a hat introduces a new object constraint unrelated to the sweater modification task, making this a bundled change rather than a single semantic edit focused on the sweater."
+    },
+    {
+      "negative_id": "pinpoint_group_1d1d54a7e5af7639_query_07641_predicate_substitute",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "The source text specifies 'without any graphic prints' and the substitute changes this to 'with graphic prints'. However, the reference image (1) shows a yellow sweater with extensive graphic prints and text. All supplied positive images (2-5) show plain yellow sweaters or knits without graphics. The reference image itself supports the 'with graphic prints' version, making the new fact visually compatible with at least one reference, so this cannot be rejected as clearly false."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-haiku-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "5c6bcba580f68573b7226fcbf493cd80d4a17e8a053de60a7dd0fd775a5bae38",
+      "input_hash": "c918831794089cafd419d71df70b5c664fad399668acec4f55f9c6def176bc62",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/claude-haiku-5-5/cache/validate_group/c918831794089cafd419d71df70b5c664fad399668acec4f55f9c6def176bc62.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_015wlcptrQSBAJ9IkqtLuPX8k8",
+      "usage": {
+        "prompt_tokens": 10260,
+        "completion_tokens": 382,
+        "total_tokens": 10642,
+        "prompt_tokens_details": {
+          "cached_tokens": 7999,
+          "cache_creation_tokens": 2257
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_1d1d54a7e5af7639_query_07639_object_add",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 381,
+      "action": "full reason retained; decision and failure_code unchanged"
+    },
+    {
+      "negative_id": "pinpoint_group_1d1d54a7e5af7639_query_07641_predicate_substitute",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 482,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

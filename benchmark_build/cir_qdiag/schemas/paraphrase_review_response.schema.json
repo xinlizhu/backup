@@ -1,0 +1,52 @@
+{
+  "$defs": {
+    "ParaphraseReview": {
+      "additionalProperties": false,
+      "properties": {
+        "decision": {
+          "enum": [
+            "equivalent",
+            "not_equivalent"
+          ],
+          "title": "Decision",
+          "type": "string"
+        },
+        "paraphrase_id": {
+          "minLength": 1,
+          "title": "Paraphrase Id",
+          "type": "string"
+        },
+        "reason": {
+          "maxLength": 400,
+          "minLength": 1,
+          "title": "Reason",
+          "type": "string"
+        }
+      },
+      "required": [
+        "paraphrase_id",
+        "decision",
+        "reason"
+      ],
+      "title": "ParaphraseReview",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "reviews": {
+      "items": {
+        "$ref": "#/$defs/ParaphraseReview"
+      },
+      "maxItems": 20,
+      "minItems": 1,
+      "title": "Reviews",
+      "type": "array"
+    }
+  },
+  "required": [
+    "reviews"
+  ],
+  "title": "ParaphraseReviewResponse",
+  "type": "object"
+}

@@ -1,0 +1,68 @@
+{
+  "group_id": "pinpoint_group_6cc6cf584005ed73",
+  "model": "kimi-k3",
+  "signature": "7bcee9a6a15f47b49de535c2997e213c18a83885fbb254d34ea6aaed145faa23",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_6cc6cf584005ed73_query_02233_attribute_delete",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Single attribute DELETE of 'textile'; result is grammatical, meaningful, and strictly weaker than source."
+    },
+    {
+      "negative_id": "pinpoint_group_6cc6cf584005ed73_query_02236_predicate_delete",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Removes exactly one predicate constraint ('crafted with the textile approach of the image'); 'Gloves' is fluent and strictly weaker."
+    },
+    {
+      "negative_id": "pinpoint_group_6cc6cf584005ed73_query_02237_predicate_add",
+      "decision": "reject",
+      "failure_code": "not_visually_verifiable",
+      "reason": "'laid beside the image' is an odd spatial relation to an image itself and cannot be reliably judged against references/positives."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "kimi-k3",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "9b36dca81deeacbf64f6305f8e31dd2f7fbd7b502a7b611b648344ad63616c17",
+      "input_hash": "852032bf04bdaf24f2a29dde7ffa8cf14706537a9e5ea7b956e8183be137b933",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/kimi-k3/cache/validate_group/852032bf04bdaf24f2a29dde7ffa8cf14706537a9e5ea7b956e8183be137b933.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "01a1c9ba187d77eea9271098ae636960",
+      "usage": {
+        "prompt_tokens": 4257,
+        "completion_tokens": 469,
+        "total_tokens": 4726,
+        "prompt_cache_hit_tokens": 768,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "text_tokens": 0,
+          "audio_tokens": 0,
+          "image_tokens": 0
+        },
+        "completion_tokens_details": {
+          "text_tokens": 0,
+          "audio_tokens": 0,
+          "image_tokens": 0,
+          "reasoning_tokens": 0
+        },
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "input_tokens_details": null,
+        "claude_cache_creation_5_m_tokens": 0,
+        "claude_cache_creation_1_h_tokens": 0,
+        "credit": 2.96
+      }
+    }
+  ],
+  "format_warnings": []
+}

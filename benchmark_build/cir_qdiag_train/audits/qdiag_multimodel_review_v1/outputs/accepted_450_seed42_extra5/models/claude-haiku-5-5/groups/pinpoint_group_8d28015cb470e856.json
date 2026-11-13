@@ -1,0 +1,49 @@
+{
+  "group_id": "pinpoint_group_8d28015cb470e856",
+  "model": "claude-haiku-5-5",
+  "signature": "44bb4aae802e19564501a676b733c7e19828d9ced260b7da0428f08b1a359df2",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_8d28015cb470e856_query_07419_predicate_substitute",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "The positive image (Image 2) shows a white v-neck jumpsuit WITHOUT a belt, which is compatible with the negative text requesting the jumpsuit 'styled with a belt at the waist.' The positive does not contradict the new predicate, making this edit unverifiable as a clear false claim against all supplied positives."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-haiku-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "649ee898d86057cbb95a82733f37835491f53890823f7ac2977767ed44f229b8",
+      "input_hash": "ce7965f53f39a744ee6002a5be904524a94413b0afd58e3b2c642ec8fc338954",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/claude-haiku-5-5/cache/validate_group/ce7965f53f39a744ee6002a5be904524a94413b0afd58e3b2c642ec8fc338954.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01Av2yBBhhTVO8qUyMOqPJCFr8",
+      "usage": {
+        "prompt_tokens": 7194,
+        "completion_tokens": 170,
+        "total_tokens": 7364,
+        "prompt_tokens_details": {
+          "cached_tokens": 5608,
+          "cache_creation_tokens": 1582
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_8d28015cb470e856_query_07419_predicate_substitute",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 313,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

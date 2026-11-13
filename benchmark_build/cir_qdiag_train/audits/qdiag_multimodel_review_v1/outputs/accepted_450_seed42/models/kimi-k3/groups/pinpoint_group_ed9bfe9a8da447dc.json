@@ -1,0 +1,68 @@
+{
+  "group_id": "pinpoint_group_ed9bfe9a8da447dc",
+  "model": "kimi-k3",
+  "signature": "7bcee9a6a15f47b49de535c2997e213c18a83885fbb254d34ea6aaed145faa23",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_ed9bfe9a8da447dc_query_00660_object_add",
+      "decision": "reject",
+      "failure_code": "not_visually_verifiable",
+      "reason": "A faint atmospheric haze is an ambient rendering effect not reliably decidable from the images; it is neither clearly present nor clearly false in the supplied positives, so the new fact cannot be verified."
+    },
+    {
+      "negative_id": "pinpoint_group_ed9bfe9a8da447dc_query_00661_predicate_delete",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Removes exactly one predicate constraint (translating the form language into an illuminated object) while preserving grammar and all other meaning; the result is fluent and strictly weaker."
+    },
+    {
+      "negative_id": "pinpoint_group_ed9bfe9a8da447dc_query_00661_object_substitute",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Substituting 'table lamp' is a single object edit; all supplied positives are pendant/ceiling fixtures, none is a table lamp, so the new fact is clearly false for every positive."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "kimi-k3",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "971fde7d52b2eef3ad6c87a2ff385e62793be56c535eabeed3494b443a2af4f8",
+      "input_hash": "33ed3128138e0802a9eec41fb785d2f93bbd68d09d7fcc17890336c7aea2a471",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/kimi-k3/cache/validate_group/33ed3128138e0802a9eec41fb785d2f93bbd68d09d7fcc17890336c7aea2a471.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "01a1c9bae3aa7e83a10b00fb056646c4",
+      "usage": {
+        "prompt_tokens": 5047,
+        "completion_tokens": 488,
+        "total_tokens": 5535,
+        "prompt_cache_hit_tokens": 768,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "text_tokens": 0,
+          "audio_tokens": 0,
+          "image_tokens": 0
+        },
+        "completion_tokens_details": {
+          "text_tokens": 0,
+          "audio_tokens": 0,
+          "image_tokens": 0,
+          "reasoning_tokens": 0
+        },
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "input_tokens_details": null,
+        "claude_cache_creation_5_m_tokens": 0,
+        "claude_cache_creation_1_h_tokens": 0,
+        "credit": 3.4
+      }
+    }
+  ],
+  "format_warnings": []
+}

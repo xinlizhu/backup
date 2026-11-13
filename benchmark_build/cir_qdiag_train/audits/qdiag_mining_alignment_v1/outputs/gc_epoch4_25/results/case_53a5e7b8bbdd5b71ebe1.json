@@ -1,0 +1,238 @@
+{
+  "case_id": "case_53a5e7b8bbdd5b71ebe1",
+  "audit_query_id": "audit_query_084",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_53a5e7b8bbdd5b71ebe1",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Like R, T shows dough on a work surface from an oblique angle, with a large wooden rolling pin clearly visible on the right."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows dough on a work surface from an oblique angle, but hands occupy the right side and no rolling pin is visible."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "Must include a rolling pin on the right-hand side."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "object",
+        "before_span": "rolling pin",
+        "after_span": "hands",
+        "edited_instruction": "Similar angled photograph, must include hands on the right hand side",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "Replace the required rolling pin on the right-hand side with hands on the right-hand side.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "T has the comparable oblique viewpoint, but no hands are visible; its right side contains a rolling pin."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C is an oblique photograph of dough on a work surface, with hands entering from the upper-right and right edges."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "operation": "delete",
+        "semantic_target": "object",
+        "before_span": ", must include rolling pin on the right hand side",
+        "after_span": null,
+        "edited_instruction": "Similar angled photograph",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "Remove the requirement for a rolling pin on the right-hand side.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "T shows dough on a work surface from an oblique viewpoint comparable to R."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C also views dough on a work surface obliquely, although from a somewhat higher angle."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_53a5e7b8bbdd5b71ebe1",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows dough on a floured wooden surface from an oblique downward angle comparable to Image 1, with a clearly visible wooden rolling pin on the right."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows dough on a wooden surface from an oblique downward angle, but no rolling pin is visible on the right; hands occupy that area."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing 'rolling pin' with 'hands' is one object substitution that preserves the angle and right-side location requirements. The rolling pin is visible only in Image 2, while hands on the right are visible only in Image 3.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 has the required oblique view, but no hands are visible on the right or elsewhere."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 has an oblique downward view of dough, with two hands extending into the image from the right."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "The deletion removes the single requirement to include a rolling pin on the right, along with its grammatical glue. Both images retain an angled view comparable to the reference; the candidate violates only the removed requirement.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 photographs dough on a wooden work surface from an oblique downward angle similar to the reference."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 also photographs dough on a wooden work surface from an oblique downward angle, although the view is somewhat steeper."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "substitute",
+      "semantic_target": "object",
+      "before_span": "rolling pin",
+      "after_span": "hands",
+      "edited_instruction": "Similar angled photograph, must include hands on the right hand side",
+      "witness_type": "substitution_contrast",
+      "changed_constraint": "Replace the required rolling pin on the right-hand side with hands on the right-hand side.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "T has the comparable oblique viewpoint, but no hands are visible; its right side contains a rolling pin."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C is an oblique photograph of dough on a work surface, with hands entering from the upper-right and right edges."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing 'rolling pin' with 'hands' is one object substitution that preserves the angle and right-side location requirements. The rolling pin is visible only in Image 2, while hands on the right are visible only in Image 3.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 has the required oblique view, but no hands are visible on the right or elsewhere."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 has an oblique downward view of dough, with two hands extending into the image from the right."
+        }
+      }
+    },
+    {
+      "witness_id": "w2",
+      "operation": "delete",
+      "semantic_target": "object",
+      "before_span": ", must include rolling pin on the right hand side",
+      "after_span": null,
+      "edited_instruction": "Similar angled photograph",
+      "witness_type": "deletion_relaxation",
+      "changed_constraint": "Remove the requirement for a rolling pin on the right-hand side.",
+      "edited_on_positive": {
+        "status": "supported",
+        "evidence": "T shows dough on a work surface from an oblique viewpoint comparable to R."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C also views dough on a work surface obliquely, although from a somewhat higher angle."
+      },
+      "independent_review": {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "The deletion removes the single requirement to include a rolling pin on the right, along with its grammatical glue. Both images retain an angled view comparable to the reference; the candidate violates only the removed requirement.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 photographs dough on a wooden work surface from an oblique downward angle similar to the reference."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 also photographs dough on a wooden work surface from an oblique downward angle, although the view is somewhat steeper."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    },
+    {
+      "witness_id": "w2",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "cf22fb35c053083614889daa6480da05274766c561a6456d56fb582f065ae73d",
+      "input_hash": "d3408dbd10b1a493b4f53bb3f4c492f08828051038215bfb8c1d4e7fbd0be33b",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/d3408dbd10b1a493b4f53bb3f4c492f08828051038215bfb8c1d4e7fbd0be33b.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0d32ff1545332de8016af2bde01cd887d196c97bc31f2da1b0",
+      "usage": {
+        "prompt_tokens": 7152,
+        "completion_tokens": 732,
+        "total_tokens": 7884,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 181
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "533c3777b318dccdcb6f76368d1c3495d408e4bf173887577abf2ee23cba135a",
+      "input_hash": "99a578c58f1a9ff5e18a65ab656c966ff5c23c0ccf443f2c7cce7c3c748b0f74",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/99a578c58f1a9ff5e18a65ab656c966ff5c23c0ccf443f2c7cce7c3c748b0f74.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_000c1b5a677777e1016af2bdf92bc487d1aae0e19c2e65424e",
+      "usage": {
+        "prompt_tokens": 6740,
+        "completion_tokens": 572,
+        "total_tokens": 7312,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 62
+        }
+      }
+    }
+  ]
+}

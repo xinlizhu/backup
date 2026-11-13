@@ -1,0 +1,233 @@
+{
+  "case_id": "case_df6ee04ce07858cd0240",
+  "audit_query_id": "audit_query_083",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_df6ee04ce07858cd0240",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Relative to the reference's multiple boxes, T shows one cream tube with one matching box."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "C shows one perfume bottle with one matching box, satisfying the requested single-product arrangement."
+    },
+    "candidate_relation": "compatible",
+    "violated_source_constraints": [],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "add",
+        "semantic_target": "object",
+        "before_span": null,
+        "after_span": "perfume",
+        "edited_instruction": "Leave a single perfume product with its box",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "The single product must be perfume.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "T's tube and box are labeled Body Cream & Skin Care, rather than perfume."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C shows one perfume bottle with its matching box, labeled eau de parfum."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "operation": "add",
+        "semantic_target": "attribute",
+        "before_span": null,
+        "after_span": "round",
+        "edited_instruction": "Leave a single round product with its box",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "The single product must have a round shape.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "T shows a tall, elongated cream tube, not a round product."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C shows a perfume bottle with a visibly round body beside its matching box."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_df6ee04ce07858cd0240",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "T shows one body-cream container with one matching pink box, satisfying the requested single product with its box."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "C shows one perfume bottle with one matching Axis Diamond box, satisfying the requested single product with its box."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "Inserting 'perfume' adds one object-category constraint and preserves the single-product and matching-box requirements. Both images satisfy the source instruction, while only C depicts perfume.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "T's container and box are labeled 'Body Cream & Skin Care'; the product is body cream rather than perfume."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C shows a perfume spray bottle with its matching box, which is labeled 'eau de parfum pour femme' and 'natural spray'."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "Inserting 'round' adds one shape attribute to the product while preserving the original requirements. C's bottle has a visibly round body; T's elongated cream container does not.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "T shows a tall, elongated cream container with a broad, nearly rectangular silhouette, rather than a round product."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C shows a single perfume bottle with a circular, rounded body beside its matching box."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "add",
+      "semantic_target": "object",
+      "before_span": null,
+      "after_span": "perfume",
+      "edited_instruction": "Leave a single perfume product with its box",
+      "witness_type": "addition_disambiguation",
+      "changed_constraint": "The single product must be perfume.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "T's tube and box are labeled Body Cream & Skin Care, rather than perfume."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C shows one perfume bottle with its matching box, labeled eau de parfum."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "Inserting 'perfume' adds one object-category constraint and preserves the single-product and matching-box requirements. Both images satisfy the source instruction, while only C depicts perfume.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "T's container and box are labeled 'Body Cream & Skin Care'; the product is body cream rather than perfume."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C shows a perfume spray bottle with its matching box, which is labeled 'eau de parfum pour femme' and 'natural spray'."
+        }
+      }
+    },
+    {
+      "witness_id": "w2",
+      "operation": "add",
+      "semantic_target": "attribute",
+      "before_span": null,
+      "after_span": "round",
+      "edited_instruction": "Leave a single round product with its box",
+      "witness_type": "addition_disambiguation",
+      "changed_constraint": "The single product must have a round shape.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "T shows a tall, elongated cream tube, not a round product."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C shows a perfume bottle with a visibly round body beside its matching box."
+      },
+      "independent_review": {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "Inserting 'round' adds one shape attribute to the product while preserving the original requirements. C's bottle has a visibly round body; T's elongated cream container does not.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "T shows a tall, elongated cream container with a broad, nearly rectangular silhouette, rather than a round product."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C shows a single perfume bottle with a circular, rounded body beside its matching box."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    },
+    {
+      "witness_id": "w2",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "f3737f119479ea2279d38b4cdc25cc827da2adc3f3bd1f6f1100db5c87b2a279",
+      "input_hash": "1b4a8d1055a3f5017e94123c5b92393572036a962958c71dc587f37d3f571aa8",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/1b4a8d1055a3f5017e94123c5b92393572036a962958c71dc587f37d3f571aa8.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_07e85830f8c1f7ec016af2be112a6087d1b4984b1bd6b98dbe",
+      "usage": {
+        "prompt_tokens": 8130,
+        "completion_tokens": 740,
+        "total_tokens": 8870,
+        "completion_tokens_details": {
+          "reasoning_tokens": 277
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "5893c0acd24afcf600b5e34fda8902a42c2b1695b2904308d541c672246a29a4",
+      "input_hash": "789bed4389da5f563ff5429380f912a96ce2fd8f18ca3bdaf5b02edc33d34983",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/789bed4389da5f563ff5429380f912a96ce2fd8f18ca3bdaf5b02edc33d34983.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_04bac6ecf9df5de3016af2be352af887d1adcc09b8374cc1ff",
+      "usage": {
+        "prompt_tokens": 7708,
+        "completion_tokens": 497,
+        "total_tokens": 8205,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 34
+        }
+      }
+    }
+  ]
+}

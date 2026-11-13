@@ -1,0 +1,62 @@
+{
+  "group_id": "pinpoint_group_1dd0daf893120f53",
+  "model": "kimi-k3",
+  "signature": "7bcee9a6a15f47b49de535c2997e213c18a83885fbb254d34ea6aaed145faa23",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_1dd0daf893120f53_query_07695_object_add",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "The supplied positive image shows a small tag on the pink shirt sleeve, so the added object fact remains compatible with a positive rather than being clearly false for every positive."
+    },
+    {
+      "negative_id": "pinpoint_group_1dd0daf893120f53_query_07696_attribute_add",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Single fluent attribute ADD; the reference and supplied positive shirts are pink, not red, so requiring the shirt to stay red is clearly false for all supplied positives while preserving the rest of the query."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "kimi-k3",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "4a38100c4d47961f3eea365f2316c9590195a7455e84358431ac522e80501a7c",
+      "input_hash": "133224cb72f42679d43ab3e2987fae31a9ae6e1e9ae242936c0a358a11a8288b",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/kimi-k3/cache/validate_group/133224cb72f42679d43ab3e2987fae31a9ae6e1e9ae242936c0a358a11a8288b.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "01a1c9b9822c74498e90622a4b455379",
+      "usage": {
+        "prompt_tokens": 2463,
+        "completion_tokens": 1244,
+        "total_tokens": 3707,
+        "prompt_cache_hit_tokens": 768,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "text_tokens": 0,
+          "audio_tokens": 0,
+          "image_tokens": 0
+        },
+        "completion_tokens_details": {
+          "text_tokens": 0,
+          "audio_tokens": 0,
+          "image_tokens": 0,
+          "reasoning_tokens": 0
+        },
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "input_tokens_details": null,
+        "claude_cache_creation_5_m_tokens": 0,
+        "claude_cache_creation_1_h_tokens": 0,
+        "credit": 4
+      }
+    }
+  ],
+  "format_warnings": []
+}

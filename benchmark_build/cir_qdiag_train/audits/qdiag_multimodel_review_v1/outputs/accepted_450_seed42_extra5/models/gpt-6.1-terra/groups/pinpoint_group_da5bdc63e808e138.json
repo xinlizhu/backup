@@ -1,0 +1,55 @@
+{
+  "group_id": "pinpoint_group_da5bdc63e808e138",
+  "model": "gpt-6.1-terra",
+  "signature": "08eff7f6139e72d377a59effd10853d9c15929bec5b0a3afebcc9b0ca4a1c2df",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_da5bdc63e808e138_query_06102_attribute_substitute",
+      "decision": "reject",
+      "failure_code": "not_visually_verifiable",
+      "reason": "The supplied positives show lamps, not tees; they do not let us reliably judge whether a tee is denim."
+    },
+    {
+      "negative_id": "pinpoint_group_da5bdc63e808e138_query_06102_predicate_substitute",
+      "decision": "reject",
+      "failure_code": "not_visually_verifiable",
+      "reason": "The supplied positives show lamps, not a tee beside or made from the referenced fabric, so the changed relation cannot be reliably judged."
+    },
+    {
+      "negative_id": "pinpoint_group_da5bdc63e808e138_query_06105_predicate_delete",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Deletes the single fabric-use constraint and leaves a fluent, meaningful, strictly weaker query."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "gpt-6.1-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "da5f16b41a6fd957fda08706241c562c44bd0692d17387d638e5ffd26e3c4a9c",
+      "input_hash": "9ab71663421e0172cd0936b36cbdfa2b6a996fbd68e900ed716b064e5a06b27b",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/gpt-6.1-terra/cache/validate_group/9ab71663421e0172cd0936b36cbdfa2b6a996fbd68e900ed716b064e5a06b27b.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0d8141267f8ee13b016af42e5d00dc87d0b6bf933cd9edbaeb",
+      "usage": {
+        "prompt_tokens": 8780,
+        "completion_tokens": 683,
+        "total_tokens": 9463,
+        "prompt_tokens_details": {
+          "cached_tokens": 3236
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 491
+        }
+      }
+    }
+  ],
+  "format_warnings": []
+}

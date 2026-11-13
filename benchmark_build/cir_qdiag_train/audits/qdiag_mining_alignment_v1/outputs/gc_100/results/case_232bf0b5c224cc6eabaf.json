@@ -1,0 +1,84 @@
+{
+  "case_id": "case_232bf0b5c224cc6eabaf",
+  "audit_query_id": "audit_query_006",
+  "signature": "5065d94bb0c1b275e428d3f2ada2352b274139ccb2134477487b5f51eef77ac6",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_232bf0b5c224cc6eabaf",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a hog with noticeably shorter hair than the shaggy hog in Image 1, a pale/white face, and its feet on a dirt-covered area while moving forward."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows another hog-like animal with short hair in a dirt-and-grass area, but its face is dark gray-brown rather than white; walking is not clearly visible."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "white skin on the face"
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_232bf0b5c224cc6eabaf",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a hog walking on dirt; its coat appears shorter than the shaggy coat in Image 1, and its face has a pale, whitish area."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a hog with a shorter-looking coat on grassy ground, but it is standing with its head down rather than walking, and its face appears gray-brown rather than white."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "c07774db3b45f540a30537026988a281172552224fd207d14da22c48b1884d95",
+      "input_hash": "e43986172935c976f1c2328e8dbab7d5d85b5e76ee8cdd0c3505845c72e15b0b",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_100/api_cache/propose_witnesses/e43986172935c976f1c2328e8dbab7d5d85b5e76ee8cdd0c3505845c72e15b0b.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_044120e448765021016af2b8e3170087d194cc718f2ed564ba",
+      "usage": {
+        "prompt_tokens": 7301,
+        "completion_tokens": 631,
+        "total_tokens": 7932,
+        "completion_tokens_details": {
+          "reasoning_tokens": 474
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "96b95519c29c19d0cce2b2b00ae2517c005933654aa1af1e63503b53c9d11da1",
+      "input_hash": "77e8359cef9611d9fe05fb2a8f42e4fa8e016c866c5581ce9f0c9456c62d169d",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_100/api_cache/review_witnesses/77e8359cef9611d9fe05fb2a8f42e4fa8e016c866c5581ce9f0c9456c62d169d.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0b03c03579509490016af2b906a80087d19433972ea30b0f6a",
+      "usage": {
+        "prompt_tokens": 6759,
+        "completion_tokens": 222,
+        "total_tokens": 6981,
+        "completion_tokens_details": {
+          "reasoning_tokens": 93
+        }
+      }
+    }
+  ]
+}

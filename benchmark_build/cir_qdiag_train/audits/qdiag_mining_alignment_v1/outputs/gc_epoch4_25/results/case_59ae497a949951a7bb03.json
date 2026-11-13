@@ -1,0 +1,161 @@
+{
+  "case_id": "case_59ae497a949951a7bb03",
+  "audit_query_id": "audit_query_092",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_59ae497a949951a7bb03",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Unlike the feeding panda in R, T shows one resting panda with its head lying on its forepaw above a branch."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "C shows one panda resting across tree branches, with its lowered head supported by a forepaw and no visible feeding."
+    },
+    "candidate_relation": "compatible",
+    "violated_source_constraints": [],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "add",
+        "semantic_target": "attribute",
+        "before_span": null,
+        "after_span": ", with his hindquarters visible",
+        "edited_instruction": "Goes from a panda in a tree eating something to a single panda laying down on his paw resting on a branch, with his hindquarters visible.",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "The resting panda's hindquarters must be visible.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "T tightly frames the panda's head and forelimbs; its hindquarters are outside the image."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C shows the resting panda's head on its forepaw and includes its rounded hindquarters on the left."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_59ae497a949951a7bb03",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "One panda rests with its head laid sideways on its black forepaw above a branch, unlike the upright, eating panda in the reference."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "One panda reclines along a tree branch with its head lowered onto its forepaw. Its curled resting posture supports the requested change from the eating panda."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "The supplied span inserts one fluent visibility attribute while preserving the original instruction. Both images support the original resting pose; only the candidate shows the panda's hindquarters.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The close crop shows the resting head and forelimbs on the branch, but the hindquarters are outside the frame."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The panda rests its head on its forepaw along the branch, and its rounded rear body and black hind leg are visible on the left."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "add",
+      "semantic_target": "attribute",
+      "before_span": null,
+      "after_span": ", with his hindquarters visible",
+      "edited_instruction": "Goes from a panda in a tree eating something to a single panda laying down on his paw resting on a branch, with his hindquarters visible.",
+      "witness_type": "addition_disambiguation",
+      "changed_constraint": "The resting panda's hindquarters must be visible.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "T tightly frames the panda's head and forelimbs; its hindquarters are outside the image."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C shows the resting panda's head on its forepaw and includes its rounded hindquarters on the left."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "The supplied span inserts one fluent visibility attribute while preserving the original instruction. Both images support the original resting pose; only the candidate shows the panda's hindquarters.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The close crop shows the resting head and forelimbs on the branch, but the hindquarters are outside the frame."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The panda rests its head on its forepaw along the branch, and its rounded rear body and black hind leg are visible on the left."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "549924b075e138b3ed22cf3f5db04ba45c09e82fdf214bd7762bdd9c85cc520e",
+      "input_hash": "fb7ded1a2f63067c8114ea9fb5de67786cc2cb24f294c348ba3cdc42ddaccc92",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/fb7ded1a2f63067c8114ea9fb5de67786cc2cb24f294c348ba3cdc42ddaccc92.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0bb51dc82f3aba83016af2bd866b9087d1b690ff3d1b93d402",
+      "usage": {
+        "prompt_tokens": 7739,
+        "completion_tokens": 646,
+        "total_tokens": 8385,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 295
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "662ddac12ea31d796c87c166e18bdbdb9947b54432528e34e3d1c1105604a893",
+      "input_hash": "e8c09acbb65b9f7e8db042c330dd15c78d7d4dc9dca3ef2a600d9e1fe919017e",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/e8c09acbb65b9f7e8db042c330dd15c78d7d4dc9dca3ef2a600d9e1fe919017e.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0e2afca04a633b98016af2bd9e45ec87d185e83137b9c53187",
+      "usage": {
+        "prompt_tokens": 7281,
+        "completion_tokens": 356,
+        "total_tokens": 7637,
+        "completion_tokens_details": {
+          "reasoning_tokens": 44
+        }
+      }
+    }
+  ]
+}

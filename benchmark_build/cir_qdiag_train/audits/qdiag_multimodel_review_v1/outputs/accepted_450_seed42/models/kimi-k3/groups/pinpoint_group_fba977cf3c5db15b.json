@@ -1,0 +1,68 @@
+{
+  "group_id": "pinpoint_group_fba977cf3c5db15b",
+  "model": "kimi-k3",
+  "signature": "7bcee9a6a15f47b49de535c2997e213c18a83885fbb254d34ea6aaed145faa23",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_fba977cf3c5db15b_query_00252_predicate_add",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Single fluent predicate ADD ('lay it flat'); the positive image shows garments worn on models, not laid flat, so the new fact is false for every positive."
+    },
+    {
+      "negative_id": "pinpoint_group_fba977cf3c5db15b_query_00254_attribute_substitute",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Single attribute substitution to 'monochrome palette'; reference pattern and positive dresses are vividly multicolored, so monochrome is clearly false for all positives."
+    },
+    {
+      "negative_id": "pinpoint_group_fba977cf3c5db15b_query_00255_predicate_substitute",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Single predicate substitution design->sketch; positive shows actual constructed wearable garments, not sketches, so the sketch request is unsupported by every positive."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "kimi-k3",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "8b6e4cdbf96ead292048084b86d365b9e88e97f16468ba28dadda132769d099f",
+      "input_hash": "bf9a4047e5fe79e4f14dd6f22e1643172d60cb623eddeac68820181d097387d9",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/kimi-k3/cache/validate_group/bf9a4047e5fe79e4f14dd6f22e1643172d60cb623eddeac68820181d097387d9.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "01a1c9baf84b7acd9e09026bf3506df7",
+      "usage": {
+        "prompt_tokens": 2095,
+        "completion_tokens": 353,
+        "total_tokens": 2448,
+        "prompt_cache_hit_tokens": 768,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "text_tokens": 0,
+          "audio_tokens": 0,
+          "image_tokens": 0
+        },
+        "completion_tokens_details": {
+          "text_tokens": 0,
+          "audio_tokens": 0,
+          "image_tokens": 0,
+          "reasoning_tokens": 0
+        },
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "input_tokens_details": null,
+        "claude_cache_creation_5_m_tokens": 0,
+        "claude_cache_creation_1_h_tokens": 0,
+        "credit": 1.59
+      }
+    }
+  ],
+  "format_warnings": []
+}

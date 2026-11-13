@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_1734710e4668acef",
+  "model": "grok-4.7",
+  "signature": "52913ea34ae01078c58f7a80fc2119b86ef4b6b3449e9e55b21816a5d5d1ccbd",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_1734710e4668acef_query_04472_attribute_delete",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Deleting “to black” removes exactly one color-attribute constraint, and the space is only grammatical glue. “Change pants” stays fluent, preserves the remaining request, and is strictly weaker."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.7",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "0e22bde89beec1cdd876c9273ac0dbe2d1b8ec4f00eec9018ef779e7dc107918",
+      "input_hash": "3d24d1f22e7e893a9b87b0836bc12e870566c52de6d63886fe2abddd852e0743",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/grok-4.7/cache/validate_group/3d24d1f22e7e893a9b87b0836bc12e870566c52de6d63886fe2abddd852e0743.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "337075a0-2b17-9f2e-a95d-51297bd23b1c",
+      "usage": {
+        "prompt_tokens": 6232,
+        "completion_tokens": 86,
+        "total_tokens": 7658,
+        "prompt_tokens_details": {
+          "text_tokens": 2427,
+          "audio_tokens": 0,
+          "image_tokens": 3805,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1340,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 179480000
+      }
+    }
+  ],
+  "format_warnings": []
+}

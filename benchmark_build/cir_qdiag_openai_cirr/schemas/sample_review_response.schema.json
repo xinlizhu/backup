@@ -1,0 +1,75 @@
+{
+  "$defs": {
+    "CandidateVerdict": {
+      "additionalProperties": false,
+      "properties": {
+        "decision": {
+          "enum": [
+            "accept",
+            "reject"
+          ],
+          "title": "Decision",
+          "type": "string"
+        },
+        "failure_code": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ReviewFailureCode"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "negative_id": {
+          "minLength": 1,
+          "title": "Negative Id",
+          "type": "string"
+        },
+        "reason": {
+          "maxLength": 300,
+          "minLength": 1,
+          "title": "Reason",
+          "type": "string"
+        }
+      },
+      "required": [
+        "negative_id",
+        "decision",
+        "failure_code",
+        "reason"
+      ],
+      "title": "CandidateVerdict",
+      "type": "object"
+    },
+    "ReviewFailureCode": {
+      "enum": [
+        "not_single_edit",
+        "wrong_semantic_target",
+        "not_fluent",
+        "not_close_or_hard",
+        "not_counterfactual",
+        "invalid_delete",
+        "other_semantic_failure"
+      ],
+      "title": "ReviewFailureCode",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "description": "Exactly one multimodal verdict for every candidate in a CIRR sample.",
+  "properties": {
+    "verdicts": {
+      "items": {
+        "$ref": "#/$defs/CandidateVerdict"
+      },
+      "title": "Verdicts",
+      "type": "array"
+    }
+  },
+  "required": [
+    "verdicts"
+  ],
+  "title": "SampleReviewResponse",
+  "type": "object"
+}

@@ -1,0 +1,87 @@
+{
+  "case_id": "case_73c625aeeb417a66abcb",
+  "audit_query_id": "audit_query_091",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_73c625aeeb417a66abcb",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Relative to the reference's ceramic pedestal sink, T shows a sink in a wooden vanity with a glossy black, pale-veined marble surface."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows a sink in a wood-grain vanity, but its countertop and integrated basin are white rather than black. The surface material cannot be established from the image."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The sink surface must be black; C has a white surface."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_73c625aeeb417a66abcb",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a sink vanity with visible wood grain on its cabinet and legs, topped by a polished black surface with pale marble veining around the basin."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a wood-grain sink cabinet, but its countertop and integrated basin are white, contradicting the required black marble surface."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "3e67ec333916e392e0aa09addeea8d2b32dc47649f47e043e725a3c17273717d",
+      "input_hash": "7fbf44425806acd2b54940323c711068d717727d99c3a8398a3e642140b44e94",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/7fbf44425806acd2b54940323c711068d717727d99c3a8398a3e642140b44e94.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0083ce040129d5d5016af2bfb4f44887d09a5626ed20e6a794",
+      "usage": {
+        "prompt_tokens": 7327,
+        "completion_tokens": 481,
+        "total_tokens": 7808,
+        "prompt_tokens_details": {
+          "cached_tokens": 3830
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 295
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "3bc3ded5ce1d6ab0c2b548e0a12cc39ad192ee6b3144936ee26e1044a7d0217b",
+      "input_hash": "5e9fe09d1535eb983bbd078b65c8e921ea378b48ba7ec63e26c79f07241cfb3d",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/5e9fe09d1535eb983bbd078b65c8e921ea378b48ba7ec63e26c79f07241cfb3d.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_042ef669c6288aca016af2bfcebfdc87d2a3b0b97e97366b6e",
+      "usage": {
+        "prompt_tokens": 6785,
+        "completion_tokens": 112,
+        "total_tokens": 6897,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_8d28015cb470e856",
+  "model": "grok-4.6",
+  "signature": "cb958fa178e5ebcdd33f446ebd46fe25a7c20417ca5539cc74de61fb4df99804",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_8d28015cb470e856_query_07419_predicate_substitute",
+      "decision": "reject",
+      "failure_code": "wrong_semantic_target",
+      "reason": "Replacing “beltless” with “with a belt” changes only belt presence, an attribute of the jumpsuit; the styling relation itself is unchanged, so the stated predicate target is wrong."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.6",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "649ee898d86057cbb95a82733f37835491f53890823f7ac2977767ed44f229b8",
+      "input_hash": "bc41e185719bdb55c44967dfb4c4967a7374a8e3f85a266bd4a9122d71da473b",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/grok-4.6/cache/validate_group/bc41e185719bdb55c44967dfb4c4967a7374a8e3f85a266bd4a9122d71da473b.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "f5fac582-16de-9667-8cb2-03a45543ac90",
+      "usage": {
+        "prompt_tokens": 3554,
+        "completion_tokens": 92,
+        "total_tokens": 5560,
+        "prompt_tokens_details": {
+          "text_tokens": 2400,
+          "audio_tokens": 0,
+          "image_tokens": 1154,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1914,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 160720000
+      }
+    }
+  ],
+  "format_warnings": []
+}

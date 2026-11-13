@@ -1,0 +1,238 @@
+{
+  "case_id": "case_eae1242b5f5b75cdfd92",
+  "audit_query_id": "audit_query_087",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_eae1242b5f5b75cdfd92",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The clownfish has a deeper orange coloration than the yellow-orange fish in R and is nestled among tentacles in the middle of the anemone."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The predominantly black clownfish is darker than the fish in R, but swims above the anemone's upper surface rather than through its middle."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The clownfish swims through the middle of a sea anemone."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "predicate",
+        "before_span": "through the middle of",
+        "after_span": "above",
+        "edited_instruction": "Shows a darker colored clown fish swimming above a sea anemone.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "The fish's spatial relation to the anemone changes from swimming through its middle to swimming above it.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The darker orange clownfish is surrounded and partly obscured by anemone tentacles, rather than swimming above the anemone."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The predominantly black clownfish is darker than R's fish and swims above the upper surface of the anemone."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "operation": "delete",
+        "semantic_target": "predicate",
+        "before_span": "through the middle of a sea anemone",
+        "after_span": null,
+        "edited_instruction": "Shows a darker colored clown fish swimming.",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "Removes the requirement that the clownfish swim through the middle of a sea anemone.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "A deeper orange clownfish than the yellow-orange fish in R is swimming among anemone tentacles."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "A predominantly black clownfish, darker than the fish in R, is swimming above the anemone."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_eae1242b5f5b75cdfd92",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The clownfish in Image 2 appears more orange and darker than the yellow-orange fish in Image 1, and is visibly among the anemone tentacles."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a dark clownfish on top of the anemone rather than swimming through its middle."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "A single fluent spatial replacement changes “through the middle of” to “above.” Image 2 is among the tentacles, while Image 3 is atop the anemone.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The fish in Image 2 is nestled among the anemone tentacles, not swimming above it."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The fish in Image 3 is positioned on top of the anemone."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting the single spatial constraint yields a fluent instruction about the fish swimming. Image 3 satisfies the remaining fish and color description; its placement is the source constraint it violates.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 visibly shows a clownfish swimming among the anemone tentacles."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows a dark clownfish swimming on an anemone; the edited instruction no longer constrains its placement."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "substitute",
+      "semantic_target": "predicate",
+      "before_span": "through the middle of",
+      "after_span": "above",
+      "edited_instruction": "Shows a darker colored clown fish swimming above a sea anemone.",
+      "witness_type": "substitution_contrast",
+      "changed_constraint": "The fish's spatial relation to the anemone changes from swimming through its middle to swimming above it.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "The darker orange clownfish is surrounded and partly obscured by anemone tentacles, rather than swimming above the anemone."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "The predominantly black clownfish is darker than R's fish and swims above the upper surface of the anemone."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "A single fluent spatial replacement changes “through the middle of” to “above.” Image 2 is among the tentacles, while Image 3 is atop the anemone.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The fish in Image 2 is nestled among the anemone tentacles, not swimming above it."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The fish in Image 3 is positioned on top of the anemone."
+        }
+      }
+    },
+    {
+      "witness_id": "w2",
+      "operation": "delete",
+      "semantic_target": "predicate",
+      "before_span": "through the middle of a sea anemone",
+      "after_span": null,
+      "edited_instruction": "Shows a darker colored clown fish swimming.",
+      "witness_type": "deletion_relaxation",
+      "changed_constraint": "Removes the requirement that the clownfish swim through the middle of a sea anemone.",
+      "edited_on_positive": {
+        "status": "supported",
+        "evidence": "A deeper orange clownfish than the yellow-orange fish in R is swimming among anemone tentacles."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "A predominantly black clownfish, darker than the fish in R, is swimming above the anemone."
+      },
+      "independent_review": {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting the single spatial constraint yields a fluent instruction about the fish swimming. Image 3 satisfies the remaining fish and color description; its placement is the source constraint it violates.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 visibly shows a clownfish swimming among the anemone tentacles."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows a dark clownfish swimming on an anemone; the edited instruction no longer constrains its placement."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    },
+    {
+      "witness_id": "w2",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "8c1e848bdfa839aea547238f64428102ca2f19d1fb44ea655c99b1d801a74393",
+      "input_hash": "26b7a27cb387176bd73bd906a7c35adf5b99f9f652c9c31201bf97ea4d221470",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/26b7a27cb387176bd73bd906a7c35adf5b99f9f652c9c31201bf97ea4d221470.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0b43ebd63af9c17c016af2bf57209087d1bcc928f833fbb1b0",
+      "usage": {
+        "prompt_tokens": 8489,
+        "completion_tokens": 747,
+        "total_tokens": 9236,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 164
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "f8b80e3b42c25b8d1b6647530ac7e387196b9092dcf5c673ef39b968ea464b5e",
+      "input_hash": "a5b0dddfdd0b85c5a1a7d104800fc337e25f7b5585c96c48a14113cc44ffa138",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/a5b0dddfdd0b85c5a1a7d104800fc337e25f7b5585c96c48a14113cc44ffa138.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_04ab944931f8c0fd016af2bf6deddc87d1a209e333fa50f641",
+      "usage": {
+        "prompt_tokens": 8248,
+        "completion_tokens": 679,
+        "total_tokens": 8927,
+        "prompt_tokens_details": {
+          "cached_tokens": 5248
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 312
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "case_id": "case_c4cc4a60eb8438bb57cb",
+  "audit_query_id": "audit_query_077",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_c4cc4a60eb8438bb57cb",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Read relative to R, the awkward instruction requests a television stand without an attached display unit. T shows a television on a compact freestanding stand, without the tall integrated display structure seen in R."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows a television stand integrated with tall display shelves on both sides and a connecting overhead shelf, conflicting with the request to avoid an attached showcase."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The television stand should not have an attached showcase or surrounding display unit."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "predicate",
+        "before_span": "on television stand rather making with attached",
+        "after_span": "a television stand with an attached",
+        "edited_instruction": "Target a television stand with an attached show case",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "Changes the stand's relation to a showcase from excluding an attached showcase to requiring one.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "T has a compact television stand with storage below the television, but no attached showcase extending around or above it."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C has a television stand connected to tall side display shelves and an overhead shelf, forming an attached showcase."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_c4cc4a60eb8438bb57cb",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "Image 2 shows a television on a freestanding open-shelf stand, but the source wording “rather making with attached show case” is unclear, so its intended constraint cannot be reliably established."
+    },
+    "source_on_candidate": {
+      "status": "uncertain",
+      "evidence": "Image 3 shows a television within a tall shelving unit, but the source wording is unclear and does not reliably specify which visible feature should be assessed."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "reject",
+        "failure_code": "source_invalid_or_uncertain",
+        "witness_type": null,
+        "reason": "The source constraint cannot be reliably established on the positive image, so the proposed contrast cannot be accepted. The replacement also changes an unclear phrase into a new grammatical description.",
+        "edited_on_positive": {
+          "status": "uncertain",
+          "evidence": "The edited wording asks for a television stand with an attached showcase; Image 2 shows an open-shelf stand, but whether it satisfies “attached showcase” is ambiguous."
+        },
+        "edited_on_candidate": {
+          "status": "uncertain",
+          "evidence": "Image 3 has a television in a shelving unit, but the image does not clearly establish that it is a television stand with an attached showcase."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": false,
+      "local_failures": [
+        "wrong_witness_type",
+        "wrong_support_pattern"
+      ],
+      "review_decision": "reject"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "bb2558d7f31e4e173840abc99ecc283d0971b5c2bf0137898d95e16f8cee3f2f",
+      "input_hash": "acdd3dd2a4701be4d931449a2226d0737b18e201f243a9d559262a353486c4f9",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/acdd3dd2a4701be4d931449a2226d0737b18e201f243a9d559262a353486c4f9.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_017b21f80b1d992e016af2bf98d29c87d1a6269913cc46c861",
+      "usage": {
+        "prompt_tokens": 7634,
+        "completion_tokens": 868,
+        "total_tokens": 8502,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 474
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "c6fc0a40a1e0d06e05dbe2e662fa9b2f12cf677b97398ec767a2508dbf715157",
+      "input_hash": "d59e08d56cfdc8d27d8c10c8a3329713a072cb01809976df24910cb79ad22ed3",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/d59e08d56cfdc8d27d8c10c8a3329713a072cb01809976df24910cb79ad22ed3.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0fe72d9ef17f11b5016af2bfb9d03887d2a80b6f4f5fbca943",
+      "usage": {
+        "prompt_tokens": 7329,
+        "completion_tokens": 600,
+        "total_tokens": 7929,
+        "prompt_tokens_details": {
+          "cached_tokens": 5248
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 260
+        }
+      }
+    }
+  ]
+}

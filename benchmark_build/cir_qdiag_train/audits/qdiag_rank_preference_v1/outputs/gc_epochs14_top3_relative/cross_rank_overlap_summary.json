@@ -1,0 +1,182 @@
+{
+  "source_files_sha256": {
+    "rankings.private.jsonl": "7d7123f94ac572f823f9e5e95df4b2bdb8020788c14bfdd206093b74a92f055a",
+    "comparisons.private.jsonl": "3584803f4046a740635429e7818f06fae16d0d3d87a54f8d9709bd56f3f73a5d",
+    "judgment_identity.json": "580cf1313a9bfe098d0a012cda12273d0110d1aaff538ee2c45eebf762b31ce9",
+    "final.jsonl": "4bcdb8da6122f594e8150cd45e811f71781081290472b107ab56326a08d2730f"
+  },
+  "definition": "Among student-winning comparisons at a given epoch/rank, fraction whose student image is the same image as that query's teacher Top-1 or Top-2 in the fixed 32-candidate pool.",
+  "denominator": "Student wins at the corresponding epoch and rank; excludes teacher wins and same-image skips, includes all confidence levels.",
+  "not_a_causal_estimate": true,
+  "rank_scope": "Same recorded target-plus-31 GC training candidates; NOT full-gallery Top-3",
+  "table": [
+    {
+      "epoch": 1,
+      "rank": 1,
+      "different_image_comparisons": 24,
+      "student_wins": 0,
+      "student_win_percent": 0.0,
+      "student_wins_matching_teacher_top1": 0,
+      "student_wins_matching_teacher_top2": 0,
+      "student_wins_matching_teacher_top1_or_top2": 0,
+      "among_student_wins_teacher_top1_percent": null,
+      "among_student_wins_teacher_top2_percent": null,
+      "among_student_wins_teacher_top1_or_top2_percent": null,
+      "among_student_wins_other_teacher_rank_percent": null,
+      "student_wins_with_strictly_higher_teacher_score": 0,
+      "student_wins_with_equal_teacher_score": 0,
+      "image_id_vs_pixel_match_disagreements": 0,
+      "student_image_teacher_rank_histogram_among_wins": {},
+      "top12_overlap_contingency": {
+        "teacher": 0,
+        "student": 0
+      }
+    },
+    {
+      "epoch": 1,
+      "rank": 2,
+      "different_image_comparisons": 22,
+      "student_wins": 5,
+      "student_win_percent": 22.727272727272727,
+      "student_wins_matching_teacher_top1": 1,
+      "student_wins_matching_teacher_top2": 0,
+      "student_wins_matching_teacher_top1_or_top2": 1,
+      "among_student_wins_teacher_top1_percent": 20.0,
+      "among_student_wins_teacher_top2_percent": 0.0,
+      "among_student_wins_teacher_top1_or_top2_percent": 20.0,
+      "among_student_wins_other_teacher_rank_percent": 80.0,
+      "student_wins_with_strictly_higher_teacher_score": 1,
+      "student_wins_with_equal_teacher_score": 0,
+      "image_id_vs_pixel_match_disagreements": 0,
+      "student_image_teacher_rank_histogram_among_wins": {
+        "11": 1,
+        "1": 1,
+        "18": 2,
+        "5": 1
+      },
+      "top12_overlap_contingency": {
+        "teacher": 0,
+        "student": 1
+      }
+    },
+    {
+      "epoch": 1,
+      "rank": 3,
+      "different_image_comparisons": 21,
+      "student_wins": 8,
+      "student_win_percent": 38.095238095238095,
+      "student_wins_matching_teacher_top1": 0,
+      "student_wins_matching_teacher_top2": 1,
+      "student_wins_matching_teacher_top1_or_top2": 1,
+      "among_student_wins_teacher_top1_percent": 0.0,
+      "among_student_wins_teacher_top2_percent": 12.5,
+      "among_student_wins_teacher_top1_or_top2_percent": 12.5,
+      "among_student_wins_other_teacher_rank_percent": 87.5,
+      "student_wins_with_strictly_higher_teacher_score": 1,
+      "student_wins_with_equal_teacher_score": 0,
+      "image_id_vs_pixel_match_disagreements": 0,
+      "student_image_teacher_rank_histogram_among_wins": {
+        "9": 1,
+        "2": 1,
+        "8": 1,
+        "13": 1,
+        "21": 1,
+        "5": 2,
+        "12": 1
+      },
+      "top12_overlap_contingency": {
+        "teacher": 1,
+        "student": 1
+      }
+    },
+    {
+      "epoch": 4,
+      "rank": 1,
+      "different_image_comparisons": 12,
+      "student_wins": 8,
+      "student_win_percent": 66.66666666666667,
+      "student_wins_matching_teacher_top1": 0,
+      "student_wins_matching_teacher_top2": 3,
+      "student_wins_matching_teacher_top1_or_top2": 3,
+      "among_student_wins_teacher_top1_percent": 0.0,
+      "among_student_wins_teacher_top2_percent": 37.5,
+      "among_student_wins_teacher_top1_or_top2_percent": 37.5,
+      "among_student_wins_other_teacher_rank_percent": 62.5,
+      "student_wins_with_strictly_higher_teacher_score": 0,
+      "student_wins_with_equal_teacher_score": 2,
+      "image_id_vs_pixel_match_disagreements": 0,
+      "student_image_teacher_rank_histogram_among_wins": {
+        "17": 1,
+        "5": 1,
+        "2": 3,
+        "6": 1,
+        "7": 1,
+        "3": 1
+      },
+      "top12_overlap_contingency": {
+        "teacher": 1,
+        "student": 3
+      }
+    },
+    {
+      "epoch": 4,
+      "rank": 2,
+      "different_image_comparisons": 21,
+      "student_wins": 12,
+      "student_win_percent": 57.142857142857146,
+      "student_wins_matching_teacher_top1": 2,
+      "student_wins_matching_teacher_top2": 0,
+      "student_wins_matching_teacher_top1_or_top2": 2,
+      "among_student_wins_teacher_top1_percent": 16.666666666666668,
+      "among_student_wins_teacher_top2_percent": 0.0,
+      "among_student_wins_teacher_top1_or_top2_percent": 16.666666666666668,
+      "among_student_wins_other_teacher_rank_percent": 83.33333333333333,
+      "student_wins_with_strictly_higher_teacher_score": 2,
+      "student_wins_with_equal_teacher_score": 1,
+      "image_id_vs_pixel_match_disagreements": 0,
+      "student_image_teacher_rank_histogram_among_wins": {
+        "3": 4,
+        "7": 2,
+        "10": 2,
+        "12": 1,
+        "6": 1,
+        "1": 2
+      },
+      "top12_overlap_contingency": {
+        "teacher": 2,
+        "student": 2
+      }
+    },
+    {
+      "epoch": 4,
+      "rank": 3,
+      "different_image_comparisons": 21,
+      "student_wins": 9,
+      "student_win_percent": 42.857142857142854,
+      "student_wins_matching_teacher_top1": 2,
+      "student_wins_matching_teacher_top2": 1,
+      "student_wins_matching_teacher_top1_or_top2": 3,
+      "among_student_wins_teacher_top1_percent": 22.22222222222222,
+      "among_student_wins_teacher_top2_percent": 11.11111111111111,
+      "among_student_wins_teacher_top1_or_top2_percent": 33.333333333333336,
+      "among_student_wins_other_teacher_rank_percent": 66.66666666666667,
+      "student_wins_with_strictly_higher_teacher_score": 3,
+      "student_wins_with_equal_teacher_score": 0,
+      "image_id_vs_pixel_match_disagreements": 0,
+      "student_image_teacher_rank_histogram_among_wins": {
+        "5": 1,
+        "1": 2,
+        "11": 1,
+        "8": 1,
+        "6": 1,
+        "2": 1,
+        "10": 1,
+        "9": 1
+      },
+      "top12_overlap_contingency": {
+        "teacher": 1,
+        "student": 3
+      }
+    }
+  ]
+}

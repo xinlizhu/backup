@@ -1,0 +1,474 @@
+{
+  "$defs": {
+    "CallTrace": {
+      "additionalProperties": false,
+      "properties": {
+        "attempts": {
+          "default": 1,
+          "title": "Attempts",
+          "type": "integer"
+        },
+        "cached": {
+          "default": false,
+          "title": "Cached",
+          "type": "boolean"
+        },
+        "input_hash": {
+          "title": "Input Hash",
+          "type": "string"
+        },
+        "model_name": {
+          "title": "Model Name",
+          "type": "string"
+        },
+        "model_revision": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Model Revision"
+        },
+        "prompt_hash": {
+          "title": "Prompt Hash",
+          "type": "string"
+        },
+        "prompt_version": {
+          "minLength": 1,
+          "title": "Prompt Version",
+          "type": "string"
+        },
+        "provider": {
+          "default": "openai",
+          "title": "Provider",
+          "type": "string"
+        },
+        "raw_response_path": {
+          "title": "Raw Response Path",
+          "type": "string"
+        },
+        "reasoning_effort": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reasoning Effort"
+        },
+        "request_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Request Id"
+        },
+        "stage": {
+          "title": "Stage",
+          "type": "string"
+        },
+        "usage": {
+          "anyOf": [
+            {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Usage"
+        }
+      },
+      "required": [
+        "stage",
+        "model_name",
+        "prompt_version",
+        "prompt_hash",
+        "input_hash",
+        "raw_response_path"
+      ],
+      "title": "CallTrace",
+      "type": "object"
+    },
+    "EditOperation": {
+      "enum": [
+        "add",
+        "delete",
+        "substitute"
+      ],
+      "title": "EditOperation",
+      "type": "string"
+    },
+    "ImageRef": {
+      "additionalProperties": false,
+      "description": "CIRR image metadata used for visual validation and downstream training.",
+      "properties": {
+        "image_id": {
+          "minLength": 1,
+          "title": "Image Id",
+          "type": "string"
+        },
+        "image_path": {
+          "minLength": 1,
+          "title": "Image Path",
+          "type": "string"
+        }
+      },
+      "required": [
+        "image_id",
+        "image_path"
+      ],
+      "title": "ImageRef",
+      "type": "object"
+    },
+    "NegativeCandidate": {
+      "additionalProperties": false,
+      "properties": {
+        "after_span": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "After Span"
+        },
+        "before_span": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Before Span"
+        },
+        "construction_mode": {
+          "const": "text_only_editable",
+          "default": "text_only_editable",
+          "title": "Construction Mode",
+          "type": "string"
+        },
+        "edit_operation": {
+          "$ref": "#/$defs/EditOperation"
+        },
+        "generation_attempts": {
+          "default": 1,
+          "minimum": 1,
+          "title": "Generation Attempts",
+          "type": "integer"
+        },
+        "negative_id": {
+          "minLength": 1,
+          "title": "Negative Id",
+          "type": "string"
+        },
+        "rejection_code": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ReviewFailureCode"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "selection_reason": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Selection Reason"
+        },
+        "semantic_target": {
+          "$ref": "#/$defs/SemanticTarget"
+        },
+        "source_text": {
+          "minLength": 1,
+          "title": "Source Text",
+          "type": "string"
+        },
+        "status": {
+          "default": "generated",
+          "enum": [
+            "generated",
+            "accepted",
+            "rejected",
+            "failed"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "text": {
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "negative_id",
+        "source_text",
+        "text",
+        "semantic_target",
+        "edit_operation",
+        "before_span",
+        "after_span"
+      ],
+      "title": "NegativeCandidate",
+      "type": "object"
+    },
+    "ReviewFailureCode": {
+      "enum": [
+        "not_single_edit",
+        "wrong_semantic_target",
+        "not_fluent",
+        "not_close_or_hard",
+        "not_counterfactual",
+        "invalid_delete",
+        "other_semantic_failure"
+      ],
+      "title": "ReviewFailureCode",
+      "type": "string"
+    },
+    "SampleMetadata": {
+      "additionalProperties": false,
+      "properties": {
+        "build_fingerprint": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Build Fingerprint"
+        },
+        "call_traces": {
+          "items": {
+            "$ref": "#/$defs/CallTrace"
+          },
+          "title": "Call Traces",
+          "type": "array"
+        },
+        "errors": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Errors",
+          "type": "array"
+        },
+        "generator_model": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Generator Model"
+        },
+        "notes": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Notes",
+          "type": "array"
+        },
+        "num_accepted_negatives": {
+          "default": 0,
+          "title": "Num Accepted Negatives",
+          "type": "integer"
+        },
+        "num_generated_candidates": {
+          "default": 0,
+          "title": "Num Generated Candidates",
+          "type": "integer"
+        },
+        "operational_status": {
+          "default": "pending",
+          "enum": [
+            "pending",
+            "ok",
+            "failed"
+          ],
+          "title": "Operational Status",
+          "type": "string"
+        },
+        "prompt_version": {
+          "default": "v8",
+          "title": "Prompt Version",
+          "type": "string"
+        },
+        "random_seed": {
+          "default": 42,
+          "title": "Random Seed",
+          "type": "integer"
+        },
+        "selection_fingerprint": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Selection Fingerprint"
+        },
+        "semantic_status": {
+          "default": "pending",
+          "enum": [
+            "pending",
+            "accepted",
+            "partial",
+            "rejected"
+          ],
+          "title": "Semantic Status",
+          "type": "string"
+        },
+        "stage": {
+          "default": "source",
+          "enum": [
+            "source",
+            "candidates",
+            "final"
+          ],
+          "title": "Stage",
+          "type": "string"
+        },
+        "validation_mode": {
+          "const": "reference_target_visual",
+          "default": "reference_target_visual",
+          "title": "Validation Mode",
+          "type": "string"
+        },
+        "validator_model": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Validator Model"
+        }
+      },
+      "title": "SampleMetadata",
+      "type": "object"
+    },
+    "SemanticTarget": {
+      "enum": [
+        "object",
+        "attribute",
+        "predicate"
+      ],
+      "title": "SemanticTarget",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "candidates": {
+      "items": {
+        "$ref": "#/$defs/NegativeCandidate"
+      },
+      "title": "Candidates",
+      "type": "array"
+    },
+    "image_set": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Image Set",
+      "type": "array"
+    },
+    "metadata": {
+      "$ref": "#/$defs/SampleMetadata"
+    },
+    "negatives": {
+      "items": {
+        "$ref": "#/$defs/NegativeCandidate"
+      },
+      "title": "Negatives",
+      "type": "array"
+    },
+    "pair_id": {
+      "minimum": 0,
+      "title": "Pair Id",
+      "type": "integer"
+    },
+    "positive_text": {
+      "minLength": 1,
+      "title": "Positive Text",
+      "type": "string"
+    },
+    "reference": {
+      "$ref": "#/$defs/ImageRef"
+    },
+    "sample_id": {
+      "pattern": "^cirr_train_\\d+$",
+      "title": "Sample Id",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "8.0",
+      "default": "8.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "source_dataset": {
+      "const": "CIRR",
+      "default": "CIRR",
+      "title": "Source Dataset",
+      "type": "string"
+    },
+    "split": {
+      "const": "train",
+      "default": "train",
+      "title": "Split",
+      "type": "string"
+    },
+    "target": {
+      "$ref": "#/$defs/ImageRef"
+    }
+  },
+  "required": [
+    "sample_id",
+    "pair_id",
+    "reference",
+    "target",
+    "positive_text"
+  ],
+  "title": "CIRRSampleRecord",
+  "type": "object"
+}

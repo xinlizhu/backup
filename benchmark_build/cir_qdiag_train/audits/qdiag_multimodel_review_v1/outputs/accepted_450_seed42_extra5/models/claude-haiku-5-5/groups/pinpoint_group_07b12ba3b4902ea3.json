@@ -1,0 +1,49 @@
+{
+  "group_id": "pinpoint_group_07b12ba3b4902ea3",
+  "model": "claude-haiku-5-5",
+  "signature": "44bb4aae802e19564501a676b733c7e19828d9ced260b7da0428f08b1a359df2",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_07b12ba3b4902ea3_query_05686_attribute_substitute",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "Image 2 (reference) shows a blue crystal, supporting blue accents. However, Image 4 displays a living room with green accent colors (green pendant lamps, green pillows, green plants), making the substitution to 'green accents' compatible with at least one supplied positive image. The edit cannot be confirmed as clearly false across all positives."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-haiku-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "06fce4536bb01178e965b9cc893ef1a9a3b3b380f17e68be5f86cbdab13ec428",
+      "input_hash": "daa9ead52addef79ca20e70e7e803e08a6b7b095d8e7541b346385d2d577bb09",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/claude-haiku-5-5/cache/validate_group/daa9ead52addef79ca20e70e7e803e08a6b7b095d8e7541b346385d2d577bb09.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01TU4z70YJQNanHrr7ZMRvJSle",
+      "usage": {
+        "prompt_tokens": 8972,
+        "completion_tokens": 181,
+        "total_tokens": 9153,
+        "prompt_tokens_details": {
+          "cached_tokens": 6995,
+          "cache_creation_tokens": 1973
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_07b12ba3b4902ea3_query_05686_attribute_substitute",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 348,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

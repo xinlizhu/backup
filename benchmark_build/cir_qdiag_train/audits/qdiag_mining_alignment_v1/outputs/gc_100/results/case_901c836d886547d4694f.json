@@ -1,0 +1,86 @@
+{
+  "case_id": "case_901c836d886547d4694f",
+  "audit_query_id": "audit_query_016",
+  "signature": "5065d94bb0c1b275e428d3f2ada2352b274139ccb2134477487b5f51eef77ac6",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_901c836d886547d4694f",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a black bird with a white beak pointing to the right."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a brightly colored bird with an orange beak pointing to the left."
+    },
+    "candidate_relation": "multiple_constraint_conflict",
+    "violated_source_constraints": [
+      "The bird is not black; it has blue, red-orange, green, and yellow plumage.",
+      "The beak is orange rather than white.",
+      "The bird faces left rather than right."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_901c836d886547d4694f",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a predominantly black bird with a white beak pointing right."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a vividly multicolored bird with an orange beak pointing left, not a black bird with a white beak facing right."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "8fe24179748ce439f884365a7cb77a5b3c283b4ed4e33b8c1e65840ccfb10c8f",
+      "input_hash": "593a5c7f7ddc60f167f6bd75718e06aef8f1f87342ea58642102c9ebf43c3968",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_100/api_cache/propose_witnesses/593a5c7f7ddc60f167f6bd75718e06aef8f1f87342ea58642102c9ebf43c3968.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0440f1895cd6ec24016af2b8e0a2b487d184bbb153bf2f7160",
+      "usage": {
+        "prompt_tokens": 12167,
+        "completion_tokens": 286,
+        "total_tokens": 12453,
+        "completion_tokens_details": {
+          "reasoning_tokens": 140
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "7eae2e96ffb57c8725dc31c8de4fa9531cfc53dba6ba2dd0875b84d82f5afef3",
+      "input_hash": "f38cf87aa8a67fcb718bdacc70cfa97a81e907ac92543ba53707b26783a41aa1",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_100/api_cache/review_witnesses/f38cf87aa8a67fcb718bdacc70cfa97a81e907ac92543ba53707b26783a41aa1.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0987d56dfd3453ea016af2b8e90f0887d192c894cf8b058fac",
+      "usage": {
+        "prompt_tokens": 8236,
+        "completion_tokens": 216,
+        "total_tokens": 8452,
+        "completion_tokens_details": {
+          "reasoning_tokens": 116
+        }
+      }
+    }
+  ]
+}

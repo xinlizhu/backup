@@ -1,0 +1,133 @@
+{
+  "$defs": {
+    "ConstructionMode": {
+      "enum": [
+        "text_only_editable",
+        "vision_grounded"
+      ],
+      "title": "ConstructionMode",
+      "type": "string"
+    },
+    "EditOperation": {
+      "enum": [
+        "add",
+        "delete",
+        "substitute"
+      ],
+      "title": "EditOperation",
+      "type": "string"
+    },
+    "SemanticTarget": {
+      "enum": [
+        "object",
+        "attribute",
+        "predicate"
+      ],
+      "title": "SemanticTarget",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "after_span": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "After Span"
+    },
+    "before_span": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Before Span"
+    },
+    "change_summary": {
+      "maxLength": 400,
+      "minLength": 1,
+      "title": "Change Summary",
+      "type": "string"
+    },
+    "construction_mode": {
+      "$ref": "#/$defs/ConstructionMode"
+    },
+    "edit_operation": {
+      "$ref": "#/$defs/EditOperation"
+    },
+    "generation_attempts": {
+      "default": 1,
+      "minimum": 1,
+      "title": "Generation Attempts",
+      "type": "integer"
+    },
+    "negative_id": {
+      "minLength": 1,
+      "title": "Negative Id",
+      "type": "string"
+    },
+    "selection_reason": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Selection Reason"
+    },
+    "semantic_target": {
+      "$ref": "#/$defs/SemanticTarget"
+    },
+    "status": {
+      "default": "generated",
+      "enum": [
+        "generated",
+        "accepted",
+        "rejected",
+        "failed"
+      ],
+      "title": "Status",
+      "type": "string"
+    },
+    "text": {
+      "minLength": 1,
+      "title": "Text",
+      "type": "string"
+    },
+    "visual_basis": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Visual Basis"
+    }
+  },
+  "required": [
+    "negative_id",
+    "text",
+    "semantic_target",
+    "edit_operation",
+    "construction_mode",
+    "before_span",
+    "after_span",
+    "change_summary"
+  ],
+  "title": "NegativeCandidate",
+  "type": "object"
+}

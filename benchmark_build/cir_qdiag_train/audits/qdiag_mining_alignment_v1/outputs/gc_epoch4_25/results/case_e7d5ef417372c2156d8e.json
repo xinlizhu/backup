@@ -1,0 +1,91 @@
+{
+  "case_id": "case_e7d5ef417372c2156d8e",
+  "audit_query_id": "audit_query_098",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_e7d5ef417372c2156d8e",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "A woman faces the camera behind a large group of sled dogs in a snowy landscape, replacing the reference's scene of people with reindeer and sleds."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The image is a product montage of laptops on a white background; it contains no woman or dogs and no person posing for the camera."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "A woman is present and poses for the camera.",
+      "The woman is with a group of dogs."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_e7d5ef417372c2156d8e",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "People, including a woman in red facing the camera, are positioned behind a large group of sled dogs in a snowy landscape, replacing the reference's reindeer-and-sleigh scene."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The candidate shows a collage of laptop computers on a white background; no woman or group of dogs is present."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "82e2d8e060f3a6844374528dec158caa3ab863597b62d79fef69d1ccd14b9b7a",
+      "input_hash": "0020a9ff6c0015b24857ec74d6e1e123868c44eb30db0b8e75f9755e27c85666",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/0020a9ff6c0015b24857ec74d6e1e123868c44eb30db0b8e75f9755e27c85666.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0003941bc50c2fd5016af2be61376087d28e04898437108597",
+      "usage": {
+        "prompt_tokens": 7557,
+        "completion_tokens": 226,
+        "total_tokens": 7783,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 35
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "31ba861e0304d3c55baa67205805d174439b4133e5128ed19feb0654d25a0c23",
+      "input_hash": "84cf0be8b6f4a93f711cc91344b78b6b7b693f00f76666f3b247f8733d67d4ca",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/84cf0be8b6f4a93f711cc91344b78b6b7b693f00f76666f3b247f8733d67d4ca.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_01772d01cd9b761c016af2be6c037887d284000deb81014107",
+      "usage": {
+        "prompt_tokens": 7015,
+        "completion_tokens": 148,
+        "total_tokens": 7163,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 34
+        }
+      }
+    }
+  ]
+}

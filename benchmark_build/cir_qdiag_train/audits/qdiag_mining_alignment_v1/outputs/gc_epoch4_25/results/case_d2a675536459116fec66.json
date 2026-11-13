@@ -1,0 +1,174 @@
+{
+  "case_id": "case_d2a675536459116fec66",
+  "audit_query_id": "audit_query_076",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_d2a675536459116fec66",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows one dog on a reddish carpet with a large bone-like chew."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows one dog with a long chew, but the carpet is pale rather than red."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "Set up on red carpet"
+    ],
+    "witnesses": [
+      {
+        "witness_id": "substitute_attribute_red_to_cream",
+        "operation": "substitute",
+        "semantic_target": "attribute",
+        "before_span": "red",
+        "after_span": "cream",
+        "edited_instruction": "Remove all but one dog, set up on cream carpet, and give a bone.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "The carpet color changes from red to cream; the candidate's pale carpet supports this, while the positive's reddish carpet contradicts it.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 shows a reddish carpet, not a cream one; it otherwise shows one dog with a bone-like chew."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows one dog on a pale cream carpet with a long chew."
+        }
+      },
+      {
+        "witness_id": "delete_red_carpet_constraint",
+        "operation": "delete",
+        "semantic_target": "predicate",
+        "before_span": ", set up on red carpet,",
+        "after_span": null,
+        "edited_instruction": "Remove all but one dog and give a bone.",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "The removed red-carpet placement constraint distinguishes the images: the candidate has a pale carpet, while both images show one dog with a bone-like chew.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 shows one dog with a large bone-like chew."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows one dog with a long chew."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_d2a675536459116fec66",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Compared with the many dogs in R, T shows one dog on red carpet, chewing a large, visibly recognizable bone."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows one dog on pale cream carpet rather than red carpet. A long brown chew lies beneath its paws, but its identity as a bone is not visually established."
+    },
+    "verdicts": [
+      {
+        "witness_id": "substitute_attribute_red_to_cream",
+        "decision": "uncertain",
+        "failure_code": "not_visually_verifiable",
+        "witness_type": null,
+        "reason": "The single color replacement reconstructs the edited instruction and preserves the carpet entity. The carpet contrast is visible, but the unchanged requirement to give a bone cannot be reliably verified in C: its long brown chew is not clearly identifiable as a bone.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "T has one dog with a bone, but its carpet is red rather than cream."
+        },
+        "edited_on_candidate": {
+          "status": "uncertain",
+          "evidence": "C has one dog on cream carpet, but the brown rod beneath its paws could be a chew of another material; a bone is not reliably established."
+        }
+      },
+      {
+        "witness_id": "delete_red_carpet_constraint",
+        "decision": "uncertain",
+        "failure_code": "not_visually_verifiable",
+        "witness_type": null,
+        "reason": "Deleting the specified location predicate reconstructs the fluent edited instruction. However, C's chew cannot reliably be identified as a bone, so neither edited(C) support nor the requirement that C violate only the removed constraint is established.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "T shows just one dog with a large bone in its mouth and between its paws."
+        },
+        "edited_on_candidate": {
+          "status": "uncertain",
+          "evidence": "C shows one dog, satisfying the count reduction relative to R, but the long brown chew under its paws is not clearly a bone."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [],
+  "local_checks": [
+    {
+      "witness_id": "substitute_attribute_red_to_cream",
+      "accepted": false,
+      "local_failures": [
+        "wrong_witness_type",
+        "wrong_support_pattern"
+      ],
+      "review_decision": "uncertain"
+    },
+    {
+      "witness_id": "delete_red_carpet_constraint",
+      "accepted": false,
+      "local_failures": [
+        "wrong_witness_type",
+        "wrong_support_pattern"
+      ],
+      "review_decision": "uncertain"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "8aa2e40dab67049070f5dbf69c414c0a9a55f4aa578f68540c318d8cb973ccb2",
+      "input_hash": "4b02f08d7ac3dbc2af8049d5564d1f698bfad387a68ba4d6872943d2c29967c0",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/4b02f08d7ac3dbc2af8049d5564d1f698bfad387a68ba4d6872943d2c29967c0.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_024fd0b9ec648dae016af2bef74ec487d1987e4d930b91a812",
+      "usage": {
+        "prompt_tokens": 25178,
+        "completion_tokens": 1620,
+        "total_tokens": 26798,
+        "completion_tokens_details": {
+          "reasoning_tokens": 1075
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "29ff45e763077f9136fa07d38dc82d3ee4954f018bab7e9fe178da7182d3ea2e",
+      "input_hash": "155bf58f8c230f47fd84e98627891ccabd637dcf5e4829fd61c36a2f70757fa7",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/155bf58f8c230f47fd84e98627891ccabd637dcf5e4829fd61c36a2f70757fa7.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_038674066ace531f016af2bf0f505c87d093b2b6a0564034ac",
+      "usage": {
+        "prompt_tokens": 28004,
+        "completion_tokens": 597,
+        "total_tokens": 28601,
+        "prompt_tokens_details": {
+          "cached_tokens": 3482
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 83
+        }
+      }
+    }
+  ]
+}

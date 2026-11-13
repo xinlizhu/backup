@@ -1,0 +1,57 @@
+{
+  "case_id": "pair_e1ce8f04c69d864ae9d2",
+  "signature": "f3a97f608e6addbd5531ad7795f5e06873610abdb12f716de8375d49eda4c022",
+  "simulated": false,
+  "status": "complete",
+  "judgment": {
+    "case_id": "pair_e1ce8f04c69d864ae9d2",
+    "constraints": [
+      {
+        "constraint": "Black bird",
+        "A_status": "supported",
+        "B_status": "supported",
+        "A_evidence": "The bird has predominantly black plumage.",
+        "B_evidence": "The bird has dark, mostly black plumage."
+      },
+      {
+        "constraint": "White beak",
+        "A_status": "supported",
+        "B_status": "supported",
+        "A_evidence": "The beak is clearly white.",
+        "B_evidence": "The beak appears white."
+      },
+      {
+        "constraint": "Faces right",
+        "A_status": "supported",
+        "B_status": "contradicted",
+        "A_evidence": "The bird's head and beak point to the right.",
+        "B_evidence": "The bird's head and beak point to the left."
+      }
+    ],
+    "decision": "A",
+    "confidence": "high",
+    "reason": "Both candidates show a dark bird with a white beak, but only A faces right as requested; B faces left."
+  },
+  "trace": {
+    "stage": "rank_pair_relative_preference",
+    "model_name": "gpt-5.6-terra",
+    "model_revision": null,
+    "provider": "openai-compatible-chat",
+    "reasoning_effort": null,
+    "prompt_version": "rank_preference_relative_v2",
+    "prompt_hash": "b4038e4caa9fe6f8c337cd9ba3895bed3ed40adc1af541bcd59a294c97ef028d",
+    "input_hash": "81c4de1abb8617c8bfb27db825f814adc29a355f8777bf8ea1d7e13182953fb0",
+    "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_rank_preference_v1/outputs/gc_epochs14_top3_relative/api_cache/rank_pair_relative_preference/81c4de1abb8617c8bfb27db825f814adc29a355f8777bf8ea1d7e13182953fb0.json",
+    "cached": false,
+    "attempts": 1,
+    "request_id": "resp_ft_6464d17144cf4e4e952f1a68836e59b6",
+    "usage": {
+      "prompt_tokens": 7115,
+      "completion_tokens": 253,
+      "total_tokens": 7368,
+      "completion_tokens_details": {
+        "reasoning_tokens": 58
+      }
+    }
+  }
+}

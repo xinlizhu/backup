@@ -1,0 +1,62 @@
+{
+  "group_id": "pinpoint_group_ff7f4ec838da8aa8",
+  "model": "kimi-k3",
+  "signature": "7bcee9a6a15f47b49de535c2997e213c18a83885fbb254d34ea6aaed145faa23",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_ff7f4ec838da8aa8_query_05059_attribute_add",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Single attribute ADD ('colorful'); all supplied positives show small black/dark tattoos on feet, so the new attribute is false for every positive. Fluent and otherwise preserves the source."
+    },
+    {
+      "negative_id": "pinpoint_group_ff7f4ec838da8aa8_query_05060_predicate_substitute",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Single predicate SUBSTITUTE ('Put...on' -> 'Remove...from'); all positives show a tattoo present on the foot, contradicting removal. Fluent with same arguments and scope."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "kimi-k3",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "2dc3961d127fc5b2457c4bd34b48162968ccc8e4c67093a68fc4761b3571996b",
+      "input_hash": "433ac59cdb24b7f6a61e7fe4f71bfc01c456adcf40ba060476308c4b038c17a3",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/kimi-k3/cache/validate_group/433ac59cdb24b7f6a61e7fe4f71bfc01c456adcf40ba060476308c4b038c17a3.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "01a1c9bafc3c784d88a6db250b641962",
+      "usage": {
+        "prompt_tokens": 4308,
+        "completion_tokens": 274,
+        "total_tokens": 4582,
+        "prompt_cache_hit_tokens": 768,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "text_tokens": 0,
+          "audio_tokens": 0,
+          "image_tokens": 0
+        },
+        "completion_tokens_details": {
+          "text_tokens": 0,
+          "audio_tokens": 0,
+          "image_tokens": 0,
+          "reasoning_tokens": 0
+        },
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "input_tokens_details": null,
+        "claude_cache_creation_5_m_tokens": 0,
+        "claude_cache_creation_1_h_tokens": 0,
+        "credit": 2.49
+      }
+    }
+  ],
+  "format_warnings": []
+}

@@ -1,0 +1,58 @@
+{
+  "case_id": "pair_c86b9f516e94d3c79478",
+  "signature": "f91b95909684e2ecf5207ab608279749c891c56633f2fa7c877aa09c2d59f3d4",
+  "simulated": false,
+  "status": "complete",
+  "judgment": {
+    "case_id": "pair_c86b9f516e94d3c79478",
+    "constraints": [
+      {
+        "constraint": "The animal is a leopard.",
+        "A_status": "supported",
+        "B_status": "contradicted",
+        "A_evidence": "The animal has the rosette-patterned coat and robust build of a leopard.",
+        "B_evidence": "The animal has solid spots and prominent black facial tear lines characteristic of a cheetah."
+      },
+      {
+        "constraint": "The composition focuses more on the animal's head than the reference does.",
+        "A_status": "contradicted",
+        "B_status": "supported",
+        "A_evidence": "The image shows the entire animal, including its legs and tail; its head occupies substantially less of the frame than in the reference.",
+        "B_evidence": "The head is larger in the frame and presented frontally near the center, giving it greater emphasis than in the reference."
+      },
+      {
+        "constraint": "Grass is visible in the background.",
+        "A_status": "supported",
+        "B_status": "supported",
+        "A_evidence": "Tall green grass fills the background behind the leopard.",
+        "B_evidence": "A blurred strip of green grass is visible behind the animal and pool deck on the right."
+      }
+    ],
+    "A_status": "contradicted",
+    "B_status": "contradicted",
+    "decision": "neither",
+    "reason": "A shows a leopard with grass but uses a full-body view rather than greater head emphasis. B emphasizes the head and has background grass, but depicts a cheetah rather than the explicitly requested leopard."
+  },
+  "trace": {
+    "stage": "rank_pair_judgment",
+    "model_name": "gpt-5.6-terra",
+    "model_revision": null,
+    "provider": "openai-compatible-chat",
+    "reasoning_effort": null,
+    "prompt_version": "rank_preference_v1",
+    "prompt_hash": "f4fa9cfd8058de6e311228305130f210bef41fcff219878e4e745af15bd16cd3",
+    "input_hash": "d088f7c64bcf4831b4160b91051cbdf1f479eab6dbe2fe89104311e5abb29ee3",
+    "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_rank_preference_v1/outputs/gc_epochs14_top3/api_cache/rank_pair_judgment/d088f7c64bcf4831b4160b91051cbdf1f479eab6dbe2fe89104311e5abb29ee3.json",
+    "cached": false,
+    "attempts": 1,
+    "request_id": "resp_0294da7c87b44c46016af2cce4d33087d1b4b9326c2b732dcd",
+    "usage": {
+      "prompt_tokens": 7619,
+      "completion_tokens": 360,
+      "total_tokens": 7979,
+      "completion_tokens_details": {
+        "reasoning_tokens": 63
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "group_id": "pinpoint_group_3e6c83df58252575",
+  "model": "claude-haiku-5-5",
+  "signature": "44bb4aae802e19564501a676b733c7e19828d9ced260b7da0428f08b1a359df2",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_3e6c83df58252575_query_07556_predicate_substitute",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "The negative text requests adding a collar, which is compatible with positive images 2, 3, and 4. Image 2 shows a collarless jacket, but images 3 and 4 display jackets WITH collars (visible collar details at the neckline), making the 'add collar' instruction compatible with at least some supplied positive results."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-haiku-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "950c074b183cbb65ea4e44f540460fce0da6d8d2c581ad894a6ad7f835ded0e8",
+      "input_hash": "71f292400b42f7c509b396bd59668f5556b6e673aff5a3d947710bcfa5bdd6af",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/claude-haiku-5-5/cache/validate_group/71f292400b42f7c509b396bd59668f5556b6e673aff5a3d947710bcfa5bdd6af.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01xvoGAAL1RdiRLeS5OyBy6Dmk",
+      "usage": {
+        "prompt_tokens": 7829,
+        "completion_tokens": 170,
+        "total_tokens": 7999,
+        "prompt_tokens_details": {
+          "cached_tokens": 6103,
+          "cache_creation_tokens": 1722
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_3e6c83df58252575_query_07556_predicate_substitute",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 315,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

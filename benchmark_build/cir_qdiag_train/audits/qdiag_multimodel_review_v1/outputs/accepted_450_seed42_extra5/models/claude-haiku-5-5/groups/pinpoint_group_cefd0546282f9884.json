@@ -1,0 +1,62 @@
+{
+  "group_id": "pinpoint_group_cefd0546282f9884",
+  "model": "claude-haiku-5-5",
+  "signature": "44bb4aae802e19564501a676b733c7e19828d9ced260b7da0428f08b1a359df2",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_cefd0546282f9884_query_06855_predicate_add",
+      "decision": "reject",
+      "failure_code": "not_visually_verifiable",
+      "reason": "The added phrase 'that complement each other' introduces a subjective relational claim between eyeshadow and lips that cannot be reliably verified from the image. The reference image shows pink eyeshadow and glossy lips, but whether they 'complement each other' is an evaluative judgment not grounded in observable visual fact."
+    },
+    {
+      "negative_id": "pinpoint_group_cefd0546282f9884_query_06855_predicate_substitute",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "The substitution changes 'minus the winged eyeliner' to 'with the winged eyeliner', inverting the constraint. The supplied positive image (Image 2) clearly shows winged eyeliner present, making it compatible with the modified query. This directly contradicts the semantic target of removing winged eyeliner."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-haiku-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "f14e058206523fe7990d2786b6c9605462626d2717eb138b6167f83bbc93c7ce",
+      "input_hash": "1aa4aab57fa25385e48e90b374c0530c8e64e70bc862098616b143ad3ee419df",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/claude-haiku-5-5/cache/validate_group/1aa4aab57fa25385e48e90b374c0530c8e64e70bc862098616b143ad3ee419df.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01AQA9lheiRD6bH45cFRbSrQCh",
+      "usage": {
+        "prompt_tokens": 7488,
+        "completion_tokens": 305,
+        "total_tokens": 7793,
+        "prompt_tokens_details": {
+          "cached_tokens": 5837,
+          "cache_creation_tokens": 1647
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_cefd0546282f9884_query_06855_predicate_add",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 327,
+      "action": "full reason retained; decision and failure_code unchanged"
+    },
+    {
+      "negative_id": "pinpoint_group_cefd0546282f9884_query_06855_predicate_substitute",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 307,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

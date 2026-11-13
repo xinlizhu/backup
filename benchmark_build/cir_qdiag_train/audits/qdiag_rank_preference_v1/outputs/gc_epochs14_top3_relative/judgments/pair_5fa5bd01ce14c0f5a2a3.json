@@ -1,0 +1,64 @@
+{
+  "case_id": "pair_5fa5bd01ce14c0f5a2a3",
+  "signature": "f3a97f608e6addbd5531ad7795f5e06873610abdb12f716de8375d49eda4c022",
+  "simulated": false,
+  "status": "complete",
+  "judgment": {
+    "case_id": "pair_5fa5bd01ce14c0f5a2a3",
+    "constraints": [
+      {
+        "constraint": "A puppy dog is present",
+        "A_status": "supported",
+        "B_status": "uncertain",
+        "A_evidence": "A dog is shown, though it appears more like a young/adult collie than a puppy.",
+        "B_evidence": "A dog is shown, but its age is not clear and it appears mature."
+      },
+      {
+        "constraint": "The dog is sitting down",
+        "A_status": "supported",
+        "B_status": "supported",
+        "A_evidence": "The dog is seated upright among the flowers.",
+        "B_evidence": "The dog is posed seated upright."
+      },
+      {
+        "constraint": "Many flowers are in front of the dog",
+        "A_status": "supported",
+        "B_status": "contradicted",
+        "A_evidence": "Numerous flowers and plants surround the seated dog, including in the foreground.",
+        "B_evidence": "No flowers are visible; the dog is against a plain white background."
+      },
+      {
+        "constraint": "The dog is facing the camera",
+        "A_status": "contradicted",
+        "B_status": "supported",
+        "A_evidence": "The dog's head is turned to the side rather than toward the camera.",
+        "B_evidence": "The dog looks directly toward the camera."
+      }
+    ],
+    "decision": "A",
+    "confidence": "high",
+    "reason": "A clearly fulfills the requested flower-filled setting and seated pose, while B has the more direct camera-facing gaze. A’s flowers are a major requested distinction and B omits them entirely, making A the stronger match overall despite the sideward gaze and uncertain puppy age."
+  },
+  "trace": {
+    "stage": "rank_pair_relative_preference",
+    "model_name": "gpt-5.6-terra",
+    "model_revision": null,
+    "provider": "openai-compatible-chat",
+    "reasoning_effort": null,
+    "prompt_version": "rank_preference_relative_v2",
+    "prompt_hash": "8d3295e6a3c6fe8e45b08b049c2b165a5b5fa19002321a76096fb32b46b941c4",
+    "input_hash": "14e215aa4a00dcea7dc26ca9e5d314176df64a7bf42e03f1e576224e724ba7fd",
+    "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_rank_preference_v1/outputs/gc_epochs14_top3_relative/api_cache/rank_pair_relative_preference/14e215aa4a00dcea7dc26ca9e5d314176df64a7bf42e03f1e576224e724ba7fd.json",
+    "cached": false,
+    "attempts": 1,
+    "request_id": "resp_0f8b158fef882509016af2dc71802887d0aeedea1950666248",
+    "usage": {
+      "prompt_tokens": 7139,
+      "completion_tokens": 314,
+      "total_tokens": 7453,
+      "prompt_tokens_details": {
+        "cached_tokens": 4049
+      }
+    }
+  }
+}

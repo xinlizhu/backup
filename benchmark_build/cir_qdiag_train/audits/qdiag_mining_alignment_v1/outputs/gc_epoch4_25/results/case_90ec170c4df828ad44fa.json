@@ -1,0 +1,236 @@
+{
+  "case_id": "case_90ec170c4df828ad44fa",
+  "audit_query_id": "audit_query_096",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_90ec170c4df828ad44fa",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Two yellow school buses are parked next to each other, with both fronts clearly visible."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "School buses are parked immediately one behind the other along the curb, with their fronts visible. The instruction requires adjacency but does not explicitly require side-by-side parking."
+    },
+    "candidate_relation": "compatible",
+    "violated_source_constraints": [],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "add",
+        "semantic_target": "attribute",
+        "before_span": null,
+        "after_span": "with protruding hoods",
+        "edited_instruction": "Show the front of the school buses with protruding hoods and park them adjacent to each other.",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "Adds protruding hoods as a property of the school buses.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Both buses have flat fronts without protruding engine hoods."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The foreground bus has a prominent projecting hood, and a similar hood is visible on the bus immediately behind it; the buses remain adjacent with their fronts shown."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "operation": "add",
+        "semantic_target": "predicate",
+        "before_span": null,
+        "after_span": "in single file",
+        "edited_instruction": "Show the front of the school buses and park them in single file adjacent to each other.",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "Adds a single-file arrangement to the buses' parking relation.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The two buses are parked side by side, rather than in single file."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The buses form a single-file line along the curb, one immediately behind another, with their fronts visible."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_90ec170c4df828ad44fa",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Two yellow school buses are parked next to each other, with both fronts clearly visible. This supplies the front view requested relative to the side views in R."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "School buses are parked close together along the curb, one immediately behind another. The foreground bus's front and part of the following bus's front are visible. The instruction does not require side-by-side parking."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "Inserting 'with protruding hoods' adds one visible bus attribute and preserves the original constraints. T has flat-front buses, while C has conventional buses with projecting hoods. Both images support the original query.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Both buses have flat front faces beneath their windshields, without projecting engine hoods."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The foreground bus has a prominent projecting hood and grille; the following bus also shows a projecting yellow hood. Their fronts are visible and they are parked adjacent along the curb."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "Inserting 'in single file' adds one parking-arrangement constraint while retaining front visibility and adjacency. C shows buses parked one behind another; T shows buses beside one another. Both support the original query.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The two buses occupy neighboring lateral positions with their fronts visible, rather than forming a single-file line."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The buses form a single line along the curb, with the following bus immediately behind the foreground bus. Visible front portions establish the retained front-view requirement."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "add",
+      "semantic_target": "attribute",
+      "before_span": null,
+      "after_span": "with protruding hoods",
+      "edited_instruction": "Show the front of the school buses with protruding hoods and park them adjacent to each other.",
+      "witness_type": "addition_disambiguation",
+      "changed_constraint": "Adds protruding hoods as a property of the school buses.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "Both buses have flat fronts without protruding engine hoods."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "The foreground bus has a prominent projecting hood, and a similar hood is visible on the bus immediately behind it; the buses remain adjacent with their fronts shown."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "Inserting 'with protruding hoods' adds one visible bus attribute and preserves the original constraints. T has flat-front buses, while C has conventional buses with projecting hoods. Both images support the original query.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Both buses have flat front faces beneath their windshields, without projecting engine hoods."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The foreground bus has a prominent projecting hood and grille; the following bus also shows a projecting yellow hood. Their fronts are visible and they are parked adjacent along the curb."
+        }
+      }
+    },
+    {
+      "witness_id": "w2",
+      "operation": "add",
+      "semantic_target": "predicate",
+      "before_span": null,
+      "after_span": "in single file",
+      "edited_instruction": "Show the front of the school buses and park them in single file adjacent to each other.",
+      "witness_type": "addition_disambiguation",
+      "changed_constraint": "Adds a single-file arrangement to the buses' parking relation.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "The two buses are parked side by side, rather than in single file."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "The buses form a single-file line along the curb, one immediately behind another, with their fronts visible."
+      },
+      "independent_review": {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "Inserting 'in single file' adds one parking-arrangement constraint while retaining front visibility and adjacency. C shows buses parked one behind another; T shows buses beside one another. Both support the original query.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The two buses occupy neighboring lateral positions with their fronts visible, rather than forming a single-file line."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The buses form a single line along the curb, with the following bus immediately behind the foreground bus. Visible front portions establish the retained front-view requirement."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    },
+    {
+      "witness_id": "w2",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "588ed27a91d765dc528823f45ec2de62aad5eaaf93736c9b37a30ef6ca3923eb",
+      "input_hash": "6f5e303ce90009feae80f3d01fbf7c957d0178ddceaf509898a394b3a151c461",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/6f5e303ce90009feae80f3d01fbf7c957d0178ddceaf509898a394b3a151c461.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_06a6ed2c8160e48a016af2bdfd4ad487d1ba0e88693e69b821",
+      "usage": {
+        "prompt_tokens": 7367,
+        "completion_tokens": 755,
+        "total_tokens": 8122,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 225
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "ab2ec62ccb91fb0504f0215177551230e0dfa50edd82669e014f0ae1b6e36d83",
+      "input_hash": "117d512f518925931735d67aa9fb2bfd92c5f6d340d01d7d72a0002a15cfd722",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/117d512f518925931735d67aa9fb2bfd92c5f6d340d01d7d72a0002a15cfd722.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0c6a0f237947daec016af2be307b7087d19e68650d2b45994a",
+      "usage": {
+        "prompt_tokens": 6970,
+        "completion_tokens": 563,
+        "total_tokens": 7533,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 43
+        }
+      }
+    }
+  ]
+}

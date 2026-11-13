@@ -1,0 +1,236 @@
+{
+  "case_id": "case_7b14273293a79eeacce2",
+  "audit_query_id": "audit_query_090",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_7b14273293a79eeacce2",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "An orange car is shown from a rear three-quarter angle on a road beside a large body of water."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "A red convertible is shown from a rear three-quarter angle beside the sea. The instruction does not require the reference car's exact identity."
+    },
+    "candidate_relation": "compatible",
+    "violated_source_constraints": [],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "add",
+        "semantic_target": "attribute",
+        "before_span": null,
+        "after_span": "red",
+        "edited_instruction": "Show red car from back by water.",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "Adds a red body-color constraint to distinguish the candidate from the orange positive.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The car is orange, although its rear view and waterside setting satisfy the retained constraints."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The car has a red body and is shown from behind beside the sea."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "operation": "add",
+        "semantic_target": "predicate",
+        "before_span": null,
+        "after_span": "while parked",
+        "edited_instruction": "Show car from back by water while parked.",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "Adds the requirement that the car be parked.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The car is traveling along the waterside road, with motion-blurred wheels and surroundings."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The car is parked on a cobbled area beside the sea and is viewed from the rear."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_7b14273293a79eeacce2",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows an orange car from a rear three-quarter angle beside a body of water."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "Image 3 shows a car from the rear three-quarter angle beside the sea."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "Adding “red” is one attribute constraint on the car. Image 2's car is orange, while Image 3's car is red; the original query remains satisfied in both.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The car in Image 2 is orange, not red."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The car in Image 3 is visibly red."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "Adding “while parked” introduces one constraint and yields a fluent instruction. Image 2 shows motion blur and a car traveling on the road; Image 3's car is stationary by the shore.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 shows the car driving, with motion blur in the background and wheels."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows the car stationary on the cobbled area beside the water."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "add",
+      "semantic_target": "attribute",
+      "before_span": null,
+      "after_span": "red",
+      "edited_instruction": "Show red car from back by water.",
+      "witness_type": "addition_disambiguation",
+      "changed_constraint": "Adds a red body-color constraint to distinguish the candidate from the orange positive.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "The car is orange, although its rear view and waterside setting satisfy the retained constraints."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "The car has a red body and is shown from behind beside the sea."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "Adding “red” is one attribute constraint on the car. Image 2's car is orange, while Image 3's car is red; the original query remains satisfied in both.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The car in Image 2 is orange, not red."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The car in Image 3 is visibly red."
+        }
+      }
+    },
+    {
+      "witness_id": "w2",
+      "operation": "add",
+      "semantic_target": "predicate",
+      "before_span": null,
+      "after_span": "while parked",
+      "edited_instruction": "Show car from back by water while parked.",
+      "witness_type": "addition_disambiguation",
+      "changed_constraint": "Adds the requirement that the car be parked.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "The car is traveling along the waterside road, with motion-blurred wheels and surroundings."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "The car is parked on a cobbled area beside the sea and is viewed from the rear."
+      },
+      "independent_review": {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "Adding “while parked” introduces one constraint and yields a fluent instruction. Image 2 shows motion blur and a car traveling on the road; Image 3's car is stationary by the shore.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 shows the car driving, with motion blur in the background and wheels."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows the car stationary on the cobbled area beside the water."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    },
+    {
+      "witness_id": "w2",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "90b7da2f49aafb2f358bac849c5597868176f0f2bb064582351fdd6f37aa06c1",
+      "input_hash": "2c40be3f9ff3f71b6a70c784af6506b725228fc504f4d435a2a43f708cb723d3",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/2c40be3f9ff3f71b6a70c784af6506b725228fc504f4d435a2a43f708cb723d3.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_05f1e50650b3a33b016af2bf5d4e3c87d2a0b001ca972b4794",
+      "usage": {
+        "prompt_tokens": 10601,
+        "completion_tokens": 630,
+        "total_tokens": 11231,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 137
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "b67eaca15ec6732ac6d309e0113b1baf2a472b874fc4705db1eeaa53b62084c4",
+      "input_hash": "da6f441558b16ab991cb36d628d8aa586628d38c043c17d93d1acbb439239863",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/da6f441558b16ab991cb36d628d8aa586628d38c043c17d93d1acbb439239863.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0d510cf6caa76692016af2bf712b4487d1a820a771400c93ee",
+      "usage": {
+        "prompt_tokens": 10342,
+        "completion_tokens": 474,
+        "total_tokens": 10816,
+        "prompt_tokens_details": {
+          "cached_tokens": 5248
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 148
+        }
+      }
+    }
+  ]
+}

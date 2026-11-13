@@ -1,0 +1,238 @@
+{
+  "case_id": "case_3f152d72d0eb4d6a75b3",
+  "audit_query_id": "audit_query_083",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_3f152d72d0eb4d6a75b3",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "T shows one body-cream container beside its matching pink box, satisfying the requested single product with its box."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows two EPI ROSE bottles beside matching red packaging, rather than a single product."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "Only a single product should remain."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "delete",
+        "semantic_target": "attribute",
+        "before_span": "single",
+        "after_span": null,
+        "edited_instruction": "Leave a product with its box",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "Remove the explicit restriction to a single product.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "T contains a body-cream container with its matching box."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C contains EPI ROSE bottles with matching red packaging; the edited instruction no longer explicitly excludes an additional bottle."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "operation": "substitute",
+        "semantic_target": "attribute",
+        "before_span": "single product",
+        "after_span": "pair of products",
+        "edited_instruction": "Leave a pair of products with its box",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "Change the product count from one to a pair.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "T shows only one product container with a box, not a pair of products."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C shows a pair of EPI ROSE bottles alongside matching red boxed packaging."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_3f152d72d0eb4d6a75b3",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows one cream tube beside one matching pink retail box, satisfying a single product with its box."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows two product bottles, one with a spray dispenser and one with a cap, beside matching red EPI ROSE packaging. The two bottles violate the single-product constraint."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting 'single' exactly reconstructs the proposed instruction and removes only the explicit quantity restriction. Both images contain a product with matching packaging; the candidate's only source-constraint violation is the presence of two products.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "The cream tube in Image 2 is accompanied by its matching pink box."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 contains EPI ROSE product bottles with matching red retail packaging. Without 'single', an additional bottle is not explicitly excluded."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing 'single product' with 'pair of products' exactly reconstructs the edit and changes one quantity attribute while preserving the product and box requirement. 'Its box' can refer to the singular collective 'pair'.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 contains only one cream tube with its box, not a pair of products."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 visibly contains a pair of EPI ROSE bottles beside matching red EPI ROSE retail packaging."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "delete",
+      "semantic_target": "attribute",
+      "before_span": "single",
+      "after_span": null,
+      "edited_instruction": "Leave a product with its box",
+      "witness_type": "deletion_relaxation",
+      "changed_constraint": "Remove the explicit restriction to a single product.",
+      "edited_on_positive": {
+        "status": "supported",
+        "evidence": "T contains a body-cream container with its matching box."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C contains EPI ROSE bottles with matching red packaging; the edited instruction no longer explicitly excludes an additional bottle."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting 'single' exactly reconstructs the proposed instruction and removes only the explicit quantity restriction. Both images contain a product with matching packaging; the candidate's only source-constraint violation is the presence of two products.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "The cream tube in Image 2 is accompanied by its matching pink box."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 contains EPI ROSE product bottles with matching red retail packaging. Without 'single', an additional bottle is not explicitly excluded."
+        }
+      }
+    },
+    {
+      "witness_id": "w2",
+      "operation": "substitute",
+      "semantic_target": "attribute",
+      "before_span": "single product",
+      "after_span": "pair of products",
+      "edited_instruction": "Leave a pair of products with its box",
+      "witness_type": "substitution_contrast",
+      "changed_constraint": "Change the product count from one to a pair.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "T shows only one product container with a box, not a pair of products."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C shows a pair of EPI ROSE bottles alongside matching red boxed packaging."
+      },
+      "independent_review": {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing 'single product' with 'pair of products' exactly reconstructs the edit and changes one quantity attribute while preserving the product and box requirement. 'Its box' can refer to the singular collective 'pair'.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 contains only one cream tube with its box, not a pair of products."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 visibly contains a pair of EPI ROSE bottles beside matching red EPI ROSE retail packaging."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    },
+    {
+      "witness_id": "w2",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "0d1d4cc547528f7276399dac1872026881d32ad1814e78224ee05e5e9ffe93f2",
+      "input_hash": "ac517669eeb62bf74db573f4df552322a07f8fd40b28e6197202ed01ae5c5f3d",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/ac517669eeb62bf74db573f4df552322a07f8fd40b28e6197202ed01ae5c5f3d.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_09c10099aaa03949016af2be729cf487d1a7c12f2a3d1a1850",
+      "usage": {
+        "prompt_tokens": 7647,
+        "completion_tokens": 823,
+        "total_tokens": 8470,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 322
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "385fcf2507391c27fd7d5da811793cb08b55f49cd2233a750669a217295bd52b",
+      "input_hash": "d126a12912de5618e9a4657bb023310ef4a633dd69cb74d15d973abf2c0eede6",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/d126a12912de5618e9a4657bb023310ef4a633dd69cb74d15d973abf2c0eede6.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_038ab5d1c26160b6016af2be90a53087d2a8d3c5e90dbff668",
+      "usage": {
+        "prompt_tokens": 7228,
+        "completion_tokens": 571,
+        "total_tokens": 7799,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 75
+        }
+      }
+    }
+  ]
+}

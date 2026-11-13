@@ -1,0 +1,132 @@
+{
+  "case_id": "case_5a5ea6788e8769e3579b",
+  "audit_query_id": "audit_query_100",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_5a5ea6788e8769e3579b",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a round baking dish containing food with a browned, melted cheese layer on top."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a glass bowl of fruit-and-cream trifle; no cheese topping is visible."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "Cheese on top: Image 3 shows blueberries and peach on top, not cheese."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "delete_cheese_topping",
+        "operation": "delete",
+        "semantic_target": "attribute",
+        "before_span": "and cheese on top",
+        "after_span": null,
+        "edited_instruction": "A bowl with a dish",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "Removes the requirement that the food have cheese on top.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 visibly contains food in a round baking dish, regardless of the removed topping detail."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows a glass bowl holding layered trifle."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_5a5ea6788e8769e3579b",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "Image 2 shows a close-up of a baked, browned dish; a bowl is not clearly visible, and cheese on top cannot be reliably distinguished from the browned surface."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 clearly shows a layered dessert in a glass trifle bowl, topped with berries and fruit, not cheese."
+    },
+    "verdicts": [
+      {
+        "witness_id": "delete_cheese_topping",
+        "decision": "reject",
+        "failure_code": "source_invalid_or_uncertain",
+        "witness_type": null,
+        "reason": "The source constraint that the dish has cheese on top is not reliably established in Image 2, so the required deletion support pattern cannot be confirmed.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 visibly shows a baked dish in a pan; the broad description of a dish is supported."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows a layered dessert served in a glass bowl, consistent with a dish in a bowl."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [],
+  "local_checks": [
+    {
+      "witness_id": "delete_cheese_topping",
+      "accepted": false,
+      "local_failures": [
+        "wrong_witness_type",
+        "wrong_support_pattern"
+      ],
+      "review_decision": "reject"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "b9b73ef86853438c5d3ec142e8843bffe9b6f76aba242dd89fd1648faf67b8e6",
+      "input_hash": "18a64db80b35c26cd70e1496f5d7e9b2825e48b21f13875514e56c9a46080c03",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/18a64db80b35c26cd70e1496f5d7e9b2825e48b21f13875514e56c9a46080c03.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_045f2b8e80fc572a016af2bedea14c87d28436aaaccaf3dde2",
+      "usage": {
+        "prompt_tokens": 13772,
+        "completion_tokens": 661,
+        "total_tokens": 14433,
+        "prompt_tokens_details": {
+          "cached_tokens": 3823
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 403
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "28a5699df9fd21d041841f11959d4a8efd3db7c1a3c7fd731eb6098b8498c929",
+      "input_hash": "081ccc7cfa93a40f633bb21d4b654068d272098bce8acf72c94fc37c9725ea05",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/081ccc7cfa93a40f633bb21d4b654068d272098bce8acf72c94fc37c9725ea05.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0dace7c9403b6c02016af2bef453ac87d080fe118e21dceb07",
+      "usage": {
+        "prompt_tokens": 13293,
+        "completion_tokens": 241,
+        "total_tokens": 13534,
+        "prompt_tokens_details": {
+          "cached_tokens": 3254
+        }
+      }
+    }
+  ]
+}

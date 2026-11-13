@@ -1,0 +1,71 @@
+{
+  "case_id": "pair_368733ce5a92a3508e0f",
+  "signature": "f3a97f608e6addbd5531ad7795f5e06873610abdb12f716de8375d49eda4c022",
+  "simulated": false,
+  "status": "complete",
+  "judgment": {
+    "case_id": "pair_368733ce5a92a3508e0f",
+    "constraints": [
+      {
+        "constraint": "Exactly one dog is present",
+        "A_status": "contradicted",
+        "B_status": "supported",
+        "A_evidence": "Two black-and-brown dogs are clearly visible.",
+        "B_evidence": "A single dog occupies the image."
+      },
+      {
+        "constraint": "The dog is big/large",
+        "A_status": "supported",
+        "B_status": "supported",
+        "A_evidence": "Both visible dogs appear to be large Dobermans.",
+        "B_evidence": "The solitary Doberman appears large and robust in close view."
+      },
+      {
+        "constraint": "The dog is black-brown",
+        "A_status": "supported",
+        "B_status": "supported",
+        "A_evidence": "Both dogs have black coats with brown/tan markings.",
+        "B_evidence": "The dog has a black coat with prominent brown/tan muzzle and chest markings."
+      },
+      {
+        "constraint": "The dog is on green grass",
+        "A_status": "supported",
+        "B_status": "supported",
+        "A_evidence": "Both dogs stand on green grass.",
+        "B_evidence": "Green grass is visible around and behind the dog."
+      },
+      {
+        "constraint": "A forest-like background is present",
+        "A_status": "uncertain",
+        "B_status": "supported",
+        "A_evidence": "There is an outdoor background with vegetation, but it appears more like a yard or hedge than a forest.",
+        "B_evidence": "Trees and dense wooded vegetation are clearly visible behind the dog."
+      }
+    ],
+    "decision": "B",
+    "confidence": "high",
+    "reason": "B directly performs the key requested change to one large black-brown dog on grass while retaining a wooded background; A still shows two dogs, failing the central quantity change."
+  },
+  "trace": {
+    "stage": "rank_pair_relative_preference",
+    "model_name": "gpt-5.6-terra",
+    "model_revision": null,
+    "provider": "openai-compatible-chat",
+    "reasoning_effort": null,
+    "prompt_version": "rank_preference_relative_v2",
+    "prompt_hash": "666235cb60dc5449c3ca09c419d0ee3a5f572cec6f8b4f274a23dbb51c7dbc07",
+    "input_hash": "5bbf1c5aa1d752c3ffab437aec3f1ca8665a9f00ca289059ca2d027303878ccc",
+    "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_rank_preference_v1/outputs/gc_epochs14_top3_relative/api_cache/rank_pair_relative_preference/5bbf1c5aa1d752c3ffab437aec3f1ca8665a9f00ca289059ca2d027303878ccc.json",
+    "cached": false,
+    "attempts": 1,
+    "request_id": "resp_ack_ba0929301f75f3edbaebad2d614406b9",
+    "usage": {
+      "prompt_tokens": 1886,
+      "completion_tokens": 472,
+      "total_tokens": 2358,
+      "completion_tokens_details": {
+        "reasoning_tokens": 139
+      }
+    }
+  }
+}

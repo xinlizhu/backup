@@ -1,0 +1,75 @@
+{
+  "group_id": "pinpoint_group_da5bdc63e808e138",
+  "model": "claude-haiku-5-5",
+  "signature": "44bb4aae802e19564501a676b733c7e19828d9ced260b7da0428f08b1a359df2",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_da5bdc63e808e138_query_06102_attribute_substitute",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "Image 5 shows an iridescent/holographic fabric with rainbow reflective properties. Substituting 'fabric' to 'denim' contradicts the reference image 1 (which appears to show reflective iridescent material), and the positive image 5 displays iridescent material compatible with both 'fabric' and 'denim' as material descriptors, making the new fact not clearly false for all supplied positives."
+    },
+    {
+      "negative_id": "pinpoint_group_da5bdc63e808e138_query_06102_predicate_substitute",
+      "decision": "reject",
+      "failure_code": "not_single_edit",
+      "reason": "Substituting 'in' with 'beside' changes the spatial relationship predicate, but this fundamentally alters the semantic constraint from describing a tee made of a material to describing two separate items positioned adjacently. The reference images show a tee with fabric as its material composition, not two separate objects beside each other."
+    },
+    {
+      "negative_id": "pinpoint_group_da5bdc63e808e138_query_06105_predicate_delete",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "The deletion removes 'that uses the reflective iridescent fabric from <img1>', which is a meaningful semantic constraint specifying a material property relationship. The remaining text 'a plain crewneck t shirt like <img2>' is fluent, preserves the core meaning, and is strictly weaker by removing one complete predicate constraint about the fabric source."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-haiku-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "da5f16b41a6fd957fda08706241c562c44bd0692d17387d638e5ffd26e3c4a9c",
+      "input_hash": "2fb64db6981d5eeb696ee4ea9e03ab15db6b0b487d67a43fc38df5fdbc892684",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/claude-haiku-5-5/cache/validate_group/2fb64db6981d5eeb696ee4ea9e03ab15db6b0b487d67a43fc38df5fdbc892684.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01jYm2ddqASMioKc2gQivQ5EdB",
+      "usage": {
+        "prompt_tokens": 9818,
+        "completion_tokens": 504,
+        "total_tokens": 10322,
+        "prompt_tokens_details": {
+          "cached_tokens": 7654,
+          "cache_creation_tokens": 2160
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_da5bdc63e808e138_query_06102_attribute_substitute",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 392,
+      "action": "full reason retained; decision and failure_code unchanged"
+    },
+    {
+      "negative_id": "pinpoint_group_da5bdc63e808e138_query_06102_predicate_substitute",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 343,
+      "action": "full reason retained; decision and failure_code unchanged"
+    },
+    {
+      "negative_id": "pinpoint_group_da5bdc63e808e138_query_06105_predicate_delete",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 356,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

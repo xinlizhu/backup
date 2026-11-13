@@ -1,0 +1,88 @@
+{
+  "case_id": "case_5779688a0bff9f6001d7",
+  "audit_query_id": "audit_query_084",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_5779688a0bff9f6001d7",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows dough in a comparable angled close-up, with a rolling pin on the right."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 is a frontal view of a vending machine; it does not show a comparable angled dough photograph or a rolling pin on the right."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "Similar angled photograph",
+      "Must include rolling pin on the right hand side"
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_5779688a0bff9f6001d7",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows dough on a work surface from a similar angled viewpoint to Image 1, with a rolling pin visible on the right."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a red vending machine, not a similar angled photograph of dough, and no rolling pin is visible on the right."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "868e92916c23838bcdb1173865d22028e802716b48ff8d13938cd8f51b554498",
+      "input_hash": "c8dbfe8616a1712d7493dfa2fd8c116bda19c5517e2525f1d39850c36239d8a5",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/c8dbfe8616a1712d7493dfa2fd8c116bda19c5517e2525f1d39850c36239d8a5.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0659ccdc444e0cae016af2bf80c2d087d18bf73f3848fce1eb",
+      "usage": {
+        "prompt_tokens": 4163,
+        "completion_tokens": 615,
+        "total_tokens": 4778,
+        "completion_tokens_details": {
+          "reasoning_tokens": 437
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "40401225be799856d756d7433a3addb9edd3c7af8ac026fb9b372c8407594237",
+      "input_hash": "7d8096a4e690aefdbaa56aeb4faa67d98b932d120c941926665e9241bfb81789",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/7d8096a4e690aefdbaa56aeb4faa67d98b932d120c941926665e9241bfb81789.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0e38be7249a4b52e016af2bf8aaa8887d0a85caf18793eedc1",
+      "usage": {
+        "prompt_tokens": 7010,
+        "completion_tokens": 178,
+        "total_tokens": 7188,
+        "prompt_tokens_details": {
+          "cached_tokens": 5248
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 66
+        }
+      }
+    }
+  ]
+}

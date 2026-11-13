@@ -1,0 +1,166 @@
+{
+  "case_id": "case_f4c4f66acaf166cf9807",
+  "audit_query_id": "audit_query_081",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_f4c4f66acaf166cf9807",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The saxophone is a wind instrument with a maroon-red body and gold-colored keys."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The saxophone is a wind instrument, but its body has a pale rose-gold metallic finish rather than a maroon finish."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The wind instrument must have a maroon color."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "attribute",
+        "before_span": "maroon",
+        "after_span": "rose-gold",
+        "edited_instruction": "Make a wind instrument a rose-gold color.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "The instrument's color changes from maroon to rose-gold.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The saxophone's body is maroon-red, not rose-gold; its gold-colored keywork does not give the body a rose-gold finish."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The saxophone has a pale, pinkish gold metallic body consistent with a rose-gold finish."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_f4c4f66acaf166cf9807",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a saxophone with a dark reddish-maroon body; the gold-colored keys do not obscure the body color."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a saxophone with a pale rose-gold/copper-colored body, rather than a maroon body."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing only “maroon” with “rose-gold” is a fluent attribute substitution that retains the instrument. Image 2's body is maroon rather than rose-gold, while Image 3's body is visibly rose-gold.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 has a dark reddish-maroon body with gold-colored keys, not a rose-gold body."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3's saxophone body is visibly pale rose-gold/copper-colored."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "substitute",
+      "semantic_target": "attribute",
+      "before_span": "maroon",
+      "after_span": "rose-gold",
+      "edited_instruction": "Make a wind instrument a rose-gold color.",
+      "witness_type": "substitution_contrast",
+      "changed_constraint": "The instrument's color changes from maroon to rose-gold.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "The saxophone's body is maroon-red, not rose-gold; its gold-colored keywork does not give the body a rose-gold finish."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "The saxophone has a pale, pinkish gold metallic body consistent with a rose-gold finish."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing only “maroon” with “rose-gold” is a fluent attribute substitution that retains the instrument. Image 2's body is maroon rather than rose-gold, while Image 3's body is visibly rose-gold.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 has a dark reddish-maroon body with gold-colored keys, not a rose-gold body."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3's saxophone body is visibly pale rose-gold/copper-colored."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "92837aabcb120d2fff65fca05d067c77ed9b694d2d62f62984b753ba67b99718",
+      "input_hash": "62bebcdbd3bf07badd91eab074a66428fb148975244d8b1ae266030736402f66",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/62bebcdbd3bf07badd91eab074a66428fb148975244d8b1ae266030736402f66.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0ef8b7bf283c9bd9016af2bf5c332487d2b5a7fb9ec1dc34b1",
+      "usage": {
+        "prompt_tokens": 9112,
+        "completion_tokens": 431,
+        "total_tokens": 9543,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 69
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "a5102f82ab2a2cb26fc7f416d9fc4bab90d0f42d1719001ad6b41253dae84aae",
+      "input_hash": "0e7a68f0f35598f50f3e8d23c0b93dbf6bf29653615cfdf3d272eaa3f76823ab",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/0e7a68f0f35598f50f3e8d23c0b93dbf6bf29653615cfdf3d272eaa3f76823ab.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_073534a1a604f0c6016af2bf69682487d29a88244afd3310b3",
+      "usage": {
+        "prompt_tokens": 8799,
+        "completion_tokens": 441,
+        "total_tokens": 9240,
+        "prompt_tokens_details": {
+          "cached_tokens": 5248
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 194
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "case_id": "case_5b88bffacaff27009754",
+  "audit_query_id": "audit_query_083",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_5b88bffacaff27009754",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows one white body-cream tube beside its pink box."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows one Givenchy lip balm beside its black box, rather than the requested product with its box."
+    },
+    "candidate_relation": "multiple_constraint_conflict",
+    "violated_source_constraints": [
+      "The product is not the same type as the body cream shown in the reference.",
+      "The instruction says to leave a single product with its box, but the candidate shows a lip balm and its separate box."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_5b88bffacaff27009754",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows one body cream tube together with its matching pink box."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "Image 3 shows one lipstick product together with its matching black box."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "f3dfe074c16a7a3b16594dde5e7a7edb1e36b3188d4c9ae7f53e2378980f0cba",
+      "input_hash": "6ff18c665bfc4bb12f2886f62316e234326fad905ec29ce9839ff881362645d5",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/6ff18c665bfc4bb12f2886f62316e234326fad905ec29ce9839ff881362645d5.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_06e7a5cc703338a2016af2beb4d6c887d2ab9f0e1a199ed619",
+      "usage": {
+        "prompt_tokens": 8241,
+        "completion_tokens": 151,
+        "total_tokens": 8392
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "1fda97f872c2d7d0e015a697a14166959689f12bb083e71e064ec507ac8ef1a9",
+      "input_hash": "ea4f6574f63b5ce3dab34f5488166f236bf21850db81c9c5a864731cb2fa05a7",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/ea4f6574f63b5ce3dab34f5488166f236bf21850db81c9c5a864731cb2fa05a7.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_015df01c95b3b931016af2bebefcd087d2933e6ce62c8ad4f5",
+      "usage": {
+        "prompt_tokens": 5594,
+        "completion_tokens": 346,
+        "total_tokens": 5940,
+        "completion_tokens_details": {
+          "reasoning_tokens": 185
+        }
+      }
+    }
+  ]
+}

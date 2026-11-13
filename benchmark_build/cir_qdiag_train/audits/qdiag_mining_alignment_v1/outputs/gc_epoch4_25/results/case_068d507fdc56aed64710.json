@@ -1,0 +1,127 @@
+{
+  "case_id": "case_068d507fdc56aed64710",
+  "audit_query_id": "audit_query_100",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_068d507fdc56aed64710",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a food dish in a baking dish with a browned, cheese-like topping."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "Image 3 shows a bowl of soup topped with visible shredded cheese."
+    },
+    "candidate_relation": "compatible",
+    "violated_source_constraints": [],
+    "witnesses": [
+      {
+        "witness_id": "add_attribute_broccoli",
+        "operation": "add",
+        "semantic_target": "attribute",
+        "before_span": null,
+        "after_span": "broccoli",
+        "edited_instruction": "A bowl with a dish and broccoli cheese on top.",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "The added broccoli detail is visible in image 3 and not image 2.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 shows a browned dish but no visible broccoli."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 visibly shows broccoli in the bowl of soup."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_068d507fdc56aed64710",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a dish in a bowl with a browned, cheese-like topping."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "Image 3 shows soup in a bowl with visible cheese and broccoli on top."
+    },
+    "verdicts": [
+      {
+        "witness_id": "add_attribute_broccoli",
+        "decision": "reject",
+        "failure_code": "not_fluent",
+        "witness_type": null,
+        "reason": "The insertion reconstructs the text, but “broccoli cheese on top” is ambiguous and does not clearly state that broccoli is an added topping; the claimed new constraint is not reliably expressed.",
+        "edited_on_positive": {
+          "status": "uncertain",
+          "evidence": "Image 2 visibly has a browned topping, but broccoli is not clearly discernible."
+        },
+        "edited_on_candidate": {
+          "status": "uncertain",
+          "evidence": "Image 3 visibly has broccoli and cheese toppings, but the edited wording does not clearly specify broccoli as a separate topping."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [],
+  "local_checks": [
+    {
+      "witness_id": "add_attribute_broccoli",
+      "accepted": false,
+      "local_failures": [
+        "wrong_witness_type",
+        "wrong_support_pattern"
+      ],
+      "review_decision": "reject"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "bc3fea8ffb17da7c4b9ddb4e6367b680934786336c93886de038bad3585a07a1",
+      "input_hash": "02b90f62a491b3246331689d6ab433127c26c80c95dfa5be33169d829f40d269",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/02b90f62a491b3246331689d6ab433127c26c80c95dfa5be33169d829f40d269.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_ack_777adeb1ac3da934693d5d1e69e94437",
+      "usage": {
+        "prompt_tokens": 9370,
+        "completion_tokens": 693,
+        "total_tokens": 10063,
+        "completion_tokens_details": {
+          "reasoning_tokens": 460
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "6299fccfda22a57b6150b09935fdf5af155499194024cad3fe2f6d9b76c5e159",
+      "input_hash": "689b38ecd08155bfd89cc84c499fd7b38043f1cea39fb79758f3721224fb4c4c",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/689b38ecd08155bfd89cc84c499fd7b38043f1cea39fb79758f3721224fb4c4c.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_ack_c5b2946390d7a4ba2dc20abe10e8b1d2",
+      "usage": {
+        "prompt_tokens": 8893,
+        "completion_tokens": 629,
+        "total_tokens": 9522,
+        "completion_tokens_details": {
+          "reasoning_tokens": 345
+        }
+      }
+    }
+  ]
+}

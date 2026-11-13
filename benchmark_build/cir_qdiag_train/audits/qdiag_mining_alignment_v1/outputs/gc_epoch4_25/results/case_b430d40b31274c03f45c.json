@@ -1,0 +1,88 @@
+{
+  "case_id": "case_b430d40b31274c03f45c",
+  "audit_query_id": "audit_query_099",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_b430d40b31274c03f45c",
+    "case_status": "source_invalid_or_uncertain",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "The reddish and yellowish ground cover appears to be fallen pine needles around a log; it is not reliably identifiable as grass."
+    },
+    "source_on_candidate": {
+      "status": "uncertain",
+      "evidence": "Visible grass blades are mostly green, with some brownish stems in the background; reddish and yellowish grass cannot be reliably established."
+    },
+    "candidate_relation": "uncertain",
+    "violated_source_constraints": [],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_b430d40b31274c03f45c",
+    "source_on_positive": {
+      "status": "contradicted",
+      "evidence": "Image 2 shows mostly brown and tan pine needles over dark ground, not visibly reddish and yellowish grass."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 has green vegetation and flowers, but no clearly visible reddish and yellowish grass."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "e38beefa5792c34856867a022bce8eade8b0575ea7b8c6f337d98f17455c4fea",
+      "input_hash": "4b5f31364920d8db67f1930e8928d52bc37dce26e290cdd495b7ae83a43d5424",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/4b5f31364920d8db67f1930e8928d52bc37dce26e290cdd495b7ae83a43d5424.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0975e20124016331016af2bf382b4887d0af6070caa049e52e",
+      "usage": {
+        "prompt_tokens": 6755,
+        "completion_tokens": 287,
+        "total_tokens": 7042,
+        "prompt_tokens_details": {
+          "cached_tokens": 3830
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 126
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "433659dadfa8db9a7d1224a0fac4999a5d22d3be9e24c43682bf36ee9f0d292f",
+      "input_hash": "198a41df42ae06a42653da1d8166d43e77359ac9c8bad72e50e068fcbada488a",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/198a41df42ae06a42653da1d8166d43e77359ac9c8bad72e50e068fcbada488a.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0691128b9411e09f016af2bf44cddc87d292876dbab2a9bfda",
+      "usage": {
+        "prompt_tokens": 6377,
+        "completion_tokens": 239,
+        "total_tokens": 6616,
+        "prompt_tokens_details": {
+          "cached_tokens": 5248
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 141
+        }
+      }
+    }
+  ]
+}

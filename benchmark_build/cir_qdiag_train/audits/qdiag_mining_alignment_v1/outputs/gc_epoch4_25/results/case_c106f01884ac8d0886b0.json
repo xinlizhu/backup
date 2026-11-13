@@ -1,0 +1,89 @@
+{
+  "case_id": "case_c106f01884ac8d0886b0",
+  "audit_query_id": "audit_query_086",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_c106f01884ac8d0886b0",
+    "case_status": "source_invalid_or_uncertain",
+    "source_on_positive": {
+      "status": "contradicted",
+      "evidence": "The fox is seated on its haunches with straight forelegs, resembling the prominent reference cat's seated pose. It is not standing as explicitly requested."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The candidate shows a wild boar lying in leaf litter, rather than a fox standing or holding the reference cat's upright seated pose."
+    },
+    "candidate_relation": "multiple_constraint_conflict",
+    "violated_source_constraints": [
+      "The animal must be a fox.",
+      "The animal must be standing.",
+      "The animal must retain the reference cat's pose."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_c106f01884ac8d0886b0",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a fox seated upright in a pose similar to the upright seated cat in reference image 1."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a boar lying down, not a fox standing in the same upright gesture as the animal in reference image 1."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "d4efb3ad48e23b367091ff999324ffaff45dbf2888e775903b1725b203ca0df7",
+      "input_hash": "c2f9a53a4b3f8bce7557a9368f7713e40b6040c0d14e0714a09d8d2623ecdcd0",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/c2f9a53a4b3f8bce7557a9368f7713e40b6040c0d14e0714a09d8d2623ecdcd0.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0834a692e892b2a3016af2bf80668c87d1bdae9a7cb59c6738",
+      "usage": {
+        "prompt_tokens": 6846,
+        "completion_tokens": 315,
+        "total_tokens": 7161,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 112
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "d06dac1d5f63f24bcefbdb146d7995410d5d777470153f4c6b61062cd9edc588",
+      "input_hash": "ec1317ab08b0eca97a08a56c2084091e6dbd6665f15bf84f782c4a2b7c7a68ea",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/ec1317ab08b0eca97a08a56c2084091e6dbd6665f15bf84f782c4a2b7c7a68ea.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0fd73e1a5043bc7a016af2bf9200c887d0bb9e1b3bd65e319a",
+      "usage": {
+        "prompt_tokens": 6468,
+        "completion_tokens": 167,
+        "total_tokens": 6635,
+        "completion_tokens_details": {
+          "reasoning_tokens": 61
+        }
+      }
+    }
+  ]
+}

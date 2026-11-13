@@ -1,0 +1,49 @@
+{
+  "group_id": "pinpoint_group_5d76452b49bc0398",
+  "model": "gpt-5.6-luna",
+  "signature": "e0a59d07fd411f37376a5d88b0f5931c56e4eaa296bc7c0f3d113be2a03e8f5e",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_5d76452b49bc0398_query_01696_attribute_add",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "Adding “subtle” is a single attribute edit, but image 4 has subdued purple and pink illumination compatible with subtle lighting, so the added fact is not clearly false for every supplied positive."
+    },
+    {
+      "negative_id": "pinpoint_group_5d76452b49bc0398_query_01697_predicate_delete",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Deletes only the relation requiring the room to use the reference photo’s lighting approach. The remaining request is fluent, meaningful, and strictly weaker, preserving the empty-room requirement."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "gpt-5.6-luna",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "eaebbea10ed75e66d933b6d13da3fdd16f5eead0fc276af53503a91276a0a7bb",
+      "input_hash": "62ee0fb0a66cedf5f85c4c33396aec179e28bc2347f6f4d7c09ba7db94b7723c",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/gpt-5.6-luna/cache/validate_group/62ee0fb0a66cedf5f85c4c33396aec179e28bc2347f6f4d7c09ba7db94b7723c.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_015b224e30156c59016af42d8a412c87d19afeb3ebe7156cf6",
+      "usage": {
+        "prompt_tokens": 21167,
+        "completion_tokens": 184,
+        "total_tokens": 21351,
+        "prompt_tokens_details": {
+          "cached_tokens": 21164
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 25
+        }
+      }
+    }
+  ],
+  "format_warnings": []
+}

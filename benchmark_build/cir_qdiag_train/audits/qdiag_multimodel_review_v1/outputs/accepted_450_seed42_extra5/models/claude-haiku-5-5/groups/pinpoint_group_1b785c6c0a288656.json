@@ -1,0 +1,49 @@
+{
+  "group_id": "pinpoint_group_1b785c6c0a288656",
+  "model": "claude-haiku-5-5",
+  "signature": "44bb4aae802e19564501a676b733c7e19828d9ced260b7da0428f08b1a359df2",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_1b785c6c0a288656_query_02979_attribute_add",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "The addition of 'with weathered wood' specifies a material attribute, but the positive images (2-5) show stone-and-wood structures with wood that ranges from clean/light to weathered tones. Image 5 particularly displays brick/stone with darker wood elements consistent with weathered appearance. The positive images remain compatible with the modified query requesting weathered wood specifically, making this not a clear false constraint for all supplied positives."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-haiku-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "0253a09184f772a0eb317d1d5d4cb13509ebf7f8597c7a9c7efe9909f56cc2e6",
+      "input_hash": "287dcc6ef4e87aef6bc428e0fd132dddb17cb070e4a257ac25455b832538f43e",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/claude-haiku-5-5/cache/validate_group/287dcc6ef4e87aef6bc428e0fd132dddb17cb070e4a257ac25455b832538f43e.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01nJZTLayTQzeUUhKaaTf8vCKo",
+      "usage": {
+        "prompt_tokens": 8948,
+        "completion_tokens": 214,
+        "total_tokens": 9162,
+        "prompt_tokens_details": {
+          "cached_tokens": 6976,
+          "cache_creation_tokens": 1968
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_1b785c6c0a288656_query_02979_attribute_add",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 466,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

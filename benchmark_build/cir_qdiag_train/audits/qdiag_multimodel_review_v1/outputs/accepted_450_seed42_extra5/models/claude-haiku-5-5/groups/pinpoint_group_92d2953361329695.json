@@ -1,0 +1,49 @@
+{
+  "group_id": "pinpoint_group_92d2953361329695",
+  "model": "claude-haiku-5-5",
+  "signature": "44bb4aae802e19564501a676b733c7e19828d9ced260b7da0428f08b1a359df2",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_92d2953361329695_query_05532_predicate_delete",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Valid predicate DELETE. The span 'embroidered with greenery from <img2>' is removed as a single semantic constraint. The negative text is fluent and strictly weaker, preserving 'white <img1> pillow' while removing the embroidery predicate. All supplied positives (images 3-6) are embroidered white pillows satisfying both the original and weakened queries, as expected for a deletion."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-haiku-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "ab8fca3767079d63b41499f68aef54b4eb958f96f8757bb6b2f8a2b935b36a02",
+      "input_hash": "19b2df19a8c5f6519870a937b9d19d933feb089acf42db04615eb338290fe972",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/claude-haiku-5-5/cache/validate_group/19b2df19a8c5f6519870a937b9d19d933feb089acf42db04615eb338290fe972.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01DpHBP1YlQEG0w7drV1avCrHY",
+      "usage": {
+        "prompt_tokens": 10838,
+        "completion_tokens": 1590,
+        "total_tokens": 12428,
+        "prompt_tokens_details": {
+          "cached_tokens": 8450,
+          "cache_creation_tokens": 2384
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_92d2953361329695_query_05532_predicate_delete",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 384,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

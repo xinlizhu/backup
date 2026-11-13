@@ -1,0 +1,157 @@
+{
+  "case_id": "case_aa80920e57af42c49d05",
+  "audit_query_id": "audit_query_079",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_aa80920e57af42c49d05",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The image prominently shows a black, bowl-shaped vessel sink with water flowing into it."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The image shows stairs with a black handrail and black posts; no bowl sink is visible."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The requested object is a bowl sink; the candidate shows a stair railing instead."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "object",
+        "before_span": "bowl sink",
+        "after_span": "stair railing",
+        "edited_instruction": "Show a black stair railing.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "Replace the bowl sink category with a stair railing, retaining the black color requirement.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The prominent black object is a bowl sink; no black stair railing is visible."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "A black handrail and black newel posts form the stair railing, alongside white balusters."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_aa80920e57af42c49d05",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 prominently shows a black, bowl-shaped vessel sink with a faucet pouring water into it."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a staircase with black handrails and newel posts, white balusters, and wooden steps; no bowl sink is visible."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing 'bowl sink' with 'stair railing' is one object substitution that exactly reconstructs the edited instruction and preserves the black attribute. The positive shows the black sink, while the candidate shows a black stair handrail with black posts.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 shows a sink and faucet, with no stair railing visible."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 clearly shows a black stair handrail and black newel posts alongside white balusters."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "substitute",
+      "semantic_target": "object",
+      "before_span": "bowl sink",
+      "after_span": "stair railing",
+      "edited_instruction": "Show a black stair railing.",
+      "witness_type": "substitution_contrast",
+      "changed_constraint": "Replace the bowl sink category with a stair railing, retaining the black color requirement.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "The prominent black object is a bowl sink; no black stair railing is visible."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "A black handrail and black newel posts form the stair railing, alongside white balusters."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing 'bowl sink' with 'stair railing' is one object substitution that exactly reconstructs the edited instruction and preserves the black attribute. The positive shows the black sink, while the candidate shows a black stair handrail with black posts.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 shows a sink and faucet, with no stair railing visible."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 clearly shows a black stair handrail and black newel posts alongside white balusters."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "7e9b995ac6e2b84da35eb4af6c7e5fd5b23d888f2220cceb62a98275266064b6",
+      "input_hash": "59c3884855970611f87fb2ad4cc94c35262742b3f27e686b3192f1af648e1311",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/59c3884855970611f87fb2ad4cc94c35262742b3f27e686b3192f1af648e1311.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0ca865108c944ffa016af2bd32402487d183dfc4917a8c4b0c",
+      "usage": {
+        "prompt_tokens": 8340,
+        "completion_tokens": 456,
+        "total_tokens": 8796,
+        "completion_tokens_details": {
+          "reasoning_tokens": 112
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "12c82fed6d638005cfbb84b4c48334fe99bc50812eb1ec854ecea1b60c5eebf8",
+      "input_hash": "9ed5dae7a5f30af793f93fdb14ebb56ad4f0fdc3f0f33cb4d9f3dfbcd513fca3",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/9ed5dae7a5f30af793f93fdb14ebb56ad4f0fdc3f0f33cb4d9f3dfbcd513fca3.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_08b91d84b9fcfd5d016af2bd429cac87d19105253a216a226d",
+      "usage": {
+        "prompt_tokens": 7860,
+        "completion_tokens": 305,
+        "total_tokens": 8165
+      }
+    }
+  ]
+}

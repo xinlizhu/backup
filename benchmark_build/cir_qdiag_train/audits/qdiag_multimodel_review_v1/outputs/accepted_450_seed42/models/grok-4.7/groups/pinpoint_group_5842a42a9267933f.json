@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_5842a42a9267933f",
+  "model": "grok-4.7",
+  "signature": "52913ea34ae01078c58f7a80fc2119b86ef4b6b3449e9e55b21816a5d5d1ccbd",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_5842a42a9267933f_query_05943_object_add",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Adds exactly one object, 'a brass floor lamp'; the span reconstructs the negative and all other meaning is preserved. Every supplied positive is a knit close-up with no brass floor lamp, so the added fact is clearly false for all of them."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.7",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "55a73d04b9bd4bdeb06e4fee259f9a1fe66cb68fe4103c45fbfb4b4c6e294f14",
+      "input_hash": "47f9f5345d3dbc34967ae0dfbcd013cf5f0c6b8c67e564b19436a621b059efb5",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/grok-4.7/cache/validate_group/47f9f5345d3dbc34967ae0dfbcd013cf5f0c6b8c67e564b19436a621b059efb5.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "530c9597-5df4-9500-9206-2b08c3df0c71",
+      "usage": {
+        "prompt_tokens": 5155,
+        "completion_tokens": 100,
+        "total_tokens": 7352,
+        "prompt_tokens_details": {
+          "text_tokens": 2545,
+          "audio_tokens": 0,
+          "image_tokens": 2610,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2097,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 204200000
+      }
+    }
+  ],
+  "format_warnings": []
+}

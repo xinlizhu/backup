@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_bac374f30fe74d68",
+  "model": "grok-4.7",
+  "signature": "52913ea34ae01078c58f7a80fc2119b86ef4b6b3449e9e55b21816a5d5d1ccbd",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_bac374f30fe74d68_query_07407_predicate_substitute",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Single predicate edit: replacing 'Increase contrast and clarity' with 'Reduce contrast and clarity' reconstructs the negative and flips only the action. All four positives show bright, high-contrast, clear lace, so reduced contrast/clarity is clearly false for every supplied positive."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.7",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "33b33eda33460073c210f588ea06210f29b42b0ee999155646e0943d7849e8a5",
+      "input_hash": "a55c1ee3a88a620f269ebc787b17d21354a0ef286ab672d9ce259744fc6ea3ca",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/grok-4.7/cache/validate_group/a55c1ee3a88a620f269ebc787b17d21354a0ef286ab672d9ce259744fc6ea3ca.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "79410213-2d38-9c30-bc47-92f5a8879633",
+      "usage": {
+        "prompt_tokens": 4927,
+        "completion_tokens": 102,
+        "total_tokens": 7884,
+        "prompt_tokens_details": {
+          "text_tokens": 2564,
+          "audio_tokens": 0,
+          "image_tokens": 2363,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2855,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 245240000
+      }
+    }
+  ],
+  "format_warnings": []
+}

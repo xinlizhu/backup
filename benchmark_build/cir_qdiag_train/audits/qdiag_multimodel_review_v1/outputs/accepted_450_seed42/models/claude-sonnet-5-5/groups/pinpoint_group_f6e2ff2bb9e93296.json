@@ -1,0 +1,62 @@
+{
+  "group_id": "pinpoint_group_f6e2ff2bb9e93296",
+  "model": "claude-sonnet-5-5",
+  "signature": "aff20e5a5733d87f80fd7515c25d92c77cff20d4f50c9f8dbf4123bfdabed97b",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_f6e2ff2bb9e93296_query_06492_predicate_add",
+      "decision": "reject",
+      "failure_code": "not_visually_verifiable",
+      "reason": "The reference image shows blue pants with a shiny satin finish. The positive images show various pants (denim, trench coat styling) but none clearly display blue pants in a matte finish that would definitively verify the 'folded neatly' predicate as false or establish it as a meaningful semantic change from the source."
+    },
+    {
+      "negative_id": "pinpoint_group_f6e2ff2bb9e93296_query_06495_object_delete",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "The deletion removes 'on the blue pants' (the object specifying which satin to replace), preserving the core action while making the query weaker and more general. The edit is single, semantic, and produces fluent text: 'replace the shiny satin in the photo with a matte fabric' correctly removes one constraint while maintaining grammatical validity and meaning."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-sonnet-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "25cca8f8d8af9e7d9c38386092532946e87c7a87061c5ef05a7394192784cf68",
+      "input_hash": "d4dbcd6d0367c23c65639b9c76ca90053e0f170326345b1bf5c12b62a3cb35e3",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/claude-sonnet-5-5/cache/validate_group/d4dbcd6d0367c23c65639b9c76ca90053e0f170326345b1bf5c12b62a3cb35e3.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_016CU3pwKWSYaykOgYBB6N532E",
+      "usage": {
+        "prompt_tokens": 8313,
+        "completion_tokens": 329,
+        "total_tokens": 8642,
+        "prompt_tokens_details": {
+          "cached_tokens": 6481,
+          "cache_creation_tokens": 1828
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_f6e2ff2bb9e93296_query_06492_predicate_add",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 320,
+      "action": "full reason retained; decision and failure_code unchanged"
+    },
+    {
+      "negative_id": "pinpoint_group_f6e2ff2bb9e93296_query_06495_object_delete",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 363,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

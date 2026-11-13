@@ -1,0 +1,75 @@
+{
+  "group_id": "pinpoint_group_7c33d30bd599e378",
+  "model": "claude-sonnet-5-5",
+  "signature": "aff20e5a5733d87f80fd7515c25d92c77cff20d4f50c9f8dbf4123bfdabed97b",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_7c33d30bd599e378_query_06173_predicate_substitute",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "The substitute changes 'removing the flare' to 'adding the flare'. Image 1 (reference) shows a dress with a tulle flare. Images 2-5 (positives) all show column silhouettes without flares. The negative text 'adding the flare' is compatible with the reference image which already has a flare, making it not clearly false for all supplied positives."
+    },
+    {
+      "negative_id": "pinpoint_group_7c33d30bd599e378_query_06174_attribute_add",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "The addition of 'with a sweetheart neckline' cannot be reliably rejected. Image 1 shows a sweetheart neckline. Images 3 and 5 appear to have strapless necklines, but image 4 has a decorated strapless design that could be interpreted as compatible. The attribute is not clearly false for every supplied positive."
+    },
+    {
+      "negative_id": "pinpoint_group_7c33d30bd599e378_query_06175_predicate_delete",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "The deletion removes 'and drop the tulle flare' from the source, producing 'make the dress from the picture a straight column'. This removes exactly one meaningful semantic constraint (the instruction to remove the flare) while preserving the core direction to create a straight column silhouette. The result is fluent, weaker, and meaningful."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-sonnet-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "6d3527f1042018910d644a9742a95081d6e0e0924ac0178be8fae92cf7fc01b2",
+      "input_hash": "ad972c8dfe245179deeb3536984986596fa199a89f3d811cd8a3dbfe722fb5ce",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/claude-sonnet-5-5/cache/validate_group/ad972c8dfe245179deeb3536984986596fa199a89f3d811cd8a3dbfe722fb5ce.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01nsYPpy2xR3CYNoMxFm99Ld2p",
+      "usage": {
+        "prompt_tokens": 11144,
+        "completion_tokens": 466,
+        "total_tokens": 11610,
+        "prompt_tokens_details": {
+          "cached_tokens": 8689,
+          "cache_creation_tokens": 2451
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_7c33d30bd599e378_query_06173_predicate_substitute",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 346,
+      "action": "full reason retained; decision and failure_code unchanged"
+    },
+    {
+      "negative_id": "pinpoint_group_7c33d30bd599e378_query_06174_attribute_add",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 311,
+      "action": "full reason retained; decision and failure_code unchanged"
+    },
+    {
+      "negative_id": "pinpoint_group_7c33d30bd599e378_query_06175_predicate_delete",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 343,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

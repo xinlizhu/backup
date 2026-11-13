@@ -1,0 +1,164 @@
+{
+  "case_id": "case_a9de903d34ea97c1abce",
+  "audit_query_id": "audit_query_083",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_a9de903d34ea97c1abce",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Relative to the reference's multiple boxes, T shows a single cream container accompanied by one matching box."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "C shows one cosmetic tube accompanied by one matching box, satisfying the requested single product with its box."
+    },
+    "candidate_relation": "compatible",
+    "violated_source_constraints": [],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "add",
+        "semantic_target": "attribute",
+        "before_span": null,
+        "after_span": "blue-accented",
+        "edited_instruction": "Leave a single blue-accented product with its box",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "The product must have blue accents, an additional property absent from the original instruction.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "T's single white cream container has black text and pink accents, with no blue accents."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C's single tube has a blue logo and a prominent blue label band and is accompanied by its matching box."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_a9de903d34ea97c1abce",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows one body-cream tube alongside its pink box."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "Image 3 shows one mask tube alongside its box."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "The single insertion adds the fluent product attribute “blue-accented.” Image 2 is pink without visible blue accents; Image 3 has prominent blue logos and bands. The original instruction is supported by both images, while the edited instruction distinguishes them.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The product and box in Image 2 are pink and white, with no visible blue accents."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The product and its box in Image 3 have prominent blue logos and blue bands."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "add",
+      "semantic_target": "attribute",
+      "before_span": null,
+      "after_span": "blue-accented",
+      "edited_instruction": "Leave a single blue-accented product with its box",
+      "witness_type": "addition_disambiguation",
+      "changed_constraint": "The product must have blue accents, an additional property absent from the original instruction.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "T's single white cream container has black text and pink accents, with no blue accents."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C's single tube has a blue logo and a prominent blue label band and is accompanied by its matching box."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "The single insertion adds the fluent product attribute “blue-accented.” Image 2 is pink without visible blue accents; Image 3 has prominent blue logos and bands. The original instruction is supported by both images, while the edited instruction distinguishes them.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The product and box in Image 2 are pink and white, with no visible blue accents."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The product and its box in Image 3 have prominent blue logos and blue bands."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "bac387791d99ddd259128950dee7a9ea74d03b9002b8e0bf8c199109e5a69dc5",
+      "input_hash": "1555318f475526a09810e4d8f5ec239dd5a3355c148d5dcc980508d7c08010ee",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/1555318f475526a09810e4d8f5ec239dd5a3355c148d5dcc980508d7c08010ee.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0677f01e85dfe554016af2bf3589e087d29db5d0f0f9cfdd0f",
+      "usage": {
+        "prompt_tokens": 7931,
+        "completion_tokens": 502,
+        "total_tokens": 8433,
+        "prompt_tokens_details": {
+          "cached_tokens": 3830
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 171
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "6adc3978a0f4773c695860a52a6990d1713e7d34f90cb393a37638a0673443eb",
+      "input_hash": "92fc4078290b89a81cbc35ff15c8885f072f1ea4605005b8549a9bdb63593465",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/92fc4078290b89a81cbc35ff15c8885f072f1ea4605005b8549a9bdb63593465.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0c9cd69975ee5e2c016af2bf4ad10887d18abc695d85a77fad",
+      "usage": {
+        "prompt_tokens": 7618,
+        "completion_tokens": 370,
+        "total_tokens": 7988,
+        "prompt_tokens_details": {
+          "cached_tokens": 5248
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 152
+        }
+      }
+    }
+  ]
+}

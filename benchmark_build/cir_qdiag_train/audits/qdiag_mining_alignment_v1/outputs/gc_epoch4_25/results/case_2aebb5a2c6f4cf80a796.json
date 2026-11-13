@@ -1,0 +1,88 @@
+{
+  "case_id": "case_2aebb5a2c6f4cf80a796",
+  "audit_query_id": "audit_query_093",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_2aebb5a2c6f4cf80a796",
+    "case_status": "source_invalid_or_uncertain",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "A white pillow rests against and on a chunky gray-green textile, with a blurred window-like background. The textile looks like a knitted throw; its identification as a 'grey turkey towel' is not reliably supported."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "A white pillow with red stripes rests on a bare pale surface against a brick wall. No gray towel supports it, and the background is brick rather than a window."
+    },
+    "candidate_relation": "multiple_constraint_conflict",
+    "violated_source_constraints": [
+      "The pillow must be on a gray towel.",
+      "The background must have a window effect."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_2aebb5a2c6f4cf80a796",
+    "source_on_positive": {
+      "status": "contradicted",
+      "evidence": "Image 2 shows a white pillow among a green textured knitted throw, not on a visibly grey turkey towel. The background also does not clearly establish the requested window effect."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a white pillow against a brick wall; neither a grey turkey towel nor a window background effect is visible."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "f3c1eaddef2e78ee0a8efd4a2299071233a175fce5f29f405273d3da2e446ba0",
+      "input_hash": "172e2e742878d140537f3bdebeb399003dd9b58d12cd798882bfcdec13e088a8",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/172e2e742878d140537f3bdebeb399003dd9b58d12cd798882bfcdec13e088a8.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0dc25f5b1e5dc449016af2be8e78b087d2ab2ef569f09dd764",
+      "usage": {
+        "prompt_tokens": 7317,
+        "completion_tokens": 287,
+        "total_tokens": 7604,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 73
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "c971cb75fb57434590f0728129d4d424bcb5731d99826213072eed47de6a8994",
+      "input_hash": "f87857f1bdbeec07c4bd63b3ec91a235716d78ab56d7bde329ec9fd2df4165db",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/f87857f1bdbeec07c4bd63b3ec91a235716d78ab56d7bde329ec9fd2df4165db.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0c10e7840891c3f1016af2bea5463087d0869d2c15944c0d17",
+      "usage": {
+        "prompt_tokens": 6939,
+        "completion_tokens": 307,
+        "total_tokens": 7246,
+        "completion_tokens_details": {
+          "reasoning_tokens": 188
+        }
+      }
+    }
+  ]
+}

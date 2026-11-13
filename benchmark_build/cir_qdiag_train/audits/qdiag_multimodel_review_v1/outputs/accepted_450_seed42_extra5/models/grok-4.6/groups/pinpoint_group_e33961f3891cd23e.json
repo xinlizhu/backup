@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_e33961f3891cd23e",
+  "model": "grok-4.6",
+  "signature": "cb958fa178e5ebcdd33f446ebd46fe25a7c20417ca5539cc74de61fb4df99804",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_e33961f3891cd23e_query_04230_predicate_delete",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Deletes only the motif-matching relation, leaving a fluent, strictly weaker request for additional recommendations; leftover spacing is grammatical glue of that one predicate."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.6",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "c5072a6c268d3d178c23c7d1818768b112f84635ee305f94f7964bd6a4d52eee",
+      "input_hash": "ecf5caf9d38e20ef5fa9313dc29c3e4b20a756bfc21b5b7a2d4bf5fe7a63d3d5",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/grok-4.6/cache/validate_group/ecf5caf9d38e20ef5fa9313dc29c3e4b20a756bfc21b5b7a2d4bf5fe7a63d3d5.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "80a4d150-baa9-9133-94be-3f2b59447fe1",
+      "usage": {
+        "prompt_tokens": 2765,
+        "completion_tokens": 78,
+        "total_tokens": 5551,
+        "prompt_tokens_details": {
+          "text_tokens": 2381,
+          "audio_tokens": 0,
+          "image_tokens": 384,
+          "cached_tokens": 2304
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2708,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 187900000
+      }
+    }
+  ],
+  "format_warnings": []
+}

@@ -1,0 +1,160 @@
+{
+  "case_id": "case_e6d819c19a415b7cb618",
+  "audit_query_id": "audit_query_096",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_e6d819c19a415b7cb618",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows the fronts of two school buses parked next to each other."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows the fronts of adjacent yellow snowplow trucks, not school buses."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The vehicles must be school buses; the candidate shows snowplow trucks."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "substitute_object_1",
+        "operation": "substitute",
+        "semantic_target": "object",
+        "before_span": "school buses",
+        "after_span": "snowplow trucks",
+        "edited_instruction": "Show the front of the snowplow trucks and park them adjacent to each other.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "The vehicle category changes from school buses to snowplow trucks.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 shows school buses, not snowplow trucks."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows the fronts of several snowplow trucks parked adjacent to each other."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_e6d819c19a415b7cb618",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows the fronts of two school buses parked next to each other."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows snowplow trucks, not school buses; their fronts are visible and they are parked adjacent to each other."
+    },
+    "verdicts": [
+      {
+        "witness_id": "substitute_object_1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "The single object substitution from “school buses” to “snowplow trucks” is fluent and preserves the remaining constraints. Image 2 contradicts the edit, while Image 3 supports it.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 shows school buses, not snowplow trucks; they are parked adjacent with their fronts visible."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows the fronts of snowplow trucks parked adjacent to one another."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "substitute_object_1",
+      "operation": "substitute",
+      "semantic_target": "object",
+      "before_span": "school buses",
+      "after_span": "snowplow trucks",
+      "edited_instruction": "Show the front of the snowplow trucks and park them adjacent to each other.",
+      "witness_type": "substitution_contrast",
+      "changed_constraint": "The vehicle category changes from school buses to snowplow trucks.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "Image 2 shows school buses, not snowplow trucks."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "Image 3 shows the fronts of several snowplow trucks parked adjacent to each other."
+      },
+      "independent_review": {
+        "witness_id": "substitute_object_1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "The single object substitution from “school buses” to “snowplow trucks” is fluent and preserves the remaining constraints. Image 2 contradicts the edit, while Image 3 supports it.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 shows school buses, not snowplow trucks; they are parked adjacent with their fronts visible."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows the fronts of snowplow trucks parked adjacent to one another."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "substitute_object_1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "ddb0bc7c304cd7df2e1379102493d17fa26183904bcbf0fe72e592a5959739fc",
+      "input_hash": "7f4447d4f7a7f14a8efb784e0388edd1fa700fde7b669587bfff45da264ab900",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/7f4447d4f7a7f14a8efb784e0388edd1fa700fde7b669587bfff45da264ab900.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_c24d84edf367d3f496ddf7e6cbab724c",
+      "usage": {
+        "prompt_tokens": 2851,
+        "completion_tokens": 1242,
+        "total_tokens": 4093
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "9bb343b7b1af6f0deb3d20c7d7f439cb132f926245b75e64cf19d32c6c89592e",
+      "input_hash": "2d9a290192f685113b26eaccab92ca02f074f7e52ab72c24380750d7ae731ddc",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/2d9a290192f685113b26eaccab92ca02f074f7e52ab72c24380750d7ae731ddc.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_06c28901dcf06cdc016af2bf96627887d285a304799fb433ab",
+      "usage": {
+        "prompt_tokens": 6761,
+        "completion_tokens": 318,
+        "total_tokens": 7079,
+        "prompt_tokens_details": {
+          "cached_tokens": 5248
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 86
+        }
+      }
+    }
+  ]
+}

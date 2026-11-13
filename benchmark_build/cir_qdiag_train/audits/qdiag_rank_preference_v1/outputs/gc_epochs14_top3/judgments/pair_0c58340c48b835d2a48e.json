@@ -1,0 +1,55 @@
+{
+  "case_id": "pair_0c58340c48b835d2a48e",
+  "signature": "f91b95909684e2ecf5207ab608279749c891c56633f2fa7c877aa09c2d59f3d4",
+  "simulated": false,
+  "status": "complete",
+  "judgment": {
+    "case_id": "pair_0c58340c48b835d2a48e",
+    "constraints": [
+      {
+        "constraint": "A dog is present.",
+        "A_status": "supported",
+        "B_status": "supported",
+        "A_evidence": "A brown dog is clearly visible.",
+        "B_evidence": "A brown dog is clearly visible."
+      },
+      {
+        "constraint": "The dog wears a collar around its neck.",
+        "A_status": "supported",
+        "B_status": "supported",
+        "A_evidence": "A collar visibly encircles the dog's neck.",
+        "B_evidence": "A collar with a buckle visibly encircles the dog's neck."
+      },
+      {
+        "constraint": "The dog's collar is blue.",
+        "A_status": "supported",
+        "B_status": "contradicted",
+        "A_evidence": "The collar strap is bright blue.",
+        "B_evidence": "The collar strap is red with black hardware, rather than blue."
+      }
+    ],
+    "A_status": "supported",
+    "B_status": "contradicted",
+    "decision": "A_only",
+    "reason": "A shows a dog wearing a blue collar, satisfying the requested color change; B shows a red collar."
+  },
+  "trace": {
+    "stage": "rank_pair_judgment",
+    "model_name": "gpt-5.6-terra",
+    "model_revision": null,
+    "provider": "openai-compatible-chat",
+    "reasoning_effort": null,
+    "prompt_version": "rank_preference_v1",
+    "prompt_hash": "912398f7a13886421f089889f4ab7d25a9b4c51d86d67147ce429cfe3dd6a73e",
+    "input_hash": "08790fbe3de3ccb4ce4fa552366f51180b7149408b91d51a0c22966c87dd6528",
+    "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_rank_preference_v1/outputs/gc_epochs14_top3/api_cache/rank_pair_judgment/08790fbe3de3ccb4ce4fa552366f51180b7149408b91d51a0c22966c87dd6528.json",
+    "cached": false,
+    "attempts": 1,
+    "request_id": "resp_0f9056e3b7a9a199016af2ccf055cc87d1b8c3f8af458db6ba",
+    "usage": {
+      "prompt_tokens": 7761,
+      "completion_tokens": 211,
+      "total_tokens": 7972
+    }
+  }
+}

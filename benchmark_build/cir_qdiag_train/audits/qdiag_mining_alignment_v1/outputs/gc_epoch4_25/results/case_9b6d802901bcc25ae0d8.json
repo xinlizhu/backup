@@ -1,0 +1,90 @@
+{
+  "case_id": "case_9b6d802901bcc25ae0d8",
+  "audit_query_id": "audit_query_099",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_9b6d802901bcc25ae0d8",
+    "case_status": "source_invalid_or_uncertain",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "Image 2 shows reddish-brown and yellow-tan needle-like strands on the ground, but they are not clearly grass."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a ferret against a plain white background, with no visible grass."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The candidate does not show reddish and yellowish grass."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_9b6d802901bcc25ae0d8",
+    "source_on_positive": {
+      "status": "contradicted",
+      "evidence": "Image 2 shows the animal on dark ground with scattered dry pine needles and leaves, not reddish and yellowish grass."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 has the animal on a plain white background; no grass is visible."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "d3d91ef973613127dc1be785ef19dd4bead6adeefac2b36e1dc829dc507b3b6a",
+      "input_hash": "4773709e898a30b9b428a568585a9e27eb8543749db3a42f2dabdd01b4dfa30f",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/4773709e898a30b9b428a568585a9e27eb8543749db3a42f2dabdd01b4dfa30f.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_01ba715a5269122c016af2bedb71f487d1a2c0b694ac91b6cc",
+      "usage": {
+        "prompt_tokens": 6903,
+        "completion_tokens": 357,
+        "total_tokens": 7260,
+        "prompt_tokens_details": {
+          "cached_tokens": 5888
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 223
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "da749acb5e35c28f876f5a78fbbc794179a87fe4a7378fed6415a50d9a0b206d",
+      "input_hash": "903368a652755c71925cfae17004296bc266e51c1cbb5bcf936507528a8160ee",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/903368a652755c71925cfae17004296bc266e51c1cbb5bcf936507528a8160ee.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0e022d5b375c5ddd016af2bee6d6d087d2817b24379cab2070",
+      "usage": {
+        "prompt_tokens": 6361,
+        "completion_tokens": 197,
+        "total_tokens": 6558,
+        "prompt_tokens_details": {
+          "cached_tokens": 5248
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 98
+        }
+      }
+    }
+  ]
+}

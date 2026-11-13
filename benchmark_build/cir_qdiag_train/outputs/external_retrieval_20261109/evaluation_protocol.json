@@ -1,0 +1,77 @@
+{
+  "coverage": [
+    {
+      "dataset": "cirr_val",
+      "exclude_reference": true,
+      "gallery": 2297,
+      "group_recall_k": [
+        1,
+        2,
+        3
+      ],
+      "queries": 4181,
+      "recall_k": [
+        1,
+        5,
+        10,
+        50
+      ],
+      "reference_images": 2165,
+      "split": "val",
+      "two_reference_queries": 0
+    },
+    {
+      "caption_composition": "strip('.?, ') then caption_1 + ' and ' + caption_2",
+      "category": "dress",
+      "dataset": "fashioniq_dress",
+      "exclude_reference": false,
+      "gallery": 3817,
+      "queries": 2017,
+      "reference_images": 1331,
+      "split": "val",
+      "two_reference_queries": 0
+    },
+    {
+      "caption_composition": "strip('.?, ') then caption_1 + ' and ' + caption_2",
+      "category": "shirt",
+      "dataset": "fashioniq_shirt",
+      "exclude_reference": false,
+      "gallery": 6346,
+      "queries": 2038,
+      "reference_images": 1541,
+      "split": "val",
+      "two_reference_queries": 0
+    },
+    {
+      "caption_composition": "strip('.?, ') then caption_1 + ' and ' + caption_2",
+      "category": "toptee",
+      "dataset": "fashioniq_toptee",
+      "exclude_reference": false,
+      "gallery": 5373,
+      "queries": 1961,
+      "reference_images": 1454,
+      "split": "val",
+      "two_reference_queries": 0
+    },
+    {
+      "dataset": "pinpoint",
+      "exclude_reference": false,
+      "gallery": 109598,
+      "official_evaluator": "/mnt/data/datasets/search_dataset/zxl/pinpoint-dataset/evaluate.py",
+      "official_evaluator_sha256": "39f131def681970a60d8ffa876cdc4de7b04ff052a28a951cd61217a7ed72ad8",
+      "queries": 7635,
+      "reference_images": 1237,
+      "split": "official",
+      "top_k": 50,
+      "two_reference_queries": 1006
+    }
+  ],
+  "evaluators": {
+    "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/scripts/evaluate_cirr_original_adapter.py": "e22cbd79167ac69a2be87ef2a3a4a4db8cc507aeaf3269d71074d49affb9ce28",
+    "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/src/cir_qdiag_train/fashioniq_evaluation.py": "9ae88a6b111e02ed8aa251c5decc77e843bbcb3d7027d8670999cb39e82d4f61",
+    "/mnt/data/datasets/search_dataset/zxl/pinpoint-dataset/evaluate.py": "39f131def681970a60d8ffa876cdc4de7b04ff052a28a951cd61217a7ed72ad8"
+  },
+  "multi_reference": "Mean native reference visual features before fusion, as in the completed QDiag runs.",
+  "units": "CIRR/FashionIQ Recall are percentages; PinPoint metrics retain official 0-1 units.",
+  "weights": "Same checkpoint files as external_qdiag_20261109; no dataset-specific checkpoint switching."
+}

@@ -1,0 +1,84 @@
+{
+  "case_id": "case_a933f84f61aec021e107",
+  "audit_query_id": "audit_query_097",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_a933f84f61aec021e107",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The positive shows a saxophone with a blue body and gold-colored keys; the reference shows a conventional gold-colored saxophone."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The candidate shows a furnished room with cabinets and a desk, not a saxophone."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "The requested object is a saxophone; no saxophone is visible in the candidate."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_a933f84f61aec021e107",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 clearly shows a blue saxophone with gold-colored keys; the reference saxophone is gold-colored, establishing “instead of a regular one” as the blue-color change."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows wardrobes, a desk, and a chair, with no visible saxophone; it cannot satisfy the saxophone constraint."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "392a95ce7ad466bed5ff9fa8f4c248f1fd12235395ad15b5e981c399b062001b",
+      "input_hash": "6ca494462ea8ae6c75f44bafec78f44af410b94dd39d53a4cae23e6a0d927bb5",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/6ca494462ea8ae6c75f44bafec78f44af410b94dd39d53a4cae23e6a0d927bb5.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_052df87ea726666b016af2bef1cd4487d290fd91379e493190",
+      "usage": {
+        "prompt_tokens": 7812,
+        "completion_tokens": 378,
+        "total_tokens": 8190,
+        "prompt_tokens_details": {
+          "cached_tokens": 5888
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 248
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "cce6772a4020d5a9e3f7b750b080121a133f1561529f8ac3f7096df632dde78f",
+      "input_hash": "de4f0712e6b0efeb2029aefb27244cd559b3a7e1ddf76dc026b81a4605349c02",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/de4f0712e6b0efeb2029aefb27244cd559b3a7e1ddf76dc026b81a4605349c02.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_030b199cf4a75a0a016af2beffef8087d0ab744fec3589bf70",
+      "usage": {
+        "prompt_tokens": 7270,
+        "completion_tokens": 114,
+        "total_tokens": 7384
+      }
+    }
+  ]
+}

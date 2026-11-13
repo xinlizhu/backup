@@ -1,0 +1,129 @@
+{
+  "case_id": "case_638f9dedadb1384df30d",
+  "audit_query_id": "audit_query_084",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_638f9dedadb1384df30d",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Like R, T shows dough on a floured wooden surface from an oblique angle. A wooden rolling pin is clearly visible on the right."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "C shows dough from a similar oblique angle, with a wooden rolling pin extending across the background and visibly occupying the right-hand side."
+    },
+    "candidate_relation": "compatible",
+    "violated_source_constraints": [],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "add",
+        "semantic_target": "attribute",
+        "before_span": null,
+        "after_span": "of smooth dough",
+        "edited_instruction": "Similar angled photograph of smooth dough, must include rolling pin on the right hand side",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "The dough must have a smooth surface.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "T retains the angled view and right-side rolling pin, but its dough has prominent folds, creases, and gathered wrinkles rather than a smooth surface."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C shows a smooth, rounded mound of flour-dusted dough from an oblique angle, with a rolling pin visible on the right behind it."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_638f9dedadb1384df30d",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The dough is photographed from an oblique tabletop angle comparable to the reference, with a wooden rolling pin clearly positioned on its right."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "The dough is shown from a comparable oblique tabletop angle. A wooden rolling pin lies diagonally behind it, with its barrel extending across the upper-right side."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "Inserting 'of smooth dough' after 'photograph' reconstructs the edited instruction and adds one distinguishing surface attribute to the existing dough subject. The candidate has a smooth rounded surface, while the positive has pronounced folds and wrinkles. Both satisfy the original angle and right-side rolling-pin requirements.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The dough has a deeply folded central depression and conspicuous wrinkles and creases rather than a smooth surface."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The flour-dusted dough has a smooth, continuous rounded surface. The oblique viewpoint and rolling pin on the upper-right side also satisfy the retained constraints."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": false,
+      "local_failures": [
+        "span_reconstruction_failed"
+      ],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "7ff3d0938eb047dd454b6343024ebf9f5255db63e4159ef3752956c14d8977d1",
+      "input_hash": "47a79967acae39d4e758e18208fd2ec4e0a8fba5130eaef93035d4f12ea16a3a",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/47a79967acae39d4e758e18208fd2ec4e0a8fba5130eaef93035d4f12ea16a3a.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_04a5fdfdc76ccb2c016af2bd432b8487d189fb8a7bcf49bd9a",
+      "usage": {
+        "prompt_tokens": 14149,
+        "completion_tokens": 507,
+        "total_tokens": 14656,
+        "completion_tokens_details": {
+          "reasoning_tokens": 146
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "daa96a35c3a70751e8a57b1e1170cdc0eb0f1f258efd6990afa9e1c76013c20f",
+      "input_hash": "7186517cfe9366a1b32dcce2e53118d737d8b7b844d8d30123de017773a57b17",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/7186517cfe9366a1b32dcce2e53118d737d8b7b844d8d30123de017773a57b17.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_039938bcb29c9972016af2bd53c6d087d2b1c0caa7a711cc38",
+      "usage": {
+        "prompt_tokens": 13676,
+        "completion_tokens": 369,
+        "total_tokens": 14045,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 30
+        }
+      }
+    }
+  ]
+}

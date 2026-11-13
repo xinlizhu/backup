@@ -1,0 +1,55 @@
+{
+  "group_id": "pinpoint_group_1dd0daf893120f53",
+  "model": "claude-sonnet-5-5",
+  "signature": "aff20e5a5733d87f80fd7515c25d92c77cff20d4f50c9f8dbf4123bfdabed97b",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_1dd0daf893120f53_query_07695_object_add",
+      "decision": "reject",
+      "failure_code": "not_single_edit",
+      "reason": "The before_span is null, indicating the system cannot identify what was added. The claimed addition of 'with a small tag' cannot be verified against the source_text, making it impossible to confirm this represents a single coherent edit operation."
+    },
+    {
+      "negative_id": "pinpoint_group_1dd0daf893120f53_query_07696_attribute_add",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "The positive image shows a pink/magenta shirt with 'FEMINIST' text. The added constraint 'while keeping the shirt red' is compatible with the positive image, which displays a shirt in the pink/magenta color family that could reasonably be described as red. This constraint does not clearly contradict the positive."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-sonnet-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "4a38100c4d47961f3eea365f2316c9590195a7455e84358431ac522e80501a7c",
+      "input_hash": "751b40877d539f286d6a4121ca3e0337b44209f4f7d6009bb0a6b255ccde788c",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/claude-sonnet-5-5/cache/validate_group/751b40877d539f286d6a4121ca3e0337b44209f4f7d6009bb0a6b255ccde788c.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01x06OquMEQ5uicR73M4XCuIt7",
+      "usage": {
+        "prompt_tokens": 7149,
+        "completion_tokens": 289,
+        "total_tokens": 7438,
+        "prompt_tokens_details": {
+          "cached_tokens": 5573,
+          "cache_creation_tokens": 1572
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_1dd0daf893120f53_query_07696_attribute_add",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 314,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

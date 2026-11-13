@@ -1,0 +1,57 @@
+{
+  "group_id": "pinpoint_group_6fac090874a8df23",
+  "model": "grok-4.6",
+  "signature": "cb958fa178e5ebcdd33f446ebd46fe25a7c20417ca5539cc74de61fb4df99804",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_6fac090874a8df23_query_07481_attribute_add",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Adds one color attribute, black, while preserving the pocket-removal request. The supplied positive hoodie is red, so the added fact is clearly false and visually verifiable."
+    },
+    {
+      "negative_id": "pinpoint_group_6fac090874a8df23_query_07486_predicate_delete",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Deletes only the means predicate about removing the kangaroo pouch completely, leaving a fluent and strictly weaker request that the hoodie front be pocketless."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.6",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "0b4f4cbb9877815581fd770b69711b356c05d0e1c63007657a1f0bf0f27c5272",
+      "input_hash": "46affc4afc7eebc49d058bd7f2b82866eda87e578cb7b13efad82d080872bb32",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/grok-4.6/cache/validate_group/46affc4afc7eebc49d058bd7f2b82866eda87e578cb7b13efad82d080872bb32.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "382e917a-66dc-9927-b13c-733449c7abd0",
+      "usage": {
+        "prompt_tokens": 3628,
+        "completion_tokens": 153,
+        "total_tokens": 6683,
+        "prompt_tokens_details": {
+          "text_tokens": 2539,
+          "audio_tokens": 0,
+          "image_tokens": 1089,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2902,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 225140000
+      }
+    }
+  ],
+  "format_warnings": []
+}

@@ -1,0 +1,63 @@
+/mnt/data/datasets/search_dataset/zxl/magic_lens311/lib/python3.11/site-packages/torch/cuda/__init__.py:188: UserWarning: CUDA initialization: The NVIDIA driver on your system is too old (found version 12090). Please update your GPU driver by downloading and installing a new version from the URL: http://www.nvidia.com/Download/index.aspx Alternatively, go to: https://pytorch.org to install a PyTorch version that has been compiled with your version of the CUDA driver. (Triggered internally at /__w/pytorch/pytorch/c10/cuda/CUDAFunctions.cpp:119.)
+  return torch._C._cuda_getDeviceCount() > 0
+E1109 09:00:00.612219  260290 numa_hwloc.cc:121] Call to hwloc_set_cpubind() failed: Invalid argument [22]
+[devices] [CudaDevice(id=0)]
+[preflight] {'groups': 500, 'queries': 7509, 'negative_count': 5576, 'images': 3930, 'target_images': 3506, 'missing_images': []}
+[model] initializing official parameter tree
+[model] checkpoint tree and shapes verified
+[smoke] {'native_query_max_abs_error': 3.026798367500305e-07, 'native_target_max_abs_error': 3.427267074584961e-07, 'preprocess_max_abs_error': 2.384185791015625e-07, 'checkpoint_tree_verified': True, 'query_shape': [3, 768]}
+[images] 128/3930 elapsed=147.7s
+[images] 256/3930 elapsed=148.5s
+[images] 384/3930 elapsed=149.4s
+[images] 512/3930 elapsed=150.2s
+[images] 640/3930 elapsed=150.9s
+[images] 768/3930 elapsed=151.7s
+[images] 896/3930 elapsed=152.4s
+[images] 1024/3930 elapsed=153.3s
+[images] 1152/3930 elapsed=154.1s
+[images] 1280/3930 elapsed=154.8s
+[images] 1408/3930 elapsed=155.6s
+[images] 1536/3930 elapsed=156.4s
+[images] 1664/3930 elapsed=157.1s
+[images] 1792/3930 elapsed=157.9s
+[images] 1920/3930 elapsed=158.6s
+[images] 2048/3930 elapsed=159.6s
+[images] 2176/3930 elapsed=160.4s
+[images] 2304/3930 elapsed=161.1s
+[images] 2432/3930 elapsed=161.9s
+[images] 2560/3930 elapsed=162.6s
+[images] 2688/3930 elapsed=163.4s
+[images] 2816/3930 elapsed=164.2s
+[images] 2944/3930 elapsed=164.9s
+[images] 3072/3930 elapsed=165.7s
+[images] 3200/3930 elapsed=166.4s
+[images] 3328/3930 elapsed=167.2s
+[images] 3456/3930 elapsed=168.0s
+[images] 3584/3930 elapsed=168.7s
+[images] 3712/3930 elapsed=169.8s
+[images] 3840/3930 elapsed=170.5s
+[images] 3930/3930 elapsed=171.2s
+[targets] complete
+[queries] 512/7509 elapsed=220.3s
+[queries] 1024/7509 elapsed=220.5s
+[queries] 1536/7509 elapsed=220.6s
+[queries] 2048/7509 elapsed=220.8s
+[queries] 2560/7509 elapsed=221.0s
+[queries] 3072/7509 elapsed=221.1s
+[queries] 3584/7509 elapsed=221.3s
+[queries] 4096/7509 elapsed=221.5s
+[queries] 4608/7509 elapsed=221.6s
+[queries] 5120/7509 elapsed=221.8s
+[queries] 5632/7509 elapsed=222.0s
+[queries] 6144/7509 elapsed=222.1s
+[queries] 6656/7509 elapsed=222.3s
+[queries] 7168/7509 elapsed=222.5s
+[queries] 7509/7509 elapsed=222.6s
+[done scores] outputs/external_qdiag_20261109/MagicLens-CLIP-Large elapsed=229.1s
+    subset  groups  instructions  negatives  mean_delta  DRR_percent  CRR_percent  CRR_CI_low_percent  CRR_CI_high_percent    b_psi
+       all     499          1862       5576    0.045883    67.840629     5.670433            4.733559             6.748841 0.222978
+    strict     471          1580       3242    0.059109    74.487652     6.705745            5.566724             7.934493 0.222978
+       add     423          1162       1598    0.037740    72.559505     0.875255            0.505513             1.308519 0.222978
+substitute     432          1214       1644    0.077717    76.240448    11.503523            9.640148            13.522954 0.222978
+    delete     495          1632       2334    0.031760    60.172240     4.843506            3.772159             6.020089 0.222978
+[done metrics] outputs/external_qdiag_20261109/MagicLens-CLIP-Large

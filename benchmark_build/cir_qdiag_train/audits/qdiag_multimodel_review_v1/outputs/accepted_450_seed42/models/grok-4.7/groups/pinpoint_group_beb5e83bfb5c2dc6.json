@@ -1,0 +1,57 @@
+{
+  "group_id": "pinpoint_group_beb5e83bfb5c2dc6",
+  "model": "grok-4.7",
+  "signature": "52913ea34ae01078c58f7a80fc2119b86ef4b6b3449e9e55b21816a5d5d1ccbd",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_beb5e83bfb5c2dc6_query_02112_attribute_add",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Adds one necktie attribute, 'narrow cut'. Both positives are standard-width ties, so the added fact is clearly false for every supplied positive."
+    },
+    {
+      "negative_id": "pinpoint_group_beb5e83bfb5c2dc6_query_02114_object_add",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Adds one object, a matching pocket square, in a fluent single edit. Neither positive shows a pocket square, so the new fact is false for every supplied positive."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.7",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "dff9709ea50b5d53593fd5c7b0f9ad0e4d88c023d0b0a25be5b25f9df394c6f7",
+      "input_hash": "0a33ba6836b61826f2b4dc13ac4a10d4ba420d12060c7cae36cee6903312467c",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/grok-4.7/cache/validate_group/0a33ba6836b61826f2b4dc13ac4a10d4ba420d12060c7cae36cee6903312467c.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "bffe10c2-b832-9890-a6d8-4cd862ebe00e",
+      "usage": {
+        "prompt_tokens": 3648,
+        "completion_tokens": 160,
+        "total_tokens": 7522,
+        "prompt_tokens_details": {
+          "text_tokens": 2573,
+          "audio_tokens": 0,
+          "image_tokens": 1075,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 3714,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 274680000
+      }
+    }
+  ],
+  "format_warnings": []
+}

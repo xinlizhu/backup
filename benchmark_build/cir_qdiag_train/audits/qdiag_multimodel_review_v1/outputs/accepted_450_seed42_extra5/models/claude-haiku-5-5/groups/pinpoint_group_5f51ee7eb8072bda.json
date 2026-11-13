@@ -1,0 +1,62 @@
+{
+  "group_id": "pinpoint_group_5f51ee7eb8072bda",
+  "model": "claude-haiku-5-5",
+  "signature": "44bb4aae802e19564501a676b733c7e19828d9ced260b7da0428f08b1a359df2",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_5f51ee7eb8072bda_query_04279_attribute_add",
+      "decision": "reject",
+      "failure_code": "not_single_edit",
+      "reason": "The before_span is null but the edit claims to ADD 'dark' before 'brown'. The source_text 'Change the watch face to brown and the leather strap to tan' becomes 'Change the watch face to dark brown and the leather strap to tan', which modifies the color specification itself rather than a simple insertion. This represents a semantic change to the brown attribute rather than a clean additive operation."
+    },
+    {
+      "negative_id": "pinpoint_group_5f51ee7eb8072bda_query_04281_object_substitute",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "The positive image (Image 2) shows a Monaco watch with a square bezel case and a black dial. The negative text 'I'd like the bezel brown and the leather strap tan' is visually compatible with this image—the bezel could be recolored to brown. Since the positive image supports the bezel-based phrasing, this fails the requirement that the new fact must be clearly false for every supplied positive image."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-haiku-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "3cabb5830d1eb7aae07e2f2c7307a275c55ac2983d8fbd7beb5f4143ea73277b",
+      "input_hash": "74a7f98b3e23de03835e7b8156bb67f3b328f989df428b8639b097ab9561a3b1",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/claude-haiku-5-5/cache/validate_group/74a7f98b3e23de03835e7b8156bb67f3b328f989df428b8639b097ab9561a3b1.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01RF3ldPCcTziWFkOQsaxYPTzT",
+      "usage": {
+        "prompt_tokens": 7240,
+        "completion_tokens": 367,
+        "total_tokens": 7607,
+        "prompt_tokens_details": {
+          "cached_tokens": 5644,
+          "cache_creation_tokens": 1592
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_5f51ee7eb8072bda_query_04279_attribute_add",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 402,
+      "action": "full reason retained; decision and failure_code unchanged"
+    },
+    {
+      "negative_id": "pinpoint_group_5f51ee7eb8072bda_query_04281_object_substitute",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 403,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_e8bc1007b10b320f",
+  "model": "grok-4.7",
+  "signature": "52913ea34ae01078c58f7a80fc2119b86ef4b6b3449e9e55b21816a5d5d1ccbd",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_e8bc1007b10b320f_query_07914_predicate_add",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Single fluent predicate append; no supplied positive shows a person or grooming, so the added action is clearly false for every positive."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.7",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "1153fdf17b51adb6e8bdc6bf40c42a80ec324fe87335da8f8015fc04de47b8a4",
+      "input_hash": "4bce707a1786486a9b90911de6865b796cf780cf7e99d7f3a84a98c9ced065ac",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/grok-4.7/cache/validate_group/4bce707a1786486a9b90911de6865b796cf780cf7e99d7f3a84a98c9ced065ac.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "7457b0a3-1a01-9119-b214-d35fa6ac37b4",
+      "usage": {
+        "prompt_tokens": 4959,
+        "completion_tokens": 75,
+        "total_tokens": 7850,
+        "prompt_tokens_details": {
+          "text_tokens": 2557,
+          "audio_tokens": 0,
+          "image_tokens": 2402,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2816,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 241920000
+      }
+    }
+  ],
+  "format_warnings": []
+}

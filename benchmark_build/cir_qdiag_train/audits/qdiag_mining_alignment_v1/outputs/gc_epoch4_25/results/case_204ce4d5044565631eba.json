@@ -1,0 +1,161 @@
+{
+  "case_id": "case_204ce4d5044565631eba",
+  "audit_query_id": "audit_query_096",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_204ce4d5044565631eba",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Two school buses are parked beside one another with their fronts prominently visible, unlike the side views in R."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "Two school minibuses are parked adjacent to one another, and their fronts are visible from an oblique angle. The instruction does not require an exclusively frontal view."
+    },
+    "candidate_relation": "compatible",
+    "violated_source_constraints": [],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "add",
+        "semantic_target": "attribute",
+        "before_span": null,
+        "after_span": "compact",
+        "edited_instruction": "Show the front of the compact school buses and park them adjacent to each other.",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "The school buses must be compact minibuses rather than full-size buses; this distinguishes C without repairing any original violation.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "T shows large, full-size school buses with long passenger bodies, not compact minibuses; their fronts and adjacent parking satisfy the retained constraints."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C shows short-bodied, compact school minibuses parked beside one another with their fronts visible."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_204ce4d5044565631eba",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows the fronts of two school buses parked close beside one another."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "Image 3 shows the front of the foreground school bus and a second bus parked beside it."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "Inserting “compact” is one fluent attribute addition that retains the bus entity. The candidate buses are visibly smaller minibus-style vehicles than the standard-size buses in the positive; the original instruction remains supported by both.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 shows standard-size school buses, not compact minibuses."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows compact minibus-style school buses, with their fronts visible and two buses parked beside one another."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "add",
+      "semantic_target": "attribute",
+      "before_span": null,
+      "after_span": "compact",
+      "edited_instruction": "Show the front of the compact school buses and park them adjacent to each other.",
+      "witness_type": "addition_disambiguation",
+      "changed_constraint": "The school buses must be compact minibuses rather than full-size buses; this distinguishes C without repairing any original violation.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "T shows large, full-size school buses with long passenger bodies, not compact minibuses; their fronts and adjacent parking satisfy the retained constraints."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C shows short-bodied, compact school minibuses parked beside one another with their fronts visible."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "Inserting “compact” is one fluent attribute addition that retains the bus entity. The candidate buses are visibly smaller minibus-style vehicles than the standard-size buses in the positive; the original instruction remains supported by both.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 shows standard-size school buses, not compact minibuses."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows compact minibus-style school buses, with their fronts visible and two buses parked beside one another."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "d353c2f65215d95acc2bb98c9860425ec80221237f5df6386b3f2114fbcfc205",
+      "input_hash": "bc560ec776d3c104491bc252529d24dc1e3c5308e99b9bb264f773cf2bb147f5",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/bc560ec776d3c104491bc252529d24dc1e3c5308e99b9bb264f773cf2bb147f5.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0",
+      "usage": {
+        "prompt_tokens": 2821,
+        "completion_tokens": 586,
+        "total_tokens": 3407,
+        "prompt_tokens_details": {
+          "cached_tokens": 682
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 318
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "52ee3b93d0bf25aafd0f7de5149b3beed06c3b5a7e23a5a33872976f1f923196",
+      "input_hash": "cc3e91957a17c35112f9df392bd302acd77280a89831b8179aee4c9a279638ed",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/cc3e91957a17c35112f9df392bd302acd77280a89831b8179aee4c9a279638ed.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_06f7067b3382f019016af2bf2fa47487d299e5f829b98086f1",
+      "usage": {
+        "prompt_tokens": 6721,
+        "completion_tokens": 411,
+        "total_tokens": 7132,
+        "completion_tokens_details": {
+          "reasoning_tokens": 191
+        }
+      }
+    }
+  ]
+}

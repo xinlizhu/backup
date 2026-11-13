@@ -1,0 +1,57 @@
+{
+  "group_id": "pinpoint_group_04a5bcba3ed4da92",
+  "model": "grok-4.7",
+  "signature": "52913ea34ae01078c58f7a80fc2119b86ef4b6b3449e9e55b21816a5d5d1ccbd",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_04a5bcba3ed4da92_query_00712_predicate_substitute",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Replacing \"look like\" with \"are next to\" is one fluent predicate edit and reconstructs the text. No positive shows a light beside the reference earrings."
+    },
+    {
+      "negative_id": "pinpoint_group_04a5bcba3ed4da92_query_00714_object_substitute",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Replacing \"earrings\" with \"necklaces\" is one object edit. The reference is earrings, and no positive is a fixture based on necklaces."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.7",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "b79f6282a5eba09a19b6ac19caf2d99c52eecff5a1a5ec08440ff665cddd4aac",
+      "input_hash": "70c4ee1da3829e80a4c1dad4016627c471c0eff165e33543abf82362da86d8e1",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/grok-4.7/cache/validate_group/70c4ee1da3829e80a4c1dad4016627c471c0eff165e33543abf82362da86d8e1.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "77d1524a-81b0-99d2-94a3-75df5f3fae8b",
+      "usage": {
+        "prompt_tokens": 4601,
+        "completion_tokens": 162,
+        "total_tokens": 8358,
+        "prompt_tokens_details": {
+          "text_tokens": 2605,
+          "audio_tokens": 0,
+          "image_tokens": 1996,
+          "cached_tokens": 1152
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 3595,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 300160000
+      }
+    }
+  ],
+  "format_warnings": []
+}

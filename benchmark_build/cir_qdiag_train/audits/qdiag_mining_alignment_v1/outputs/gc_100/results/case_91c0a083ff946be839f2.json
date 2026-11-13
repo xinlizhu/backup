@@ -1,0 +1,88 @@
+{
+  "case_id": "case_91c0a083ff946be839f2",
+  "audit_query_id": "audit_query_030",
+  "signature": "5065d94bb0c1b275e428d3f2ada2352b274139ccb2134477487b5f51eef77ac6",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_91c0a083ff946be839f2",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "A dog is seated on a chair."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The image shows llamas or alpacas standing in a field; no dog or chair is visible."
+    },
+    "candidate_relation": "multiple_constraint_conflict",
+    "violated_source_constraints": [
+      "The dog is present.",
+      "The dog is sitting in a chair."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_91c0a083ff946be839f2",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 visibly shows a dog seated in a chair."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 visibly shows llamas in a field and no dog sitting in a chair."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "f2d5cccf0cc6daa311ad623bcbe4c0a3718dc58ac94e4e377c4a13d2a45a3d91",
+      "input_hash": "9113e1b614fcc2383bf7eb1170b648f311f92312d8d7a94b9eca6cd6563b6e04",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_100/api_cache/propose_witnesses/9113e1b614fcc2383bf7eb1170b648f311f92312d8d7a94b9eca6cd6563b6e04.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0d017d0ede143c21016af2b91cde7887d1bff356d313a7350c",
+      "usage": {
+        "prompt_tokens": 4328,
+        "completion_tokens": 613,
+        "total_tokens": 4941,
+        "completion_tokens_details": {
+          "reasoning_tokens": 497
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "fe0f031bc3d444e0e71de7e0bd167fca0dd5ead14b8961dacf54d5e5bdf6c88c",
+      "input_hash": "279d9c54619b17cf7044244d01def785b832adb33bac20fd291b1a6907374f29",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_100/api_cache/review_witnesses/279d9c54619b17cf7044244d01def785b832adb33bac20fd291b1a6907374f29.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0a3b0e9f0e43b11c016af2b9276d4887d19429874edb56249c",
+      "usage": {
+        "prompt_tokens": 7175,
+        "completion_tokens": 154,
+        "total_tokens": 7329,
+        "prompt_tokens_details": {
+          "cached_tokens": 5248
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 69
+        }
+      }
+    }
+  ]
+}

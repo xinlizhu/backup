@@ -1,0 +1,82 @@
+{
+  "case_id": "case_fef9597c5be973bdfa1d",
+  "audit_query_id": "audit_query_095",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_fef9597c5be973bdfa1d",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 visibly shows one bird, gray water, the bird raised above the shallow water, and its beak open."
+    },
+    "source_on_candidate": {
+      "status": "uncertain",
+      "evidence": "Image 3 visibly shows one bird and grayish water, with the bird held above the water; its mouth is obscured by the dog and cannot be reliably judged open."
+    },
+    "candidate_relation": "uncertain",
+    "violated_source_constraints": [],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_fef9597c5be973bdfa1d",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "Image 2 shows one bird with its wings spread, open beak, and body above the water, but the water appears muddy brown/gray; the instruction's requirement to change the water color to grey is visually ambiguous."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a dog holding a bird, rather than one bird raised out of the water with its mouth open; the water is also not clearly grey."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "83f2afe6cbef6b382497dd3549f757fb3d8feee8c93399be4fad54507a5e62cf",
+      "input_hash": "c79cdb46342a23f1469d07e18928f43cc9838e7bab4a6ed6d501e87ba6cd9db8",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/c79cdb46342a23f1469d07e18928f43cc9838e7bab4a6ed6d501e87ba6cd9db8.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_ft_0de6055ab2e14c1fb37a5a0c65d9d17a",
+      "usage": {
+        "prompt_tokens": 12234,
+        "completion_tokens": 647,
+        "total_tokens": 12881,
+        "completion_tokens_details": {
+          "reasoning_tokens": 515
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "ea370d87bc8efcfe6997cc0ef122033eedfe3c893187556218a0d98095c71c4e",
+      "input_hash": "782458850ff8b1cb8ee3179b2efb7b07c6b749d410775432ce4152e7d42ab3df",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/782458850ff8b1cb8ee3179b2efb7b07c6b749d410775432ce4152e7d42ab3df.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_05e3d916389644f7016af2bf24045c87d09b3952683b3026ba",
+      "usage": {
+        "prompt_tokens": 11692,
+        "completion_tokens": 131,
+        "total_tokens": 11823,
+        "prompt_tokens_details": {
+          "cached_tokens": 3494
+        }
+      }
+    }
+  ]
+}

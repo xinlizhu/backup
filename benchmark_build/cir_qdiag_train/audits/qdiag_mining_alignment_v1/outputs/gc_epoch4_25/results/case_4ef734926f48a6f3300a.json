@@ -1,0 +1,166 @@
+{
+  "case_id": "case_4ef734926f48a6f3300a",
+  "audit_query_id": "audit_query_092",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_4ef734926f48a6f3300a",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows one panda resting its head on a paw above a branch; the reference shows a panda in a tree holding something to its mouth."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows one panda seated upright eating bamboo, not lying on its paw or resting on a branch."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The target panda is lying on its paw and resting on a branch."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "delete",
+        "semantic_target": "predicate",
+        "before_span": "laying down on his paw resting on a branch",
+        "after_span": null,
+        "edited_instruction": "Goes from a panda in a tree eating something to a single panda",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "The target panda's lying posture and resting on a branch.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 shows a single panda."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows a single panda."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_4ef734926f48a6f3300a",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows one visible panda resting its head on a forepaw above a branch; the branch and pose support the resting-on-a-branch description."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a panda upright, eating bamboo; it is not lying down with its head resting on a paw on a branch."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting the single destination predicate span leaves a fluent-enough panda destination and preserves the remaining single-panda constraint, which both images support.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 shows one visible panda."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows one visible panda."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "delete",
+      "semantic_target": "predicate",
+      "before_span": "laying down on his paw resting on a branch",
+      "after_span": null,
+      "edited_instruction": "Goes from a panda in a tree eating something to a single panda",
+      "witness_type": "deletion_relaxation",
+      "changed_constraint": "The target panda's lying posture and resting on a branch.",
+      "edited_on_positive": {
+        "status": "supported",
+        "evidence": "Image 2 shows a single panda."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "Image 3 shows a single panda."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting the single destination predicate span leaves a fluent-enough panda destination and preserves the remaining single-panda constraint, which both images support.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 shows one visible panda."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows one visible panda."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "4e07d8c1d4fbc8bf99ecbdb105e14063eb03a7c5e9990908c1d46d593ac02703",
+      "input_hash": "28499a151cae76b246abfcc45f5b43b1fb5a6f6f605454a5ba26522fd39c0034",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/28499a151cae76b246abfcc45f5b43b1fb5a6f6f605454a5ba26522fd39c0034.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0d9bdef022cef774016af2bf4ef31087d2bbb1ce00e22b4148",
+      "usage": {
+        "prompt_tokens": 10005,
+        "completion_tokens": 909,
+        "total_tokens": 10914,
+        "prompt_tokens_details": {
+          "cached_tokens": 5888
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 648
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "9d944e65597c3a8b16c83cd1358795d3feabd4486efdd6a39dc072e1b8988d62",
+      "input_hash": "220d307a09046a6b2b192c4b29b294feefe366fb36c67a9e77c5677845cfa58c",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/220d307a09046a6b2b192c4b29b294feefe366fb36c67a9e77c5677845cfa58c.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_09e5a1813a2b2e23016af2bf65bf1487d1811242f330ab5da4",
+      "usage": {
+        "prompt_tokens": 9538,
+        "completion_tokens": 529,
+        "total_tokens": 10067,
+        "prompt_tokens_details": {
+          "cached_tokens": 5248
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 319
+        }
+      }
+    }
+  ]
+}

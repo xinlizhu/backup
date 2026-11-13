@@ -1,0 +1,238 @@
+{
+  "case_id": "case_5828d58ce65c668b7f6d",
+  "audit_query_id": "audit_query_100",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_5828d58ce65c668b7f6d",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "A shallow metal bowl contains a prepared dish covered with melted, browned cheese."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The glass bowl contains a layered fruit-and-cream dessert topped with sliced nuts, rather than cheese."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The dish has cheese on top."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "object",
+        "before_span": "cheese",
+        "after_span": "sliced almonds",
+        "edited_instruction": "A bowl with a dish and sliced almonds on top.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "The topping is changed from cheese to sliced almonds.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The dish is topped with a continuous layer of melted, browned cheese, with no sliced almonds visible."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Sliced almonds are scattered across the top of the layered dessert in the glass bowl."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "operation": "delete",
+        "semantic_target": "object",
+        "before_span": " and cheese on top",
+        "after_span": null,
+        "edited_instruction": "A bowl with a dish.",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "Removes the requirement for cheese on top.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "A shallow metal bowl holds a prepared savory dish."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "A glass bowl holds a layered dessert dish."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_5828d58ce65c668b7f6d",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a prepared dish in a shallow oval metal bowl, covered with melted cheese with browned patches."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a layered dessert in a glass bowl topped with sliced almonds over a smooth cream or custard layer, rather than cheese."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing 'cheese' with 'sliced almonds' is one object substitution that preserves the bowl, prepared dish, and topping relation. The visible toppings establish the required contrast.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The topping in Image 2 is a continuous layer of browned melted cheese, with no sliced almond topping."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows a glass bowl containing a layered dessert with numerous thin almond slices scattered on top."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting ' and cheese on top' removes one topping constraint and its grammatical glue. Both images retain a bowl containing a prepared dish; the candidate violates only the removed cheese-topping requirement.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 contains a prepared savory dish in a shallow oval metal bowl."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 contains a prepared layered dessert in a clear glass bowl."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "substitute",
+      "semantic_target": "object",
+      "before_span": "cheese",
+      "after_span": "sliced almonds",
+      "edited_instruction": "A bowl with a dish and sliced almonds on top.",
+      "witness_type": "substitution_contrast",
+      "changed_constraint": "The topping is changed from cheese to sliced almonds.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "The dish is topped with a continuous layer of melted, browned cheese, with no sliced almonds visible."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "Sliced almonds are scattered across the top of the layered dessert in the glass bowl."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing 'cheese' with 'sliced almonds' is one object substitution that preserves the bowl, prepared dish, and topping relation. The visible toppings establish the required contrast.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The topping in Image 2 is a continuous layer of browned melted cheese, with no sliced almond topping."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows a glass bowl containing a layered dessert with numerous thin almond slices scattered on top."
+        }
+      }
+    },
+    {
+      "witness_id": "w2",
+      "operation": "delete",
+      "semantic_target": "object",
+      "before_span": " and cheese on top",
+      "after_span": null,
+      "edited_instruction": "A bowl with a dish.",
+      "witness_type": "deletion_relaxation",
+      "changed_constraint": "Removes the requirement for cheese on top.",
+      "edited_on_positive": {
+        "status": "supported",
+        "evidence": "A shallow metal bowl holds a prepared savory dish."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "A glass bowl holds a layered dessert dish."
+      },
+      "independent_review": {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting ' and cheese on top' removes one topping constraint and its grammatical glue. Both images retain a bowl containing a prepared dish; the candidate violates only the removed cheese-topping requirement.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 contains a prepared savory dish in a shallow oval metal bowl."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 contains a prepared layered dessert in a clear glass bowl."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    },
+    {
+      "witness_id": "w2",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "94712ab6c37510503e1bcf0f72d622633ce227804ca469c0f878f561f9f5fedb",
+      "input_hash": "f420c26f3f9c76460cdeff37e6f5c6a1cc6685d8cd1d5cd7b7ba040ae3a83090",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/f420c26f3f9c76460cdeff37e6f5c6a1cc6685d8cd1d5cd7b7ba040ae3a83090.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_05baf004597f4b00016af2bd630f9087d19c72d32880719d93",
+      "usage": {
+        "prompt_tokens": 13896,
+        "completion_tokens": 559,
+        "total_tokens": 14455,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 73
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "9abf630cebe61475d5bd0414c414ffca25b04004d303a1762715ef0a3c57c85d",
+      "input_hash": "af577138d1f665d992f9bafe7c7b5a4f5443a5d5c706072ada8cbfcf724cfaab",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/af577138d1f665d992f9bafe7c7b5a4f5443a5d5c706072ada8cbfcf724cfaab.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_08fab99c5a255f87016af2bd86a45887d181f451f8aca7eaea",
+      "usage": {
+        "prompt_tokens": 13481,
+        "completion_tokens": 504,
+        "total_tokens": 13985,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 46
+        }
+      }
+    }
+  ]
+}

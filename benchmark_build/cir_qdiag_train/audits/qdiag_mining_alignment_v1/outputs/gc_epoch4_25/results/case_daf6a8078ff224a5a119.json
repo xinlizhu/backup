@@ -1,0 +1,83 @@
+{
+  "case_id": "case_daf6a8078ff224a5a119",
+  "audit_query_id": "audit_query_092",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_daf6a8078ff224a5a119",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Relative to the reference panda holding food near its mouth, this image shows one panda resting with its head laid on its black forepaw above a horizontal branch."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The candidate shows many pelicans beside water and a crowd of people; it contains no visible panda lying on its paw or resting on a branch."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "The target shows a single panda.",
+      "The panda is lying down with its head on its paw.",
+      "The panda is resting on a branch."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_daf6a8078ff224a5a119",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "A single panda rests with its head laid sideways on its black forepaw/forelimb over a thick branch, unlike the reference panda holding food at its mouth."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The candidate shows a flock of pelicans beside water and a crowd of people. There is no panda lying on its paw on a branch."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "3e0e38ffa543308f3fa93195d23e10a9ba71eddcb4dacfaea4d8dec085d91c9e",
+      "input_hash": "5fac1d7c45991cb35a53f4e8df7b0d6cf338d63a803474b2bdb4c8a70de3fb8e",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/5fac1d7c45991cb35a53f4e8df7b0d6cf338d63a803474b2bdb4c8a70de3fb8e.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_01eec108f417a00e016af2bddffa0487d2aa0a1ec6b6a2ea12",
+      "usage": {
+        "prompt_tokens": 7992,
+        "completion_tokens": 200,
+        "total_tokens": 8192,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "d3813f800fc4ca7c0ada7f78d7e3a83d994fb343a83444bfcb927a7eb3c5a1a5",
+      "input_hash": "172b99ffeae6e129cd66ae4302212498f6369327c63c62eba23a1787057d722b",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/172b99ffeae6e129cd66ae4302212498f6369327c63c62eba23a1787057d722b.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0c8fcd5cb42b04ee016af2bdf6db2087d18468855fbabddf96",
+      "usage": {
+        "prompt_tokens": 7450,
+        "completion_tokens": 114,
+        "total_tokens": 7564
+      }
+    }
+  ]
+}

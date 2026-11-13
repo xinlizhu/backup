@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_695fb251785608c1",
+  "model": "grok-4.6",
+  "signature": "cb958fa178e5ebcdd33f446ebd46fe25a7c20417ca5539cc74de61fb4df99804",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_695fb251785608c1_query_03506_object_delete",
+      "decision": "reject",
+      "failure_code": "wrong_semantic_target",
+      "reason": "Removing 'ceiling' drops a mounting-type property of the same light, not a distinct object's identity or presence, so this is an attribute deletion rather than the claimed object edit."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.6",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "5c52182f22d89c163c99a216c44f9b698698bb4ef5987bf45b54543d90aca442",
+      "input_hash": "0dae1529f5599d71a72caab2e756bbb64d0ea054afaa8ef5c16be335b7357890",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/grok-4.6/cache/validate_group/0dae1529f5599d71a72caab2e756bbb64d0ea054afaa8ef5c16be335b7357890.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "4d3ba9b6-6f96-9674-bade-3ea7e52d5e7a",
+      "usage": {
+        "prompt_tokens": 4371,
+        "completion_tokens": 88,
+        "total_tokens": 7816,
+        "prompt_tokens_details": {
+          "text_tokens": 2555,
+          "audio_tokens": 0,
+          "image_tokens": 1816,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 3357,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 263400000
+      }
+    }
+  ],
+  "format_warnings": []
+}

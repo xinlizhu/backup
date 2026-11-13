@@ -1,0 +1,61 @@
+{
+  "group_id": "pinpoint_group_fba977cf3c5db15b",
+  "model": "claude-sonnet-5-5",
+  "signature": "aff20e5a5733d87f80fd7515c25d92c77cff20d4f50c9f8dbf4123bfdabed97b",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_fba977cf3c5db15b_query_00252_predicate_add",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Single predicate ADD. Source requests turning pattern into wearable garment; negative adds 'lay it flat' as an additional action. The garments in the positive image are worn/displayed, not laid flat. This adds a new constraint clearly false for the supplied positive."
+    },
+    {
+      "negative_id": "pinpoint_group_fba977cf3c5db15b_query_00254_attribute_substitute",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "The positive image shows garments with mosaic patterns featuring multiple colors including blues, golds, reds, and greens. The substitution from 'color palette' to 'monochrome palette' contradicts the multi-colored design, but the garments shown contain both monochrome elements (sections with primarily one color) and colorful elements, making the statement compatible with at least parts of the positive image rather than clearly false."
+    },
+    {
+      "negative_id": "pinpoint_group_fba977cf3c5db15b_query_00255_predicate_substitute",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Single predicate SUBSTITUTE. Source uses 'design' (general creative act); negative substitutes 'sketch' (specifically a drawing). The positive image shows finished garments, not sketches. This changes the output format/medium to something clearly incompatible with the positive."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-sonnet-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "8b6e4cdbf96ead292048084b86d365b9e88e97f16468ba28dadda132769d099f",
+      "input_hash": "b64b6140a7cb9b1f53819155b1f9bb0605e8b40eadc2ad7a12ac8d862be13631",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/claude-sonnet-5-5/cache/validate_group/b64b6140a7cb9b1f53819155b1f9bb0605e8b40eadc2ad7a12ac8d862be13631.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01tfZJrZSSQ06riKpdz2w8UbsQ",
+      "usage": {
+        "prompt_tokens": 6966,
+        "completion_tokens": 465,
+        "total_tokens": 7431,
+        "prompt_tokens_details": {
+          "cached_tokens": 5430,
+          "cache_creation_tokens": 1532
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_fba977cf3c5db15b_query_00254_attribute_substitute",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 438,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

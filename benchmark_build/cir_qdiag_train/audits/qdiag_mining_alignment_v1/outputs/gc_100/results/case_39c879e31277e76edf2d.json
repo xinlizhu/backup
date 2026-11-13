@@ -1,0 +1,84 @@
+{
+  "case_id": "case_39c879e31277e76edf2d",
+  "audit_query_id": "audit_query_064",
+  "signature": "5065d94bb0c1b275e428d3f2ada2352b274139ccb2134477487b5f51eef77ac6",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_39c879e31277e76edf2d",
+    "case_status": "source_invalid_or_uncertain",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "The image is brighter and the animals' visible eyes appear dark rather than red, but they look ferret-like; the presence of a mouse is not visually clear."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The candidate shows a man with hyenas and no visible mouse; the scene is brighter than the reference, while eye color is not clearly visible."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "Add one mouse."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_39c879e31277e76edf2d",
+    "source_on_positive": {
+      "status": "contradicted",
+      "evidence": "Image 2 shows two ferret-like animals, not a mouse added to the single ferret in Image 1. It is brighter, and their eyes appear dark rather than red, but the mouse constraint is visibly unmet."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a man with several hyenas, not an added mouse; the original animal-count/type constraint is unmet."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "f6027892df468be7afc14ff8f3e8667ce2b52871c38f409f662b50beaf971e0d",
+      "input_hash": "2f589d630a8093ae43228f26bf76a5eaf1d54eeccb69d41fc342bff581b1b6de",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_100/api_cache/propose_witnesses/2f589d630a8093ae43228f26bf76a5eaf1d54eeccb69d41fc342bff581b1b6de.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0e2914505b51744f016af2b936f17887d1a138e0ef888e2be9",
+      "usage": {
+        "prompt_tokens": 6926,
+        "completion_tokens": 520,
+        "total_tokens": 7446,
+        "completion_tokens_details": {
+          "reasoning_tokens": 375
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "cc75df092518521bf6a923d4c77bb3c036941cbe7aecca72456db230e1bb3742",
+      "input_hash": "c5f9fce4ea9bb68c452b1d439b862887eec981da87b8b6dbc6fabc291518edd5",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_100/api_cache/review_witnesses/c5f9fce4ea9bb68c452b1d439b862887eec981da87b8b6dbc6fabc291518edd5.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_043611cb07d98815016af2b941e5b887d19fb8915c4270807f",
+      "usage": {
+        "prompt_tokens": 6384,
+        "completion_tokens": 380,
+        "total_tokens": 6764,
+        "completion_tokens_details": {
+          "reasoning_tokens": 253
+        }
+      }
+    }
+  ]
+}

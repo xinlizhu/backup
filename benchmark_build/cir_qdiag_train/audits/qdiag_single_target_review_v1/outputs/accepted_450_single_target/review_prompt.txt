@@ -1,0 +1,17 @@
+Judge an edited retrieval instruction using the supplied REFERENCE image(s) and one
+TARGET image. The TARGET is an annotated positive for modification_text. Compare
+modification_text with edited_text and focus on the changed meaning.
+
+- If the edit adds or replaces a requirement, accept when it introduces a meaningful
+  condition that is clearly false in the TARGET. Reject if the TARGET satisfies it
+  or the edit only paraphrases the original requirement.
+- If the edit deletes a requirement, accept when it removes a meaningful constraint
+  and preserves the remaining meaning, making the query strictly weaker. The TARGET
+  may still satisfy the edited text; that alone is not a reason to reject a deletion.
+- Judge what is depicted, not what could be added, moved, worn, or changed later.
+  Use the references to resolve relative language and <img1>/<img2>. Do not reject
+  for unrelated background differences. If required evidence is not discernible,
+  return uncertain rather than inventing it.
+
+Return case_id, decision (accept, reject, or uncertain), and a brief reason grounded
+in the text change and visible evidence. Do not assume the proposed edit is valid.

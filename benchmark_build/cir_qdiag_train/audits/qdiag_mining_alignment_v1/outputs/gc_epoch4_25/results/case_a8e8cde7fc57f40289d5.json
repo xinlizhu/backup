@@ -1,0 +1,91 @@
+{
+  "case_id": "case_a8e8cde7fc57f40289d5",
+  "audit_query_id": "audit_query_086",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_a8e8cde7fc57f40289d5",
+    "case_status": "source_invalid_or_uncertain",
+    "source_on_positive": {
+      "status": "contradicted",
+      "evidence": "The fox is seated on its haunches with upright forelegs, matching the prominent reference cat's seated posture, but it is not standing as explicitly requested."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The candidate shows a ferret, not a fox, on four feet with an extended body rather than the prominent reference cat's upright seated posture."
+    },
+    "candidate_relation": "multiple_constraint_conflict",
+    "violated_source_constraints": [
+      "The requested animal is a fox; the candidate is a ferret.",
+      "The animal should have the same gesture as the reference; the candidate's extended, four-footed stance differs from the prominent cat's upright seated pose."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_a8e8cde7fc57f40289d5",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "Image 2 shows a fox sitting upright, resembling the prominent seated cat in Image 1. However, the instruction explicitly requests standing, which is not clearly satisfied; the reference also contains a second cat in a different pose, making the intended gesture ambiguous."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a ferret, not a fox. It stands on four spread feet with its tail raised, unlike the prominent reference cat's upright seated pose."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "0792127ddd05912a1986862423644d53bfa158a711b77b27949271331338c4c4",
+      "input_hash": "6e00f1aa9924b1724b6cdafa24e3ee71c43f18d140df96327a018f7263944e40",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/6e00f1aa9924b1724b6cdafa24e3ee71c43f18d140df96327a018f7263944e40.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_03eb4d912e29cf55016af2bd95ca7c87d1b0d86c9d59db782c",
+      "usage": {
+        "prompt_tokens": 6843,
+        "completion_tokens": 357,
+        "total_tokens": 7200,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 130
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "85eef8dcbeba34fd0aa56776a9746ca73f373cc9ebea89c484d6e9335f22e35a",
+      "input_hash": "d83271acdd4aafc0ac69bcfb20a15dfa5a30df983682a01195acb956653be627",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/d83271acdd4aafc0ac69bcfb20a15dfa5a30df983682a01195acb956653be627.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_023bfec5ce10e0aa016af2bdb8774887d180843366abc94230",
+      "usage": {
+        "prompt_tokens": 6301,
+        "completion_tokens": 200,
+        "total_tokens": 6501,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 58
+        }
+      }
+    }
+  ]
+}

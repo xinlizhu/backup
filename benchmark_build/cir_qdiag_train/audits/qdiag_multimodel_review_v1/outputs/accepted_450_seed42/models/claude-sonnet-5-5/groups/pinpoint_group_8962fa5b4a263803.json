@@ -1,0 +1,49 @@
+{
+  "group_id": "pinpoint_group_8962fa5b4a263803",
+  "model": "claude-sonnet-5-5",
+  "signature": "aff20e5a5733d87f80fd7515c25d92c77cff20d4f50c9f8dbf4123bfdabed97b",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_8962fa5b4a263803_query_07080_predicate_substitute",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "The negative text 'same photo with any jewelry' is compatible with the supplied positive images. Image 2 (reference) clearly shows jewelry (rings, bracelet), and images 3 and 4 show faces without visible jewelry but do not contradict the presence of jewelry in other versions of the same photo. The substitution does not create a clearly false fact for all supplied positives."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-sonnet-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "5231fb655286dca8d2d5b11b74321e0487af03d885b45382e867ada0eb234588",
+      "input_hash": "708e5cf678325c82bc3db1779c6802c24d931e7c6bda620ae1ff387c6151ebb3",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/claude-sonnet-5-5/cache/validate_group/708e5cf678325c82bc3db1779c6802c24d931e7c6bda620ae1ff387c6151ebb3.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01CT02WjbFSdiTW1iMhAkkAqqK",
+      "usage": {
+        "prompt_tokens": 9583,
+        "completion_tokens": 191,
+        "total_tokens": 9774,
+        "prompt_tokens_details": {
+          "cached_tokens": 7471,
+          "cache_creation_tokens": 2108
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_8962fa5b4a263803_query_07080_predicate_substitute",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 376,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

@@ -1,0 +1,238 @@
+{
+  "case_id": "case_35ff19be0f3686734aa8",
+  "audit_query_id": "audit_query_100",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_35ff19be0f3686734aa8",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "A shallow metal bowl contains a prepared dish covered with melted, browned cheese."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The glass bowl contains a layered dessert topped with white cream and chopped chocolate pieces, rather than cheese."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The dish has cheese on top."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "object",
+        "before_span": "cheese",
+        "after_span": "chocolate",
+        "edited_instruction": "A bowl with a dish and chocolate on top.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "The topping is changed from cheese to chocolate.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The dish is topped with melted, browned cheese, not chocolate."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The glass bowl holds a layered dessert with chopped chocolate pieces on top."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "operation": "delete",
+        "semantic_target": "object",
+        "before_span": " and cheese on top",
+        "after_span": null,
+        "edited_instruction": "A bowl with a dish.",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "The requirement for cheese on top is removed.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "A shallow metal bowl contains a prepared baked dish."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "A glass bowl contains a prepared layered dessert."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_35ff19be0f3686734aa8",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "A round, shallow metal bowl contains a prepared food dish covered with melted white cheese and browned cheese patches."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The glass pedestal bowl contains a layered dessert topped with cream and chopped chocolate pieces, rather than cheese."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing cheese with chocolate is one object substitution that preserves the bowl, food dish, and topping relation. T visibly has a melted cheese topping; C visibly has chopped chocolate on top.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The topping is melted, browned cheese, with no chocolate topping."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Chopped chocolate pieces visibly cover the top of the layered dessert in the glass bowl."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "The specified deletion removes the single cheese-topping requirement and its attached grammatical glue. Both images retain a bowl containing a prepared dish; C's only conflict with the source is the cheese-topping requirement.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "The shallow metal bowl contains a baked food dish."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The glass pedestal bowl contains a prepared layered dessert."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "substitute",
+      "semantic_target": "object",
+      "before_span": "cheese",
+      "after_span": "chocolate",
+      "edited_instruction": "A bowl with a dish and chocolate on top.",
+      "witness_type": "substitution_contrast",
+      "changed_constraint": "The topping is changed from cheese to chocolate.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "The dish is topped with melted, browned cheese, not chocolate."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "The glass bowl holds a layered dessert with chopped chocolate pieces on top."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing cheese with chocolate is one object substitution that preserves the bowl, food dish, and topping relation. T visibly has a melted cheese topping; C visibly has chopped chocolate on top.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The topping is melted, browned cheese, with no chocolate topping."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Chopped chocolate pieces visibly cover the top of the layered dessert in the glass bowl."
+        }
+      }
+    },
+    {
+      "witness_id": "w2",
+      "operation": "delete",
+      "semantic_target": "object",
+      "before_span": " and cheese on top",
+      "after_span": null,
+      "edited_instruction": "A bowl with a dish.",
+      "witness_type": "deletion_relaxation",
+      "changed_constraint": "The requirement for cheese on top is removed.",
+      "edited_on_positive": {
+        "status": "supported",
+        "evidence": "A shallow metal bowl contains a prepared baked dish."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "A glass bowl contains a prepared layered dessert."
+      },
+      "independent_review": {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "The specified deletion removes the single cheese-topping requirement and its attached grammatical glue. Both images retain a bowl containing a prepared dish; C's only conflict with the source is the cheese-topping requirement.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "The shallow metal bowl contains a baked food dish."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The glass pedestal bowl contains a prepared layered dessert."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    },
+    {
+      "witness_id": "w2",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "0a97f0d3bf9a4fa7eecdec990056f38e2f6a30a03d7a7c3232e6acbdf1008c47",
+      "input_hash": "7d714e1d3d9c471d49ff8edc5674c09ff6f34e44e68198a7eb4fb1d1f84cf8d3",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/7d714e1d3d9c471d49ff8edc5674c09ff6f34e44e68198a7eb4fb1d1f84cf8d3.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0c87b36e7cb782fe016af2bf5dc7b487d186065971261234b0",
+      "usage": {
+        "prompt_tokens": 13383,
+        "completion_tokens": 572,
+        "total_tokens": 13955,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 101
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "b2624adf8d0974dcdcaecc1b8a65b8b997c945cb19328b9f8b371430b8e3a341",
+      "input_hash": "eef3e26f5fb6a47bbd7dd0c27be47548741f543568a8723318cd4440da237334",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/eef3e26f5fb6a47bbd7dd0c27be47548741f543568a8723318cd4440da237334.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0bbcd0ca2374f3b6016af2bf81fe8487d18386390046c8dcdf",
+      "usage": {
+        "prompt_tokens": 12966,
+        "completion_tokens": 519,
+        "total_tokens": 13485,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 88
+        }
+      }
+    }
+  ]
+}

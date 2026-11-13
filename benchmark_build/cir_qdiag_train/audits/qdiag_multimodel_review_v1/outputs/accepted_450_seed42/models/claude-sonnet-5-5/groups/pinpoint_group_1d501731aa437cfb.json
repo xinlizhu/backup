@@ -1,0 +1,62 @@
+{
+  "group_id": "pinpoint_group_1d501731aa437cfb",
+  "model": "claude-sonnet-5-5",
+  "signature": "aff20e5a5733d87f80fd7515c25d92c77cff20d4f50c9f8dbf4123bfdabed97b",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_1d501731aa437cfb_query_03970_predicate_delete",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "DELETE removes the predicate constraint 'for grilling' cleanly. The negative text 'How can I adapt this dish?' is fluent and meaningful, removing exactly one semantic constraint while preserving the core adaptation question. All supplied positive images show grilled/broiled preparations, supporting that grilling is a specific cooking method being removed from the broader adaptation query."
+    },
+    {
+      "negative_id": "pinpoint_group_1d501731aa437cfb_query_03970_predicate_substitute",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "SUBSTITUTE replaces 'grilling' with 'broiling' as the cooking method predicate. The negative text is fluent and natural. Images 2, 3, and 5 show grilled dishes with characteristic grill marks, while Image 4 shows broiled/baked shrimp skewers. The substitution targets a single semantic difference in cooking method, clearly contradicting the grilling focus shown in most positives."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-sonnet-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "fd7855d1edfe98a036c868b93c80be3c61a45d6e0dcf09168d0725bb6f2e3308",
+      "input_hash": "30d880678eaa5e8233844d8cfc526f59d7ca4328f0d4775c45d6fe83ecb1a6e7",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/claude-sonnet-5-5/cache/validate_group/30d880678eaa5e8233844d8cfc526f59d7ca4328f0d4775c45d6fe83ecb1a6e7.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01bhMtkz7zQZmana5Z7CBD2aaE",
+      "usage": {
+        "prompt_tokens": 10452,
+        "completion_tokens": 339,
+        "total_tokens": 10791,
+        "prompt_tokens_details": {
+          "cached_tokens": 8149,
+          "cache_creation_tokens": 2299
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_1d501731aa437cfb_query_03970_predicate_delete",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 391,
+      "action": "full reason retained; decision and failure_code unchanged"
+    },
+    {
+      "negative_id": "pinpoint_group_1d501731aa437cfb_query_03970_predicate_substitute",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 381,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

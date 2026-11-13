@@ -1,0 +1,90 @@
+{
+  "case_id": "case_e984a5fb8bd721febc1f",
+  "audit_query_id": "audit_query_085",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_e984a5fb8bd721febc1f",
+    "case_status": "source_invalid_or_uncertain",
+    "source_on_positive": {
+      "status": "contradicted",
+      "evidence": "The animals sitting on the intersecting logs are gorillas, which are apes rather than the monkeys specified by the instruction and shown in R."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Two monkeys perch on the same narrow branch rather than on different tree trunks. The ground is outside the frame, so the ground-level requirement cannot be verified."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The monkeys sit on different tree trunks; C shows both perched on the same branch."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_e984a5fb8bd721febc1f",
+    "source_on_positive": {
+      "status": "contradicted",
+      "evidence": "The animals sitting on the fallen trunks are gorillas, which are apes rather than monkeys. Thus the explicit animal constraint is not satisfied."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Two monkeys perch on the same elevated branch, rather than sitting on different tree trunks on the ground."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "48b1ec21a2d58db977af30095403e8ebe14b9168d6c9317362ba041a308ded48",
+      "input_hash": "9fb8c9034d051458dcbd74cd692bde8c68eb3997521414aafd25e3997d4180de",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/9fb8c9034d051458dcbd74cd692bde8c68eb3997521414aafd25e3997d4180de.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_07b7bad15975c8bb016af2be44b8e487d1adcee038a103a154",
+      "usage": {
+        "prompt_tokens": 8063,
+        "completion_tokens": 309,
+        "total_tokens": 8372,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 114
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "f12c65d004a1ea3b56888c3c09a79edd0e6358992c8c723c1a8a5d5cb12c6ecb",
+      "input_hash": "0a7729ab70ec13a65408d40bf59138a8bc648361a65777ac6a82a02705b4d463",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/0a7729ab70ec13a65408d40bf59138a8bc648361a65777ac6a82a02705b4d463.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0767a93e61c6bc77016af2be6e7d7c87d189da88f4e2e126d8",
+      "usage": {
+        "prompt_tokens": 7521,
+        "completion_tokens": 170,
+        "total_tokens": 7691,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 39
+        }
+      }
+    }
+  ]
+}

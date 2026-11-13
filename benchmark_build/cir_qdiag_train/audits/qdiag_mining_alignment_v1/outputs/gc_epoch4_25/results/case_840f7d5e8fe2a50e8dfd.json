@@ -1,0 +1,160 @@
+{
+  "case_id": "case_840f7d5e8fe2a50e8dfd",
+  "audit_query_id": "audit_query_082",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_840f7d5e8fe2a50e8dfd",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Relative to R's right-hand cab-end view, T shows the locomotive from the opposite, rear corner, with conspicuous white diagonal stripes on its end and lower side."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows the front cab corner, rather than the requested back corner. White horizontal strips bordering the colored bands are visible, so the unspecified stripe requirement is supported."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "Turn to face back corner."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "delete",
+        "semantic_target": "predicate",
+        "before_span": "Turn to face back corner and",
+        "after_span": null,
+        "edited_instruction": "add white strips.",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "Remove the requirement to turn toward the back corner.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "T has prominent white diagonal strips across the locomotive's end and along its lower side, unlike R's plain horizontal band."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C has narrow white horizontal strips bordering its red and blue bands; the instruction does not specify diagonal strips."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_840f7d5e8fe2a50e8dfd",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The locomotive is viewed from the rear cab-end corner, with its long hood extending to the right, unlike the reference's near end at the right. Bold white diagonal stripes cover the visible end and continue along the side."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The candidate shows the front cab corner, with its windshield, headlights, and front pilot facing the viewer at the right. White horizontal stripes border its colored bands, but the requested rear-corner view is absent."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting the single turning predicate and its conjunction exactly yields the proposed instruction. Both images show white stripes; the candidate fails only the removed rear-corner orientation constraint. The source does not specify diagonal stripes.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Prominent white diagonal stripes appear across the locomotive's visible end and lower side."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "White horizontal stripes visibly separate and border the orange and blue bands on the locomotive's front and side."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "delete",
+      "semantic_target": "predicate",
+      "before_span": "Turn to face back corner and",
+      "after_span": null,
+      "edited_instruction": "add white strips.",
+      "witness_type": "deletion_relaxation",
+      "changed_constraint": "Remove the requirement to turn toward the back corner.",
+      "edited_on_positive": {
+        "status": "supported",
+        "evidence": "T has prominent white diagonal strips across the locomotive's end and along its lower side, unlike R's plain horizontal band."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C has narrow white horizontal strips bordering its red and blue bands; the instruction does not specify diagonal strips."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting the single turning predicate and its conjunction exactly yields the proposed instruction. Both images show white stripes; the candidate fails only the removed rear-corner orientation constraint. The source does not specify diagonal stripes.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Prominent white diagonal stripes appear across the locomotive's visible end and lower side."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "White horizontal stripes visibly separate and border the orange and blue bands on the locomotive's front and side."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "c420549dfb8b9d9015839ba580e9ca2e0445296b66617d7d41368012084bc17c",
+      "input_hash": "201befcad3c9b6f7e8cf5c11a27501d7f612f49b88bf10401bfa34677f9a94bd",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/201befcad3c9b6f7e8cf5c11a27501d7f612f49b88bf10401bfa34677f9a94bd.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0b9e5e0e85d9e9a8016af2bd32199087d1ba91ae613150cd60",
+      "usage": {
+        "prompt_tokens": 6790,
+        "completion_tokens": 855,
+        "total_tokens": 7645,
+        "completion_tokens_details": {
+          "reasoning_tokens": 487
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "9fa235187e62b6696d00f8ea9d8180d968767a5d92b8ef7406c6517a205958cf",
+      "input_hash": "6d9170bb7fb6b11b56518ab22506506b538cf3f502bbb8c64e8d6fe0d49bb574",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/6d9170bb7fb6b11b56518ab22506506b538cf3f502bbb8c64e8d6fe0d49bb574.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0253015ef9d4bba6016af2bd5ab90c87d18861a86346f9bad0",
+      "usage": {
+        "prompt_tokens": 6308,
+        "completion_tokens": 488,
+        "total_tokens": 6796,
+        "completion_tokens_details": {
+          "reasoning_tokens": 214
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "case_id": "pair_8b83225a051f1c1ab9c7",
+  "signature": "f91b95909684e2ecf5207ab608279749c891c56633f2fa7c877aa09c2d59f3d4",
+  "simulated": false,
+  "status": "complete",
+  "judgment": {
+    "case_id": "pair_8b83225a051f1c1ab9c7",
+    "constraints": [
+      {
+        "constraint": "A vase containing the plant is present.",
+        "A_status": "supported",
+        "B_status": "supported",
+        "A_evidence": "A clear vase holds green leafy stems.",
+        "B_evidence": "A tall cylindrical vase holds green leafy stems."
+      },
+      {
+        "constraint": "The vase containing the plant is white.",
+        "A_status": "contradicted",
+        "B_status": "contradicted",
+        "A_evidence": "The plant vase is transparent glass, not white.",
+        "B_evidence": "The plant vase is visibly pale pink, rather than white."
+      },
+      {
+        "constraint": "The plant is the same type as the reference: palm fronds.",
+        "A_status": "supported",
+        "B_status": "supported",
+        "A_evidence": "The stems bear featherlike palm fronds with long narrow leaflets, matching the reference plant type.",
+        "B_evidence": "The vase contains featherlike palm fronds matching the reference plant type."
+      },
+      {
+        "constraint": "An additional small empty vase is present.",
+        "A_status": "contradicted",
+        "B_status": "supported",
+        "A_evidence": "Only the plant vase is visible; there is no additional small vase.",
+        "B_evidence": "A smaller white pineapple-shaped vase stands beside the tall vase with no plant or other contents visible."
+      },
+      {
+        "constraint": "The vases are on a grey floor.",
+        "A_status": "contradicted",
+        "B_status": "supported",
+        "A_evidence": "The single vase appears against a white surface and background, with no grey floor visible.",
+        "B_evidence": "Both vases rest on grey wooden floorboards."
+      }
+    ],
+    "A_status": "contradicted",
+    "B_status": "contradicted",
+    "decision": "neither",
+    "reason": "A has a transparent vase and lacks the small empty vase and grey floor. B includes palm fronds, a small empty vase, and a grey floor, but its plant vase is pale pink rather than the required white."
+  },
+  "trace": {
+    "stage": "rank_pair_judgment",
+    "model_name": "gpt-5.6-terra",
+    "model_revision": null,
+    "provider": "openai-compatible-chat",
+    "reasoning_effort": null,
+    "prompt_version": "rank_preference_v1",
+    "prompt_hash": "acdea1e31bed9455ac28d1d4a2362c88d0c73f6e1d51223eb477ed074777cc70",
+    "input_hash": "35a26e005545b0df9a41d23b510d8d5711c560ff2368bb33e197bdad7f473f35",
+    "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_rank_preference_v1/outputs/gc_epochs14_top3/api_cache/rank_pair_judgment/35a26e005545b0df9a41d23b510d8d5711c560ff2368bb33e197bdad7f473f35.json",
+    "cached": false,
+    "attempts": 1,
+    "request_id": "resp_0b8f441a8b8da065016af2cc9cfd3887d2ab526f8a4fb14d37",
+    "usage": {
+      "prompt_tokens": 6309,
+      "completion_tokens": 426,
+      "total_tokens": 6735,
+      "completion_tokens_details": {
+        "reasoning_tokens": 36
+      }
+    }
+  }
+}

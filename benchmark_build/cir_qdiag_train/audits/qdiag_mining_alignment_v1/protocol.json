@@ -1,0 +1,68 @@
+{
+  "status": "draft_for_review_not_executed",
+  "purpose": "Audit whether observed training candidates provide single-constraint instruction contrasts related to QDiag; no predetermined nonzero frequency or favorable result",
+  "source_projects": {
+    "main_qdiag": "benchmark_build/cir_qdiag_openai, PinPoint V7",
+    "cirr_qdiag": "benchmark_build/cir_qdiag_openai_cirr, CIRR V8"
+  },
+  "relation_to_original_generation": "Original QDiag proposals are text-only and then visually reviewed. This inverse audit conditions witness proposals on an already observed candidate image. It reuses edit/validation semantics, but is a different, post-hoc construction protocol and cannot be presented as original text-only QDiag generation.",
+  "run_selection": {
+    "required": true,
+    "no_silent_default": true,
+    "historical_original_RIM": "Historical epoch candidate caches are currently missing; cannot claim recent head-ablation caches are its training history",
+    "available_recent_runs": ["mmret_add", "clip4cir_combiner", "magiclens"],
+    "original_head_replication": "May be audited after a declared replication with retained caches; must be labeled a new replication"
+  },
+  "sampling": {
+    "unit": "(epoch, training query), not an individual image or a minibatch",
+    "training_query_count": 28225,
+    "epoch_count": 4,
+    "queries_per_epoch": 25,
+    "seed": 42,
+    "rule": "Draw 100 distinct training annotation row IDs uniformly without replacement using NumPy default_rng(42); assign consecutive blocks of 25 to epochs 1, 2, 3, 4. Freeze this manifest before inspecting images or scores.",
+    "candidates_per_query": 31,
+    "exclude": "The forcibly inserted ground-truth target at candidate column 0; never count it as a mined negative",
+    "candidate_pair_count_per_run": 3100,
+    "failure_handling": "Keep original denominator; do not replace ambiguous, failed, or no-witness cases to obtain 100 successful examples",
+    "epoch_interpretation": "Pooled stratified coverage of training; 25 different queries per epoch do not establish a within-query learning trajectory"
+  },
+  "matched_random_control": {
+    "same_queries_and_epochs": true,
+    "sample_size_per_query": 31,
+    "exclude_from_gallery": ["reference", "target"],
+    "overlap_with_mined_candidates": "Allowed; excluding overlaps would bias the random control",
+    "purpose": "Estimate enrichment due to mining compared with a common random audit baseline, not reconstruct the candidates of a historical Random-KL training run"
+  },
+  "blinding": {
+    "annotator_sees": ["opaque case ID", "reference image", "positive image", "one candidate image", "original instruction"],
+    "annotator_does_not_see": ["model/head name", "epoch", "candidate retrieval rank", "mined vs random origin", "teacher score", "student score", "hypothesis-desired frequency"],
+    "order": "Shuffle anonymized candidate cases before annotation; retain private provenance separately",
+    "review": "Independent fresh review using images and proposed text/spans, without generator explanations; manually audit acceptances and a random sample of rejected/uncertain cases"
+  },
+  "edit_convention": {
+    "primary_direction": "original instruction -> candidate-compatible edited instruction",
+    "reverse_mapping_if_also_reported": {"add": "delete", "delete": "add", "substitute": "substitute"},
+    "text_validity": "One contiguous edit and one semantic constraint; preserve all unedited meaning. Verify actual reconstruction locally in addition to model review.",
+    "types": {
+      "substitution_contrast": {"source_positive": "supported", "source_candidate": "contradicted", "edited_positive": "contradicted", "edited_candidate": "supported"},
+      "deletion_relaxation": {"source_positive": "supported", "source_candidate": "contradicted", "edited_positive": "supported", "edited_candidate": "supported"},
+      "addition_disambiguation": {"source_positive": "supported", "source_candidate": "supported", "edited_positive": "contradicted", "edited_candidate": "supported"}
+    }
+  },
+  "reporting": {
+    "primary_query_coverage": "Queries with at least one independently accepted substitution_contrast or deletion_relaxation candidate / all 100 sampled queries",
+    "primary_candidate_frequency": "Distinct candidate pairs with at least one independently accepted substitution_contrast or deletion_relaxation / all 3100 pairs",
+    "additional_breakdowns": ["operation and semantic axis", "compatible candidates", "addition disambiguation (separate from conflicting negatives)", "multiple-constraint conflicts", "unrelated candidates", "uncertain/source-invalid cases", "generation or review failures"],
+    "deduplication": "Count each (epoch, query, candidate image) once in total. Operation-specific rates may overlap and must not be summed.",
+    "uncertainty": "Report counts and confidence intervals; bootstrap query units within each epoch, retaining all 31 candidate judgments per query. Use paired query resampling for mined-minus-random contrasts.",
+    "teacher_alignment": "Only after semantic labels are frozen, report saved teacher_score(target)-teacher_score(candidate) and the positive/tied/negative proportions on accepted conflicting candidates, with T=0.05 probabilities if useful. Do not select annotation cases by teacher preference.",
+    "later_text_intervention": "A fresh query-edit scoring analysis may test a margin reversal for SUBSTITUTE and margin reduction for DELETE. DELETE does not require the edited query to reject the positive or prefer the candidate. These are post-hoc model evaluations, not saved historical step scores.",
+    "interpretation_limit": "Witness availability and teacher preference support a possible implicit instruction-related supervision mechanism, not equivalence to explicit counterfactual text training or proof of causal learning. An unsuccessful witness search is not proof that no possible witness exists. This audit does not calculate CRR."
+  },
+  "execution": {
+    "api_calls_made": 0,
+    "samples_semantically_annotated": 0,
+    "training_started": false,
+    "no_training_or_qdiag_benchmark_mutation": true
+  }
+}

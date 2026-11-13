@@ -1,0 +1,163 @@
+{
+  "case_id": "case_174cffa08064bf6983e3",
+  "audit_query_id": "audit_query_097",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_174cffa08064bf6983e3",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "T shows a saxophone with a blue body and gold keys, contrasting with the conventional gold saxophone in R."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows a gold-colored saxophone with its neck detached; its body is not blue."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The saxophone must be blue."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "attribute",
+        "before_span": "blue",
+        "after_span": "disassembled",
+        "edited_instruction": "be a disassembled saxophone instead of a regular one.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "Replace the blue-color requirement with a disassembled-state requirement.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "T shows an assembled saxophone with its curved neck attached, so it does not satisfy the disassembled-state requirement."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C shows the saxophone's curved neck detached and lying beside the body, unlike the assembled saxophone in R."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_174cffa08064bf6983e3",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a saxophone with a visibly blue body, unlike the gold saxophone in reference Image 1."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a gold-colored saxophone, not a blue one."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "The single replacement of “blue” with “disassembled” preserves the instruction’s meaning and is visually grounded: Image 2’s saxophone appears assembled, while Image 3 shows a detached neck section beside the saxophone.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 shows the saxophone assembled, with its neck attached."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows a separate neck section beside the saxophone, consistent with it being disassembled."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "substitute",
+      "semantic_target": "attribute",
+      "before_span": "blue",
+      "after_span": "disassembled",
+      "edited_instruction": "be a disassembled saxophone instead of a regular one.",
+      "witness_type": "substitution_contrast",
+      "changed_constraint": "Replace the blue-color requirement with a disassembled-state requirement.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "T shows an assembled saxophone with its curved neck attached, so it does not satisfy the disassembled-state requirement."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C shows the saxophone's curved neck detached and lying beside the body, unlike the assembled saxophone in R."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "The single replacement of “blue” with “disassembled” preserves the instruction’s meaning and is visually grounded: Image 2’s saxophone appears assembled, while Image 3 shows a detached neck section beside the saxophone.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 shows the saxophone assembled, with its neck attached."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows a separate neck section beside the saxophone, consistent with it being disassembled."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "0c3a5cf8aa67797c864f36d776a3c06334955af94f23defc53770384bcfe7b59",
+      "input_hash": "14f9a726a60f87def36e8d5fa52e74403db6d1e10e6dc576bd1faa5608311e94",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/14f9a726a60f87def36e8d5fa52e74403db6d1e10e6dc576bd1faa5608311e94.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0f2781be47bfe67d016af2beaaab9087d195f0b647c2d64e38",
+      "usage": {
+        "prompt_tokens": 8548,
+        "completion_tokens": 561,
+        "total_tokens": 9109,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 212
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "0eb00764961ad3d48e8fe6e404a5a697058c3209577a236d682d894ad842d7ec",
+      "input_hash": "c181c8a78d06f3390eb06c9ea88de802bc31d6d2442267f1930dfeadf8d50e44",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/c181c8a78d06f3390eb06c9ea88de802bc31d6d2442267f1930dfeadf8d50e44.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_ack_bf1bb58bd5999fd65086fc4e14763f9c",
+      "usage": {
+        "prompt_tokens": 3859,
+        "completion_tokens": 440,
+        "total_tokens": 4299,
+        "completion_tokens_details": {
+          "reasoning_tokens": 214
+        }
+      }
+    }
+  ]
+}

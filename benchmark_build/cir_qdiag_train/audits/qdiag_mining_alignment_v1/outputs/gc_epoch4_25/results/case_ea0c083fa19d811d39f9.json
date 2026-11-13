@@ -1,0 +1,87 @@
+{
+  "case_id": "case_ea0c083fa19d811d39f9",
+  "audit_query_id": "audit_query_079",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_ea0c083fa19d811d39f9",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "A black, bowl-shaped vessel sink is prominently visible beneath a running faucet."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The image shows a bedroom with a bed, nightstands, and bookshelves; no bowl sink is visible."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "A black bowl sink must be shown."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_ea0c083fa19d811d39f9",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 clearly shows a black, bowl-shaped vessel sink on a countertop, with a faucet pouring water into it."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a bedroom with a bed, bedside cabinets, lamps, and bookshelves; no black bowl sink is visible."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "09f3433d803ed0cc2c0fdb6f0b96cf7ee2f42eed2c3a5740f1cebb9c6019e780",
+      "input_hash": "41a1ba9652c1f628f5662af9c80c54aad79baeb6f5d8bc7b25df60cc80c1faa0",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/41a1ba9652c1f628f5662af9c80c54aad79baeb6f5d8bc7b25df60cc80c1faa0.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0ce2fab7bb3cfe6f016af2bddff44087d284ff408c179d9b83",
+      "usage": {
+        "prompt_tokens": 7961,
+        "completion_tokens": 185,
+        "total_tokens": 8146,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 28
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "819ef54387565fadc68a5ff0f9d208721d50dc5d03e139822f86c14e1fc6a59f",
+      "input_hash": "6831514a82c744c4acb713c42bb6c929ffc3292b6de1470bd5685462be73f58e",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/6831514a82c744c4acb713c42bb6c929ffc3292b6de1470bd5685462be73f58e.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0c2329b2bcebb598016af2bdf84f6c87d2a17a941299a32be9",
+      "usage": {
+        "prompt_tokens": 7419,
+        "completion_tokens": 104,
+        "total_tokens": 7523,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        }
+      }
+    }
+  ]
+}

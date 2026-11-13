@@ -1,0 +1,72 @@
+{
+  "case_id": "pair_3fe1df6e2af686286bd0",
+  "signature": "f91b95909684e2ecf5207ab608279749c891c56633f2fa7c877aa09c2d59f3d4",
+  "simulated": false,
+  "status": "complete",
+  "judgment": {
+    "case_id": "pair_3fe1df6e2af686286bd0",
+    "constraints": [
+      {
+        "constraint": "Remove one of the reference's two animals, leaving one animal.",
+        "A_status": "contradicted",
+        "B_status": "supported",
+        "A_evidence": "A herd of many cattle is visible, rather than one animal.",
+        "B_evidence": "Only one large horned animal is visible."
+      },
+      {
+        "constraint": "Replace the remaining cow with a dog.",
+        "A_status": "contradicted",
+        "B_status": "contradicted",
+        "A_evidence": "The visible animals are cattle; no dog is present.",
+        "B_evidence": "The single animal is a large horned bovine, not a dog."
+      },
+      {
+        "constraint": "Include water in the background.",
+        "A_status": "contradicted",
+        "B_status": "supported",
+        "A_evidence": "No water is visible behind the cattle.",
+        "B_evidence": "Muddy standing water extends behind the animal on the right."
+      },
+      {
+        "constraint": "Include hills in the background.",
+        "A_status": "contradicted",
+        "B_status": "contradicted",
+        "A_evidence": "The background shows sky and foliage, with no visible hills; the grassy bank is in the foreground.",
+        "B_evidence": "The background contains a tree, brickwork, fencing, and foliage, with no hills."
+      },
+      {
+        "constraint": "Remove grass from the ground.",
+        "A_status": "contradicted",
+        "B_status": "contradicted",
+        "A_evidence": "Grass covers the bank beneath and in front of the cattle.",
+        "B_evidence": "Most ground is bare mud and water, but a green grass patch remains behind the animal on the right."
+      }
+    ],
+    "A_status": "contradicted",
+    "B_status": "contradicted",
+    "decision": "neither",
+    "reason": "Neither candidate replaces the cow with a dog or includes background hills. A also shows many animals on grassy ground; B shows a single horned bovine beside muddy water."
+  },
+  "trace": {
+    "stage": "rank_pair_judgment",
+    "model_name": "gpt-5.6-terra",
+    "model_revision": null,
+    "provider": "openai-compatible-chat",
+    "reasoning_effort": null,
+    "prompt_version": "rank_preference_v1",
+    "prompt_hash": "b50856069d9fd7a0e77e4656d8bf89020bdb2f325b6a7de3fcb28065c8c8d45f",
+    "input_hash": "daae4e0e197126de7b95d2ad8a2f9c442741bca05fa3a354f052ff426063387e",
+    "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_rank_preference_v1/outputs/gc_epochs14_top3/api_cache/rank_pair_judgment/daae4e0e197126de7b95d2ad8a2f9c442741bca05fa3a354f052ff426063387e.json",
+    "cached": false,
+    "attempts": 1,
+    "request_id": "resp_04e97053567474d2016af2ccddeb0887d1930a3d5e739d21d1",
+    "usage": {
+      "prompt_tokens": 8793,
+      "completion_tokens": 382,
+      "total_tokens": 9175,
+      "prompt_tokens_details": {
+        "cached_tokens": 4864
+      }
+    }
+  }
+}

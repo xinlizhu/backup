@@ -1,0 +1,163 @@
+{
+  "case_id": "case_e07d88251396770af381",
+  "audit_query_id": "audit_query_081",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_e07d88251396770af381",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The saxophone has a maroon-red body and bell with gold-colored keys, satisfying the requested body color."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The saxophone's body and bell are predominantly brass-gold, with small red accents rather than a maroon body."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The wind instrument must have a maroon body color."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "attribute",
+        "before_span": "maroon",
+        "after_span": "golden",
+        "edited_instruction": "Make a wind instrument a golden color.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "The instrument's body color changes from maroon to golden.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The saxophone's body and bell are maroon-red; only the keywork and fittings are gold-colored."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The saxophone has a predominantly golden brass body and bell."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_e07d88251396770af381",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The saxophone has a maroon-red lacquered neck, body, and bell, with contrasting gold keywork."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The saxophone's body and bell are predominantly golden brass. Small red accents do not make the instrument maroon."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing 'maroon' with 'golden' is one attribute substitution that exactly reconstructs the edited instruction and preserves the wind-instrument requirement. The positive has a maroon-red body, while the candidate has a golden brass body.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The instrument's main body and bell are maroon-red; its gold keywork does not make the instrument golden overall."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The candidate is a saxophone with a visibly golden brass body and bell."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "substitute",
+      "semantic_target": "attribute",
+      "before_span": "maroon",
+      "after_span": "golden",
+      "edited_instruction": "Make a wind instrument a golden color.",
+      "witness_type": "substitution_contrast",
+      "changed_constraint": "The instrument's body color changes from maroon to golden.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "The saxophone's body and bell are maroon-red; only the keywork and fittings are gold-colored."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "The saxophone has a predominantly golden brass body and bell."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing 'maroon' with 'golden' is one attribute substitution that exactly reconstructs the edited instruction and preserves the wind-instrument requirement. The positive has a maroon-red body, while the candidate has a golden brass body.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The instrument's main body and bell are maroon-red; its gold keywork does not make the instrument golden overall."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The candidate is a saxophone with a visibly golden brass body and bell."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "afe887c30bcac05394ee497f083433829963f5c09eaf6003be972f2c729790ab",
+      "input_hash": "6a870edf50f0080857fad51b53676e91d24015d28fa2983405894eb6e63ef2b4",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/6a870edf50f0080857fad51b53676e91d24015d28fa2983405894eb6e63ef2b4.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0e1ff046bd274eb5016af2be305da087d184dc76afe2336c07",
+      "usage": {
+        "prompt_tokens": 8129,
+        "completion_tokens": 456,
+        "total_tokens": 8585,
+        "completion_tokens_details": {
+          "reasoning_tokens": 115
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "c8793fcfc707d70601bf49e3c072839a7e794cb70c06830a27586d82724394b7",
+      "input_hash": "d5e4bae3b0eaeda9fb39f2416a6fb61ab92f46ca077627b4cf3bf6c8304de513",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/d5e4bae3b0eaeda9fb39f2416a6fb61ab92f46ca077627b4cf3bf6c8304de513.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0e2b78d13e9b04ef016af2be437dc487d186a0ec56ba959923",
+      "usage": {
+        "prompt_tokens": 7649,
+        "completion_tokens": 337,
+        "total_tokens": 7986,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 34
+        }
+      }
+    }
+  ]
+}

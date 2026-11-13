@@ -1,0 +1,75 @@
+{
+  "group_id": "pinpoint_group_9ededc36b2624303",
+  "model": "claude-sonnet-5-5",
+  "signature": "aff20e5a5733d87f80fd7515c25d92c77cff20d4f50c9f8dbf4123bfdabed97b",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_9ededc36b2624303_query_04872_attribute_substitute",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "The negative substitutes 'vibrant neon green' with 'muted navy blue'. However, image 5 shows a red sweatshirt, and images 2-4 show green sweatshirts. The navy blue color is not incompatible with the positive images provided—navy is a standard sweatshirt color that could plausibly appear in the full positive set. The edit cannot be verified as clearly false across all supplied positives."
+    },
+    {
+      "negative_id": "pinpoint_group_9ededc36b2624303_query_04873_predicate_add",
+      "decision": "reject",
+      "failure_code": "not_single_edit",
+      "reason": "The source text 'Turn sweatshirt neon green.' is grammatically incomplete (missing article). The negative 'Turn sweatshirt neon green and fold it neatly.' adds the predicate 'fold it neatly' but also implicitly corrects the grammar. The before_span is listed as null, making span verification impossible. This involves more than one semantic or structural change."
+    },
+    {
+      "negative_id": "pinpoint_group_9ededc36b2624303_query_04874_attribute_substitute",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "The negative substitutes 'bright neon green' with 'deep navy blue'. Images 2-4 display bright green sweatshirts, but image 5 shows red. Navy blue is not visually incompatible with the positive set—it represents a standard color variation that could reasonably exist in the full positive collection. The substitution cannot be confirmed as false for every supplied positive."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-sonnet-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "83944b5659bf4ffb5286cea331a3597db60a76362433cd1c8bafc715ad8a1d15",
+      "input_hash": "b4426cabed16b8e23e6851d60c7ba431413f1aa0edd650712eed3c0543749f31",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/claude-sonnet-5-5/cache/validate_group/b4426cabed16b8e23e6851d60c7ba431413f1aa0edd650712eed3c0543749f31.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01eCtwcRpqSRubimMhmTMbQAGA",
+      "usage": {
+        "prompt_tokens": 9523,
+        "completion_tokens": 508,
+        "total_tokens": 10031,
+        "prompt_tokens_details": {
+          "cached_tokens": 7424,
+          "cache_creation_tokens": 2095
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_9ededc36b2624303_query_04872_attribute_substitute",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 389,
+      "action": "full reason retained; decision and failure_code unchanged"
+    },
+    {
+      "negative_id": "pinpoint_group_9ededc36b2624303_query_04873_predicate_add",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 363,
+      "action": "full reason retained; decision and failure_code unchanged"
+    },
+    {
+      "negative_id": "pinpoint_group_9ededc36b2624303_query_04874_attribute_substitute",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 373,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

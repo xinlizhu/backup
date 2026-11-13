@@ -1,0 +1,49 @@
+{
+  "group_id": "pinpoint_group_278dfec3088fc7d9",
+  "model": "claude-haiku-5-5",
+  "signature": "44bb4aae802e19564501a676b733c7e19828d9ced260b7da0428f08b1a359df2",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_278dfec3088fc7d9_query_06542_attribute_substitute",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "The negative text requests changing the coat to 'solid navy' instead of 'solid black'. All four supplied positive images show coats that are solidly black with no visible navy coloring. Navy is a dark blue color that would be visually distinct from the true black shown in these images. However, the edit is technically a single semantic substitution of one color attribute for another. The critical issue is that 'solid navy' could reasonably be compatible with or indistinguishable from the very dark black tones present in some of the positive images, particularly Image 5 which shows a deep black coat that might accommodate slight navy undertones. This ambiguity regarding visual verifiability between pure black and navy in photographic context makes the distinction unreliable."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-haiku-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "e6bb44c931a796801056c248cce368fca9dedf36747d61fac54aafc4c40c0507",
+      "input_hash": "1f172722eafb7edd77aac02733fa2da24c070ad72220e2bb91d1db899b778948",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/claude-haiku-5-5/cache/validate_group/1f172722eafb7edd77aac02733fa2da24c070ad72220e2bb91d1db899b778948.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01pcfYL23SQHyvOXZBG8MQMbGi",
+      "usage": {
+        "prompt_tokens": 9719,
+        "completion_tokens": 302,
+        "total_tokens": 10021,
+        "prompt_tokens_details": {
+          "cached_tokens": 7577,
+          "cache_creation_tokens": 2138
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_278dfec3088fc7d9_query_06542_attribute_substitute",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 784,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

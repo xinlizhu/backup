@@ -1,0 +1,75 @@
+{
+  "group_id": "pinpoint_group_ed9bfe9a8da447dc",
+  "model": "claude-sonnet-5-5",
+  "signature": "aff20e5a5733d87f80fd7515c25d92c77cff20d4f50c9f8dbf4123bfdabed97b",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_ed9bfe9a8da447dc_query_00660_object_add",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Single object ADD operation. The phrase 'and a faint atmospheric haze' is added to the source text. The negative text is fluent and preserves all original meaning while adding exactly one new constraint about atmospheric haze. All supplied positive lighting fixtures are compatible with atmospheric haze as an optional visual quality."
+    },
+    {
+      "negative_id": "pinpoint_group_ed9bfe9a8da447dc_query_00661_predicate_delete",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Single predicate DELETE operation. Removes 'that translates the form language of the image into an illuminated object' from the source text. The negative text preserves the core request to 'design a lighting fixture while retaining colors and material aesthetic' and remains fluent and meaningful. This removes exactly one semantic constraint without altering surviving meaning."
+    },
+    {
+      "negative_id": "pinpoint_group_ed9bfe9a8da447dc_query_00661_object_substitute",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "The substitution of 'lighting fixture' with 'table lamp' is not clearly falsified by the positive images. Image 3 shows a pendant lamp that could reasonably be called a table lamp variant, and the geometric form language constraint from the original source text remains compatible with table lamp designs shown in the positives."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-sonnet-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "971fde7d52b2eef3ad6c87a2ff385e62793be56c535eabeed3494b443a2af4f8",
+      "input_hash": "87676e9989ed4a454e1b74d249e8032e4c4e8b7d3b71edd640c7662f9175b9f4",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/claude-sonnet-5-5/cache/validate_group/87676e9989ed4a454e1b74d249e8032e4c4e8b7d3b71edd640c7662f9175b9f4.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01AsY9UrdOTK6L7qlhNqttrdHb",
+      "usage": {
+        "prompt_tokens": 9910,
+        "completion_tokens": 470,
+        "total_tokens": 10380,
+        "prompt_tokens_details": {
+          "cached_tokens": 7726,
+          "cache_creation_tokens": 2180
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_ed9bfe9a8da447dc_query_00660_object_add",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 334,
+      "action": "full reason retained; decision and failure_code unchanged"
+    },
+    {
+      "negative_id": "pinpoint_group_ed9bfe9a8da447dc_query_00661_predicate_delete",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 378,
+      "action": "full reason retained; decision and failure_code unchanged"
+    },
+    {
+      "negative_id": "pinpoint_group_ed9bfe9a8da447dc_query_00661_object_substitute",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 328,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

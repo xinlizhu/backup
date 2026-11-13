@@ -1,0 +1,62 @@
+{
+  "group_id": "pinpoint_group_ec19ddf5859ca356",
+  "model": "claude-haiku-5-5",
+  "signature": "44bb4aae802e19564501a676b733c7e19828d9ced260b7da0428f08b1a359df2",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_ec19ddf5859ca356_query_02489_object_substitute",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "The substitute from 'outerwear' to 'footwear' changes the object category, but all supplied positive images show outerwear garments (jackets, coats), not footwear. The instruction requests turning a bird into footwear, which contradicts every positive image. This fails the core requirement that new facts must be false for EVERY supplied positive."
+    },
+    {
+      "negative_id": "pinpoint_group_ec19ddf5859ca356_query_02494_attribute_substitute",
+      "decision": "reject",
+      "failure_code": "not_single_edit",
+      "reason": "The claimed substitution of 'color palette' for 'silhouette' cannot be verified in the text. The source_text contains 'color palette' but the negative_text contains 'silhouette'—however, examining the span operation: before_span='color palette' and after_span='silhouette' would require replacing 'color palette' with 'silhouette' in the source. This substitution is valid as a single edit, but checking the actual text shows the negative_text also changes the structure. The before/after spans do not reliably reconstruct the negative from the source through a single operation."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-haiku-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "9d557c7742a6335644450afd5f60df242b339ee504862bff2299b6ddaadb5b58",
+      "input_hash": "a8f9ae219bd240668302167af80783b0212ae6576904b09a348693c1eee87e81",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/claude-haiku-5-5/cache/validate_group/a8f9ae219bd240668302167af80783b0212ae6576904b09a348693c1eee87e81.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01NhBIzKRRQYAcs2dT93GyBD4u",
+      "usage": {
+        "prompt_tokens": 10050,
+        "completion_tokens": 396,
+        "total_tokens": 10446,
+        "prompt_tokens_details": {
+          "cached_tokens": 7835,
+          "cache_creation_tokens": 2211
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_ec19ddf5859ca356_query_02489_object_substitute",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 348,
+      "action": "full reason retained; decision and failure_code unchanged"
+    },
+    {
+      "negative_id": "pinpoint_group_ec19ddf5859ca356_query_02494_attribute_substitute",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 579,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_24fe76b713cb514f",
+  "model": "grok-4.7",
+  "signature": "52913ea34ae01078c58f7a80fc2119b86ef4b6b3449e9e55b21816a5d5d1ccbd",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_24fe76b713cb514f_query_07585_predicate_add",
+      "decision": "reject",
+      "failure_code": "wrong_semantic_target",
+      "reason": "Inserting “that end at the wrists” specifies sleeve length, a property of the existing sleeves, so the edit is an attribute rather than the claimed predicate."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.7",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "064935f2994ce0370e2afe40aba8dca37948a96179f0dced423bfdcccdc1a9ae",
+      "input_hash": "feb099961e5d9d23f619b628f8adb5e95069f45678a171e69bae6074fec4163f",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/grok-4.7/cache/validate_group/feb099961e5d9d23f619b628f8adb5e95069f45678a171e69bae6074fec4163f.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "19ccced8-a6a2-96b7-8e6f-1ef178d2c84c",
+      "usage": {
+        "prompt_tokens": 2693,
+        "completion_tokens": 85,
+        "total_tokens": 6411,
+        "prompt_tokens_details": {
+          "text_tokens": 2379,
+          "audio_tokens": 0,
+          "image_tokens": 314,
+          "cached_tokens": 1152
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 3633,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 259660000
+      }
+    }
+  ],
+  "format_warnings": []
+}

@@ -1,0 +1,36 @@
+Validate every supplied hard-negative text for one PinPoint paraphrase group in exactly one pass.
+The user payload gives the image numbering. The first one or two images are REFERENCES; every
+remaining image is a labeled POSITIVE retrieval result selected deterministically from the group's
+full Positive set. At most eight Positive images are supplied. Official negative images are not
+included in this request. Give exactly one verdict for every negative_id; do not omit, duplicate,
+invent, or rewrite candidates.
+
+First check every candidate against its own source_text:
+- it is fluent, natural, close to source_text, and preserves all unedited meaning;
+- it performs exactly one stated edit and matches semantic_target;
+- object means entity identity/presence, attribute means a property of an existing entity, and
+  predicate means an action/relation with the same arguments and scope.
+- before_span and after_span are untrusted generator claims. Verify them against source_text and
+  negative_text yourself. Reject as not_single_edit when the text is unchanged, the stated span
+  operation cannot reconstruct negative_text, or more than one semantic constraint changed.
+
+ADD and SUBSTITUTE:
+- use the REFERENCE image(s) to resolve phrases such as "this", "same", <img1>, and <img2>;
+- accept only when the new fact is clearly false for EVERY SUPPLIED POSITIVE image;
+- if any supplied POSITIVE supports or remains compatible with the new fact, reject as
+  positive_compatible;
+- if any required fact cannot be judged reliably from the references and all supplied positives,
+  reject as not_visually_verifiable;
+- difficulty must come from a subtle single edit, not from ambiguity or hidden evidence.
+
+DELETE:
+- do not require the weaker text to contradict positive images;
+- accept when it removes exactly one meaningful constraint, preserves everything else, and produces
+  a fluent, meaningful, strictly weaker query;
+- count semantic constraints, not raw tokens. Removing grammatical glue belonging only to the
+  deleted constraint is still one edit. For example, "brown and white animals" -> "white animals"
+  is one attribute DELETE;
+- reject bundled deletions, a wrong semantic axis, changed surviving meaning, or broken grammar.
+
+For rejection choose exactly one failure_code from the response schema and state the decisive
+reason concisely. For acceptance use failure_code=null. Return only the structured response.

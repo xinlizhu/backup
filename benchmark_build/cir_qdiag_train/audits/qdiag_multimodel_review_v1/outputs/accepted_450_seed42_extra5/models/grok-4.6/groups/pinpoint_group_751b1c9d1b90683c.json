@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_751b1c9d1b90683c",
+  "model": "grok-4.6",
+  "signature": "cb958fa178e5ebcdd33f446ebd46fe25a7c20417ca5539cc74de61fb4df99804",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_751b1c9d1b90683c_query_01155_object_delete",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Deletes only the object noun 'blazer' (plus its spacing), leaving a fluent, strictly weaker recolor-to-gray query that still preserves the action, gray target, and keep-details constraint."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.6",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "919f7582879b8e24448212bd41bbe38288ae33814551efe94f3ddb78655b96e7",
+      "input_hash": "ae83710ec74d2b9e42c1f041c3a619fbfea4f2bfced0dd5a9e6dea0d65446fce",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/grok-4.6/cache/validate_group/ae83710ec74d2b9e42c1f041c3a619fbfea4f2bfced0dd5a9e6dea0d65446fce.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "5485d732-0e76-97b5-9b71-0292068365a4",
+      "usage": {
+        "prompt_tokens": 4486,
+        "completion_tokens": 93,
+        "total_tokens": 7070,
+        "prompt_tokens_details": {
+          "text_tokens": 2503,
+          "audio_tokens": 0,
+          "image_tokens": 1983,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2491,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 214040000
+      }
+    }
+  ],
+  "format_warnings": []
+}

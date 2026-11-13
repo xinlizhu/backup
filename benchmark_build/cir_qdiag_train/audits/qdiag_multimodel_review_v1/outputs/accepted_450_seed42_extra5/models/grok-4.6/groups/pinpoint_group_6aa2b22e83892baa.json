@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_6aa2b22e83892baa",
+  "model": "grok-4.6",
+  "signature": "cb958fa178e5ebcdd33f446ebd46fe25a7c20417ca5539cc74de61fb4df99804",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_6aa2b22e83892baa_query_04013_object_substitute",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Single object swap of Eggplant to Zucchini reconstructs the text and preserves the cooking-method constraint. Zucchini is clearly false in every positive: eggplant in images 2, 4, and 5, and roasted tomatoes in image 3."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.6",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "1e4491cbd79277291ba555bb3935d65262b83ced00a7ac5ea22933a3b7a48639",
+      "input_hash": "8bdc9b6d4dde12c8002824e8d9a6674d83af6c535691e10d818085d28ea73496",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/grok-4.6/cache/validate_group/8bdc9b6d4dde12c8002824e8d9a6674d83af6c535691e10d818085d28ea73496.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "6bb90067-71df-9ab1-9196-aaa5c76a9527",
+      "usage": {
+        "prompt_tokens": 5858,
+        "completion_tokens": 101,
+        "total_tokens": 10102,
+        "prompt_tokens_details": {
+          "text_tokens": 2503,
+          "audio_tokens": 0,
+          "image_tokens": 3355,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 4143,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 341080000
+      }
+    }
+  ],
+  "format_warnings": []
+}

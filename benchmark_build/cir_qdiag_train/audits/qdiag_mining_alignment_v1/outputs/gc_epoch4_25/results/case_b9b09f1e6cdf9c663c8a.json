@@ -1,0 +1,166 @@
+{
+  "case_id": "case_b9b09f1e6cdf9c663c8a",
+  "audit_query_id": "audit_query_097",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_b9b09f1e6cdf9c663c8a",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a saxophone with a blue body, contrasting with the regular gold-colored saxophone in Image 1."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a worn brass-colored saxophone, not a blue one."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The saxophone should be blue."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "substitute_attribute_1",
+        "operation": "substitute",
+        "semantic_target": "attribute",
+        "before_span": "blue",
+        "after_span": "weathered brass-colored",
+        "edited_instruction": "be a weathered brass-colored saxophone instead of a regular one.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "The saxophone's color changes from blue to weathered brass-colored.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2's saxophone body is blue, not weathered brass-colored."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows a worn, brass-colored saxophone."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_b9b09f1e6cdf9c663c8a",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 visibly shows a saxophone with a blue body and gold-colored keys, matching the requested blue saxophone."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a tarnished, weathered brass-colored saxophone, not a blue one."
+    },
+    "verdicts": [
+      {
+        "witness_id": "substitute_attribute_1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "The single attribute replacement preserves the saxophone constraint and is fluent. Image 2 is blue rather than weathered brass-colored; Image 3 is visibly weathered brass-colored.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 has a bright blue saxophone body with gold-colored hardware, not a weathered brass-colored finish."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows a visibly aged, tarnished brass-colored saxophone."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "substitute_attribute_1",
+      "operation": "substitute",
+      "semantic_target": "attribute",
+      "before_span": "blue",
+      "after_span": "weathered brass-colored",
+      "edited_instruction": "be a weathered brass-colored saxophone instead of a regular one.",
+      "witness_type": "substitution_contrast",
+      "changed_constraint": "The saxophone's color changes from blue to weathered brass-colored.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "Image 2's saxophone body is blue, not weathered brass-colored."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "Image 3 shows a worn, brass-colored saxophone."
+      },
+      "independent_review": {
+        "witness_id": "substitute_attribute_1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "The single attribute replacement preserves the saxophone constraint and is fluent. Image 2 is blue rather than weathered brass-colored; Image 3 is visibly weathered brass-colored.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 has a bright blue saxophone body with gold-colored hardware, not a weathered brass-colored finish."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows a visibly aged, tarnished brass-colored saxophone."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "substitute_attribute_1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "0be2b2f5d44203c094cf92404fe6a79361d157ea7b0c518b92093c0c82dc352f",
+      "input_hash": "d9fd615d9dca066976991ec96eca1e2e3a78dcab4972290dcb823e94b504e067",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/d9fd615d9dca066976991ec96eca1e2e3a78dcab4972290dcb823e94b504e067.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_01517a7df67ea531016af2bf40f24087d1bb5e48a7591daca9",
+      "usage": {
+        "prompt_tokens": 7702,
+        "completion_tokens": 591,
+        "total_tokens": 8293,
+        "prompt_tokens_details": {
+          "cached_tokens": 5888
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 334
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "64d7b69fbd16d123ce7f80b9effff97141b979c8099e642f66335456b4a3a8e7",
+      "input_hash": "76e68d70c3aaec99562461336c80f1be8c724ee7cffe758b0f2f42653558dca7",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/76e68d70c3aaec99562461336c80f1be8c724ee7cffe758b0f2f42653558dca7.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0e8d4201901fa3cd016af2bf4d6c4487d1bcca532a9d856df5",
+      "usage": {
+        "prompt_tokens": 7232,
+        "completion_tokens": 315,
+        "total_tokens": 7547,
+        "prompt_tokens_details": {
+          "cached_tokens": 5248
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 83
+        }
+      }
+    }
+  ]
+}

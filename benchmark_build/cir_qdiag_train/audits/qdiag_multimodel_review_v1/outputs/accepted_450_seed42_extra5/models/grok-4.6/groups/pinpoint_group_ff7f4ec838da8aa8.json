@@ -1,0 +1,57 @@
+{
+  "group_id": "pinpoint_group_ff7f4ec838da8aa8",
+  "model": "grok-4.6",
+  "signature": "cb958fa178e5ebcdd33f446ebd46fe25a7c20417ca5539cc74de61fb4df99804",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_ff7f4ec838da8aa8_query_05059_attribute_add",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Adding 'colorful' is one attribute edit and exactly reconstructs the query. Every positive shows only a small black tattoo, so colorful is clearly false."
+    },
+    {
+      "negative_id": "pinpoint_group_ff7f4ec838da8aa8_query_05060_predicate_substitute",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Replacing 'put on' with 'remove from' is one predicate edit with the same arguments. Every positive shows an intact tattoo present, not removal."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.6",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "2dc3961d127fc5b2457c4bd34b48162968ccc8e4c67093a68fc4761b3571996b",
+      "input_hash": "81ff9fa6f6a3fd2aa01952d37e0cbd60ac1bae3ded0526764e7e8bbca0e50891",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/grok-4.6/cache/validate_group/81ff9fa6f6a3fd2aa01952d37e0cbd60ac1bae3ded0526764e7e8bbca0e50891.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "ca2a43f8-a8b8-9b0a-8e95-53fbf78e8053",
+      "usage": {
+        "prompt_tokens": 4889,
+        "completion_tokens": 158,
+        "total_tokens": 9903,
+        "prompt_tokens_details": {
+          "text_tokens": 2519,
+          "audio_tokens": 0,
+          "image_tokens": 2370,
+          "cached_tokens": 1152
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 4856,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 381340000
+      }
+    }
+  ],
+  "format_warnings": []
+}

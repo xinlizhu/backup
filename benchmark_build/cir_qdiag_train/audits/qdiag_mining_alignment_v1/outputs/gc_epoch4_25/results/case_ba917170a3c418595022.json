@@ -1,0 +1,238 @@
+{
+  "case_id": "case_ba917170a3c418595022",
+  "audit_query_id": "audit_query_080",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_ba917170a3c418595022",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "A bright yellow daffodil stands in a white vase, supporting the requested decorative flower arrangement relative to R's pale blossoms."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The clear vase contains small flowers with dark brown centers and pale petals; no yellow flower is visible."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The flower must be yellow."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "attribute",
+        "before_span": "yellow",
+        "after_span": "brown-centered",
+        "edited_instruction": "Bright up the room with a brown-centered flower in a vase.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "The flower's yellow coloration is replaced by having a brown center.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The daffodil has a yellow trumpet and petals, without a brown center."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Several flowers in the clear vase have clearly visible dark brown centers."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "operation": "delete",
+        "semantic_target": "attribute",
+        "before_span": "yellow",
+        "after_span": null,
+        "edited_instruction": "Bright up the room with a flower in a vase.",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "Remove the requirement that the flower be yellow.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "A daffodil is displayed in a white vase."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Flowers are displayed in a clear decorative vase."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_ba917170a3c418595022",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a vivid yellow daffodil in a white vase, replacing the reference's pale dried-looking blooms with a bright yellow flower."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows flowers with dark brown centers and pale, muted petals in a glass vase; no yellow bloom is visible."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing 'yellow' with 'brown-centered' is one attribute substitution that preserves the flower, vase, and remaining instruction. The positive has a yellow-centered daffodil, whereas the candidate visibly has brown-centered flowers.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The daffodil's central trumpet is bright yellow, not brown."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Several flowers have conspicuous dark brown centers, and their stems are arranged in a glass vase."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting 'yellow' removes one color constraint and exactly reconstructs the edited instruction after whitespace normalization. Both images show flowers in vases; the candidate violates only the removed yellow-flower requirement.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "A daffodil and its green foliage stand in a white vase."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Brown-centered flowers and leafy stems stand in a clear glass vase."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "substitute",
+      "semantic_target": "attribute",
+      "before_span": "yellow",
+      "after_span": "brown-centered",
+      "edited_instruction": "Bright up the room with a brown-centered flower in a vase.",
+      "witness_type": "substitution_contrast",
+      "changed_constraint": "The flower's yellow coloration is replaced by having a brown center.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "The daffodil has a yellow trumpet and petals, without a brown center."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "Several flowers in the clear vase have clearly visible dark brown centers."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing 'yellow' with 'brown-centered' is one attribute substitution that preserves the flower, vase, and remaining instruction. The positive has a yellow-centered daffodil, whereas the candidate visibly has brown-centered flowers.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The daffodil's central trumpet is bright yellow, not brown."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Several flowers have conspicuous dark brown centers, and their stems are arranged in a glass vase."
+        }
+      }
+    },
+    {
+      "witness_id": "w2",
+      "operation": "delete",
+      "semantic_target": "attribute",
+      "before_span": "yellow",
+      "after_span": null,
+      "edited_instruction": "Bright up the room with a flower in a vase.",
+      "witness_type": "deletion_relaxation",
+      "changed_constraint": "Remove the requirement that the flower be yellow.",
+      "edited_on_positive": {
+        "status": "supported",
+        "evidence": "A daffodil is displayed in a white vase."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "Flowers are displayed in a clear decorative vase."
+      },
+      "independent_review": {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting 'yellow' removes one color constraint and exactly reconstructs the edited instruction after whitespace normalization. Both images show flowers in vases; the candidate violates only the removed yellow-flower requirement.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "A daffodil and its green foliage stand in a white vase."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Brown-centered flowers and leafy stems stand in a clear glass vase."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    },
+    {
+      "witness_id": "w2",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "728766afb412ffa5706bd182973f5b094958ec8a6caa13cb62c2b07ba0011520",
+      "input_hash": "bf59c536d15387739860efc1883a6c14d8a4e2ef9b6cbb87226b9605a487bcb0",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/bf59c536d15387739860efc1883a6c14d8a4e2ef9b6cbb87226b9605a487bcb0.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0a3d58102f111a51016af2bd5d7f1487d18c669d360bcb2066",
+      "usage": {
+        "prompt_tokens": 7151,
+        "completion_tokens": 627,
+        "total_tokens": 7778,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 138
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "6c28d3cf900ab562b216c20ccc4ae505302475dc5064a7703cc32e867bab3339",
+      "input_hash": "773bc5feef90315e29d7a16c1c8c9c2295fb2b0a0ed1519dadd3d221e574fc21",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/773bc5feef90315e29d7a16c1c8c9c2295fb2b0a0ed1519dadd3d221e574fc21.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_03ee0d97da6fcf94016af2bd6ce5dc87d1b65bc0bb0d2a4556",
+      "usage": {
+        "prompt_tokens": 6738,
+        "completion_tokens": 450,
+        "total_tokens": 7188,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 95
+        }
+      }
+    }
+  ]
+}

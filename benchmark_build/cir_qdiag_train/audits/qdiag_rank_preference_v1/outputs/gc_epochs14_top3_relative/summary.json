@@ -1,0 +1,161 @@
+{
+  "complete": true,
+  "simulated": false,
+  "judging_mode": "relative_preference",
+  "scope": "Same recorded target-plus-31 GC training candidates; NOT full-gallery Top-3",
+  "query_count": 50,
+  "planned_comparisons": 150,
+  "same_image_skipped": 29,
+  "gpt_case_count": 119,
+  "completed_gpt_cases": 119,
+  "failed_gpt_cases": 0,
+  "pending_gpt_cases": 0,
+  "swapped_order_repeats": 0,
+  "duplicate_unordered_pairs_reused": 2,
+  "denominator": "All completed different-image comparisons per epoch and rank; includes low-confidence forced choices. Same-image skips excluded. Percentages shown only for complete groups.",
+  "table": [
+    {
+      "epoch": 1,
+      "student_checkpoint": "initial.pt",
+      "rank": 1,
+      "teacher_preference_percent": 100.0,
+      "student_preference_percent": 0.0
+    },
+    {
+      "epoch": 1,
+      "student_checkpoint": "initial.pt",
+      "rank": 2,
+      "teacher_preference_percent": 77.27272727272727,
+      "student_preference_percent": 22.727272727272727
+    },
+    {
+      "epoch": 1,
+      "student_checkpoint": "initial.pt",
+      "rank": 3,
+      "teacher_preference_percent": 61.904761904761905,
+      "student_preference_percent": 38.095238095238095
+    },
+    {
+      "epoch": 4,
+      "student_checkpoint": "checkpoint_epoch_003.pt",
+      "rank": 1,
+      "teacher_preference_percent": 33.333333333333336,
+      "student_preference_percent": 66.66666666666667
+    },
+    {
+      "epoch": 4,
+      "student_checkpoint": "checkpoint_epoch_003.pt",
+      "rank": 2,
+      "teacher_preference_percent": 42.857142857142854,
+      "student_preference_percent": 57.142857142857146
+    },
+    {
+      "epoch": 4,
+      "student_checkpoint": "checkpoint_epoch_003.pt",
+      "rank": 3,
+      "teacher_preference_percent": 57.142857142857146,
+      "student_preference_percent": 42.857142857142854
+    }
+  ],
+  "diagnostics": [
+    {
+      "epoch": 1,
+      "student_checkpoint": "initial.pt",
+      "rank": 1,
+      "query_count": 25,
+      "judged_comparisons": 24,
+      "teacher_preferred": 24,
+      "student_preferred": 0,
+      "same_image_skipped": 1,
+      "pending": 0,
+      "failed": 0,
+      "low_confidence_choices": 1,
+      "group_complete": true,
+      "simulated": false
+    },
+    {
+      "epoch": 1,
+      "student_checkpoint": "initial.pt",
+      "rank": 2,
+      "query_count": 25,
+      "judged_comparisons": 22,
+      "teacher_preferred": 17,
+      "student_preferred": 5,
+      "same_image_skipped": 3,
+      "pending": 0,
+      "failed": 0,
+      "low_confidence_choices": 5,
+      "group_complete": true,
+      "simulated": false
+    },
+    {
+      "epoch": 1,
+      "student_checkpoint": "initial.pt",
+      "rank": 3,
+      "query_count": 25,
+      "judged_comparisons": 21,
+      "teacher_preferred": 13,
+      "student_preferred": 8,
+      "same_image_skipped": 4,
+      "pending": 0,
+      "failed": 0,
+      "low_confidence_choices": 4,
+      "group_complete": true,
+      "simulated": false
+    },
+    {
+      "epoch": 4,
+      "student_checkpoint": "checkpoint_epoch_003.pt",
+      "rank": 1,
+      "query_count": 25,
+      "judged_comparisons": 12,
+      "teacher_preferred": 4,
+      "student_preferred": 8,
+      "same_image_skipped": 13,
+      "pending": 0,
+      "failed": 0,
+      "low_confidence_choices": 4,
+      "group_complete": true,
+      "simulated": false
+    },
+    {
+      "epoch": 4,
+      "student_checkpoint": "checkpoint_epoch_003.pt",
+      "rank": 2,
+      "query_count": 25,
+      "judged_comparisons": 21,
+      "teacher_preferred": 9,
+      "student_preferred": 12,
+      "same_image_skipped": 4,
+      "pending": 0,
+      "failed": 0,
+      "low_confidence_choices": 2,
+      "group_complete": true,
+      "simulated": false
+    },
+    {
+      "epoch": 4,
+      "student_checkpoint": "checkpoint_epoch_003.pt",
+      "rank": 3,
+      "query_count": 25,
+      "judged_comparisons": 21,
+      "teacher_preferred": 12,
+      "student_preferred": 9,
+      "same_image_skipped": 4,
+      "pending": 0,
+      "failed": 0,
+      "low_confidence_choices": 6,
+      "group_complete": true,
+      "simulated": false
+    }
+  ],
+  "limits": [
+    "Forced A/B relative preference is not absolute instruction correctness",
+    "Low-confidence choices are retained, not filtered to favor either model",
+    "Same-image comparisons are skipped and do not enter preference denominators",
+    "GPT blind judgments are not human-adjudicated ground truth",
+    "Epoch 1 uses initial.pt; epoch 4 uses checkpoint_epoch_003.pt",
+    "Different query samples across epochs do not establish within-query improvement",
+    "Similarity scores and model identity were hidden from GPT"
+  ]
+}

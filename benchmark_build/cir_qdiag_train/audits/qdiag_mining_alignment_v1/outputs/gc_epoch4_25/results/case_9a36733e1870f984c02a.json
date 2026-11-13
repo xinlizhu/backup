@@ -1,0 +1,94 @@
+{
+  "case_id": "case_9a36733e1870f984c02a",
+  "audit_query_id": "audit_query_078",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_9a36733e1870f984c02a",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows one beaver seated on a rock, with blue sky behind it."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a seal seated on rocky ground; no blue sky is visible."
+    },
+    "candidate_relation": "multiple_constraint_conflict",
+    "violated_source_constraints": [
+      "The animal is a beaver; the candidate shows a seal.",
+      "Blue sky is in the background; the candidate shows no visible blue sky."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_9a36733e1870f984c02a",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows one beaver seated on a rock, with blue sky visible behind it."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a seal rather than a beaver, and no blue sky is visible in the background."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "fe0fd47ee7f4dcee8c10d7029b668e1102cf666e518340278188808d747e3616",
+      "input_hash": "3811584c68446f8617bba613e40d9a4e7995bc7f6c5cc02ad1b6a9c9a9791fce",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_100/api_cache/propose_witnesses/3811584c68446f8617bba613e40d9a4e7995bc7f6c5cc02ad1b6a9c9a9791fce.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0aa2901a4249d91a016af2b902fa3c87d2b0f78f90ee43b2a1",
+      "usage": {
+        "prompt_tokens": 7915,
+        "completion_tokens": 552,
+        "total_tokens": 8467,
+        "prompt_tokens_details": {
+          "cached_tokens": 5888
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 373
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "2241112a1cedb30bf61610792cf3f7e0aed41ec825e257f27b8533bed6c2b7c2",
+      "input_hash": "d14fdfd109ea14cf970eeac74241fe3c436ea7091425b82c871eaafed9fa7410",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_100/api_cache/review_witnesses/d14fdfd109ea14cf970eeac74241fe3c436ea7091425b82c871eaafed9fa7410.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0f93d722b13744e2016af2b90ede2887d1abe540101577cfdf",
+      "usage": {
+        "prompt_tokens": 3984,
+        "completion_tokens": 276,
+        "total_tokens": 4260,
+        "completion_tokens_details": {
+          "reasoning_tokens": 179
+        }
+      }
+    }
+  ],
+  "imported_from": {
+    "result_file": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_100/results/case_9a36733e1870f984c02a.json",
+    "result_sha256": "619da088cea1acd4a51cf8d22f59452cdb24fec2206189c4117f582898bcda7c",
+    "original_signature": "5065d94bb0c1b275e428d3f2ada2352b274139ccb2134477487b5f51eef77ac6",
+    "reason": "User restricted audit to final epoch; identical query/images/prompts/backend"
+  }
+}

@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cir-qdiag"
+version = "0.4.0"
+description = "CIRR hard negatives by semantic target, edit operation, and construction mode"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "pydantic>=2.7,<3",
+  "PyYAML>=6",
+  "Pillow>=10",
+  "openai>=1.54",
+  "tqdm>=4.66",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.5"]
+transformers = ["torch>=2.4", "transformers>=4.57", "torchvision>=0.19"]
+evaluation = ["numpy>=1.26", "scikit-learn>=1.4"]
+
+[project.scripts]
+cir-qdiag = "cir_qdiag.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"

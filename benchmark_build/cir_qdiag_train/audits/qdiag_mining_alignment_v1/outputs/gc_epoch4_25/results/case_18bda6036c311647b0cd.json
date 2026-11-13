@@ -1,0 +1,133 @@
+{
+  "case_id": "case_18bda6036c311647b0cd",
+  "audit_query_id": "audit_query_081",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_18bda6036c311647b0cd",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The saxophone has a maroon-red body with gold-colored keywork, satisfying the requested color change from the reference instruments."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "The candidate includes wind instruments with dark reddish-brown, maroon-colored bodies, although some curved sections are lighter orange-brown."
+    },
+    "candidate_relation": "compatible",
+    "violated_source_constraints": [],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "add",
+        "semantic_target": "attribute",
+        "before_span": null,
+        "after_span": "wooden",
+        "edited_instruction": "Make a wooden wind instrument a maroon color.",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "The wind instrument must be wooden.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The maroon saxophone has a glossy metal body and metal keywork, rather than a wooden body."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The reddish-brown wind instruments show wooden bodies with visible grain, including dark maroon-colored sections."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_18bda6036c311647b0cd",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The saxophone is a wind instrument with a glossy maroon-red body and gold-colored keywork, unlike the gold and black bodies in the reference."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "The candidate shows saxophones with dark reddish-maroon bodies, although their bells have brighter amber highlights."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "reject",
+        "failure_code": "not_visually_verifiable",
+        "witness_type": null,
+        "reason": "Inserting 'wooden' is a single fluent attribute addition, but the candidate does not visibly establish wooden construction. Its reddish-brown finish alone cannot verify wood, so the required addition support pattern is not established.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The positive shows a maroon saxophone with a smooth, reflective metal body and metal keywork, rather than a wooden instrument."
+        },
+        "edited_on_candidate": {
+          "status": "uncertain",
+          "evidence": "The saxophones have glossy reddish-brown surfaces, but no clear wood grain or other diagnostic evidence establishes that their bodies are wooden."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": false,
+      "local_failures": [
+        "wrong_witness_type",
+        "wrong_support_pattern"
+      ],
+      "review_decision": "reject"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "972b2f5886f1ff43793819157fc685ccd6cae1897c5dff85ae1dcfc4de7446fd",
+      "input_hash": "9728a0a75817cc9aa571b058e79b3cb994306975a97b9b389f4d581bd7a3baa5",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/9728a0a75817cc9aa571b058e79b3cb994306975a97b9b389f4d581bd7a3baa5.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_02632ad4e29a8277016af2be8fc72c87d188e67927a6c8ce62",
+      "usage": {
+        "prompt_tokens": 8148,
+        "completion_tokens": 565,
+        "total_tokens": 8713,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 235
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "0c316df9057b05806829d45c054369bf89fa380a0e6af0bd69c7ba9bad5b00f0",
+      "input_hash": "a9a03325e7c257d4d66c884d09c4039491d58517793a26ca31997a54daaa0651",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/a9a03325e7c257d4d66c884d09c4039491d58517793a26ca31997a54daaa0651.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0487394f7bc559c0016af2bea8895487d1a99c4e08fc57133e",
+      "usage": {
+        "prompt_tokens": 7667,
+        "completion_tokens": 405,
+        "total_tokens": 8072,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 86
+        }
+      }
+    }
+  ]
+}

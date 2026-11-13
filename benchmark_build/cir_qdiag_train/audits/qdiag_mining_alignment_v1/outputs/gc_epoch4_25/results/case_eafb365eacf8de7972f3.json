@@ -1,0 +1,84 @@
+{
+  "case_id": "case_eafb365eacf8de7972f3",
+  "audit_query_id": "audit_query_089",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_eafb365eacf8de7972f3",
+    "case_status": "source_invalid_or_uncertain",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "The bus parking area contains severely burned buses with charred front sections, but only two burned buses are clearly distinguishable; a third fire-damaged bus cannot be reliably identified."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The parking lot shows yellow school buses with intact, uncharred front ends, contradicting the specified front-end fire damage."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The buses had a fire in their front ends."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_eafb365eacf8de7972f3",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "The photo shows parked school buses, including two clearly visible buses with severe charring and exposed structures at their front ends. A third bus with front-end fire damage cannot be reliably identified; the surrounding buses are partly occluded or cropped."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Two yellow school buses are visible in a parking lot. Their visible front ends retain intact paint, hoods, grilles, and lights, with no visible fire damage. The photo does not show three buses with burned front ends."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "7559cb755d8f30757b37719c5d0299376635cf17684082972ef906174ce91d94",
+      "input_hash": "fd3dfefe644b77a485d5e3dd44ffbecc0692608a3bd52dde9d48f2db4e681f13",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/fd3dfefe644b77a485d5e3dd44ffbecc0692608a3bd52dde9d48f2db4e681f13.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0d6715884174e94a016af2bda4cccc87d199f9d4d2b921448c",
+      "usage": {
+        "prompt_tokens": 7190,
+        "completion_tokens": 439,
+        "total_tokens": 7629,
+        "completion_tokens_details": {
+          "reasoning_tokens": 253
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "ef8b9748b3da970864a78fc41a022a3caf1f09a60c3495e56640a61f57e4e2ae",
+      "input_hash": "028717827b91967cf15f0627c4f5e0862433d1157b9b3fd885debd6f09cb696f",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/028717827b91967cf15f0627c4f5e0862433d1157b9b3fd885debd6f09cb696f.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_03def3fae27bcdce016af2bdb95d8487d1acf95877d8450291",
+      "usage": {
+        "prompt_tokens": 6648,
+        "completion_tokens": 208,
+        "total_tokens": 6856,
+        "completion_tokens_details": {
+          "reasoning_tokens": 34
+        }
+      }
+    }
+  ]
+}

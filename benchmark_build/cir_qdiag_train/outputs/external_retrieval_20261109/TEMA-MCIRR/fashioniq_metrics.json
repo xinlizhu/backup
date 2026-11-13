@@ -1,0 +1,57 @@
+{
+  "categories": {
+    "dress": {
+      "gallery_size": 3817,
+      "num_queries": 2017,
+      "recall_at_1": 5.9494,
+      "recall_at_10": 24.591,
+      "recall_at_5": 17.7987,
+      "recall_at_50": 45.3644
+    },
+    "shirt": {
+      "gallery_size": 6346,
+      "num_queries": 2038,
+      "recall_at_1": 8.9794,
+      "recall_at_10": 25.6624,
+      "recall_at_5": 19.578,
+      "recall_at_50": 43.3759
+    },
+    "toptee": {
+      "gallery_size": 5373,
+      "num_queries": 1961,
+      "recall_at_1": 9.7399,
+      "recall_at_10": 29.3728,
+      "recall_at_5": 22.1826,
+      "recall_at_50": 49.8725
+    }
+  },
+  "macro_average": {
+    "recall_at_1": 8.2229,
+    "recall_at_10": 26.5421,
+    "recall_at_5": 19.8531,
+    "recall_at_50": 46.2043
+  },
+  "micro_average": {
+    "recall_at_1": 8.2114,
+    "recall_at_10": 26.5126,
+    "recall_at_5": 19.8305,
+    "recall_at_50": 46.1602
+  },
+  "model": "TEMA-MCIRR",
+  "model_source": "/mnt/data/datasets/search_dataset/zxl/models/TEMA/TEMA_mcirr.pt",
+  "num_queries": 6016,
+  "protocol": {
+    "caption_composition": "strip('.?, ') then caption_1 + ' and ' + caption_2",
+    "categories": [
+      "dress",
+      "shirt",
+      "toptee"
+    ],
+    "category_specific_gallery": true,
+    "dataset": "FashionIQ",
+    "reference_image_excluded": false,
+    "split": "val",
+    "standard_summary": "macro average over dress, shirt, and toptee"
+  },
+  "schema_version": 1
+}

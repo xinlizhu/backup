@@ -1,0 +1,135 @@
+{
+  "case_id": "case_67c9add714662ee0b3b2",
+  "audit_query_id": "audit_query_081",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_67c9add714662ee0b3b2",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "T shows a saxophone, matching the wind-instrument category in R, with a maroon-red body and gold keys."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows a saxophone with a gold-colored body, rather than the requested maroon body."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The wind instrument must be maroon."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "attribute",
+        "before_span": "maroon",
+        "after_span": "gold",
+        "edited_instruction": "Make a wind instrument a gold color.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "Change the wind instrument's body color from maroon to gold.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "T has a maroon-red saxophone body; its gold keys do not make the body gold."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C shows a gold-colored saxophone, satisfying the wind-instrument category and replacement color."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_67c9add714662ee0b3b2",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "The saxophone body is visibly red, but its bright reddish-pink appearance does not reliably establish the more specific maroon color."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The saxophone body is gold-colored, not maroon."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "reject",
+        "failure_code": "source_invalid_or_uncertain",
+        "witness_type": null,
+        "reason": "The color constraint is not reliably established on the positive image, so the required source support pattern cannot be verified.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The saxophone body appears red rather than gold."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The saxophone body is visibly gold-colored."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": false,
+      "local_failures": [
+        "wrong_witness_type",
+        "wrong_support_pattern"
+      ],
+      "review_decision": "reject"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "31ea40c03cb7c75396c4c55238a2c1d869fa1e5faa5930b21a59e994f86fde86",
+      "input_hash": "515d3004b9148861dffb7a683cf058a65cb6033130a4f0b5080cbe39e7103d65",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/515d3004b9148861dffb7a683cf058a65cb6033130a4f0b5080cbe39e7103d65.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0491d04314ad980d016af2bf44566c87d0b8246ff0cf9553f9",
+      "usage": {
+        "prompt_tokens": 8441,
+        "completion_tokens": 436,
+        "total_tokens": 8877,
+        "prompt_tokens_details": {
+          "cached_tokens": 3830
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 92
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "92a2a607045f062e152ba43ffa69666ce149f16fe39c40032f2e85f2c2b6cc8c",
+      "input_hash": "8bff6a307e1c1af2e744a0d1d6d0f61ec3ba3334a83569ea7d3f196569c1c9c1",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/8bff6a307e1c1af2e744a0d1d6d0f61ec3ba3334a83569ea7d3f196569c1c9c1.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_06dd0915cd17c842016af2bf51c1dc87d2afd5bff95b3b117a",
+      "usage": {
+        "prompt_tokens": 8124,
+        "completion_tokens": 395,
+        "total_tokens": 8519,
+        "prompt_tokens_details": {
+          "cached_tokens": 5248
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 204
+        }
+      }
+    }
+  ]
+}

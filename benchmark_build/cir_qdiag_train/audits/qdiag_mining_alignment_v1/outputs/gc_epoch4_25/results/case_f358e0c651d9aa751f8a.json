@@ -1,0 +1,88 @@
+{
+  "case_id": "case_f358e0c651d9aa751f8a",
+  "audit_query_id": "audit_query_076",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_f358e0c651d9aa751f8a",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Relative to the group of dogs in R, T shows one dog on red carpet, holding a large bone at its mouth."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows one dog, satisfying the reduced dog count, but it rests on a pale gray quilt outdoors rather than red carpet, and no bone is present around its visible mouth or paws."
+    },
+    "candidate_relation": "multiple_constraint_conflict",
+    "violated_source_constraints": [
+      "Set the dog up on red carpet.",
+      "Give the dog a bone."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_f358e0c651d9aa751f8a",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "One dog is visible, lying on red carpet with a large bone held at its mouth and between its front paws, satisfying the reduction from the reference's group of dogs."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "One dog is visible, but it lies on a gray quilted pad outdoors rather than red carpet, and no bone is visible."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "09d43c2c0be99117ef5be1e8bccf87afb951738af64d291e028349279d87840b",
+      "input_hash": "2954c1ef63a9ccfae8cd3eaedf29e5ebe3d754886f9f79618e633d8d274bb9e6",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/2954c1ef63a9ccfae8cd3eaedf29e5ebe3d754886f9f79618e633d8d274bb9e6.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_077be74812ddc676016af2be38273087d194aa6d81514ebea1",
+      "usage": {
+        "prompt_tokens": 27273,
+        "completion_tokens": 236,
+        "total_tokens": 27509,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 44
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "bf734035ee7c93ecdca39923e0d5bbe51d47c60842cb4995886475803ec22c42",
+      "input_hash": "88b9b903f7ad15e42f8501dd62c1f4717dc8f0356a9ca80eb5a6fe1e0f971a50",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/88b9b903f7ad15e42f8501dd62c1f4717dc8f0356a9ca80eb5a6fe1e0f971a50.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_04cd691ae542b2b2016af2be49c8cc87d2973c118212c40076",
+      "usage": {
+        "prompt_tokens": 26731,
+        "completion_tokens": 114,
+        "total_tokens": 26845,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        }
+      }
+    }
+  ]
+}

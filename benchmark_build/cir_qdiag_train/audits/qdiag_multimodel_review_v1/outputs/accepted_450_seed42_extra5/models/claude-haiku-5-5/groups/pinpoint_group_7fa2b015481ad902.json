@@ -1,0 +1,49 @@
+{
+  "group_id": "pinpoint_group_7fa2b015481ad902",
+  "model": "claude-haiku-5-5",
+  "signature": "44bb4aae802e19564501a676b733c7e19828d9ced260b7da0428f08b1a359df2",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_7fa2b015481ad902_query_01526_object_delete",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "The deletion of 'bedroom' performs exactly one semantic edit, removing a specific object constraint while preserving all other meaning (colors, material aesthetic, ambiance of reference). The negative text remains fluent and grammatically correct. All supplied positive images depict bedrooms, making them compatible with the weakened query that no longer explicitly requires bedroom context."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-haiku-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "46ad63c3c427b94ba8348185fb663197b9c2c77db575bd6ee1290cfcd141bb60",
+      "input_hash": "94a6b074baba5b60f0638de2f128b786809255e3b9f901a67c8c79a73e1cd9d1",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/claude-haiku-5-5/cache/validate_group/94a6b074baba5b60f0638de2f128b786809255e3b9f901a67c8c79a73e1cd9d1.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01UddkRVHvTzGBMMMVStyvw3W9",
+      "usage": {
+        "prompt_tokens": 10524,
+        "completion_tokens": 184,
+        "total_tokens": 10708,
+        "prompt_tokens_details": {
+          "cached_tokens": 8205,
+          "cache_creation_tokens": 2315
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_7fa2b015481ad902_query_01526_object_delete",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 392,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

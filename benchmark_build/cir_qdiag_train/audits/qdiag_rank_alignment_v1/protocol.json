@@ -1,0 +1,46 @@
+{
+  "objective": "Test empirical association of CRR target-score sensitivity with actual full-gallery target-rank changes, explicitly accounting for competition.",
+  "dataset": "All released CIR-QDiag data: 931 groups, 3420 originals, 10131 edits. The 930 groups with edits enter edit-response statistics.",
+  "gallery": "109598 available PinPoint images, same set for every original/edited query and model; reference images retained. Two unavailable images match prior retrieval manifest; no required positive/reference is missing.",
+  "models": {
+    "clip_original": "CLIP-L/14, zero residual composer initialization; original embedding behavior.",
+    "clip_oprd": "Released CLIP-L RIM + OPRD checkpoint checkpoints/clip_l_s2.",
+    "qwen3_vl_2b": "Original Qwen3-VL-Embedding-2B (not instruction-tuned or a trained student checkpoint).",
+    "bge_s2": "BGE-VL-MLLM-S2, same teacher family/checkpoint used for released CLIP OPRD training; not S1."
+  },
+  "inference": {
+    "clip": "Native CLIP normalization and RIM composer; gallery/reference image embeddings reused. Mean reference vectors normalized before composition. FP16 model.",
+    "qwen": "Native model code with SDPA, BF16, max_length 8192, min_pixels 4096, max_pixels 262144. Native last non-padding token pooling. Candidate instruction: Represent the image for retrieval. Query instruction: Represent the composed image retrieval query.",
+    "bge": "Native S2 and released compatibility patch, FP16, SDPA, 512x512 RGB input, original CIR task instruction, original candidate template, left padding, last-token pooling. use_cache=False.",
+    "multireference": "For Qwen/BGE each reference is paired with the full text and encoded natively; mean per-reference vectors then FP32 L2 normalization.",
+    "storage": "All final vectors normalized and stored in FP32; cosine dot products FP32 with TF32 disabled.",
+    "backend_benchmark": "SDPA/FlashAttention batch comparisons archived; production retained SDPA consistently. No partial caches mix attention backends."
+  },
+  "rank_definition": "1 + count(score_j > score_t) + count(score_j == score_t and gallery_ID_j < gallery_ID_t). Stable full-gallery ranking; all positive target ranks retained, no Top-K censoring.",
+  "statistics": {
+    "score_delta": "s(original_query,target)-s(edited_query,target)",
+    "rank_delta": "log(rank_edited/rank_original), positive means demotion",
+    "calibration": "Model-specific group-balanced weighted empirical 95th percentile of absolute target-score changes across pairs of positive paraphrases. Full dataset and pilot500 calibrated separately.",
+    "crr": "Per target/edit event score_delta > calibration threshold; then average targets, edits within source instruction, source instructions within group, groups equally.",
+    "weighting": "Same hierarchy used in conditional rates and weighted Spearman. Operation subsets renormalize this hierarchy inside each subset.",
+    "primary_subset": "ADD/SUBSTITUTE (5735 edits) for directionally expected target demotion. DELETE (4396 edits), ADD/SUB individually and all edits separately reported.",
+    "margin": "s(query,target) minus the tenth highest-scoring other gallery image. The competing boundary is recomputed for original and edited queries.",
+    "bootstrap": "2000 resamples of whole groups; seed42. Threshold held fixed. Weighted Spearman uses group-resampled weights and recalculates weighted ranks in each replicate.",
+    "additional": "Conditional demotion given CRR/non-CRR, conditional Top-10 exit, rank effects beyond paraphrase controls, group-level CRR versus demotion-rate Spearman, explicit score/rank exceptions."
+  },
+  "scope_caveats": [
+    "Score-drop/rank-change Spearman is not correlation between four model-level CRR values.",
+    "CRR triggering need not imply rank demotion; empirical exceptions are retained.",
+    "DELETE removes a condition and can leave the original target valid; downward movement is descriptive, not necessarily desirable.",
+    "Historical main-table CRR was based on pilot500; do not substitute full-dataset CRR into that table.",
+    "All dataset positive target IDs are included, matching original evaluation; the generation-stage visual review inspected a bounded subset of positives.",
+    "Floating point/backend precision can yield small differences relative to earlier evaluation runs."
+  ],
+  "verification": "Synthetic tests plus 34 sampled original/edited queries per model checked by direct competitor counts; independent NumPy ordering checks Top-50 and partition checks target-excluded margins.",
+  "external_code_sha256": {
+    "/mnt/data/datasets/search_dataset/zxl/benchmark_build/release_code/OPRD/oprd/model.py": "0601deb72b47c130add3b2ac8ddc90eac58c9da1c9111a8296c199b6e294169e",
+    "/mnt/data/datasets/search_dataset/zxl/benchmark_build/release_code/OPRD/oprd/teacher.py": "16b31b1cc5cca860ffcca00d3ae80667d21bbad96cd50b3285e407dde6684b58",
+    "/mnt/data/datasets/search_dataset/zxl/qw3/Qwen3-VL-Embedding-2B/scripts/qwen3_vl_embedding.py": "0c62db6141f623ed9319113e549fe38ed2b582e067ccbcfc9f91b4be0b3b10e8",
+    "/mnt/data/datasets/search_dataset/zxl/models/BGE-VL-MLLM-S2/modeling_llavanext_for_embedding.py": "d3da6242e857ae05a93b0adb3b5f1407045a8e8f4b679fa2249b8e7a71e4b07e"
+  }
+}

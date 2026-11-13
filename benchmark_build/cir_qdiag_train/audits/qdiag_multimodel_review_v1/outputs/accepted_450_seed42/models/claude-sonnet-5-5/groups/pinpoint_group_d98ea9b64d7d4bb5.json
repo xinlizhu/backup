@@ -1,0 +1,49 @@
+{
+  "group_id": "pinpoint_group_d98ea9b64d7d4bb5",
+  "model": "claude-sonnet-5-5",
+  "signature": "aff20e5a5733d87f80fd7515c25d92c77cff20d4f50c9f8dbf4123bfdabed97b",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_d98ea9b64d7d4bb5_query_07294_predicate_substitute",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "The substitute 'expose' for 'cover' creates a semantic change that remains compatible with supplied positive images. Images 2, 3, 4, and 5 all show cropped or short tube tops that reveal the torso, making 'expose the entire torso' consistent with these positives rather than clearly false. The edit does not produce a query contradicted by all supplied positives."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-sonnet-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "c7812dcb7f29b97b5a0b079a7e39aac04100fa89d1f9536c307f0616f9988e23",
+      "input_hash": "3000ef8022586510502ea53738d840fb7547a1a9de86ef8cd8c2ddcc4944ed77",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/claude-sonnet-5-5/cache/validate_group/3000ef8022586510502ea53738d840fb7547a1a9de86ef8cd8c2ddcc4944ed77.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01lmueRcfmRWSpf4RyujaTNyrW",
+      "usage": {
+        "prompt_tokens": 10936,
+        "completion_tokens": 192,
+        "total_tokens": 11128,
+        "prompt_tokens_details": {
+          "cached_tokens": 8526,
+          "cache_creation_tokens": 2406
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_d98ea9b64d7d4bb5_query_07294_predicate_substitute",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 363,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

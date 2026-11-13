@@ -1,0 +1,86 @@
+{
+  "case_id": "case_bc21a93081ea40aaf8d0",
+  "audit_query_id": "audit_query_082",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_bc21a93081ea40aaf8d0",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "T shows a locomotive from the cab-end rear corner, with prominent white diagonal stripes on its dark body, matching the requested viewpoint change and added white strips relative to R."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows a pug facing the camera, with no locomotive or white striping corresponding to the requested changes to R."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "Retain the locomotive as the subject of the viewpoint and marking changes.",
+      "Show the locomotive from its back corner.",
+      "Add white strips to the locomotive."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_bc21a93081ea40aaf8d0",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "The locomotive has conspicuous white diagonal stripes on its end and lower side, unlike the reference's plain horizontal band. However, the small image does not reliably establish that the visible end is the back corner rather than the front, so the orientation constraint remains uncertain."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The candidate shows a pug looking toward the camera, with no locomotive or added white strips. It does not depict the reference locomotive turned to show its back corner."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "2cd72fa8e2026bf09fc319a5858063c0ce224c9e092a1fab6a49968c7f94237f",
+      "input_hash": "732e6558e9272dd8560b0c1efee57ab4387cb9a35aa79d5fd3106eb53e5eacdb",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/732e6558e9272dd8560b0c1efee57ab4387cb9a35aa79d5fd3106eb53e5eacdb.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0e1ada60c5caf7f5016af2bdcc6a3087d1a42ca285fc9c9fd9",
+      "usage": {
+        "prompt_tokens": 14465,
+        "completion_tokens": 225,
+        "total_tokens": 14690,
+        "completion_tokens_details": {
+          "reasoning_tokens": 24
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "85ba39418a7999bb1466d0fa236cf73da3665141329ff699bf0c51c488952b9b",
+      "input_hash": "1747b996824918979c4d41e9dc6cfbcabc7004b4491ef1a999af055516539962",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/1747b996824918979c4d41e9dc6cfbcabc7004b4491ef1a999af055516539962.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0924252d8916bb23016af2bddf2ac087d1a4b1ec749977df75",
+      "usage": {
+        "prompt_tokens": 13923,
+        "completion_tokens": 207,
+        "total_tokens": 14130,
+        "completion_tokens_details": {
+          "reasoning_tokens": 67
+        }
+      }
+    }
+  ]
+}

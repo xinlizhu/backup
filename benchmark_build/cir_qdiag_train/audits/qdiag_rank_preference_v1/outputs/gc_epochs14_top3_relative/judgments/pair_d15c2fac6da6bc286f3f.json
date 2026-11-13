@@ -1,0 +1,53 @@
+{
+  "case_id": "pair_d15c2fac6da6bc286f3f",
+  "signature": "f3a97f608e6addbd5531ad7795f5e06873610abdb12f716de8375d49eda4c022",
+  "simulated": false,
+  "status": "complete",
+  "judgment": {
+    "case_id": "pair_d15c2fac6da6bc286f3f",
+    "constraints": [
+      {
+        "constraint": "Sink should be wooden",
+        "A_status": "uncertain",
+        "B_status": "uncertain",
+        "A_evidence": "The bowl is dark brown with a hammered texture, but it does not clearly appear to be made of wood.",
+        "B_evidence": "The bowl is black and glossy, with no clear wood grain; the surrounding countertop is wooden."
+      },
+      {
+        "constraint": "Surface should be black marble",
+        "A_status": "contradicted",
+        "B_status": "uncertain",
+        "A_evidence": "The sink sits on a light gray or white countertop, not a black marble surface.",
+        "B_evidence": "The sink has a dark, glossy stone-like appearance, though the visible countertop is brown wood rather than black marble."
+      }
+    ],
+    "decision": "B",
+    "confidence": "medium",
+    "reason": "B more directly provides the requested dark stone/marble-like surface and wooden material context, while A has neither a clearly wooden sink nor a black surface."
+  },
+  "trace": {
+    "stage": "rank_pair_relative_preference",
+    "model_name": "gpt-5.6-terra",
+    "model_revision": null,
+    "provider": "openai-compatible-chat",
+    "reasoning_effort": null,
+    "prompt_version": "rank_preference_relative_v2",
+    "prompt_hash": "a28b0e1a5dd4b73b1e9c5e0a86b1a6f2b6ed03f119b1f3700086fc9988626053",
+    "input_hash": "0ca9f7c3fd31e4f77f72734043c586783578c21e52ebcec877db41f9574471f4",
+    "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_rank_preference_v1/outputs/gc_epochs14_top3_relative/api_cache/rank_pair_relative_preference/0ca9f7c3fd31e4f77f72734043c586783578c21e52ebcec877db41f9574471f4.json",
+    "cached": false,
+    "attempts": 1,
+    "request_id": "resp_ack_80fe9c86d833835d1c2694ce6748e2d8",
+    "usage": {
+      "prompt_tokens": 2680,
+      "completion_tokens": 551,
+      "total_tokens": 3231,
+      "prompt_tokens_details": {
+        "cached_tokens": 2030
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 341
+      }
+    }
+  }
+}

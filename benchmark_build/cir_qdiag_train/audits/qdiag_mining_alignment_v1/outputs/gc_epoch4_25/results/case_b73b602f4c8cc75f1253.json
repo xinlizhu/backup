@@ -1,0 +1,161 @@
+{
+  "case_id": "case_b73b602f4c8cc75f1253",
+  "audit_query_id": "audit_query_083",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_b73b602f4c8cc75f1253",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows one white cream tube beside one pink product box."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "Image 3 shows one perfume bottle beside its matching box."
+    },
+    "candidate_relation": "compatible",
+    "violated_source_constraints": [],
+    "witnesses": [
+      {
+        "witness_id": "add-attribute-1",
+        "operation": "add",
+        "semantic_target": "attribute",
+        "before_span": null,
+        "after_span": " labeled 212 VIP Rosé",
+        "edited_instruction": "Leave a single product labeled 212 VIP Rosé with its box",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "The single product is labeled 212 VIP Rosé.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The tube in Image 2 is labeled as body cream and skin care, not 212 VIP Rosé."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The bottle in Image 3 visibly bears the 212 VIP Rosé label."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_b73b602f4c8cc75f1253",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows one body cream tube beside its matching pink box, satisfying the request for a single product with its box relative to the reference's multiple boxes."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "Image 3 shows one perfume bottle beside its matching 212 VIP Rosé box. It satisfies the single-product-and-box constraint."
+    },
+    "verdicts": [
+      {
+        "witness_id": "add-attribute-1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "Inserting ' labeled 212 VIP Rosé' after 'product' reconstructs the edited instruction and adds one product-label attribute while preserving the original constraints. Both images satisfy the source; only the candidate satisfies the added label constraint.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The single tube and matching box in Image 2 are labeled 'images' and 'Body Cream & Skin Care', rather than 212 VIP Rosé."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 contains one perfume bottle visibly labeled '212 VIP' and 'ROSÉ' beside its matching box, which also prominently reads '212 VIP ROSÉ'."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "add-attribute-1",
+      "operation": "add",
+      "semantic_target": "attribute",
+      "before_span": null,
+      "after_span": " labeled 212 VIP Rosé",
+      "edited_instruction": "Leave a single product labeled 212 VIP Rosé with its box",
+      "witness_type": "addition_disambiguation",
+      "changed_constraint": "The single product is labeled 212 VIP Rosé.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "The tube in Image 2 is labeled as body cream and skin care, not 212 VIP Rosé."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "The bottle in Image 3 visibly bears the 212 VIP Rosé label."
+      },
+      "independent_review": {
+        "witness_id": "add-attribute-1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "Inserting ' labeled 212 VIP Rosé' after 'product' reconstructs the edited instruction and adds one product-label attribute while preserving the original constraints. Both images satisfy the source; only the candidate satisfies the added label constraint.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The single tube and matching box in Image 2 are labeled 'images' and 'Body Cream & Skin Care', rather than 212 VIP Rosé."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 contains one perfume bottle visibly labeled '212 VIP' and 'ROSÉ' beside its matching box, which also prominently reads '212 VIP ROSÉ'."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "add-attribute-1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "e2d838daa4e9fca8874700e3735cf4429d19300047a67ffe4e201073e7348f25",
+      "input_hash": "559d1c4def7f46555f47ec5413cd49d962aa09b47ef9147c5369e907a98f7df5",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/559d1c4def7f46555f47ec5413cd49d962aa09b47ef9147c5369e907a98f7df5.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_09dd098a8ae4ea72016af2bf37911087d18a730306603a7668",
+      "usage": {
+        "prompt_tokens": 7864,
+        "completion_tokens": 643,
+        "total_tokens": 8507,
+        "prompt_tokens_details": {
+          "cached_tokens": 5888
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 392
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "42cb8638a4ea183608d7b31508bb162657c7c396900f758d1592772863b30932",
+      "input_hash": "c35631c6903203e37b63c66a332fe2000d04d4598df25f23f498b3769b5848fc",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/c35631c6903203e37b63c66a332fe2000d04d4598df25f23f498b3769b5848fc.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_080b2e99de2d662f016af2bf49699087d0b8ca129ea5292d1d",
+      "usage": {
+        "prompt_tokens": 7230,
+        "completion_tokens": 278,
+        "total_tokens": 7508,
+        "prompt_tokens_details": {
+          "cached_tokens": 3482
+        }
+      }
+    }
+  ]
+}

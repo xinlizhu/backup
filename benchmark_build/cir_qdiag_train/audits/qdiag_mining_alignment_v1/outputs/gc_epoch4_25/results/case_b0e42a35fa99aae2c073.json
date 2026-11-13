@@ -1,0 +1,166 @@
+{
+  "case_id": "case_b0e42a35fa99aae2c073",
+  "audit_query_id": "audit_query_097",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_b0e42a35fa99aae2c073",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The saxophone has a blue body and bell with gold keys, replacing the reference's conventional gold finish."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The saxophone has a gold-colored body with visible finish wear. The blue belongs to the fabric beneath it, not the instrument."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The saxophone must be blue."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "attribute",
+        "before_span": "blue",
+        "after_span": "worn",
+        "edited_instruction": "be a worn saxophone instead of a regular one.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "Replace the blue-finish requirement with visible wear on the saxophone.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The blue saxophone has a smooth, glossy finish without the extensive visible wear required by the edited instruction."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The gold saxophone has extensive patchy finish loss and scuffing around its lower body and bell, unlike the reference's intact finish."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_b0e42a35fa99aae2c073",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a blue-bodied saxophone, unlike the gold-colored saxophone in reference Image 1."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Candidate Image 3 shows a gold-colored, visibly worn saxophone, not a blue one."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing only the attribute “blue” with “worn” reconstructs the fluent edited instruction and preserves the saxophone constraint. Image 2 appears unworn, while Image 3 is visibly tarnished and worn.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2's saxophone appears clean and polished, not worn."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows extensive tarnish, discoloration, and visible wear on the saxophone."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "substitute",
+      "semantic_target": "attribute",
+      "before_span": "blue",
+      "after_span": "worn",
+      "edited_instruction": "be a worn saxophone instead of a regular one.",
+      "witness_type": "substitution_contrast",
+      "changed_constraint": "Replace the blue-finish requirement with visible wear on the saxophone.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "The blue saxophone has a smooth, glossy finish without the extensive visible wear required by the edited instruction."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "The gold saxophone has extensive patchy finish loss and scuffing around its lower body and bell, unlike the reference's intact finish."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing only the attribute “blue” with “worn” reconstructs the fluent edited instruction and preserves the saxophone constraint. Image 2 appears unworn, while Image 3 is visibly tarnished and worn.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2's saxophone appears clean and polished, not worn."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows extensive tarnish, discoloration, and visible wear on the saxophone."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "37721d8d5f6b63f038374037402e16f72b60a1a85602539d7ba4c1c6e8f520d6",
+      "input_hash": "367f233b282e9a69fa138db6fad865901be8cf7a675872830016707048cd9a2e",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/367f233b282e9a69fa138db6fad865901be8cf7a675872830016707048cd9a2e.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0fdfc9fc9dfe0d5e016af2becaea0087d19a166b163c0f3ec0",
+      "usage": {
+        "prompt_tokens": 9719,
+        "completion_tokens": 583,
+        "total_tokens": 10302,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 223
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "f73f5ee257033f3e1883c0aa64a2bb2b501bd85c3b1ad6ad04a9b9f0c02f4f6c",
+      "input_hash": "bacdb43d33285fbfdaee74e1294e9bbd3436ac237073f43e0dd98216aadd17ba",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/bacdb43d33285fbfdaee74e1294e9bbd3436ac237073f43e0dd98216aadd17ba.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0d969bfb04a702f6016af2bee29e6887d18a29c2a4806b4149",
+      "usage": {
+        "prompt_tokens": 9405,
+        "completion_tokens": 316,
+        "total_tokens": 9721,
+        "prompt_tokens_details": {
+          "cached_tokens": 5248
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 90
+        }
+      }
+    }
+  ]
+}

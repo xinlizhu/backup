@@ -1,0 +1,87 @@
+{
+  "case_id": "case_6eebca912898a4a65652",
+  "audit_query_id": "audit_query_080",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_6eebca912898a4a65652",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "T shows a bright yellow flower in a white vase, satisfying the requested colorful floral decoration relative to R's pale blossoms."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows a doorway and a furnished room with greenery near a window, but no visible yellow flower arranged in a vase."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "Show a yellow flower in a vase."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_6eebca912898a4a65652",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "A bright yellow flower on a green stem stands in a white vase, replacing the reference's pale blossoms and dark vase with the requested yellow floral accent."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The room has white walls, wooden flooring, and green plants near the windows, but no visible yellow flower in a vase."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "ecbc2bb2b8d7c1b60a718eabe19224197c34b4285e297e15d16ff4c59a6166e9",
+      "input_hash": "1c08b30b5f441e4eea1c13d450d2586cf439aa7ae932e9784104b2c4932b9958",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/1c08b30b5f441e4eea1c13d450d2586cf439aa7ae932e9784104b2c4932b9958.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0b447853933019dc016af2be45b76c87d1b41b1a42f9952eae",
+      "usage": {
+        "prompt_tokens": 7692,
+        "completion_tokens": 291,
+        "total_tokens": 7983,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 124
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "0773876ebb35aa67fe0baa825a01bfe7fbf8b96bd93e71813b43373ae9d6f834",
+      "input_hash": "2320731169c21aa197d91927e61c6ea0839fe13ab0e489fc11e678595b94693b",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/2320731169c21aa197d91927e61c6ea0839fe13ab0e489fc11e678595b94693b.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0be58cc9cad94a62016af2be6e776487d1b0cd537894c54429",
+      "usage": {
+        "prompt_tokens": 7150,
+        "completion_tokens": 108,
+        "total_tokens": 7258,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        }
+      }
+    }
+  ]
+}

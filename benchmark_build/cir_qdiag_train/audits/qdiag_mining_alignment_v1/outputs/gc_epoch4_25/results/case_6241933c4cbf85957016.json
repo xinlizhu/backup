@@ -1,0 +1,164 @@
+{
+  "case_id": "case_6241933c4cbf85957016",
+  "audit_query_id": "audit_query_096",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_6241933c4cbf85957016",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Two yellow school buses are parked next to each other, with their front windshields, lights, and bumpers clearly visible."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "Several yellow school buses are parked adjacent to one another. The angled side view also shows their projecting front hoods, headlights, and bumpers."
+    },
+    "candidate_relation": "compatible",
+    "violated_source_constraints": [],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "add",
+        "semantic_target": "attribute",
+        "before_span": null,
+        "after_span": "with protruding hoods",
+        "edited_instruction": "Show the front of the school buses with protruding hoods and park them adjacent to each other.",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "The school buses have protruding front hoods.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The adjacent buses have flat fronts beneath their windshields, without protruding hoods."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The adjacent school buses have clearly projecting engine hoods in front of their windshields, visible in the angled view."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_6241933c4cbf85957016",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Two yellow school buses are parked next to each other, with their front windshields, headlights, and flat front panels clearly visible."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "Several yellow school buses are parked adjacent to each other in a row. The oblique view shows their front sections, including hoods, front wheels, and noses; the instruction does not require a straight-on view."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "Inserting 'with protruding hoods' adds one visibly verifiable attribute of the buses and preserves the original constraints. Both images satisfy the source instruction, while only the candidate shows protruding hoods.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Both buses have flat fronts beneath their windshields, without protruding engine hoods."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The adjacent school buses have visibly projecting engine hoods ahead of their windshields, and their front sections are shown."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "add",
+      "semantic_target": "attribute",
+      "before_span": null,
+      "after_span": "with protruding hoods",
+      "edited_instruction": "Show the front of the school buses with protruding hoods and park them adjacent to each other.",
+      "witness_type": "addition_disambiguation",
+      "changed_constraint": "The school buses have protruding front hoods.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "The adjacent buses have flat fronts beneath their windshields, without protruding hoods."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "The adjacent school buses have clearly projecting engine hoods in front of their windshields, visible in the angled view."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "Inserting 'with protruding hoods' adds one visibly verifiable attribute of the buses and preserves the original constraints. Both images satisfy the source instruction, while only the candidate shows protruding hoods.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Both buses have flat fronts beneath their windshields, without protruding engine hoods."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The adjacent school buses have visibly projecting engine hoods ahead of their windshields, and their front sections are shown."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "fc8f4fb7c15f9aaf78ebce7c9fabf29f8a4f0f73dfefbbcc9d55304bebcae926",
+      "input_hash": "f5c3c2e11b4d2e730a9f2a245a724cf3fb8a8ad72e7bc7b26dde2253047a3f99",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/f5c3c2e11b4d2e730a9f2a245a724cf3fb8a8ad72e7bc7b26dde2253047a3f99.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_090890d177944753016af2bdfe9a5487d29123f7ff6437f6a8",
+      "usage": {
+        "prompt_tokens": 7047,
+        "completion_tokens": 478,
+        "total_tokens": 7525,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 128
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "93334b54a3788bcc90d8513fcd0338d7fbac2dc072cad3b5d2ea94b84db2b992",
+      "input_hash": "d0a1992ab92d16edf881ab42db11f10886b6d302d5dfa4e24a425f741e38c7d1",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/d0a1992ab92d16edf881ab42db11f10886b6d302d5dfa4e24a425f741e38c7d1.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0348bd402a0b7cbe016af2be0e279087d19facb600c71f8b76",
+      "usage": {
+        "prompt_tokens": 6579,
+        "completion_tokens": 353,
+        "total_tokens": 6932,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 29
+        }
+      }
+    }
+  ]
+}

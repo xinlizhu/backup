@@ -1,0 +1,49 @@
+{
+  "group_id": "pinpoint_group_b158c58497703088",
+  "model": "claude-haiku-5-5",
+  "signature": "44bb4aae802e19564501a676b733c7e19828d9ced260b7da0428f08b1a359df2",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_b158c58497703088_query_05805_predicate_substitute",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "The substitution changes 'using' to 'matching', shifting the semantic relationship from 'apply/utilize the color from <img2>' to 'coordinate with the color from <img2>'. However, all four positive images show trousers in cream/beige tones that visually coordinate with and could be described as 'matching' the deep blue reference. The new predicate remains compatible with the positive examples."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-haiku-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "ac9ebc731bc0f81371186729b9c416d2987e27e739702046f67474f19a768546",
+      "input_hash": "991d63081cec8ae02d9841958e23122d61433b4e7985df8de5d0b7d62d3f5ce7",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/claude-haiku-5-5/cache/validate_group/991d63081cec8ae02d9841958e23122d61433b4e7985df8de5d0b7d62d3f5ce7.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01rAHAzhpRTgyo22ILFSvnxFsd",
+      "usage": {
+        "prompt_tokens": 10134,
+        "completion_tokens": 194,
+        "total_tokens": 10328,
+        "prompt_tokens_details": {
+          "cached_tokens": 7901,
+          "cache_creation_tokens": 2229
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_b158c58497703088_query_05805_predicate_substitute",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 395,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

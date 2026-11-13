@@ -1,0 +1,69 @@
+{
+  "model": "grok-4.6",
+  "text_ok": true,
+  "visual_review_ok": true,
+  "errors": {},
+  "hello_reply": "Hello. How can I help you today?",
+  "reported_model": "grok-4.6",
+  "usage": {
+    "prompt_tokens": 1243,
+    "completion_tokens": 9,
+    "total_tokens": 1284,
+    "prompt_tokens_details": {
+      "text_tokens": 1243,
+      "audio_tokens": 0,
+      "image_tokens": 0,
+      "cached_tokens": 1152
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 32,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "num_sources_used": 0,
+    "cost_in_usd_ticks": 10040000
+  },
+  "probe_group_id": "pinpoint_group_fcdb9b204d9d2398",
+  "probe_negative_id": "pinpoint_group_fcdb9b204d9d2398_query_05113_attribute_substitute",
+  "image_count": 6,
+  "review_decision": "accepted",
+  "review_reason": "Single attribute substitution of olive→green exactly reconstructs the query and preserves the rest. None of the four positives shows a green garment or colorway, so the new color is clearly false for every positive.",
+  "trace": {
+    "stage": "validate_group",
+    "model_name": "grok-4.6",
+    "model_revision": null,
+    "provider": "openai-compatible-chat",
+    "reasoning_effort": null,
+    "prompt_version": "v7",
+    "prompt_hash": "f1621ddcbb12117a094d3a4d260b0203e674bb9c678a94cb31d15f04e135bda0",
+    "input_hash": "87dd43c24223218229df979408544f437829c78b49afb7f5045571b48ba14d37",
+    "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/probes/grok-4.6/cache/validate_group/87dd43c24223218229df979408544f437829c78b49afb7f5045571b48ba14d37.json",
+    "cached": true,
+    "attempts": 1,
+    "request_id": "4962cd6d-5048-977c-bb3d-c112df43a16e",
+    "usage": {
+      "prompt_tokens": 5346,
+      "completion_tokens": 91,
+      "total_tokens": 9528,
+      "prompt_tokens_details": {
+        "text_tokens": 2580,
+        "audio_tokens": 0,
+        "image_tokens": 2766,
+        "cached_tokens": 1152
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 4091,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      },
+      "num_sources_used": 0,
+      "cost_in_usd_ticks": 340560000
+    }
+  },
+  "format_warnings": [],
+  "ready_for_audit": true,
+  "readiness_basis": "Successful actual multimodal review; hello is an auxiliary diagnostic",
+  "limit": "A valid multimodal response verifies request/response compatibility, not that the provider/model reliably used the images."
+}

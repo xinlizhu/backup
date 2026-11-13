@@ -1,0 +1,64 @@
+{
+  "case_id": "pair_c60afefd60617a19e9cf",
+  "signature": "f3a97f608e6addbd5531ad7795f5e06873610abdb12f716de8375d49eda4c022",
+  "simulated": false,
+  "status": "complete",
+  "judgment": {
+    "case_id": "pair_c60afefd60617a19e9cf",
+    "constraints": [
+      {
+        "constraint": "Remove one animal from the reference scene.",
+        "A_status": "uncertain",
+        "B_status": "contradicted",
+        "A_evidence": "Shows an adult buffalo and calf, still two animals; the setting and animals differ from the reference.",
+        "B_evidence": "Shows a large herd of cattle, substantially more animals than the reference."
+      },
+      {
+        "constraint": "Replace the cow with a dog.",
+        "A_status": "contradicted",
+        "B_status": "supported",
+        "A_evidence": "No dog is visible; the adult animal is buffalo-like.",
+        "B_evidence": "A dog is clearly visible beside the cattle, though the cattle remain."
+      },
+      {
+        "constraint": "Add water and hills in the background.",
+        "A_status": "contradicted",
+        "B_status": "contradicted",
+        "A_evidence": "No visible water or hills; dense vegetation fills the background.",
+        "B_evidence": "No visible water or hills; trees and a fence fill the background."
+      },
+      {
+        "constraint": "Remove the grass on the ground.",
+        "A_status": "supported",
+        "B_status": "contradicted",
+        "A_evidence": "The ground is mostly bare dirt, with little or no grass.",
+        "B_evidence": "Grass is clearly visible across much of the ground."
+      }
+    ],
+    "decision": "B",
+    "confidence": "medium",
+    "reason": "B visibly adds the requested dog, a central requested change that A entirely misses. B retains many cattle and grass, while A better removes grass and has fewer animals, but neither adds water or hills; on balance B is closer because it fulfills the explicit cow-to-dog change."
+  },
+  "trace": {
+    "stage": "rank_pair_relative_preference",
+    "model_name": "gpt-5.6-terra",
+    "model_revision": null,
+    "provider": "openai-compatible-chat",
+    "reasoning_effort": null,
+    "prompt_version": "rank_preference_relative_v2",
+    "prompt_hash": "b30009008868200e5447d63eb8d468149799eda333145e1c011a5d2b5f8a2e14",
+    "input_hash": "699ffcec39b4089c2d62f00472744d7531737f095913a13229cc04f823158459",
+    "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_rank_preference_v1/outputs/gc_epochs14_top3_relative/api_cache/rank_pair_relative_preference/699ffcec39b4089c2d62f00472744d7531737f095913a13229cc04f823158459.json",
+    "cached": false,
+    "attempts": 1,
+    "request_id": "resp_040c1743a41676a7016af2dc47b0b087d08949d95c66630344",
+    "usage": {
+      "prompt_tokens": 11031,
+      "completion_tokens": 698,
+      "total_tokens": 11729,
+      "completion_tokens_details": {
+        "reasoning_tokens": 283
+      }
+    }
+  }
+}

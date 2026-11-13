@@ -1,0 +1,106 @@
+{
+  "request": {
+    "stage": "smoke_two_image_json",
+    "backend": "OpenAIChatBackend",
+    "model_name": "stage-routed-openai-chat",
+    "model_revision": null,
+    "backend_identity": {
+      "backend_contract": "openai-chat-json-schema-v1",
+      "api_base": "https://ai.gs88.shop/v1",
+      "screening_model": "gpt5.6-terra",
+      "generation_model": "gpt5.6-terra",
+      "selection_model": "gpt5.6-terra",
+      "screening_reasoning_effort": "medium",
+      "generation_reasoning_effort": "medium",
+      "selection_reasoning_effort": "medium",
+      "image_detail": "high"
+    },
+    "prompt_hash": "1c4c630889235b95651736e5b559b5feb564978bda297624688eb57393332928",
+    "prompt_version": "v6",
+    "schema": {
+      "additionalProperties": false,
+      "properties": {
+        "reference_summary": {
+          "title": "Reference Summary",
+          "type": "string"
+        },
+        "target_summary": {
+          "title": "Target Summary",
+          "type": "string"
+        }
+      },
+      "required": [
+        "reference_summary",
+        "target_summary"
+      ],
+      "title": "SmokeResponse",
+      "type": "object"
+    },
+    "max_output_tokens": 512
+  },
+  "images": [
+    "/mnt/data/datasets/search_dataset/zxl/CIR_new/datasets/CIRR/dev/dev-244-0-img0.png",
+    "/mnt/data/datasets/search_dataset/zxl/CIR_new/datasets/CIRR/dev/dev-1028-1-img1.png"
+  ],
+  "parsed": {
+    "reference_summary": "A vintage glass Pepsi-Cola bottle with a cream, red, and blue label reading “THE BOSS,” partially filled with dark soda.",
+    "target_summary": "Three vintage Big Boy Beverage glass bottles in different sizes, displayed on a counter amid retro signs and cans."
+  },
+  "raw_response": {
+    "id": "resp_01eddce2f44c55e0016a60c1e03f50819ab85de766fd726e0c",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "{\"reference_summary\":\"A vintage glass Pepsi-Cola bottle with a cream, red, and blue label reading “THE BOSS,” partially filled with dark soda.\",\"target_summary\":\"Three vintage Big Boy Beverage glass bottles in different sizes, displayed on a counter amid retro signs and cans.\"}",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null
+        }
+      }
+    ],
+    "created": 1784725986,
+    "model": "gpt5.6-terra",
+    "object": "chat.completion",
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 67,
+      "prompt_tokens": 449,
+      "total_tokens": 516,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "request_id": "resp_01eddce2f44c55e0016a60c1e03f50819ab85de766fd726e0c",
+  "trace": {
+    "stage": "smoke_two_image_json",
+    "model_name": "gpt5.6-terra",
+    "model_revision": null,
+    "provider": "openai-compatible-chat",
+    "reasoning_effort": "medium",
+    "prompt_version": "v6",
+    "prompt_hash": "1c4c630889235b95651736e5b559b5feb564978bda297624688eb57393332928",
+    "input_hash": "301bfc5cd0bbd01188b9f2d8b23dd47cfa78e247766e72c3096c2881d88c1d05",
+    "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_openai/outputs/pilot_50_v6_openai/smoke_cache/smoke_two_image_json/301bfc5cd0bbd01188b9f2d8b23dd47cfa78e247766e72c3096c2881d88c1d05.json",
+    "cached": false,
+    "attempts": 1,
+    "request_id": "resp_01eddce2f44c55e0016a60c1e03f50819ab85de766fd726e0c",
+    "usage": {
+      "completion_tokens": 67,
+      "prompt_tokens": 449,
+      "total_tokens": 516,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "attempt": 1,
+  "previous_errors": [],
+  "previous_error_details": []
+}

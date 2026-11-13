@@ -1,0 +1,164 @@
+{
+  "case_id": "case_a03936148fd9d9049e0f",
+  "audit_query_id": "audit_query_092",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_a03936148fd9d9049e0f",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Unlike the feeding panda in R, T shows a single resting panda with its head lying on its forepaw over a branch."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "C shows a single panda reclining on a branch, with its cheek resting against a raised paw and no visible feeding."
+    },
+    "candidate_relation": "compatible",
+    "violated_source_constraints": [],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "add",
+        "semantic_target": "attribute",
+        "before_span": null,
+        "after_span": "with clearly visible paw pads",
+        "edited_instruction": "Goes from a panda in a tree eating something to a single panda laying down on his paw resting on a branch with clearly visible paw pads.",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "The resting panda has clearly visible paw pads.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "T supports the resting pose, but its supporting paw shows its furred surface rather than clearly visible paw pads."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C shows the resting panda with an upturned paw beside its face; several rounded paw pads are clearly exposed."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_a03936148fd9d9049e0f",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "A single panda rests its head on its black forepaw/forelimb above a horizontal branch, with no visible eating. This supports the requested resting pose relative to the feeding panda in R."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "A single panda reclines across a sloping branch with its head resting against a raised paw. It is resting rather than visibly eating, supporting the original instruction."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "The supplied phrase is one insertion adding a visible attribute of the panda's paws while preserving the original resting pose and branch constraints. Both images support the source instruction; only C clearly displays paw pads, so this is compatible-candidate disambiguation.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The panda rests its head on a fur-covered forelimb above the branch, but no paw pads are clearly visible."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The resting panda holds a paw beside its face with the underside facing the camera, clearly showing several rounded toe pads and a larger central pad."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "add",
+      "semantic_target": "attribute",
+      "before_span": null,
+      "after_span": "with clearly visible paw pads",
+      "edited_instruction": "Goes from a panda in a tree eating something to a single panda laying down on his paw resting on a branch with clearly visible paw pads.",
+      "witness_type": "addition_disambiguation",
+      "changed_constraint": "The resting panda has clearly visible paw pads.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "T supports the resting pose, but its supporting paw shows its furred surface rather than clearly visible paw pads."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C shows the resting panda with an upturned paw beside its face; several rounded paw pads are clearly exposed."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "The supplied phrase is one insertion adding a visible attribute of the panda's paws while preserving the original resting pose and branch constraints. Both images support the source instruction; only C clearly displays paw pads, so this is compatible-candidate disambiguation.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The panda rests its head on a fur-covered forelimb above the branch, but no paw pads are clearly visible."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The resting panda holds a paw beside its face with the underside facing the camera, clearly showing several rounded toe pads and a larger central pad."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "df5c4c32763862d06cd5edaa0778f872bf51713aee71336474df0b04628ff371",
+      "input_hash": "bbd4261b3b21277b319604e94dbd8b736ca63f920e500ae591eb2c8d93ab3e31",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/bbd4261b3b21277b319604e94dbd8b736ca63f920e500ae591eb2c8d93ab3e31.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0d53b3dc98bad55a016af2be138a5887d1852a496bb99aa975",
+      "usage": {
+        "prompt_tokens": 8404,
+        "completion_tokens": 651,
+        "total_tokens": 9055,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 297
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "7d4a86c7aa3585db67478c195e53c84d6b678c2a1ff11643e7e7308ef219e89a",
+      "input_hash": "07d16ac4e3d9a9c0dca0ca2be019a155d5e192169bce22208ec41632436d74e2",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/07d16ac4e3d9a9c0dca0ca2be019a155d5e192169bce22208ec41632436d74e2.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_06e3a5cd50da34c5016af2be34a8c487d1a1b2fdba9d58ecb3",
+      "usage": {
+        "prompt_tokens": 7945,
+        "completion_tokens": 386,
+        "total_tokens": 8331,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 42
+        }
+      }
+    }
+  ]
+}

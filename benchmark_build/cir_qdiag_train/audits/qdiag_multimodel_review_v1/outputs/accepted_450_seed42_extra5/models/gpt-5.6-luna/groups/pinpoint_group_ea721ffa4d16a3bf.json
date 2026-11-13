@@ -1,0 +1,67 @@
+{
+  "group_id": "pinpoint_group_ea721ffa4d16a3bf",
+  "model": "gpt-5.6-luna",
+  "signature": "e0a59d07fd411f37376a5d88b0f5931c56e4eaa296bc7c0f3d113be2a03e8f5e",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_ea721ffa4d16a3bf_query_02262_object_delete",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Removes the single home-bar setting constraint while preserving the request to create a setting matching the referenced mood. The result is fluent and strictly weaker."
+    },
+    {
+      "negative_id": "pinpoint_group_ea721ffa4d16a3bf_query_02262_object_substitute",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Changes only the requested setting identity from a home bar to a home office. All supplied positives depict bars or bar equipment rather than home offices."
+    },
+    {
+      "negative_id": "pinpoint_group_ea721ffa4d16a3bf_query_02263_attribute_add",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "Image 5 has brown wood bar surfaces and dark wood cabinetry or paneling compatible with warm wood cabinetry, so the added property is not clearly false for every positive."
+    },
+    {
+      "negative_id": "pinpoint_group_ea721ffa4d16a3bf_query_02266_predicate_delete",
+      "decision": "reject",
+      "failure_code": "not_single_edit",
+      "reason": "Deletes three distinct matching constraints: echoing the suit's color palette, pattern approach, and overall aesthetic. Sharing one predicate does not make these a single semantic constraint."
+    },
+    {
+      "negative_id": "pinpoint_group_ea721ffa4d16a3bf_query_02266_object_substitute",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Changes only the referenced garment identity from suit to dress. Reference image 1 clearly shows a suit, making the substituted identity false for the reference-based request across all supplied positives."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "gpt-5.6-luna",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "d4301730d48e55960bff08bb5169299f40c88f7e32d09a982393fb3b3d11d76d",
+      "input_hash": "bc4a63346dac4a929986cccb33b6cacf50c0c5172f530ebd39677d298c852c52",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/gpt-5.6-luna/cache/validate_group/bc4a63346dac4a929986cccb33b6cacf50c0c5172f530ebd39677d298c852c52.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_058257eddda296bf016af42e0c507087d180710fcfb7b48100",
+      "usage": {
+        "prompt_tokens": 23320,
+        "completion_tokens": 443,
+        "total_tokens": 23763,
+        "prompt_tokens_details": {
+          "cached_tokens": 23317
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 90
+        }
+      }
+    }
+  ],
+  "format_warnings": []
+}

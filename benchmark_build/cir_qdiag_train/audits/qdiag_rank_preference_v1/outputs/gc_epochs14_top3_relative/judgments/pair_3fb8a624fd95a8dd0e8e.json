@@ -1,0 +1,57 @@
+{
+  "case_id": "pair_3fb8a624fd95a8dd0e8e",
+  "signature": "f3a97f608e6addbd5531ad7795f5e06873610abdb12f716de8375d49eda4c022",
+  "simulated": false,
+  "status": "complete",
+  "judgment": {
+    "case_id": "pair_3fb8a624fd95a8dd0e8e",
+    "constraints": [
+      {
+        "constraint": "Brighten the room",
+        "A_status": "supported",
+        "B_status": "uncertain",
+        "A_evidence": "The vase-shaped lamp emits strong warm yellow light and visibly brightens the surrounding wall and surface.",
+        "B_evidence": "The scene is well lit, but there is no clear added lighting or strong brightening effect attributable to the modification."
+      },
+      {
+        "constraint": "Include a flower or flowers in a vase",
+        "A_status": "contradicted",
+        "B_status": "supported",
+        "A_evidence": "A decorative illuminated vase is present, but it contains no visible flowers or stems.",
+        "B_evidence": "A clear glass vase contains a substantial arrangement of flowering stems and leaves."
+      },
+      {
+        "constraint": "Flowers should be yellow",
+        "A_status": "contradicted",
+        "B_status": "contradicted",
+        "A_evidence": "No flowers are present, so no yellow flower is visible.",
+        "B_evidence": "The flower clusters appear green rather than yellow."
+      }
+    ],
+    "decision": "B",
+    "confidence": "medium",
+    "reason": "B is preferable because it clearly preserves the requested flower-in-vase relationship, which is a central object requirement, although its flowers are green rather than yellow. A strongly brightens the scene but omits the flowers entirely."
+  },
+  "trace": {
+    "stage": "rank_pair_relative_preference",
+    "model_name": "gpt-5.6-terra",
+    "model_revision": null,
+    "provider": "openai-compatible-chat",
+    "reasoning_effort": null,
+    "prompt_version": "rank_preference_relative_v2",
+    "prompt_hash": "848274526b020c341480f54a29bd993d934416dcd04e2f7f8cafb30f8f77557d",
+    "input_hash": "ca608ebd594c6c1a8f61a391ba9958d1c2ff0801dfd0f68d47a72c150e6ea510",
+    "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_rank_preference_v1/outputs/gc_epochs14_top3_relative/api_cache/rank_pair_relative_preference/ca608ebd594c6c1a8f61a391ba9958d1c2ff0801dfd0f68d47a72c150e6ea510.json",
+    "cached": false,
+    "attempts": 1,
+    "request_id": "resp_ack_3f0cdd66672d92f0d73b2e383ed935a6",
+    "usage": {
+      "prompt_tokens": 3761,
+      "completion_tokens": 389,
+      "total_tokens": 4150,
+      "completion_tokens_details": {
+        "reasoning_tokens": 121
+      }
+    }
+  }
+}

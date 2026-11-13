@@ -1,0 +1,82 @@
+experiment:
+  name: opd_clip_l_live_r512_grpo_e4_cached
+  seed: 42
+  output_dir: outputs/live_reservoir_512_anchor_kl_e4_cached/grpo_no_anchor_kl
+  initial_checkpoint: outputs/rank_candidate_policy_e4/dynamic_student_rank/checkpoint_epoch_004.pt
+
+data:
+  train_annotation_path: /mnt/data/datasets/search_dataset/zxl/CIR_new/datasets/CIRR/cirr/captions/cap.rc2.train.json
+  train_image_split_path: /mnt/data/datasets/search_dataset/zxl/CIR_new/datasets/CIRR/cirr/image_splits/split.rc2.train.json
+  val_annotation_path: /mnt/data/datasets/search_dataset/zxl/CIR_new/datasets/CIRR/cirr/captions/cap.rc2.val.json
+  val_image_split_path: /mnt/data/datasets/search_dataset/zxl/CIR_new/datasets/CIRR/cirr/image_splits/split.rc2.val.json
+  image_root: /mnt/data/datasets/search_dataset/zxl/CIR_new/datasets/CIRR
+  teacher_cache_dir: null
+  num_workers: 8
+  prefetch_factor: 2
+
+model:
+  variant: clip_vit_l14
+  pretrained_model_name_or_path: models/clip-vit-large-patch14
+  local_files_only: true
+  trust_remote_code: false
+  hidden_dim: 1024
+  dropout: 0.1
+  freeze_backbone: false
+  freeze_vision_encoder: false
+  unfreeze_last_n_layers: null
+  lora_rank: null
+  gradient_checkpointing: true
+
+objective:
+  loss_type: causal_grpo
+  rank_weight: 0.0
+  centered_response_weight: 0.0
+  rank_temperature: 0.05
+  rollout_count: 16
+  rollout_top_k: 10
+  policy_update_epochs: 2
+  policy_clip_epsilon: 0.2
+  deterministic_policy_dropout: true
+  anchor_kl_enabled: false
+  require_teacher_target_top1: false
+  teacher_target_max_rank: null
+
+mining:
+  top_k: 32
+  reservoir_top_k: 512
+  live_reservoir_selection: true
+  live_selection_image_batch_size: 1024
+  pixel_cache_enabled: true
+  pixel_cache_dtype: float16
+  pixel_cache_build_batch_size: 128
+  pixel_cache_workers: 12
+  pixel_cache_build_prefetch_factor: 3
+  pixel_cache_transfer_prefetch_batches: 2
+  pixel_cache_pin_memory: true
+  persist_candidate_cache: false
+  candidate_source: student
+  refresh_mode: every_epoch
+  image_batch_size: 1024
+  query_batch_size: 1024
+  cache_dtype: float16
+
+optimizer:
+  epochs: 4
+  batch_size_per_gpu: 32
+  live_image_batch_size: 256
+  gradient_accumulation_steps: 1
+  learning_rate: 0.00001
+  backbone_learning_rate: 0.0000005
+  weight_decay: 0.01
+  warmup_ratio: 0.05
+  max_grad_norm: 1.0
+  temperature: 0.07
+  learnable_temperature: false
+  mixed_precision: bf16
+  log_every_steps: 20
+  save_every_epochs: 1
+
+evaluation:
+  batch_size: 256
+  recall_k: [1, 5, 10, 50]
+  group_recall_k: [1, 2, 3]

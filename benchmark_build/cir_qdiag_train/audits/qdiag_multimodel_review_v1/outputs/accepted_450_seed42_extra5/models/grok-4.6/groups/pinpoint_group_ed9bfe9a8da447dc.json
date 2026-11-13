@@ -1,0 +1,63 @@
+{
+  "group_id": "pinpoint_group_ed9bfe9a8da447dc",
+  "model": "grok-4.6",
+  "signature": "cb958fa178e5ebcdd33f446ebd46fe25a7c20417ca5539cc74de61fb4df99804",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_ed9bfe9a8da447dc_query_00660_object_add",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Inserting “and a faint atmospheric haze” is one fluent object addition and reconstructs the text. None of the supplied positives shows atmospheric haze; all are clean product shots."
+    },
+    {
+      "negative_id": "pinpoint_group_ed9bfe9a8da447dc_query_00661_predicate_delete",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Deleting the single relative clause removes only the form-language translation predicate. The remainder is fluent, grammatical, and strictly weaker while keeping the fixture, colors, and material constraints."
+    },
+    {
+      "negative_id": "pinpoint_group_ed9bfe9a8da447dc_query_00661_object_substitute",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Replacing “lighting fixture” with “table lamp” is one object substitution. Every positive is a pendant or flush architectural light, so none is a table lamp."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.6",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "971fde7d52b2eef3ad6c87a2ff385e62793be56c535eabeed3494b443a2af4f8",
+      "input_hash": "f88aeba115769f156acd383adb5edb4b78c1d35d77a4a8a91d71a7bd1ae0121c",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/grok-4.6/cache/validate_group/f88aeba115769f156acd383adb5edb4b78c1d35d77a4a8a91d71a7bd1ae0121c.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "d7c13531-32af-913d-b74c-ad1724963fcd",
+      "usage": {
+        "prompt_tokens": 5552,
+        "completion_tokens": 245,
+        "total_tokens": 10453,
+        "prompt_tokens_details": {
+          "text_tokens": 2853,
+          "audio_tokens": 0,
+          "image_tokens": 2699,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 4656,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 374380000
+      }
+    }
+  ],
+  "format_warnings": []
+}

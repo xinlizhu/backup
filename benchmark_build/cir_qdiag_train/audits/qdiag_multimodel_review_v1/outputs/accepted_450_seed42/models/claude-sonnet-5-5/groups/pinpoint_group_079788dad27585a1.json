@@ -1,0 +1,62 @@
+{
+  "group_id": "pinpoint_group_079788dad27585a1",
+  "model": "claude-sonnet-5-5",
+  "signature": "aff20e5a5733d87f80fd7515c25d92c77cff20d4f50c9f8dbf4123bfdabed97b",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_079788dad27585a1_query_03543_object_substitute",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "The substitution of 'sweater' to 'cardigan' changes the garment type. However, all four positive images show sweaters (crewneck knits), not cardigans. A cardigan is an open-front garment with buttons or fasteners, fundamentally different from the reference sweater. The negative text is compatible with retrieval results that could depict cardigans in simplified knit, making this edit fail the requirement that the new fact be clearly false for every supplied positive image."
+    },
+    {
+      "negative_id": "pinpoint_group_079788dad27585a1_query_03543_attribute_substitute",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "Changing 'the same color palette' to 'a different color palette' alters the color constraint. All supplied positive images show cream/beige/off-white sweaters consistent with a unified neutral palette. However, the edit remains compatible with possible retrieval of different-colored versions from the same garment in other colorways, which is a standard product variation. This fails the requirement that the new fact be clearly false for every supplied positive."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-sonnet-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "d61499e34e0b35739cb2029754c0382bdce12ba8f6672cbc8c55d340e3300a4d",
+      "input_hash": "78516f1bfa08814a0c2a712a93287eb6adbf597d4294f4720960a9809fd7b7e0",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/claude-sonnet-5-5/cache/validate_group/78516f1bfa08814a0c2a712a93287eb6adbf597d4294f4720960a9809fd7b7e0.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01lDIgexAuRpa9bIa8F1Q1FLTA",
+      "usage": {
+        "prompt_tokens": 10073,
+        "completion_tokens": 401,
+        "total_tokens": 10474,
+        "prompt_tokens_details": {
+          "cached_tokens": 7853,
+          "cache_creation_tokens": 2216
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_079788dad27585a1_query_03543_object_substitute",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 476,
+      "action": "full reason retained; decision and failure_code unchanged"
+    },
+    {
+      "negative_id": "pinpoint_group_079788dad27585a1_query_03543_attribute_substitute",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 464,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

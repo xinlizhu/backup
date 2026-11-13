@@ -1,0 +1,50 @@
+{
+  "units": "all five performance columns are percentages",
+  "CRR_subset": "all; includes ADD, SUBSTITUTE, DELETE; not strict",
+  "common_recipe": "CLIP-L/14, BGE-VL-MLLM-S2, OPRD reverse KL T=0.05, on-policy K=32 with target insertion, seed42, epoch4",
+  "comparison_type": "Historical original-head results compared with new-head runs; not a same-run retraining of all four heads",
+  "sources": {
+    "original_residual_mlp": {
+      "run": "epoch_target_filter_e4/kl_all_inject",
+      "checkpoint_epoch": 4,
+      "CIRR": {
+        "file": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/epoch_target_filter.log",
+        "line": 1630
+      },
+      "FashionIQ": {
+        "file": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/epoch_target_filter.log",
+        "line": 1760
+      },
+      "PinPoint": {
+        "file": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/epoch_target_filter.log",
+        "line": 2766
+      },
+      "CRR": {
+        "file": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/PAPER_MAIN_TABLES.md",
+        "line": 887
+      },
+      "available_inference_weights": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/release_code/OPRD/checkpoints/clip_l_s2/model.safetensors",
+      "weight_sha256_verified": "8ed3aca8dfcb162ec88e5050529fc9597409383eff2373e56fce8b68dc521b64",
+      "historical_run_directory_present": false,
+      "rerun_in_current_environment": false
+    },
+    "mmret_add": {
+      "CIRR": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/outputs/head_ablation_oprd_20261109/mmret_add/retrieval/cirr_val/val_metrics.json",
+      "FashionIQ": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/outputs/head_ablation_oprd_20261109/mmret_add/retrieval/fashioniq_metrics.json",
+      "PinPoint": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/outputs/head_ablation_oprd_20261109/mmret_add/retrieval/pinpoint/metrics.json",
+      "CRR": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/outputs/head_ablation_oprd_20261109/mmret_add/qdiag_final/paper_metrics.csv"
+    },
+    "clip4cir_combiner": {
+      "CIRR": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/outputs/head_ablation_oprd_20261109/clip4cir_combiner/retrieval/cirr_val/val_metrics.json",
+      "FashionIQ": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/outputs/head_ablation_oprd_20261109/clip4cir_combiner/retrieval/fashioniq_metrics.json",
+      "PinPoint": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/outputs/head_ablation_oprd_20261109/clip4cir_combiner/retrieval/pinpoint/metrics.json",
+      "CRR": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/outputs/head_ablation_oprd_20261109/clip4cir_combiner/qdiag_final/paper_metrics.csv"
+    },
+    "magiclens": {
+      "CIRR": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/outputs/head_ablation_oprd_20261109/magiclens/retrieval/cirr_val/val_metrics.json",
+      "FashionIQ": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/outputs/head_ablation_oprd_20261109/magiclens/retrieval/fashioniq_metrics.json",
+      "PinPoint": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/outputs/head_ablation_oprd_20261109/magiclens/retrieval/pinpoint/metrics.json",
+      "CRR": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/outputs/head_ablation_oprd_20261109/magiclens/qdiag_final/paper_metrics.csv"
+    }
+  }
+}

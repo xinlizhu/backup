@@ -1,0 +1,90 @@
+{
+  "case_id": "case_a200e6b46ac4cebd5093",
+  "audit_query_id": "audit_query_099",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_a200e6b46ac4cebd5093",
+    "case_status": "source_invalid_or_uncertain",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "Reddish-brown and pale yellow-tan strands surround the skunk, but they appear to be fallen pine needles rather than clearly identifiable grass."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The guinea pig is surrounded by green and sunlit yellow-green grass; no reddish grass is visible."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The grass must include reddish coloration."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_a200e6b46ac4cebd5093",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "Image 2 shows reddish-brown and yellowish-tan needle-like material across the ground and log. It appears to be fallen pine needles; the presence of reddish and yellowish grass cannot be reliably established."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows green grass around a guinea pig. The reddish and yellowish areas belong to the animal's fur, not the grass."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "648397b9c23e03d2191b1f54aba42d34338a509fe955ba395f3dfedd84db9d05",
+      "input_hash": "bc65afc23723ec41335b4fff77e0ea8468a63746e7c60c1a04576d00d01587cc",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/bc65afc23723ec41335b4fff77e0ea8468a63746e7c60c1a04576d00d01587cc.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_02f871b4ced9d5b6016af2be4345f087d180cb5ce889b05925",
+      "usage": {
+        "prompt_tokens": 6537,
+        "completion_tokens": 313,
+        "total_tokens": 6850,
+        "prompt_tokens_details": {
+          "cached_tokens": 5308
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 139
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "d4b71e623828c67ea286ca8f6933846cdd0db65f570101edf78023c5ea64fbab",
+      "input_hash": "8736ee40855afd76cb49944926dd60df85afdc89f5aeeff0623074092acfe503",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/8736ee40855afd76cb49944926dd60df85afdc89f5aeeff0623074092acfe503.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0df50f3a2be11f73016af2be6cf57c87d19c5f526913637431",
+      "usage": {
+        "prompt_tokens": 5995,
+        "completion_tokens": 164,
+        "total_tokens": 6159,
+        "prompt_tokens_details": {
+          "cached_tokens": 4831
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 38
+        }
+      }
+    }
+  ]
+}

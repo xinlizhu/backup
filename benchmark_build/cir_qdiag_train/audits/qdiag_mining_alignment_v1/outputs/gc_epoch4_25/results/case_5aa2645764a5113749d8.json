@@ -1,0 +1,174 @@
+{
+  "case_id": "case_5aa2645764a5113749d8",
+  "audit_query_id": "audit_query_100",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_5aa2645764a5113749d8",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "T shows a prepared dish in a round metal bowl-like vessel, covered with visibly melted, browned cheese. The instruction does not require retaining R's dessert or glass vessel."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows a layered dessert in a glass bowl, topped with piped cream and sliced almonds rather than cheese."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "Cheese on top of the dish."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "object",
+        "before_span": "cheese",
+        "after_span": "sliced almonds",
+        "edited_instruction": "A bowl with a dish and sliced almonds on top.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "The topping identity changes from cheese to sliced almonds.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "T's topping is melted, browned cheese, not sliced almonds."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C's glass bowl contains a layered dessert with clearly visible sliced almonds scattered on top."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "operation": "delete",
+        "semantic_target": "object",
+        "before_span": " and cheese on top",
+        "after_span": null,
+        "edited_instruction": "A bowl with a dish.",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "Removes the requirement for cheese as a topping.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "T contains a prepared food dish in a round metal bowl-like vessel."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C contains a layered dessert dish in a glass bowl; no specific topping is required by the weakened instruction."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_5aa2645764a5113749d8",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "Melted, browned cheese visibly covers the food, but the container appears to be a shallow metal baking pan. The close crop does not reliably establish the required bowl."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "A glass bowl contains a layered dessert topped with piped cream and sliced almonds. The visible topping is not cheese."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "reject",
+        "failure_code": "source_invalid_or_uncertain",
+        "witness_type": null,
+        "reason": "Replacing cheese with sliced almonds is a single object substitution, and the candidate visibly supports that topping. However, the source instruction cannot be reliably established on the positive because its container appears to be a shallow baking pan rather than a clearly identifiable bowl.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The food has a continuous melted, browned cheese topping rather than sliced almonds."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The layered dessert is in a glass bowl with numerous sliced almonds scattered over the cream on top."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "decision": "reject",
+        "failure_code": "source_invalid_or_uncertain",
+        "witness_type": null,
+        "reason": "The deletion removes the cheese topping constraint and preserves a meaningful instruction. However, neither the source nor the relaxed instruction is reliably supported on the positive: the visible metal container appears to be a shallow baking pan, leaving the bowl requirement unresolved.",
+        "edited_on_positive": {
+          "status": "uncertain",
+          "evidence": "A prepared food dish is visible in a round metal container, but its shallow rim and close crop do not reliably establish a bowl."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "A large transparent glass bowl visibly holds a layered dessert."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": false,
+      "local_failures": [
+        "wrong_witness_type",
+        "wrong_support_pattern"
+      ],
+      "review_decision": "reject"
+    },
+    {
+      "witness_id": "w2",
+      "accepted": false,
+      "local_failures": [
+        "wrong_witness_type",
+        "wrong_support_pattern"
+      ],
+      "review_decision": "reject"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "da58978294e47cc62c70ee4e67fca95d1bba79dea3ef771c21f4cbaa632d55b8",
+      "input_hash": "c9a2c2bf569f329a8652cdc118cf218bda64fddbe225091c42d69d586ca630e4",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/c9a2c2bf569f329a8652cdc118cf218bda64fddbe225091c42d69d586ca630e4.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0",
+      "usage": {
+        "prompt_tokens": 10543,
+        "completion_tokens": 687,
+        "total_tokens": 11230,
+        "completion_tokens_details": {
+          "reasoning_tokens": 310
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "78ac0e87b71b07e7b9fb2b310b11249aa52b51553e9005498f9e94a88dfd4125",
+      "input_hash": "7b04ac38ed85299f030ff62c94847f0e15b7c28603e72ebd0396e24cb2203900",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/7b04ac38ed85299f030ff62c94847f0e15b7c28603e72ebd0396e24cb2203900.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_07934627d9806668016af2bf4a06e487d1a763dfdfbaf9df49",
+      "usage": {
+        "prompt_tokens": 14340,
+        "completion_tokens": 583,
+        "total_tokens": 14923,
+        "prompt_tokens_details": {
+          "cached_tokens": 3482
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 93
+        }
+      }
+    }
+  ]
+}

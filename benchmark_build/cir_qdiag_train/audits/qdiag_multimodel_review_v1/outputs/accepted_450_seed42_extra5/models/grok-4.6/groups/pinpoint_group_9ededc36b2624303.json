@@ -1,0 +1,63 @@
+{
+  "group_id": "pinpoint_group_9ededc36b2624303",
+  "model": "grok-4.6",
+  "signature": "cb958fa178e5ebcdd33f446ebd46fe25a7c20417ca5539cc74de61fb4df99804",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_9ededc36b2624303_query_04872_attribute_substitute",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Replacing the color phrase 'vibrant neon green' with 'muted navy blue' is one attribute edit and reconstructs the negative exactly. No supplied positive is muted navy blue (green tee, neon-green sweater, two red hoodies), so the new color is clearly false."
+    },
+    {
+      "negative_id": "pinpoint_group_9ededc36b2624303_query_04873_predicate_add",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Adding 'and fold it neatly' is one predicate, keeps the neon-green request, and stays fluent. Every positive is worn, laid flat open, displayed, or crumpled, so neatly folded is clearly false for all of them."
+    },
+    {
+      "negative_id": "pinpoint_group_9ededc36b2624303_query_04874_attribute_substitute",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Substituting 'bright neon green' with 'deep navy blue' is a single color-attribute edit and matches the negative text. None of the four positives is deep navy blue, so the new fact is clearly false for every supplied positive."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.6",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "83944b5659bf4ffb5286cea331a3597db60a76362433cd1c8bafc715ad8a1d15",
+      "input_hash": "9e28ef74697053ce13344787fba3601b0e6b5d3be4bd455b46ee9b6020471f65",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/grok-4.6/cache/validate_group/9e28ef74697053ce13344787fba3601b0e6b5d3be4bd455b46ee9b6020471f65.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "50274527-22f3-9d17-8a0e-66ba35972949",
+      "usage": {
+        "prompt_tokens": 5209,
+        "completion_tokens": 287,
+        "total_tokens": 11192,
+        "prompt_tokens_details": {
+          "text_tokens": 2721,
+          "audio_tokens": 0,
+          "image_tokens": 2488,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 5696,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 432440000
+      }
+    }
+  ],
+  "format_warnings": []
+}

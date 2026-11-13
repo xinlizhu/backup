@@ -1,0 +1,161 @@
+{
+  "case_id": "case_677188e355c934a57215",
+  "audit_query_id": "audit_query_083",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_677188e355c934a57215",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows one body-cream tube beside its matching box."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "Image 3 shows one perfume bottle beside its matching box."
+    },
+    "candidate_relation": "compatible",
+    "violated_source_constraints": [],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "add",
+        "semantic_target": "object",
+        "before_span": null,
+        "after_span": "perfume ",
+        "edited_instruction": "Leave a single perfume product with its box",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "The single product is a perfume.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 shows a body-cream tube and a box labeled “Body Cream & Skin Care,” not perfume."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows a perfume bottle labeled “Pink ICE” beside its box."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_677188e355c934a57215",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows one body cream container together with its pink box."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "Image 3 shows one perfume bottle together with its pink box."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "Inserting “perfume ” yields a fluent instruction with one added object constraint; image 2 shows body cream, while image 3 shows perfume. The original single-product-with-box constraint remains supported by both.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 shows a body cream container, not perfume."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 visibly shows a perfume bottle with its box."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "add",
+      "semantic_target": "object",
+      "before_span": null,
+      "after_span": "perfume ",
+      "edited_instruction": "Leave a single perfume product with its box",
+      "witness_type": "addition_disambiguation",
+      "changed_constraint": "The single product is a perfume.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "Image 2 shows a body-cream tube and a box labeled “Body Cream & Skin Care,” not perfume."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "Image 3 shows a perfume bottle labeled “Pink ICE” beside its box."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "Inserting “perfume ” yields a fluent instruction with one added object constraint; image 2 shows body cream, while image 3 shows perfume. The original single-product-with-box constraint remains supported by both.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 shows a body cream container, not perfume."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 visibly shows a perfume bottle with its box."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "4f8655967f1e1ac9a0f612939e4ec1972bce17321bacb51a6197da591037c58a",
+      "input_hash": "dbca0000ae55dd2921d050651fc7e543940ba400a6a11b13242704433374588f",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/dbca0000ae55dd2921d050651fc7e543940ba400a6a11b13242704433374588f.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0fc9d73f5205da70016af2bfab055887d19193a3e0bbb33cd6",
+      "usage": {
+        "prompt_tokens": 4391,
+        "completion_tokens": 1182,
+        "total_tokens": 5573,
+        "completion_tokens_details": {
+          "reasoning_tokens": 964
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "572cf0b987ae9c3bb835aff5ae8fa7131f10403b3f6386638431dca4d7baca48",
+      "input_hash": "37404bfdd36246c418d5affd8fd438f1e809ec7c097719b71102eb1557cf4e35",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/37404bfdd36246c418d5affd8fd438f1e809ec7c097719b71102eb1557cf4e35.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0e33e9a30dbf93fe016af2bfb9f14887d18f3d21c68a48e7ab",
+      "usage": {
+        "prompt_tokens": 7298,
+        "completion_tokens": 331,
+        "total_tokens": 7629,
+        "prompt_tokens_details": {
+          "cached_tokens": 5248
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 133
+        }
+      }
+    }
+  ]
+}

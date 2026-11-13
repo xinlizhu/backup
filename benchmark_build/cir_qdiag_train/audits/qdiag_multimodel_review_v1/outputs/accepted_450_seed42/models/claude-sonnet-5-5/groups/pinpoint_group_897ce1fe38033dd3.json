@@ -1,0 +1,49 @@
+{
+  "group_id": "pinpoint_group_897ce1fe38033dd3",
+  "model": "claude-sonnet-5-5",
+  "signature": "aff20e5a5733d87f80fd7515c25d92c77cff20d4f50c9f8dbf4123bfdabed97b",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_897ce1fe38033dd3_query_04632_predicate_substitute",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "Both positive images show a person with a ring on their hand. The substitution from 'wearing' to 'holding' describes different hand positions/gestures, but both images are compatible with either predicate—a ring on a hand can be described as both worn and held. The edit does not create a clearly false constraint for the supplied positives."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-sonnet-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "5183275bc9f8694e19b77f488e33adbd484dfcd45004e45d76431b16145033ca",
+      "input_hash": "14f1ce19a27c723df062e1e302569e7cd13c196de3419710c771e9831fa3c307",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/claude-sonnet-5-5/cache/validate_group/14f1ce19a27c723df062e1e302569e7cd13c196de3419710c771e9831fa3c307.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01Ihm1jBMVSbSpKLiYWtIKBIEF",
+      "usage": {
+        "prompt_tokens": 7586,
+        "completion_tokens": 181,
+        "total_tokens": 7767,
+        "prompt_tokens_details": {
+          "cached_tokens": 5913,
+          "cache_creation_tokens": 1669
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_897ce1fe38033dd3_query_04632_predicate_substitute",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 341,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

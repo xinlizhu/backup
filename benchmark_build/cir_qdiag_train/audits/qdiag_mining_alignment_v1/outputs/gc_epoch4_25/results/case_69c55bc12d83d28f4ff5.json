@@ -1,0 +1,235 @@
+{
+  "case_id": "case_69c55bc12d83d28f4ff5",
+  "audit_query_id": "audit_query_090",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_69c55bc12d83d28f4ff5",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The car is shown from a rear three-quarter angle on a road beside a large body of water."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The car is beside water, but it is shown in side profile rather than from the back."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "Show the car from the back."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "attribute",
+        "before_span": "back",
+        "after_span": "side",
+        "edited_instruction": "Show car from side by water.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "The car's depicted viewpoint changes from a rear view to a side view.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The car is beside water but shown from a rear three-quarter viewpoint, not in side profile."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The car is shown in side profile with water visible behind it."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "operation": "delete",
+        "semantic_target": "attribute",
+        "before_span": "from back",
+        "after_span": null,
+        "edited_instruction": "Show car by water.",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "Remove the requirement for a rear viewpoint.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "The car is on a road directly beside a large body of water."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The car is on a coastal road with the shoreline and water visible behind it."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_69c55bc12d83d28f4ff5",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a car from a rear three-quarter viewpoint, with its rear plate, taillights, and bumper clearly visible, beside a large body of water. The rear viewpoint is consistent with the reference."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a car beside visible water, but the camera presents its side profile rather than a view from behind."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing 'back' with 'side' changes one viewpoint attribute and exactly reconstructs the proposed instruction. The positive has a rear three-quarter viewpoint; the candidate has a side-profile viewpoint. Both cars are visibly by water.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 presents the car from behind at a three-quarter angle, with its rear face prominently visible, rather than from a side-profile viewpoint."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 presents the car in side profile, showing its door and both wheels laterally, with water visible behind it."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting 'from back' removes only the viewpoint constraint and reconstructs 'Show car by water.' Both images satisfy the remaining car and waterside constraints; the candidate violates only the removed rear-view requirement.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 clearly shows a car on a road immediately beside a large body of water."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 clearly shows a car on a coastal road, with shoreline and water behind it."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "substitute",
+      "semantic_target": "attribute",
+      "before_span": "back",
+      "after_span": "side",
+      "edited_instruction": "Show car from side by water.",
+      "witness_type": "substitution_contrast",
+      "changed_constraint": "The car's depicted viewpoint changes from a rear view to a side view.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "The car is beside water but shown from a rear three-quarter viewpoint, not in side profile."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "The car is shown in side profile with water visible behind it."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing 'back' with 'side' changes one viewpoint attribute and exactly reconstructs the proposed instruction. The positive has a rear three-quarter viewpoint; the candidate has a side-profile viewpoint. Both cars are visibly by water.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 presents the car from behind at a three-quarter angle, with its rear face prominently visible, rather than from a side-profile viewpoint."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 presents the car in side profile, showing its door and both wheels laterally, with water visible behind it."
+        }
+      }
+    },
+    {
+      "witness_id": "w2",
+      "operation": "delete",
+      "semantic_target": "attribute",
+      "before_span": "from back",
+      "after_span": null,
+      "edited_instruction": "Show car by water.",
+      "witness_type": "deletion_relaxation",
+      "changed_constraint": "Remove the requirement for a rear viewpoint.",
+      "edited_on_positive": {
+        "status": "supported",
+        "evidence": "The car is on a road directly beside a large body of water."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "The car is on a coastal road with the shoreline and water visible behind it."
+      },
+      "independent_review": {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting 'from back' removes only the viewpoint constraint and reconstructs 'Show car by water.' Both images satisfy the remaining car and waterside constraints; the candidate violates only the removed rear-view requirement.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 clearly shows a car on a road immediately beside a large body of water."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 clearly shows a car on a coastal road, with shoreline and water behind it."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    },
+    {
+      "witness_id": "w2",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "e13c59ddf0c4be47ca36e47bfa87cedb7eb4b24618308638e5f825eea2e85ef4",
+      "input_hash": "239764f9ed594643307842714985f4813ce76ec4d40efef28b9bd65d4b33b6c7",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/239764f9ed594643307842714985f4813ce76ec4d40efef28b9bd65d4b33b6c7.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_08095c609ccacf29016af2be7c202487d195624b9d5b27e6f3",
+      "usage": {
+        "prompt_tokens": 14599,
+        "completion_tokens": 549,
+        "total_tokens": 15148,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 59
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "28df8a6d744a51d86eda2d60ed1d55f8fd726ca4f56bcb98e3dad00653001309",
+      "input_hash": "4a57d44e2699ef27b4f4024bbc738e8f46a581722805a9c123f5a412bac79cf3",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/4a57d44e2699ef27b4f4024bbc738e8f46a581722805a9c123f5a412bac79cf3.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_00dfd2962e98285d016af2be8ec3f087d188eb3da30e105b64",
+      "usage": {
+        "prompt_tokens": 14174,
+        "completion_tokens": 506,
+        "total_tokens": 14680,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        }
+      }
+    }
+  ]
+}

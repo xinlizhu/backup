@@ -1,0 +1,235 @@
+{
+  "case_id": "case_0ad842fd8fa344a1e465",
+  "audit_query_id": "audit_query_090",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_0ad842fd8fa344a1e465",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The car is shown from a rear three-quarter angle beside a large body of water."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The car is shown from a rear three-quarter angle, but its surroundings are dry desert scrubland rather than a waterside setting."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The car must be by water."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "object",
+        "before_span": "water",
+        "after_span": "desert scrubland",
+        "edited_instruction": "Show car from back by desert scrubland.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "Replace water with desert scrubland as the adjacent landscape.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The rear-view car is beside water and densely vegetated hills, not desert scrubland."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The rear-view car sits on pavement directly beside dry, sparsely vegetated desert terrain."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "operation": "delete",
+        "semantic_target": "predicate",
+        "before_span": "by water",
+        "after_span": null,
+        "edited_instruction": "Show car from back.",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "Remove the requirement that the car be by water.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "The car's rear, taillights, and rear license plate are clearly visible."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The car is shown from behind at a three-quarter angle, with its rear bumper and taillights visible."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_0ad842fd8fa344a1e465",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a car from a rear three-quarter view, with its rear lights and license plate visible, on a road immediately beside a large body of water."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a car from a rear three-quarter view amid dry, sandy desert scrubland. The surrounding landscape is arid, with no adjacent body of water."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing 'water' with 'desert scrubland' is one object substitution within the location relation. It preserves the car and rear-view constraints. The lakeside positive supports the original, while the desert candidate supports the edited instruction.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The car is beside water surrounded by densely vegetated hills, rather than desert scrubland."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The car is viewed from behind and stands beside sandy, sparsely vegetated desert terrain with distant mountains."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting 'by water' removes one location predicate and exactly produces the proposed instruction after punctuation normalization. Both images retain the rear-view car constraint; the candidate violates only the removed water constraint.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "The rear bumper, taillights, rear plate, and side of the car are visible in a rear three-quarter view."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The car is shown in a rear three-quarter view, with its rear panel, taillights, and rear bumper clearly visible."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "substitute",
+      "semantic_target": "object",
+      "before_span": "water",
+      "after_span": "desert scrubland",
+      "edited_instruction": "Show car from back by desert scrubland.",
+      "witness_type": "substitution_contrast",
+      "changed_constraint": "Replace water with desert scrubland as the adjacent landscape.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "The rear-view car is beside water and densely vegetated hills, not desert scrubland."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "The rear-view car sits on pavement directly beside dry, sparsely vegetated desert terrain."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing 'water' with 'desert scrubland' is one object substitution within the location relation. It preserves the car and rear-view constraints. The lakeside positive supports the original, while the desert candidate supports the edited instruction.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The car is beside water surrounded by densely vegetated hills, rather than desert scrubland."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The car is viewed from behind and stands beside sandy, sparsely vegetated desert terrain with distant mountains."
+        }
+      }
+    },
+    {
+      "witness_id": "w2",
+      "operation": "delete",
+      "semantic_target": "predicate",
+      "before_span": "by water",
+      "after_span": null,
+      "edited_instruction": "Show car from back.",
+      "witness_type": "deletion_relaxation",
+      "changed_constraint": "Remove the requirement that the car be by water.",
+      "edited_on_positive": {
+        "status": "supported",
+        "evidence": "The car's rear, taillights, and rear license plate are clearly visible."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "The car is shown from behind at a three-quarter angle, with its rear bumper and taillights visible."
+      },
+      "independent_review": {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting 'by water' removes one location predicate and exactly produces the proposed instruction after punctuation normalization. Both images retain the rear-view car constraint; the candidate violates only the removed water constraint.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "The rear bumper, taillights, rear plate, and side of the car are visible in a rear three-quarter view."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The car is shown in a rear three-quarter view, with its rear panel, taillights, and rear bumper clearly visible."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    },
+    {
+      "witness_id": "w2",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "aaaa8f78b07cce1c5ae14505056971150887900f90b569fddea0b34a788e9a46",
+      "input_hash": "9a3673e7dbf22e73704a5c8e94ff8b4529a4d72f1d86a3546ef31ccc8f0eb14f",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/9a3673e7dbf22e73704a5c8e94ff8b4529a4d72f1d86a3546ef31ccc8f0eb14f.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0f13f112755ff148016af2bdba2ad087d1aa67c55ba0a26cd2",
+      "usage": {
+        "prompt_tokens": 11246,
+        "completion_tokens": 730,
+        "total_tokens": 11976,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 222
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "713d6c15649fef7551dfcb9dab6c494eabad6e7565fed9921126d4aaa23b99c5",
+      "input_hash": "1eb8af3cb26b44ec33972ba1a862b8c1a41e735736664d67ce2472b11317501c",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/1eb8af3cb26b44ec33972ba1a862b8c1a41e735736664d67ce2472b11317501c.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_083d890956ccc520016af2bde372ac87d1aab0fe21aa83a0cf",
+      "usage": {
+        "prompt_tokens": 10826,
+        "completion_tokens": 502,
+        "total_tokens": 11328,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        }
+      }
+    }
+  ]
+}

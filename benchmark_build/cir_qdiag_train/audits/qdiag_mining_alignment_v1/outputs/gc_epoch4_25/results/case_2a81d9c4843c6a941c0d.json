@@ -1,0 +1,89 @@
+{
+  "case_id": "case_2a81d9c4843c6a941c0d",
+  "audit_query_id": "audit_query_095",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_2a81d9c4843c6a941c0d",
+    "case_status": "source_invalid_or_uncertain",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "Image 2 shows one pelican with its bill open, raised above grayish water, but Image 1 shows sea lions rather than birds, so the instruction to remove all but one bird is not grounded in the reference."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows several pelicans, with the main bird perched on a rail rather than raised out of water; its bill is open, and the water appears blue."
+    },
+    "candidate_relation": "multiple_constraint_conflict",
+    "violated_source_constraints": [
+      "remove all but one bird",
+      "raise remaining bird out of water",
+      "change water color to grey"
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_2a81d9c4843c6a941c0d",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows one bird in grey water, with its body raised above the water and its bill open."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows several pelicans, blue water, and the prominent bird perched on a rail rather than raised out of the water."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "50ccf95025b89ccf7c76af53b4dc983539d34a6b0c543f11480d67a3dd9cf421",
+      "input_hash": "193715ce4c2d4fced0f38c5a93f5af85ef14139df7eb07608d821bcc1c7e0d91",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/193715ce4c2d4fced0f38c5a93f5af85ef14139df7eb07608d821bcc1c7e0d91.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_ack_91e67e90aa82ea73d44199009a0bed59",
+      "usage": {
+        "prompt_tokens": 7932,
+        "completion_tokens": 378,
+        "total_tokens": 8310,
+        "completion_tokens_details": {
+          "reasoning_tokens": 197
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "bd57f8a728dda08be27a5b4c4f35cb2a564d19b5d1ae2aa752771cb433340960",
+      "input_hash": "6cf2f88822f10ab45ce24579aa12afbbbe81e18eb06a217581c850c789278c3e",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/6cf2f88822f10ab45ce24579aa12afbbbe81e18eb06a217581c850c789278c3e.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_00a5d89024a3cbaa016af2bf09199087d293a2cf630197049d",
+      "usage": {
+        "prompt_tokens": 11766,
+        "completion_tokens": 290,
+        "total_tokens": 12056,
+        "prompt_tokens_details": {
+          "cached_tokens": 5248
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 182
+        }
+      }
+    }
+  ]
+}

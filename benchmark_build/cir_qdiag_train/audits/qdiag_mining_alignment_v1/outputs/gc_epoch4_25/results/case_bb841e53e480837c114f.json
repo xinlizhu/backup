@@ -1,0 +1,92 @@
+{
+  "case_id": "case_bb841e53e480837c114f",
+  "audit_query_id": "audit_query_090",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_bb841e53e480837c114f",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "An orange car is shown from a rear three-quarter angle on a road beside a visible body of water."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The image shows a front-facing guinea pig beside a plate, an olive-oil tin, and a cup on red fabric; it depicts no car or waterside scene."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "Show a car.",
+      "Show the car from the back.",
+      "Show the car by water."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_bb841e53e480837c114f",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows an orange car from the rear beside a body of water."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a guinea pig beside a plate and an olive oil tin; no car or water is visible."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "d7244a1ebc4d63bb3e9eb483c7040042cca2afa7497965276cbc1a121c6067b7",
+      "input_hash": "62fb775bed90612d6e17ab868a048348443130985141751b3b593599efd9bef2",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/62fb775bed90612d6e17ab868a048348443130985141751b3b593599efd9bef2.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_035daff639b772ee016af2bf7e4fa887d186b1821581346c5a",
+      "usage": {
+        "prompt_tokens": 10581,
+        "completion_tokens": 223,
+        "total_tokens": 10804,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 38
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "d9c0a797ca44a5f6822296a0109b857e5525a669d5f853d2fbe751ad0ba3cfeb",
+      "input_hash": "6055c72869d52be6e08151324ee7f54512e7642eef4cb9fec3f59cdffdab431b",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/6055c72869d52be6e08151324ee7f54512e7642eef4cb9fec3f59cdffdab431b.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_09a8e9ccdacb4b25016af2bf86d89487d2ae1e0eaec1f258af",
+      "usage": {
+        "prompt_tokens": 10203,
+        "completion_tokens": 122,
+        "total_tokens": 10325,
+        "prompt_tokens_details": {
+          "cached_tokens": 5248
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 30
+        }
+      }
+    }
+  ]
+}

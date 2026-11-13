@@ -1,0 +1,49 @@
+{
+  "group_id": "pinpoint_group_905397743af52d0d",
+  "model": "claude-haiku-5-5",
+  "signature": "44bb4aae802e19564501a676b733c7e19828d9ced260b7da0428f08b1a359df2",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_905397743af52d0d_query_01700_object_substitute",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "The substitute changes 'dress' to 'shirt'. Both positive images (2 and 3) show dress designs inspired by classical artwork, not shirts. However, image 2 depicts a sleeveless A-line dress and image 3 shows a dress with puffed sleeves—both are clearly dresses, not shirts. The edit removes the object constraint entirely, making the negative text compatible with garments that are not dresses. This fails the requirement that the new fact be 'clearly false for EVERY SUPPLIED POSITIVE image.'"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-haiku-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "2955584717a310b364d22a708d54f62fbcda1799bb85685ff14c0d348c8be48d",
+      "input_hash": "d087ca9eb804f80a1ec17f59ebb7301ba21a17803773b2798fc1419775021dbd",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/claude-haiku-5-5/cache/validate_group/d087ca9eb804f80a1ec17f59ebb7301ba21a17803773b2798fc1419775021dbd.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01tBEqghyWTAOdPLQsNwmpdNo5",
+      "usage": {
+        "prompt_tokens": 6874,
+        "completion_tokens": 221,
+        "total_tokens": 7095,
+        "prompt_tokens_details": {
+          "cached_tokens": 5358,
+          "cache_creation_tokens": 1512
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_905397743af52d0d_query_01700_object_substitute",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 490,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

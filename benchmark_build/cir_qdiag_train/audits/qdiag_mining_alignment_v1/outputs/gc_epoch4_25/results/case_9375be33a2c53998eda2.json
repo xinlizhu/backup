@@ -1,0 +1,85 @@
+{
+  "case_id": "case_9375be33a2c53998eda2",
+  "audit_query_id": "audit_query_084",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_9375be33a2c53998eda2",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "T shows dough from a low oblique angle similar to R, with a wooden rolling pin prominently on the right."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows dough in a white container from a nearly overhead viewpoint, unlike R's low oblique view, and no rolling pin appears on the right."
+    },
+    "candidate_relation": "multiple_constraint_conflict",
+    "violated_source_constraints": [
+      "The photograph must use an angle similar to R.",
+      "The photograph must include a rolling pin on the right-hand side."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_9375be33a2c53998eda2",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows dough on a floured wooden surface from a low oblique angle similar to the reference. A large wooden rolling pin is clearly visible on the right-hand side."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows dough in a white rectangular container viewed from above, rather than the reference's low oblique viewpoint. No rolling pin is visible on the right-hand side or elsewhere in the image."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "cdbba6fa26203c7c2c5d25ecd57ce38a0b56a2a63868a3a72c0fb78f3c3d2664",
+      "input_hash": "b6d05408fb4104e39bfae7870fd1989b4237a574102546de5a55976ae3829b42",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/b6d05408fb4104e39bfae7870fd1989b4237a574102546de5a55976ae3829b42.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_09126de89dfb9c97016af2bd85c3e887d1a2b67021021c4ae6",
+      "usage": {
+        "prompt_tokens": 12973,
+        "completion_tokens": 233,
+        "total_tokens": 13206,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 42
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "b178ad46be3d91b9b92871df441da1a14aa38e83edb2c5544522d77417641e25",
+      "input_hash": "43042e0fe1abee819766cc998cf754eaa63aa8f4b163eb623fb549260fba6372",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/43042e0fe1abee819766cc998cf754eaa63aa8f4b163eb623fb549260fba6372.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0ff4425b2cf11dc1016af2bd91274c87d1bbb6db385e889b19",
+      "usage": {
+        "prompt_tokens": 12431,
+        "completion_tokens": 129,
+        "total_tokens": 12560
+      }
+    }
+  ]
+}

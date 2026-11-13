@@ -1,0 +1,305 @@
+{
+  "case_id": "case_fb2fc5b1a718ab5fc08d",
+  "audit_query_id": "audit_query_096",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_fb2fc5b1a718ab5fc08d",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Two yellow school buses are parked next to each other with their fronts clearly visible, unlike the side views in R."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "Several yellow school buses are parked side by side with their fronts visible. The projecting hoods and additional buses do not violate the instruction."
+    },
+    "candidate_relation": "compatible",
+    "violated_source_constraints": [],
+    "witnesses": [
+      {
+        "witness_id": "add_object_banner",
+        "operation": "add",
+        "semantic_target": "object",
+        "before_span": null,
+        "after_span": "with a banner nearby",
+        "edited_instruction": "Show the front of the school buses and park them adjacent to each other with a banner nearby.",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "Adds the presence of a nearby banner; the original instruction distinguishes neither image on this point.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The adjacent buses have visible fronts, but no banner is present in the depicted parking scene."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "A large blue banner stands beside the nearest bus, and the buses are parked adjacent with their fronts visible."
+        }
+      },
+      {
+        "witness_id": "add_attribute_hoods",
+        "operation": "add",
+        "semantic_target": "attribute",
+        "before_span": null,
+        "after_span": "with projecting hoods",
+        "edited_instruction": "Show the front of the school buses with projecting hoods and park them adjacent to each other.",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "Adds projecting hoods as a property of the school buses.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Both buses have flat fronts without projecting engine hoods."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The adjacent, front-facing buses have prominent engine hoods projecting ahead of their windshields."
+        }
+      },
+      {
+        "witness_id": "add_predicate_bridge",
+        "operation": "add",
+        "semantic_target": "predicate",
+        "before_span": null,
+        "after_span": "under a bridge",
+        "edited_instruction": "Show the front of the school buses and park them adjacent to each other under a bridge.",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "Adds the spatial relation of the parked buses being under a bridge.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The buses are parked beside trees and a hillside in an open setting without an overhead bridge."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The buses are parked adjacent beneath a large bridge whose deck, steel supports, and concrete pier are visible overhead."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_fb2fc5b1a718ab5fc08d",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Two yellow school buses are parked closely side by side, with both fronts clearly visible, unlike the side views in the reference."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "Several yellow school buses are parked adjacent to one another, and their windshields, front grilles, headlights, and hoods are visible."
+    },
+    "verdicts": [
+      {
+        "witness_id": "add_object_banner",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "One insertion adds a nearby banner while preserving the original constraints. Both images support the source instruction; only the candidate shows the added object.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The adjacent, front-facing buses have no nearby banner visible in the scene."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "A large blue freestanding teardrop banner stands immediately beside the nearest bus; the buses remain adjacent with their fronts visible."
+        }
+      },
+      {
+        "witness_id": "add_attribute_hoods",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "One insertion adds a projecting-hood attribute to the same buses. The positive has flat-front buses, while the candidate has buses with visibly projecting engine hoods.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Both buses have flat front panels beneath their windshields rather than projecting hoods."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The adjacent buses have long yellow engine hoods projecting forward from their windshields, with their fronts clearly shown."
+        }
+      },
+      {
+        "witness_id": "add_predicate_bridge",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "One insertion adds a spatial predicate locating the parked buses under a bridge. It preserves the original subjects and parking relationship and distinguishes the candidate from the positive.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The buses are parked outdoors beside trees and a hillside, with open sky above and no overhead bridge."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "A large steel bridge and its masonry support visibly span above the closely parked school buses."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "add_object_banner",
+      "operation": "add",
+      "semantic_target": "object",
+      "before_span": null,
+      "after_span": "with a banner nearby",
+      "edited_instruction": "Show the front of the school buses and park them adjacent to each other with a banner nearby.",
+      "witness_type": "addition_disambiguation",
+      "changed_constraint": "Adds the presence of a nearby banner; the original instruction distinguishes neither image on this point.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "The adjacent buses have visible fronts, but no banner is present in the depicted parking scene."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "A large blue banner stands beside the nearest bus, and the buses are parked adjacent with their fronts visible."
+      },
+      "independent_review": {
+        "witness_id": "add_object_banner",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "One insertion adds a nearby banner while preserving the original constraints. Both images support the source instruction; only the candidate shows the added object.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The adjacent, front-facing buses have no nearby banner visible in the scene."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "A large blue freestanding teardrop banner stands immediately beside the nearest bus; the buses remain adjacent with their fronts visible."
+        }
+      }
+    },
+    {
+      "witness_id": "add_attribute_hoods",
+      "operation": "add",
+      "semantic_target": "attribute",
+      "before_span": null,
+      "after_span": "with projecting hoods",
+      "edited_instruction": "Show the front of the school buses with projecting hoods and park them adjacent to each other.",
+      "witness_type": "addition_disambiguation",
+      "changed_constraint": "Adds projecting hoods as a property of the school buses.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "Both buses have flat fronts without projecting engine hoods."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "The adjacent, front-facing buses have prominent engine hoods projecting ahead of their windshields."
+      },
+      "independent_review": {
+        "witness_id": "add_attribute_hoods",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "One insertion adds a projecting-hood attribute to the same buses. The positive has flat-front buses, while the candidate has buses with visibly projecting engine hoods.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Both buses have flat front panels beneath their windshields rather than projecting hoods."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The adjacent buses have long yellow engine hoods projecting forward from their windshields, with their fronts clearly shown."
+        }
+      }
+    },
+    {
+      "witness_id": "add_predicate_bridge",
+      "operation": "add",
+      "semantic_target": "predicate",
+      "before_span": null,
+      "after_span": "under a bridge",
+      "edited_instruction": "Show the front of the school buses and park them adjacent to each other under a bridge.",
+      "witness_type": "addition_disambiguation",
+      "changed_constraint": "Adds the spatial relation of the parked buses being under a bridge.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "The buses are parked beside trees and a hillside in an open setting without an overhead bridge."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "The buses are parked adjacent beneath a large bridge whose deck, steel supports, and concrete pier are visible overhead."
+      },
+      "independent_review": {
+        "witness_id": "add_predicate_bridge",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "One insertion adds a spatial predicate locating the parked buses under a bridge. It preserves the original subjects and parking relationship and distinguishes the candidate from the positive.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The buses are parked outdoors beside trees and a hillside, with open sky above and no overhead bridge."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "A large steel bridge and its masonry support visibly span above the closely parked school buses."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "add_object_banner",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    },
+    {
+      "witness_id": "add_attribute_hoods",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    },
+    {
+      "witness_id": "add_predicate_bridge",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "cc15a20106f6d4e668433dc4da204ade9c03d98421d195f2b91d7bd341ff77b5",
+      "input_hash": "9fe4a7dfa2b5c2bff59bb896fcee25d471392965c8e92de80b6143b0f872904e",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/9fe4a7dfa2b5c2bff59bb896fcee25d471392965c8e92de80b6143b0f872904e.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0231d32e01b0535b016af2be49921887d182e37deb294fbbba",
+      "usage": {
+        "prompt_tokens": 9247,
+        "completion_tokens": 901,
+        "total_tokens": 10148,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 180
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "591837307100fd4257f05ec2240d49d240f81b2fa4df91191da8b4ac6e42983d",
+      "input_hash": "a1e9916a704463b3a2de17b43ee0716905ce806f14d2a0761b6f680eef257f0b",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/a1e9916a704463b3a2de17b43ee0716905ce806f14d2a0761b6f680eef257f0b.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0332bf07faaf7be4016af2be6d0d7087d192a47419bef0d95f",
+      "usage": {
+        "prompt_tokens": 8927,
+        "completion_tokens": 619,
+        "total_tokens": 9546,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "case_id": "case_495ff68b7ded0799c13d",
+  "audit_query_id": "audit_query_076",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_495ff68b7ded0799c13d",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows one dog on a red carpet holding a large bone."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows an outdoor scene with a bear and a deer-like animal, with no visible dog, red carpet, or bone."
+    },
+    "candidate_relation": "multiple_constraint_conflict",
+    "violated_source_constraints": [
+      "There is not one remaining dog in the candidate; the visible animals are a bear and a deer-like animal.",
+      "The candidate is not set up on a red carpet; it is outdoors on grass beside a tree.",
+      "The candidate does not visibly give a bone to a dog; it shows an animal interacting with a deer-like carcass."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_495ff68b7ded0799c13d",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows one dog on a red carpet with a large bone in its mouth."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows wildlife outdoors on grass beside a tree, not a dog on a red carpet with a bone."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "028644c1bff47d1fb1331d210a420200b08ec9bad09842e05d629b62857c7341",
+      "input_hash": "6c069e956d8419f8f5a7f8891dde33e737e9c22512b60b9d58290f455d8ee6b6",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/6c069e956d8419f8f5a7f8891dde33e737e9c22512b60b9d58290f455d8ee6b6.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_ack_3fc61734ba6eb49fc09affd4fb3742c2",
+      "usage": {
+        "prompt_tokens": 23158,
+        "completion_tokens": 470,
+        "total_tokens": 23628,
+        "completion_tokens_details": {
+          "reasoning_tokens": 287
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "5d55428551b0a89d339f84adea7f2b9fdf7ca10b9dc540bf46723ec2d3a268aa",
+      "input_hash": "a641cacbb7eab557eaf82666fde66c5e48966ad10b33103bb1a92cd0e4343841",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/a641cacbb7eab557eaf82666fde66c5e48966ad10b33103bb1a92cd0e4343841.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_082bfd70f20073b4016af2bf2a083487d280c0cde4dd44c6e3",
+      "usage": {
+        "prompt_tokens": 26992,
+        "completion_tokens": 94,
+        "total_tokens": 27086,
+        "prompt_tokens_details": {
+          "cached_tokens": 5248
+        }
+      }
+    }
+  ]
+}

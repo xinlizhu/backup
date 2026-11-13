@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_c009b15d82ed4259",
+  "model": "grok-4.6",
+  "signature": "cb958fa178e5ebcdd33f446ebd46fe25a7c20417ca5539cc74de61fb4df99804",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_c009b15d82ed4259_query_00706_object_add",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Adds exactly one object constraint via a single fluent insertion of 'with a chaise lounge'. None of the four positive bedrooms contains a chaise lounge, so the new fact is clearly false for every supplied positive."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.6",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "6116a3defc84361577cc262b64ddd0ab817b6f135da0f45432cbd51fd2730c88",
+      "input_hash": "f50e13081c09a4155924c88c3a6e4c6bd774fc6d099b1bab3ddfb06ad3027424",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/grok-4.6/cache/validate_group/f50e13081c09a4155924c88c3a6e4c6bd774fc6d099b1bab3ddfb06ad3027424.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "eb7c5711-3543-9ce8-ba01-ff6db03c0377",
+      "usage": {
+        "prompt_tokens": 6571,
+        "completion_tokens": 91,
+        "total_tokens": 8322,
+        "prompt_tokens_details": {
+          "text_tokens": 2490,
+          "audio_tokens": 0,
+          "image_tokens": 4081,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1660,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 205760000
+      }
+    }
+  ],
+  "format_warnings": []
+}

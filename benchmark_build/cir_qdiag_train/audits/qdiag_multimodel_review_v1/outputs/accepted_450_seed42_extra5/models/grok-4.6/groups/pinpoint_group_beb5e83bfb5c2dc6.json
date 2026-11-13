@@ -1,0 +1,57 @@
+{
+  "group_id": "pinpoint_group_beb5e83bfb5c2dc6",
+  "model": "grok-4.6",
+  "signature": "cb958fa178e5ebcdd33f446ebd46fe25a7c20417ca5539cc74de61fb4df99804",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_beb5e83bfb5c2dc6_query_02112_attribute_add",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Appends one attribute, narrow cut, and both positives are standard-width ties, so the added fact is clearly false."
+    },
+    {
+      "negative_id": "pinpoint_group_beb5e83bfb5c2dc6_query_02114_object_add",
+      "decision": "reject",
+      "failure_code": "not_visually_verifiable",
+      "reason": "Image 3 is tightly cropped around the tie, so absence of a matching pocket square cannot be reliably judged."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.6",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "dff9709ea50b5d53593fd5c7b0f9ad0e4d88c023d0b0a25be5b25f9df394c6f7",
+      "input_hash": "94c40d02cb30f32bfc0fb1eea3a0d1245beee2d321ec69dff9d31f43db0cb910",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/grok-4.6/cache/validate_group/94c40d02cb30f32bfc0fb1eea3a0d1245beee2d321ec69dff9d31f43db0cb910.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "4e22c9d6-d174-91a7-adfd-b01de93fa4d5",
+      "usage": {
+        "prompt_tokens": 3648,
+        "completion_tokens": 152,
+        "total_tokens": 6301,
+        "prompt_tokens_details": {
+          "text_tokens": 2573,
+          "audio_tokens": 0,
+          "image_tokens": 1075,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2501,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 201420000
+      }
+    }
+  ],
+  "format_warnings": []
+}

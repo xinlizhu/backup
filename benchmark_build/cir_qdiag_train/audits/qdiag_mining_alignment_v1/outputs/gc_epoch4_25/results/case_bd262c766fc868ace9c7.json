@@ -1,0 +1,238 @@
+{
+  "case_id": "case_bd262c766fc868ace9c7",
+  "audit_query_id": "audit_query_087",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_bd262c766fc868ace9c7",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The clownfish is deeper orange than the reference's yellow-orange fish and is surrounded by anemone tentacles, consistent with swimming through their middle."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The clownfish has a much darker, largely black body, but it is positioned at the anemone's outer edge rather than swimming through its middle."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The clownfish is swimming through the middle of a sea anemone."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "predicate",
+        "before_span": "through the middle of",
+        "after_span": "at the edge of",
+        "edited_instruction": "Shows a darker colored clown fish swimming at the edge of a sea anemone.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "The fish's position relative to the anemone changes from its middle to its edge.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The darker orange clownfish is embedded among tentacles in the anemone's interior, rather than at its outer edge."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The largely black clownfish is darker than the reference fish and is swimming at the upper outer edge of the anemone."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "operation": "delete",
+        "semantic_target": "predicate",
+        "before_span": "through the middle of a sea anemone",
+        "after_span": null,
+        "edited_instruction": "Shows a darker colored clown fish swimming.",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "Removes the requirement that the fish swim through the middle of a sea anemone.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "A deeper orange clownfish than the reference fish is shown swimming among tentacles."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "A largely black clownfish, darker than the reference fish, is shown swimming next to the anemone."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_bd262c766fc868ace9c7",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Compared with the yellow-orange fish in R, T shows a more saturated orange clownfish among the anemone tentacles, positioned through their middle."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows a darker orange clownfish beside the anemone at its edge, not swimming through its middle."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "A single predicate-location replacement yields a fluent instruction preserving the fish and anemone. T is in the anemone's middle; C is at its edge.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The clownfish in T is among the middle tentacles, not at the anemone's edge."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The fish in C is beside the visible anemone edge."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting the location phrase and its attached article reconstructs the edited text; the remaining fish description is supported in both images.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "T visibly shows an orange clownfish swimming among anemone tentacles."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C visibly shows an orange clownfish beside an anemone."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "substitute",
+      "semantic_target": "predicate",
+      "before_span": "through the middle of",
+      "after_span": "at the edge of",
+      "edited_instruction": "Shows a darker colored clown fish swimming at the edge of a sea anemone.",
+      "witness_type": "substitution_contrast",
+      "changed_constraint": "The fish's position relative to the anemone changes from its middle to its edge.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "The darker orange clownfish is embedded among tentacles in the anemone's interior, rather than at its outer edge."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "The largely black clownfish is darker than the reference fish and is swimming at the upper outer edge of the anemone."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "A single predicate-location replacement yields a fluent instruction preserving the fish and anemone. T is in the anemone's middle; C is at its edge.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The clownfish in T is among the middle tentacles, not at the anemone's edge."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The fish in C is beside the visible anemone edge."
+        }
+      }
+    },
+    {
+      "witness_id": "w2",
+      "operation": "delete",
+      "semantic_target": "predicate",
+      "before_span": "through the middle of a sea anemone",
+      "after_span": null,
+      "edited_instruction": "Shows a darker colored clown fish swimming.",
+      "witness_type": "deletion_relaxation",
+      "changed_constraint": "Removes the requirement that the fish swim through the middle of a sea anemone.",
+      "edited_on_positive": {
+        "status": "supported",
+        "evidence": "A deeper orange clownfish than the reference fish is shown swimming among tentacles."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "A largely black clownfish, darker than the reference fish, is shown swimming next to the anemone."
+      },
+      "independent_review": {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting the location phrase and its attached article reconstructs the edited text; the remaining fish description is supported in both images.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "T visibly shows an orange clownfish swimming among anemone tentacles."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C visibly shows an orange clownfish beside an anemone."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    },
+    {
+      "witness_id": "w2",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "a4d257621970d162e4b86407e82f6bccdf879b2b4f2a0c9d039306679166b41b",
+      "input_hash": "27f2b35fbceb73339b7628fe30ea3008310b3c1fbaf95dbd73860a282dff76a1",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/27f2b35fbceb73339b7628fe30ea3008310b3c1fbaf95dbd73860a282dff76a1.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_002cbe9102317f2e016af2bec4de1887d0b3c66e7675282122",
+      "usage": {
+        "prompt_tokens": 8114,
+        "completion_tokens": 755,
+        "total_tokens": 8869,
+        "prompt_tokens_details": {
+          "cached_tokens": 3830
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 174
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "eaeeb6d9d78bd7f44ba09d150c9c95337608daee503933327d2ba4a1e6338524",
+      "input_hash": "7728dc67eb4b7148b09500933894658a424ee5c0938e8c5879826036cc5f5302",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/7728dc67eb4b7148b09500933894658a424ee5c0938e8c5879826036cc5f5302.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_019a72018b257c76016af2bedadd6c87d196c2f44734ce01e6",
+      "usage": {
+        "prompt_tokens": 7879,
+        "completion_tokens": 566,
+        "total_tokens": 8445,
+        "prompt_tokens_details": {
+          "cached_tokens": 5248
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 235
+        }
+      }
+    }
+  ]
+}

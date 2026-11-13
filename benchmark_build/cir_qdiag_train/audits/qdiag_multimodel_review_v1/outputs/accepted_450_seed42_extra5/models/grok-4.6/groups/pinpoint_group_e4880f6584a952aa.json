@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_e4880f6584a952aa",
+  "model": "grok-4.6",
+  "signature": "cb958fa178e5ebcdd33f446ebd46fe25a7c20417ca5539cc74de61fb4df99804",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_e4880f6584a952aa_query_06276_object_add",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Adding only 'on a mannequin' reconstructs the negative exactly and preserves the clothing edit. Every supplied positive shows a real person wearing the fitted tee, so the mannequin is clearly false."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.6",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "71ad73a3f1ba6266f943c4c214d021c3710f0d320573a87cc05340e230b148ea",
+      "input_hash": "e8a7fc5be4913f9e9e544aaa15ae8785b26994e49d7df07fc9bbb259adaef05b",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/grok-4.6/cache/validate_group/e8a7fc5be4913f9e9e544aaa15ae8785b26994e49d7df07fc9bbb259adaef05b.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "0124c068-f528-939b-a395-5fc15a88ce30",
+      "usage": {
+        "prompt_tokens": 5048,
+        "completion_tokens": 90,
+        "total_tokens": 7092,
+        "prompt_tokens_details": {
+          "text_tokens": 2455,
+          "audio_tokens": 0,
+          "image_tokens": 2593,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1954,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 192880000
+      }
+    }
+  ],
+  "format_warnings": []
+}

@@ -1,0 +1,308 @@
+{
+  "case_id": "case_fae6454175cd17e43ad8",
+  "audit_query_id": "audit_query_090",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_fae6454175cd17e43ad8",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The orange car is shown from a rear three-quarter angle on a road immediately beside a large body of water."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "The white convertible is shown from a rear three-quarter angle beside water visible behind the trees and fence."
+    },
+    "candidate_relation": "compatible",
+    "violated_source_constraints": [],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "add",
+        "semantic_target": "attribute",
+        "before_span": null,
+        "after_span": "white",
+        "edited_instruction": "Show white car from back by water.",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "The car must be white.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The car is orange, not white."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The white car is viewed from behind beside water."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "operation": "add",
+        "semantic_target": "object",
+        "before_span": null,
+        "after_span": "with swans nearby",
+        "edited_instruction": "Show car from back by water with swans nearby.",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "Swans must be present near the car.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The visible roadside and water around the orange car contain no swans."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Several white swans are visible behind and to the left of the rear-view car beside the water."
+        }
+      },
+      {
+        "witness_id": "w3",
+        "operation": "add",
+        "semantic_target": "predicate",
+        "before_span": null,
+        "after_span": "while it is parked",
+        "edited_instruction": "Show car from back by water while it is parked.",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "The car must be parked.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The orange car is traveling along the road, with blurred wheels and motion blur across the road and surroundings."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The white convertible is stationary in a paved parking area beside the curb, shown from behind near water."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_fae6454175cd17e43ad8",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The orange car is shown from a rear three-quarter angle on a road directly beside a large body of water."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "The white convertible is shown from a rear three-quarter angle beside water visible behind the fence on the right."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "Inserting 'white' adds one car-color attribute and preserves all source constraints. Both images satisfy the source, but only the candidate has a white car.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The car's body is orange, not white."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The car has a white body and is viewed from behind beside water."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "The single insertion adds the presence of nearby swans while preserving the rear view and waterside setting. Swans visibly distinguish the candidate from the positive.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The visible water and roadside surroundings contain no nearby swans."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Several white swans are visible just behind and to the left of the white car, which is shown from behind beside water."
+        }
+      },
+      {
+        "witness_id": "w3",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "The insertion adds one predicate, being parked, with the car retained as its subject. The positive shows driving, whereas the candidate shows a parked car; both retain the source constraints.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The orange car is traveling along the waterside road, with blurred wheels and directional motion blur across the road and background."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The white car is parked on a paved area beside the curb, with sharply visible stationary wheels, and is viewed from behind beside water."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "add",
+      "semantic_target": "attribute",
+      "before_span": null,
+      "after_span": "white",
+      "edited_instruction": "Show white car from back by water.",
+      "witness_type": "addition_disambiguation",
+      "changed_constraint": "The car must be white.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "The car is orange, not white."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "The white car is viewed from behind beside water."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "Inserting 'white' adds one car-color attribute and preserves all source constraints. Both images satisfy the source, but only the candidate has a white car.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The car's body is orange, not white."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The car has a white body and is viewed from behind beside water."
+        }
+      }
+    },
+    {
+      "witness_id": "w2",
+      "operation": "add",
+      "semantic_target": "object",
+      "before_span": null,
+      "after_span": "with swans nearby",
+      "edited_instruction": "Show car from back by water with swans nearby.",
+      "witness_type": "addition_disambiguation",
+      "changed_constraint": "Swans must be present near the car.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "The visible roadside and water around the orange car contain no swans."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "Several white swans are visible behind and to the left of the rear-view car beside the water."
+      },
+      "independent_review": {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "The single insertion adds the presence of nearby swans while preserving the rear view and waterside setting. Swans visibly distinguish the candidate from the positive.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The visible water and roadside surroundings contain no nearby swans."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Several white swans are visible just behind and to the left of the white car, which is shown from behind beside water."
+        }
+      }
+    },
+    {
+      "witness_id": "w3",
+      "operation": "add",
+      "semantic_target": "predicate",
+      "before_span": null,
+      "after_span": "while it is parked",
+      "edited_instruction": "Show car from back by water while it is parked.",
+      "witness_type": "addition_disambiguation",
+      "changed_constraint": "The car must be parked.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "The orange car is traveling along the road, with blurred wheels and motion blur across the road and surroundings."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "The white convertible is stationary in a paved parking area beside the curb, shown from behind near water."
+      },
+      "independent_review": {
+        "witness_id": "w3",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "The insertion adds one predicate, being parked, with the car retained as its subject. The positive shows driving, whereas the candidate shows a parked car; both retain the source constraints.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The orange car is traveling along the waterside road, with blurred wheels and directional motion blur across the road and background."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The white car is parked on a paved area beside the curb, with sharply visible stationary wheels, and is viewed from behind beside water."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    },
+    {
+      "witness_id": "w2",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    },
+    {
+      "witness_id": "w3",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "3001d28c7d60b128fdc353842e01c0d2a355fd0aa2fbc36c25f67c78f8a96ea8",
+      "input_hash": "967b0ea6681b346de62021931e7a30ddd805a1afdbf78498f39a75cc2cbdf685",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/967b0ea6681b346de62021931e7a30ddd805a1afdbf78498f39a75cc2cbdf685.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_018e45a1f52e93f5016af2bdf7d09487d2b09534ec54921d5d",
+      "usage": {
+        "prompt_tokens": 10697,
+        "completion_tokens": 840,
+        "total_tokens": 11537,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 201
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "b8234246a1bc4c3e9014398fdadfb390c7ccbb1e9d775eeacc2c39a494512b58",
+      "input_hash": "cee73369dd96b3749991a6ba55e4823b70f3f9627a472443226a22d2a81a9d01",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/cee73369dd96b3749991a6ba55e4823b70f3f9627a472443226a22d2a81a9d01.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0ed19dc7415c2f5c016af2be11dfa487d1ab2ac65631688816",
+      "usage": {
+        "prompt_tokens": 10343,
+        "completion_tokens": 648,
+        "total_tokens": 10991,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 43
+        }
+      }
+    }
+  ]
+}

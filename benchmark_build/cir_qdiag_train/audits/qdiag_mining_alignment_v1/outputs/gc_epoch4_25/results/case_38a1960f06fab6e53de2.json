@@ -1,0 +1,163 @@
+{
+  "case_id": "case_38a1960f06fab6e53de2",
+  "audit_query_id": "audit_query_079",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_38a1960f06fab6e53de2",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 prominently shows a dark black bowl-shaped sink."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a pale, translucent bowl sink, not a black one."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The sink is black; the candidate sink is pale and translucent."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "attribute",
+        "before_span": "black",
+        "after_span": "transparent",
+        "edited_instruction": "Show a transparent bowl sink.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "The sink's color/appearance changes from black to transparent.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2's bowl sink is dark and opaque, not transparent."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows a pale translucent bowl sink."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_38a1960f06fab6e53de2",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a dark, nearly black bowl-shaped sink."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a transparent, pale glass bowl sink, not a black one."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing the color attribute “black” with “transparent” is one fluent edit; the bowl sink remains the same entity type.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2’s bowl sink is dark and opaque, not transparent."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3’s bowl sink is visibly transparent glass."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "substitute",
+      "semantic_target": "attribute",
+      "before_span": "black",
+      "after_span": "transparent",
+      "edited_instruction": "Show a transparent bowl sink.",
+      "witness_type": "substitution_contrast",
+      "changed_constraint": "The sink's color/appearance changes from black to transparent.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "Image 2's bowl sink is dark and opaque, not transparent."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "Image 3 shows a pale translucent bowl sink."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing the color attribute “black” with “transparent” is one fluent edit; the bowl sink remains the same entity type.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2’s bowl sink is dark and opaque, not transparent."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3’s bowl sink is visibly transparent glass."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "fc8fc714535b93a9b4c2418d10d5b6be9dfb006a9b91c4e736c4282e04e80fe8",
+      "input_hash": "6702bde58a465a3d40782c9fdd73ebe8e6ad1b3d57a372fbdd1ba28eb96b26a6",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/6702bde58a465a3d40782c9fdd73ebe8e6ad1b3d57a372fbdd1ba28eb96b26a6.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0accb1d8818ec259016af2befe404c87d1a5046a8e21c4ca87",
+      "usage": {
+        "prompt_tokens": 8452,
+        "completion_tokens": 309,
+        "total_tokens": 8761,
+        "prompt_tokens_details": {
+          "cached_tokens": 5888
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 81
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "275d29aac371ffa1c0dc13174ab64d69bbb8a8942437769d25340bc7c3b6702e",
+      "input_hash": "1c46269cf2b1d3e1548b3df447c1aa05bdc99782cb7147b466312a9e03915dac",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/1c46269cf2b1d3e1548b3df447c1aa05bdc99782cb7147b466312a9e03915dac.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0276def120a510a0016af2bf09223087d1a2aacf510d8244c1",
+      "usage": {
+        "prompt_tokens": 7968,
+        "completion_tokens": 266,
+        "total_tokens": 8234,
+        "completion_tokens_details": {
+          "reasoning_tokens": 76
+        }
+      }
+    }
+  ]
+}

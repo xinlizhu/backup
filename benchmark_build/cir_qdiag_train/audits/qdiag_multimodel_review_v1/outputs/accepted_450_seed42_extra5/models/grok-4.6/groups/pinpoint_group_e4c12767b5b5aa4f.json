@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_e4c12767b5b5aa4f",
+  "model": "grok-4.6",
+  "signature": "cb958fa178e5ebcdd33f446ebd46fe25a7c20417ca5539cc74de61fb4df99804",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_e4c12767b5b5aa4f_query_06800_attribute_add",
+      "decision": "reject",
+      "failure_code": "not_fluent",
+      "reason": "Appending \"with a glossy finish\" directly after \"without product\" creates an unnatural, ungrammatical modifier stack that does not read as a fluent query."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.6",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "e2eba3186b7876e361e67ca520618f902d0aff6a66a7342b2dca0ae9423cc7b2",
+      "input_hash": "30a37d405e19011dafd16c7a334ebc3ab3dcb1492ad5e75f67d54ff82556aad1",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/grok-4.6/cache/validate_group/30a37d405e19011dafd16c7a334ebc3ab3dcb1492ad5e75f67d54ff82556aad1.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "55de0511-0eb3-9db9-b126-bef1563847d7",
+      "usage": {
+        "prompt_tokens": 3579,
+        "completion_tokens": 87,
+        "total_tokens": 6721,
+        "prompt_tokens_details": {
+          "text_tokens": 2475,
+          "audio_tokens": 0,
+          "image_tokens": 1104,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 3055,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 229380000
+      }
+    }
+  ],
+  "format_warnings": []
+}

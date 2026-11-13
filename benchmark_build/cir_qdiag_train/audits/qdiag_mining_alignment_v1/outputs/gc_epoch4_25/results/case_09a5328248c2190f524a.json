@@ -1,0 +1,175 @@
+{
+  "case_id": "case_09a5328248c2190f524a",
+  "audit_query_id": "audit_query_087",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_09a5328248c2190f524a",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The orange clownfish is darker in body color than the yellow-orange fish in R and is positioned amid dense anemone tentacles, consistent with swimming through their middle."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "The red clownfish is darker than the fish in R and is amid the central anemone tentacles. The additional dark clownfish does not violate any stated constraint."
+    },
+    "candidate_relation": "compatible",
+    "violated_source_constraints": [],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "add",
+        "semantic_target": "attribute",
+        "before_span": null,
+        "after_span": "with a red body",
+        "edited_instruction": "Shows a darker colored clown fish with a red body swimming through the middle of a sea anemone.",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "The clownfish must have a red body.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The clownfish has a bright orange body with white bands, rather than a red body."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The central clownfish has a deep red body with white bands and is among the anemone tentacles."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "operation": "add",
+        "semantic_target": "object",
+        "before_span": null,
+        "after_span": "with another clown fish nearby",
+        "edited_instruction": "Shows a darker colored clown fish swimming through the middle of a sea anemone with another clown fish nearby.",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "Another clownfish must be visible nearby.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Only one clownfish is visible; the partially visible gray fish at the upper right is not a clownfish."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "A second, dark clownfish is visible just above the red clownfish in the same anemone."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_09a5328248c2190f524a",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "The orange clownfish is visibly among the anemone's central tentacles. However, it is not clearly darker than the reference fish: the reference has a yellow face, orange areas, and substantial black body markings. The relative darkness constraint cannot be reliably established."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "A deep red clownfish is positioned among the anemone's central tentacles and is visibly darker than the reference's yellow-orange coloring. A second, very dark clownfish is nearby."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "reject",
+        "failure_code": "source_invalid_or_uncertain",
+        "witness_type": null,
+        "reason": "The insertion adds one body-color attribute and is fluent, but ADD requires the original instruction to be supported on both images. The positive fish's relative darkness is uncertain, so the required support pattern is not established.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The central clownfish has a bright orange body with white bands and black edging, rather than a red body."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The foreground clownfish has a deep red body with white bands and is surrounded by the anemone's central tentacles."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "decision": "reject",
+        "failure_code": "source_invalid_or_uncertain",
+        "witness_type": null,
+        "reason": "The insertion adds a nearby clownfish as one new entity constraint. Although this distinguishes the visible scenes, the original darker-than-reference constraint is uncertain on the positive, preventing acceptance as ADD.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Only one clownfish is visible among the tentacles. The gray fish at the upper right is not another clownfish."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The red clownfish is among the central anemone tentacles, with a second, dark clownfish immediately above it at the same anemone."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": false,
+      "local_failures": [
+        "wrong_witness_type",
+        "wrong_support_pattern"
+      ],
+      "review_decision": "reject"
+    },
+    {
+      "witness_id": "w2",
+      "accepted": false,
+      "local_failures": [
+        "wrong_witness_type",
+        "wrong_support_pattern"
+      ],
+      "review_decision": "reject"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "8314c3123401a9ed7682118684be4e3aa15d31c83eea4f9153d87c76ac72e818",
+      "input_hash": "b30f3635df70086f0f43d4b4a97d089e3f2087819dda7f78415a05093dcd619e",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/b30f3635df70086f0f43d4b4a97d089e3f2087819dda7f78415a05093dcd619e.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0ad99b5264ff7615016af2be8f308087d1bf71b6b40e037534",
+      "usage": {
+        "prompt_tokens": 8941,
+        "completion_tokens": 721,
+        "total_tokens": 9662,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 169
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "4641f8e5114bd20db057e09a73448817c6cb98c4ba7c14f21db9678ca6dd96a2",
+      "input_hash": "cb0a9f90ce9b4bd2d17bdc6ef43cc838d6b913c30cac35fc990755a6080c7404",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/cb0a9f90ce9b4bd2d17bdc6ef43cc838d6b913c30cac35fc990755a6080c7404.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0d3b435c7b560b80016af2bea9c62487d1b77f8af3d0b4410d",
+      "usage": {
+        "prompt_tokens": 8550,
+        "completion_tokens": 672,
+        "total_tokens": 9222,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 134
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "group_id": "pinpoint_group_da5bdc63e808e138",
+  "model": "grok-4.7",
+  "signature": "52913ea34ae01078c58f7a80fc2119b86ef4b6b3449e9e55b21816a5d5d1ccbd",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_da5bdc63e808e138_query_06102_attribute_substitute",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Single attribute edit: replacing 'fabric' with 'denim' reconstructs the text and preserves the tee and <img2> reference. Every supplied positive is glass, translucent plastic, mirrored metal, or feathers, so denim is clearly false for all."
+    },
+    {
+      "negative_id": "pinpoint_group_da5bdc63e808e138_query_06102_predicate_substitute",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Single predicate edit: 'in' to 'beside' changes only the tee-fabric relation and reconstructs exactly. No supplied positive shows a tee placed beside the iridescent fabric, so the new relation is clearly false for all."
+    },
+    {
+      "negative_id": "pinpoint_group_da5bdc63e808e138_query_06105_predicate_delete",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Deletes exactly one predicate constraint, the clause saying the shirt uses <img1>'s reflective iridescent fabric. The remaining plain crewneck tee like <img2> is fluent, meaningful, and strictly weaker."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.7",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "da5f16b41a6fd957fda08706241c562c44bd0692d17387d638e5ffd26e3c4a9c",
+      "input_hash": "c6c6306ca34068d6fbba7a4767f0da33e6a5349d114118ccdd797ada5dcd5194",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/grok-4.7/cache/validate_group/c6c6306ca34068d6fbba7a4767f0da33e6a5349d114118ccdd797ada5dcd5194.json",
+      "cached": false,
+      "attempts": 2,
+      "request_id": "56de0ddf-1fd7-977c-aaa0-6cac007e8d99",
+      "usage": {
+        "prompt_tokens": 5451,
+        "completion_tokens": 281,
+        "total_tokens": 13332,
+        "prompt_tokens_details": {
+          "text_tokens": 2734,
+          "audio_tokens": 0,
+          "image_tokens": 2717,
+          "cached_tokens": 5376
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 7600,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 501240000
+      }
+    }
+  ],
+  "format_warnings": []
+}

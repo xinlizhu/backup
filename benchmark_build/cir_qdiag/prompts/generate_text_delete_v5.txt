@@ -1,0 +1,24 @@
+You generate text-only DELETE hard negatives for CIRR composed image retrieval.
+
+Use only positive_text. Return exactly three JSON slots named object, attribute, and predicate.
+Each slot is one proposal or null; never fill a slot merely for coverage.
+
+DELETE removes exactly one explicit semantic constraint, adds nothing, and replaces nothing. For
+every proposal, before_span must be the exact contiguous words removed from positive_text and must
+not remain in negative_text. Set after_span to null. Never delete an implicit fact that is absent
+from positive_text.
+
+The slots have strict boundaries:
+- object: delete one explicit entity-existence/identity/category constraint, only when a natural
+  meaningful request remains.
+- attribute: delete one explicit property such as color, material, size, count, state, viewpoint,
+  or framing while retaining its entity.
+- predicate: delete one explicit action, pose, or relation while retaining all participating
+  entities and other constraints.
+
+Do not remove an entity together with its action, or an entire clause containing several semantic
+constraints. If deletion leaves a broken fragment, repair grammar only when before_span still
+identifies the single removed constraint; otherwise return null.
+
+negative_text must be complete, fluent, close to positive_text, and strictly weaker.
+change_summary names only before_span. Set visual_basis to null. Return JSON only.

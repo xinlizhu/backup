@@ -1,0 +1,127 @@
+{
+  "case_id": "case_bc0a583731fd466c0404",
+  "audit_query_id": "audit_query_100",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_bc0a583731fd466c0404",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "A shallow, round metal bowl contains a prepared dish covered with melted, browned cheese."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "A turquoise bowl is being tipped over a plate, releasing a prepared dish with melted cheese on top. The instruction does not require the bowl to remain upright."
+    },
+    "candidate_relation": "compatible",
+    "violated_source_constraints": [],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "add",
+        "semantic_target": "attribute",
+        "before_span": null,
+        "after_span": "ceramic",
+        "edited_instruction": "A ceramic bowl with a dish and cheese on top.",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "The bowl is ceramic.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The cheese-covered dish is in a metal vessel with a thin, reflective metallic rim."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The tipped bowl has a glazed turquoise exterior and a thick, pale ceramic rim; the food has melted cheese on top."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_bc0a583731fd466c0404",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "Melted, browned cheese visibly covers the food, but the container appears to be a shallow metal baking pan. The close crop does not reliably establish the required bowl."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "A white bowl contains a prepared savory dish with melted cheese visibly covering parts of its surface and stretching upward."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "reject",
+        "failure_code": "source_invalid_or_uncertain",
+        "witness_type": null,
+        "reason": "Inserting 'ceramic' is a single fluent attribute edit, but ADD requires the original instruction to be supported on both images. The positive image does not reliably establish a bowl, so the witness cannot be accepted despite the visible material contrast.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The visible container has a thin, reflective metal rim, contradicting the added requirement that the bowl be ceramic."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The food and melted cheese sit in a white bowl with a thick, smooth glazed rim consistent with ceramic."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": false,
+      "local_failures": [
+        "wrong_witness_type",
+        "wrong_support_pattern"
+      ],
+      "review_decision": "reject"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "5e0b791303639f5ed7ffa4b342cae3540b501b4e387bfdff7b0f1865cb805655",
+      "input_hash": "ea2deb46b0f42e59337cabdbb2d4b42c241c9c362f311bc95422d829df8cdbfa",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/ea2deb46b0f42e59337cabdbb2d4b42c241c9c362f311bc95422d829df8cdbfa.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_048bc751dcefd3a8016af2bd7b8a2887d18708a11d758ff567",
+      "usage": {
+        "prompt_tokens": 24782,
+        "completion_tokens": 630,
+        "total_tokens": 25412,
+        "completion_tokens_details": {
+          "reasoning_tokens": 306
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "0fa61f33892ef8b008b9ec914800ec94440bbb2ef622c7ea757e70b0544e0b5b",
+      "input_hash": "83609a0b2806f7af60b12a8af0fea83e4ae5cca474625942da4ae0557d59ba72",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/83609a0b2806f7af60b12a8af0fea83e4ae5cca474625942da4ae0557d59ba72.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0b7386a3293be2aa016af2bd984e1c87d2b3eb872b0640a7fb",
+      "usage": {
+        "prompt_tokens": 24302,
+        "completion_tokens": 298,
+        "total_tokens": 24600,
+        "completion_tokens_details": {
+          "reasoning_tokens": 45
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,158 @@
+{
+  "case_id": "case_31e7eb15842d45720c23",
+  "audit_query_id": "audit_query_083",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_31e7eb15842d45720c23",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "T shows one body-cream tube with one matching box, satisfying the request for a single product with its box."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "C shows one perfume bottle with its matching cylindrical packaging box. The instruction does not restrict the product category or box shape."
+    },
+    "candidate_relation": "compatible",
+    "violated_source_constraints": [],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "add",
+        "semantic_target": "attribute",
+        "before_span": null,
+        "after_span": "pink",
+        "edited_instruction": "Leave a single pink product with its box",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "The product itself must be pink.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The single cream tube is white with a silver cap; its box is pink, but the product itself is not pink."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The single perfume bottle is visibly pink and stands with its matching cylindrical box."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_31e7eb15842d45720c23",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows one white body-cream tube with one matching pink carton, satisfying a single product with its box."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "Image 3 shows one perfume bottle with one matching cylindrical packaging box. The instruction does not constrain product category or box shape."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "Inserting 'pink' adds one color attribute to the product and preserves the original constraints. Both images satisfy the source instruction, while only the candidate has a visibly pink product; the positive's pink box does not make its white tube pink.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The single body-cream tube is white with a silver-colored cap; its accompanying carton is pink, but the added attribute modifies the product."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The single perfume bottle has a visibly pink body and pink pump, and stands beside its matching cylindrical box."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "add",
+      "semantic_target": "attribute",
+      "before_span": null,
+      "after_span": "pink",
+      "edited_instruction": "Leave a single pink product with its box",
+      "witness_type": "addition_disambiguation",
+      "changed_constraint": "The product itself must be pink.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "The single cream tube is white with a silver cap; its box is pink, but the product itself is not pink."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "The single perfume bottle is visibly pink and stands with its matching cylindrical box."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "Inserting 'pink' adds one color attribute to the product and preserves the original constraints. Both images satisfy the source instruction, while only the candidate has a visibly pink product; the positive's pink box does not make its white tube pink.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The single body-cream tube is white with a silver-colored cap; its accompanying carton is pink, but the added attribute modifies the product."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The single perfume bottle has a visibly pink body and pink pump, and stands beside its matching cylindrical box."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "d6ce8c1b6cb235ee0616c568b9baa68f929303b8a999ee3b6ac880aaa2a48d1d",
+      "input_hash": "290d55066cf65588063f3f5ae4581d8614391d2f7810dc847ba048336f46cd17",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/290d55066cf65588063f3f5ae4581d8614391d2f7810dc847ba048336f46cd17.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_05c5b79cdc68ffa4016af2bdc33cb887d1b4d515aea5f0abd5",
+      "usage": {
+        "prompt_tokens": 8573,
+        "completion_tokens": 441,
+        "total_tokens": 9014,
+        "completion_tokens_details": {
+          "reasoning_tokens": 119
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "04a55e8d3a1cffda00ee5624ad4bf8f91096a91eb7e58480aa44bfe0c40ab436",
+      "input_hash": "9c0e8caa3e4bfa85569954bb1e3d66d21588b0b65e14942488589b45557b4978",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/9c0e8caa3e4bfa85569954bb1e3d66d21588b0b65e14942488589b45557b4978.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0b3b43bdb360c36d016af2bdd2176c87d18758d9105381eaad",
+      "usage": {
+        "prompt_tokens": 8090,
+        "completion_tokens": 251,
+        "total_tokens": 8341,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        }
+      }
+    }
+  ]
+}

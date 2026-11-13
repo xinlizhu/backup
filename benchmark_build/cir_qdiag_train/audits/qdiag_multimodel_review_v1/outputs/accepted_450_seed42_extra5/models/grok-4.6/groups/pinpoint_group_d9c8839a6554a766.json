@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_d9c8839a6554a766",
+  "model": "grok-4.6",
+  "signature": "cb958fa178e5ebcdd33f446ebd46fe25a7c20417ca5539cc74de61fb4df99804",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_d9c8839a6554a766_query_00187_predicate_add",
+      "decision": "reject",
+      "failure_code": "wrong_semantic_target",
+      "reason": "Adding 'that takes place at night' only gives the event a time of occurrence, which is a temporal attribute; the bleached verb 'takes place' introduces no new action or relation, so the claimed predicate target is wrong."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.6",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "7efdc536300f82e77732d561e9de11a0715fdaeb95162734af4f1fe88e4b730b",
+      "input_hash": "28e24df9eba94bbb58ae69f76a124f4f0c159bcd84c94a43bc0c206ae9ca76a5",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/grok-4.6/cache/validate_group/28e24df9eba94bbb58ae69f76a124f4f0c159bcd84c94a43bc0c206ae9ca76a5.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "33069ed9-81fe-98cb-bbb4-5730d9b92780",
+      "usage": {
+        "prompt_tokens": 5357,
+        "completion_tokens": 101,
+        "total_tokens": 10034,
+        "prompt_tokens_details": {
+          "text_tokens": 2498,
+          "audio_tokens": 0,
+          "image_tokens": 2859,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 4576,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 357040000
+      }
+    }
+  ],
+  "format_warnings": []
+}

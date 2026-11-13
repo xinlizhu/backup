@@ -1,0 +1,132 @@
+{
+  "case_id": "case_c7ea61081aee1be6c474",
+  "audit_query_id": "audit_query_086",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_c7ea61081aee1be6c474",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The fox holds an upright seated pose with straight forelegs, matching the prominent cat's posture in R; 'standing in the same gesture' describes that reference pose."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows a pug, not a fox. Its upright seated posture with forepaws planted broadly matches the reference pose."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The replacement animal must be a fox."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "object",
+        "before_span": "fox",
+        "after_span": "dog",
+        "edited_instruction": "change to a dog standing in the same gesture",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "Replace the required animal category, fox, with dog.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "T shows a fox with pointed ears and a bushy tail, not a dog, though its upright pose matches R."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C shows a pug dog sitting upright with its forepaws planted, matching the reference cat's general pose."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_c7ea61081aee1be6c474",
+    "source_on_positive": {
+      "status": "contradicted",
+      "evidence": "The fox is seated upright on its haunches, with straight forelegs, resembling the seated main cat in R. It does not satisfy the explicit requirement that the fox be standing."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows a pug dog, not a fox. It also appears seated, with its hindquarters down and front paws planted."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "reject",
+        "failure_code": "source_invalid_or_uncertain",
+        "witness_type": null,
+        "reason": "The fox-to-dog replacement is a single object edit, but the required support pattern fails: T does not support the source's standing constraint, and C does not support that retained constraint in the edited instruction.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "T shows a fox, not a dog, and the animal is seated upright rather than standing."
+        },
+        "edited_on_candidate": {
+          "status": "contradicted",
+          "evidence": "C shows a dog, but it is seated with its hindquarters down rather than standing as required by the unchanged instruction."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": false,
+      "local_failures": [
+        "wrong_witness_type",
+        "wrong_support_pattern"
+      ],
+      "review_decision": "reject"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "008c8b5f808eaf5b0443af0105b5fb86f4af363713f8276398aed0e6ac8c4213",
+      "input_hash": "61579483e6b34ae2baab16f9e96dbbc38648c6b1cbe3b0d02d3ae21c3f5eb548",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/61579483e6b34ae2baab16f9e96dbbc38648c6b1cbe3b0d02d3ae21c3f5eb548.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0e4bdb6f77ab6e57016af2bd424e1887d1abb5ac7753e3167d",
+      "usage": {
+        "prompt_tokens": 6368,
+        "completion_tokens": 499,
+        "total_tokens": 6867,
+        "prompt_tokens_details": {
+          "cached_tokens": 5126
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 136
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "3ac83e1005b685f1d06fb8810511f896326f5f21f896242674fbd212784f1a74",
+      "input_hash": "848ee04a8fc76c95343dbe390f7919e13a4548a31d4a1b7fcb63075d9ce4f04e",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/848ee04a8fc76c95343dbe390f7919e13a4548a31d4a1b7fcb63075d9ce4f04e.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_01b7ebabd9519867016af2bd54977c87d184804eca4162b0fc",
+      "usage": {
+        "prompt_tokens": 5888,
+        "completion_tokens": 369,
+        "total_tokens": 6257,
+        "completion_tokens_details": {
+          "reasoning_tokens": 108
+        }
+      }
+    }
+  ]
+}

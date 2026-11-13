@@ -1,0 +1,72 @@
+{
+  "batch_size": 32,
+  "bootstrap_confidence_level": 0.95,
+  "bootstrap_replicates": 5000,
+  "calibration_pair_count": 45,
+  "calibration_paraphrase_count": 123,
+  "calibration_version": "2",
+  "classification": {
+    "method": "leave-one-pair-out calibration interval",
+    "otherwise": "uncertain",
+    "stable_loss": "original_delta + shift_interval_high < 0",
+    "stable_win": "original_delta + shift_interval_low > 0"
+  },
+  "coverage": {
+    "accepted_count_histogram": {
+      "0": 3,
+      "1": 3,
+      "2": 6,
+      "3": 36
+    },
+    "accepted_paraphrase_count": 123,
+    "covered_sample_count": 45,
+    "final_sample_count": 48,
+    "ignored_nonfinal_samples": [
+      "cirr_val_30003",
+      "cirr_val_35658"
+    ],
+    "samples_without_accepted_paraphrases": [
+      "cirr_val_28214",
+      "cirr_val_29336",
+      "cirr_val_36862"
+    ]
+  },
+  "device": "cuda:0",
+  "diagnostic_input_sha256": "7f2beeb951228a40ee78cdc77372eedb46971ba6bae6fc12733245eedf9102f3",
+  "diagnostics_dir": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_openai/outputs/pilot_50_v6_openai_terra/model_diagnostics/BGE-VL-MLLM-S1",
+  "dtype": "auto",
+  "input_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_openai/outputs/pilot_50_v6_openai_terra/final.jsonl",
+  "input_sha256": "7f2beeb951228a40ee78cdc77372eedb46971ba6bae6fc12733245eedf9102f3",
+  "interval_level": 0.95,
+  "model_name": "BGE-VL-MLLM-S1",
+  "model_path": "/mnt/data/datasets/search_dataset/zxl/CIR_PLAY/models/checkpoints/BGE-VL-MLLM-S1",
+  "original_rescore_drift": {
+    "max_absolute": 0.0001741647720336914,
+    "mean": -4.2872296439048585e-06,
+    "mean_absolute": 2.417729960547615e-05,
+    "purpose": "diagnostic only; paraphrase shifts are measured against the same-run re-encoded original query"
+  },
+  "pair_balanced_mean_shift": -0.003988299656797339,
+  "pair_balanced_median_shift": -0.0004999339580535889,
+  "pair_weighting": "each pair has total weight 1",
+  "paraphrase_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_openai/outputs/pilot_50_v6_openai_terra/positive_paraphrases.jsonl",
+  "paraphrase_sha256": "563fbab9ccb9b23c0597c478aeac9cef1aac2e36b6a7448ce5306dde84aef917",
+  "python": "3.12.13",
+  "schema_version": "1.0",
+  "seed": 42,
+  "shift_interval_high": 0.0359785258769989,
+  "shift_interval_high_bootstrap_ci": [
+    0.029629826545715332,
+    0.05255371332168579
+  ],
+  "shift_interval_low": -0.06735631823539734,
+  "shift_interval_low_bootstrap_ci": [
+    -0.07097980380058289,
+    -0.041196465492248535
+  ],
+  "symmetric_abs_shift_threshold": 0.051427632570266724,
+  "symmetric_threshold_bootstrap_ci": [
+    0.04009249806404114,
+    0.06735631823539734
+  ]
+}

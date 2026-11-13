@@ -1,0 +1,164 @@
+{
+  "case_id": "case_9d0c102884d4fe486d03",
+  "audit_query_id": "audit_query_098",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_9d0c102884d4fe486d03",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "A woman faces the camera behind a group of sled dogs in the snow, replacing the reference's reindeer-and-sleigh scene with a woman-and-dogs portrait."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "A smiling woman faces the camera behind a group of sled dogs. This supports the requested woman-and-dogs composition; the wooded setting is not prohibited."
+    },
+    "candidate_relation": "compatible",
+    "violated_source_constraints": [],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "add",
+        "semantic_target": "attribute",
+        "before_span": null,
+        "after_span": "four",
+        "edited_instruction": "Make the woman to pose for camera with group of four dogs instead showing different scene into picture",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "The group contains four dogs.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The woman is behind a group containing visibly more than four dogs."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Four dogs are visible in front of the woman, who smiles toward the camera."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_9d0c102884d4fe486d03",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "A woman faces the camera from behind a large group of sled dogs in a snowy landscape. This supports the requested camera-facing woman with dogs, replacing the reference scene with reindeer."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "A smiling woman faces the camera behind a group of four sled dogs on a snowy forest trail, supporting the requested woman posing with dogs."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "Inserting 'four' adds one count attribute to the existing dog group and preserves the other meanings. Both images support the source instruction, but only the candidate has four dogs.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The woman is behind a sled team containing visibly more than four dogs."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Exactly four dogs are visible in front of the camera-facing woman: two on the left, one near the center, and one on the right."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "add",
+      "semantic_target": "attribute",
+      "before_span": null,
+      "after_span": "four",
+      "edited_instruction": "Make the woman to pose for camera with group of four dogs instead showing different scene into picture",
+      "witness_type": "addition_disambiguation",
+      "changed_constraint": "The group contains four dogs.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "The woman is behind a group containing visibly more than four dogs."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "Four dogs are visible in front of the woman, who smiles toward the camera."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "Inserting 'four' adds one count attribute to the existing dog group and preserves the other meanings. Both images support the source instruction, but only the candidate has four dogs.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The woman is behind a sled team containing visibly more than four dogs."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Exactly four dogs are visible in front of the camera-facing woman: two on the left, one near the center, and one on the right."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "79cc5ea4db68f1fd7d9b0916c537319c6711713d507893d83b19114d0a9a3ef6",
+      "input_hash": "db9fbb7087a178c8ea4b4c515dc48e32010af227037084760ab19ea9a9f9b66e",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/db9fbb7087a178c8ea4b4c515dc48e32010af227037084760ab19ea9a9f9b66e.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0b86608363212224016af2be7326a887d19e78aca2c336ef39",
+      "usage": {
+        "prompt_tokens": 7320,
+        "completion_tokens": 622,
+        "total_tokens": 7942,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 284
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "055ddb55d6c72a57b350ff232d860cbe52a811ffae66b4cceb79e5fa06470399",
+      "input_hash": "b2a53c5d82a63e3ce9365e81b0e242e3b9e9219a76cd2fa630c35b05100fa536",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/b2a53c5d82a63e3ce9365e81b0e242e3b9e9219a76cd2fa630c35b05100fa536.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0fcc475832b3cfb9016af2be8fae1087d18b9b92b275c0fd2b",
+      "usage": {
+        "prompt_tokens": 6847,
+        "completion_tokens": 478,
+        "total_tokens": 7325,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 164
+        }
+      }
+    }
+  ]
+}

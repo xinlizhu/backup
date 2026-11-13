@@ -1,0 +1,33 @@
+{
+  "judging_mode": "relative_preference",
+  "config": "configs/gc_epochs14_top3_relative.yaml",
+  "output_dir": "outputs/gc_epochs14_top3_relative",
+  "source_run": "GC head ablation, not original RIM training history",
+  "prepared_rankings_reused_from": "outputs/gc_epochs14_top3",
+  "query_selection": "Same frozen 25 queries per epoch, with the exact existing candidate pairs and randomized A/B order",
+  "epochs": [1, 4],
+  "ranks_compared": [1, 2, 3],
+  "student_snapshot": {
+    "epoch1": "initial.pt, global_step 0",
+    "epoch4": "checkpoint_epoch_003.pt, global_step 2649"
+  },
+  "rank_scope": "Each model ranks the same recorded 32 candidates: forced target plus 31 mined non-targets; candidate index zero is not rank one",
+  "teacher_scores": "Actual saved teacher scores used only to select ranked images; never exposed to GPT",
+  "blinding": "Reference, instruction, anonymous A/B images and opaque case ID only; no model identity, score, rank, epoch or target label",
+  "question": "Which image better fulfills the retrieval request, considering the reference and modification instruction?",
+  "decisions": ["A", "B"],
+  "both_satisfy_policy": "Compare the degree, clarity and completeness of meeting instruction-relevant requirements; do not invent extra requirements",
+  "both_fail_policy": "Choose the closer result by the importance and severity of instruction-related failures",
+  "weak_distinction_policy": "Still make a forced A/B choice, record low confidence and explicitly acknowledge the weak evidence; do not fabricate a distinguishing feature",
+  "confidence_filter": false,
+  "same_image_policy": "Skip identical ID or identical decoded RGB pixels/dimensions; exclude from win-rate denominator",
+  "random_order": "Reuse the original one-time random A/B order, without a swapped-order repeat",
+  "repeated_unordered_pairs": "One fresh relative judgment per distinct pair; map the same decision to each rank's teacher/student roles",
+  "denominator": "All completed different-image comparisons in each epoch/rank; includes low-confidence choices and pairs where both satisfy or both fail. Publish percentages only when the group is complete.",
+  "main_table": ["epoch", "student_checkpoint", "rank", "teacher_preference_percent", "student_preference_percent"],
+  "interpretation": "Forced-choice GPT relative preference, not absolute instruction accuracy or a guarantee of teacher correctness",
+  "cache_policy": "Reuse ranking artifacts only; new output directory, prompt, schema, stage and prompt version; no reuse of old judgments or API responses",
+  "raw_response_saved": true,
+  "resume": true,
+  "max_workers": 80
+}

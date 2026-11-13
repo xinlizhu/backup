@@ -1,0 +1,64 @@
+{
+  "bootstrap_replicates": 5000,
+  "empirical_plot_range": [
+    -0.25,
+    0.5
+  ],
+  "files": {
+    "cell_histograms": [
+      "delta_hist_3x3_BGE-VL-base.png",
+      "delta_hist_3x3_BGE-VL-MLLM-S1.png",
+      "delta_hist_3x3_Qwen3-VL-Embedding-2B.png"
+    ],
+    "cell_win_rates": "delta_win_rate_3x3_by_mode.png",
+    "full_range_histogram": "delta_hist_by_model_mode_full_range.png",
+    "mode_comparisons": "mode_comparisons.csv",
+    "mode_summary": "delta_win_rate_mode_summary.png",
+    "mode_win_rates_by_cell": "mode_win_rates_by_cell.csv",
+    "zoom_histogram": "delta_hist_by_model_mode_zoom.png"
+  },
+  "models": {
+    "BGE-VL-MLLM-S1": {
+      "count": 3401,
+      "maximum": 0.46913784742355347,
+      "minimum": -0.19860324263572693,
+      "quantiles": {
+        "0.001": -0.12617936730384827,
+        "0.01": -0.06548058986663818,
+        "0.5": 0.025592178106307983,
+        "0.99": 0.19289037585258484,
+        "0.999": 0.31886348128318787
+      }
+    },
+    "BGE-VL-base": {
+      "count": 3401,
+      "maximum": 0.28928470611572266,
+      "minimum": -0.2166847586631775,
+      "quantiles": {
+        "0.001": -0.1685628592967987,
+        "0.01": -0.08357343077659607,
+        "0.5": 0.01848745346069336,
+        "0.99": 0.1618371307849884,
+        "0.999": 0.22709788382053375
+      }
+    },
+    "Qwen3-VL-Embedding-2B": {
+      "count": 3401,
+      "maximum": 0.38417690992355347,
+      "minimum": -0.1793043613433838,
+      "quantiles": {
+        "0.001": -0.1395094096660614,
+        "0.01": -0.06225496530532837,
+        "0.5": 0.024805188179016113,
+        "0.99": 0.183671236038208,
+        "0.999": 0.30228376388549805
+      }
+    }
+  },
+  "schema_version": "1.0",
+  "seed": 42,
+  "theoretical_delta_range": [
+    -2.0,
+    2.0
+  ]
+}

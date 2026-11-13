@@ -1,0 +1,236 @@
+{
+  "case_id": "case_9a9baa7013005e9d8871",
+  "audit_query_id": "audit_query_083",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_9a9baa7013005e9d8871",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "T shows one cream tube accompanied by its matching pink box."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "C shows one cream tube accompanied by matching packaging. There are two boxes, but 'single' explicitly modifies the product, and the instruction does not explicitly prohibit additional packaging."
+    },
+    "candidate_relation": "compatible",
+    "violated_source_constraints": [],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "add",
+        "semantic_target": "attribute",
+        "before_span": null,
+        "after_span": "green",
+        "edited_instruction": "Leave a single green product with its box",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "The product is green.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "T's single cream tube is white with a silver-colored cap, rather than green."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C shows a single green cream tube with matching boxes."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "operation": "add",
+        "semantic_target": "object",
+        "before_span": null,
+        "after_span": "and an additional box",
+        "edited_instruction": "Leave a single product with its box and an additional box",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "An additional box is present alongside the product and its box.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "T shows one tube and only one box."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C shows one tube and two distinct matching boxes, one behind the other."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_9a9baa7013005e9d8871",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows one white cream container with one matching pink retail box, satisfying a single product with its box."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "Image 3 shows one green cream tube with matching retail packaging. The additional box does not violate the instruction: 'single' limits the product count, and the instruction does not explicitly prohibit additional packaging."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "Inserting 'green' adds one product-color constraint and preserves all existing meanings. Both images satisfy the original instruction, while only the candidate has a green product.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The sole cream container in Image 2 is white with a silver-colored cap, not green."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 has one visibly green cream tube alongside its matching boxes."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "Appending 'and an additional box' adds one object-presence constraint. The single-product requirement remains intact. Both images satisfy the source, but only the candidate visibly contains an additional box.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 shows one cream container and just one pink box; no additional box is present."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows one green tube and two distinct matching boxes: a large horizontal box in front and another box standing behind it."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "add",
+      "semantic_target": "attribute",
+      "before_span": null,
+      "after_span": "green",
+      "edited_instruction": "Leave a single green product with its box",
+      "witness_type": "addition_disambiguation",
+      "changed_constraint": "The product is green.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "T's single cream tube is white with a silver-colored cap, rather than green."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C shows a single green cream tube with matching boxes."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "Inserting 'green' adds one product-color constraint and preserves all existing meanings. Both images satisfy the original instruction, while only the candidate has a green product.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The sole cream container in Image 2 is white with a silver-colored cap, not green."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 has one visibly green cream tube alongside its matching boxes."
+        }
+      }
+    },
+    {
+      "witness_id": "w2",
+      "operation": "add",
+      "semantic_target": "object",
+      "before_span": null,
+      "after_span": "and an additional box",
+      "edited_instruction": "Leave a single product with its box and an additional box",
+      "witness_type": "addition_disambiguation",
+      "changed_constraint": "An additional box is present alongside the product and its box.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "T shows one tube and only one box."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C shows one tube and two distinct matching boxes, one behind the other."
+      },
+      "independent_review": {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "Appending 'and an additional box' adds one object-presence constraint. The single-product requirement remains intact. Both images satisfy the source, but only the candidate visibly contains an additional box.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 shows one cream container and just one pink box; no additional box is present."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows one green tube and two distinct matching boxes: a large horizontal box in front and another box standing behind it."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    },
+    {
+      "witness_id": "w2",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "b063f213bd0b2c1cb03ed84627aa948076042cdf24106557953a24d58926d2d2",
+      "input_hash": "333af02be1c6a4dbb70eb0be3c341a5e9228477c4991f5636ff9f755aa379605",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/333af02be1c6a4dbb70eb0be3c341a5e9228477c4991f5636ff9f755aa379605.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0cf50e942252bcc5016af2bdcbe6f887d29fc666e0f94acde6",
+      "usage": {
+        "prompt_tokens": 8508,
+        "completion_tokens": 791,
+        "total_tokens": 9299,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 317
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "ac937ae44dbe39bfb7e9d35e98449fb0fe8ab616a1fcf6648ab9aed472554877",
+      "input_hash": "fda5bb2f46b6045f83e06f46777a19335582db6c75f68e989b852d7767372b32",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/fda5bb2f46b6045f83e06f46777a19335582db6c75f68e989b852d7767372b32.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_02ae2dc32dbe82d6016af2bdf60e3087d1b3eece5eeab69658",
+      "usage": {
+        "prompt_tokens": 8091,
+        "completion_tokens": 527,
+        "total_tokens": 8618,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 53
+        }
+      }
+    }
+  ]
+}

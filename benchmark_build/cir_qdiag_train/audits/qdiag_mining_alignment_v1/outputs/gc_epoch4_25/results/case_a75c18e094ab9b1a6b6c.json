@@ -1,0 +1,135 @@
+{
+  "case_id": "case_a75c18e094ab9b1a6b6c",
+  "audit_query_id": "audit_query_089",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_a75c18e094ab9b1a6b6c",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Three buses grouped in the parking lot have heavily blackened, burned-out front sections, with other yellow buses alongside them."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Several school buses are parked in a lot, but their visible front ends have intact yellow bodywork, lights, and windshields rather than fire damage."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "Three buses had a fire in their front ends."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "attribute",
+        "before_span": "had a fire in the front ends",
+        "after_span": "have undamaged front ends",
+        "edited_instruction": "The target photo is of a bus parking lot where three buses have undamaged front ends.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "The condition of three buses' front ends changes from fire-damaged to undamaged.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The three central buses have visibly charred and gutted front ends, contradicting the requirement for undamaged fronts."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "At least three buses parked in the lot show intact yellow front panels, windshields, and lights without visible damage."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_a75c18e094ab9b1a6b6c",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "The parking lot contains two clearly visible buses with severely charred, stripped front ends. The bus at the left edge shows its rear, and the yellow bus at right has an intact front. A third bus with a fire-damaged front cannot be reliably identified."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The visible buses have intact yellow fronts, windshields, lights, and body panels, with no visible front-end fire damage."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "reject",
+        "failure_code": "source_invalid_or_uncertain",
+        "witness_type": null,
+        "reason": "The spans reconstruct the proposed instruction through one replacement, but the required source support on T is not established: only two clearly fire-damaged bus fronts are visible, not three. The dataset-positive label cannot resolve the missing visual grounding.",
+        "edited_on_positive": {
+          "status": "uncertain",
+          "evidence": "Only the bus at right clearly presents an undamaged front. Two central fronts are severely burned, while other fronts are obscured or outside the image; three undamaged fronts cannot be established."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "At least three buses in the parked row visibly have intact fronts, including windshields, yellow body panels, and lights."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": false,
+      "local_failures": [
+        "wrong_witness_type",
+        "wrong_support_pattern"
+      ],
+      "review_decision": "reject"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "6eeca219fb45c3cf053ef7a72bf82a31af3e7035fca8a43e3df4a09e93c355ed",
+      "input_hash": "e7984d6c8285684ba3272f237ad333fb04b624402a5a460bc449b7ca025488fc",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/e7984d6c8285684ba3272f237ad333fb04b624402a5a460bc449b7ca025488fc.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_05cdf59bd5c7b13e016af2be44c84c87d1bdef8c0772797fb4",
+      "usage": {
+        "prompt_tokens": 7076,
+        "completion_tokens": 896,
+        "total_tokens": 7972,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 505
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "a03718bbb8a0829fc920bf228e4945b595862c29dce5514d1bfe336a9f555796",
+      "input_hash": "0e0e938c8d9da9c73c1bb47d5c6d9923325755be81efa4866f784b5af5df1a51",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/0e0e938c8d9da9c73c1bb47d5c6d9923325755be81efa4866f784b5af5df1a51.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_05514d8c82f7784a016af2be6ff3e487d18c117bf1456ebd80",
+      "usage": {
+        "prompt_tokens": 6614,
+        "completion_tokens": 517,
+        "total_tokens": 7131,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 217
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "case_id": "case_f2032fa960db3f8b7c73",
+  "audit_query_id": "audit_query_100",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_f2032fa960db3f8b7c73",
+    "case_status": "source_invalid_or_uncertain",
+    "source_on_positive": {
+      "status": "contradicted",
+      "evidence": "The image shows pizza topped with melted, browned cheese in a shallow metal pizza pan, rather than a bowl containing a dish."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The image shows a blue athletic shoe on a white background; no bowl, food dish, or cheese topping is visible."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "A bowl containing a food dish.",
+      "Cheese on top of the dish."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_f2032fa960db3f8b7c73",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "The food visibly has a melted, browned cheese topping. However, the close crop shows a shallow metal baking vessel whose identification as a bowl is uncertain, so the full instruction cannot be reliably established."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The image shows a blue athletic shoe with a white sole on a white background; there is no bowl, food dish, or cheese topping."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "32ff2ca50c0690b2d0dd19609f3f09cbe50d9f0eb955829acf515240e4f3b8dd",
+      "input_hash": "ef55835b4b043c45d3bec35d711ff26f69f01c78616bde5f94cd3b6e56600f20",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/ef55835b4b043c45d3bec35d711ff26f69f01c78616bde5f94cd3b6e56600f20.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0a2993ce2c3ecc13016af2bd59696c87d18d2d666dfa693430",
+      "usage": {
+        "prompt_tokens": 13164,
+        "completion_tokens": 277,
+        "total_tokens": 13441,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 94
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "dae7026d930caec4598b2a2e2dbe2aca283311bca180c8f58ecf2369e82e73d0",
+      "input_hash": "b28b49d2d8ec012b8a5520de94d668bc28cc7df41f90c69fc47bf04057f72730",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/b28b49d2d8ec012b8a5520de94d668bc28cc7df41f90c69fc47bf04057f72730.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_03d64e66eead2185016af2bd67901c87d1a2fd0e1d06bc2da6",
+      "usage": {
+        "prompt_tokens": 12622,
+        "completion_tokens": 180,
+        "total_tokens": 12802,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 56
+        }
+      }
+    }
+  ]
+}

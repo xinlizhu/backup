@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_21a41c5d31df6279",
+  "model": "grok-4.7",
+  "signature": "52913ea34ae01078c58f7a80fc2119b86ef4b6b3449e9e55b21816a5d5d1ccbd",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_21a41c5d31df6279_query_01384_attribute_substitute",
+      "decision": "reject",
+      "failure_code": "not_visually_verifiable",
+      "reason": "The glossy->matte swap is a single fluent attribute edit, but 'matte' is not clearly false for every positive: image 4 is only a sunset with no dress, so the satin finish cannot be verified."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.7",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "7b1f91e2bd2b1062b16ca47984fb1cba9ba8dbb13ea28f4c300513a4df5ffbef",
+      "input_hash": "b5b53a0a40dc20e249463addc756d59a3f5e2bb966713b95da0020f6cad4710b",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/grok-4.7/cache/validate_group/b5b53a0a40dc20e249463addc756d59a3f5e2bb966713b95da0020f6cad4710b.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "531eb284-28e6-9cbc-b17e-59be3414a73b",
+      "usage": {
+        "prompt_tokens": 5583,
+        "completion_tokens": 102,
+        "total_tokens": 9897,
+        "prompt_tokens_details": {
+          "text_tokens": 2561,
+          "audio_tokens": 0,
+          "image_tokens": 3022,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 4212,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 339780000
+      }
+    }
+  ],
+  "format_warnings": []
+}

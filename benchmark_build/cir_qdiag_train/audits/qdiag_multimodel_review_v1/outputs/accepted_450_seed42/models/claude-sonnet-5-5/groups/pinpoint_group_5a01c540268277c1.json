@@ -1,0 +1,49 @@
+{
+  "group_id": "pinpoint_group_5a01c540268277c1",
+  "model": "claude-sonnet-5-5",
+  "signature": "aff20e5a5733d87f80fd7515c25d92c77cff20d4f50c9f8dbf4123bfdabed97b",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_5a01c540268277c1_query_04858_object_substitute",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "The substitution of 'necklace' to 'bracelet' is not supported as a valid single edit. Image 5 shows a choker necklace worn on the neck with an opal pendant, directly matching the source text. The positive images (2-5) all depict opal pendants and choker-style neckwear, not bracelets. Changing 'necklace' to 'bracelet' fundamentally alters the location and type of jewelry, contradicting what the positive images demonstrate. The supplied positives are compatible with the original necklace constraint, not the bracelet substitution."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-sonnet-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "bb6aa2e74daf69df64f5a38d54b6ff3d50280c88f878f8c0a0bf879eda3f7138",
+      "input_hash": "9649c62c7ab687de732076e42b5d1131c7b605eb24394f11ea5721d49b931fad",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/claude-sonnet-5-5/cache/validate_group/9649c62c7ab687de732076e42b5d1131c7b605eb24394f11ea5721d49b931fad.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01V5oqq629RnG5LKSVoBJzWAm0",
+      "usage": {
+        "prompt_tokens": 8388,
+        "completion_tokens": 241,
+        "total_tokens": 8629,
+        "prompt_tokens_details": {
+          "cached_tokens": 6539,
+          "cache_creation_tokens": 1845
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_5a01c540268277c1_query_04858_object_substitute",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 533,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

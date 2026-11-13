@@ -1,0 +1,55 @@
+{
+  "group_id": "pinpoint_group_8c6f5fb07a4318b3",
+  "model": "gpt-6.1-terra",
+  "signature": "08eff7f6139e72d377a59effd10853d9c15929bec5b0a3afebcc9b0ca4a1c2df",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_8c6f5fb07a4318b3_query_05536_predicate_add",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Adds the single relation that the crochet is beside the garden scene; none of the supplied positives shows crochet beside a garden."
+    },
+    {
+      "negative_id": "pinpoint_group_8c6f5fb07a4318b3_query_05536_predicate_substitute",
+      "decision": "reject",
+      "failure_code": "not_fluent",
+      "reason": "Replacing “with” by “beside” leaves “beside crochet,” an unnatural relation to crochet as a craft or material."
+    },
+    {
+      "negative_id": "pinpoint_group_8c6f5fb07a4318b3_query_05539_attribute_add",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "Adds oversized pillows, but supplied positives include bedrooms with pillows that could be oversized; the new attribute is not clearly false for every positive."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "gpt-6.1-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "f1400ffdbf732ad8b98d76a42e0833ee76ad568e79bf378e86c21cec64f83afd",
+      "input_hash": "cc8a542077524c5d1a36d68406778a35169ff5d27ca1c2a9b31a8f2429c41736",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/gpt-6.1-terra/cache/validate_group/cc8a542077524c5d1a36d68406778a35169ff5d27ca1c2a9b31a8f2429c41736.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_03e99b6c5b2199dd016af42e52ac5487d084e5a92dae4a9105",
+      "usage": {
+        "prompt_tokens": 10662,
+        "completion_tokens": 727,
+        "total_tokens": 11389,
+        "prompt_tokens_details": {
+          "cached_tokens": 2860
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 516
+        }
+      }
+    }
+  ],
+  "format_warnings": []
+}

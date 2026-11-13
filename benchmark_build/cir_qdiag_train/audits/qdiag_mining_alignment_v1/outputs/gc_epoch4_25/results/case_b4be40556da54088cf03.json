@@ -1,0 +1,87 @@
+{
+  "case_id": "case_b4be40556da54088cf03",
+  "audit_query_id": "audit_query_086",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_b4be40556da54088cf03",
+    "case_status": "source_invalid_or_uncertain",
+    "source_on_positive": {
+      "status": "contradicted",
+      "evidence": "The image shows a fox sitting upright on a base, not standing; its pose roughly resembles the upright seated cat in the reference."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The candidate shows a banana drink, with no fox or animal pose."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "change to a fox standing in the same gesture"
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_b4be40556da54088cf03",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "Image 2 shows a seated fox, while Image 1 contains both a seated cat and a partially visible walking cat; the reference gesture for 'same gesture' is therefore ambiguous."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a banana smoothie with bananas and no visible fox or animal matching the requested subject and gesture."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "3eba58e1a8ac2bbd3e966049b52b6477376362325fbedb978769cdf2040862ea",
+      "input_hash": "144fa0aa48913a8c78bc24ad91a80310dd6edf9e25dfca83ec0f4be1d82fa672",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/144fa0aa48913a8c78bc24ad91a80310dd6edf9e25dfca83ec0f4be1d82fa672.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_02f6266820e6e5c8016af2bea763a087d0b2dbb760bd9aac05",
+      "usage": {
+        "prompt_tokens": 7536,
+        "completion_tokens": 291,
+        "total_tokens": 7827,
+        "prompt_tokens_details": {
+          "cached_tokens": 5888
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 165
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "7cba80aa637264748e5742235dbb7a10049f9c2f9079990ad95b4ccf5b0abb88",
+      "input_hash": "ce8e7f03fb1c553abb1669a7a78414b9592ccc8d75cc5171c3d1c1f12f0a467a",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/ce8e7f03fb1c553abb1669a7a78414b9592ccc8d75cc5171c3d1c1f12f0a467a.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_ft_f09730fa296f471cba7e9695d8899f59",
+      "usage": {
+        "prompt_tokens": 6994,
+        "completion_tokens": 287,
+        "total_tokens": 7281,
+        "completion_tokens_details": {
+          "reasoning_tokens": 175
+        }
+      }
+    }
+  ]
+}

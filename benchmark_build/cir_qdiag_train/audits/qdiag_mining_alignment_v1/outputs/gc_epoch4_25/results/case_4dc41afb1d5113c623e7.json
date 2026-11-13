@@ -1,0 +1,83 @@
+{
+  "case_id": "case_4dc41afb1d5113c623e7",
+  "audit_query_id": "audit_query_090",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_4dc41afb1d5113c623e7",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "An orange car is shown from a rear three-quarter viewpoint on a road directly beside a large body of water."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The image shows a mounted fox with its face visible against a studio backdrop, rather than a car viewed from behind beside water."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "The depicted subject must be a car.",
+      "The car must be shown from the back.",
+      "The car must be by water."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_4dc41afb1d5113c623e7",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows an orange car from a rear three-quarter viewpoint, with its rear lights, license plate, and exhausts visible, traveling on a road beside a large body of water."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a taxidermy fox mounted on wood against a studio backdrop. There is no car or visible body of water."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "97326ddd188819a26814e1b5ac6100a13e111c4ebc524f2d2bbba9f489c8194b",
+      "input_hash": "8ea08b9a9788f58f3d1c7a207a3e90883d01d8f4e421d34b092f02bde2279d65",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/8ea08b9a9788f58f3d1c7a207a3e90883d01d8f4e421d34b092f02bde2279d65.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0a660227f148a5de016af2bde09afc87d19969bd6b740a210e",
+      "usage": {
+        "prompt_tokens": 10722,
+        "completion_tokens": 185,
+        "total_tokens": 10907,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "9158908ee2ea043aab586ea2a83c49ee2cd3c6de8943ceb47e03a2c15d44c8cc",
+      "input_hash": "428a09474aac95c80f3655a952941fb79fec42fe7dd833f7966ea94ece6c6597",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/428a09474aac95c80f3655a952941fb79fec42fe7dd833f7966ea94ece6c6597.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_05675d3087c63f6b016af2bdf65bb087d1aebb0f4bd78992a4",
+      "usage": {
+        "prompt_tokens": 10180,
+        "completion_tokens": 120,
+        "total_tokens": 10300
+      }
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "case_id": "case_d998a9ee6e1809fe5662",
+  "audit_query_id": "audit_query_097",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_d998a9ee6e1809fe5662",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a blue saxophone with gold-colored keys and fittings."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a saxophone with a predominantly silver body, not a blue one."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The saxophone should be blue; candidate 3 is predominantly silver."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "substitute_attribute_color",
+        "operation": "substitute",
+        "semantic_target": "attribute",
+        "before_span": "blue",
+        "after_span": "silver",
+        "edited_instruction": "be a silver saxophone instead of a regular one.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "The saxophone's color changes from blue to silver.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 shows a blue-bodied saxophone, not a silver one."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows a saxophone with a predominantly silver body; its bell interior is gold-colored."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_d998a9ee6e1809fe5662",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 visibly shows a saxophone with a blue body, while Image 1 shows the regular gold-colored saxophone reference."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 visibly shows a saxophone with a silver-colored body rather than a blue body."
+    },
+    "verdicts": [
+      {
+        "witness_id": "substitute_attribute_color",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "The witness replaces the single attribute span blue with silver, producing a fluent instruction. Image 2 supports the original blue constraint and contradicts the edited silver constraint; Image 3 contradicts the original blue constraint and supports the edited silver constraint.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 shows the saxophone body as blue, not silver."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 visibly shows the saxophone body as silver."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "substitute_attribute_color",
+      "operation": "substitute",
+      "semantic_target": "attribute",
+      "before_span": "blue",
+      "after_span": "silver",
+      "edited_instruction": "be a silver saxophone instead of a regular one.",
+      "witness_type": "substitution_contrast",
+      "changed_constraint": "The saxophone's color changes from blue to silver.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "Image 2 shows a blue-bodied saxophone, not a silver one."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "Image 3 shows a saxophone with a predominantly silver body; its bell interior is gold-colored."
+      },
+      "independent_review": {
+        "witness_id": "substitute_attribute_color",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "The witness replaces the single attribute span blue with silver, producing a fluent instruction. Image 2 supports the original blue constraint and contradicts the edited silver constraint; Image 3 contradicts the original blue constraint and supports the edited silver constraint.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 shows the saxophone body as blue, not silver."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 visibly shows the saxophone body as silver."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "substitute_attribute_color",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "ad3f5cec1daf0e46d3ef5a849a5e13c35bdefd3f3d12255e21ee032ffd4782c6",
+      "input_hash": "3ca82519c58b65fe1407e7afcf04548ba6219720ff0bbf94b3503a5fb7550185",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/3ca82519c58b65fe1407e7afcf04548ba6219720ff0bbf94b3503a5fb7550185.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0c3eae5e6e1455fb016af2bf4c7afc87d1a43fa2ef1142dc4b",
+      "usage": {
+        "prompt_tokens": 4491,
+        "completion_tokens": 1416,
+        "total_tokens": 5907,
+        "completion_tokens_details": {
+          "reasoning_tokens": 1079
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "b4c9ccc442b75781fc594c433144e559415bf9496c104a0deb804ff9b9b652d1",
+      "input_hash": "40eb1b3e756641025a43888dc2af68c6ce6e378481ebfea44e3cc16725af234b",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/40eb1b3e756641025a43888dc2af68c6ce6e378481ebfea44e3cc16725af234b.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_090ae0b20553561e016af2bf62408087d196215aa48a64ea3f",
+      "usage": {
+        "prompt_tokens": 7403,
+        "completion_tokens": 321,
+        "total_tokens": 7724,
+        "completion_tokens_details": {
+          "reasoning_tokens": 91
+        }
+      }
+    }
+  ]
+}

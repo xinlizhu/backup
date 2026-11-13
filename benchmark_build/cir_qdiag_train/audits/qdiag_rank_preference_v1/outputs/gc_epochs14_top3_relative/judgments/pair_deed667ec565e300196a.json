@@ -1,0 +1,64 @@
+{
+  "case_id": "pair_deed667ec565e300196a",
+  "signature": "f3a97f608e6addbd5531ad7795f5e06873610abdb12f716de8375d49eda4c022",
+  "simulated": false,
+  "status": "complete",
+  "judgment": {
+    "case_id": "pair_deed667ec565e300196a",
+    "constraints": [
+      {
+        "constraint": "The adult animal is a boar rather than a mother",
+        "A_status": "supported",
+        "B_status": "supported",
+        "A_evidence": "Clearly shows an adult warthog/boar with tusks and piglets.",
+        "B_evidence": "Clearly shows an adult warthog/boar with tusks and piglets."
+      },
+      {
+        "constraint": "Two babies are present and associated with the boar",
+        "A_status": "supported",
+        "B_status": "supported",
+        "A_evidence": "Several piglets are visibly gathered around the boar, including at least two.",
+        "B_evidence": "Several piglets are visibly gathered around the boar, including at least two."
+      },
+      {
+        "constraint": "The two babies are on the same left side of the boar",
+        "A_status": "uncertain",
+        "B_status": "supported",
+        "A_evidence": "Piglets are distributed on both sides/front of the boar, so the requested same-left-side arrangement is not clear.",
+        "B_evidence": "At least two piglets are visibly grouped on the boar's left side, more directly matching the requested arrangement, though additional piglets are also present."
+      },
+      {
+        "constraint": "The babies are visibly nursing",
+        "A_status": "uncertain",
+        "B_status": "uncertain",
+        "A_evidence": "The piglets are near the boar but clear nursing contact is not visible.",
+        "B_evidence": "The piglets are gathered close to the boar, but clear nursing contact is not visible."
+      }
+    ],
+    "decision": "B",
+    "confidence": "medium",
+    "reason": "Both candidates show a boar with piglets, but B more clearly places two piglets together on the same left side, whereas A spreads the piglets around both sides and does not clearly realize the requested spatial change."
+  },
+  "trace": {
+    "stage": "rank_pair_relative_preference",
+    "model_name": "gpt-5.6-terra",
+    "model_revision": null,
+    "provider": "openai-compatible-chat",
+    "reasoning_effort": null,
+    "prompt_version": "rank_preference_relative_v2",
+    "prompt_hash": "282db01b3d4d00a065dea7e140ebbf9dd988c30127b0e9484394515b96179bee",
+    "input_hash": "8f5993918025366fa73b41fd3ac1e1702f540a09e906facdaf32d63e19eec59d",
+    "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_rank_preference_v1/outputs/gc_epochs14_top3_relative/api_cache/rank_pair_relative_preference/8f5993918025366fa73b41fd3ac1e1702f540a09e906facdaf32d63e19eec59d.json",
+    "cached": false,
+    "attempts": 1,
+    "request_id": "resp_ack_1abcea984d51aa448708f65116b2fa19",
+    "usage": {
+      "prompt_tokens": 4116,
+      "completion_tokens": 882,
+      "total_tokens": 4998,
+      "completion_tokens_details": {
+        "reasoning_tokens": 516
+      }
+    }
+  }
+}

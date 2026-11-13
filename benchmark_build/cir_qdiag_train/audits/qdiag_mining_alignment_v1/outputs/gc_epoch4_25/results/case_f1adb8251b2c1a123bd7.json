@@ -1,0 +1,235 @@
+{
+  "case_id": "case_f1adb8251b2c1a123bd7",
+  "audit_query_id": "audit_query_084",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_f1adb8251b2c1a123bd7",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Like R, T is photographed obliquely from above, and a wooden rolling pin is clearly visible on the right."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C also uses an oblique view from above, but shows a sleeping dog beside a stuffed dog; no rolling pin is visible on the right."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "Must include a rolling pin on the right-hand side."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "object",
+        "before_span": "rolling pin",
+        "after_span": "a stuffed dog",
+        "edited_instruction": "Similar angled photograph, must include a stuffed dog on the right hand side",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "The required object on the right changes from a rolling pin to a stuffed dog.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "T has a comparable oblique viewpoint, but its right-hand object is a wooden rolling pin, not a stuffed dog."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C is photographed obliquely from above, with a stuffed dog visibly positioned on the right beside the sleeping dog."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "operation": "delete",
+        "semantic_target": "object",
+        "before_span": ", must include rolling pin on the right hand side",
+        "after_span": null,
+        "edited_instruction": "Similar angled photograph",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "Removes the requirement for a rolling pin on the right-hand side.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "T shows its subjects from an elevated oblique viewpoint, comparable to R."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C likewise looks down obliquely at its subjects, preserving the requested photographic angle."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_f1adb8251b2c1a123bd7",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 uses an oblique, downward-looking view similar to Image 1, and a wooden rolling pin is clearly visible on the right side."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 also uses an oblique, downward-looking view, but no rolling pin is present. A stuffed dog occupies the right side beside a real dog."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "The single replacement changes the required object from a rolling pin to a stuffed dog while preserving its right-side location and the camera-angle requirement. Image 2 contains the original object; Image 3 contains the replacement object.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 has a rolling pin on the right, with no stuffed dog visible."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "A stuffed dog is clearly visible on the right side of Image 3, photographed from a similar oblique, downward-looking angle."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "The deletion exactly removes the single requirement to include a rolling pin on the right, including its grammatical glue. Both images satisfy the retained angle requirement; the candidate's only explicit source violation is the removed requirement.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 shows its subject from an oblique angle looking down onto the surface, similar to Image 1."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows the dogs and floor from an oblique, downward-looking angle comparable to Image 1."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "substitute",
+      "semantic_target": "object",
+      "before_span": "rolling pin",
+      "after_span": "a stuffed dog",
+      "edited_instruction": "Similar angled photograph, must include a stuffed dog on the right hand side",
+      "witness_type": "substitution_contrast",
+      "changed_constraint": "The required object on the right changes from a rolling pin to a stuffed dog.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "T has a comparable oblique viewpoint, but its right-hand object is a wooden rolling pin, not a stuffed dog."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C is photographed obliquely from above, with a stuffed dog visibly positioned on the right beside the sleeping dog."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "The single replacement changes the required object from a rolling pin to a stuffed dog while preserving its right-side location and the camera-angle requirement. Image 2 contains the original object; Image 3 contains the replacement object.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 has a rolling pin on the right, with no stuffed dog visible."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "A stuffed dog is clearly visible on the right side of Image 3, photographed from a similar oblique, downward-looking angle."
+        }
+      }
+    },
+    {
+      "witness_id": "w2",
+      "operation": "delete",
+      "semantic_target": "object",
+      "before_span": ", must include rolling pin on the right hand side",
+      "after_span": null,
+      "edited_instruction": "Similar angled photograph",
+      "witness_type": "deletion_relaxation",
+      "changed_constraint": "Removes the requirement for a rolling pin on the right-hand side.",
+      "edited_on_positive": {
+        "status": "supported",
+        "evidence": "T shows its subjects from an elevated oblique viewpoint, comparable to R."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C likewise looks down obliquely at its subjects, preserving the requested photographic angle."
+      },
+      "independent_review": {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "The deletion exactly removes the single requirement to include a rolling pin on the right, including its grammatical glue. Both images satisfy the retained angle requirement; the candidate's only explicit source violation is the removed requirement.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 shows its subject from an oblique angle looking down onto the surface, similar to Image 1."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows the dogs and floor from an oblique, downward-looking angle comparable to Image 1."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    },
+    {
+      "witness_id": "w2",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "40582fac223227cc56887dd0ffdc9268f970f0a87a66ab76c5074d76b85492e1",
+      "input_hash": "6b16111259297c24cbcde49d47bc018c50ab150f1a5df3c50df5446dff358b7e",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/6b16111259297c24cbcde49d47bc018c50ab150f1a5df3c50df5446dff358b7e.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_091797cc584e512b016af2bdc759c487d1a5ebf82fe08bb512",
+      "usage": {
+        "prompt_tokens": 7275,
+        "completion_tokens": 828,
+        "total_tokens": 8103,
+        "completion_tokens_details": {
+          "reasoning_tokens": 277
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "e3419fe0fb72419f36ca13a858996d64dff8d63d0ac94126a5a0933f2e5bce3d",
+      "input_hash": "709e419c0e8a215f2dda7d62cededd01008a669475152c53bbe7f3b4011ceecb",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/709e419c0e8a215f2dda7d62cededd01008a669475152c53bbe7f3b4011ceecb.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0398afc0b248a414016af2bde0625c87d1839e13d5721a4bc7",
+      "usage": {
+        "prompt_tokens": 6867,
+        "completion_tokens": 545,
+        "total_tokens": 7412,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 46
+        }
+      }
+    }
+  ]
+}

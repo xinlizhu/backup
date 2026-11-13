@@ -1,0 +1,92 @@
+{
+  "case_id": "case_eeed47c341a762147f90",
+  "audit_query_id": "audit_query_095",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_eeed47c341a762147f90",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "T shows one pelican with its neck and wings raised above grey water and its mouth wide open. R shows multiple sea lions, rather than birds, but T visibly supports the requested single-bird scene without requiring literal image editing."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows multiple dogs on grass, with no bird or water visible. One dog's open mouth does not satisfy the instruction about the remaining bird."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "The resulting scene must contain one bird.",
+      "The scene must contain grey water.",
+      "The remaining bird must be raised out of the water with its mouth open."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_eeed47c341a762147f90",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "One pelican is visible in grey water, with its neck, upper body, and spread wings raised above the surface and its bill wide open."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The candidate shows several dogs on grass, with no bird or grey water. It does not show a remaining bird raised out of water with its mouth open."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "6d20bc64bec2b740e0b1adb10ef4ff6107c6524cb49a7102ce9197026576a8da",
+      "input_hash": "643518e3a44c485eceb4dd0d562684a89ccad4125da05518c60c816d77a56fcf",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/643518e3a44c485eceb4dd0d562684a89ccad4125da05518c60c816d77a56fcf.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0bd1558a4735b7e9016af2be499b9c87d1b9e4a058c98be5cf",
+      "usage": {
+        "prompt_tokens": 11988,
+        "completion_tokens": 350,
+        "total_tokens": 12338,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 132
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "0f3a531bc4ddaad2b87e9c70f50e5f97fd2f755366613b13fd7840e669653cd7",
+      "input_hash": "a7b7f4e12cbd62dcf9a22b3b06f1ea662929611250fa64ed7cde77371e7e2728",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/a7b7f4e12cbd62dcf9a22b3b06f1ea662929611250fa64ed7cde77371e7e2728.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_069b9e6f7515626e016af2be6ee0d087d1b092de583607cdc9",
+      "usage": {
+        "prompt_tokens": 11446,
+        "completion_tokens": 155,
+        "total_tokens": 11601,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 41
+        }
+      }
+    }
+  ]
+}

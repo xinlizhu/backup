@@ -1,0 +1,64 @@
+{
+  "case_id": "pair_c37c4a2d8fb30a135d8c",
+  "signature": "f3a97f608e6addbd5531ad7795f5e06873610abdb12f716de8375d49eda4c022",
+  "simulated": false,
+  "status": "complete",
+  "judgment": {
+    "case_id": "pair_c37c4a2d8fb30a135d8c",
+    "constraints": [
+      {
+        "constraint": "A bus parking lot scene",
+        "A_status": "supported",
+        "B_status": "contradicted",
+        "A_evidence": "Several school buses are visibly parked in marked spaces in a paved lot.",
+        "B_evidence": "The damaged bus is on a roadway with double yellow lines, not in a parking lot."
+      },
+      {
+        "constraint": "Three buses are present",
+        "A_status": "supported",
+        "B_status": "contradicted",
+        "A_evidence": "Three prominent buses are clearly visible together, with part of another at the left edge.",
+        "B_evidence": "Only one clearly visible bus is shown."
+      },
+      {
+        "constraint": "The buses had a fire",
+        "A_status": "contradicted",
+        "B_status": "supported",
+        "A_evidence": "The buses appear clean and undamaged, with no visible fire or burn damage.",
+        "B_evidence": "The bus has extensive blackened, melted, and burned areas."
+      },
+      {
+        "constraint": "Fire damage is at the front ends",
+        "A_status": "contradicted",
+        "B_status": "contradicted",
+        "A_evidence": "No fire damage is visible on the bus fronts.",
+        "B_evidence": "The most obvious damage is at the rear and along the side; the front does not show the requested burned front ends."
+      }
+    ],
+    "decision": "A",
+    "confidence": "medium",
+    "reason": "A directly matches the requested three-bus parking-lot setting, while B only supplies fire damage and shows one bus on a road, with damage concentrated at the rear rather than the front. A misses the crucial fire modification, but it fulfills more of the specified scene structure."
+  },
+  "trace": {
+    "stage": "rank_pair_relative_preference",
+    "model_name": "gpt-5.6-terra",
+    "model_revision": null,
+    "provider": "openai-compatible-chat",
+    "reasoning_effort": null,
+    "prompt_version": "rank_preference_relative_v2",
+    "prompt_hash": "2bc16ec644b2d3d6c68256db4223d5f9618cb968d1f07b866908e2f2045b90e7",
+    "input_hash": "402461151f3ecf95a4d0053144c21b659a8f21cec753bdadc91e6d5a143743aa",
+    "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_rank_preference_v1/outputs/gc_epochs14_top3_relative/api_cache/rank_pair_relative_preference/402461151f3ecf95a4d0053144c21b659a8f21cec753bdadc91e6d5a143743aa.json",
+    "cached": false,
+    "attempts": 1,
+    "request_id": "resp_058224d09d469f33016af2dc65410c87d2bd6777bff0840c84",
+    "usage": {
+      "prompt_tokens": 4186,
+      "completion_tokens": 1137,
+      "total_tokens": 5323,
+      "completion_tokens_details": {
+        "reasoning_tokens": 488
+      }
+    }
+  }
+}

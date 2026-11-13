@@ -1,0 +1,166 @@
+{
+  "case_id": "case_0fdda215f0cc3f09499c",
+  "audit_query_id": "audit_query_081",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_0fdda215f0cc3f09499c",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The saxophone has a maroon-red body with gold keys, supporting the requested color change from the reference instruments."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Both saxophones have dark gray metallic bodies. The red color belongs to the surrounding cloth, not the instruments."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The wind instrument must be maroon."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "attribute",
+        "before_span": "maroon",
+        "after_span": "dark gray",
+        "edited_instruction": "Make a wind instrument a dark gray color.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "The instrument's body color changes from maroon to dark gray.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The saxophone's body is maroon-red, not dark gray."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The pictured saxophones have dark gray metallic bodies, supporting the edited instrument color."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_0fdda215f0cc3f09499c",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The saxophone is a wind instrument with a reddish maroon body and bell, gold keywork, and a black mouthpiece."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Both saxophones have dark gray metallic bodies. The red color belongs to the cloth beneath them, not to the instruments."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing 'maroon' with 'dark gray' is one attribute substitution and exactly reconstructs the edited instruction. It preserves the wind-instrument requirement. The positive shows a maroon saxophone, while the candidate shows dark gray saxophones, establishing the required support reversal.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The saxophone's body and bell are reddish maroon, not dark gray."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The two saxophones visibly have dark gray metallic bodies and bells, satisfying the edited wind-instrument color requirement."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "substitute",
+      "semantic_target": "attribute",
+      "before_span": "maroon",
+      "after_span": "dark gray",
+      "edited_instruction": "Make a wind instrument a dark gray color.",
+      "witness_type": "substitution_contrast",
+      "changed_constraint": "The instrument's body color changes from maroon to dark gray.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "The saxophone's body is maroon-red, not dark gray."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "The pictured saxophones have dark gray metallic bodies, supporting the edited instrument color."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing 'maroon' with 'dark gray' is one attribute substitution and exactly reconstructs the edited instruction. It preserves the wind-instrument requirement. The positive shows a maroon saxophone, while the candidate shows dark gray saxophones, establishing the required support reversal.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The saxophone's body and bell are reddish maroon, not dark gray."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The two saxophones visibly have dark gray metallic bodies and bells, satisfying the edited wind-instrument color requirement."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "2fa65629f10ab2bd7f5d87ae3643b15cc2473b7bda3c9a3ca21faf5299a502ac",
+      "input_hash": "565df9aeafbc5b14e1182aebd12b6824faf9efccf2db26983bd0ff27bb936325",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/565df9aeafbc5b14e1182aebd12b6824faf9efccf2db26983bd0ff27bb936325.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_09c243924322d1bd016af2be4641c887d193d6f4ef8d03e46f",
+      "usage": {
+        "prompt_tokens": 10457,
+        "completion_tokens": 389,
+        "total_tokens": 10846,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 50
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "3638569d7c1b31e747ff20487bc30f12cddcc3f2a11e3f06b5e435855ccef670",
+      "input_hash": "0ed9b7db46801df959550e981a07cf548355c9236d5d358d62a83fa02f87a035",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/0ed9b7db46801df959550e981a07cf548355c9236d5d358d62a83fa02f87a035.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0b15b2640208b52b016af2be6c9e7487d1a671ce6503c7a21a",
+      "usage": {
+        "prompt_tokens": 9978,
+        "completion_tokens": 340,
+        "total_tokens": 10318,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 23
+        }
+      }
+    }
+  ]
+}

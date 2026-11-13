@@ -1,0 +1,87 @@
+{
+  "case_id": "case_42615f126b1b59cdc601",
+  "audit_query_id": "audit_query_077",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_42615f126b1b59cdc601",
+    "case_status": "source_invalid_or_uncertain",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "T shows a television on a freestanding shelving stand, unlike R's integrated wall panel. However, 'rather making with attached show case' does not clearly specify whether an attached display unit is required or excluded, so the full instruction cannot be reliably assessed."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows a laptop on a tall ladder-style desk with upper shelves, rather than the television-and-stand arrangement requested by the identifiable portion of the instruction."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The target should be a television stand; C depicts a ladder-style computer desk."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_42615f126b1b59cdc601",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The television rests on a freestanding low shelving stand, unlike the reference's television mounted within a large attached wall-panel unit."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The candidate shows a tall ladder-style desk with a laptop and upper shelves, rather than a television on a television stand."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "c4cc0e7795505219d885c686cc80c891f140d3f4b31980df4838e31566c4acd2",
+      "input_hash": "c7f1a75e4c8ad9a26d14bf5b185ecd13d23cc2b29a38dde793612f70eff0e7fd",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/c7f1a75e4c8ad9a26d14bf5b185ecd13d23cc2b29a38dde793612f70eff0e7fd.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0a4944174a8315f0016af2bd969d4487d2a62e1c37bcf16da6",
+      "usage": {
+        "prompt_tokens": 7062,
+        "completion_tokens": 474,
+        "total_tokens": 7536,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 260
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "ebf8fc922dae59e047d5a9aae3e867b4f05df9d2e23c9bf54df6b4ecbe056d4d",
+      "input_hash": "7ff9a1f8f261cec0fff6e7b0dd10800ce1de5533940ff8e61c34d9ba8e691a7a",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/7ff9a1f8f261cec0fff6e7b0dd10800ce1de5533940ff8e61c34d9ba8e691a7a.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_02d494f4f911ba71016af2bdad264c87d1a83bfef61f3ab129",
+      "usage": {
+        "prompt_tokens": 6520,
+        "completion_tokens": 101,
+        "total_tokens": 6621,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        }
+      }
+    }
+  ]
+}

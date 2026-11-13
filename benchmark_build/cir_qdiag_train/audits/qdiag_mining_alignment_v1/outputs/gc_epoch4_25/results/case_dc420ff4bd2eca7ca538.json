@@ -1,0 +1,88 @@
+{
+  "case_id": "case_dc420ff4bd2eca7ca538",
+  "audit_query_id": "audit_query_078",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_dc420ff4bd2eca7ca538",
+    "case_status": "source_invalid_or_uncertain",
+    "source_on_positive": {
+      "status": "contradicted",
+      "evidence": "One marmot-like rodent sits on a rock against a blue background. Its visible furry tail and facial features identify it as a marmot rather than the requested beaver."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Several costumed pug dogs stand on pavement; there is no beaver sitting on a rock. Some blue sky is visible behind them."
+    },
+    "candidate_relation": "multiple_constraint_conflict",
+    "violated_source_constraints": [
+      "One beaver",
+      "The animal is sitting on a rock"
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_dc420ff4bd2eca7ca538",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows one beaver sitting on a rock, with blue sky visible behind it."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows pug dogs in an outdoor crowd, not a beaver sitting on a rock; the stated scene is absent."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "402000ea5c9ca19132c93dff0b3f4f24969633f860d0d302cc180343ed48439f",
+      "input_hash": "6437e327073fa815d3a8beb783e1abe9c30cf3ea6c60d30762172e8dbcd71808",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/6437e327073fa815d3a8beb783e1abe9c30cf3ea6c60d30762172e8dbcd71808.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_00b469d376a0206f016af2bed15d9487d0b0070a4619ae1310",
+      "usage": {
+        "prompt_tokens": 7500,
+        "completion_tokens": 264,
+        "total_tokens": 7764,
+        "prompt_tokens_details": {
+          "cached_tokens": 3830
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 72
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "b1799296897a8cca2cf35d0479eed7b89f87c3df8b548bf7e62899e4214ba162",
+      "input_hash": "e82a7c2866121b94ecda1bf802d02038beb194b4a42cb16052124041fc0d615a",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/e82a7c2866121b94ecda1bf802d02038beb194b4a42cb16052124041fc0d615a.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_08fd8cb2793f192f016af2beda601087d294dabb424fc6ef83",
+      "usage": {
+        "prompt_tokens": 7122,
+        "completion_tokens": 222,
+        "total_tokens": 7344,
+        "completion_tokens_details": {
+          "reasoning_tokens": 124
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "additionalProperties": false,
+  "description": "Keep or remove one source CIRR triplet before negative generation.",
+  "properties": {
+    "decision": {
+      "enum": [
+        "keep",
+        "drop"
+      ],
+      "title": "Decision",
+      "type": "string"
+    },
+    "reason": {
+      "maxLength": 400,
+      "minLength": 1,
+      "title": "Reason",
+      "type": "string"
+    }
+  },
+  "required": [
+    "decision",
+    "reason"
+  ],
+  "title": "CIRRScreenResponse",
+  "type": "object"
+}

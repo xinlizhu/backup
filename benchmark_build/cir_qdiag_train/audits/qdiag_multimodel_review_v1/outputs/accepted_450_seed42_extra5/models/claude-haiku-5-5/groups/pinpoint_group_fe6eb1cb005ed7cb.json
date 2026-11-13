@@ -1,0 +1,49 @@
+{
+  "group_id": "pinpoint_group_fe6eb1cb005ed7cb",
+  "model": "claude-haiku-5-5",
+  "signature": "44bb4aae802e19564501a676b733c7e19828d9ced260b7da0428f08b1a359df2",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_fe6eb1cb005ed7cb_query_06621_predicate_substitute",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "The positive image (Image 2) shows a sleeveless black leather fit and flare midi dress. The negative text 'with the sleeves added' would describe adding sleeves to this dress, which is compatible with the positive—the positive merely shows the end state without sleeves, but does not preclude the existence of a version with sleeves added. The edit fails because it does not create a clearly false claim for the supplied positive image."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-haiku-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "e754e844b130d3c6ba782e649917db9bc27d328638e39fd8598336a019222b33",
+      "input_hash": "7245b239e11905756e5ad4daa44fd260ea9dd6c984cb9740fbbdeeaf6f483c7f",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/claude-haiku-5-5/cache/validate_group/7245b239e11905756e5ad4daa44fd260ea9dd6c984cb9740fbbdeeaf6f483c7f.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01pn7JH0pQQ26HjzBAjnZ1YIKf",
+      "usage": {
+        "prompt_tokens": 6655,
+        "completion_tokens": 209,
+        "total_tokens": 6864,
+        "prompt_tokens_details": {
+          "cached_tokens": 5187,
+          "cache_creation_tokens": 1464
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_fe6eb1cb005ed7cb_query_06621_predicate_substitute",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 436,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "group_id": "pinpoint_group_90f5fd1d589e0073",
+  "model": "grok-4.7",
+  "signature": "52913ea34ae01078c58f7a80fc2119b86ef4b6b3449e9e55b21816a5d5d1ccbd",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_90f5fd1d589e0073_query_06322_attribute_delete",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Deletes only the denim-fabric attribute; the resulting query is fluent, strictly weaker, and still asks to preserve fit and remove the sleeves."
+    },
+    {
+      "negative_id": "pinpoint_group_90f5fd1d589e0073_query_06322_predicate_substitute",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "One predicate swap from removing the sleeves to leaving them intact. Every supplied positive is clearly sleeveless, so the new fact is false for all of them."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.7",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "8f9b963a6e909757df3377a830114617d448c8b7267ec5feaed5d2afebca3f60",
+      "input_hash": "9e5cef4f9b1a2bb9f407b866d63d9fa3ed1981e72df26e2e0ac6e3276f641ebc",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/grok-4.7/cache/validate_group/9e5cef4f9b1a2bb9f407b866d63d9fa3ed1981e72df26e2e0ac6e3276f641ebc.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "dc133327-6c68-92fb-9d30-868fc46289ef",
+      "usage": {
+        "prompt_tokens": 5811,
+        "completion_tokens": 157,
+        "total_tokens": 9086,
+        "prompt_tokens_details": {
+          "text_tokens": 2680,
+          "audio_tokens": 0,
+          "image_tokens": 3131,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 3118,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 282000000
+      }
+    }
+  ],
+  "format_warnings": []
+}

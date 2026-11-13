@@ -1,0 +1,83 @@
+{
+  "request": {
+    "stage": "smoke_text_json",
+    "backend": "OpenAIChatBackend",
+    "model_name": "stage-routed-openai-chat",
+    "model_revision": null,
+    "backend_identity": {
+      "backend_contract": "minimal-httpx-multimodal-chat-structured-v5",
+      "api_base": "https://ai.gs88.shop/v1",
+      "structured_output_mode": "prompt",
+      "generation_model": "gpt-5.6-terra",
+      "validation_model": "gpt-5.6-terra",
+      "generation_reasoning_effort": null,
+      "validation_reasoning_effort": null,
+      "image_detail": "high"
+    },
+    "prompt_hash": "61500d94e9d47548b11adff4c95e1948ca558d34f5d27e72b7f00b0ed818989b",
+    "prompt_version": "v8",
+    "schema": {
+      "additionalProperties": false,
+      "properties": {
+        "value": {
+          "title": "Value",
+          "type": "string"
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "title": "TextSmokeResponse",
+      "type": "object"
+    },
+    "max_output_tokens": 128
+  },
+  "images": [],
+  "parsed": {
+    "value": "OK123123OK"
+  },
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "content": "{\"value\":\"OK123123OK\"}",
+          "role": "assistant"
+        }
+      }
+    ],
+    "created": 1785465850,
+    "id": "resp_02b4eef6b4a0ccfb016a6c0bfa94dc8194ace811c9313c1c7a",
+    "model": "gpt-5.6-terra",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 12,
+      "prompt_tokens": 83,
+      "total_tokens": 95
+    }
+  },
+  "request_id": "resp_02b4eef6b4a0ccfb016a6c0bfa94dc8194ace811c9313c1c7a",
+  "trace": {
+    "stage": "smoke_text_json",
+    "model_name": "gpt-5.6-terra",
+    "model_revision": null,
+    "provider": "openai-compatible-chat",
+    "reasoning_effort": null,
+    "prompt_version": "v8",
+    "prompt_hash": "61500d94e9d47548b11adff4c95e1948ca558d34f5d27e72b7f00b0ed818989b",
+    "input_hash": "6d50c57e7fcf8f1274ca329618333eba7307926b12d33a43e66f016528d1c464",
+    "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_openai_cirr/outputs/cirr_train_pilot_50_v8/smoke_cache/smoke_text_json/6d50c57e7fcf8f1274ca329618333eba7307926b12d33a43e66f016528d1c464.json",
+    "cached": false,
+    "attempts": 1,
+    "request_id": "resp_02b4eef6b4a0ccfb016a6c0bfa94dc8194ace811c9313c1c7a",
+    "usage": {
+      "completion_tokens": 12,
+      "prompt_tokens": 83,
+      "total_tokens": 95
+    }
+  },
+  "attempt": 1,
+  "previous_errors": [],
+  "previous_error_details": []
+}

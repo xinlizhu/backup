@@ -1,0 +1,75 @@
+{
+  "group_id": "pinpoint_group_86e9d7b9ff36883e",
+  "model": "claude-sonnet-5-5",
+  "signature": "aff20e5a5733d87f80fd7515c25d92c77cff20d4f50c9f8dbf4123bfdabed97b",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_86e9d7b9ff36883e_query_06152_predicate_add",
+      "decision": "reject",
+      "failure_code": "not_visually_verifiable",
+      "reason": "The added predicate 'that sit in a row' cannot be verified from the supplied images. Image 2 shows a single pillow in isolation, not multiple pillows arranged in a row. The positive images (3-6) show fashion items and architectural elements unrelated to throw pillows. Whether throw pillows sit in a row is not determinable from this visual set."
+    },
+    {
+      "negative_id": "pinpoint_group_86e9d7b9ff36883e_query_06153_object_add",
+      "decision": "reject",
+      "failure_code": "not_visually_verifiable",
+      "reason": "The added object 'a small ceramic vase also present' cannot be verified from the supplied images. The reference images show an abstract wave pattern (img1) and a white pillow (img2), but none of the positive images (3-6) depict throw pillows with ceramic vases. The positive set consists of fashion items and architectural imagery, making visual verification impossible."
+    },
+    {
+      "negative_id": "pinpoint_group_86e9d7b9ff36883e_query_06154_attribute_add",
+      "decision": "reject",
+      "failure_code": "not_visually_verifiable",
+      "reason": "The added attribute 'with blue piping' cannot be reliably verified from the supplied images. Reference image 2 shows a white pillow without visible blue piping details. The positive images (3-6) are fashion garments and architectural photos that do not show throw pillows with piping to confirm or contradict this attribute constraint."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-sonnet-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "fb0b512b555c03ef818f1da7c61b882a391da74463ccab235d0fb3c6bb1b59db",
+      "input_hash": "36bd3a4e4131fbd39a84ca732e43974dc4e6229d889b243d8dba8e76ac1e2d63",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/claude-sonnet-5-5/cache/validate_group/36bd3a4e4131fbd39a84ca732e43974dc4e6229d889b243d8dba8e76ac1e2d63.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01vCjqfXJHTsKd7RuFuGO2UCku",
+      "usage": {
+        "prompt_tokens": 9660,
+        "completion_tokens": 480,
+        "total_tokens": 10140,
+        "prompt_tokens_details": {
+          "cached_tokens": 7531,
+          "cache_creation_tokens": 2125
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_86e9d7b9ff36883e_query_06152_predicate_add",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 345,
+      "action": "full reason retained; decision and failure_code unchanged"
+    },
+    {
+      "negative_id": "pinpoint_group_86e9d7b9ff36883e_query_06153_object_add",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 370,
+      "action": "full reason retained; decision and failure_code unchanged"
+    },
+    {
+      "negative_id": "pinpoint_group_86e9d7b9ff36883e_query_06154_attribute_add",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 335,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

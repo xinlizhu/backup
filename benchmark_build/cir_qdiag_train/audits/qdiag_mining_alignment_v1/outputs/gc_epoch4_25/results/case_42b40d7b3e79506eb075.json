@@ -1,0 +1,166 @@
+{
+  "case_id": "case_42b40d7b3e79506eb075",
+  "audit_query_id": "audit_query_087",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_42b40d7b3e79506eb075",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The orange clownfish is among the anemone tentacles near their middle; compared with R's yellow-orange fish, it appears darker."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The orange clownfish is beside and above the anemone, not swimming through its middle."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The clownfish is swimming through the middle of a sea anemone."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "delete_predicate_middle_of_anemone",
+        "operation": "delete",
+        "semantic_target": "predicate",
+        "before_span": "swimming through the middle of a sea anemone",
+        "after_span": null,
+        "edited_instruction": "Shows a darker colored clown fish.",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "Removes the relation that the clownfish swims through the middle of a sea anemone.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "The clownfish in T appears darker than R's yellow-orange fish."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The clownfish in C appears darker than R's yellow-orange fish."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_42b40d7b3e79506eb075",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The clownfish has deeper orange coloration than the reference's yellow-orange fish. Its body lies within the anemone's central tentacles, which surround and partly obscure it."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The clownfish has deeper reddish-orange coloration than the reference, but it is above the anemone's upper-right edge, with most of its body against the rock rather than passing through the middle of the tentacles."
+    },
+    "verdicts": [
+      {
+        "witness_id": "delete_predicate_middle_of_anemone",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting the specified span removes one relational predicate and reconstructs the fluent edited instruction. Both fish satisfy the retained darker-color requirement; the candidate violates only the removed requirement to swim through the anemone's middle.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "The visible clownfish has a deeper orange body than the reference's yellow-orange coloration."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The visible clownfish has darker reddish-orange coloration than the reference's yellow-orange fish."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "delete_predicate_middle_of_anemone",
+      "operation": "delete",
+      "semantic_target": "predicate",
+      "before_span": "swimming through the middle of a sea anemone",
+      "after_span": null,
+      "edited_instruction": "Shows a darker colored clown fish.",
+      "witness_type": "deletion_relaxation",
+      "changed_constraint": "Removes the relation that the clownfish swims through the middle of a sea anemone.",
+      "edited_on_positive": {
+        "status": "supported",
+        "evidence": "The clownfish in T appears darker than R's yellow-orange fish."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "The clownfish in C appears darker than R's yellow-orange fish."
+      },
+      "independent_review": {
+        "witness_id": "delete_predicate_middle_of_anemone",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting the specified span removes one relational predicate and reconstructs the fluent edited instruction. Both fish satisfy the retained darker-color requirement; the candidate violates only the removed requirement to swim through the anemone's middle.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "The visible clownfish has a deeper orange body than the reference's yellow-orange coloration."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The visible clownfish has darker reddish-orange coloration than the reference's yellow-orange fish."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "delete_predicate_middle_of_anemone",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "5308207b8b0659a81a015a4093ed699641a90f11be44790281eb4d306c0d0e99",
+      "input_hash": "7610f425c9b0d1b93d33ffea5311d91a4232980aafa7e810ab001b90a1bc1209",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/7610f425c9b0d1b93d33ffea5311d91a4232980aafa7e810ab001b90a1bc1209.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_01a0f618f377a63d016af2bf65dd0087d1b957453b225af7a1",
+      "usage": {
+        "prompt_tokens": 8545,
+        "completion_tokens": 609,
+        "total_tokens": 9154,
+        "prompt_tokens_details": {
+          "cached_tokens": 5888
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 334
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "7fff9d04ca7ad240bee6ebd2cc773bf0366c57e1bc232483603f874ade4e2ad0",
+      "input_hash": "d1a66e4c598ae29ac8b53f55c0014bb53b3318541f52107232cc7d9fe21f2c74",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/d1a66e4c598ae29ac8b53f55c0014bb53b3318541f52107232cc7d9fe21f2c74.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_05149f9c4efaa8ba016af2bf8056f487d198fb80a0c8e1948e",
+      "usage": {
+        "prompt_tokens": 7913,
+        "completion_tokens": 506,
+        "total_tokens": 8419,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 171
+        }
+      }
+    }
+  ]
+}

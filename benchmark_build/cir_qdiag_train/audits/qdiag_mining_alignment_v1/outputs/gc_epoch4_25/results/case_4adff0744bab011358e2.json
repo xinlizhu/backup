@@ -1,0 +1,88 @@
+{
+  "case_id": "case_4adff0744bab011358e2",
+  "audit_query_id": "audit_query_082",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_4adff0744bab011358e2",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Relative to R's cab-end view, T shows a locomotive from the opposite end at a corner angle, with prominent white diagonal stripes on its end and side."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows a bake shop facade viewed straight on, rather than the referenced locomotive viewed from its back corner. The light stripes belong to a shop awning, not a locomotive."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "Show the referenced locomotive from its back corner.",
+      "Add white strips to the locomotive."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_4adff0744bab011358e2",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The locomotive is viewed obliquely from its short rear end, with the cab near that end and the long hood extending away to the right. White diagonal stripes appear across the visible end and along the lower body."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The candidate shows a bakery storefront viewed from the street, not the reference locomotive turned to show its rear corner. The striped awning does not establish white strips added to the locomotive."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "e9c49c2e9d9b25812bd59290daaa62d2a7b49bbc44cbf351ffe7f7bccf8f77a3",
+      "input_hash": "3d09232706ccf8b10eafb5ccb743a9a4afe3012680af5ffd0e3a6cf7fc651d2a",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/3d09232706ccf8b10eafb5ccb743a9a4afe3012680af5ffd0e3a6cf7fc651d2a.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_040f07c68501a8d0016af2bd42a09c87d1aec678b066993d1b",
+      "usage": {
+        "prompt_tokens": 7355,
+        "completion_tokens": 253,
+        "total_tokens": 7608,
+        "completion_tokens_details": {
+          "reasoning_tokens": 58
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "f4258c8dc0b503fc7935ec4fc4a63b1e25d8e1f0695576fe9897d0b3bfea226c",
+      "input_hash": "093561f0c65326f9ddd8a883afe50a961d571c618168583e65371d23e03404f4",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/093561f0c65326f9ddd8a883afe50a961d571c618168583e65371d23e03404f4.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0baf69bc05f93e7f016af2bd4e212487d29da5aa629eb56916",
+      "usage": {
+        "prompt_tokens": 6813,
+        "completion_tokens": 187,
+        "total_tokens": 7000,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 53
+        }
+      }
+    }
+  ]
+}

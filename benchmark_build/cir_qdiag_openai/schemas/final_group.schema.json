@@ -1,0 +1,533 @@
+{
+  "$defs": {
+    "CallTrace": {
+      "additionalProperties": false,
+      "properties": {
+        "attempts": {
+          "default": 1,
+          "title": "Attempts",
+          "type": "integer"
+        },
+        "cached": {
+          "default": false,
+          "title": "Cached",
+          "type": "boolean"
+        },
+        "input_hash": {
+          "title": "Input Hash",
+          "type": "string"
+        },
+        "model_name": {
+          "title": "Model Name",
+          "type": "string"
+        },
+        "model_revision": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Model Revision"
+        },
+        "prompt_hash": {
+          "title": "Prompt Hash",
+          "type": "string"
+        },
+        "prompt_version": {
+          "minLength": 1,
+          "title": "Prompt Version",
+          "type": "string"
+        },
+        "provider": {
+          "default": "openai",
+          "title": "Provider",
+          "type": "string"
+        },
+        "raw_response_path": {
+          "title": "Raw Response Path",
+          "type": "string"
+        },
+        "reasoning_effort": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reasoning Effort"
+        },
+        "request_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Request Id"
+        },
+        "stage": {
+          "title": "Stage",
+          "type": "string"
+        },
+        "usage": {
+          "anyOf": [
+            {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Usage"
+        }
+      },
+      "required": [
+        "stage",
+        "model_name",
+        "prompt_version",
+        "prompt_hash",
+        "input_hash",
+        "raw_response_path"
+      ],
+      "title": "CallTrace",
+      "type": "object"
+    },
+    "EditOperation": {
+      "enum": [
+        "add",
+        "delete",
+        "substitute"
+      ],
+      "title": "EditOperation",
+      "type": "string"
+    },
+    "GroupMetadata": {
+      "additionalProperties": false,
+      "properties": {
+        "build_fingerprint": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Build Fingerprint"
+        },
+        "call_traces": {
+          "items": {
+            "$ref": "#/$defs/CallTrace"
+          },
+          "title": "Call Traces",
+          "type": "array"
+        },
+        "errors": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Errors",
+          "type": "array"
+        },
+        "generator_model": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Generator Model"
+        },
+        "notes": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Notes",
+          "type": "array"
+        },
+        "num_accepted_negatives": {
+          "default": 0,
+          "title": "Num Accepted Negatives",
+          "type": "integer"
+        },
+        "num_generated_candidates": {
+          "default": 0,
+          "title": "Num Generated Candidates",
+          "type": "integer"
+        },
+        "operational_status": {
+          "default": "pending",
+          "enum": [
+            "pending",
+            "ok",
+            "failed"
+          ],
+          "title": "Operational Status",
+          "type": "string"
+        },
+        "prompt_version": {
+          "default": "v7",
+          "title": "Prompt Version",
+          "type": "string"
+        },
+        "random_seed": {
+          "default": 42,
+          "title": "Random Seed",
+          "type": "integer"
+        },
+        "selection_fingerprint": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Selection Fingerprint"
+        },
+        "semantic_status": {
+          "default": "pending",
+          "enum": [
+            "pending",
+            "accepted",
+            "partial",
+            "rejected"
+          ],
+          "title": "Semantic Status",
+          "type": "string"
+        },
+        "stage": {
+          "default": "source",
+          "enum": [
+            "source",
+            "candidates",
+            "final"
+          ],
+          "title": "Stage",
+          "type": "string"
+        },
+        "validated_positive_image_ids": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 8,
+          "title": "Validated Positive Image Ids",
+          "type": "array"
+        },
+        "validator_model": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Validator Model"
+        }
+      },
+      "title": "GroupMetadata",
+      "type": "object"
+    },
+    "ImageRef": {
+      "additionalProperties": false,
+      "properties": {
+        "image_id": {
+          "minLength": 1,
+          "title": "Image Id",
+          "type": "string"
+        },
+        "image_path": {
+          "minLength": 1,
+          "title": "Image Path",
+          "type": "string"
+        }
+      },
+      "required": [
+        "image_id",
+        "image_path"
+      ],
+      "title": "ImageRef",
+      "type": "object"
+    },
+    "InstructionRecord": {
+      "additionalProperties": false,
+      "properties": {
+        "instruction_id": {
+          "minLength": 1,
+          "title": "Instruction Id",
+          "type": "string"
+        },
+        "is_imperative": {
+          "title": "Is Imperative",
+          "type": "boolean"
+        },
+        "is_question": {
+          "title": "Is Question",
+          "type": "boolean"
+        },
+        "l1_interest": {
+          "title": "L1 Interest",
+          "type": "string"
+        },
+        "length_category": {
+          "title": "Length Category",
+          "type": "string"
+        },
+        "query_category": {
+          "title": "Query Category",
+          "type": "string"
+        },
+        "text": {
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        },
+        "token_count": {
+          "minimum": 0,
+          "title": "Token Count",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "instruction_id",
+        "text",
+        "query_category",
+        "token_count",
+        "length_category",
+        "is_question",
+        "is_imperative",
+        "l1_interest"
+      ],
+      "title": "InstructionRecord",
+      "type": "object"
+    },
+    "NegativeCandidate": {
+      "additionalProperties": false,
+      "properties": {
+        "after_span": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "After Span"
+        },
+        "before_span": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Before Span"
+        },
+        "edit_operation": {
+          "$ref": "#/$defs/EditOperation"
+        },
+        "generation_attempts": {
+          "default": 1,
+          "minimum": 1,
+          "title": "Generation Attempts",
+          "type": "integer"
+        },
+        "instruction_id": {
+          "minLength": 1,
+          "title": "Instruction Id",
+          "type": "string"
+        },
+        "negative_id": {
+          "minLength": 1,
+          "title": "Negative Id",
+          "type": "string"
+        },
+        "rejection_code": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ReviewFailureCode"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "selection_reason": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Selection Reason"
+        },
+        "semantic_target": {
+          "$ref": "#/$defs/SemanticTarget"
+        },
+        "source_text": {
+          "minLength": 1,
+          "title": "Source Text",
+          "type": "string"
+        },
+        "status": {
+          "default": "generated",
+          "enum": [
+            "generated",
+            "accepted",
+            "rejected",
+            "failed"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "text": {
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "negative_id",
+        "instruction_id",
+        "source_text",
+        "text",
+        "semantic_target",
+        "edit_operation",
+        "before_span",
+        "after_span"
+      ],
+      "title": "NegativeCandidate",
+      "type": "object"
+    },
+    "ReviewFailureCode": {
+      "enum": [
+        "not_single_edit",
+        "wrong_semantic_target",
+        "not_fluent",
+        "not_close_or_hard",
+        "positive_compatible",
+        "not_visually_verifiable",
+        "invalid_delete",
+        "other_semantic_failure"
+      ],
+      "title": "ReviewFailureCode",
+      "type": "string"
+    },
+    "SemanticTarget": {
+      "enum": [
+        "object",
+        "attribute",
+        "predicate"
+      ],
+      "title": "SemanticTarget",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "candidates": {
+      "items": {
+        "$ref": "#/$defs/NegativeCandidate"
+      },
+      "title": "Candidates",
+      "type": "array"
+    },
+    "group_id": {
+      "minLength": 1,
+      "title": "Group Id",
+      "type": "string"
+    },
+    "instructions": {
+      "items": {
+        "$ref": "#/$defs/InstructionRecord"
+      },
+      "maxItems": 6,
+      "minItems": 2,
+      "title": "Instructions",
+      "type": "array"
+    },
+    "metadata": {
+      "$ref": "#/$defs/GroupMetadata"
+    },
+    "negatives": {
+      "items": {
+        "$ref": "#/$defs/NegativeCandidate"
+      },
+      "title": "Negatives",
+      "type": "array"
+    },
+    "official_negative_image_ids": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "title": "Official Negative Image Ids",
+      "type": "array"
+    },
+    "positive_images": {
+      "items": {
+        "$ref": "#/$defs/ImageRef"
+      },
+      "minItems": 1,
+      "title": "Positive Images",
+      "type": "array"
+    },
+    "references": {
+      "items": {
+        "$ref": "#/$defs/ImageRef"
+      },
+      "maxItems": 2,
+      "minItems": 1,
+      "title": "References",
+      "type": "array"
+    },
+    "schema_version": {
+      "const": "7.0",
+      "default": "7.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "source_dataset": {
+      "const": "PinPoint",
+      "default": "PinPoint",
+      "title": "Source Dataset",
+      "type": "string"
+    }
+  },
+  "required": [
+    "group_id",
+    "references",
+    "instructions",
+    "positive_images",
+    "official_negative_image_ids"
+  ],
+  "title": "PinPointGroupRecord",
+  "type": "object"
+}

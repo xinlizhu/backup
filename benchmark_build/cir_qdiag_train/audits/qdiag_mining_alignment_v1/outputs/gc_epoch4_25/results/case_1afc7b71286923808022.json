@@ -1,0 +1,85 @@
+{
+  "case_id": "case_1afc7b71286923808022",
+  "audit_query_id": "audit_query_089",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_1afc7b71286923808022",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The photo shows a parking area of closely parked school buses, including three adjacent buses with heavily charred front ends, partly obscured by intact yellow buses."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The photo shows vultures and other scavengers around a carcass on grass, with no buses, bus parking lot, or burned bus fronts."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "The scene is a bus parking lot.",
+      "Three buses have fire-damaged front ends."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_1afc7b71286923808022",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "The photo shows school buses parked closely together, including severely charred buses in the center. However, three distinct buses with fire damage specifically at their front ends cannot be reliably established from this view."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The photo shows vultures and other scavengers around an animal carcass in grassland, with no buses or bus parking lot."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "1db8b4006996c9ec250c70552d37e13d77bcee1b554f529d8f6d1cb85464fe0f",
+      "input_hash": "275eccebbe45eefcc98f846f4b0e5d08d3e88cb3da5c8e76a7fbf31e74847336",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/275eccebbe45eefcc98f846f4b0e5d08d3e88cb3da5c8e76a7fbf31e74847336.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0e6fb7e370240f0e016af2bdb7e43087d2a50cdc18bbcf779a",
+      "usage": {
+        "prompt_tokens": 7716,
+        "completion_tokens": 307,
+        "total_tokens": 8023,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 118
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "0a61a4faa2f5133cf16a83c9053dcc8b79115431a571217409bec9b7d50f0513",
+      "input_hash": "f0662779f47d27829ea7742043db5ce02e2a8b6bac735ee52400fe03ae8eeb0d",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/f0662779f47d27829ea7742043db5ce02e2a8b6bac735ee52400fe03ae8eeb0d.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0d04049f6d87f8f6016af2bdc83f5887d1b6321f6e0b745b83",
+      "usage": {
+        "prompt_tokens": 7174,
+        "completion_tokens": 118,
+        "total_tokens": 7292
+      }
+    }
+  ]
+}

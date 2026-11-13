@@ -1,0 +1,235 @@
+{
+  "case_id": "case_9890b081320bff331b38",
+  "audit_query_id": "audit_query_095",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_9890b081320bff331b38",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "T shows one pelican with its bill open and raised above muddy gray water."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows one pelican with its bill open above the water, but the water is visibly green rather than gray."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The water color is specified as grey; C's water is green."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "substitute_water_color",
+        "operation": "substitute",
+        "semantic_target": "attribute",
+        "before_span": "grey",
+        "after_span": "green",
+        "edited_instruction": "Remove all but one bird, change water color to green, and raise remaining bird out of wate with it's mouth open.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "Water color: grey is replaced by green.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "T has muddy gray-brown water, not green water; its single pelican is raised with its bill open."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C shows green water and one pelican raised above it with its bill open."
+        }
+      },
+      {
+        "witness_id": "delete_water_color",
+        "operation": "delete",
+        "semantic_target": "attribute",
+        "before_span": "change water color to grey, ",
+        "after_span": null,
+        "edited_instruction": "Remove all but one bird, and raise remaining bird out of wate with it's mouth open.",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "The gray-water constraint is removed.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "T shows one pelican raised above the water with its bill open."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C shows one pelican raised above the water with its bill open."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_9890b081320bff331b38",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows one bird standing above the water with its bill open, and the water appears grey-brown."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows one pelican with its bill open and raised above the water, but the water is visibly green rather than grey."
+    },
+    "verdicts": [
+      {
+        "witness_id": "substitute_water_color",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "The single replacement grey→green reconstructs the edited text and changes only the water-color attribute. Image 2 has grey-brown water; Image 3 has green water, while the bird constraints remain supported.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2's water is grey-brown, not green."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3's water is visibly green; one pelican is above the water with its bill open."
+        }
+      },
+      {
+        "witness_id": "delete_water_color",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "The deletion removes the water-color constraint and its attached comma; the remaining instruction is fluent. Image 3 violates only the removed grey-water constraint, while the one-bird, raised, open-bill requirements are supported.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 shows one bird raised above grey-brown water with its bill open."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows one pelican above green water with its bill open; the edited instruction no longer constrains water color."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "substitute_water_color",
+      "operation": "substitute",
+      "semantic_target": "attribute",
+      "before_span": "grey",
+      "after_span": "green",
+      "edited_instruction": "Remove all but one bird, change water color to green, and raise remaining bird out of wate with it's mouth open.",
+      "witness_type": "substitution_contrast",
+      "changed_constraint": "Water color: grey is replaced by green.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "T has muddy gray-brown water, not green water; its single pelican is raised with its bill open."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C shows green water and one pelican raised above it with its bill open."
+      },
+      "independent_review": {
+        "witness_id": "substitute_water_color",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "The single replacement grey→green reconstructs the edited text and changes only the water-color attribute. Image 2 has grey-brown water; Image 3 has green water, while the bird constraints remain supported.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2's water is grey-brown, not green."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3's water is visibly green; one pelican is above the water with its bill open."
+        }
+      }
+    },
+    {
+      "witness_id": "delete_water_color",
+      "operation": "delete",
+      "semantic_target": "attribute",
+      "before_span": "change water color to grey, ",
+      "after_span": null,
+      "edited_instruction": "Remove all but one bird, and raise remaining bird out of wate with it's mouth open.",
+      "witness_type": "deletion_relaxation",
+      "changed_constraint": "The gray-water constraint is removed.",
+      "edited_on_positive": {
+        "status": "supported",
+        "evidence": "T shows one pelican raised above the water with its bill open."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C shows one pelican raised above the water with its bill open."
+      },
+      "independent_review": {
+        "witness_id": "delete_water_color",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "The deletion removes the water-color constraint and its attached comma; the remaining instruction is fluent. Image 3 violates only the removed grey-water constraint, while the one-bird, raised, open-bill requirements are supported.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 shows one bird raised above grey-brown water with its bill open."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows one pelican above green water with its bill open; the edited instruction no longer constrains water color."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "substitute_water_color",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    },
+    {
+      "witness_id": "delete_water_color",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "021d5b0a5a61113c88b9a09e1a939790984312a2812644d8d470419e69b90570",
+      "input_hash": "bb8367ebf49059eda0ba8e44617d63f62d7bd8a9a2aef7a477f36bed6bd960f7",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/bb8367ebf49059eda0ba8e44617d63f62d7bd8a9a2aef7a477f36bed6bd960f7.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0c56bb8012553e29016af2bf18eb9887d197d678b160b60b80",
+      "usage": {
+        "prompt_tokens": 17584,
+        "completion_tokens": 3119,
+        "total_tokens": 20703,
+        "completion_tokens_details": {
+          "reasoning_tokens": 2588
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "55fdd84a66dcae4a08c4f214cfe6e9524c213c3c45b0c5540b94a97a9cb9851f",
+      "input_hash": "9ed3dff1c71e2e34d7a9771249758ba47ae36518e520a55b326c334b9b678cd4",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/9ed3dff1c71e2e34d7a9771249758ba47ae36518e520a55b326c334b9b678cd4.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0d983020d536d02f016af2bf3cadf087d19ea11709ff2bc9e2",
+      "usage": {
+        "prompt_tokens": 20587,
+        "completion_tokens": 753,
+        "total_tokens": 21340,
+        "prompt_tokens_details": {
+          "cached_tokens": 5248
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 275
+        }
+      }
+    }
+  ]
+}

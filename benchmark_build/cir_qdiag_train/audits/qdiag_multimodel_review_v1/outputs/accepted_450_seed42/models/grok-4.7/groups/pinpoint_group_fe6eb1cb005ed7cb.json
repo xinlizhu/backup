@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_fe6eb1cb005ed7cb",
+  "model": "grok-4.7",
+  "signature": "52913ea34ae01078c58f7a80fc2119b86ef4b6b3449e9e55b21816a5d5d1ccbd",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_fe6eb1cb005ed7cb_query_06621_predicate_substitute",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Single-word predicate swap of 'removed' to 'added' reconstructs the text and keeps every other constraint. The supplied positive is clearly sleeveless, so 'sleeves added' is false for it."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.7",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "e754e844b130d3c6ba782e649917db9bc27d328638e39fd8598336a019222b33",
+      "input_hash": "30c84f398251938845bcc311daa4070581834e7401a3cdab84028a0f1fe2d5c4",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/grok-4.7/cache/validate_group/30c84f398251938845bcc311daa4070581834e7401a3cdab84028a0f1fe2d5c4.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "d540b106-e39c-993e-bd9f-7e7ef7d42230",
+      "usage": {
+        "prompt_tokens": 3132,
+        "completion_tokens": 93,
+        "total_tokens": 4606,
+        "prompt_tokens_details": {
+          "text_tokens": 2413,
+          "audio_tokens": 0,
+          "image_tokens": 719,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1381,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 120360000
+      }
+    }
+  ],
+  "format_warnings": []
+}

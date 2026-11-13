@@ -1,0 +1,88 @@
+{
+  "case_id": "case_da9e3ff27b4b6f6f878d",
+  "audit_query_id": "audit_query_076",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_da9e3ff27b4b6f6f878d",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows one dog on a reddish carpet with a large bone in its mouth."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows one dog, but it is outdoors on ordinary ground and no bone is visible."
+    },
+    "candidate_relation": "multiple_constraint_conflict",
+    "violated_source_constraints": [
+      "Set up on red carpet: the dog is outdoors on ground, not on a red carpet.",
+      "Give a bone: no bone is visible."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_da9e3ff27b4b6f6f878d",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows one dog lying on red carpet with a large bone held at its mouth and front paws, satisfying the requested reduction from the reference's many dogs, red carpet setting, and bone."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows one dog on outdoor pavement, not red carpet. It wears a skeleton costume, but no actual bone is visible; the printed bones do not satisfy giving the dog a bone."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "836d9c2b7639b4301dbd7ac78ea6cb9dcb780d060a85ec4be8dfc01abe514f17",
+      "input_hash": "81461a3db02589898e931f5a511e51931b898ddea9ec69a082903bd2dfe15f92",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/81461a3db02589898e931f5a511e51931b898ddea9ec69a082903bd2dfe15f92.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0a24a17c939dd411016af2bf816e6c87d2962777c24c0c8a8f",
+      "usage": {
+        "prompt_tokens": 27735,
+        "completion_tokens": 350,
+        "total_tokens": 28085,
+        "prompt_tokens_details": {
+          "cached_tokens": 5888
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 166
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "63107ef61cf46e8f622a0d04dc2dd5abd875eaf0398a5dea6001026424ba40ce",
+      "input_hash": "89863a45d375c3389d938a1d97d00aaf3a1af2d33a9e913d72f49ebc5bd5ee29",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/89863a45d375c3389d938a1d97d00aaf3a1af2d33a9e913d72f49ebc5bd5ee29.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0f986fe43a79eda5016af2bf90d39c87d08800b7c2e44caa50",
+      "usage": {
+        "prompt_tokens": 27029,
+        "completion_tokens": 135,
+        "total_tokens": 27164,
+        "prompt_tokens_details": {
+          "cached_tokens": 3482
+        }
+      }
+    }
+  ]
+}

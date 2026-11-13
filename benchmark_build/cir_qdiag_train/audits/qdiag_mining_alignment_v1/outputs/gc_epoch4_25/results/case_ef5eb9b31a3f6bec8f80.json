@@ -1,0 +1,91 @@
+{
+  "case_id": "case_ef5eb9b31a3f6bec8f80",
+  "audit_query_id": "audit_query_088",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_ef5eb9b31a3f6bec8f80",
+    "case_status": "source_invalid_or_uncertain",
+    "source_on_positive": {
+      "status": "contradicted",
+      "evidence": "The large bird has a much longer, black neck than the reference and occupies rocky dirt, but it is standing on visible legs rather than sitting."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The large birds have pale gray necks rather than black necks and stand upright on a rocky, grassy slope rather than sitting."
+    },
+    "candidate_relation": "multiple_constraint_conflict",
+    "violated_source_constraints": [
+      "The bird has a black neck.",
+      "The bird is sitting."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_ef5eb9b31a3f6bec8f80",
+    "source_on_positive": {
+      "status": "contradicted",
+      "evidence": "The large bird has a much longer, dark neck than the reference and occupies rocky dirt ground, but it is standing on visible extended legs rather than sitting."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The birds occupy a rocky, grassy outcrop, but their exposed necks are gray rather than black, and none clearly displays the substantially elongated black neck requested relative to the reference."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "e28757e9749085672c2a16ef3030bada363585f74ed6d08b54ec56eac1f70acf",
+      "input_hash": "2c50fe9eb538f1200a5dd814a898423647f93445c4da6063290186e92c1f9a71",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/2c50fe9eb538f1200a5dd814a898423647f93445c4da6063290186e92c1f9a71.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0f0f01e5a655029a016af2bf5c63a887d28f5ddc51c50c3478",
+      "usage": {
+        "prompt_tokens": 7090,
+        "completion_tokens": 391,
+        "total_tokens": 7481,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 201
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "e016e0334adbde4b0d13bec26c0485f5023d2e08c59f15503ae5fa82dff18469",
+      "input_hash": "9776645eeb3ad17c633690e259871db0ee087c8c7bd8c40a57124e54e2b52dda",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/9776645eeb3ad17c633690e259871db0ee087c8c7bd8c40a57124e54e2b52dda.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_05270a7890d3bf34016af2bf6af63887d1ba4516460d79d0b4",
+      "usage": {
+        "prompt_tokens": 6548,
+        "completion_tokens": 165,
+        "total_tokens": 6713,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 38
+        }
+      }
+    }
+  ]
+}

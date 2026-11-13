@@ -1,0 +1,86 @@
+{
+  "case_id": "case_73b60206a1149e1a3b0a",
+  "audit_query_id": "audit_query_085",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_73b60206a1149e1a3b0a",
+    "case_status": "source_invalid_or_uncertain",
+    "source_on_positive": {
+      "status": "contradicted",
+      "evidence": "Several gorillas sit on fallen or arranged tree trunks near the ground. The trunk-setting description fits, but the animals are gorillas (apes), not monkeys."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Wolves stand or walk together in snow; they are not monkeys sitting on separate tree trunks."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "The animals are monkeys.",
+      "The animals sit.",
+      "The animals sit on different tree trunks on the ground."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_73b60206a1149e1a3b0a",
+    "source_on_positive": {
+      "status": "contradicted",
+      "evidence": "The animals seated on the large fallen trunks are gorillas, which are apes rather than monkeys. The seated posture and wooden supports are visible, but the requested animal identity is not satisfied."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The image shows wolves standing or walking through snow, with no monkeys sitting on tree trunks."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "be8ccadc535289ad62c0303550993b42e3e8ea986c8b715841a1a4285eb24b1f",
+      "input_hash": "6e93844d907dacf212ad42038a05852aad18e0a00703d69c52b0b0627757326d",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/6e93844d907dacf212ad42038a05852aad18e0a00703d69c52b0b0627757326d.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0a6e51c51fa20773016af2bd44a63887d1af507b5dbe9b840c",
+      "usage": {
+        "prompt_tokens": 9232,
+        "completion_tokens": 283,
+        "total_tokens": 9515,
+        "completion_tokens_details": {
+          "reasoning_tokens": 89
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "6351b7405a5098ddc0a9672a0736e8315f2ab50e1e5b344173f339800d3ba402",
+      "input_hash": "a186876b78648bb405d6475bc38b05963a87326f49c47f0b9c4e3b5408920689",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/a186876b78648bb405d6475bc38b05963a87326f49c47f0b9c4e3b5408920689.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_05dfa55082291f5f016af2bd53eaf887d182817624fb93ae8a",
+      "usage": {
+        "prompt_tokens": 8690,
+        "completion_tokens": 150,
+        "total_tokens": 8840,
+        "completion_tokens_details": {
+          "reasoning_tokens": 34
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "group_id": "pinpoint_group_4034fbc72276247e",
+  "model": "claude-haiku-5-5",
+  "signature": "44bb4aae802e19564501a676b733c7e19828d9ced260b7da0428f08b1a359df2",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_4034fbc72276247e_query_06027_attribute_substitute",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "The color substitution from lavender to lilac is not clearly false for the supplied positive images. Image 2 (reference) shows a pink/mauve sweater that could reasonably be described as either lavender or lilac depending on interpretation. Multiple positive images (3, 4, 5, 6) show various overalls and clothing in blue denim tones, but none definitively contradict lilac as a color descriptor. The distinction between lavender and lilac is subtle and subjective; both terms describe similar purple-pink hues, making it impossible to verify this as a clear semantic falsehood across all supplied positives."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-haiku-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "3becabc518de6180693dbc6c24ed123a596add0765db48f9f7c5ff5eadeb43f1",
+      "input_hash": "2a5675f58d4ca138ec3307b6d197ed16955c5e4bb79f3177e72fa06c5faf1e05",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/claude-haiku-5-5/cache/validate_group/2a5675f58d4ca138ec3307b6d197ed16955c5e4bb79f3177e72fa06c5faf1e05.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01uGi0ntqlRhyYT2N5YA4eSNOV",
+      "usage": {
+        "prompt_tokens": 10155,
+        "completion_tokens": 254,
+        "total_tokens": 10409,
+        "prompt_tokens_details": {
+          "cached_tokens": 7917,
+          "cache_creation_tokens": 2234
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_4034fbc72276247e_query_06027_attribute_substitute",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 607,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "group_id": "pinpoint_group_400d1d2c85dabe6f",
+  "model": "claude-sonnet-5-5",
+  "signature": "aff20e5a5733d87f80fd7515c25d92c77cff20d4f50c9f8dbf4123bfdabed97b",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_400d1d2c85dabe6f_query_05127_attribute_add",
+      "decision": "reject",
+      "failure_code": "not_visually_verifiable",
+      "reason": "The added attribute 'with the black sequins arranged in diagonal rows' cannot be reliably verified from the supplied positive images. Image 3 shows a black hobo bag without sequins; images 4-6 show makeup and styling content unrelated to the sequin arrangement claim. The visual evidence does not support confirming this specific sequin pattern detail."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-sonnet-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "8b242b8f3954bbc4c4ae531ddd5e6703000eba2641431a6ee6600ef6d0c19e18",
+      "input_hash": "447c8a7444f86ce58e5e1ccacf50aa8ef4b5c3ade9ef59b449d30b7c8033b29b",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/claude-sonnet-5-5/cache/validate_group/447c8a7444f86ce58e5e1ccacf50aa8ef4b5c3ade9ef59b449d30b7c8033b29b.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01LMqJblHYSOSbp1zJKRA1faVq",
+      "usage": {
+        "prompt_tokens": 11118,
+        "completion_tokens": 180,
+        "total_tokens": 11298,
+        "prompt_tokens_details": {
+          "cached_tokens": 8668,
+          "cache_creation_tokens": 2446
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_400d1d2c85dabe6f_query_05127_attribute_add",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 352,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

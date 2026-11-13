@@ -1,0 +1,41 @@
+{
+  "$defs": {
+    "ParaphraseProposal": {
+      "additionalProperties": false,
+      "properties": {
+        "rewrite_strategy": {
+          "maxLength": 200,
+          "minLength": 1,
+          "title": "Rewrite Strategy",
+          "type": "string"
+        },
+        "text": {
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "text",
+        "rewrite_strategy"
+      ],
+      "title": "ParaphraseProposal",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "paraphrases": {
+      "items": {
+        "$ref": "#/$defs/ParaphraseProposal"
+      },
+      "title": "Paraphrases",
+      "type": "array"
+    }
+  },
+  "required": [
+    "paraphrases"
+  ],
+  "title": "ParaphraseGenerationResponse",
+  "type": "object"
+}

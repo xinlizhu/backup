@@ -1,0 +1,163 @@
+{
+  "case_id": "case_429c8f1f1861ac5b2f05",
+  "audit_query_id": "audit_query_076",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_429c8f1f1861ac5b2f05",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Relative to the group of dogs in R, T shows one dog on red carpet with a large bone held at its mouth."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows one dog chewing a bone, but it lies on gray pavement, not red carpet; the red strip is a leash."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The dog must be on red carpet."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "delete",
+        "semantic_target": "predicate",
+        "before_span": "set up on red carpet, ",
+        "after_span": null,
+        "edited_instruction": "Remove all but one dog, and give a bone.",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "Remove the requirement that the dog be placed on red carpet.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "T shows a single dog with a large bone at its mouth."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C shows a single dog holding and chewing a bone between its front paws."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_429c8f1f1861ac5b2f05",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows one dog on a red carpet holding a large bone."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows one dog with a bone, but it is on a gray stone surface, not a red carpet."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting the carpet-placement phrase yields the proposed instruction. Image 3 meets the remaining one-dog and bone constraints; its only visible mismatch with the source is the carpet placement.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 shows one dog with a bone."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows one dog chewing a bone."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "delete",
+      "semantic_target": "predicate",
+      "before_span": "set up on red carpet, ",
+      "after_span": null,
+      "edited_instruction": "Remove all but one dog, and give a bone.",
+      "witness_type": "deletion_relaxation",
+      "changed_constraint": "Remove the requirement that the dog be placed on red carpet.",
+      "edited_on_positive": {
+        "status": "supported",
+        "evidence": "T shows a single dog with a large bone at its mouth."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C shows a single dog holding and chewing a bone between its front paws."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting the carpet-placement phrase yields the proposed instruction. Image 3 meets the remaining one-dog and bone constraints; its only visible mismatch with the source is the carpet placement.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 shows one dog with a bone."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows one dog chewing a bone."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "19ae2d9300bde6e446e527ac387f02d8fe25b93c6a78bbfa160a75df342fa518",
+      "input_hash": "01c644fcf99c43766e75af0e6cf9b2c79052e4d3e4f49f8c01386c8dc784c117",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/01c644fcf99c43766e75af0e6cf9b2c79052e4d3e4f49f8c01386c8dc784c117.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_01c42974630f7b85016af2bfd06ed087d2af541ce118c3a5c4",
+      "usage": {
+        "prompt_tokens": 27791,
+        "completion_tokens": 553,
+        "total_tokens": 28344,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 207
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "91caaf61d2b874fee93933a22d4229d520aeb061430eff97ae58d3bc52a5d960",
+      "input_hash": "1c82feb22e2a415de396f1a77a634e29fbab0b1b68c54886de0c4b0d8c3b479f",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/1c82feb22e2a415de396f1a77a634e29fbab0b1b68c54886de0c4b0d8c3b479f.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0bb65e964f72fb34016af2bffa174487d09226d962f5b394b1",
+      "usage": {
+        "prompt_tokens": 27480,
+        "completion_tokens": 348,
+        "total_tokens": 27828,
+        "completion_tokens_details": {
+          "reasoning_tokens": 143
+        }
+      }
+    }
+  ]
+}

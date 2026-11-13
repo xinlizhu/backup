@@ -1,0 +1,49 @@
+{
+  "group_id": "pinpoint_group_82f61d57d1aa4a0b",
+  "model": "claude-haiku-5-5",
+  "signature": "44bb4aae802e19564501a676b733c7e19828d9ced260b7da0428f08b1a359df2",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_82f61d57d1aa4a0b_query_03796_object_substitute",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "The substitution of 'nails' to 'toenails' is not clearly false for the supplied positive images. Images 2-5 all show fingernails with blue polish, not toenails. However, the term 'toenails' does not directly contradict these images—it simply refers to a different body part. The edit changes the body part referenced rather than making a false claim about the nails shown. Since 'toenails' is compatible with a different interpretation (nails on feet rather than hands), this fails the requirement that the new fact be 'clearly false for EVERY SUPPLIED POSITIVE image.'"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-haiku-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "21c9f009a4790fc9083420154181f6e285f11661ac8720cd11a699f7e6654ac2",
+      "input_hash": "a846c55906d5c19878f4b058eacf3058aec8fcc5434ee15fe9cf198ac4fb4d03",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/claude-haiku-5-5/cache/validate_group/a846c55906d5c19878f4b058eacf3058aec8fcc5434ee15fe9cf198ac4fb4d03.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_019XqWpoRjSaWrRS9CaaFmC1F9",
+      "usage": {
+        "prompt_tokens": 10721,
+        "completion_tokens": 245,
+        "total_tokens": 10966,
+        "prompt_tokens_details": {
+          "cached_tokens": 8359,
+          "cache_creation_tokens": 2358
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_82f61d57d1aa4a0b_query_03796_object_substitute",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 569,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "case_id": "case_053cd2a9c4bf710b31ad",
+  "audit_query_id": "audit_query_093",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_053cd2a9c4bf710b31ad",
+    "case_status": "source_invalid_or_uncertain",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "T shows a pillow against grey textured fabric, but the fabric is not clearly a towel and no turkey is visible; the pale background could be a window or another interior feature."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows a dog on blue fabric, with no visible pillow, grey turkey towel, or window background effect."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "pillow on grey turkey towel",
+      "window background effect"
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_053cd2a9c4bf710b31ad",
+    "source_on_positive": {
+      "status": "contradicted",
+      "evidence": "Image 2 shows a pillow on a sage-green knitted throw, not a grey turkey towel; no window-background effect is clearly visible."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a dog on a bright blue surface, with no pillow, grey turkey towel, or window-background effect."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "24c0549eca214a2335e4804d74e70ca1f2bae829462562e701d523bb1a461437",
+      "input_hash": "bb9b2596c45c5af3dc3440db0507ea6b148087f798e083ece2477b3908891b59",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/bb9b2596c45c5af3dc3440db0507ea6b148087f798e083ece2477b3908891b59.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_07d4a4c9d36de58e016af2bf01341087d1a4e79fee7dd8b7ec",
+      "usage": {
+        "prompt_tokens": 7453,
+        "completion_tokens": 374,
+        "total_tokens": 7827,
+        "prompt_tokens_details": {
+          "cached_tokens": 5888
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 228
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "3a5d6543d99d80368ce23dfd1d2b11a0ec5b158c48c99bf97061c154e6dca6c3",
+      "input_hash": "14ecc3abb4e68ccf8f100dd4173129bb09cd1e15132723e2b25be26fe6e40b65",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/14ecc3abb4e68ccf8f100dd4173129bb09cd1e15132723e2b25be26fe6e40b65.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_00efad43b196cc8d016af2bf0e7d8887d281027a5cd59fcda0",
+      "usage": {
+        "prompt_tokens": 6911,
+        "completion_tokens": 108,
+        "total_tokens": 7019
+      }
+    }
+  ]
+}

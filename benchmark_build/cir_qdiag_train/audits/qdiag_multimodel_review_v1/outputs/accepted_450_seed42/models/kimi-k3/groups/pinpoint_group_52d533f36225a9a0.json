@@ -1,0 +1,62 @@
+{
+  "group_id": "pinpoint_group_52d533f36225a9a0",
+  "model": "kimi-k3",
+  "signature": "7bcee9a6a15f47b49de535c2997e213c18a83885fbb254d34ea6aaed145faa23",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_52d533f36225a9a0_query_02863_attribute_substitute",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Single attribute substitution (layered->fitted) is fluent and clearly false for every supplied positive: all tops shown (flowy tunic, loose overshirt, sheer layered vest, wrap top) are loose/layered, none fitted."
+    },
+    {
+      "negative_id": "pinpoint_group_52d533f36225a9a0_query_02864_attribute_delete",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Removes exactly the 'layered' attribute constraint, preserves all other meaning, and yields a fluent, strictly weaker query."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "kimi-k3",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "8004ae45f724435d6522e9666138d6f00ad2e6a1d411ee1634a6c8ff9f1d342d",
+      "input_hash": "fd94d0f4ab64c461039ba857656bd919eb89c02af30b1ca3e062d2c2e7143df6",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/kimi-k3/cache/validate_group/fd94d0f4ab64c461039ba857656bd919eb89c02af30b1ca3e062d2c2e7143df6.json",
+      "cached": false,
+      "attempts": 2,
+      "request_id": "01a1c9ba5c057e53bb6278c55344e9f5",
+      "usage": {
+        "prompt_tokens": 5055,
+        "completion_tokens": 248,
+        "total_tokens": 5303,
+        "prompt_cache_hit_tokens": 5043,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "text_tokens": 0,
+          "audio_tokens": 0,
+          "image_tokens": 0
+        },
+        "completion_tokens_details": {
+          "text_tokens": 0,
+          "audio_tokens": 0,
+          "image_tokens": 0,
+          "reasoning_tokens": 0
+        },
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "input_tokens_details": null,
+        "claude_cache_creation_5_m_tokens": 0,
+        "claude_cache_creation_1_h_tokens": 0,
+        "credit": 0.88
+      }
+    }
+  ],
+  "format_warnings": []
+}

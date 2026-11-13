@@ -1,0 +1,164 @@
+{
+  "case_id": "case_7020ef7cfc76ef870d15",
+  "audit_query_id": "audit_query_083",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_7020ef7cfc76ef870d15",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows one body-cream tube together with its box."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "Image 3 shows one perfume bottle together with its box."
+    },
+    "candidate_relation": "compatible",
+    "violated_source_constraints": [],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "add",
+        "semantic_target": "object",
+        "before_span": null,
+        "after_span": "Calvin Klein",
+        "edited_instruction": "Leave a single Calvin Klein product with its box",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "The product is identified as a Calvin Klein product.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 shows a body-cream product labeled “images,” not Calvin Klein."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows the perfume box and bottle labeled Calvin Klein."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_7020ef7cfc76ef870d15",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows one body cream tube with its pink box."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "Image 3 shows one perfume bottle with its purple box."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "Adding “Calvin Klein” is one fluent object-identity constraint; the candidate visibly bears that brand, while the positive product is labeled images.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2’s product and box are labeled images, not Calvin Klein."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 visibly shows Calvin Klein on the bottle cap and box."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "add",
+      "semantic_target": "object",
+      "before_span": null,
+      "after_span": "Calvin Klein",
+      "edited_instruction": "Leave a single Calvin Klein product with its box",
+      "witness_type": "addition_disambiguation",
+      "changed_constraint": "The product is identified as a Calvin Klein product.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "Image 2 shows a body-cream product labeled “images,” not Calvin Klein."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "Image 3 shows the perfume box and bottle labeled Calvin Klein."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "Adding “Calvin Klein” is one fluent object-identity constraint; the candidate visibly bears that brand, while the positive product is labeled images.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2’s product and box are labeled images, not Calvin Klein."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 visibly shows Calvin Klein on the bottle cap and box."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "5e2a064766d59eda6960bc5f98a01c70af42a1ce6fbf53004645d689baad705b",
+      "input_hash": "d6e183ac4afbdbc22ebf0897fa0c1d0953898925be395f0df78c235eae643b63",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/d6e183ac4afbdbc22ebf0897fa0c1d0953898925be395f0df78c235eae643b63.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0832c9d064a33b8f016af2bf506a9087d1b0e5c2b7924c63b0",
+      "usage": {
+        "prompt_tokens": 10312,
+        "completion_tokens": 553,
+        "total_tokens": 10865,
+        "prompt_tokens_details": {
+          "cached_tokens": 5888
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 323
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "919c8e6f00cf5f736029db4b6f6286987e80a0bf9bccf69cc516f49b0b99a236",
+      "input_hash": "b7725a7159a28961d20c7a380dd1afb66a8e2650dda59c9b0e3ba5213e3f8f2e",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/b7725a7159a28961d20c7a380dd1afb66a8e2650dda59c9b0e3ba5213e3f8f2e.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_07d1b6ff201a080a016af2bf61f38887d2b538f9665518f21b",
+      "usage": {
+        "prompt_tokens": 9832,
+        "completion_tokens": 287,
+        "total_tokens": 10119,
+        "prompt_tokens_details": {
+          "cached_tokens": 5248
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 97
+        }
+      }
+    }
+  ]
+}

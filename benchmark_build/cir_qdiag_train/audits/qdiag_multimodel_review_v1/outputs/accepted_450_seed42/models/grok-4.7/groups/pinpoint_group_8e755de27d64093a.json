@@ -1,0 +1,57 @@
+{
+  "group_id": "pinpoint_group_8e755de27d64093a",
+  "model": "grok-4.7",
+  "signature": "52913ea34ae01078c58f7a80fc2119b86ef4b6b3449e9e55b21816a5d5d1ccbd",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_8e755de27d64093a_query_05888_object_add",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Adds one object, a scarf, while preserving the floral tote request. No supplied positive shows a handbag with a scarf."
+    },
+    {
+      "negative_id": "pinpoint_group_8e755de27d64093a_query_05888_predicate_add",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Adds one display-beside relation to the floral reference. Every positive is a standalone scene, so none shows the handbag beside img1."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.7",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "1776131fc0dbbb634d78b694d4a9ea2493d757c8ec8c35b806cab60f520f3a99",
+      "input_hash": "5a9a02db09edbb226ce604ed6b661d775ad823882f9996e3e5f4f44038a88d30",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/grok-4.7/cache/validate_group/5a9a02db09edbb226ce604ed6b661d775ad823882f9996e3e5f4f44038a88d30.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "fc74e151-407c-9399-b4d0-0b77e61d7d26",
+      "usage": {
+        "prompt_tokens": 5627,
+        "completion_tokens": 147,
+        "total_tokens": 9100,
+        "prompt_tokens_details": {
+          "text_tokens": 2712,
+          "audio_tokens": 0,
+          "image_tokens": 2915,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 3326,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 290200000
+      }
+    }
+  ],
+  "format_warnings": []
+}

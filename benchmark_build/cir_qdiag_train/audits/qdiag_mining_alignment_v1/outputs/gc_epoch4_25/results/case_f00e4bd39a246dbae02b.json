@@ -1,0 +1,166 @@
+{
+  "case_id": "case_f00e4bd39a246dbae02b",
+  "audit_query_id": "audit_query_079",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_f00e4bd39a246dbae02b",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "A black, bowl-shaped vessel sink is visible beneath a running faucet."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The image shows two tall flower vases, one dark and one white, rather than a bowl sink."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The requested object must be a bowl sink."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "object",
+        "before_span": "bowl sink",
+        "after_span": "vase",
+        "edited_instruction": "Show a black vase.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "The requested object category changes from bowl sink to vase.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The black vessel is a sink beneath a faucet, not a vase."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "A black ribbed vase holding an orchid stands beside a white vase."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_f00e4bd39a246dbae02b",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a dark black bowl-shaped basin with a faucet, consistent with a black bowl sink."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a dark vase and a white vase; neither is a bowl sink."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing “bowl sink” with “vase” makes one object substitution and yields the fluent instruction “Show a black vase.” Image 3 visibly contains a black vase; Image 2 shows a bowl sink, not a vase.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 shows a bowl-shaped sink basin, not a vase."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 visibly shows a dark black vase with flowers."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "substitute",
+      "semantic_target": "object",
+      "before_span": "bowl sink",
+      "after_span": "vase",
+      "edited_instruction": "Show a black vase.",
+      "witness_type": "substitution_contrast",
+      "changed_constraint": "The requested object category changes from bowl sink to vase.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "The black vessel is a sink beneath a faucet, not a vase."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "A black ribbed vase holding an orchid stands beside a white vase."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing “bowl sink” with “vase” makes one object substitution and yields the fluent instruction “Show a black vase.” Image 3 visibly contains a black vase; Image 2 shows a bowl sink, not a vase.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 shows a bowl-shaped sink basin, not a vase."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 visibly shows a dark black vase with flowers."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "47a6b08cc57a364139e547a37fbacb3fdde1a0d2d7cea7540924f3e407bd8704",
+      "input_hash": "c70a0a25d916e3402530cc64bab246ad47234de1c55fe18534b6fb5fb654ad08",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/c70a0a25d916e3402530cc64bab246ad47234de1c55fe18534b6fb5fb654ad08.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0087dcbdabc0d582016af2bec498b887d0bce187a76889af19",
+      "usage": {
+        "prompt_tokens": 8166,
+        "completion_tokens": 370,
+        "total_tokens": 8536,
+        "prompt_tokens_details": {
+          "cached_tokens": 3830
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 48
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "fe7cea66f74ec3110161c2c81d9dc3d264c7df419a4f106e640272dec441469a",
+      "input_hash": "f6a5b02226fc6ef71ed8923f9e2d0d9fe3bdbc6662a5677cb694f960d9e03646",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/f6a5b02226fc6ef71ed8923f9e2d0d9fe3bdbc6662a5677cb694f960d9e03646.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_096367a818de9821016af2bed2274087d1b759ef6faf2d20bf",
+      "usage": {
+        "prompt_tokens": 7848,
+        "completion_tokens": 374,
+        "total_tokens": 8222,
+        "prompt_tokens_details": {
+          "cached_tokens": 5248
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 153
+        }
+      }
+    }
+  ]
+}

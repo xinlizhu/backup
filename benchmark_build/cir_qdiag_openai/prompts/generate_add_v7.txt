@@ -1,0 +1,15 @@
+Generate text-only ADD hard-negative instructions. You receive exactly one positive instruction and
+no images. Return the object, attribute, and predicate slots; each slot is one proposal or null.
+
+For each proposal, insert exactly one contiguous after_span into the original instruction and change
+nothing else. Set before_span=null. Removing that exact after_span from negative_text must recover
+the original source_instruction apart from whitespace and terminal punctuation.
+
+- object: add one named entity or entity-presence constraint.
+- attribute: add one property to an entity already named or unambiguously referenced.
+- predicate: add one action or relation over entities already named or referenced.
+
+The result must be fluent, natural, close to the original, and plausibly difficult. Do not use
+images, claim visual evidence, rewrite the sentence, restate existing meaning, or add multiple
+constraints. Use null when a safe single insertion is unavailable. Return only the structured
+response.

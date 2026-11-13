@@ -1,0 +1,49 @@
+{
+  "group_id": "pinpoint_group_2c0ba46d903090b0",
+  "model": "claude-haiku-5-5",
+  "signature": "44bb4aae802e19564501a676b733c7e19828d9ced260b7da0428f08b1a359df2",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_2c0ba46d903090b0_query_06094_object_add",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "The added constraint 'with a matching belt' is compatible with the supplied positive images. Image 4 shows a fitted skirt with a visible belt/waistband accessory, and images 3 and 5 feature skirts that could plausibly be styled with matching belts. The edit does not introduce a clearly false fact that contradicts all positive examples."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-haiku-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "667f7710b403bbec05b0ed327afca3c24fd6f5e3549fd31068cb8288566d7ca3",
+      "input_hash": "db6ba9e9a3fd5a7fc3683345917e9274e2ed1428e858f7df78cb73af7b2bfe94",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/claude-haiku-5-5/cache/validate_group/db6ba9e9a3fd5a7fc3683345917e9274e2ed1428e858f7df78cb73af7b2bfe94.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01tbBGR26nToWlSjFTqcPCthad",
+      "usage": {
+        "prompt_tokens": 9785,
+        "completion_tokens": 179,
+        "total_tokens": 9964,
+        "prompt_tokens_details": {
+          "cached_tokens": 7629,
+          "cache_creation_tokens": 2152
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_2c0ba46d903090b0_query_06094_object_add",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 337,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

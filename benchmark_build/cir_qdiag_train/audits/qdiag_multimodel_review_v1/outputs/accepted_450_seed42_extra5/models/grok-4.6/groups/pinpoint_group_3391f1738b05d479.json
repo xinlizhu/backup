@@ -1,0 +1,57 @@
+{
+  "group_id": "pinpoint_group_3391f1738b05d479",
+  "model": "grok-4.6",
+  "signature": "cb958fa178e5ebcdd33f446ebd46fe25a7c20417ca5539cc74de61fb4df99804",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_3391f1738b05d479_query_02756_attribute_delete",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Deleting “thicker” yields the fluent, strictly weaker query “A version of this ring,” removing only the thickness attribute and leaving the ring and version relation unchanged."
+    },
+    {
+      "negative_id": "pinpoint_group_3391f1738b05d479_query_02756_attribute_substitute",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Substituting “thicker” with “thinner” is one attribute edit. Every supplied positive is visibly thicker than the thin reference rings, so “thinner” is clearly false for all of them."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.6",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "ac2afd2d46ebdbcc401720c158137c8d4d2e876d72aab48d83a779ac52aa167d",
+      "input_hash": "2b98f216429028beb0bd36aea228fcfd7b6822b6a9681b307f346518a1160f3d",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/grok-4.6/cache/validate_group/2b98f216429028beb0bd36aea228fcfd7b6822b6a9681b307f346518a1160f3d.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "d37c2bc8-7c82-9aec-b281-bd3a0b653fa3",
+      "usage": {
+        "prompt_tokens": 5110,
+        "completion_tokens": 168,
+        "total_tokens": 7918,
+        "prompt_tokens_details": {
+          "text_tokens": 2570,
+          "audio_tokens": 0,
+          "image_tokens": 2540,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2640,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 239960000
+      }
+    }
+  ],
+  "format_warnings": []
+}

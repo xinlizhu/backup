@@ -1,0 +1,160 @@
+{
+  "case_id": "case_2aa2513df7f71a418537",
+  "audit_query_id": "audit_query_090",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_2aa2513df7f71a418537",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 visibly shows a car from the rear beside a large body of water."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a car from the front/side, not from the back; a water horizon is visible behind it."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The car must be shown from the back."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "attribute",
+        "before_span": "back",
+        "after_span": "front",
+        "edited_instruction": "Show car from front by water.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "The car viewpoint changes from rear to front.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 clearly shows the rear of the car, including its rear lights and license plate, rather than its front."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 clearly shows the car's front grille and headlights, with a water horizon visible behind it."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_2aa2513df7f71a418537",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows the car from a rear three-quarter angle beside a body of water."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows the front of the car; a narrow strip of water is visible behind it."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing “back” with “front” is one attribute edit that preserves the car and water constraints. Image 2 is rear-facing, while Image 3 is front-facing; both show water.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 shows the rear three-quarter view, not the front."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 clearly shows the front of the car, with water visible in the background."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "substitute",
+      "semantic_target": "attribute",
+      "before_span": "back",
+      "after_span": "front",
+      "edited_instruction": "Show car from front by water.",
+      "witness_type": "substitution_contrast",
+      "changed_constraint": "The car viewpoint changes from rear to front.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "Image 2 clearly shows the rear of the car, including its rear lights and license plate, rather than its front."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "Image 3 clearly shows the car's front grille and headlights, with a water horizon visible behind it."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing “back” with “front” is one attribute edit that preserves the car and water constraints. Image 2 is rear-facing, while Image 3 is front-facing; both show water.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 shows the rear three-quarter view, not the front."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 clearly shows the front of the car, with water visible in the background."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "404027928db19366b8a675e126cf0f65a14be7c384727cbf9bed61645ba83fd3",
+      "input_hash": "69b4137a747dee991d8ccaead0fc380ba8f4e96f5950b358a9c1f9ad9c500826",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/69b4137a747dee991d8ccaead0fc380ba8f4e96f5950b358a9c1f9ad9c500826.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_ack_383d10687388d29de4f680c310ca919e",
+      "usage": {
+        "prompt_tokens": 6304,
+        "completion_tokens": 739,
+        "total_tokens": 7043,
+        "completion_tokens_details": {
+          "reasoning_tokens": 483
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "423006326ea681547f17c7e09e6d73053981a931b05a5707859d697fa029a5cd",
+      "input_hash": "7ad8b65aceeddb464f55994c44294b6e611dfe68838eef6227eacc3c224b3907",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/7ad8b65aceeddb464f55994c44294b6e611dfe68838eef6227eacc3c224b3907.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_d20916c1c9250e7450f8aa986eee90fb258f24b07b9549d0",
+      "usage": {
+        "prompt_tokens": 10199,
+        "completion_tokens": 328,
+        "total_tokens": 10527,
+        "completion_tokens_details": {
+          "reasoning_tokens": 110
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "group_id": "pinpoint_group_ee99ab837dddc30f",
+  "model": "claude-haiku-5-5",
+  "signature": "44bb4aae802e19564501a676b733c7e19828d9ced260b7da0428f08b1a359df2",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_ee99ab837dddc30f_query_00462_object_substitute",
+      "decision": "reject",
+      "failure_code": "not_single_edit",
+      "reason": "The substitution of 'outfit' to 'uniform' does not reconstruct the negative_text from the source_text as claimed. Applying this single token substitution to 'Someone wearing a business appropriate version of this outfit' yields 'Someone wearing a business appropriate version of this uniform', which is identical to the negative_text. However, 'outfit' and 'uniform' are semantically distinct: 'outfit' refers to a coordinated set of clothing worn together, while 'uniform' implies a standardized official garment. The span operation is valid structurally, but the semantic shift changes the meaning beyond a simple object substitution—it alters the nature of the clothing entity itself rather than just substituting one object reference for another."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-haiku-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "0643d951157ff50e637ae3363cd7142ea1e136a8050e5eb36a3349b6b9918534",
+      "input_hash": "4345dabfa441cce7b6792c2cadc4efcaccfc2cc5aa3c411857415aa241d535e9",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/claude-haiku-5-5/cache/validate_group/4345dabfa441cce7b6792c2cadc4efcaccfc2cc5aa3c411857415aa241d535e9.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01sn4eRf2hRMaqSTvxqFM8Y9Xd",
+      "usage": {
+        "prompt_tokens": 10073,
+        "completion_tokens": 284,
+        "total_tokens": 10357,
+        "prompt_tokens_details": {
+          "cached_tokens": 7853,
+          "cache_creation_tokens": 2216
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_ee99ab837dddc30f_query_00462_object_substitute",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 750,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

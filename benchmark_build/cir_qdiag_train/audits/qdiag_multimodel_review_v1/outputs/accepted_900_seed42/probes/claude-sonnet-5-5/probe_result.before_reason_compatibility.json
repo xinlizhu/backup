@@ -1,0 +1,21 @@
+{
+  "model": "claude-sonnet-5-5",
+  "text_ok": true,
+  "visual_review_ok": false,
+  "errors": {
+    "visual_review": "VLM stage validate_group failed after 1 attempt(s): attempt 1: BackendResponseError: Chat Completions output failed GroupReviewResponse validation: 1 validation error for GroupReviewResponse\nverdicts.0.reason\n  String should have at most 300 characters [type=string_too_long, input_value=\"The negative text substi...an clearly falsifiable.\", input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/string_too_long"
+  },
+  "hello_reply": "Hey there. I'm Claude, made by Anthropic. What can I help you with today?",
+  "reported_model": "claude-sonnet-5-5",
+  "usage": {
+    "prompt_tokens": 4361,
+    "completion_tokens": 21,
+    "total_tokens": 4382,
+    "prompt_tokens_details": {
+      "cached_tokens": 3398,
+      "cache_creation_tokens": 959
+    }
+  },
+  "ready_for_audit": false,
+  "limit": "A valid multimodal response verifies request/response compatibility, not that the provider/model reliably used the images."
+}

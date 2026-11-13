@@ -1,0 +1,91 @@
+{
+  "case_id": "case_263c4e596738539504a1",
+  "audit_query_id": "audit_query_100",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_263c4e596738539504a1",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a cheese-topped baked dish in a round cooking dish."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows bolts, screws, and a miniature person, not a bowl containing food with cheese on top."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "A bowl or dish containing food",
+      "Cheese on top of the food"
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_263c4e596738539504a1",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a round dish containing food with a melted, browned cheese topping."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a person among metal bolts and nuts; there is no bowl or dish of food with cheese on top."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "9a90aa340c8b3c558dffb995e1a1b68302e4413c16c51ddc3f53969eaa21d209",
+      "input_hash": "aef30cab4e89b44e7c259912ac938054c2381a43ded2f713e0db36bfcc9a11de",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/aef30cab4e89b44e7c259912ac938054c2381a43ded2f713e0db36bfcc9a11de.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0bf04a8056a76624016af2befe9b2c87d289517e1feac31c7b",
+      "usage": {
+        "prompt_tokens": 13666,
+        "completion_tokens": 307,
+        "total_tokens": 13973,
+        "prompt_tokens_details": {
+          "cached_tokens": 5888
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 181
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "860382e660e3a2b52261094b14dda489bb5744d4664e8b9f7a6fab3ee3041486",
+      "input_hash": "b2a5cbb523ab4420bab7e14c6f275e2a23cf3d70d171288a19662355aebfc448",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/b2a5cbb523ab4420bab7e14c6f275e2a23cf3d70d171288a19662355aebfc448.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_01620b2ec32812e7016af2bf09617887d1a766702c96bf35b3",
+      "usage": {
+        "prompt_tokens": 13124,
+        "completion_tokens": 193,
+        "total_tokens": 13317,
+        "prompt_tokens_details": {
+          "cached_tokens": 5248
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 97
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,164 @@
+{
+  "case_id": "case_8f5edb7d396590ed480f",
+  "audit_query_id": "audit_query_096",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_8f5edb7d396590ed480f",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Two yellow school buses are parked beside each other, with both fronts clearly visible."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "The foreground school buses are parked beside each other, and their fronts are visible from an oblique angle."
+    },
+    "candidate_relation": "compatible",
+    "violated_source_constraints": [],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "add",
+        "semantic_target": "attribute",
+        "before_span": null,
+        "after_span": "short",
+        "edited_instruction": "Show the front of the short school buses and park them adjacent to each other.",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "The school buses must be short.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The buses are full-size, long school buses; the prominent right bus has a long body with many side windows."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The adjacent foreground buses have compact bodies with few passenger windows, and their fronts are visible."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_8f5edb7d396590ed480f",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Two yellow school buses are parked beside one another, with their front windshields, lights, and front panels clearly visible."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "School buses are parked adjacent to one another. The two prominent buses show their fronts in three-quarter view, including windshields, hoods, and headlights."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "Inserting 'short' adds one bus-length attribute and preserves the front-view and adjacency requirements. The candidate shows compact school buses, whereas the positive shows full-length buses. Both satisfy the original instruction, so this is addition disambiguation.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The prominent bus has a long passenger body with many side windows, visibly identifying it as a full-length school bus rather than a short bus."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The prominent buses have compact passenger bodies with only a few side windows. Their fronts are visible, and they are parked beside one another."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "add",
+      "semantic_target": "attribute",
+      "before_span": null,
+      "after_span": "short",
+      "edited_instruction": "Show the front of the short school buses and park them adjacent to each other.",
+      "witness_type": "addition_disambiguation",
+      "changed_constraint": "The school buses must be short.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "The buses are full-size, long school buses; the prominent right bus has a long body with many side windows."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "The adjacent foreground buses have compact bodies with few passenger windows, and their fronts are visible."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "Inserting 'short' adds one bus-length attribute and preserves the front-view and adjacency requirements. The candidate shows compact school buses, whereas the positive shows full-length buses. Both satisfy the original instruction, so this is addition disambiguation.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The prominent bus has a long passenger body with many side windows, visibly identifying it as a full-length school bus rather than a short bus."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The prominent buses have compact passenger bodies with only a few side windows. Their fronts are visible, and they are parked beside one another."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "f8051079ab6d2920b8c7c7823fa6640c07e4e9fab45dad845c5a1827b0e48789",
+      "input_hash": "65dad1076415c33133598e9d87f7e45b894101ce5ba45c73a84c33d1b6237461",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/65dad1076415c33133598e9d87f7e45b894101ce5ba45c73a84c33d1b6237461.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_03e082c1a521ebc9016af2bd4938d487d1bd6018b5f3914071",
+      "usage": {
+        "prompt_tokens": 7460,
+        "completion_tokens": 457,
+        "total_tokens": 7917,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 135
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "bbe5bf8062dd3d7f35acccfc2bf34ea098adc2c5967c12a81d70a2e50058e665",
+      "input_hash": "49b733a7fac54b5006983c20694ef4fb3e915b1c930074a8ef7c455282423569",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/49b733a7fac54b5006983c20694ef4fb3e915b1c930074a8ef7c455282423569.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0c68964523df30ad016af2bd5cc69087d1a4f1e7b9b792bbe0",
+      "usage": {
+        "prompt_tokens": 6984,
+        "completion_tokens": 365,
+        "total_tokens": 7349,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 32
+        }
+      }
+    }
+  ]
+}

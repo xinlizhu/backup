@@ -1,0 +1,68 @@
+{
+  "case_id": "pair_33fc3d2d787ec791ef2e",
+  "signature": "f91b95909684e2ecf5207ab608279749c891c56633f2fa7c877aa09c2d59f3d4",
+  "simulated": false,
+  "status": "complete",
+  "judgment": {
+    "case_id": "pair_33fc3d2d787ec791ef2e",
+    "constraints": [
+      {
+        "constraint": "A pillow is present.",
+        "A_status": "supported",
+        "B_status": "supported",
+        "A_evidence": "A large white decorative pillow sits on the chair.",
+        "B_evidence": "Two white patterned pillows sit on the bench."
+      },
+      {
+        "constraint": "The supporting textile is a grey Turkish towel, interpreting 'turkey towel' as Turkish towel.",
+        "A_status": "contradicted",
+        "B_status": "uncertain",
+        "A_evidence": "The pillow rests on a red-and-white patterned covering; the grey surface beside it is chair upholstery.",
+        "B_evidence": "A grey fringed textile is draped over the bench, but its appearance does not establish whether it is a Turkish towel or a throw blanket."
+      },
+      {
+        "constraint": "The pillow is placed on the specified supporting textile.",
+        "A_status": "contradicted",
+        "B_status": "supported",
+        "A_evidence": "The pillow sits on the red patterned chair covering, with no grey towel beneath it.",
+        "B_evidence": "The left pillow visibly rests on the grey fringed textile covering the bench."
+      },
+      {
+        "constraint": "The scene has a window background effect.",
+        "A_status": "supported",
+        "B_status": "supported",
+        "A_evidence": "White window framing and a pale pane are visible behind the chair at the upper right.",
+        "B_evidence": "Large bright multipane windows form the background behind the pillows."
+      }
+    ],
+    "A_status": "contradicted",
+    "B_status": "uncertain",
+    "decision": "uncertain",
+    "reason": "A lacks the required grey towel beneath the pillow. B shows pillows on a grey fringed textile with windows behind them, but the textile cannot confidently be identified as a Turkish towel."
+  },
+  "trace": {
+    "stage": "rank_pair_judgment",
+    "model_name": "gpt-5.6-terra",
+    "model_revision": null,
+    "provider": "openai-compatible-chat",
+    "reasoning_effort": null,
+    "prompt_version": "rank_preference_v1",
+    "prompt_hash": "6d4239e04d688e49197cebdbe5c16509c629a10c5d43e491093b6aa24beb0eeb",
+    "input_hash": "a9c2218851a885e1a6d97210c27ff360b9ab74cf724fc1ff0074b5f92dfbedc4",
+    "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_rank_preference_v1/outputs/gc_epochs14_top3/api_cache/rank_pair_judgment/a9c2218851a885e1a6d97210c27ff360b9ab74cf724fc1ff0074b5f92dfbedc4.json",
+    "cached": false,
+    "attempts": 1,
+    "request_id": "resp_004dec83a2555851016af2cce3f51c87d18e8ab5988cb8bede",
+    "usage": {
+      "prompt_tokens": 6743,
+      "completion_tokens": 572,
+      "total_tokens": 7315,
+      "prompt_tokens_details": {
+        "cached_tokens": 4864
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 226
+      }
+    }
+  }
+}

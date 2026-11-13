@@ -1,0 +1,88 @@
+{
+  "case_id": "case_35de52769671cdc504e8",
+  "audit_query_id": "audit_query_100",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_35de52769671cdc504e8",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "A shallow, round metal bowl contains a prepared dish covered with melted, browned cheese."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The image shows two black padded sports knee supports with white logos; no bowl, prepared dish, or cheese is present."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "A bowl containing a prepared dish.",
+      "Cheese on top of the dish."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_35de52769671cdc504e8",
+    "source_on_positive": {
+      "status": "contradicted",
+      "evidence": "Image 2 shows a baked casserole in a shallow round baking dish, topped with melted cheese; it does not visibly show a bowl."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows two black Mizuno athletic knee pads on a white background, with no bowl, food dish, or cheese."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "efb8bb8ac72d554c2f37a3d3bbcdcecf77016be639c371ce806d902761b1585c",
+      "input_hash": "c06ae5e8db231a8cf552d822c74f159b66ae382585f728c4afb6863586fb0aa3",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/c06ae5e8db231a8cf552d822c74f159b66ae382585f728c4afb6863586fb0aa3.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0e31e7edeebb1134016af2bea908b087d280bb96a0ce1e4dab",
+      "usage": {
+        "prompt_tokens": 13655,
+        "completion_tokens": 201,
+        "total_tokens": 13856,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 34
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "ef235f7ab33857aa0bbb5ad24b42c78a682b753b4449332ab34809faff355147",
+      "input_hash": "db438b4c200236e506ca2846b9ec9d9a50e8580c6209021228bcca1c45ccc103",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/db438b4c200236e506ca2846b9ec9d9a50e8580c6209021228bcca1c45ccc103.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0521d0a51c300486016af2beb4bad487d1b445af7cb1d88635",
+      "usage": {
+        "prompt_tokens": 13277,
+        "completion_tokens": 387,
+        "total_tokens": 13664,
+        "completion_tokens_details": {
+          "reasoning_tokens": 279
+        }
+      }
+    }
+  ]
+}

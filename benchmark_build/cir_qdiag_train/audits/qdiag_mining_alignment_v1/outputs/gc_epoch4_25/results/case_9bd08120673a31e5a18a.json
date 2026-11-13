@@ -1,0 +1,90 @@
+{
+  "case_id": "case_9bd08120673a31e5a18a",
+  "audit_query_id": "audit_query_086",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_9bd08120673a31e5a18a",
+    "case_status": "source_invalid_or_uncertain",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "The fox is seated upright with its forelegs straight, matching the prominent seated cat in R. However, the instruction also says 'standing'; T does not clearly support that literal posture."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The visible canids stand on all four legs, unlike the prominent cat seated upright in R. Their identification as foxes is also uncertain."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The animal must have the same gesture as the prominent seated cat in R; C shows animals standing on all fours."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_9bd08120673a31e5a18a",
+    "source_on_positive": {
+      "status": "contradicted",
+      "evidence": "The fox is seated upright with its hindquarters resting on the base and forelegs extended downward, resembling the prominent seated cat in the reference. It does not satisfy the explicit requirement that the fox be standing."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The candidate shows two canids standing on all fours. Their posture does not match the prominent reference cat's upright seated gesture; their identification as foxes is also uncertain."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "e989e0d756eab3afcb8cb6dd56dd2306a9d4fb248923028a61d02dade35c6ea3",
+      "input_hash": "3eee9631db8a020e6a744c532b793bec9647d9b01adbb040f445a5f49bb54432",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/3eee9631db8a020e6a744c532b793bec9647d9b01adbb040f445a5f49bb54432.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0c513265183d5f2b016af2bdfd54b087d1a715f19803a37fa7",
+      "usage": {
+        "prompt_tokens": 6451,
+        "completion_tokens": 460,
+        "total_tokens": 6911,
+        "prompt_tokens_details": {
+          "cached_tokens": 5312
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 254
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "ad14170aee74c01ebb1f6fcf1d1d6eca8a07d16615f7f521ebf13af46731612b",
+      "input_hash": "2425ce33fd348bf74bca01c053979bdad54e41ccec860c3a36d61c5aef30d92d",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/2425ce33fd348bf74bca01c053979bdad54e41ccec860c3a36d61c5aef30d92d.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_03fa709d5cede8e7016af2be30c0fc87d1b13d25bcad5787f9",
+      "usage": {
+        "prompt_tokens": 5909,
+        "completion_tokens": 230,
+        "total_tokens": 6139,
+        "prompt_tokens_details": {
+          "cached_tokens": 4789
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 97
+        }
+      }
+    }
+  ]
+}

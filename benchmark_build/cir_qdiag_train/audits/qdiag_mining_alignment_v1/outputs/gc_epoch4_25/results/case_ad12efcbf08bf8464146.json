@@ -1,0 +1,90 @@
+{
+  "case_id": "case_ad12efcbf08bf8464146",
+  "audit_query_id": "audit_query_094",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_ad12efcbf08bf8464146",
+    "case_status": "source_invalid_or_uncertain",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "T shows two piglets suckling together on the image-left side of an adult warthog, unlike their opposite-side arrangement in R. However, the requested change from a mother to a boar (male) is not visibly established; the nursing scene does not support that sex change."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows an adult warthog and two piglets moving together, with neither piglet suckling. The piglets are on image-right; whether 'left side' means anatomical left or image-left is ambiguous. The adult's sex is not established."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The adult must be nursing two babies; C shows the piglets moving separately from its underside."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_ad12efcbf08bf8464146",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "Two piglets appear to suckle together beneath the adult warthog, both on the image-left side. However, the adult cannot be established as a male boar from visible evidence, and image-left does not unambiguously establish the animal's anatomical left side. The full source instruction is therefore uncertain."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The adult warthog and two piglets are moving together. Both piglets are separate from the adult's underside, with their heads facing forward; neither is nursing. This visibly contradicts the required nursing action."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "fc0f5c771d857092d701cb93f4e2b8ff3e541e1a6155086cbb3393365259dfb8",
+      "input_hash": "7bdd57c6ee2bfab2ebd015103a83fa49a9b6af5985668936ebd45d2ff99963e4",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/7bdd57c6ee2bfab2ebd015103a83fa49a9b6af5985668936ebd45d2ff99963e4.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0e836c8e33acdb5d016af2bde2a4fc87d185b812638f0f21fd",
+      "usage": {
+        "prompt_tokens": 18890,
+        "completion_tokens": 337,
+        "total_tokens": 19227,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 94
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "8769700c5e853640003bde21cc67f8ec0842f90fe499adb25c18f2e9eafd5cad",
+      "input_hash": "9b1ae014e15659996ff9e4a019be4d3e0747efd14eb7258826fce0e866fd96f2",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/9b1ae014e15659996ff9e4a019be4d3e0747efd14eb7258826fce0e866fd96f2.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_03372382f916c200016af2bdf6322c87d2904d37d212ed8990",
+      "usage": {
+        "prompt_tokens": 18348,
+        "completion_tokens": 187,
+        "total_tokens": 18535,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 28
+        }
+      }
+    }
+  ]
+}

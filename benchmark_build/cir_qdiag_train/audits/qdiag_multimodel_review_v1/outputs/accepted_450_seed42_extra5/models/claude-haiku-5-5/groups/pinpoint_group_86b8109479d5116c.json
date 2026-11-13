@@ -1,0 +1,62 @@
+{
+  "group_id": "pinpoint_group_86b8109479d5116c",
+  "model": "claude-haiku-5-5",
+  "signature": "44bb4aae802e19564501a676b733c7e19828d9ced260b7da0428f08b1a359df2",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_86b8109479d5116c_query_05479_predicate_delete",
+      "decision": "reject",
+      "failure_code": "not_visually_verifiable",
+      "reason": "The reference images show architecture and outdoor spaces, not sneakers. The source_text refers to sneaker silhouette matching <img2>, but <img2> is a sneaker while the positive images (3-6) appear to be outdoor/architectural scenes. Cannot visually verify that the deleted 'same silhouette' constraint is satisfied across positives when the domain mismatch is unclear."
+    },
+    {
+      "negative_id": "pinpoint_group_86b8109479d5116c_query_05480_attribute_add",
+      "decision": "reject",
+      "failure_code": "not_visually_verifiable",
+      "reason": "The reference images depict architecture and outdoor design, not footwear. The positive images (3-6) do not appear to show sneakers. Cannot reliably verify from the supplied images whether the 'low-top' attribute constraint is compatible with all positive results or whether the positive images even contain the product category required for comparison."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-haiku-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "f906fb87f7feef0fc0b0a49dd040ab44b3f80f158185dad4c40554b466508246",
+      "input_hash": "d4a82120b0d889efa7decfc7e7c6bdfea73626a64c5d7d4f230ee55d4ed5a4ba",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/claude-haiku-5-5/cache/validate_group/d4a82120b0d889efa7decfc7e7c6bdfea73626a64c5d7d4f230ee55d4ed5a4ba.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01SgDGJiJLTkS8V0uodiYQJUmN",
+      "usage": {
+        "prompt_tokens": 10078,
+        "completion_tokens": 340,
+        "total_tokens": 10418,
+        "prompt_tokens_details": {
+          "cached_tokens": 7857,
+          "cache_creation_tokens": 2217
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_86b8109479d5116c_query_05479_predicate_delete",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 369,
+      "action": "full reason retained; decision and failure_code unchanged"
+    },
+    {
+      "negative_id": "pinpoint_group_86b8109479d5116c_query_05480_attribute_add",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 353,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

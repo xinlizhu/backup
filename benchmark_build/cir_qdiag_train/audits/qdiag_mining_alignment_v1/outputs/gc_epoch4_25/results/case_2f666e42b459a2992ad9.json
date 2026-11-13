@@ -1,0 +1,88 @@
+{
+  "case_id": "case_2f666e42b459a2992ad9",
+  "audit_query_id": "audit_query_094",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_2f666e42b459a2992ad9",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The adult warthog is beside several piglets, with piglets gathered along its left-facing flank and appearing to nurse."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The image shows adult warthogs and two smaller warthogs standing separately; neither smaller animal is visibly nursing."
+    },
+    "candidate_relation": "multiple_constraint_conflict",
+    "violated_source_constraints": [
+      "Two babies nursing",
+      "Both babies nursing on the same left side"
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_2f666e42b459a2992ad9",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "Image 2 shows piglets clustered against the adult’s left flank, but the image does not reliably establish that the adult is a male boar; that part of the source instruction cannot be verified visually."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows two adult warthogs and young nearby, but none are visibly nursing."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "5d72410a666cc8d971d82f4cdbcd2daea2f07ff3092c2c15d06a8ba8c1edd588",
+      "input_hash": "6c1dc8c198a81eafe070281b3ac89067909ae993e58b865fd3805cbe39d10dfb",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/6c1dc8c198a81eafe070281b3ac89067909ae993e58b865fd3805cbe39d10dfb.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0d8d7d4612e54922016af2bee33fc087d2bb4e48d22d7f90fe",
+      "usage": {
+        "prompt_tokens": 16457,
+        "completion_tokens": 680,
+        "total_tokens": 17137,
+        "prompt_tokens_details": {
+          "cached_tokens": 5888
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 503
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "aab23e6cb83131d3fcdeff5c0fd9659ab831b84868cea5042419c9656348ba3e",
+      "input_hash": "471636abebedec9ff81b286c8e901f39032f7298601e4f4eaff8dcb5c9ea3e27",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/471636abebedec9ff81b286c8e901f39032f7298601e4f4eaff8dcb5c9ea3e27.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0920a7e51fa56801016af2bef6fecc87d1a02be5e795cb540c",
+      "usage": {
+        "prompt_tokens": 12526,
+        "completion_tokens": 1014,
+        "total_tokens": 13540,
+        "completion_tokens_details": {
+          "reasoning_tokens": 897
+        }
+      }
+    }
+  ]
+}

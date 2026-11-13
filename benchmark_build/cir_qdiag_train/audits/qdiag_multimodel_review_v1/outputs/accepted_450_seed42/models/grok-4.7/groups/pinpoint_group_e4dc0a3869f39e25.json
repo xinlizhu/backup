@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_e4dc0a3869f39e25",
+  "model": "grok-4.7",
+  "signature": "52913ea34ae01078c58f7a80fc2119b86ef4b6b3449e9e55b21816a5d5d1ccbd",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_e4dc0a3869f39e25_query_00372_object_add",
+      "decision": "reject",
+      "failure_code": "not_visually_verifiable",
+      "reason": "Adding “along with a belt” is one fluent object edit, but positive image 4 covers the waist with the sweater and crossed arm, so a belt cannot be clearly ruled out for every supplied positive."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.7",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "9c26b46bb1f0f2e04ab0ba8f2add8505f5a24e98cde90fe83d233a8b226ce328",
+      "input_hash": "aa5b6483131f475014aba4dba6d4fe9d59663c3b8074e84f5616d229fb7fd562",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/grok-4.7/cache/validate_group/aa5b6483131f475014aba4dba6d4fe9d59663c3b8074e84f5616d229fb7fd562.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "19610496-19b0-9170-9f96-e6d506240f13",
+      "usage": {
+        "prompt_tokens": 4766,
+        "completion_tokens": 99,
+        "total_tokens": 8505,
+        "prompt_tokens_details": {
+          "text_tokens": 2512,
+          "audio_tokens": 0,
+          "image_tokens": 2254,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 3640,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 288940000
+      }
+    }
+  ],
+  "format_warnings": []
+}

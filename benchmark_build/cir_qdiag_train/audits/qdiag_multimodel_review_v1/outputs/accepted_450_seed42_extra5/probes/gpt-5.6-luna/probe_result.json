@@ -1,0 +1,50 @@
+{
+  "model": "gpt-5.6-luna",
+  "text_ok": true,
+  "visual_review_ok": true,
+  "errors": {},
+  "hello_reply": "Hello! How can I help?",
+  "reported_model": "gpt-5.6-luna",
+  "usage": {
+    "prompt_tokens": 18301,
+    "completion_tokens": 11,
+    "total_tokens": 18312,
+    "prompt_tokens_details": {
+      "cached_tokens": 18298
+    }
+  },
+  "probe_group_id": "pinpoint_group_fcdb9b204d9d2398",
+  "probe_negative_id": "pinpoint_group_fcdb9b204d9d2398_query_05113_attribute_substitute",
+  "image_count": 6,
+  "review_decision": "rejected",
+  "review_reason": "The olive-to-green substitution is a single attribute edit, but positives 4 and 5 show shoes and denim without a visible top. Its color cannot be assessed, so green cannot be established as false for every supplied positive.",
+  "trace": {
+    "stage": "validate_group",
+    "model_name": "gpt-5.6-luna",
+    "model_revision": null,
+    "provider": "openai-compatible-chat",
+    "reasoning_effort": null,
+    "prompt_version": "v7",
+    "prompt_hash": "f1621ddcbb12117a094d3a4d260b0203e674bb9c678a94cb31d15f04e135bda0",
+    "input_hash": "a0f390afa517ea2d0e80ae60a839239905efcf3ae9bca61c12a674857018bd4e",
+    "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/probes/gpt-5.6-luna/cache/validate_group/a0f390afa517ea2d0e80ae60a839239905efcf3ae9bca61c12a674857018bd4e.json",
+    "cached": true,
+    "attempts": 1,
+    "request_id": "resp_0712e6d7e302bd3b016af42ce0abd087d094f8e2b13fea20ba",
+    "usage": {
+      "prompt_tokens": 22640,
+      "completion_tokens": 289,
+      "total_tokens": 22929,
+      "prompt_tokens_details": {
+        "cached_tokens": 22637
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 191
+      }
+    }
+  },
+  "format_warnings": [],
+  "ready_for_audit": true,
+  "readiness_basis": "Successful actual multimodal review; hello is an auxiliary diagnostic",
+  "limit": "A valid multimodal response verifies request/response compatibility, not that the provider/model reliably used the images."
+}

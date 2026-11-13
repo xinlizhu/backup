@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_0796b98709a60cae",
+  "model": "grok-4.6",
+  "signature": "cb958fa178e5ebcdd33f446ebd46fe25a7c20417ca5539cc74de61fb4df99804",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_0796b98709a60cae_query_04802_attribute_substitute",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "The color-palette-to-pattern swap is a single fluent attribute edit, but it is not clearly false for every positive: the reference is a plain solid chunky knit, and positives 2, 3, and 5 are likewise unpatterned, so they remain compatible."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.6",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "7b1e5d9307b61ee972892292aa8b67216383c9df9601177c5dbf630b3934fbd2",
+      "input_hash": "8d639d1985a1acdb048e20efb3c847263002720b9e221102c7ccb84981d96895",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/grok-4.6/cache/validate_group/8d639d1985a1acdb048e20efb3c847263002720b9e221102c7ccb84981d96895.json",
+      "cached": false,
+      "attempts": 2,
+      "request_id": "2c89ab79-1b33-9f09-8e55-3b2f3d004ab8",
+      "usage": {
+        "prompt_tokens": 3995,
+        "completion_tokens": 109,
+        "total_tokens": 8142,
+        "prompt_tokens_details": {
+          "text_tokens": 2500,
+          "audio_tokens": 0,
+          "image_tokens": 1495,
+          "cached_tokens": 1152
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 4038,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 311440000
+      }
+    }
+  ],
+  "format_warnings": []
+}

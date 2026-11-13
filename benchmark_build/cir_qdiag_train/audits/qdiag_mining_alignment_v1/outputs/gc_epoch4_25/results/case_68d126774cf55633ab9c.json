@@ -1,0 +1,88 @@
+{
+  "case_id": "case_68d126774cf55633ab9c",
+  "audit_query_id": "audit_query_089",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_68d126774cf55633ab9c",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows several buses in a lot, with three buses visibly charred or burned around their front sections."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a jellyfish underwater, not buses in a parking lot or buses with fire damage."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "The target photo is of a bus parking lot.",
+      "Three buses had a fire in the front ends."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_68d126774cf55633ab9c",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "The photo shows parked school buses with severe fire damage on the central buses, including their front areas. However, three distinct buses with burned front ends cannot be reliably established from the visible, partially occluded vehicles."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The image shows a translucent jellyfish underwater, with no bus parking lot or burned buses."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "b6103dbde645da12a9e57d135a12d3fd741e545eb90c2644455782cc6af7eb4e",
+      "input_hash": "85e4e912f86f79350ee537862d35422c1fa7072f2a912a7a921a1d8c292fb5c0",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/85e4e912f86f79350ee537862d35422c1fa7072f2a912a7a921a1d8c292fb5c0.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0b8e86bca7129b26016af2bf81012087d19cd8015ef4eebd43",
+      "usage": {
+        "prompt_tokens": 12834,
+        "completion_tokens": 306,
+        "total_tokens": 13140,
+        "prompt_tokens_details": {
+          "cached_tokens": 5888
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 170
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "7fb593a6a3c5074c9b68b1bf2a80cfbc0896ff5ab2f65d6110ede03823f25830",
+      "input_hash": "0c30e0e1c3fd24c298d549bb09cfa1530074c39c4b9ae1672f417339239686a9",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/0c30e0e1c3fd24c298d549bb09cfa1530074c39c4b9ae1672f417339239686a9.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0c7f6a32454fd802016af2bf897e9887d0aef58d0ca4916783",
+      "usage": {
+        "prompt_tokens": 12128,
+        "completion_tokens": 113,
+        "total_tokens": 12241,
+        "prompt_tokens_details": {
+          "cached_tokens": 3482
+        }
+      }
+    }
+  ]
+}

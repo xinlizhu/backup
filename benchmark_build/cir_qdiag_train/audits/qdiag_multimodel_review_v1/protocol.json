@@ -1,0 +1,50 @@
+{
+  "source": "Final 10,131 accepted QDiag V7 edits; not pilot subset",
+  "seed": 42,
+  "sampling": "First 50 edits from each cell of the frozen seed42 random 900-edit sample; selection does not use new model outcomes.",
+  "new_models": [
+    "grok-4.7",
+    "claude-sonnet-5-5",
+    "gpt-6.1-sol",
+    "kimi-k3"
+  ],
+  "baseline": "Reuse original gpt-5.6-terra accepted verdicts; no new baseline calls",
+  "group_calls_per_model": 351,
+  "expected_new_verdicts": 1800,
+  "review_prompt": "Byte-identical original validate_group_v7.txt and original GroupReviewResponse schema",
+  "images": "Exact original reviewed reference/positive images and order, verified against historical request caches",
+  "context": "All original group instructions, only sampled candidate edits; candidate batch is smaller than original",
+  "blinding": "No old verdicts, old reasons or generating/review model names in model payload",
+  "api": "Existing minimal HTTPX Chat Completions backend, high image detail, schema-in-prompt, max_tokens 16384, no reasoning-effort override",
+  "workers": 80,
+  "probe_calls_per_model": {
+    "hello": 1,
+    "multimodal_single_edit_review": 1
+  },
+  "reports": [
+    "per-cell acceptance/agreement with original accepted labels",
+    "balanced overall acceptance",
+    "pairwise accept/reject agreement",
+    "unanimous agreement among four new reviewers",
+    "rejection reasons"
+  ],
+  "limitations": [
+    "Accepted-only sample does not measure overall annotation accuracy or agreement on rejected candidates",
+    "Overall rate is a nine-cell macro-average, not weighted by full-release frequencies",
+    "Historical baseline saw more candidates per group; review rules and images are preserved",
+    "Successful API probe tests compatibility, not proof of reliable image grounding or provider model identity"
+  ],
+  "local_response_compatibility": {
+    "policy": "retain_full_reason_original_wire_schema_v1",
+    "wire_prompt_and_schema_unchanged": true,
+    "reason_length": "Requested maximum remains 300 characters; complete longer reasons are retained with a format warning. All other validators remain enforced.",
+    "verdicts": "accept/reject and failure_code are never changed by compatibility handling"
+  },
+  "probe_readiness": "Successful actual multimodal review is required; hello is auxiliary. Saved real responses can be revalidated offline.",
+  "config": "configs/accepted_450_seed42.yaml",
+  "sampled_edits": 450,
+  "per_cell": 50,
+  "parent_sample": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_900_seed42/sampled_edits.private.jsonl",
+  "planned_total_group_calls": 1404,
+  "output_dir": "outputs/accepted_450_seed42"
+}

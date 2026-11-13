@@ -1,0 +1,68 @@
+{
+  "group_id": "pinpoint_group_9a1170df8771340b",
+  "model": "kimi-k3",
+  "signature": "7bcee9a6a15f47b49de535c2997e213c18a83885fbb254d34ea6aaed145faa23",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_9a1170df8771340b_query_01747_attribute_add",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Single attribute ADD; all supplied positives show short-sleeved tees, so 'long sleeves' is false for every one and the edit is fluent and subtle."
+    },
+    {
+      "negative_id": "pinpoint_group_9a1170df8771340b_query_01747_predicate_add",
+      "decision": "reject",
+      "failure_code": "not_fluent",
+      "reason": "'a graphic printed tshirt hanging for this style' is grammatically broken; 'hanging' does not naturally attach to the tshirt within this query."
+    },
+    {
+      "negative_id": "pinpoint_group_9a1170df8771340b_query_01752_predicate_substitute",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Single predicate substitution (align->contrast) with same arguments; all positives match the reference pop-art aesthetic, so 'contrast with' is false for every positive."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "kimi-k3",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "fad95a8d3e1e620ed829ce9396212a9542b00cd76d59bd68684ebce04a8734fc",
+      "input_hash": "01ceabcaba9c661ddfaa2442f0aa4b196c5b30e207db83c48bce698d4c5658bf",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/kimi-k3/cache/validate_group/01ceabcaba9c661ddfaa2442f0aa4b196c5b30e207db83c48bce698d4c5658bf.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "01a1c9ba5dc9752eac261be9c94e9848",
+      "usage": {
+        "prompt_tokens": 5143,
+        "completion_tokens": 451,
+        "total_tokens": 5594,
+        "prompt_cache_hit_tokens": 768,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "text_tokens": 0,
+          "audio_tokens": 0,
+          "image_tokens": 0
+        },
+        "completion_tokens_details": {
+          "text_tokens": 0,
+          "audio_tokens": 0,
+          "image_tokens": 0,
+          "reasoning_tokens": 0
+        },
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "input_tokens_details": null,
+        "claude_cache_creation_5_m_tokens": 0,
+        "claude_cache_creation_1_h_tokens": 0,
+        "credit": 3.36
+      }
+    }
+  ],
+  "format_warnings": []
+}

@@ -1,0 +1,62 @@
+{
+  "group_id": "pinpoint_group_90f5fd1d589e0073",
+  "model": "claude-haiku-5-5",
+  "signature": "44bb4aae802e19564501a676b733c7e19828d9ced260b7da0428f08b1a359df2",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_90f5fd1d589e0073_query_06322_attribute_delete",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "DELETE removes exactly one semantic constraint: the material specification 'in denim fabric'. The negative text preserves all other constraints (romper, same fit, sleeves completely removed) and produces a fluent, strictly weaker query. The span operation correctly reconstructs the negative text by removing 'in denim fabric and' from the source."
+    },
+    {
+      "negative_id": "pinpoint_group_90f5fd1d589e0073_query_06322_predicate_substitute",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "The substitute changes 'sleeves completely removed' to 'sleeves left intact' (opposite predicate). However, Images 2, 3, 4, and 5 all show rompers with sleeves intact/present, making them compatible with the negated fact. This fails the requirement that the new fact must be clearly false for EVERY supplied positive image."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-haiku-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "8f9b963a6e909757df3377a830114617d448c8b7267ec5feaed5d2afebca3f60",
+      "input_hash": "7ddbcb1f8c0c6cbfb09c4c01907f6b1c4aaf9ca0436ef5c0712347a81c03a534",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/claude-haiku-5-5/cache/validate_group/7ddbcb1f8c0c6cbfb09c4c01907f6b1c4aaf9ca0436ef5c0712347a81c03a534.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01QTnMgnkYQMAeWbCIcCe9LDyn",
+      "usage": {
+        "prompt_tokens": 10146,
+        "completion_tokens": 320,
+        "total_tokens": 10466,
+        "prompt_tokens_details": {
+          "cached_tokens": 7910,
+          "cache_creation_tokens": 2232
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_90f5fd1d589e0073_query_06322_attribute_delete",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 347,
+      "action": "full reason retained; decision and failure_code unchanged"
+    },
+    {
+      "negative_id": "pinpoint_group_90f5fd1d589e0073_query_06322_predicate_substitute",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 323,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

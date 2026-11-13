@@ -1,0 +1,49 @@
+{
+  "group_id": "pinpoint_group_67f3ebcdb9560826",
+  "model": "gpt-5.6-luna",
+  "signature": "e0a59d07fd411f37376a5d88b0f5931c56e4eaa296bc7c0f3d113be2a03e8f5e",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_67f3ebcdb9560826_query_04463_attribute_substitute",
+      "decision": "reject",
+      "failure_code": "not_visually_verifiable",
+      "reason": "The substitution changes only the pants' color, but Positive image 3 shows a belt and no trousers. The navy pants requirement therefore cannot be reliably assessed across every supplied positive."
+    },
+    {
+      "negative_id": "pinpoint_group_67f3ebcdb9560826_query_04464_attribute_substitute",
+      "decision": "reject",
+      "failure_code": "not_visually_verifiable",
+      "reason": "Replacing black with dark navy is a single attribute edit, but Positive image 3 contains no visible trousers. Their color cannot be assessed there, so the new fact is not verifiably false across every supplied positive."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "gpt-5.6-luna",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "3d443e67919a7c4ef6f0ec8f779fe5840a6d34d255c6155874193deeb3e020e6",
+      "input_hash": "1388bed93ad7c4586b5313c2e913351e4ffdab0e13ab21d6f32a957990bb0f4d",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/gpt-5.6-luna/cache/validate_group/1388bed93ad7c4586b5313c2e913351e4ffdab0e13ab21d6f32a957990bb0f4d.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0b1640a48967f1fb016af42e38089487d2954f73c31393fd39",
+      "usage": {
+        "prompt_tokens": 22332,
+        "completion_tokens": 242,
+        "total_tokens": 22574,
+        "prompt_tokens_details": {
+          "cached_tokens": 22329
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 71
+        }
+      }
+    }
+  ],
+  "format_warnings": []
+}

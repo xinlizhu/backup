@@ -1,0 +1,61 @@
+{
+  "case_id": "pair_7ab82ade0c1e5e3c987f",
+  "signature": "f91b95909684e2ecf5207ab608279749c891c56633f2fa7c877aa09c2d59f3d4",
+  "simulated": false,
+  "status": "complete",
+  "judgment": {
+    "case_id": "pair_7ab82ade0c1e5e3c987f",
+    "constraints": [
+      {
+        "constraint": "The scene is a bus parking lot.",
+        "A_status": "contradicted",
+        "B_status": "contradicted",
+        "A_evidence": "The bus is beside a road marked with double yellow center lines, rather than in a bus parking lot.",
+        "B_evidence": "The bus is on a recovery truck's flatbed; the visible scene is a vehicle recovery scene rather than a bus parking lot."
+      },
+      {
+        "constraint": "Three buses are present.",
+        "A_status": "contradicted",
+        "B_status": "contradicted",
+        "A_evidence": "Only one bus is visible; the partially visible vehicle at the left is a truck.",
+        "B_evidence": "Only one bus is visible, carried on a flatbed truck."
+      },
+      {
+        "constraint": "The buses had fires in their front ends.",
+        "A_status": "uncertain",
+        "B_status": "supported",
+        "A_evidence": "The bus has extensive fire damage, especially around its rear and passenger compartment, but damage specifically to its front end is not clearly visible.",
+        "B_evidence": "The visible bus has severe charring and destruction around its front hood, windshield, and driver's compartment."
+      }
+    ],
+    "A_status": "contradicted",
+    "B_status": "contradicted",
+    "decision": "neither",
+    "reason": "Both candidates show only one bus in a roadside or recovery scene, whereas the instruction requires three buses in a bus parking lot."
+  },
+  "trace": {
+    "stage": "rank_pair_judgment",
+    "model_name": "gpt-5.6-terra",
+    "model_revision": null,
+    "provider": "openai-compatible-chat",
+    "reasoning_effort": null,
+    "prompt_version": "rank_preference_v1",
+    "prompt_hash": "af3b3cb07b31a064c447594011f609a534bbbeb5f2ec3451fde2f0190d817530",
+    "input_hash": "1698d31bfdbf881082abb0e0944d710b6b9edb31a9f7e551daa0d6db59ef50da",
+    "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_rank_preference_v1/outputs/gc_epochs14_top3/api_cache/rank_pair_judgment/1698d31bfdbf881082abb0e0944d710b6b9edb31a9f7e551daa0d6db59ef50da.json",
+    "cached": false,
+    "attempts": 1,
+    "request_id": "resp_072eb38708529df9016af2ccdbb12887d284598afdd0657478",
+    "usage": {
+      "prompt_tokens": 7153,
+      "completion_tokens": 483,
+      "total_tokens": 7636,
+      "prompt_tokens_details": {
+        "cached_tokens": 4864
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 115
+      }
+    }
+  }
+}

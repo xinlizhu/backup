@@ -1,0 +1,88 @@
+{
+  "case_id": "case_c4ef404d07239eba9718",
+  "audit_query_id": "audit_query_082",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_c4ef404d07239eba9718",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a locomotive with its striped front end facing toward the left side of the image, unlike the side-facing locomotive in Image 1, and visible white diagonal strips on its front."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a handheld computer with a raspberry logo, not a locomotive or white strips on a train."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "Turn to face back corner",
+      "Add white strips"
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_c4ef404d07239eba9718",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "Image 2 shows a locomotive with white diagonal markings and an angled view, but the images do not establish reliably which corner is the requested “back corner.”"
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a small computer with a raspberry graphic, not a locomotive facing a corner or bearing white strips."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "fe94bbe8de425554f29a3708d5ac74164ad6e20b8f60060916e0489539bea15e",
+      "input_hash": "429ab5c6638635efb01d3f85a730e7ed0151a9972a78abea8e186fd103575039",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/429ab5c6638635efb01d3f85a730e7ed0151a9972a78abea8e186fd103575039.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0487a6e886a3719b016af2beda867087d18bde7a906cb9ad26",
+      "usage": {
+        "prompt_tokens": 6766,
+        "completion_tokens": 392,
+        "total_tokens": 7158,
+        "prompt_tokens_details": {
+          "cached_tokens": 5888
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 250
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "1e9dc1d6cc170c22655ca8ea43c660eb2c1f8109442049fb306dfe085b94f981",
+      "input_hash": "229adc9b0ec36ee74d43b7580da9aa89db71d20fb5656bba2ce92a1aefdf42ae",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/229adc9b0ec36ee74d43b7580da9aa89db71d20fb5656bba2ce92a1aefdf42ae.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_074e7b3f88b2553d016af2bee79cac87d188445bab904bbe6d",
+      "usage": {
+        "prompt_tokens": 2835,
+        "completion_tokens": 755,
+        "total_tokens": 3590,
+        "completion_tokens_details": {
+          "reasoning_tokens": 646
+        }
+      }
+    }
+  ]
+}

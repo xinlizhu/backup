@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_06fb17ff8c6d20cb",
+  "model": "grok-4.6",
+  "signature": "cb958fa178e5ebcdd33f446ebd46fe25a7c20417ca5539cc74de61fb4df99804",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_06fb17ff8c6d20cb_query_00631_object_add",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "Image 2 includes a tall white vase holding pampas grass, so the added 'featuring a ceramic vase' fact is compatible with a supplied positive rather than clearly false for every positive."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.6",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "71a1e235fe17a24298eb611844a3a08e117d5a25b1c0360f4902365f89375d6e",
+      "input_hash": "d31d81fd3c3735dca4deacd09a9d4c46bf54495fb6660f1a799668bc592e9454",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/grok-4.6/cache/validate_group/d31d81fd3c3735dca4deacd09a9d4c46bf54495fb6660f1a799668bc592e9454.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "3c407db7-e7e4-9fa9-9d71-c0505a2a232f",
+      "usage": {
+        "prompt_tokens": 5153,
+        "completion_tokens": 92,
+        "total_tokens": 7912,
+        "prompt_tokens_details": {
+          "text_tokens": 2500,
+          "audio_tokens": 0,
+          "image_tokens": 2653,
+          "cached_tokens": 1152
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2667,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 251320000
+      }
+    }
+  ],
+  "format_warnings": []
+}

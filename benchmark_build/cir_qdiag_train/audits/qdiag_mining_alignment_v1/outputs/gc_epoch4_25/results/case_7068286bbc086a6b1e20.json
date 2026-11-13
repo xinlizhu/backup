@@ -1,0 +1,163 @@
+{
+  "case_id": "case_7068286bbc086a6b1e20",
+  "audit_query_id": "audit_query_076",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_7068286bbc086a6b1e20",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Relative to the group of dogs in R, T shows one dog on red carpet chewing a large bone."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows one dog chewing a raw, meaty poultry bone, but the dog is on exposed wooden flooring rather than red carpet."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The dog must be on red carpet."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "delete",
+        "semantic_target": "predicate",
+        "before_span": "set up on red carpet, ",
+        "after_span": null,
+        "edited_instruction": "Remove all but one dog, and give a bone.",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "Remove the requirement that the dog be on red carpet.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "T shows a single dog chewing a large bone, satisfying both surviving constraints relative to R."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C shows a single dog chewing a raw, meaty poultry bone; the wooden floor is unrestricted by the edited instruction."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_7068286bbc086a6b1e20",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 visibly shows one dog on a red carpet holding a large bone."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 visibly shows one dog holding a bone, but it is on a wooden floor rather than a red carpet."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting the single predicate span reconstructs the edited instruction exactly, and the candidate satisfies the remaining one-dog and bone constraints while violating only the removed red-carpet constraint.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 shows one dog and a visible bone; the edited instruction no longer requires a red carpet."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows exactly one dog visibly holding a bone; the edited instruction imposes no carpet requirement."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "delete",
+      "semantic_target": "predicate",
+      "before_span": "set up on red carpet, ",
+      "after_span": null,
+      "edited_instruction": "Remove all but one dog, and give a bone.",
+      "witness_type": "deletion_relaxation",
+      "changed_constraint": "Remove the requirement that the dog be on red carpet.",
+      "edited_on_positive": {
+        "status": "supported",
+        "evidence": "T shows a single dog chewing a large bone, satisfying both surviving constraints relative to R."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C shows a single dog chewing a raw, meaty poultry bone; the wooden floor is unrestricted by the edited instruction."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting the single predicate span reconstructs the edited instruction exactly, and the candidate satisfies the remaining one-dog and bone constraints while violating only the removed red-carpet constraint.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 shows one dog and a visible bone; the edited instruction no longer requires a red carpet."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows exactly one dog visibly holding a bone; the edited instruction imposes no carpet requirement."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "b1a6a76690e987ba8fc3566227fe2dbd6eb4f95c085f5e578209b06c33402a8e",
+      "input_hash": "1f54619065db644ad1ce61e9664b7d3b8355c203fc43a3e98e5d3375d30ab5b4",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/1f54619065db644ad1ce61e9664b7d3b8355c203fc43a3e98e5d3375d30ab5b4.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0f568b7f8087f90a016af2bec8e2e887d08136626eb88f40e5",
+      "usage": {
+        "prompt_tokens": 27998,
+        "completion_tokens": 644,
+        "total_tokens": 28642,
+        "prompt_tokens_details": {
+          "cached_tokens": 3830
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 292
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "bf80d09176023101202722592dd14208c18b76a161ac940983f090feccd6a9df",
+      "input_hash": "4dbba68b36cc9f351e63d699d3cd9c3ff56a92e2f5b180ec594a8fc252a4af91",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/4dbba68b36cc9f351e63d699d3cd9c3ff56a92e2f5b180ec594a8fc252a4af91.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_ack_24d1c09eb355feb4ccffbf37c47ae1c6",
+      "usage": {
+        "prompt_tokens": 23311,
+        "completion_tokens": 387,
+        "total_tokens": 23698,
+        "completion_tokens_details": {
+          "reasoning_tokens": 163
+        }
+      }
+    }
+  ]
+}

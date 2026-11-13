@@ -1,0 +1,85 @@
+{
+  "case_id": "case_1259bdddfa70cfe3e61f",
+  "audit_query_id": "audit_query_076",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_1259bdddfa70cfe3e61f",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Compared with the group of dogs in R, T shows one dog on a red carpet, chewing a large bone held between its paws."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows one dog, but it is outdoors against stone and grass rather than on red carpet. A furry, striped tail hangs from its mouth instead of a bone; no bone is visible."
+    },
+    "candidate_relation": "multiple_constraint_conflict",
+    "violated_source_constraints": [
+      "Set the dog on red carpet.",
+      "Give the dog a bone."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_1259bdddfa70cfe3e61f",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "One basset hound is lying on a red carpet with a large bone held at its mouth and resting between its front paws, satisfying all three requested changes from the group of dogs in R."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "One basset hound is visible, but it holds a striped furry tail in its mouth rather than a bone, and no red carpet is visible beneath it."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "46b61a8281a652e228cc98eb5d43e0e36f1b1de7e36b2067e3e1634c6abb9188",
+      "input_hash": "0413d089d760d5c9dab0bc8b267cc537f5a4c6835e011242194c01c99d989288",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/0413d089d760d5c9dab0bc8b267cc537f5a4c6835e011242194c01c99d989288.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_099899dd932e27ce016af2bdb836ec87d29dae28c9b412d9ac",
+      "usage": {
+        "prompt_tokens": 27946,
+        "completion_tokens": 310,
+        "total_tokens": 28256,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 117
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "56c384c71561b2ab7434de153936a555d0d05e39aaca6480a8a61f2e523f6f78",
+      "input_hash": "bcc4f0e82bd68276eb07c6f915e390898f48e34184b9e32ac16db50e590aafeb",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/bcc4f0e82bd68276eb07c6f915e390898f48e34184b9e32ac16db50e590aafeb.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_073f927a9cf9085c016af2bdce162c87d19d3f95e37f1e2c84",
+      "usage": {
+        "prompt_tokens": 27404,
+        "completion_tokens": 124,
+        "total_tokens": 27528
+      }
+    }
+  ]
+}

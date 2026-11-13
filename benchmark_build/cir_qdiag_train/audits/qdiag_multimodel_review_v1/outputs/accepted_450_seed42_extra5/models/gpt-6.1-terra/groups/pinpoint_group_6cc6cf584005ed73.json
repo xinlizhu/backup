@@ -1,0 +1,55 @@
+{
+  "group_id": "pinpoint_group_6cc6cf584005ed73",
+  "model": "gpt-6.1-terra",
+  "signature": "08eff7f6139e72d377a59effd10853d9c15929bec5b0a3afebcc9b0ca4a1c2df",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_6cc6cf584005ed73_query_02233_attribute_delete",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Deletes the textile-style attribute while retaining a fluent, weaker request for gloves related to the reference image."
+    },
+    {
+      "negative_id": "pinpoint_group_6cc6cf584005ed73_query_02236_predicate_delete",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Removes the single predicate about being crafted in the image's textile approach; “Gloves” is fluent and strictly weaker."
+    },
+    {
+      "negative_id": "pinpoint_group_6cc6cf584005ed73_query_02237_predicate_add",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Adds one clear placement relation. None of the supplied positive images shows gloves laid beside the reference image."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "gpt-6.1-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "9b36dca81deeacbf64f6305f8e31dd2f7fbd7b502a7b611b648344ad63616c17",
+      "input_hash": "edb9ce4328dcb2389b6d1092006d2399bd7961335538cac535e1268f73d723c4",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/gpt-6.1-terra/cache/validate_group/edb9ce4328dcb2389b6d1092006d2399bd7961335538cac535e1268f73d723c4.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0b9bd268af5d7c1c016af42e4d1ec087d093490d899b7af892",
+      "usage": {
+        "prompt_tokens": 8200,
+        "completion_tokens": 497,
+        "total_tokens": 8697,
+        "prompt_tokens_details": {
+          "cached_tokens": 3352
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 315
+        }
+      }
+    }
+  ],
+  "format_warnings": []
+}

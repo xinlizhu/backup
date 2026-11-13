@@ -1,0 +1,91 @@
+{
+  "case_id": "case_7c5b825caf74c70aa35c",
+  "audit_query_id": "audit_query_100",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_7c5b825caf74c70aa35c",
+    "case_status": "source_invalid_or_uncertain",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "The food visibly has browned melted cheese on top, but its shallow metal baking or serving vessel is not clearly a bowl."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The image shows a haircut in a barbershop, with no visible bowl containing a food dish topped with cheese."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "A bowl containing a food dish.",
+      "Cheese on top of the dish."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_7c5b825caf74c70aa35c",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "A cooked dish covered with melted, browned cheese is visible in a shallow metal vessel. The close crop does not reliably establish that the vessel is a bowl rather than a baking pan or tray."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The image shows a barber cutting a seated customer's hair in a salon. No bowl containing a dish topped with cheese is visible."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "4759cf04ebbc43a8bbd0c3c01bf3b6884c150abddb0e603e9d43be2fcd004c60",
+      "input_hash": "9410c032cc826971c0ea87402e1fc3bc9cbc8b20598d9ec2c134f3d2e876f1f4",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/9410c032cc826971c0ea87402e1fc3bc9cbc8b20598d9ec2c134f3d2e876f1f4.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_073dfa36906f4ca4016af2be4b151487d1b0f1ea87231d146f",
+      "usage": {
+        "prompt_tokens": 13169,
+        "completion_tokens": 264,
+        "total_tokens": 13433,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 84
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "e1b167e6409a42652b2fc8027a794edc843b4a95ba88981d76c2c2f491ba1a0c",
+      "input_hash": "f3fc91401313ac64a6d2284d8a53a7fa598e3b44292ccc22fde9ffd5e840f8c9",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/f3fc91401313ac64a6d2284d8a53a7fa598e3b44292ccc22fde9ffd5e840f8c9.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_09127c2526584ae4016af2be6cd5b887d1b4e65d0c2baf05ce",
+      "usage": {
+        "prompt_tokens": 12627,
+        "completion_tokens": 149,
+        "total_tokens": 12776,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 29
+        }
+      }
+    }
+  ]
+}

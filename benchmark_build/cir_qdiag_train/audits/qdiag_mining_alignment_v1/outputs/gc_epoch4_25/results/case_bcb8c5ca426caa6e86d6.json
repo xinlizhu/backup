@@ -1,0 +1,166 @@
+{
+  "case_id": "case_bcb8c5ca426caa6e86d6",
+  "audit_query_id": "audit_query_081",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_bcb8c5ca426caa6e86d6",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "T shows a saxophone with a maroon-red body and gold keys, satisfying the requested wind-instrument color change relative to R."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows a gold-colored saxophone. The reddish wooden instrument in the foreground is a string instrument, not the wind instrument."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The wind instrument must be maroon."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "attribute",
+        "before_span": "maroon",
+        "after_span": "gold",
+        "edited_instruction": "Make a wind instrument a gold color.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "The wind instrument's requested color changes from maroon to gold.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "T's saxophone body is maroon-red; its gold keywork does not make the instrument's body gold."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C's saxophone has a visibly gold-colored body and bell, consistent with the gold wind instruments shown in R."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_bcb8c5ca426caa6e86d6",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a saxophone with a maroon-red body."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a prominent wind instrument with a gold/brass-colored body, not maroon."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "The single attribute substitution from maroon to gold is fluent and preserves the instrument constraint. Image 2 is maroon, while the wind instrument in Image 3 is gold/brass.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The saxophone body in Image 2 is maroon-red, not gold."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 prominently shows a gold/brass-colored wind instrument."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "substitute",
+      "semantic_target": "attribute",
+      "before_span": "maroon",
+      "after_span": "gold",
+      "edited_instruction": "Make a wind instrument a gold color.",
+      "witness_type": "substitution_contrast",
+      "changed_constraint": "The wind instrument's requested color changes from maroon to gold.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "T's saxophone body is maroon-red; its gold keywork does not make the instrument's body gold."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C's saxophone has a visibly gold-colored body and bell, consistent with the gold wind instruments shown in R."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "The single attribute substitution from maroon to gold is fluent and preserves the instrument constraint. Image 2 is maroon, while the wind instrument in Image 3 is gold/brass.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The saxophone body in Image 2 is maroon-red, not gold."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 prominently shows a gold/brass-colored wind instrument."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "4329b54345f317f55a271dd05968a782c42c4ffbf7799c34ff147ce9b7d001cc",
+      "input_hash": "4dcb739be8e64d05cb59f7a358090f43d9c19745ae86b2fb590f0ac25ecb129a",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/4dcb739be8e64d05cb59f7a358090f43d9c19745ae86b2fb590f0ac25ecb129a.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0b75a555055cdcfb016af2bfc2fce487d1ae25e092c65fd820",
+      "usage": {
+        "prompt_tokens": 9618,
+        "completion_tokens": 515,
+        "total_tokens": 10133,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 154
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "70815ff4cbd3e70284360d7a9c69df6ef7461a520ce014e75b0e05cedfbf32e5",
+      "input_hash": "796ef87c3cee9d97fa74533a12f2701fcdbc3d2a438173ba45e6bd2427790417",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/796ef87c3cee9d97fa74533a12f2701fcdbc3d2a438173ba45e6bd2427790417.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_01db1840c439f0b2016af2bfe119c887d18669292a93cf94f6",
+      "usage": {
+        "prompt_tokens": 9301,
+        "completion_tokens": 284,
+        "total_tokens": 9585,
+        "prompt_tokens_details": {
+          "cached_tokens": 5248
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 73
+        }
+      }
+    }
+  ]
+}

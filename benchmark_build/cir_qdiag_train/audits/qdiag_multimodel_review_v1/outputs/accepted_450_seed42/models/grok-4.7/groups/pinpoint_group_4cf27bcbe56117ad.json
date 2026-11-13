@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_4cf27bcbe56117ad",
+  "model": "grok-4.7",
+  "signature": "52913ea34ae01078c58f7a80fc2119b86ef4b6b3449e9e55b21816a5d5d1ccbd",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_4cf27bcbe56117ad_query_07012_predicate_delete",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Deletes exactly one predicate—the request to modify the reference dress by eliminating its sleeves—while preserving the exact-dress request, producing a fluent, strictly weaker query."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.7",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "7a630f058ffea0b43563718410a42e082e5abe5669a04563fb0e040eefdc0aa8",
+      "input_hash": "3c30ffa00b5518bbe1ba561cf8ccdc68a2bec905c7350dd2d9ecc7e77b186ab8",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/grok-4.7/cache/validate_group/3c30ffa00b5518bbe1ba561cf8ccdc68a2bec905c7350dd2d9ecc7e77b186ab8.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "c268895e-fc46-9ab6-b825-a3297b48a1ab",
+      "usage": {
+        "prompt_tokens": 4658,
+        "completion_tokens": 81,
+        "total_tokens": 8538,
+        "prompt_tokens_details": {
+          "text_tokens": 2475,
+          "audio_tokens": 0,
+          "image_tokens": 2183,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 3799,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 295240000
+      }
+    }
+  ],
+  "format_warnings": []
+}

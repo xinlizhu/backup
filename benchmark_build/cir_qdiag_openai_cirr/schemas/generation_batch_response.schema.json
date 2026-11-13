@@ -1,0 +1,85 @@
+{
+  "$defs": {
+    "CandidateProposal": {
+      "additionalProperties": false,
+      "description": "One complete text-only counterfactual for one semantic axis.",
+      "properties": {
+        "after_span": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "After Span"
+        },
+        "before_span": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Before Span"
+        },
+        "negative_text": {
+          "minLength": 1,
+          "title": "Negative Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "negative_text",
+        "before_span",
+        "after_span"
+      ],
+      "title": "CandidateProposal",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "description": "Object, attribute, and predicate proposals for one fixed operation.",
+  "properties": {
+    "attribute": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/CandidateProposal"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "object": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/CandidateProposal"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "predicate": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/CandidateProposal"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  },
+  "required": [
+    "object",
+    "attribute",
+    "predicate"
+  ],
+  "title": "GenerationBatchResponse",
+  "type": "object"
+}

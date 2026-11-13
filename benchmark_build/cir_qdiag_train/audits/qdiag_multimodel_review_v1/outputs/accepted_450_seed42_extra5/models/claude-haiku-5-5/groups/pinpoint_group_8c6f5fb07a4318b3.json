@@ -1,0 +1,53 @@
+{
+  "group_id": "pinpoint_group_8c6f5fb07a4318b3",
+  "model": "claude-haiku-5-5",
+  "signature": "44bb4aae802e19564501a676b733c7e19828d9ced260b7da0428f08b1a359df2",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_8c6f5fb07a4318b3_query_05536_predicate_add",
+      "decision": "reject",
+      "failure_code": "not_visually_verifiable",
+      "reason": "The edit adds 'beside it' as a spatial relation, but reference images are not provided (Images 1-2 are blank), making it impossible to verify whether this new predicate is clearly false for all positive images."
+    },
+    {
+      "negative_id": "pinpoint_group_8c6f5fb07a4318b3_query_05536_predicate_substitute",
+      "decision": "reject",
+      "failure_code": "not_visually_verifiable",
+      "reason": "The substitution changes 'with' to 'beside', altering the spatial relationship between <img1> and <img2> crochet. Without visible reference images, this spatial relation cannot be verified as false across all positive images."
+    },
+    {
+      "negative_id": "pinpoint_group_8c6f5fb07a4318b3_query_05539_attribute_add",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "The addition of 'oversized' modifying pillows is compatible with the positive images shown. Image 6 displays bedroom pillows that could reasonably be described as oversized, making this edit fail the requirement that the new fact be clearly false for every supplied positive image."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-haiku-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "f1400ffdbf732ad8b98d76a42e0833ee76ad568e79bf378e86c21cec64f83afd",
+      "input_hash": "dea4bf4725b21f89a2a9ea86e3e9ce916b99f9ad9f70742ce99f9b0e71c18b69",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/claude-haiku-5-5/cache/validate_group/dea4bf4725b21f89a2a9ea86e3e9ce916b99f9ad9f70742ce99f9b0e71c18b69.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01CHJ6xKVJQDy4QfbBrQaNAdaz",
+      "usage": {
+        "prompt_tokens": 11788,
+        "completion_tokens": 359,
+        "total_tokens": 12147,
+        "prompt_tokens_details": {
+          "cached_tokens": 9191,
+          "cache_creation_tokens": 2593
+        }
+      }
+    }
+  ],
+  "format_warnings": []
+}

@@ -1,0 +1,227 @@
+{
+  "case_id": "case_293e704f1dd8584da79e",
+  "audit_query_id": "audit_query_080",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_293e704f1dd8584da79e",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "A bright yellow flower stands in a white vase, replacing the reference's pale blossoms with a colorful floral accent."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "The colorful bouquet includes yellow flowers in a vase. The instruction does not require a solitary flower or exclude other colors."
+    },
+    "candidate_relation": "compatible",
+    "violated_source_constraints": [],
+    "witnesses": [
+      {
+        "witness_id": "add_object",
+        "operation": "add",
+        "semantic_target": "object",
+        "before_span": null,
+        "after_span": "and orange roses",
+        "edited_instruction": "Bright up the room with a yellow flower and orange roses in a vase.",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "Adds the presence of orange roses alongside the yellow flower.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The vase contains a single yellow flower and green leaves; no orange roses are present."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Yellow flowers and prominent orange roses share the vase."
+        }
+      },
+      {
+        "witness_id": "add_attribute",
+        "operation": "add",
+        "semantic_target": "attribute",
+        "before_span": null,
+        "after_span": "transparent",
+        "edited_instruction": "Bright up the room with a yellow flower in a transparent vase.",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "Adds transparency as a property of the vase.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The yellow flower sits in an opaque white vase."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The bouquet includes yellow flowers in a transparent vase through which the stems are visible."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_293e704f1dd8584da79e",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "A vivid yellow daffodil stands in a white vase, providing the requested yellow flower in place of the reference's pale blossoms."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "The bouquet contains several clearly yellow flowers arranged in a vase. The instruction does not require a solitary flower or exclude other colors."
+    },
+    "verdicts": [
+      {
+        "witness_id": "add_object",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "Inserting 'and orange roses' adds one object constraint while preserving the yellow flower and vase requirements. Both images satisfy the source; only the candidate includes orange roses in the arrangement.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The white vase holds a single yellow daffodil with green leaves; no orange roses are present."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Clearly visible orange roses and yellow flowers share the same glass vase."
+        }
+      },
+      {
+        "witness_id": "add_attribute",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "Inserting 'transparent' adds one attribute to the existing vase without changing other requirements. Both images satisfy the source, and the added transparency constraint distinguishes the candidate.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The yellow daffodil is in an opaque white fluted vase; its stems cannot be seen through the vase."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Yellow flowers sit in a transparent glass vase, with stems and water visibly showing through its walls."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "add_object",
+      "operation": "add",
+      "semantic_target": "object",
+      "before_span": null,
+      "after_span": "and orange roses",
+      "edited_instruction": "Bright up the room with a yellow flower and orange roses in a vase.",
+      "witness_type": "addition_disambiguation",
+      "changed_constraint": "Adds the presence of orange roses alongside the yellow flower.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "The vase contains a single yellow flower and green leaves; no orange roses are present."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "Yellow flowers and prominent orange roses share the vase."
+      },
+      "independent_review": {
+        "witness_id": "add_object",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "Inserting 'and orange roses' adds one object constraint while preserving the yellow flower and vase requirements. Both images satisfy the source; only the candidate includes orange roses in the arrangement.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The white vase holds a single yellow daffodil with green leaves; no orange roses are present."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Clearly visible orange roses and yellow flowers share the same glass vase."
+        }
+      }
+    },
+    {
+      "witness_id": "add_attribute",
+      "operation": "add",
+      "semantic_target": "attribute",
+      "before_span": null,
+      "after_span": "transparent",
+      "edited_instruction": "Bright up the room with a yellow flower in a transparent vase.",
+      "witness_type": "addition_disambiguation",
+      "changed_constraint": "Adds transparency as a property of the vase.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "The yellow flower sits in an opaque white vase."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "The bouquet includes yellow flowers in a transparent vase through which the stems are visible."
+      },
+      "independent_review": {
+        "witness_id": "add_attribute",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "Inserting 'transparent' adds one attribute to the existing vase without changing other requirements. Both images satisfy the source, and the added transparency constraint distinguishes the candidate.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The yellow daffodil is in an opaque white fluted vase; its stems cannot be seen through the vase."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Yellow flowers sit in a transparent glass vase, with stems and water visibly showing through its walls."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "add_object",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    },
+    {
+      "witness_id": "add_attribute",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "06a5feea046e64e8c5e884ec7a5569d5b85b4cbc9ea6247e35c871d3ec9e6f9f",
+      "input_hash": "55976b020295b53dbb1569f8c787672112dbf2773fa23a75bb71c93df666723d",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/55976b020295b53dbb1569f8c787672112dbf2773fa23a75bb71c93df666723d.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0d5e85587392d726016af2bd6bcd4887d1aa1470ec615799c2",
+      "usage": {
+        "prompt_tokens": 7248,
+        "completion_tokens": 653,
+        "total_tokens": 7901,
+        "completion_tokens_details": {
+          "reasoning_tokens": 171
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "e23825874f92b58f1209bc322804f827d508079c1668e6fdfd26b51a62f8611a",
+      "input_hash": "639990102dc29a5483e67a9e60551459a450dea889efb36f3ea2d9e83b3afb8a",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/639990102dc29a5483e67a9e60551459a450dea889efb36f3ea2d9e83b3afb8a.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_007c7ab770bfbb63016af2bd865bb487d1933421ed389c229c",
+      "usage": {
+        "prompt_tokens": 6837,
+        "completion_tokens": 455,
+        "total_tokens": 7292
+      }
+    }
+  ]
+}

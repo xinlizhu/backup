@@ -1,0 +1,92 @@
+{
+  "case_id": "case_2499cd24704b120ff5b1",
+  "audit_query_id": "audit_query_095",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_2499cd24704b120ff5b1",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "T shows one pelican with its head, neck, and spread wings raised above grey water and its beak wide open. R shows several swimming sea lions, which q inaccurately calls birds, but T visibly satisfies the requested result."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows two dogs sitting in grass, with no bird or water visible. The larger dog's open mouth does not satisfy the constraint on the remaining bird."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "There must be exactly one bird remaining.",
+      "The scene must contain grey water.",
+      "The remaining bird must be raised out of the water with its mouth open."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_2499cd24704b120ff5b1",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "One pelican is visible in grey water, with its head, neck, upper body, and spread wings raised above the surface and its beak wide open. This supports the requested single bird, grey water, raised posture, and open mouth."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The candidate shows two dogs sitting in green grass, with no bird or visible water. It does not satisfy the single bird in grey water with its body raised and mouth open."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "056e561f5f99792d47226f3cdc1953adfdad4c5fbaedd15972b76160d514e515",
+      "input_hash": "0303c0adc55c2eeb581359c7829aa0bd230bbc8fe7f9d6f89eb2420a8c97ad03",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/0303c0adc55c2eeb581359c7829aa0bd230bbc8fe7f9d6f89eb2420a8c97ad03.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0ea1d2495c2d28cc016af2be37b9e887d2905263e7bc20368c",
+      "usage": {
+        "prompt_tokens": 12199,
+        "completion_tokens": 307,
+        "total_tokens": 12506,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 85
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "68785eb4e36529bf9912d605b256ee7fad06dc13785d13763cc998154dc7e789",
+      "input_hash": "102746543b25e02c1057fd8068645fcece79b850dd3aa767d7bafb514a2095eb",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/102746543b25e02c1057fd8068645fcece79b850dd3aa767d7bafb514a2095eb.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_066c15dd903a0ec9016af2be4577d087d1bbb9cb3f36e1f041",
+      "usage": {
+        "prompt_tokens": 11657,
+        "completion_tokens": 172,
+        "total_tokens": 11829,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 33
+        }
+      }
+    }
+  ]
+}

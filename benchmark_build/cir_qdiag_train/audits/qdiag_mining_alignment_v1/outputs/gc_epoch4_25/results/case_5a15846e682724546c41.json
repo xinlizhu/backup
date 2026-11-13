@@ -1,0 +1,92 @@
+{
+  "case_id": "case_5a15846e682724546c41",
+  "audit_query_id": "audit_query_088",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_5a15846e682724546c41",
+    "case_status": "source_invalid_or_uncertain",
+    "source_on_positive": {
+      "status": "contradicted",
+      "evidence": "The vulture has a long black neck and is on rocky dirt, but it is standing upright, not sitting."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The candidate shows dessert in glasses on a wooden surface, not a bird sitting in a rocky dirt area."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "Shows a large bird",
+      "Has a longer black neck than the bird in the reference",
+      "Is sitting in a rocky dirt area"
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_5a15846e682724546c41",
+    "source_on_positive": {
+      "status": "contradicted",
+      "evidence": "The large bird has a visibly longer, dark neck than the reference and is on rocky dirt, but it is standing upright on extended legs rather than sitting."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The candidate shows peach-and-blueberry desserts in glasses on a wooden table. There is no large bird, black neck, or bird sitting in a rocky dirt area."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "951eeb8f44720e769e4987f411dfd2e12e5a7ca2be1d7a52015993ae2e6d8b00",
+      "input_hash": "25fd07ea70ca3719d7c4028952824af27cd1e70e4e69cb47d275cbc18b0dc4fb",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/25fd07ea70ca3719d7c4028952824af27cd1e70e4e69cb47d275cbc18b0dc4fb.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0c6b707d8a32df53016af2bef0f8f087d1a7bf9cdb01d180d7",
+      "usage": {
+        "prompt_tokens": 7790,
+        "completion_tokens": 379,
+        "total_tokens": 8169,
+        "prompt_tokens_details": {
+          "cached_tokens": 5888
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 233
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "e83b203099c8dd13fc1d73d4c4102a3ea4375ec9fa36363d8333a4c3a5e0e95a",
+      "input_hash": "3d98387b980afd400d0de2933d737ad2b445e3395ffe4e8c9c1b16d9ef1a7ab3",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/3d98387b980afd400d0de2933d737ad2b445e3395ffe4e8c9c1b16d9ef1a7ab3.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_073658e56b9f2b26016af2bef9299c87d0a636a1e10fd9fc29",
+      "usage": {
+        "prompt_tokens": 7084,
+        "completion_tokens": 152,
+        "total_tokens": 7236,
+        "prompt_tokens_details": {
+          "cached_tokens": 3482
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 32
+        }
+      }
+    }
+  ]
+}

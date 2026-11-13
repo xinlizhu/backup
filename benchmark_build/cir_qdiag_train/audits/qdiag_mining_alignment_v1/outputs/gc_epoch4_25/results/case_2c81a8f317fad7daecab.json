@@ -1,0 +1,164 @@
+{
+  "case_id": "case_2c81a8f317fad7daecab",
+  "audit_query_id": "audit_query_079",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_2c81a8f317fad7daecab",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a black, bowl-shaped vessel sink beneath a running faucet."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "Image 3 also shows a black, bowl-shaped vessel sink beneath a running faucet."
+    },
+    "candidate_relation": "compatible",
+    "violated_source_constraints": [],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "add",
+        "semantic_target": "object",
+        "before_span": null,
+        "after_span": "with no swimming pool in the background",
+        "edited_instruction": "Show a black bowl sink with no swimming pool in the background.",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "Adds the absence of a swimming pool in the background.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The black bowl sink has a clearly visible blue swimming pool in the background on the left."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The black bowl sink is backed by beige wall tiles; no swimming pool appears in the background."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_2c81a8f317fad7daecab",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 clearly shows a black, bowl-shaped vessel sink beneath a running chrome faucet."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "Image 3 clearly shows a black, bowl-shaped vessel sink beneath a running chrome faucet."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "The specified span inserts one new constraint, absence of a swimming pool in the background, while preserving the black bowl sink requirement. Both images satisfy the source instruction; the visible pool in Image 2 and plain wall background in Image 3 establish the required ADD support pattern.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "A bright blue swimming pool is visible in the background behind the black bowl sink."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The black bowl sink stands against a light stone wall; no swimming pool appears in the visible background."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "add",
+      "semantic_target": "object",
+      "before_span": null,
+      "after_span": "with no swimming pool in the background",
+      "edited_instruction": "Show a black bowl sink with no swimming pool in the background.",
+      "witness_type": "addition_disambiguation",
+      "changed_constraint": "Adds the absence of a swimming pool in the background.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "The black bowl sink has a clearly visible blue swimming pool in the background on the left."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "The black bowl sink is backed by beige wall tiles; no swimming pool appears in the background."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "The specified span inserts one new constraint, absence of a swimming pool in the background, while preserving the black bowl sink requirement. Both images satisfy the source instruction; the visible pool in Image 2 and plain wall background in Image 3 establish the required ADD support pattern.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "A bright blue swimming pool is visible in the background behind the black bowl sink."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The black bowl sink stands against a light stone wall; no swimming pool appears in the visible background."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "393d6ee375abd529134582666dfa89d96af4bd1cbec54d6ad83e4792978385ad",
+      "input_hash": "84b27daf0bdc7f12bab1b36ab25c6ad07d882f3e7a96b2a30a412313d3998528",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/84b27daf0bdc7f12bab1b36ab25c6ad07d882f3e7a96b2a30a412313d3998528.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0a8401d9cabb011d016af2bd580ce887d1b907676cc56ecced",
+      "usage": {
+        "prompt_tokens": 8825,
+        "completion_tokens": 434,
+        "total_tokens": 9259,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 113
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "72edaf99b874387d8da240e7e6d7d6646b6ce8d5afcc0df4565ff9fe9df625b6",
+      "input_hash": "1ef4f71ec7e1db024e44049b4da68107374a9b401f180d9a6ba537d0e81a390f",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/1ef4f71ec7e1db024e44049b4da68107374a9b401f180d9a6ba537d0e81a390f.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_096684028ba78f3d016af2bd6506d087d1908c9cf298e148fe",
+      "usage": {
+        "prompt_tokens": 8352,
+        "completion_tokens": 316,
+        "total_tokens": 8668,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 17
+        }
+      }
+    }
+  ]
+}

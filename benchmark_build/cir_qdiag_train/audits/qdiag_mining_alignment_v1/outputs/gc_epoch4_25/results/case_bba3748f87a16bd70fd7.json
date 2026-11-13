@@ -1,0 +1,238 @@
+{
+  "case_id": "case_bba3748f87a16bd70fd7",
+  "audit_query_id": "audit_query_083",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_bba3748f87a16bd70fd7",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Relative to the reference's multiple boxes, T shows one cream container with one matching product box, satisfying the requested single product with its box."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows a single saxophone, which can be described as a product, but no accompanying box is visible."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The single product must be accompanied by its box."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "delete",
+        "semantic_target": "object",
+        "before_span": "with its box",
+        "after_span": null,
+        "edited_instruction": "Leave a single product",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "Remove the requirement for an accompanying product box.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "T shows one cream container; its packaging does not constitute an additional product."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C shows one saxophone as the single product."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "operation": "substitute",
+        "semantic_target": "predicate",
+        "before_span": "with",
+        "after_span": "without",
+        "edited_instruction": "Leave a single product without its box",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "Change the product's relation to its box from accompanied by it to shown without it.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "T visibly includes the cream container's matching box beside it."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C shows a single saxophone without any box in the image."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_bba3748f87a16bd70fd7",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows one body-cream container beside its matching retail box, satisfying a single product with its box."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows one saxophone with no box visible. It satisfies the single-product constraint but contradicts the requirement to include its box."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting 'with its box' removes the single box requirement and its grammatical glue. The resulting instruction preserves the single-product requirement, which both images satisfy. The candidate violates only the removed constraint; the source does not explicitly require a particular product identity.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 contains one body-cream product. Its accompanying packaging is allowed by the edited instruction, which no longer specifies whether a box must be present."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 contains one saxophone, satisfying 'Leave a single product.'"
+        }
+      },
+      {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing 'with' with 'without' makes one predicate change while retaining the product and box arguments and the single-product constraint. The matching box in Image 2 contradicts the edited instruction; the lone saxophone in Image 3 supports it.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The body-cream container is visibly displayed with its matching pink box, contrary to 'without its box.'"
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "A single saxophone is displayed against a fabric background with no box present."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "delete",
+      "semantic_target": "object",
+      "before_span": "with its box",
+      "after_span": null,
+      "edited_instruction": "Leave a single product",
+      "witness_type": "deletion_relaxation",
+      "changed_constraint": "Remove the requirement for an accompanying product box.",
+      "edited_on_positive": {
+        "status": "supported",
+        "evidence": "T shows one cream container; its packaging does not constitute an additional product."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C shows one saxophone as the single product."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting 'with its box' removes the single box requirement and its grammatical glue. The resulting instruction preserves the single-product requirement, which both images satisfy. The candidate violates only the removed constraint; the source does not explicitly require a particular product identity.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 contains one body-cream product. Its accompanying packaging is allowed by the edited instruction, which no longer specifies whether a box must be present."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 contains one saxophone, satisfying 'Leave a single product.'"
+        }
+      }
+    },
+    {
+      "witness_id": "w2",
+      "operation": "substitute",
+      "semantic_target": "predicate",
+      "before_span": "with",
+      "after_span": "without",
+      "edited_instruction": "Leave a single product without its box",
+      "witness_type": "substitution_contrast",
+      "changed_constraint": "Change the product's relation to its box from accompanied by it to shown without it.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "T visibly includes the cream container's matching box beside it."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C shows a single saxophone without any box in the image."
+      },
+      "independent_review": {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing 'with' with 'without' makes one predicate change while retaining the product and box arguments and the single-product constraint. The matching box in Image 2 contradicts the edited instruction; the lone saxophone in Image 3 supports it.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The body-cream container is visibly displayed with its matching pink box, contrary to 'without its box.'"
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "A single saxophone is displayed against a fabric background with no box present."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    },
+    {
+      "witness_id": "w2",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "97a35b328c740742165f212205ca783d3971dfcc4060267c53f413fdb2ba875f",
+      "input_hash": "3f173976db56fc520669216306f8f745774e26a31397dec49f87891b315199d4",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/3f173976db56fc520669216306f8f745774e26a31397dec49f87891b315199d4.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_01df73d8d86d579f016af2bd5a8a4887d1a1a9746ef5858479",
+      "usage": {
+        "prompt_tokens": 7948,
+        "completion_tokens": 784,
+        "total_tokens": 8732,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 289
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "b883c86005d255019249ec6e0150dd712966511fecf23d42b98de0218c661051",
+      "input_hash": "a44f256a8ad7b6271432e174889ed3151a6791b7e7145e235a2ea13088842d33",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/a44f256a8ad7b6271432e174889ed3151a6791b7e7145e235a2ea13088842d33.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_037f2cf2be7f7f5c016af2bd745f5487d1b910f00d1ec097da",
+      "usage": {
+        "prompt_tokens": 7525,
+        "completion_tokens": 548,
+        "total_tokens": 8073,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 51
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "scope": "GC epoch4; 25 fixed queries; automatic proposal and fresh model review; not human-adjudicated",
+  "confirmed_frequency_enrichment_mined_over_random": 10.642857142857142,
+  "confirmed_frequency_difference_percentage_points": 17.419354838709676,
+  "confirmed_query_coverage_difference_percentage_points": 36,
+  "teacher_positive_preference_query_balanced_percent": 89.12433155080214,
+  "teacher_preference_denominator": {
+    "eligible_queries": 17,
+    "confirmed_mined_pairs": 149
+  },
+  "mined_operation_overlap": {
+    "substitute": 117,
+    "delete": 95,
+    "both": 63,
+    "union": 149,
+    "add_compatible_separate": 63
+  },
+  "teacher_error_counts_by_query": {
+    "audit_query_081": 2,
+    "audit_query_087": 2,
+    "audit_query_090": 5,
+    "audit_query_100": 4
+  },
+  "uncertain_pair_percent": {
+    "mined": 28.129032258064516,
+    "random": 26.322580645161292
+  },
+  "important_limits": [
+    "Only model-reviewed labels, without complete human adjudication",
+    "25 GC queries from one epoch, not original RIM training history",
+    "Source positive grounding is ambiguous or rejected in some cases; inspect source_positive_grounding_by_query.csv",
+    "Teacher-vs-student rankings and counterfactual score reversals have not been run"
+  ],
+  "assistant_visual_spot_checks": [
+    {
+      "case_id": "case_de3258d168d921c4b9d6",
+      "observation": "Target black bowl-shaped sink; candidate silver basin on black cabinet; teacher favors target"
+    },
+    {
+      "case_id": "case_b759176b72c6827bc2cd",
+      "observation": "Target rear-view car by water; candidate front-view car by water; teacher favors candidate"
+    }
+  ]
+}

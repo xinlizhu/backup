@@ -1,0 +1,238 @@
+{
+  "case_id": "case_c3bc9d845f368cb041e0",
+  "audit_query_id": "audit_query_084",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_c3bc9d845f368cb041e0",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Like R, T shows dough on a work surface from an oblique angle, with both its top and front visible. A wooden rolling pin occupies the right side."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows dough on a floured work surface from a broadly similar oblique angle, but no rolling pin is visible on the right side."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "Must include a rolling pin on the right-hand side."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "object",
+        "before_span": "rolling pin",
+        "after_span": "a sleeve",
+        "edited_instruction": "Similar angled photograph, must include a sleeve on the right hand side",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "The required object on the right-hand side changes from a rolling pin to a sleeve.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "T has the similar oblique view, but its right side contains a rolling pin; no sleeve is visible."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C shows dough from a broadly similar oblique view, and a prominent white sleeve occupies the right side."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "operation": "delete",
+        "semantic_target": "object",
+        "before_span": ", must include rolling pin on the right hand side",
+        "after_span": null,
+        "edited_instruction": "Similar angled photograph",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "Removes the requirement for a rolling pin on the right-hand side.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "T, like R, presents dough on a work surface from an oblique angle with its top and front visible."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C also presents dough on a work surface from a broadly similar oblique angle, showing its top and front."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_c3bc9d845f368cb041e0",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The dough is photographed at an oblique angle showing its top and front, similar to R. A wooden rolling pin is clearly visible on the right."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The dough is photographed from an oblique frontal view showing its top and front, compatible with R's angled view. No rolling pin appears on the right; a white sleeve occupies that area."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "The single replacement changes the required object from a rolling pin to a sleeve while retaining its right-side location and the angled-view requirement. T has the rolling pin but no sleeve; C has a clearly visible right-side sleeve but no rolling pin.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The angled photograph shows a wooden rolling pin on the right, with no sleeve visible."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "A white chef's sleeve is clearly visible on the right of the dough, which is photographed from an oblique frontal angle."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting the specified clause removes the single requirement for a rolling pin on the right, including its grammatical glue. Both images satisfy the remaining angled-photograph requirement; C's only source-query violation is the missing right-side rolling pin.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "The photograph shows the dough's front and top from an oblique angle comparable to R."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The dough's front and top are visible from an oblique frontal angle, satisfying the remaining requirement for a similar angled photograph."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "substitute",
+      "semantic_target": "object",
+      "before_span": "rolling pin",
+      "after_span": "a sleeve",
+      "edited_instruction": "Similar angled photograph, must include a sleeve on the right hand side",
+      "witness_type": "substitution_contrast",
+      "changed_constraint": "The required object on the right-hand side changes from a rolling pin to a sleeve.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "T has the similar oblique view, but its right side contains a rolling pin; no sleeve is visible."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C shows dough from a broadly similar oblique view, and a prominent white sleeve occupies the right side."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "The single replacement changes the required object from a rolling pin to a sleeve while retaining its right-side location and the angled-view requirement. T has the rolling pin but no sleeve; C has a clearly visible right-side sleeve but no rolling pin.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The angled photograph shows a wooden rolling pin on the right, with no sleeve visible."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "A white chef's sleeve is clearly visible on the right of the dough, which is photographed from an oblique frontal angle."
+        }
+      }
+    },
+    {
+      "witness_id": "w2",
+      "operation": "delete",
+      "semantic_target": "object",
+      "before_span": ", must include rolling pin on the right hand side",
+      "after_span": null,
+      "edited_instruction": "Similar angled photograph",
+      "witness_type": "deletion_relaxation",
+      "changed_constraint": "Removes the requirement for a rolling pin on the right-hand side.",
+      "edited_on_positive": {
+        "status": "supported",
+        "evidence": "T, like R, presents dough on a work surface from an oblique angle with its top and front visible."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C also presents dough on a work surface from a broadly similar oblique angle, showing its top and front."
+      },
+      "independent_review": {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting the specified clause removes the single requirement for a rolling pin on the right, including its grammatical glue. Both images satisfy the remaining angled-photograph requirement; C's only source-query violation is the missing right-side rolling pin.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "The photograph shows the dough's front and top from an oblique angle comparable to R."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The dough's front and top are visible from an oblique frontal angle, satisfying the remaining requirement for a similar angled photograph."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    },
+    {
+      "witness_id": "w2",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "c59e285959fea7c24d3de2f5e7e36622b00030699ce59110fa5c98232371c5e6",
+      "input_hash": "68978a8b655b4bdc45618e5477eafe1a09192da5d5ce9b5f80ccea4c3e7bc82c",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/68978a8b655b4bdc45618e5477eafe1a09192da5d5ce9b5f80ccea4c3e7bc82c.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0ed12229e17f45a4016af2be6ebc9887d18260cc575084671f",
+      "usage": {
+        "prompt_tokens": 8275,
+        "completion_tokens": 780,
+        "total_tokens": 9055,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 217
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "d637c307758517551ca978afb5397ee28656483dcfe9c05a093c3dd5b7abfc8f",
+      "input_hash": "d3a87007e9abc2fc861d6aeff4cbc7a720596ddf9f9a4968dbce11403fe1d311",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/d3a87007e9abc2fc861d6aeff4cbc7a720596ddf9f9a4968dbce11403fe1d311.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_00b0858984b77ca2016af2be90156487d1a73d31b8a37d781d",
+      "usage": {
+        "prompt_tokens": 7865,
+        "completion_tokens": 575,
+        "total_tokens": 8440,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 64
+        }
+      }
+    }
+  ]
+}

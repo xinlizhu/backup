@@ -1,0 +1,41 @@
+{
+  "TEMA_equal_length_batches": true,
+  "checkpoint": "/mnt/data/datasets/search_dataset/zxl/models/TEMA/TEMA_mcirr.pt",
+  "complete": true,
+  "environment": "/mnt/data/datasets/search_dataset/zxl/multi_modal_py3.12/bin/python",
+  "feature_seconds": 23.651412963867188,
+  "features_complete": true,
+  "gallery_count": 2297,
+  "image_batch_size": 256,
+  "metrics": {
+    "checkpoint": "/mnt/data/datasets/search_dataset/zxl/models/TEMA/TEMA_mcirr.pt",
+    "group_recall_at_1": 68.2851,
+    "group_recall_at_2": 85.5059,
+    "group_recall_at_3": 93.1117,
+    "model": "TEMA-MCIRR",
+    "num_queries": 4181,
+    "recall_at_1": 33.5805,
+    "recall_at_10": 77.5652,
+    "recall_at_5": 65.7977,
+    "recall_at_50": 93.1117
+  },
+  "model": "TEMA-MCIRR",
+  "query_batch_size": 256,
+  "query_count": 4181,
+  "reference_feature_pooling": "mean of native visual features/tokens before fusion",
+  "scoring_protocol": {
+    "exclude_reference": true,
+    "group_recall_k": [
+      1,
+      2,
+      3
+    ],
+    "recall_k": [
+      1,
+      5,
+      10,
+      50
+    ],
+    "split": "val"
+  }
+}

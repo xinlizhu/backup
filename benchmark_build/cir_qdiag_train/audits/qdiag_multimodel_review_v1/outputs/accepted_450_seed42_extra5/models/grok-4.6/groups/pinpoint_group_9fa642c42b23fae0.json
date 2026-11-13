@@ -1,0 +1,57 @@
+{
+  "group_id": "pinpoint_group_9fa642c42b23fae0",
+  "model": "grok-4.6",
+  "signature": "cb958fa178e5ebcdd33f446ebd46fe25a7c20417ca5539cc74de61fb4df99804",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_9fa642c42b23fae0_query_07417_attribute_substitute",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Single attribute swap of white to black; the supplied positive jumpsuit is clearly white, so black is false for every positive."
+    },
+    {
+      "negative_id": "pinpoint_group_9fa642c42b23fae0_query_07420_attribute_delete",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Deletes only the color word white, yielding a fluent, strictly weaker query with every other constraint unchanged."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.6",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "2d71fdea06681a095c1e941a303e879441f926d18e42266b85813865e76a6515",
+      "input_hash": "d12fba3328ac57b35ab0bf99969c9494b702b8fa72d60c1443b20b31a7cc29a3",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/grok-4.6/cache/validate_group/d12fba3328ac57b35ab0bf99969c9494b702b8fa72d60c1443b20b31a7cc29a3.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "78ffd1cb-84e2-99ed-a87e-1f84cc2bdeba",
+      "usage": {
+        "prompt_tokens": 3122,
+        "completion_tokens": 141,
+        "total_tokens": 6870,
+        "prompt_tokens_details": {
+          "text_tokens": 2473,
+          "audio_tokens": 0,
+          "image_tokens": 649,
+          "cached_tokens": 2304
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 3607,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 252760000
+      }
+    }
+  ],
+  "format_warnings": []
+}

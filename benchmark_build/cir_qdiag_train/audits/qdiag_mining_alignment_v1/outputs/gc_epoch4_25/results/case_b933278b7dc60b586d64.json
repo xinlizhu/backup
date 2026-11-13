@@ -1,0 +1,175 @@
+{
+  "case_id": "case_b933278b7dc60b586d64",
+  "audit_query_id": "audit_query_076",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_b933278b7dc60b586d64",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Relative to the reference’s group of dogs, the positive shows one dog on a reddish carpet holding a large bone."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The candidate shows one dog with bones, but it is on grass rather than a red carpet."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "Set the dog up on a red carpet."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "substitute_location",
+        "operation": "substitute",
+        "semantic_target": "predicate",
+        "before_span": "on red carpet",
+        "after_span": "on grass",
+        "edited_instruction": "Remove all but one dog, set up on grass, and give a bone.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "The setup location changes from a red carpet to grass.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The dog is on a reddish carpet, not grass."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "A single dog is shown on grass with bones."
+        }
+      },
+      {
+        "witness_id": "delete_location",
+        "operation": "delete",
+        "semantic_target": "predicate",
+        "before_span": "set up on red carpet",
+        "after_span": null,
+        "edited_instruction": "Remove all but one dog, and give a bone.",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "The red-carpet setup requirement is removed; it is the constraint the candidate’s grassy setting conflicts with.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "The positive shows one dog holding a bone."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The candidate shows one dog with bones."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_b933278b7dc60b586d64",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows one dog on a red carpet with a large bone in its mouth."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows at least two dogs, so it does not satisfy “remove all but one dog”; the dog is on grass rather than red carpet. Bones are visible."
+    },
+    "verdicts": [
+      {
+        "witness_id": "substitute_location",
+        "decision": "reject",
+        "failure_code": "support_pattern_mismatch",
+        "witness_type": null,
+        "reason": "The location replacement is a single edit, but the edited instruction is contradicted on both images: Image 2 has carpet rather than grass, and Image 3 shows multiple dogs despite matching the grass location.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The dog is on a red carpet, not grass."
+        },
+        "edited_on_candidate": {
+          "status": "contradicted",
+          "evidence": "Grass is visible, but at least two dogs violate the unchanged one-dog constraint."
+        }
+      },
+      {
+        "witness_id": "delete_location",
+        "decision": "reject",
+        "failure_code": "remaining_constraints_violated",
+        "witness_type": null,
+        "reason": "The deletion is a single edit and the resulting instruction is supported on Image 2, but Image 3 still violates the unchanged one-dog constraint, so deletion does not make the candidate satisfy it.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 shows one dog with a bone; location is no longer constrained."
+        },
+        "edited_on_candidate": {
+          "status": "contradicted",
+          "evidence": "Image 3 shows at least two dogs, violating “remove all but one dog,” although bones are visible."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [],
+  "local_checks": [
+    {
+      "witness_id": "substitute_location",
+      "accepted": false,
+      "local_failures": [
+        "wrong_witness_type",
+        "wrong_support_pattern"
+      ],
+      "review_decision": "reject"
+    },
+    {
+      "witness_id": "delete_location",
+      "accepted": false,
+      "local_failures": [
+        "span_reconstruction_failed",
+        "wrong_witness_type",
+        "wrong_support_pattern"
+      ],
+      "review_decision": "reject"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "3a200d159cca4a35d1e9ecc2e5e6a4bd0fe8c72ae8b2a826440a183860897c5b",
+      "input_hash": "efa985074dab28a091db3d66ec68ca327199fe77ff4db3e0f36ecfa64d83f09f",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/efa985074dab28a091db3d66ec68ca327199fe77ff4db3e0f36ecfa64d83f09f.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0f4a84dab5696db6016af2bf29da1887d1b160de72e55b55c1",
+      "usage": {
+        "prompt_tokens": 34578,
+        "completion_tokens": 2051,
+        "total_tokens": 36629,
+        "completion_tokens_details": {
+          "reasoning_tokens": 1552
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "3f68d4991286beef7a392ef2c4ea3cb8e901378dad95a4faf2f8db59c0b94dcd",
+      "input_hash": "c0e42d98efbb0db1ccc86340b431d976f20b4c2aacc0aa39cccdfd8173fd1166",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/c0e42d98efbb0db1ccc86340b431d976f20b4c2aacc0aa39cccdfd8173fd1166.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0b8af3dc428c5912016af2bf47ca6887d197ee8d6f14b4cda6",
+      "usage": {
+        "prompt_tokens": 37564,
+        "completion_tokens": 623,
+        "total_tokens": 38187,
+        "prompt_tokens_details": {
+          "cached_tokens": 5248
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 257
+        }
+      }
+    }
+  ]
+}

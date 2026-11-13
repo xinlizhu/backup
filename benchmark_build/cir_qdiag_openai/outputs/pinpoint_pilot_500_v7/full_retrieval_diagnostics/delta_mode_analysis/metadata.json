@@ -1,0 +1,53 @@
+{
+  "bootstrap_replicates": 5000,
+  "cell_counts": {
+    "attribute|add": 411,
+    "attribute|delete": 1383,
+    "attribute|substitute": 567,
+    "object|add": 947,
+    "object|delete": 643,
+    "object|substitute": 767,
+    "predicate|add": 240,
+    "predicate|delete": 308,
+    "predicate|substitute": 310
+  },
+  "construction_mode_note": "V7 has one protocol: text-only generation followed by vision-grounded selection. Analysis dimensions are operation, 3x3 cell, and review scope.",
+  "dataset": "PinPoint V7",
+  "delta_variable": "per-negative mean over original Positive targets of sim(f(R,m+),t)-sim(f(R,m-),t)",
+  "diagnostics_root": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_openai/outputs/pinpoint_pilot_500_v7/full_retrieval_diagnostics",
+  "empirical_zoom": [
+    -0.15000000000000002,
+    0.35000000000000003
+  ],
+  "input_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_openai/outputs/pinpoint_pilot_500_v7/final.jsonl",
+  "models": [
+    "BGE-VL-base",
+    "BGE-VL-MLLM-S1"
+  ],
+  "negative_count_per_model": {
+    "BGE-VL-MLLM-S1": 5576,
+    "BGE-VL-base": 5576
+  },
+  "schema_version": "1.0",
+  "seed": 42,
+  "theoretical_range": [
+    -2.0,
+    2.0
+  ],
+  "thresholds": {
+    "BGE-VL-MLLM-S1": {
+      "bootstrap_ci": [
+        0.08674074709415436,
+        0.09975597262382507
+      ],
+      "value": 0.09180964529514313
+    },
+    "BGE-VL-base": {
+      "bootstrap_ci": [
+        0.11212690453976393,
+        0.12325337678194045
+      ],
+      "value": 0.11726951599121094
+    }
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "case_id": "case_26f569c45eb003c1a81a",
+  "audit_query_id": "audit_query_095",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_26f569c45eb003c1a81a",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "One pelican is visible in grey water, with its torso and spread wings raised above the surface and its mouth wide open."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "One pelican has its mouth open, but the water is blue rather than grey and its body floats low at the surface instead of being raised out of the water."
+    },
+    "candidate_relation": "multiple_constraint_conflict",
+    "violated_source_constraints": [
+      "Change water color to grey.",
+      "Raise the remaining bird out of the water."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_26f569c45eb003c1a81a",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "One pelican is visible in grey water, with its beak wide open and its neck, chest, and spread wings raised above the surface. This supports the requested single animal, grey water, raised posture, and open mouth relative to the reference's mostly submerged animals."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "One pelican has its beak open, but the water is visibly blue rather than grey. Its body floats low in the water with folded wings, rather than adopting the raised posture requested."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "c310377640f6dbd235fbdfcb20c1a25af3d2d40c06ae8658ffc143967aca54fa",
+      "input_hash": "9028a331491131e1b7528c95a3b3e5fe001e88243e1983b6eb5837434b8e4a5f",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/9028a331491131e1b7528c95a3b3e5fe001e88243e1983b6eb5837434b8e4a5f.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_05e613c516e98406016af2bd4286e087d189e0ea38b5b9d31e",
+      "usage": {
+        "prompt_tokens": 12004,
+        "completion_tokens": 296,
+        "total_tokens": 12300,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 107
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "edb7ebe232a02f11ef7f14ce871c8fb97fea547d80cc91dcd69cac4a50c1a6d4",
+      "input_hash": "f73a74711aa1d37e206af374df4fc57c41a38539d551d8dfe17fab5f1f0ea40f",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/f73a74711aa1d37e206af374df4fc57c41a38539d551d8dfe17fab5f1f0ea40f.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0b0a66df8264a32e016af2bd51636887d19116e8bd5d0305c9",
+      "usage": {
+        "prompt_tokens": 11462,
+        "completion_tokens": 189,
+        "total_tokens": 11651,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 41
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "group_id": "pinpoint_group_1723814aafa7e4da",
+  "model": "claude-sonnet-5-5",
+  "signature": "aff20e5a5733d87f80fd7515c25d92c77cff20d4f50c9f8dbf4123bfdabed97b",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_1723814aafa7e4da_query_05655_attribute_add",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "The added attribute 'small' is compatible with the positive images. Image 4 shows an outdoor garden chapel which could reasonably be described as small, and image 5 shows an outdoor woodland ceremony setup that could also be characterized as small. The edit does not create a fact clearly false for all supplied positives."
+    },
+    {
+      "negative_id": "pinpoint_group_1723814aafa7e4da_query_05655_predicate_substitute",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "The predicate substitution from 'in' to 'outside' is compatible with supplied positive images. Image 4 shows an outdoor garden chapel (lavender outside chapel), and image 5 shows an outdoor woodland ceremony. These positives support the 'outside' spatial relationship, making the negative text not clearly false for all supplied positives."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-sonnet-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "69ca62b6476576740df574eab91f67d5fc85367b5d884a7151adff776eaa3372",
+      "input_hash": "c7e9003312e60b46dc5395ab3b0eb9bf831c1eb552eee70774500e9088adc4e1",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/claude-sonnet-5-5/cache/validate_group/c7e9003312e60b46dc5395ab3b0eb9bf831c1eb552eee70774500e9088adc4e1.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01Nc3nOhIuQt66GKK0L3IwSUEA",
+      "usage": {
+        "prompt_tokens": 9283,
+        "completion_tokens": 318,
+        "total_tokens": 9601,
+        "prompt_tokens_details": {
+          "cached_tokens": 7237,
+          "cache_creation_tokens": 2042
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_1723814aafa7e4da_query_05655_attribute_add",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 322,
+      "action": "full reason retained; decision and failure_code unchanged"
+    },
+    {
+      "negative_id": "pinpoint_group_1723814aafa7e4da_query_05655_predicate_substitute",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 339,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

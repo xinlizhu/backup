@@ -1,0 +1,49 @@
+{
+  "group_id": "pinpoint_group_5bc9d74f13307bce",
+  "model": "claude-haiku-5-5",
+  "signature": "44bb4aae802e19564501a676b733c7e19828d9ced260b7da0428f08b1a359df2",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_5bc9d74f13307bce_query_06357_attribute_delete",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "The deletion of 'dark indigo' removes exactly one semantic attribute constraint while preserving all other meaning. The negative text 'find similar jeans with the same vibe but cut in a straight leg silhouette' is fluent and meaningful. All supplied positive images (2, 3, 4) show jeans in various blue shades that remain compatible with a weaker query that does not specify dark indigo coloring. This is a valid single-edit attribute deletion."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-haiku-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "707809e89d737b0926861f19f413531ecc5f9233380c7a003046f4d74c81298a",
+      "input_hash": "bb16e2a736455dad01e253f8dacf10a21d55d0df857efaaae1f14ed01f86664a",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/claude-haiku-5-5/cache/validate_group/bb16e2a736455dad01e253f8dacf10a21d55d0df857efaaae1f14ed01f86664a.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01i3AMCnPVSxyirGExNr38Jd2u",
+      "usage": {
+        "prompt_tokens": 8350,
+        "completion_tokens": 208,
+        "total_tokens": 8558,
+        "prompt_tokens_details": {
+          "cached_tokens": 6509,
+          "cache_creation_tokens": 1837
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_5bc9d74f13307bce_query_06357_attribute_delete",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 444,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

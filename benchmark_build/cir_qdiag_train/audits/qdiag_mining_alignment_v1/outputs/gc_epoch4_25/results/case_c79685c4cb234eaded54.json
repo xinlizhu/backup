@@ -1,0 +1,166 @@
+{
+  "case_id": "case_c79685c4cb234eaded54",
+  "audit_query_id": "audit_query_076",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_c79685c4cb234eaded54",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Relative to the group of dogs in R, T shows one dog on red carpet with a large bone held at its mouth and front paws."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows one dog standing on red carpet, satisfying the number and setting constraints, but it has no bone at its mouth, paws, or on the visible carpet."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "Give the remaining dog a bone."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "delete",
+        "semantic_target": "object",
+        "before_span": ", and give a bone",
+        "after_span": null,
+        "edited_instruction": "Remove all but one dog, set up on red carpet.",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "Remove the requirement that the remaining dog have a bone.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "T shows one dog on red carpet; its bone is permitted but no longer required."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C shows one dog standing on red carpet, satisfying both surviving constraints relative to R."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_c79685c4cb234eaded54",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows one dog on red carpet with a large bone held at its mouth, satisfying all three constraints relative to the group of dogs in Image 1."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows one dog standing on red carpet, but no bone is present at its mouth or on the visible carpet."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting the specified span exactly reconstructs the edited instruction and removes the single bone requirement with its grammatical glue. The one-dog and red-carpet constraints remain supported in both images; the candidate violates only the removed requirement.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 contains a single dog positioned on red carpet."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 contains a single dog standing on red carpet."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "delete",
+      "semantic_target": "object",
+      "before_span": ", and give a bone",
+      "after_span": null,
+      "edited_instruction": "Remove all but one dog, set up on red carpet.",
+      "witness_type": "deletion_relaxation",
+      "changed_constraint": "Remove the requirement that the remaining dog have a bone.",
+      "edited_on_positive": {
+        "status": "supported",
+        "evidence": "T shows one dog on red carpet; its bone is permitted but no longer required."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C shows one dog standing on red carpet, satisfying both surviving constraints relative to R."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting the specified span exactly reconstructs the edited instruction and removes the single bone requirement with its grammatical glue. The one-dog and red-carpet constraints remain supported in both images; the candidate violates only the removed requirement.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 contains a single dog positioned on red carpet."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 contains a single dog standing on red carpet."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "3e86ae6aaa718228f02313982b72b3d54d40adeebca86f19941d58b11f563cdb",
+      "input_hash": "d9b98aa7f1e136869e4e7d2cb52b4a9b0c82a61507543fe5307560ea49fdbbfc",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/d9b98aa7f1e136869e4e7d2cb52b4a9b0c82a61507543fe5307560ea49fdbbfc.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_03d0f89133bf837a016af2be04b83c87d19ad7fa76778ed882",
+      "usage": {
+        "prompt_tokens": 28292,
+        "completion_tokens": 469,
+        "total_tokens": 28761,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 115
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "b2c583116874da3b9c27908a8a8c0bb174ec9fa95bcee842d6755a012a2293ae",
+      "input_hash": "0ebb76f180f24c338d4e106e21e140f3fe507a9c98827e87c4ce198f41e47de4",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/0ebb76f180f24c338d4e106e21e140f3fe507a9c98827e87c4ce198f41e47de4.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_07892a2aceddea81016af2be313de487d1a3417607cae4745b",
+      "usage": {
+        "prompt_tokens": 27816,
+        "completion_tokens": 254,
+        "total_tokens": 28070,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 22
+        }
+      }
+    }
+  ]
+}

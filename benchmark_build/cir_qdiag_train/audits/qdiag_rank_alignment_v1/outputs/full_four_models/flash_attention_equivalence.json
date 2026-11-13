@@ -1,0 +1,38 @@
+{
+  "qwen3_vl_2b": {
+    "maximum_absolute_difference": 0.00384521484375,
+    "cosine_similarity": 0.9990947246551514,
+    "before_attention": {
+      "model": "sdpa",
+      "model.visual": "sdpa",
+      "model.language_model": "sdpa"
+    },
+    "after_attention": {
+      "model": "flash_attention_2",
+      "model.visual": "flash_attention_2",
+      "model.language_model": "flash_attention_2"
+    },
+    "input_shape": [
+      1,
+      256
+    ],
+    "flash_seconds_for_four_images": 1.2514848709106445
+  },
+  "bge_s2": {
+    "maximum_absolute_difference": 0.000225067138671875,
+    "cosine_similarity": 0.9999966621398926,
+    "before_attention": {
+      "model": "sdpa",
+      "model.language_model": "sdpa"
+    },
+    "after_attention": {
+      "model": "flash_attention_2",
+      "model.language_model": "flash_attention_2"
+    },
+    "input_shape": [
+      1,
+      2939
+    ],
+    "flash_seconds_for_four_images": 4.199712753295898
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "group_id": "pinpoint_group_7034bf8cba9a2515",
+  "model": "grok-4.6",
+  "signature": "cb958fa178e5ebcdd33f446ebd46fe25a7c20417ca5539cc74de61fb4df99804",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_7034bf8cba9a2515_query_03359_object_delete",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Deleting only “chicken” yields fluent, strictly weaker “smoked breasts,” preserving smoking, the cut, and image style as one object edit."
+    },
+    {
+      "negative_id": "pinpoint_group_7034bf8cba9a2515_query_03363_predicate_add",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "The added serving predicate is not clearly false for every positive: images 2 and 5 show the chicken plated as a finished dish, so they remain compatible."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.6",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "c1c60001fa9449de540991bcc16b39eb95d785a235c1c395f66b37c191945942",
+      "input_hash": "9785895fa8176b29f897397aaaa0c44eb29bac0cc2b69c631cf8ae2361e64123",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/grok-4.6/cache/validate_group/9785895fa8176b29f897397aaaa0c44eb29bac0cc2b69c631cf8ae2361e64123.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "cd94b91e-d8e9-9f0a-b72b-32038997df49",
+      "usage": {
+        "prompt_tokens": 6418,
+        "completion_tokens": 160,
+        "total_tokens": 9346,
+        "prompt_tokens_details": {
+          "text_tokens": 2673,
+          "audio_tokens": 0,
+          "image_tokens": 3745,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2768,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 273320000
+      }
+    }
+  ],
+  "format_warnings": []
+}

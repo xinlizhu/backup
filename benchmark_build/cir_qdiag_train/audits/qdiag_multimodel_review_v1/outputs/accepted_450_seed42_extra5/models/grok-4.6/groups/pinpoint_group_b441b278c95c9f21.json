@@ -1,0 +1,57 @@
+{
+  "group_id": "pinpoint_group_b441b278c95c9f21",
+  "model": "grok-4.6",
+  "signature": "cb958fa178e5ebcdd33f446ebd46fe25a7c20417ca5539cc74de61fb4df99804",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_b441b278c95c9f21_query_06941_predicate_substitute",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Replacing “down instead of half-up” with “half-up instead of down” is one fluent predicate reversal and reconstructs the text. Every supplied positive wears the braids fully down, so half-up styling is clearly false."
+    },
+    {
+      "negative_id": "pinpoint_group_b441b278c95c9f21_query_06942_predicate_substitute",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Changing “down” to “up” is one fluent predicate edit and reconstructs the text. All supplied positives show the braids hanging down, making “worn up” clearly false."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.6",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "6fabd547aee4f7138cf45128857b3275e4b66136ad6fef5bbdc348a76f7c2efc",
+      "input_hash": "4cf6640cceb787084759be987f9752467c2a207a5675f33d9fb53be0f12e5428",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/grok-4.6/cache/validate_group/4cf6640cceb787084759be987f9752467c2a207a5675f33d9fb53be0f12e5428.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "c7bf0765-4f15-9fb6-a9e4-c94b193f4225",
+      "usage": {
+        "prompt_tokens": 6175,
+        "completion_tokens": 182,
+        "total_tokens": 9955,
+        "prompt_tokens_details": {
+          "text_tokens": 2692,
+          "audio_tokens": 0,
+          "image_tokens": 3483,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 3598,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 319580000
+      }
+    }
+  ],
+  "format_warnings": []
+}

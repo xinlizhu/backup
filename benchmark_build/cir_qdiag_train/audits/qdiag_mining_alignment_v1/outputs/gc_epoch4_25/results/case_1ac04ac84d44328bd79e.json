@@ -1,0 +1,127 @@
+{
+  "case_id": "case_1ac04ac84d44328bd79e",
+  "audit_query_id": "audit_query_083",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_1ac04ac84d44328bd79e",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows one body-cream tube beside its pink box."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "Image 3 shows one perfume bottle beside its box."
+    },
+    "candidate_relation": "compatible",
+    "violated_source_constraints": [],
+    "witnesses": [
+      {
+        "witness_id": "add_object_perfume",
+        "operation": "add",
+        "semantic_target": "object",
+        "before_span": null,
+        "after_span": "perfume",
+        "edited_instruction": "Leave a single perfume product with its box",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "The added product-category constraint distinguishes perfume from the body cream shown in the positive.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 shows a body-cream tube, not a perfume product."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows a perfume bottle with its box."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_1ac04ac84d44328bd79e",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows one body-cream tube alongside its matching box; it is a single packaged product."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows one perfume bottle and one box, but they are separate product components, not a single product with its box as requested."
+    },
+    "verdicts": [
+      {
+        "witness_id": "add_object_perfume",
+        "decision": "reject",
+        "failure_code": "support_pattern_mismatch",
+        "witness_type": null,
+        "reason": "The insertion of “perfume” is a single object-identity constraint, but the edited instruction is not supported on the positive: Image 2 visibly shows body cream, not perfume. The source is also contradicted on the candidate because the candidate shows perfume rather than the source’s packaged single product.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 labels the item as body cream and skin care, not perfume."
+        },
+        "edited_on_candidate": {
+          "status": "uncertain",
+          "evidence": "Image 3 visibly contains a perfume bottle and its box, but the added wording “single perfume product with its box” is ambiguous about whether the bottle and box count as one packaged product."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [],
+  "local_checks": [
+    {
+      "witness_id": "add_object_perfume",
+      "accepted": false,
+      "local_failures": [
+        "wrong_witness_type",
+        "wrong_support_pattern"
+      ],
+      "review_decision": "reject"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "cbe7e0173c54439676cca8fff3162836d749cdc512f7a9e737613ef2e92f8edb",
+      "input_hash": "330c8a9a7e505dc3d281f262c2536bb26b9d97ee6c31d8bf50638002910cf8ab",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/330c8a9a7e505dc3d281f262c2536bb26b9d97ee6c31d8bf50638002910cf8ab.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0f9a96241234a83b016af2bf123ac887d1b35a391fc9ad6e85",
+      "usage": {
+        "prompt_tokens": 8322,
+        "completion_tokens": 487,
+        "total_tokens": 8809,
+        "prompt_tokens_details": {
+          "cached_tokens": 5888
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 259
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "7473a3624cb293393948049c2ab3927bafe67960c86e7dec4bd598862f59f2b9",
+      "input_hash": "804b1382ea6519afd1f6e444a36cfef9b14abfc4ea0d2573246c865b64ebb19c",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/804b1382ea6519afd1f6e444a36cfef9b14abfc4ea0d2573246c865b64ebb19c.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0b975872d9251cab016af2bf21dfe887d09ef3d13076e58fed",
+      "usage": {
+        "prompt_tokens": 7842,
+        "completion_tokens": 273,
+        "total_tokens": 8115
+      }
+    }
+  ]
+}

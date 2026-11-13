@@ -1,0 +1,85 @@
+{
+  "case_id": "case_7c2dbd173b54520f3f38",
+  "audit_query_id": "audit_query_088",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_7c2dbd173b54520f3f38",
+    "case_status": "source_invalid_or_uncertain",
+    "source_on_positive": {
+      "status": "contradicted",
+      "evidence": "The large bird has a long dark neck and is on rocky ground, but it is standing upright rather than sitting."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Several large dark birds are on rough ground, but their necks are short and they are standing."
+    },
+    "candidate_relation": "multiple_constraint_conflict",
+    "violated_source_constraints": [
+      "sitting",
+      "longer black neck"
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_7c2dbd173b54520f3f38",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a large vulture with a conspicuously long, dark neck standing on rocky dirt; relative to the bird in Image 1, its neck appears longer."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows several large dark vultures on dirt, but their visible necks are short and do not match the notably longer black neck in Image 2."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "9c10bd6261707df7e57983d3283685d747e8a08058c92268080703de36895bdb",
+      "input_hash": "e9b1649ac63246103384a96ab5be4cb9db6c8f86a919efdd701d846d24e3e763",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/e9b1649ac63246103384a96ab5be4cb9db6c8f86a919efdd701d846d24e3e763.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0f93670bbd1ffdb7016af2bf4ee7a087d2920727ea5bc69754",
+      "usage": {
+        "prompt_tokens": 7237,
+        "completion_tokens": 431,
+        "total_tokens": 7668,
+        "completion_tokens_details": {
+          "reasoning_tokens": 298
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "cdbb77f5c1a5437503edc1118b6db21f547487d47a9f2016cb053824d4df6c17",
+      "input_hash": "f7d200d4511e388999a20de1b8e878653089e1f873c702ad37284748b9ea56d2",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/f7d200d4511e388999a20de1b8e878653089e1f873c702ad37284748b9ea56d2.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0a23d695f04830eb016af2bf5db24c87d1ac2eba8fc5fbf518",
+      "usage": {
+        "prompt_tokens": 3306,
+        "completion_tokens": 545,
+        "total_tokens": 3851,
+        "completion_tokens_details": {
+          "reasoning_tokens": 419
+        }
+      }
+    }
+  ]
+}

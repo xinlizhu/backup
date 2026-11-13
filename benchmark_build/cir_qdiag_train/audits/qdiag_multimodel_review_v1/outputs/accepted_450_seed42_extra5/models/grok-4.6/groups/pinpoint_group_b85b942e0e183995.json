@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_b85b942e0e183995",
+  "model": "grok-4.6",
+  "signature": "cb958fa178e5ebcdd33f446ebd46fe25a7c20417ca5539cc74de61fb4df99804",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_b85b942e0e183995_query_07431_predicate_add",
+      "decision": "reject",
+      "failure_code": "wrong_semantic_target",
+      "reason": "The added clause states where the already mentioned sleeves end, i.e. a length property of an existing entity. That is an attribute edit, not a predicate (action or relation)."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.6",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "b22fe74601031113c204aed567a0a5cffbd8a31df2c03f15d9760c3f6dba6ead",
+      "input_hash": "9beb6526c0d1910c9b3bd7f3acc9905f70fcbb31351da61b07c60f4ae170448f",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/grok-4.6/cache/validate_group/9beb6526c0d1910c9b3bd7f3acc9905f70fcbb31351da61b07c60f4ae170448f.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "1e86919e-8aff-9166-b1c8-b6a61747e499",
+      "usage": {
+        "prompt_tokens": 2998,
+        "completion_tokens": 91,
+        "total_tokens": 8100,
+        "prompt_tokens_details": {
+          "text_tokens": 2394,
+          "audio_tokens": 0,
+          "image_tokens": 604,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 5011,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 335360000
+      }
+    }
+  ],
+  "format_warnings": []
+}

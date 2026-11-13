@@ -1,0 +1,164 @@
+{
+  "case_id": "case_dccec8f4380818ee5198",
+  "audit_query_id": "audit_query_083",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_dccec8f4380818ee5198",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Compared with the multiple boxes in R, T shows one cream tube with one matching box."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "C shows one sunscreen tube with one matching box, satisfying the requested single product with its box."
+    },
+    "candidate_relation": "compatible",
+    "violated_source_constraints": [],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "add",
+        "semantic_target": "attribute",
+        "before_span": null,
+        "after_span": "blue-capped",
+        "edited_instruction": "Leave a single blue-capped product with its box",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "The product has a blue cap; the original instruction does not specify cap color.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "T shows one tube with its matching box, but the tube's cap is silver rather than blue."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C shows one sunscreen tube with a blue cap beside its matching box."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_dccec8f4380818ee5198",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows one body-cream tube together with its pink box."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "Image 3 shows one sunscreen tube together with its matching box."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "A single attribute is inserted before “product.” The positive tube has a white/silver cap, while the candidate tube has a visibly blue cap; both images retain one product with its box.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The product in Image 2 has a white/silver cap, not a blue one."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The product in Image 3 has a blue cap and is shown with its box."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "add",
+      "semantic_target": "attribute",
+      "before_span": null,
+      "after_span": "blue-capped",
+      "edited_instruction": "Leave a single blue-capped product with its box",
+      "witness_type": "addition_disambiguation",
+      "changed_constraint": "The product has a blue cap; the original instruction does not specify cap color.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "T shows one tube with its matching box, but the tube's cap is silver rather than blue."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C shows one sunscreen tube with a blue cap beside its matching box."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "A single attribute is inserted before “product.” The positive tube has a white/silver cap, while the candidate tube has a visibly blue cap; both images retain one product with its box.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The product in Image 2 has a white/silver cap, not a blue one."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The product in Image 3 has a blue cap and is shown with its box."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "c4d0c242fc8eb4fef1a7089d38d43603171476bf16aff2d37883a5b2b5c3632d",
+      "input_hash": "82b38af1f263b75c7674dacfc94890b7c9962b23e7efc96ca896976f85814f1c",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/82b38af1f263b75c7674dacfc94890b7c9962b23e7efc96ca896976f85814f1c.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0f1298236dea4442016af2bf5d8ce087d28458f43b498a6fa0",
+      "usage": {
+        "prompt_tokens": 8246,
+        "completion_tokens": 509,
+        "total_tokens": 8755,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 191
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "7919a66ceeb7ec3e23b44df4369054998623ca73e4ff67db130f4007d8e67baf",
+      "input_hash": "bc9a7fe4604012ce30b683118176ff0c4d87fb3d7de746ad606ea87c2c90a27d",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/bc9a7fe4604012ce30b683118176ff0c4d87fb3d7de746ad606ea87c2c90a27d.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0406b4d7b0042a77016af2bf748fc087d18a0e1dc55a23eb1e",
+      "usage": {
+        "prompt_tokens": 7931,
+        "completion_tokens": 375,
+        "total_tokens": 8306,
+        "prompt_tokens_details": {
+          "cached_tokens": 5248
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 169
+        }
+      }
+    }
+  ]
+}

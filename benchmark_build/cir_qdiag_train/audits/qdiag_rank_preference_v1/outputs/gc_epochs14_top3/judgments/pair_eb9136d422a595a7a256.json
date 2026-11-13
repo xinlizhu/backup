@@ -1,0 +1,65 @@
+{
+  "case_id": "pair_eb9136d422a595a7a256",
+  "signature": "f91b95909684e2ecf5207ab608279749c891c56633f2fa7c877aa09c2d59f3d4",
+  "simulated": false,
+  "status": "complete",
+  "judgment": {
+    "case_id": "pair_eb9136d422a595a7a256",
+    "constraints": [
+      {
+        "constraint": "There is a single panda.",
+        "A_status": "supported",
+        "B_status": "supported",
+        "A_evidence": "One giant panda is visible.",
+        "B_evidence": "One giant panda is visible."
+      },
+      {
+        "constraint": "The panda is lying down and resting instead of eating.",
+        "A_status": "contradicted",
+        "B_status": "supported",
+        "A_evidence": "The panda sits upright, holding food against its mouth.",
+        "B_evidence": "The panda reclines with its body stretched out and no food held to its mouth."
+      },
+      {
+        "constraint": "The panda rests its head on its paw.",
+        "A_status": "contradicted",
+        "B_status": "contradicted",
+        "A_evidence": "Its head is upright, with a paw holding food near its mouth rather than supporting its head.",
+        "B_evidence": "Its head is raised above its torso; neither paw supports its head."
+      },
+      {
+        "constraint": "The panda rests on a branch.",
+        "A_status": "contradicted",
+        "B_status": "contradicted",
+        "A_evidence": "The panda sits on a broad cut tree stump rather than lying on a branch.",
+        "B_evidence": "The panda reclines on the ground beside a tree trunk, with vegetation beneath its body."
+      }
+    ],
+    "A_status": "contradicted",
+    "B_status": "contradicted",
+    "decision": "neither",
+    "reason": "Neither panda rests its head on a paw while lying on a branch: A sits upright eating on a stump, and B reclines on the ground with its head raised."
+  },
+  "trace": {
+    "stage": "rank_pair_judgment",
+    "model_name": "gpt-5.6-terra",
+    "model_revision": null,
+    "provider": "openai-compatible-chat",
+    "reasoning_effort": null,
+    "prompt_version": "rank_preference_v1",
+    "prompt_hash": "9e4525a335332dfeb7afd2f1c33e5e240b88b1b243b6c1d197d4d531bcdecb96",
+    "input_hash": "5a61c2d632d02a49404f4895f40697b5890ad853adc8b2f00ec12dd59bde2620",
+    "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_rank_preference_v1/outputs/gc_epochs14_top3/api_cache/rank_pair_judgment/5a61c2d632d02a49404f4895f40697b5890ad853adc8b2f00ec12dd59bde2620.json",
+    "cached": false,
+    "attempts": 1,
+    "request_id": "resp_003c848ecad6b6f5016af2ccf1fc1887d1ac5be21303321acf",
+    "usage": {
+      "prompt_tokens": 31009,
+      "completion_tokens": 491,
+      "total_tokens": 31500,
+      "completion_tokens_details": {
+        "reasoning_tokens": 83
+      }
+    }
+  }
+}

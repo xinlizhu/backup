@@ -1,0 +1,233 @@
+{
+  "case_id": "case_89b345186fa8783f3541",
+  "audit_query_id": "audit_query_083",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_89b345186fa8783f3541",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "T shows one body-cream container with one matching box, satisfying the requested single product and its box."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "C shows one fragrance bottle with its matching box. The instruction does not require retaining the reference's sunscreen category."
+    },
+    "candidate_relation": "compatible",
+    "violated_source_constraints": [],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "add",
+        "semantic_target": "object",
+        "before_span": null,
+        "after_span": "perfume",
+        "edited_instruction": "Leave a single perfume product with its box",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "The single product must be perfume.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "T's container and box are labeled Body Cream & Skin Care, rather than perfume."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C shows a single fragrance spray bottle with its matching box, labeled eau de toilette."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "operation": "add",
+        "semantic_target": "attribute",
+        "before_span": null,
+        "after_span": "in a transparent container",
+        "edited_instruction": "Leave a single product in a transparent container with its box",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "The product's container must be transparent.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "T shows a single product with its box, but the product container is opaque white."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C shows a single product in a transparent bottle through which the pink liquid and internal tube are visible, alongside its matching box."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_89b345186fa8783f3541",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows one body cream container beside its matching pink box, satisfying the single-product-with-box requirement."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "Image 3 shows one fragrance bottle beside its matching Essence Uptown Girl box, satisfying the single-product-with-box requirement."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "Inserting 'perfume' adds one product-category constraint and preserves the original quantity and box requirements. The candidate is visibly a fragrance, while the positive is body cream. Both support the original query.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The container and box are labeled 'Body Cream & Skin Care'; the product is body cream rather than perfume."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "One spray fragrance bottle appears with its matching box, which is labeled 'eau de toilette'."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "The insertion adds one container-transparency constraint while preserving the product, quantity, and matching-box requirements. The candidate's container is transparent, whereas the positive's container is opaque.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The single body cream product has an opaque white container with a silver-colored base; its contents are not visible through the container."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The single fragrance product is in a transparent bottle with pink liquid visibly inside, beside its matching box."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "add",
+      "semantic_target": "object",
+      "before_span": null,
+      "after_span": "perfume",
+      "edited_instruction": "Leave a single perfume product with its box",
+      "witness_type": "addition_disambiguation",
+      "changed_constraint": "The single product must be perfume.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "T's container and box are labeled Body Cream & Skin Care, rather than perfume."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C shows a single fragrance spray bottle with its matching box, labeled eau de toilette."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "Inserting 'perfume' adds one product-category constraint and preserves the original quantity and box requirements. The candidate is visibly a fragrance, while the positive is body cream. Both support the original query.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The container and box are labeled 'Body Cream & Skin Care'; the product is body cream rather than perfume."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "One spray fragrance bottle appears with its matching box, which is labeled 'eau de toilette'."
+        }
+      }
+    },
+    {
+      "witness_id": "w2",
+      "operation": "add",
+      "semantic_target": "attribute",
+      "before_span": null,
+      "after_span": "in a transparent container",
+      "edited_instruction": "Leave a single product in a transparent container with its box",
+      "witness_type": "addition_disambiguation",
+      "changed_constraint": "The product's container must be transparent.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "T shows a single product with its box, but the product container is opaque white."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C shows a single product in a transparent bottle through which the pink liquid and internal tube are visible, alongside its matching box."
+      },
+      "independent_review": {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "The insertion adds one container-transparency constraint while preserving the product, quantity, and matching-box requirements. The candidate's container is transparent, whereas the positive's container is opaque.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The single body cream product has an opaque white container with a silver-colored base; its contents are not visible through the container."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The single fragrance product is in a transparent bottle with pink liquid visibly inside, beside its matching box."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    },
+    {
+      "witness_id": "w2",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "c13ecb7ca9d187d0c488ed22af7227fa9d57e0b682ee52054382174db06f11a5",
+      "input_hash": "eff21b6ea2e74506918fac1ef900ae0a935b547800f78557463d03f209350894",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/eff21b6ea2e74506918fac1ef900ae0a935b547800f78557463d03f209350894.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_079a352eaec966b6016af2bd63bcd487d1842325909d95de3f",
+      "usage": {
+        "prompt_tokens": 7839,
+        "completion_tokens": 746,
+        "total_tokens": 8585,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 254
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "8a83276c73126325cbe10209b6d34fd34a1047319decef3c6ca3c6cd7eef6ad2",
+      "input_hash": "09493a02b411fa41d5cd894888ce3d08e18675e9f0acba47d3a6120a9d20b3d6",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/09493a02b411fa41d5cd894888ce3d08e18675e9f0acba47d3a6120a9d20b3d6.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_01db8131ad2ee2eb016af2bd852d6c87d1b1daac49c30f0d02",
+      "usage": {
+        "prompt_tokens": 7423,
+        "completion_tokens": 468,
+        "total_tokens": 7891,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+You construct text-only hard negatives for a CIRR modification instruction. You receive exactly one
+source_instruction and no images. For the fixed DELETE operation, independently propose at most one
+object edit, one attribute edit, and one predicate edit. Return null for any unsafe or inapplicable
+axis; do not force all three slots.
+
+Each non-null proposal must:
+- delete exactly one contiguous before_span from source_instruction and change nothing else;
+- set after_span=null;
+- recover negative_text by deleting that exact span, allowing only whitespace and
+  terminal-punctuation normalization;
+- remove exactly one meaningful semantic constraint while preserving every surviving constraint;
+- remain fluent, meaningful, natural, and strictly weaker than source_instruction.
+
+A before_span may include grammatical glue belonging only to the deleted constraint. For example,
+"brown and white animals" may become "white animals" by deleting "brown and".
+
+Axis definitions:
+- object: remove one entity identity/presence constraint while leaving a meaningful instruction.
+- attribute: remove one property while retaining its entity.
+- predicate: remove one action/relation while retaining the remaining instruction and arguments.
+
+Judge only the supplied text. Do not assume or mention images. Do not repair, paraphrase, or rewrite
+the remainder, and do not delete bundled independent constraints. Return only the structured
+response.

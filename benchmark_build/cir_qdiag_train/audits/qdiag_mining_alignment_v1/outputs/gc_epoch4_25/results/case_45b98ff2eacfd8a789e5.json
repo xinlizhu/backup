@@ -1,0 +1,238 @@
+{
+  "case_id": "case_45b98ff2eacfd8a789e5",
+  "audit_query_id": "audit_query_084",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_45b98ff2eacfd8a789e5",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Like R, T shows food from an elevated oblique angle. A wooden rolling pin is clearly visible on the right."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C also uses an elevated oblique view, but shows a layered dessert with no rolling pin visible on the right."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "Must include a rolling pin on the right-hand side."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "object",
+        "before_span": "rolling pin",
+        "after_span": "whipped cream",
+        "edited_instruction": "Similar angled photograph, must include whipped cream on the right hand side",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "The required item on the right changes from a rolling pin to whipped cream.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "T has a similar elevated oblique viewpoint, but its right side contains a wooden rolling pin, with no whipped cream visible."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C has a similar elevated oblique viewpoint, and piped whipped cream is clearly visible on the right side of the dessert."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "operation": "delete",
+        "semantic_target": "object",
+        "before_span": ", must include rolling pin on the right hand side",
+        "after_span": null,
+        "edited_instruction": "Similar angled photograph",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "Removes the requirement for a rolling pin on the right-hand side.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "T presents the food from an elevated oblique viewpoint similar to R."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C presents the dessert from an elevated oblique viewpoint, showing both its top and front, similar to R's viewing angle."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_45b98ff2eacfd8a789e5",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The dough is photographed from an elevated oblique angle, similar to R, and a wooden rolling pin is clearly visible on the right."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The dessert is photographed from an elevated oblique angle, but no rolling pin appears on the right or elsewhere in the visible image."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing 'rolling pin' with 'whipped cream' is one object substitution that preserves the right-side requirement and photographic angle. T has the right-side rolling pin and no whipped cream; C has visible piped whipped cream on the right and no rolling pin.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "T retains the similar oblique viewpoint, but its right side contains a wooden rolling pin, with no whipped cream visible."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C uses an elevated oblique viewpoint similar to R and clearly shows white piped whipped cream along the right side of the dessert."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "The specified deletion removes one requirement: the presence of a rolling pin on the right. Both images satisfy the remaining similar-angle instruction. C violates only the removed requirement; the different food subject is unspecified by q.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "T shows the food and work surface from an elevated oblique viewpoint comparable to R."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C shows the dessert from an elevated oblique viewpoint, with both its top and front visible, comparable to R's angled view."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "substitute",
+      "semantic_target": "object",
+      "before_span": "rolling pin",
+      "after_span": "whipped cream",
+      "edited_instruction": "Similar angled photograph, must include whipped cream on the right hand side",
+      "witness_type": "substitution_contrast",
+      "changed_constraint": "The required item on the right changes from a rolling pin to whipped cream.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "T has a similar elevated oblique viewpoint, but its right side contains a wooden rolling pin, with no whipped cream visible."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C has a similar elevated oblique viewpoint, and piped whipped cream is clearly visible on the right side of the dessert."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing 'rolling pin' with 'whipped cream' is one object substitution that preserves the right-side requirement and photographic angle. T has the right-side rolling pin and no whipped cream; C has visible piped whipped cream on the right and no rolling pin.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "T retains the similar oblique viewpoint, but its right side contains a wooden rolling pin, with no whipped cream visible."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C uses an elevated oblique viewpoint similar to R and clearly shows white piped whipped cream along the right side of the dessert."
+        }
+      }
+    },
+    {
+      "witness_id": "w2",
+      "operation": "delete",
+      "semantic_target": "object",
+      "before_span": ", must include rolling pin on the right hand side",
+      "after_span": null,
+      "edited_instruction": "Similar angled photograph",
+      "witness_type": "deletion_relaxation",
+      "changed_constraint": "Removes the requirement for a rolling pin on the right-hand side.",
+      "edited_on_positive": {
+        "status": "supported",
+        "evidence": "T presents the food from an elevated oblique viewpoint similar to R."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C presents the dessert from an elevated oblique viewpoint, showing both its top and front, similar to R's viewing angle."
+      },
+      "independent_review": {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "The specified deletion removes one requirement: the presence of a rolling pin on the right. Both images satisfy the remaining similar-angle instruction. C violates only the removed requirement; the different food subject is unspecified by q.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "T shows the food and work surface from an elevated oblique viewpoint comparable to R."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C shows the dessert from an elevated oblique viewpoint, with both its top and front visible, comparable to R's angled view."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    },
+    {
+      "witness_id": "w2",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "8708ff33d2a7b0dfda60ec15448d776872391ad4d4edcd935fc1764ef2ed87df",
+      "input_hash": "57f51f989b0c3a0b0b6d8ad30b64b399a9f4df0f877b70c17f659001348a7f7b",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/57f51f989b0c3a0b0b6d8ad30b64b399a9f4df0f877b70c17f659001348a7f7b.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0470b59dc8d46625016af2be8ffe3487d1a56fa7c1fcb543cc",
+      "usage": {
+        "prompt_tokens": 8778,
+        "completion_tokens": 728,
+        "total_tokens": 9506,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 177
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "534b39f8c42044d15de438552f241d9dd4a819365d751f7270783b0345b5dc92",
+      "input_hash": "22874e4d9ad670b7fce93614f831867c7a63d71c0d95e41b869e8e01ff7ae39c",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/22874e4d9ad670b7fce93614f831867c7a63d71c0d95e41b869e8e01ff7ae39c.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0f82e824a61dc15e016af2bea83acc87d2931c3a5abfba52b7",
+      "usage": {
+        "prompt_tokens": 8369,
+        "completion_tokens": 549,
+        "total_tokens": 8918,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 43
+        }
+      }
+    }
+  ]
+}

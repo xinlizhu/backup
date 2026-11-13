@@ -1,0 +1,54 @@
+experiment:
+  name: cirr_clip_l_full_typed_candidate_w0_1
+  seed: 42
+  negative_mode: add_substitute
+  output_dir: outputs/clip_l/full/typed_candidate_w0_1
+
+data:
+  train_manifest: data/cirr_train_all_v5_no_va.jsonl
+  train_image_split_path: /mnt/data/datasets/search_dataset/zxl/CIR_new/datasets/CIRR/cirr/image_splits/split.rc2.train.json
+  val_annotation_path: /mnt/data/datasets/search_dataset/zxl/CIR_new/datasets/CIRR/cirr/captions/cap.rc2.val.json
+  val_image_split_path: /mnt/data/datasets/search_dataset/zxl/CIR_new/datasets/CIRR/cirr/image_splits/split.rc2.val.json
+  image_root: /mnt/data/datasets/search_dataset/zxl/CIR_new/datasets/CIRR
+  max_non_delete_negatives_per_sample: 6
+  max_delete_negatives_per_sample: 3
+  candidate_image_mode: image_set
+  max_candidate_images_per_sample: 4
+  num_workers: 8
+
+model:
+  variant: clip_vit_l14
+  pretrained_model_name_or_path: models/clip-vit-large-patch14
+  local_files_only: true
+  hidden_dim: 1024
+  dropout: 0.1
+  freeze_backbone: false
+  unfreeze_last_n_layers: null
+  lora_rank: null
+  gradient_checkpointing: true
+
+optimizer:
+  epochs: 3
+  batch_size_per_gpu: 16
+  gradient_accumulation_steps: 4
+  learning_rate: 0.00001
+  backbone_learning_rate: 0.0000005
+  weight_decay: 0.01
+  warmup_ratio: 0.05
+  max_grad_norm: 1.0
+  temperature: 0.07
+  learnable_temperature: true
+  hard_negative_weight: 0.1
+  candidate_negative_weight: 0.1
+  counterfactual_square_weight: 0.1
+  candidate_margin: 0.0
+  counterfactual_margin: 0.0
+  counterfactual_mining_min_advantage: 0.0
+  mixed_precision: bf16
+  log_every_steps: 20
+  save_every_epochs: 2
+
+evaluation:
+  batch_size: 128
+  recall_k: [1, 5, 10, 50]
+  group_recall_k: [1, 2, 3]

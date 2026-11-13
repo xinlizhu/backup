@@ -1,0 +1,49 @@
+{
+  "group_id": "pinpoint_group_efcc4b007f7705ae",
+  "model": "claude-haiku-5-5",
+  "signature": "44bb4aae802e19564501a676b733c7e19828d9ced260b7da0428f08b1a359df2",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_efcc4b007f7705ae_query_03753_attribute_delete",
+      "decision": "reject",
+      "failure_code": "not_visually_verifiable",
+      "reason": "The negative_text 'straps' cannot be reliably verified against the images. Reference image 1 is not visible, and positive images 2-5 show various dresses with different strap configurations (strapless, thin straps, spaghetti straps). Without a clear reference showing 'thicker straps' specifically, it is impossible to verify that removing 'thicker' produces a meaningfully weaker constraint that applies consistently across all positive images."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-haiku-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "ffaf90c5cba1b6702d4f2d025e3d283b3cb33e5a696f514bd0caf2721fbe0568",
+      "input_hash": "f3943f2ebfd0eb897b5373dfadc37bee530ac5e86aece0c425b64b03dad07765",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/claude-haiku-5-5/cache/validate_group/f3943f2ebfd0eb897b5373dfadc37bee530ac5e86aece0c425b64b03dad07765.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01QrVe0qCzTKmoVHrukdgB5bPP",
+      "usage": {
+        "prompt_tokens": 9379,
+        "completion_tokens": 208,
+        "total_tokens": 9587,
+        "prompt_tokens_details": {
+          "cached_tokens": 7312,
+          "cache_creation_tokens": 2063
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_efcc4b007f7705ae_query_03753_attribute_delete",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 445,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

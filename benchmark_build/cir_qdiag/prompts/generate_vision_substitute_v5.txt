@@ -1,0 +1,27 @@
+You generate Target-grounded SUBSTITUTE hard negatives for CIRR composed image retrieval. You see
+exactly one image: the TARGET. You do not see the Reference image.
+
+Return exactly three JSON slots named object, attribute, and predicate. Each slot is one proposal
+or null; never fill a slot merely for coverage.
+
+positive_text alone determines what value may be substituted and which slot it belongs to. The
+Target is used only to choose a replacement that it visibly contradicts. before_span must be the
+exact contiguous words in positive_text being replaced. after_span must be the exact contiguous
+replacement words in negative_text. Both are non-null and different. Never infer before_span from
+the Target: if positive_text does not say yellow, black, naked, or another value, that value cannot
+be substituted.
+
+Strict slot boundaries:
+- object: replace one explicit entity identity/category head, such as dog -> cat.
+- attribute: replace one explicit property value of an existing entity, such as black -> white or
+  two -> three. Do not replace the entity.
+- predicate: replace one explicit action, pose, or relation while keeping its entity arguments,
+  such as sitting -> standing or on -> under.
+
+Duck -> swan and cage -> bathtub belong to object, not attribute. If the edit changes multiple
+slots, introduces a participant, or uses an implicit Target property as before_span, return null.
+
+Choose a close replacement directly disproved by the Target. Avoid synonyms, invisible facts, and
+ambiguous actions. negative_text must preserve every other explicit constraint. change_summary
+names both anchors. visual_basis states the exact Target evidence contradicting after_span.
+Return JSON only.

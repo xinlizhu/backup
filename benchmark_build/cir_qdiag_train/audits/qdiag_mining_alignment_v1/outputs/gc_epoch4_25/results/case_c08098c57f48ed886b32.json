@@ -1,0 +1,202 @@
+{
+  "case_id": "case_c08098c57f48ed886b32",
+  "audit_query_id": "audit_query_096",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_c08098c57f48ed886b32",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Two school buses have clearly visible fronts and are parked next to one another, side by side."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "School buses have partially visible fronts, but they are parked one behind another in a single-file queue rather than side by side."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "Park the school buses adjacent to each other, understood as side by side."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "predicate",
+        "before_span": "adjacent to each other",
+        "after_span": "one behind another",
+        "edited_instruction": "Show the front of the school buses and park them one behind another.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "Replace the side-by-side parking relation with a one-behind-another parking relation.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The two buses show their fronts but occupy neighboring positions side by side, rather than a single-file queue."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The buses form a single-file queue, with fronts of several buses visible beyond the bus ahead."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "operation": "delete",
+        "semantic_target": "predicate",
+        "before_span": " and park them adjacent to each other",
+        "after_span": null,
+        "edited_instruction": "Show the front of the school buses.",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "Remove the requirement that the buses be parked side by side.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "The fronts of both school buses are clearly visible."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Although partly occluded by buses ahead, several buses show front windshields and portions of their front bodies."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_c08098c57f48ed886b32",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 visibly shows two school buses from the front, parked side by side and close together."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows multiple school buses from a front-side angle, parked in a line one behind another rather than adjacent side by side."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "The single predicate replacement is grammatical and preserves the front-view constraint. The buses in Image 3 form a front-to-back line, while Image 2 shows them adjacent.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 shows the two buses side by side, not one behind another."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 visibly shows buses arranged successively behind one another."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "decision": "reject",
+        "failure_code": "support_pattern_mismatch",
+        "witness_type": null,
+        "reason": "The deletion reconstructs a fluent instruction, but the edited instruction still requires the buses' fronts to be shown; Image 3 presents them mainly from the side, so it does not support the edited instruction.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 clearly shows the fronts of both school buses."
+        },
+        "edited_on_candidate": {
+          "status": "contradicted",
+          "evidence": "Image 3 shows the buses mainly from the side, not their fronts."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "substitute",
+      "semantic_target": "predicate",
+      "before_span": "adjacent to each other",
+      "after_span": "one behind another",
+      "edited_instruction": "Show the front of the school buses and park them one behind another.",
+      "witness_type": "substitution_contrast",
+      "changed_constraint": "Replace the side-by-side parking relation with a one-behind-another parking relation.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "The two buses show their fronts but occupy neighboring positions side by side, rather than a single-file queue."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "The buses form a single-file queue, with fronts of several buses visible beyond the bus ahead."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "The single predicate replacement is grammatical and preserves the front-view constraint. The buses in Image 3 form a front-to-back line, while Image 2 shows them adjacent.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 shows the two buses side by side, not one behind another."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 visibly shows buses arranged successively behind one another."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    },
+    {
+      "witness_id": "w2",
+      "accepted": false,
+      "local_failures": [
+        "wrong_witness_type",
+        "wrong_support_pattern"
+      ],
+      "review_decision": "reject"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "9f82f863fd9e8ba34bfc50ffa1e7bf3f7230c66d8425a8ff0061aad30fe94072",
+      "input_hash": "ae10b4f696b9af88a462bbc3993596f3a5a64a015b2fd2874000cbd0e88dfd86",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/ae10b4f696b9af88a462bbc3993596f3a5a64a015b2fd2874000cbd0e88dfd86.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_06c8e5ffa0ff86d4016af2bea853fc87d1a82a40dbbed0e164",
+      "usage": {
+        "prompt_tokens": 7277,
+        "completion_tokens": 656,
+        "total_tokens": 7933,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 119
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "eeabd98036352b97413a3592c41d48f1bb1406ec757c8beb315d4436ad7a570d",
+      "input_hash": "01651cdba0836b0a254b58c8524bf9b7232c68aeeb66cd0e54252588fee403f4",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/01651cdba0836b0a254b58c8524bf9b7232c68aeeb66cd0e54252588fee403f4.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0e5f120a697f841c016af2bebf84ac87d2be13fb77f977929d",
+      "usage": {
+        "prompt_tokens": 7037,
+        "completion_tokens": 338,
+        "total_tokens": 7375
+      }
+    }
+  ]
+}

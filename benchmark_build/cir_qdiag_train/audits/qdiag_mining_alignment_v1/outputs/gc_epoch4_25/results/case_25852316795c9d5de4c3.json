@@ -1,0 +1,233 @@
+{
+  "case_id": "case_25852316795c9d5de4c3",
+  "audit_query_id": "audit_query_080",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_25852316795c9d5de4c3",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "A vivid yellow daffodil stands in a white vase, providing the requested colorful floral accent relative to the reference's small whitish blossoms."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "The vase contains pale yellow flowers among white blossoms and greenery. The instruction does not require a solitary flower or a saturated yellow."
+    },
+    "candidate_relation": "compatible",
+    "violated_source_constraints": [],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "add",
+        "semantic_target": "attribute",
+        "before_span": null,
+        "after_span": "pale",
+        "edited_instruction": "Bright up the room with a pale yellow flower in a vase.",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "The yellow flower must be pale yellow.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The daffodil is vivid, saturated yellow rather than pale yellow."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The rounded flowers near the vase opening have pale yellow petals."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "operation": "add",
+        "semantic_target": "object",
+        "before_span": null,
+        "after_span": "and white flowers",
+        "edited_instruction": "Bright up the room with a yellow flower and white flowers in a vase.",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "White flowers must also be present in the vase.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The vase holds one yellow daffodil and green leaves, with no white flowers."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "White flowers with dark centers accompany the pale yellow flowers in the same vase."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_25852316795c9d5de4c3",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a vivid yellow daffodil in a white vase, replacing the reference's sparse, neutral-colored stems with a bright yellow flower."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "Image 3 shows pale yellow flowers alongside white flowers in a vase. The instruction requires a yellow flower, without excluding additional flowers or specifying yellow saturation."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "Inserting 'pale' adds one visible color attribute while preserving the yellow flower and vase requirements. The candidate's yellow flowers are pale, whereas the positive's daffodil is vivid yellow.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The single daffodil has strong, saturated yellow petals rather than pale yellow petals."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The flowers at the front and left of the arrangement have pale, creamy yellow petals and are held in a vase."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "Inserting 'and white flowers' adds one object-presence constraint and preserves the original yellow flower requirement. Both images satisfy the source, but only the candidate includes white flowers in the vase.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 contains one yellow daffodil and green leaves; no white flowers are present. The white object is the vase."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 contains pale yellow flowers and multiple white flowers, including two prominent white blooms with dark centers, together in the vase."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "add",
+      "semantic_target": "attribute",
+      "before_span": null,
+      "after_span": "pale",
+      "edited_instruction": "Bright up the room with a pale yellow flower in a vase.",
+      "witness_type": "addition_disambiguation",
+      "changed_constraint": "The yellow flower must be pale yellow.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "The daffodil is vivid, saturated yellow rather than pale yellow."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "The rounded flowers near the vase opening have pale yellow petals."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "Inserting 'pale' adds one visible color attribute while preserving the yellow flower and vase requirements. The candidate's yellow flowers are pale, whereas the positive's daffodil is vivid yellow.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The single daffodil has strong, saturated yellow petals rather than pale yellow petals."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The flowers at the front and left of the arrangement have pale, creamy yellow petals and are held in a vase."
+        }
+      }
+    },
+    {
+      "witness_id": "w2",
+      "operation": "add",
+      "semantic_target": "object",
+      "before_span": null,
+      "after_span": "and white flowers",
+      "edited_instruction": "Bright up the room with a yellow flower and white flowers in a vase.",
+      "witness_type": "addition_disambiguation",
+      "changed_constraint": "White flowers must also be present in the vase.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "The vase holds one yellow daffodil and green leaves, with no white flowers."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "White flowers with dark centers accompany the pale yellow flowers in the same vase."
+      },
+      "independent_review": {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "Inserting 'and white flowers' adds one object-presence constraint and preserves the original yellow flower requirement. Both images satisfy the source, but only the candidate includes white flowers in the vase.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 contains one yellow daffodil and green leaves; no white flowers are present. The white object is the vase."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 contains pale yellow flowers and multiple white flowers, including two prominent white blooms with dark centers, together in the vase."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    },
+    {
+      "witness_id": "w2",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "109617c4e53482dd45db41b8059b00e21f4d545c5eef56f837ca2eea85aa9aed",
+      "input_hash": "cbefc1aef26e06b6b9988a6e87031136af98832f49d8f7c4df4d2e409812e1f0",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/cbefc1aef26e06b6b9988a6e87031136af98832f49d8f7c4df4d2e409812e1f0.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0f713b680573ab14016af2be8fd8b487d18593a629b29da0dc",
+      "usage": {
+        "prompt_tokens": 7828,
+        "completion_tokens": 727,
+        "total_tokens": 8555,
+        "completion_tokens_details": {
+          "reasoning_tokens": 232
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "0614be48e7f02646779ef16d532bf5b3d987b84c8b10a4acf0765f71c89cec8f",
+      "input_hash": "e9c398fd91479d5fa778b3d241b7fed4a0a5fc18498e790807422227a550c438",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/e9c398fd91479d5fa778b3d241b7fed4a0a5fc18498e790807422227a550c438.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_014f80673d847aee016af2bea80e9c87d2ac2aa61404259d19",
+      "usage": {
+        "prompt_tokens": 7418,
+        "completion_tokens": 535,
+        "total_tokens": 7953,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 42
+        }
+      }
+    }
+  ]
+}

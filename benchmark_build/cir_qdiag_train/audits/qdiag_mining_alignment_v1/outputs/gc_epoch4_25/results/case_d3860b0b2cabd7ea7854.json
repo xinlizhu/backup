@@ -1,0 +1,128 @@
+{
+  "case_id": "case_d3860b0b2cabd7ea7854",
+  "audit_query_id": "audit_query_080",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_d3860b0b2cabd7ea7854",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a yellow flower in a vase; the bright, light setting is consistent with brightening the room."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows flowers in a vase, but the visible central flower is orange rather than clearly yellow."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The flower should be yellow; the visible central flower in Image 3 is orange."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "substitute-attribute-color",
+        "operation": "substitute",
+        "semantic_target": "attribute",
+        "before_span": "yellow",
+        "after_span": "orange",
+        "edited_instruction": "Bright up the room with an orange flower in a vase.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "Flower color changes from yellow to orange.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 visibly shows a yellow flower, not an orange one."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows an orange flower in a vase, with yellow highlights."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_d3860b0b2cabd7ea7854",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a clearly yellow flower in a vase."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows an orange-dominant flower cluster in a vase, not a clearly yellow flower."
+    },
+    "verdicts": [
+      {
+        "witness_id": "substitute-attribute-color",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "The single replacement changes the flower color from yellow to orange; the positive shows yellow, while the candidate shows orange-dominant blossoms. The remaining flower-in-vase constraint is preserved.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The flower in Image 2 is yellow, not orange."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 has orange-dominant blossoms arranged in a vase."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [],
+  "local_checks": [
+    {
+      "witness_id": "substitute-attribute-color",
+      "accepted": false,
+      "local_failures": [
+        "span_reconstruction_failed"
+      ],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "aceac06021d1435ae84708b08b32509a126208c864b95180ea7fe304be15de99",
+      "input_hash": "6fd8f02d61cbc6f580bb74dc15d5224cad1995d09d103f01d6611a054342ace8",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/6fd8f02d61cbc6f580bb74dc15d5224cad1995d09d103f01d6611a054342ace8.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_025e149927f3eb85016af2bef92a8887d1a9287e88900ab23d",
+      "usage": {
+        "prompt_tokens": 7746,
+        "completion_tokens": 523,
+        "total_tokens": 8269,
+        "completion_tokens_details": {
+          "reasoning_tokens": 264
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "0e28b40aeecf57e9d7a6c06314183ba238e7e4332191445a1a737e0675a00347",
+      "input_hash": "04655f7a49c2d60615a3419f2e95cd9272f4d5c5b395cfb317859a71f43ffcb2",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/04655f7a49c2d60615a3419f2e95cd9272f4d5c5b395cfb317859a71f43ffcb2.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_ft_88358afb0c5cc5f441daedcc96a508ac",
+      "usage": {
+        "prompt_tokens": 2895,
+        "completion_tokens": 896,
+        "total_tokens": 3791,
+        "completion_tokens_details": {
+          "reasoning_tokens": 687
+        }
+      }
+    }
+  ]
+}

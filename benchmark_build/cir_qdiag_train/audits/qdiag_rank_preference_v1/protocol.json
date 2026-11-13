@@ -1,0 +1,43 @@
+{
+  "source_run": "GC head ablation, not original RIM training history",
+  "epochs": [
+    1,
+    4
+  ],
+  "queries_per_epoch": 25,
+  "query_selection": "Reuse the previously frozen seed42 query subsets without resampling",
+  "student_snapshot": {
+    "epoch1": "initial.pt, global_step 0",
+    "epoch4": "checkpoint_epoch_003.pt, global_step 2649"
+  },
+  "rank_scope": "Each model ranks the same recorded 32 candidates: forced target plus 31 mined non-targets; candidate index zero is not rank one",
+  "ranks_compared": [
+    1,
+    2,
+    3
+  ],
+  "teacher_scores": "Recorded teacher_scores.npy for the corresponding training epoch",
+  "student_scores": "Mining-snapshot query inference replay with the corresponding saved gallery embeddings",
+  "score_ties": "Descending score; deterministic hash(seed, query_id, image_id) tie-break, independent of target role; tie sizes recorded",
+  "blinding": "GPT sees only reference, instruction, anonymous A/B images and opaque case ID; no scores, rank, epoch, model identity, or target label",
+  "random_order": "One fixed random A/B assignment per distinct unordered pair",
+  "order_swap_repeat": false,
+  "same_image": "Skip identical image ID or identical RGB pixels/dimensions; do not assume either satisfies instruction",
+  "repeated_unordered_pairs": "Reuse one GPT judgment and map the image-side labels to each model at each rank",
+  "decisions": [
+    "A_only",
+    "B_only",
+    "both",
+    "neither",
+    "uncertain"
+  ],
+  "raw_response_saved": true,
+  "resume": true,
+  "prepared_counts": {
+    "query_count": 50,
+    "planned_comparisons": 150,
+    "same_image_skipped": 29,
+    "gpt_case_count": 119,
+    "duplicate_unordered_pairs_reused": 2
+  }
+}

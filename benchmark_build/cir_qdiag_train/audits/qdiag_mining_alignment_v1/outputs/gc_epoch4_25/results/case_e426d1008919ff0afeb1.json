@@ -1,0 +1,90 @@
+{
+  "case_id": "case_e426d1008919ff0afeb1",
+  "audit_query_id": "audit_query_096",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_e426d1008919ff0afeb1",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows the fronts of two school buses parked close together, side by side."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows one school bus at an angle, with its front partly visible; it does not show buses parked adjacent to each other."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "Park the school buses adjacent to each other."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_e426d1008919ff0afeb1",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Two yellow school buses are parked beside each other, with both fronts clearly visible, including their windshields, headlights, and front bumpers."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "Two yellow school buses are parked adjacent to each other. Both fronts are visible at oblique angles on the left, although the nearer bus is shown predominantly from its side. The instruction does not require a straight-on view."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "bd92cd9f68095fa867cfe5a3486237483dd380170e245699af9e79fc0bbf8666",
+      "input_hash": "310d4fbce1b76e60754fee9ee9d44adbeab34c5bce144801ca1413b4fa0c70cd",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/310d4fbce1b76e60754fee9ee9d44adbeab34c5bce144801ca1413b4fa0c70cd.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0f40d89b34d93d7b016af2befe287487d19253b17eb805f85b",
+      "usage": {
+        "prompt_tokens": 7133,
+        "completion_tokens": 458,
+        "total_tokens": 7591,
+        "prompt_tokens_details": {
+          "cached_tokens": 5888
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 329
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "84e912ab674f48ea7d28a6d11ad08cd39863e3b506d01e7077a4d7279537fb85",
+      "input_hash": "d01235680c4b28a564de35163de08adfd496569a5f7d8b24a4b144e5c3b2ad3d",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/d01235680c4b28a564de35163de08adfd496569a5f7d8b24a4b144e5c3b2ad3d.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_03e4669e7b72584b016af2bf0b570487d1b68efdce4e073d53",
+      "usage": {
+        "prompt_tokens": 6427,
+        "completion_tokens": 209,
+        "total_tokens": 6636,
+        "prompt_tokens_details": {
+          "cached_tokens": 3482
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 58
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "case_id": "pair_81c4d78f404513314a08",
+  "signature": "f3a97f608e6addbd5531ad7795f5e06873610abdb12f716de8375d49eda4c022",
+  "simulated": false,
+  "status": "complete",
+  "judgment": {
+    "case_id": "pair_81c4d78f404513314a08",
+    "constraints": [
+      {
+        "constraint": "Show a chocolate-brown dog.",
+        "A_status": "supported",
+        "B_status": "supported",
+        "A_evidence": "Both puppies are visibly chocolate brown.",
+        "B_evidence": "A chocolate-brown dog is clearly visible on the right."
+      },
+      {
+        "constraint": "Place the chocolate dog against a black background.",
+        "A_status": "contradicted",
+        "B_status": "contradicted",
+        "A_evidence": "The puppies are against a very light blue-white background.",
+        "B_evidence": "The dogs are against a bright teal-blue background, not black."
+      }
+    ],
+    "decision": "B",
+    "confidence": "low",
+    "reason": "Neither candidate supplies the requested black background. B is a weak forced preference because its darker teal backdrop is relatively closer to black than A’s very light background, while still clearly failing the requested color."
+  },
+  "trace": {
+    "stage": "rank_pair_relative_preference",
+    "model_name": "gpt-5.6-terra",
+    "model_revision": null,
+    "provider": "openai-compatible-chat",
+    "reasoning_effort": null,
+    "prompt_version": "rank_preference_relative_v2",
+    "prompt_hash": "c352d84774b55007ef4a3279b93996a7b06366488399ad2912ad72fffad87b38",
+    "input_hash": "6dd42481ad6199a16f4bb77a1f56cbfdc2d6e13cf5bcae5910fb941aca092dc9",
+    "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_rank_preference_v1/outputs/gc_epochs14_top3_relative/api_cache/rank_pair_relative_preference/6dd42481ad6199a16f4bb77a1f56cbfdc2d6e13cf5bcae5910fb941aca092dc9.json",
+    "cached": false,
+    "attempts": 1,
+    "request_id": "resp_0697be16621e3291016af2dc4839f887d2a05e6118b36d860c",
+    "usage": {
+      "prompt_tokens": 5062,
+      "completion_tokens": 951,
+      "total_tokens": 6013,
+      "completion_tokens_details": {
+        "reasoning_tokens": 500
+      }
+    }
+  }
+}

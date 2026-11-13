@@ -1,0 +1,162 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "case_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_on_positive": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "enum": [
+            "supported",
+            "contradicted",
+            "uncertain"
+          ]
+        },
+        "evidence": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500
+        }
+      },
+      "required": [
+        "status",
+        "evidence"
+      ]
+    },
+    "source_on_candidate": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "enum": [
+            "supported",
+            "contradicted",
+            "uncertain"
+          ]
+        },
+        "evidence": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500
+        }
+      },
+      "required": [
+        "status",
+        "evidence"
+      ]
+    },
+    "verdicts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "witness_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "decision": {
+            "enum": [
+              "accept",
+              "reject",
+              "uncertain"
+            ]
+          },
+          "failure_code": {
+            "enum": [
+              null,
+              "source_invalid_or_uncertain",
+              "not_single_edit",
+              "wrong_semantic_target",
+              "not_fluent",
+              "not_close",
+              "not_visually_verifiable",
+              "support_pattern_mismatch",
+              "remaining_constraints_violated",
+              "wrong_witness_type",
+              "other"
+            ]
+          },
+          "witness_type": {
+            "enum": [
+              null,
+              "substitution_contrast",
+              "deletion_relaxation",
+              "addition_disambiguation"
+            ]
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 500
+          },
+          "edited_on_positive": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "status": {
+                "enum": [
+                  "supported",
+                  "contradicted",
+                  "uncertain"
+                ]
+              },
+              "evidence": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 500
+              }
+            },
+            "required": [
+              "status",
+              "evidence"
+            ]
+          },
+          "edited_on_candidate": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "status": {
+                "enum": [
+                  "supported",
+                  "contradicted",
+                  "uncertain"
+                ]
+              },
+              "evidence": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 500
+              }
+            },
+            "required": [
+              "status",
+              "evidence"
+            ]
+          }
+        },
+        "required": [
+          "witness_id",
+          "decision",
+          "failure_code",
+          "witness_type",
+          "reason",
+          "edited_on_positive",
+          "edited_on_candidate"
+        ]
+      }
+    }
+  },
+  "required": [
+    "case_id",
+    "source_on_positive",
+    "source_on_candidate",
+    "verdicts"
+  ]
+}

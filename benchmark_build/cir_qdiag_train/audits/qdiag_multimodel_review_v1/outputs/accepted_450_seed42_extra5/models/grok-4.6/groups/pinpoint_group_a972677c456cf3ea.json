@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_a972677c456cf3ea",
+  "model": "grok-4.6",
+  "signature": "cb958fa178e5ebcdd33f446ebd46fe25a7c20417ca5539cc74de61fb4df99804",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_a972677c456cf3ea_query_04120_predicate_add",
+      "decision": "reject",
+      "failure_code": "not_single_edit",
+      "reason": "Claimed add span \"that are positioned symmetrically and\" includes source word \"that\"; inserting it duplicates \"that\" and cannot reconstruct the negative. The actual insertion is \"are positioned symmetrically and \"."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.6",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "2b2de280feeaee1f15d87830a89cfff54a4c643ef7e0d0d873595ef5769e171f",
+      "input_hash": "39a3f36892ab53bc88377d9dd3b7f58fc39cd5a1b93727269e9b75630100098b",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/grok-4.6/cache/validate_group/39a3f36892ab53bc88377d9dd3b7f58fc39cd5a1b93727269e9b75630100098b.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "3d3b2d5d-57c0-9f6a-8c05-c5f7e4e3a9c8",
+      "usage": {
+        "prompt_tokens": 4399,
+        "completion_tokens": 94,
+        "total_tokens": 8627,
+        "prompt_tokens_details": {
+          "text_tokens": 2584,
+          "audio_tokens": 0,
+          "image_tokens": 1815,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 4134,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 310940000
+      }
+    }
+  ],
+  "format_warnings": []
+}

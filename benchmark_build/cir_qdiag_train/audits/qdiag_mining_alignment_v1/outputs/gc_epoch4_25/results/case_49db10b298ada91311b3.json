@@ -1,0 +1,158 @@
+{
+  "case_id": "case_49db10b298ada91311b3",
+  "audit_query_id": "audit_query_090",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_49db10b298ada91311b3",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The orange car is shown from the rear beside a body of water."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "The silver car is shown from the rear beside the sea."
+    },
+    "candidate_relation": "compatible",
+    "violated_source_constraints": [],
+    "witnesses": [
+      {
+        "witness_id": "add_attribute_silver_body",
+        "operation": "add",
+        "semantic_target": "attribute",
+        "before_span": null,
+        "after_span": " with a silver body",
+        "edited_instruction": "Show car from back by water with a silver body.",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "The added silver-body detail distinguishes the candidate from the positive; it does not violate an original constraint.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The car in the positive is orange, not silver."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The car in the candidate has a silver-gray body."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_49db10b298ada91311b3",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a car from the rear beside a body of water."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "Image 3 shows a car from the rear beside the water."
+    },
+    "verdicts": [
+      {
+        "witness_id": "add_attribute_silver_body",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "The single insertion adds the visible body-color constraint; Image 2's car is orange, while Image 3's car is silver. The original instruction remains supported in both.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The car in Image 2 has an orange body, not a silver one."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The car in Image 3 has a silver body and is shown from the rear by water."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "add_attribute_silver_body",
+      "operation": "add",
+      "semantic_target": "attribute",
+      "before_span": null,
+      "after_span": " with a silver body",
+      "edited_instruction": "Show car from back by water with a silver body.",
+      "witness_type": "addition_disambiguation",
+      "changed_constraint": "The added silver-body detail distinguishes the candidate from the positive; it does not violate an original constraint.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "The car in the positive is orange, not silver."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "The car in the candidate has a silver-gray body."
+      },
+      "independent_review": {
+        "witness_id": "add_attribute_silver_body",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "The single insertion adds the visible body-color constraint; Image 2's car is orange, while Image 3's car is silver. The original instruction remains supported in both.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The car in Image 2 has an orange body, not a silver one."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The car in Image 3 has a silver body and is shown from the rear by water."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "add_attribute_silver_body",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "b4010f31c8403eb281cebf5181a8048be2d0662bf637d2336c2d1f1e76de8e37",
+      "input_hash": "51134f022336b94ac06ecd862f1d59b9ae0d8fa3a5b713564e921610286fd726",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/51134f022336b94ac06ecd862f1d59b9ae0d8fa3a5b713564e921610286fd726.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_ft_1843071f5e4b1a9486a41204f4a11624",
+      "usage": {
+        "prompt_tokens": 6289,
+        "completion_tokens": 1154,
+        "total_tokens": 7443,
+        "completion_tokens_details": {
+          "reasoning_tokens": 850
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "5bf1a09cd508ba75d136f942c2a68fada7ac102834b44600753c9fab776ee33f",
+      "input_hash": "a4d9d5ebebe9a152ff071f865be24288b60404e64359a3e088c45e2603db8a54",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/a4d9d5ebebe9a152ff071f865be24288b60404e64359a3e088c45e2603db8a54.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0c673dd0b9848c5f016af2bf15b93887d1b4f9e85731586011",
+      "usage": {
+        "prompt_tokens": 6801,
+        "completion_tokens": 321,
+        "total_tokens": 7122,
+        "completion_tokens_details": {
+          "reasoning_tokens": 114
+        }
+      }
+    }
+  ]
+}

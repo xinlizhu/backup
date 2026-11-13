@@ -1,0 +1,161 @@
+{
+  "case_id": "case_9e77893c91afb274196e",
+  "audit_query_id": "audit_query_083",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_9e77893c91afb274196e",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "One cream container is shown with one matching box, reducing the multiple boxes visible in the reference to a single product-and-box pair."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "One perfume bottle stands beside its matching box, satisfying the requested single product with its box."
+    },
+    "candidate_relation": "compatible",
+    "violated_source_constraints": [],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "add",
+        "semantic_target": "attribute",
+        "before_span": null,
+        "after_span": "lip-printed",
+        "edited_instruction": "Leave a single product with its lip-printed box",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "The product's box must feature a printed image of lips.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The single cream container has a pink box illustrated with a woman and flowers, rather than a printed image of lips."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The single perfume bottle is accompanied by a matching box with a prominent printed image of red lips."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_9e77893c91afb274196e",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows one body cream container beside its matching pink box, satisfying the single-product-and-box constraint."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "Image 3 shows one perfume bottle beside its matching box. Both bear the same branding and lip imagery."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "Inserting 'lip-printed' adds one visible attribute to the existing box without changing other constraints. Both images satisfy the source instruction, but only the candidate has a box printed with prominent lips.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The pink box features text, flowers, and a line drawing of a woman, rather than a lip print."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The single perfume bottle stands beside its matching box, whose front prominently displays a large photographic print of red lips."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "add",
+      "semantic_target": "attribute",
+      "before_span": null,
+      "after_span": "lip-printed",
+      "edited_instruction": "Leave a single product with its lip-printed box",
+      "witness_type": "addition_disambiguation",
+      "changed_constraint": "The product's box must feature a printed image of lips.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "The single cream container has a pink box illustrated with a woman and flowers, rather than a printed image of lips."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "The single perfume bottle is accompanied by a matching box with a prominent printed image of red lips."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "Inserting 'lip-printed' adds one visible attribute to the existing box without changing other constraints. Both images satisfy the source instruction, but only the candidate has a box printed with prominent lips.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The pink box features text, flowers, and a line drawing of a woman, rather than a lip print."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The single perfume bottle stands beside its matching box, whose front prominently displays a large photographic print of red lips."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "6e75f1bad826a056d5e4882b20156de7ea50e747ce0313c86536eb03cc9ceeac",
+      "input_hash": "6cd29d35fb2d3fb9e05e42aac60662dec7ec229e40775dc46bbd21a1e130be21",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/6cd29d35fb2d3fb9e05e42aac60662dec7ec229e40775dc46bbd21a1e130be21.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0481ba5ab4a501e5016af2bfba9d4c87d2a74197f02f7b5d86",
+      "usage": {
+        "prompt_tokens": 7695,
+        "completion_tokens": 620,
+        "total_tokens": 8315,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 290
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "0564b1d4464c5e1c2b23bace1349103de47f775b6447509e2f17012dee03cde0",
+      "input_hash": "cd78b03b52a78df0970a73e59f1722947963068a366ec4d24443607fd3e99705",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/cd78b03b52a78df0970a73e59f1722947963068a366ec4d24443607fd3e99705.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0e7e1c46ea60a10b016af2bfd4f23c87d2908c69dd8689be47",
+      "usage": {
+        "prompt_tokens": 7216,
+        "completion_tokens": 295,
+        "total_tokens": 7511,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        }
+      }
+    }
+  ]
+}

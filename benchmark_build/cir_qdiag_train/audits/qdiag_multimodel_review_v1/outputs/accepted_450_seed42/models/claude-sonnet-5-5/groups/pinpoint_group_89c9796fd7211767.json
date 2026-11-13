@@ -1,0 +1,49 @@
+{
+  "group_id": "pinpoint_group_89c9796fd7211767",
+  "model": "claude-sonnet-5-5",
+  "signature": "aff20e5a5733d87f80fd7515c25d92c77cff20d4f50c9f8dbf4123bfdabed97b",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_89c9796fd7211767_query_07228_attribute_substitute",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "The substitute changes 'black halter' to 'white halter'. Reference image 1 shows a black sheer halter top. However, positive images 2, 3, and 4 all feature black halter/halter-style tops (image 2: black sheer halter, image 3: black striped halter, image 4: black halter). None of the supplied positive images contain white halters, making them compatible with a search for white halter options. The edit cannot be validated as clearly false against all supplied positives."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-sonnet-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "6e52a4c565888e33b6aa16ab2277292dcb700796cb959785d3ff7108202c0813",
+      "input_hash": "8dc174002a3bd2c06b9eb4f11e2f854d68c9d5e11c406479e3687e5bcb422be5",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/claude-sonnet-5-5/cache/validate_group/8dc174002a3bd2c06b9eb4f11e2f854d68c9d5e11c406479e3687e5bcb422be5.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01UJsQ5EqwQXyrAU9bWO6WaCZW",
+      "usage": {
+        "prompt_tokens": 7692,
+        "completion_tokens": 216,
+        "total_tokens": 7908,
+        "prompt_tokens_details": {
+          "cached_tokens": 5996,
+          "cache_creation_tokens": 1692
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_89c9796fd7211767_query_07228_attribute_substitute",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 472,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

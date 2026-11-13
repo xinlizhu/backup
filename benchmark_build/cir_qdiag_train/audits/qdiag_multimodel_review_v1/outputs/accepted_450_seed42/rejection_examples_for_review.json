@@ -1,0 +1,190 @@
+{
+  "grok-4.7": [
+    {
+      "id": "pinpoint_group_06fb17ff8c6d20cb_query_00631_object_add",
+      "operation": "add",
+      "axis": "object",
+      "original": "Please produce a cozy household decor piece that preserves the color palette, textile approach, and overall aesthetic of the image.",
+      "edited": "Please produce a cozy household decor piece featuring a ceramic vase that preserves the color palette, textile approach, and overall aesthetic of the image.",
+      "failure_code": "positive_compatible",
+      "reason": "The added ceramic-vase object is not clearly false for every positive: image 2 includes a tall white vase holding pampas grass, so the new fact remains compatible."
+    },
+    {
+      "id": "pinpoint_group_0796b98709a60cae_query_04802_attribute_substitute",
+      "operation": "substitute",
+      "axis": "attribute",
+      "original": "Find me a sweater with the textile approach, silhouette, and color palette of the image.",
+      "edited": "Find me a sweater with the textile approach, silhouette, and pattern of the image.",
+      "failure_code": "positive_compatible",
+      "reason": "Replacing color palette with pattern is one fluent attribute edit, but the new fact is not clearly false for every positive: the reference is a plain solid knit, and positives such as the grey and pink solid knits remain compatible with that pattern."
+    },
+    {
+      "id": "pinpoint_group_079788dad27585a1_query_03543_object_substitute",
+      "operation": "substitute",
+      "axis": "object",
+      "original": "Please present versions of this sweater in the same color palette featuring a simplified, consistent textile approach—avoid the distinctive patterning, just a plain knit",
+      "edited": "Please present versions of this cardigan in the same color palette featuring a simplified, consistent textile approach—avoid the distinctive patterning, just a plain knit",
+      "failure_code": "positive_compatible",
+      "reason": "Image 2 is only a close-up of a cream ribbed cuff and cable knit, with no opening or placket visible, so it remains compatible with a cardigan rather than clearly falsifying it."
+    },
+    {
+      "id": "pinpoint_group_07b12ba3b4902ea3_query_05686_attribute_substitute",
+      "operation": "substitute",
+      "axis": "attribute",
+      "original": "How to make <img1> style dried florals with icy <img2> blue accents?",
+      "edited": "How to make <img1> style dried florals with icy <img2> green accents?",
+      "failure_code": "positive_compatible",
+      "reason": "Blue→green is one fluent attribute edit, but green is not clearly false for every positive: image 3 has mint/sage lamps, image 4 a green cushion and plant, and image 5 dried florals with large green palm foliage."
+    },
+    {
+      "id": "pinpoint_group_12616e5ad92d1cef_query_05874_predicate_add",
+      "operation": "add",
+      "axis": "predicate",
+      "original": "I want a wallpaper with the motif of <img1> but in the color story of <img2>.",
+      "edited": "I want a wallpaper with the motif of <img1> but in the color story of <img2>, with the motif mirrored.",
+      "failure_code": "not_visually_verifiable",
+      "reason": "The added 'motif mirrored' fact cannot be judged: img1 is a gallery wall with no canonical repeatable motif orientation, and none of the four positives shows that motif in a mirrored versus unmirrored state, so it is not clearly false for every positive."
+    }
+  ],
+  "claude-sonnet-5-5": [
+    {
+      "id": "pinpoint_group_009fcdeae78b53fd_query_03174_object_add",
+      "operation": "add",
+      "axis": "object",
+      "original": "Strip back this invite to a clean look",
+      "edited": "Strip back this invite to a clean look with a small monogram.",
+      "failure_code": "positive_compatible",
+      "reason": "The positive image shows an invite with minimal ornamentation and corner flourishes only—a design consistent with 'a small monogram.' The added phrase does not create a false claim about this image."
+    },
+    {
+      "id": "pinpoint_group_04a5bcba3ed4da92_query_00712_predicate_substitute",
+      "operation": "substitute",
+      "axis": "predicate",
+      "original": "Show lights that look like this piece",
+      "edited": "Show lights that are next to this piece",
+      "failure_code": "positive_compatible",
+      "reason": "The substitution from 'look like' to 'are next to' changes the predicate from visual similarity to spatial adjacency. However, images 2-5 show lighting fixtures that could plausibly be positioned next to the reference earrings (image 1), making the negative text compatible with the positive results rather than clearly false."
+    },
+    {
+      "id": "pinpoint_group_04a5bcba3ed4da92_query_00714_object_substitute",
+      "operation": "substitute",
+      "axis": "object",
+      "original": "Lighting fixtures based on these earrings, keeping the colors and silhouette.",
+      "edited": "Lighting fixtures based on these necklaces, keeping the colors and silhouette.",
+      "failure_code": "positive_compatible",
+      "reason": "The substitution from 'earrings' to 'necklaces' changes the object reference. The copper/metallic cone-shaped earrings in image 1 share material aesthetic and silhouette properties that lighting designs in images 2-5 could reasonably reflect, whether inspired by earrings or necklaces. The positive images remain compatible with design inspiration derived from either object type."
+    },
+    {
+      "id": "pinpoint_group_067c1c9e0277e7b9_query_05552_object_add",
+      "operation": "add",
+      "axis": "object",
+      "original": "A home with the material aesthetic from <img1> but in a facade style like <img2>",
+      "edited": "A home with the material aesthetic from <img1> but in a facade style like <img2>, with a rooftop terrace",
+      "failure_code": "positive_compatible",
+      "reason": "Image 3 (positive) clearly shows a brick home with a rooftop terrace visible at the top of the structure. The added constraint ', with a rooftop terrace' is compatible with at least one supplied positive image, so it cannot be validated as clearly false for every positive."
+    },
+    {
+      "id": "pinpoint_group_06fa3a5be708d726_query_05836_predicate_substitute",
+      "operation": "substitute",
+      "axis": "predicate",
+      "original": "a white tiered cake keeping <img1> floral cascade yet recolored with <img2> inspired vibrant ombre shades",
+      "edited": "a white tiered cake featuring <img1> floral cascade yet recolored with <img2> inspired vibrant ombre shades",
+      "failure_code": "not_visually_verifiable",
+      "reason": "The substitute changes 'keeping' to 'featuring', altering the predicate from preservation/retention to presentation/display. However, Images 1 and 2 (references) are not visible, making it impossible to verify whether this semantic shift is clearly false for all supplied positive images. Without seeing the reference images that define <img1> and <img2>, the visual validity of the predicate change cannot be reliably assessed against the positive retrieval results."
+    }
+  ],
+  "gpt-6.1-sol": [
+    {
+      "id": "pinpoint_group_067c1c9e0277e7b9_query_05552_object_add",
+      "operation": "add",
+      "axis": "object",
+      "original": "A home with the material aesthetic from <img1> but in a facade style like <img2>",
+      "edited": "A home with the material aesthetic from <img1> but in a facade style like <img2>, with a rooftop terrace",
+      "failure_code": "positive_compatible",
+      "reason": "Image 3 shows a railed outdoor terrace atop the entrance portico, making it compatible with the added rooftop terrace."
+    },
+    {
+      "id": "pinpoint_group_06fa3a5be708d726_query_05836_predicate_substitute",
+      "operation": "substitute",
+      "axis": "predicate",
+      "original": "a white tiered cake keeping <img1> floral cascade yet recolored with <img2> inspired vibrant ombre shades",
+      "edited": "a white tiered cake featuring <img1> floral cascade yet recolored with <img2> inspired vibrant ombre shades",
+      "failure_code": "not_single_edit",
+      "reason": "Replacing “keeping” with “featuring” merely rephrases the cake’s possession of the same floral cascade; it does not establish a distinct, visually falsifiable predicate change."
+    },
+    {
+      "id": "pinpoint_group_06fb17ff8c6d20cb_query_00631_object_add",
+      "operation": "add",
+      "axis": "object",
+      "original": "Please produce a cozy household decor piece that preserves the color palette, textile approach, and overall aesthetic of the image.",
+      "edited": "Please produce a cozy household decor piece featuring a ceramic vase that preserves the color palette, textile approach, and overall aesthetic of the image.",
+      "failure_code": "positive_compatible",
+      "reason": "Positive image 2 includes a tall white floor vase compatible with being ceramic, so the added ceramic-vase requirement is not clearly false for every supplied positive."
+    },
+    {
+      "id": "pinpoint_group_0796b98709a60cae_query_04802_attribute_substitute",
+      "operation": "substitute",
+      "axis": "attribute",
+      "original": "Find me a sweater with the textile approach, silhouette, and color palette of the image.",
+      "edited": "Find me a sweater with the textile approach, silhouette, and pattern of the image.",
+      "failure_code": "positive_compatible",
+      "reason": "The reference sweater has a plain, unprinted appearance. Positive images 2 and 3 remain compatible with that pattern, so replacing color palette with pattern does not introduce a fact clearly false for every supplied positive."
+    },
+    {
+      "id": "pinpoint_group_079788dad27585a1_query_03543_object_substitute",
+      "operation": "substitute",
+      "axis": "object",
+      "original": "Please present versions of this sweater in the same color palette featuring a simplified, consistent textile approach—avoid the distinctive patterning, just a plain knit",
+      "edited": "Please present versions of this cardigan in the same color palette featuring a simplified, consistent textile approach—avoid the distinctive patterning, just a plain knit",
+      "failure_code": "positive_compatible",
+      "reason": "Positive image 2 shows only a knit close-up and sleeve, leaving the garment compatible with a cardigan. The substituted identity is therefore not clearly false for every supplied positive."
+    }
+  ],
+  "kimi-k3": [
+    {
+      "id": "pinpoint_group_06fa3a5be708d726_query_05836_predicate_substitute",
+      "operation": "substitute",
+      "axis": "predicate",
+      "original": "a white tiered cake keeping <img1> floral cascade yet recolored with <img2> inspired vibrant ombre shades",
+      "edited": "a white tiered cake featuring <img1> floral cascade yet recolored with <img2> inspired vibrant ombre shades",
+      "failure_code": "positive_compatible",
+      "reason": "Substituting 'keeping' with 'featuring' is a near-synonymous predicate swap; the cake still features the floral cascade, so the negative remains fully compatible with the reference/positive meaning and introduces no false fact."
+    },
+    {
+      "id": "pinpoint_group_06fb17ff8c6d20cb_query_00631_object_add",
+      "operation": "add",
+      "axis": "object",
+      "original": "Please produce a cozy household decor piece that preserves the color palette, textile approach, and overall aesthetic of the image.",
+      "edited": "Please produce a cozy household decor piece featuring a ceramic vase that preserves the color palette, textile approach, and overall aesthetic of the image.",
+      "failure_code": "positive_compatible",
+      "reason": "Reference Image 1 shows a white ceramic vase with greenery on the shelves, and Image 2 also includes a vase-like vessel with pampas; the added 'ceramic vase' constraint is compatible with supplied positive images."
+    },
+    {
+      "id": "pinpoint_group_0796b98709a60cae_query_04802_attribute_substitute",
+      "operation": "substitute",
+      "axis": "attribute",
+      "original": "Find me a sweater with the textile approach, silhouette, and color palette of the image.",
+      "edited": "Find me a sweater with the textile approach, silhouette, and pattern of the image.",
+      "failure_code": "positive_compatible",
+      "reason": "Substituting 'color palette' with 'pattern' yields a constraint compatible with the positives: the reference and several positives (e.g., the chunky knit in image 4, knit textures in images 2-3) share visible knit patterning, so the edited query could still match positive images."
+    },
+    {
+      "id": "pinpoint_group_07b12ba3b4902ea3_query_05686_attribute_substitute",
+      "operation": "substitute",
+      "axis": "attribute",
+      "original": "How to make <img1> style dried florals with icy <img2> blue accents?",
+      "edited": "How to make <img1> style dried florals with icy <img2> green accents?",
+      "failure_code": "positive_compatible",
+      "reason": "Changing blue to green is compatible with supplied positives: image 3 features prominent green pendant lamps and image 4 has green cushions/plant, so green accents are supported by positive images."
+    },
+    {
+      "id": "pinpoint_group_08dc13457be01e28_query_02662_attribute_substitute",
+      "operation": "substitute",
+      "axis": "attribute",
+      "original": "Make the color scheme pink.",
+      "edited": "Make the color scheme purple.",
+      "failure_code": "positive_compatible",
+      "reason": "Image 2's walls are a mauve/dusty purple-pink tone that is compatible with a purple color scheme, so the edit is not clearly false for every positive."
+    }
+  ]
+}

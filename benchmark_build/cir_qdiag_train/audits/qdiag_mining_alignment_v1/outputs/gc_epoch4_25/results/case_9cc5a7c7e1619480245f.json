@@ -1,0 +1,166 @@
+{
+  "case_id": "case_9cc5a7c7e1619480245f",
+  "audit_query_id": "audit_query_076",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_9cc5a7c7e1619480245f",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Unlike the group in R, T shows one dog, lying on red carpet with a large bone at its mouth."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows one dog holding a white bone-shaped chew, but it sits on pale wooden decking rather than red carpet."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "Set the dog on red carpet."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "delete",
+        "semantic_target": "predicate",
+        "before_span": "set up on red carpet, ",
+        "after_span": null,
+        "edited_instruction": "Remove all but one dog, and give a bone.",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "The requirement to place the dog on red carpet is removed.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "T shows a single dog with a large bone at its mouth."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C shows a single dog holding a white bone-shaped chew in its mouth."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_9cc5a7c7e1619480245f",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Relative to the group of dogs in R, T shows just one dog. It lies on a red/rust-colored carpet with a large bone held at its mouth and between its front paws."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows one dog holding a pale chew bone in its mouth, but it sits on gray paving rather than red carpet."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting the specified span exactly produces the edited instruction and removes only the red-carpet placement predicate. Both images satisfy the retained one-dog and bone constraints; C violates only the removed carpet constraint.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "T contains one dog with a large bone at its mouth and front paws."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C contains one dog holding a pale chew bone in its mouth."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "delete",
+      "semantic_target": "predicate",
+      "before_span": "set up on red carpet, ",
+      "after_span": null,
+      "edited_instruction": "Remove all but one dog, and give a bone.",
+      "witness_type": "deletion_relaxation",
+      "changed_constraint": "The requirement to place the dog on red carpet is removed.",
+      "edited_on_positive": {
+        "status": "supported",
+        "evidence": "T shows a single dog with a large bone at its mouth."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C shows a single dog holding a white bone-shaped chew in its mouth."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting the specified span exactly produces the edited instruction and removes only the red-carpet placement predicate. Both images satisfy the retained one-dog and bone constraints; C violates only the removed carpet constraint.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "T contains one dog with a large bone at its mouth and front paws."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C contains one dog holding a pale chew bone in its mouth."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "c479df853c05cd9f07c385e0176b05d473ea166fa96adc2dcadca46d94c67b5f",
+      "input_hash": "acc2bd02dfade70ce1a01aedf40ff03b70e3afd390f37cd7b64c692c0e2a9f6b",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/acc2bd02dfade70ce1a01aedf40ff03b70e3afd390f37cd7b64c692c0e2a9f6b.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_060012218dc9fa68016af2be45206c87d1b788a33245b0042a",
+      "usage": {
+        "prompt_tokens": 27252,
+        "completion_tokens": 573,
+        "total_tokens": 27825,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 234
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "a701fcf3bb0ac27e3e2cb055cb4d4a9d44e38af5fffa1b7d9e39f61d409a890f",
+      "input_hash": "5c3204567a75732f22326751402304ed421ccdaf1812a060056bc1ffd8123fd9",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/5c3204567a75732f22326751402304ed421ccdaf1812a060056bc1ffd8123fd9.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0b3d9d3bc81fe5fa016af2be6df12487d2a0412e5f128d5704",
+      "usage": {
+        "prompt_tokens": 26777,
+        "completion_tokens": 331,
+        "total_tokens": 27108,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 27
+        }
+      }
+    }
+  ]
+}

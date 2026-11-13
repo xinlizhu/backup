@@ -1,0 +1,57 @@
+{
+  "group_id": "pinpoint_group_3891ef4149fa1258",
+  "model": "grok-4.6",
+  "signature": "cb958fa178e5ebcdd33f446ebd46fe25a7c20417ca5539cc74de61fb4df99804",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_3891ef4149fa1258_query_01745_predicate_add",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Inserts one placement relation after “hoodie,” and the span reconstructs the text exactly. Neither positive shows a hoodie beside the reference, so the added fact is clearly false."
+    },
+    {
+      "negative_id": "pinpoint_group_3891ef4149fa1258_query_01746_predicate_delete",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Removes only the matching-aesthetic relation and its linking glue, leaving a fluent, strictly weaker request that still preserves the hoodie’s colors and motif."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.6",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "fd33762b12c5327d5a3d7276390ef57bd723530e0aded565afda0755f60d295d",
+      "input_hash": "14e6c65ef6047f1f302b913c70f1faf0ad1c31b9770f6d7bc78b62cabd037348",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/grok-4.6/cache/validate_group/14e6c65ef6047f1f302b913c70f1faf0ad1c31b9770f6d7bc78b62cabd037348.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "170546fd-7642-9324-b16f-ccea321783e3",
+      "usage": {
+        "prompt_tokens": 3635,
+        "completion_tokens": 156,
+        "total_tokens": 8766,
+        "prompt_tokens_details": {
+          "text_tokens": 2560,
+          "audio_tokens": 0,
+          "image_tokens": 1075,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 4975,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 349840000
+      }
+    }
+  ],
+  "format_warnings": []
+}

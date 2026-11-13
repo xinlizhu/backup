@@ -1,0 +1,37 @@
+data:
+  dataset: /mnt/data/datasets/search_dataset/zxl/benchmark_build/release_code/QDiag/data/final.jsonl
+  gallery_manifest: /mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/outputs/external_retrieval_20261109/manifests/pinpoint.json
+  pilot_group_ids: /mnt/data/datasets/search_dataset/zxl/benchmark_build/release_code/QDiag/data/pilot_group_ids.txt
+models:
+  clip_original:
+    kind: clip_original
+    path: /mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/models/clip-vit-large-patch14
+    dtype: fp16
+    image_batch_size: 512
+    query_batch_size: 512
+  clip_oprd:
+    kind: clip_release
+    path: /mnt/data/datasets/search_dataset/zxl/benchmark_build/release_code/OPRD/checkpoints/clip_l_s2
+    dtype: fp16
+    image_batch_size: 512
+    query_batch_size: 512
+  qwen3_vl_2b:
+    kind: qwen
+    path: /mnt/data/datasets/search_dataset/zxl/qw3/Qwen3-VL-Embedding-2B
+    dtype: bf16
+    image_batch_size: 48
+    query_batch_size: 32
+  bge_s2:
+    kind: bge_s2
+    path: /mnt/data/datasets/search_dataset/zxl/models/BGE-VL-MLLM-S2
+    dtype: fp16
+    image_batch_size: 24
+    query_batch_size: 16
+runtime:
+  output_dir: outputs/full_four_models
+  device: cuda:0
+  image_workers: 16
+  torch_threads: 8
+  search_batch_size: 128
+  bootstrap_replicates: 2000
+  seed: 42

@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_f3a0d23298d5aab7",
+  "model": "grok-4.6",
+  "signature": "cb958fa178e5ebcdd33f446ebd46fe25a7c20417ca5539cc74de61fb4df99804",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_f3a0d23298d5aab7_query_04265_predicate_substitute",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Single predicate swap of recolor→darken preserves the rest. The reference dress is dark burgundy, while every positive dress is lighter (beige, cream, or white), so darkening is clearly false for all positives."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.6",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "a1d946a3f8a496a5cf38990dadd977922c63234135bc26542a7b2020715f0ddd",
+      "input_hash": "679747a7ecc1e7f9cae76be01222686411151654eaced2b6552ccdbf890fcf12",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/grok-4.6/cache/validate_group/679747a7ecc1e7f9cae76be01222686411151654eaced2b6552ccdbf890fcf12.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "36953941-e536-97e9-833c-2c52eeb5c921",
+      "usage": {
+        "prompt_tokens": 6185,
+        "completion_tokens": 96,
+        "total_tokens": 10103,
+        "prompt_tokens_details": {
+          "text_tokens": 2495,
+          "audio_tokens": 0,
+          "image_tokens": 3690,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 3822,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 328060000
+      }
+    }
+  ],
+  "format_warnings": []
+}

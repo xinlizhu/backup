@@ -1,0 +1,88 @@
+{
+  "case_id": "case_9e28f6d7e56f02871fdc",
+  "audit_query_id": "audit_query_092",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_9e28f6d7e56f02871fdc",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Relative to R's panda holding food at its mouth in a tree, T shows a single resting panda with its head laid sideways on its forepaw over a branch."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows a single panda sitting upright on wood and holding food to its mouth; it is neither lying down nor resting its head on its paw."
+    },
+    "candidate_relation": "multiple_constraint_conflict",
+    "violated_source_constraints": [
+      "The panda is lying down.",
+      "The panda rests its head on its paw."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_9e28f6d7e56f02871fdc",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "One panda rests sideways with its head lying on its black forepaw/forelimb above a visible branch, unlike the reference panda holding food to its mouth."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "One panda sits upright on a large cut trunk, holding food at its mouth. Its head is raised rather than lying down on its paw in a resting pose."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "9219f385e58278382eacc684ab92228f147cbbb819c854c646409723fe874b13",
+      "input_hash": "89140f0b84d4faa2dcfabb14c5178f271de8532bcf11221459a9d610a2a41f91",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/89140f0b84d4faa2dcfabb14c5178f271de8532bcf11221459a9d610a2a41f91.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_03fbc8a40a5bb987016af2be7c902087d18afaa0b2ffbad39a",
+      "usage": {
+        "prompt_tokens": 32626,
+        "completion_tokens": 252,
+        "total_tokens": 32878,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 57
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "874a16f4ccbb99a4a1ea291fa528da65a0db88d63dc3b9258bb823dfa0c9a386",
+      "input_hash": "9316494dec4c5323247a6505291b2a7932bc79de5bacb02f9d76113a7db76eb7",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/9316494dec4c5323247a6505291b2a7932bc79de5bacb02f9d76113a7db76eb7.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0649a552b6201b2d016af2be900ae887d182a33230aa4ce078",
+      "usage": {
+        "prompt_tokens": 32084,
+        "completion_tokens": 120,
+        "total_tokens": 32204,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        }
+      }
+    }
+  ]
+}

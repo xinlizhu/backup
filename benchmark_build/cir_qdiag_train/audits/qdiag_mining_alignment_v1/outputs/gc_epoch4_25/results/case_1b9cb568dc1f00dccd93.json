@@ -1,0 +1,91 @@
+{
+  "case_id": "case_1b9cb568dc1f00dccd93",
+  "audit_query_id": "audit_query_085",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_1b9cb568dc1f00dccd93",
+    "case_status": "source_invalid_or_uncertain",
+    "source_on_positive": {
+      "status": "contradicted",
+      "evidence": "Several gorillas sit on separate fallen trunks or logs near ground level. The seating arrangement fits, but gorillas are apes rather than the monkeys explicitly requested."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The visible animals are gorillas rather than monkeys. Several also sit together on one large fallen trunk, rather than on different trunks."
+    },
+    "candidate_relation": "multiple_constraint_conflict",
+    "violated_source_constraints": [
+      "The animals are monkeys.",
+      "The animals sit on different tree trunks."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_1b9cb568dc1f00dccd93",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Several primates sit on different fallen tree trunks arranged across the ground, including separate foreground and rear trunks."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The clearly visible seated primates share one large fallen trunk. The image does not show them sitting on different tree trunks as requested."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "38afb3e6577484e16e8b63d02a563b5ceddefb532da4777e82dfcdc3120c97ab",
+      "input_hash": "e7bf20b04accc702a5ba4628344c6bf0520076c3c9f32fb5bfad87c38a035087",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/e7bf20b04accc702a5ba4628344c6bf0520076c3c9f32fb5bfad87c38a035087.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0d6697ce9b0d7eca016af2be02fafc87d1a9dd3f4d564887d3",
+      "usage": {
+        "prompt_tokens": 8311,
+        "completion_tokens": 649,
+        "total_tokens": 8960,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 457
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "cd86999a999f936d7f85e9b52c7ed67073bd6acaafa6ecdfa445796b9b2c499e",
+      "input_hash": "dcd61db189f55b2235106ec415f2cdf9ea6247ed48cde37929ab26b53e1e1189",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/dcd61db189f55b2235106ec415f2cdf9ea6247ed48cde37929ab26b53e1e1189.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_07711a643c9274b1016af2be33550087d2a07863011b3a70b6",
+      "usage": {
+        "prompt_tokens": 7769,
+        "completion_tokens": 161,
+        "total_tokens": 7930,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 32
+        }
+      }
+    }
+  ]
+}

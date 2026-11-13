@@ -1,0 +1,87 @@
+{
+  "case_id": "case_1c99317d2d7019c6f48e",
+  "audit_query_id": "audit_query_079",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_1c99317d2d7019c6f48e",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "A black, bowl-shaped vessel sink is prominently visible beneath a running faucet."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The image shows two brown mountain goats among rocks, with no bowl sink visible."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "Show a black bowl sink."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_1c99317d2d7019c6f48e",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 clearly shows a black, bowl-shaped vessel sink on a countertop, with water flowing into it from a faucet."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows two wild goats on rocky mountain ledges, one jumping; no bowl sink is present."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "2f24b2b3160d2b817da326995a529e1cb5f2b58eeaccd399e8fafb744e0f5faa",
+      "input_hash": "9c7063ca590c5ec3f508f76634c1d4e14d57c5e37b3628ddee4e790ab680ed1f",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/9c7063ca590c5ec3f508f76634c1d4e14d57c5e37b3628ddee4e790ab680ed1f.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0f3a8db467215235016af2bdf415f487d2a6b0018a7f54b0bd",
+      "usage": {
+        "prompt_tokens": 8355,
+        "completion_tokens": 188,
+        "total_tokens": 8543,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 37
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "d0327e3b6ce2a48055f2a71b30a4679b891de8776e4bbe6cdfcce242b9ff7bd6",
+      "input_hash": "863e82be24cf59695fec680cf4a4dc33b212419284642a3e4ae6065ca659bacb",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/863e82be24cf59695fec680cf4a4dc33b212419284642a3e4ae6065ca659bacb.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_029ff623412ee3d6016af2bdfb85b487d1a6b3086654fba31b",
+      "usage": {
+        "prompt_tokens": 7813,
+        "completion_tokens": 103,
+        "total_tokens": 7916,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        }
+      }
+    }
+  ]
+}

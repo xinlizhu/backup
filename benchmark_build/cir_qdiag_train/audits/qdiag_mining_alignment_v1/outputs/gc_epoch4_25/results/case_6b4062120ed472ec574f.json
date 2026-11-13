@@ -1,0 +1,166 @@
+{
+  "case_id": "case_6b4062120ed472ec574f",
+  "audit_query_id": "audit_query_081",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_6b4062120ed472ec574f",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a saxophone with a reddish maroon body and bell."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a purple saxophone, not a maroon one."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The wind instrument should be maroon."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "substitute_attribute_color",
+        "operation": "substitute",
+        "semantic_target": "attribute",
+        "before_span": "maroon",
+        "after_span": "purple",
+        "edited_instruction": "Make a wind instrument a purple color.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "The instrument's color changes from maroon to purple.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2's saxophone is reddish maroon, not purple."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3's saxophone is visibly purple."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_6b4062120ed472ec574f",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a wind instrument with a distinctly dark red, maroon-colored body."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a wind instrument with a purple body, not a maroon one."
+    },
+    "verdicts": [
+      {
+        "witness_id": "substitute_attribute_color",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing “maroon” with “purple” is one attribute substitution, preserves the wind-instrument entity, and yields a fluent instruction. Image 2's body is maroon-red, while Image 3's is visibly purple.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The instrument body in Image 2 is maroon-red, not purple."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The instrument body in Image 3 is visibly purple."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "substitute_attribute_color",
+      "operation": "substitute",
+      "semantic_target": "attribute",
+      "before_span": "maroon",
+      "after_span": "purple",
+      "edited_instruction": "Make a wind instrument a purple color.",
+      "witness_type": "substitution_contrast",
+      "changed_constraint": "The instrument's color changes from maroon to purple.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "Image 2's saxophone is reddish maroon, not purple."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "Image 3's saxophone is visibly purple."
+      },
+      "independent_review": {
+        "witness_id": "substitute_attribute_color",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing “maroon” with “purple” is one attribute substitution, preserves the wind-instrument entity, and yields a fluent instruction. Image 2's body is maroon-red, while Image 3's is visibly purple.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The instrument body in Image 2 is maroon-red, not purple."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The instrument body in Image 3 is visibly purple."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "substitute_attribute_color",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "e18282b9fd059f1972e11555ba86b032108ffd7a55ad399ed767f685b3989645",
+      "input_hash": "15f9ceff167dadac2da04855612b326778821389af8a2c1e3467a72224f82481",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/15f9ceff167dadac2da04855612b326778821389af8a2c1e3467a72224f82481.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0c264c18d7d541d3016af2beec77bc87d18896b76858e343a7",
+      "usage": {
+        "prompt_tokens": 8324,
+        "completion_tokens": 416,
+        "total_tokens": 8740,
+        "prompt_tokens_details": {
+          "cached_tokens": 5888
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 188
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "d2a2e3f2a71f4ebdf1177c7d309c4d68ac8f1526b8116233df0fa977d9f21f35",
+      "input_hash": "fda9725eb743596669868118a9e65da531fabe8e6dee7f809a26380c1c6a92df",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/fda9725eb743596669868118a9e65da531fabe8e6dee7f809a26380c1c6a92df.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_08781420025696a8016af2bef9492487d196a6c652666f3fd2",
+      "usage": {
+        "prompt_tokens": 7845,
+        "completion_tokens": 274,
+        "total_tokens": 8119,
+        "prompt_tokens_details": {
+          "cached_tokens": 5248
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 56
+        }
+      }
+    }
+  ]
+}

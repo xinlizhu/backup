@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_495d3c7182b89dee",
+  "model": "grok-4.6",
+  "signature": "cb958fa178e5ebcdd33f446ebd46fe25a7c20417ca5539cc74de61fb4df99804",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_495d3c7182b89dee_query_04945_object_substitute",
+      "decision": "reject",
+      "failure_code": "not_visually_verifiable",
+      "reason": "Show→movie is one fluent substitution, but the banquet reference and Muppet stills do not visually show a movie rather than a TV show, so the new fact is not reliably false for every positive."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.6",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "fa7f598bd63a9399d4968a7dce6099ffca411e298e4f7af29e8a958b4fa3df3e",
+      "input_hash": "d1baa748b792016e0f06f6ad5f1c9fc2c45f134f33ba6ca4d9e95cb2ead56628",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/grok-4.6/cache/validate_group/d1baa748b792016e0f06f6ad5f1c9fc2c45f134f33ba6ca4d9e95cb2ead56628.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "4caf0687-273d-9f50-bc10-ca127aa84524",
+      "usage": {
+        "prompt_tokens": 3695,
+        "completion_tokens": 98,
+        "total_tokens": 8745,
+        "prompt_tokens_details": {
+          "text_tokens": 2436,
+          "audio_tokens": 0,
+          "image_tokens": 1259,
+          "cached_tokens": 2304
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 4952,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 342340000
+      }
+    }
+  ],
+  "format_warnings": []
+}

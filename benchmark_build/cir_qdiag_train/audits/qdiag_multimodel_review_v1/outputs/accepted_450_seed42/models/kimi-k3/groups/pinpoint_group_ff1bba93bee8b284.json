@@ -1,0 +1,56 @@
+{
+  "group_id": "pinpoint_group_ff1bba93bee8b284",
+  "model": "kimi-k3",
+  "signature": "7bcee9a6a15f47b49de535c2997e213c18a83885fbb254d34ea6aaed145faa23",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_ff1bba93bee8b284_query_02982_object_delete",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Deleting 'cabin' removes exactly one object constraint (the structure type), leaving a fluent, strictly weaker query that still refers to the reference via 'this'; the group paraphrases include hut/shelter/structure, so the cabin identity is a meaningful constraint."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "kimi-k3",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "f4a1448bb1e775bb39fb473bf69973a6c10755572bb9cda4710c76d3502cfddd",
+      "input_hash": "e48038b65665b3a9fe8f5b96d7431cf639f2ce0b2827f5961827c8927da1b43a",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/kimi-k3/cache/validate_group/e48038b65665b3a9fe8f5b96d7431cf639f2ce0b2827f5961827c8927da1b43a.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "01a1c9baff2d73d79fe8414ce2040d7e",
+      "usage": {
+        "prompt_tokens": 4510,
+        "completion_tokens": 240,
+        "total_tokens": 4750,
+        "prompt_cache_hit_tokens": 768,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "text_tokens": 0,
+          "audio_tokens": 0,
+          "image_tokens": 0
+        },
+        "completion_tokens_details": {
+          "text_tokens": 0,
+          "audio_tokens": 0,
+          "image_tokens": 0,
+          "reasoning_tokens": 0
+        },
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "input_tokens_details": null,
+        "claude_cache_creation_5_m_tokens": 0,
+        "claude_cache_creation_1_h_tokens": 0,
+        "credit": 2.51
+      }
+    }
+  ],
+  "format_warnings": []
+}

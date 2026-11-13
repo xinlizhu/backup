@@ -1,0 +1,57 @@
+{
+  "group_id": "pinpoint_group_3ab68d53c6bd353a",
+  "model": "grok-4.6",
+  "signature": "cb958fa178e5ebcdd33f446ebd46fe25a7c20417ca5539cc74de61fb4df99804",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_3ab68d53c6bd353a_query_04825_object_delete",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Deleting \"blazer with\" removes only the blazer object and its linking preposition, leaving the fluent, strictly weaker query \"this outfit\" with all other meaning intact."
+    },
+    {
+      "negative_id": "pinpoint_group_3ab68d53c6bd353a_query_04826_predicate_add",
+      "decision": "reject",
+      "failure_code": "not_visually_verifiable",
+      "reason": "Images 2 and 3 contain no blazer, so whether it is buttoned cannot be judged and the added fact is not clearly false for every positive."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.6",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "f5a5f2ecf98c67a908a6c04aa5e170c624546afcd2b4cd15515dbdafb9ed4d7e",
+      "input_hash": "c47b6a3518baeeada6822dc00903730e7911db8a3883d3d2cddcdf8fc203ff88",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/grok-4.6/cache/validate_group/c47b6a3518baeeada6822dc00903730e7911db8a3883d3d2cddcdf8fc203ff88.json",
+      "cached": false,
+      "attempts": 2,
+      "request_id": "61ee9ebe-f713-946b-9ff6-c3357946cecf",
+      "usage": {
+        "prompt_tokens": 6172,
+        "completion_tokens": 170,
+        "total_tokens": 12745,
+        "prompt_tokens_details": {
+          "text_tokens": 2642,
+          "audio_tokens": 0,
+          "image_tokens": 3530,
+          "cached_tokens": 6144
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 6403,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 425660000
+      }
+    }
+  ],
+  "format_warnings": []
+}

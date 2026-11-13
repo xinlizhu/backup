@@ -1,0 +1,75 @@
+{
+  "case_id": "pair_b71daf6f4ac11d5dc281",
+  "signature": "f91b95909684e2ecf5207ab608279749c891c56633f2fa7c877aa09c2d59f3d4",
+  "simulated": false,
+  "status": "complete",
+  "judgment": {
+    "case_id": "pair_b71daf6f4ac11d5dc281",
+    "constraints": [
+      {
+        "constraint": "Remove one of the reference's two animals, leaving one animal.",
+        "A_status": "supported",
+        "B_status": "supported",
+        "A_evidence": "Only one animal is visible.",
+        "B_evidence": "Only one dog is visible."
+      },
+      {
+        "constraint": "Replace the cow with a dog.",
+        "A_status": "contradicted",
+        "B_status": "supported",
+        "A_evidence": "The remaining animal is a horned bovine, not a dog.",
+        "B_evidence": "The sole animal is visibly a dog."
+      },
+      {
+        "constraint": "Add water in the background.",
+        "A_status": "contradicted",
+        "B_status": "supported",
+        "A_evidence": "The background contains vegetation, fencing, and a structure, with no visible body of water.",
+        "B_evidence": "A broad, apparently frozen lake is visible behind the dog."
+      },
+      {
+        "constraint": "Add hills in the background.",
+        "A_status": "contradicted",
+        "B_status": "supported",
+        "A_evidence": "No hills are visible behind the animal.",
+        "B_evidence": "A wooded ridge of low hills rises beyond the lake."
+      },
+      {
+        "constraint": "Remove the grass on the ground.",
+        "A_status": "contradicted",
+        "B_status": "supported",
+        "A_evidence": "Green grass remains clearly visible across the foreground and around the animal.",
+        "B_evidence": "The ground is exposed soil covered with fallen needles and leaves rather than grass."
+      }
+    ],
+    "A_status": "contradicted",
+    "B_status": "supported",
+    "decision": "B_only",
+    "reason": "B shows one dog on bare, needle-covered ground with a lake and wooded hills behind it. A retains a bovine and grass and lacks visible water or hills."
+  },
+  "trace": {
+    "stage": "rank_pair_judgment",
+    "model_name": "gpt-5.6-terra",
+    "model_revision": null,
+    "provider": "openai-compatible-chat",
+    "reasoning_effort": null,
+    "prompt_version": "rank_preference_v1",
+    "prompt_hash": "5305409fbfcaf54672bfa4672da109f1aa6e71e06eacda7a53132b53a7c8bb1c",
+    "input_hash": "c47b182cda7f205f7a7eb6dc34cd22a35ddc989020ee87cfa4bb7344b9fd1c50",
+    "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_rank_preference_v1/outputs/gc_epochs14_top3/api_cache/rank_pair_judgment/c47b182cda7f205f7a7eb6dc34cd22a35ddc989020ee87cfa4bb7344b9fd1c50.json",
+    "cached": false,
+    "attempts": 1,
+    "request_id": "resp_0e24d8f7495e327d016af2cc9d080487d18c93448ddb68b2c8",
+    "usage": {
+      "prompt_tokens": 6632,
+      "completion_tokens": 496,
+      "total_tokens": 7128,
+      "prompt_tokens_details": {
+        "cached_tokens": 4864
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 44
+      }
+    }
+  }
+}

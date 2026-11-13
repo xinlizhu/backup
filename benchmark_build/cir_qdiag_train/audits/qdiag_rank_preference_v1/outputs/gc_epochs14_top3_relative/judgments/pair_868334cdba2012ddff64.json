@@ -1,0 +1,64 @@
+{
+  "case_id": "pair_868334cdba2012ddff64",
+  "signature": "f3a97f608e6addbd5531ad7795f5e06873610abdb12f716de8375d49eda4c022",
+  "simulated": false,
+  "status": "complete",
+  "judgment": {
+    "case_id": "pair_868334cdba2012ddff64",
+    "constraints": [
+      {
+        "constraint": "A puppy dog is present",
+        "A_status": "supported",
+        "B_status": "supported",
+        "A_evidence": "A clearly shows a young-looking dog.",
+        "B_evidence": "B clearly shows a dog, though it does not strongly read as a puppy."
+      },
+      {
+        "constraint": "The dog is sitting down",
+        "A_status": "contradicted",
+        "B_status": "contradicted",
+        "A_evidence": "The dog is lying down with its head on the grass rather than sitting.",
+        "B_evidence": "The dog is reclining or lying on bedding, not sitting."
+      },
+      {
+        "constraint": "The dog is in front of many flowers",
+        "A_status": "supported",
+        "B_status": "contradicted",
+        "A_evidence": "The dog is positioned amid grass with numerous visible flowers around and in front of it.",
+        "B_evidence": "No flowers are visible; the dog is indoors on patterned bedding."
+      },
+      {
+        "constraint": "The dog is facing the camera",
+        "A_status": "supported",
+        "B_status": "uncertain",
+        "A_evidence": "The dog looks directly toward the camera.",
+        "B_evidence": "The dog's head is rotated sideways and its gaze is only ambiguously toward the camera."
+      }
+    ],
+    "decision": "A",
+    "confidence": "high",
+    "reason": "A fails the requested sitting pose but clearly provides a dog facing the camera among many flowers, whereas B lacks the flowers entirely and is not sitting, with camera-facing orientation also less clear."
+  },
+  "trace": {
+    "stage": "rank_pair_relative_preference",
+    "model_name": "gpt-5.6-terra",
+    "model_revision": null,
+    "provider": "openai-compatible-chat",
+    "reasoning_effort": null,
+    "prompt_version": "rank_preference_relative_v2",
+    "prompt_hash": "318b7a318eee578544840610926f2d7446440d03e51e199215586f3e41298a51",
+    "input_hash": "f0f8da6a6da231db0c37b9df491d0ba3b5ab49efc02ac667491ea3d754b46263",
+    "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_rank_preference_v1/outputs/gc_epochs14_top3_relative/api_cache/rank_pair_relative_preference/f0f8da6a6da231db0c37b9df491d0ba3b5ab49efc02ac667491ea3d754b46263.json",
+    "cached": false,
+    "attempts": 1,
+    "request_id": "resp_ack_209cbf3dc575a7be4302bcf299c9c2e3",
+    "usage": {
+      "prompt_tokens": 2632,
+      "completion_tokens": 408,
+      "total_tokens": 3040,
+      "completion_tokens_details": {
+        "reasoning_tokens": 109
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:05,  1.69s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:02<00:02,  1.32s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:03<00:01,  1.16s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.07it/s]
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+{'model': 'bge_s2', 'batch_size': 24, 'cpu_prepare_seconds': 1.2756929397583008, 'input_shape': [24, 2939]}
+{'model': 'bge_s2', 'backend': 'sdpa', 'seconds': 12.100549936294556, 'images_per_second': 1.9833809311438044, 'peak_memory_gb': 24.5960576}
+{'model': 'bge_s2', 'backend': 'flash_attention_2', 'seconds': 11.19463849067688, 'images_per_second': 2.143883433126285, 'peak_memory_gb': 24.5960576}
+{'model': 'bge_s2', 'batch_size': 24, 'seconds': {'sdpa': 12.100549936294556, 'flash_attention_2': 11.19463849067688}, 'cosine_min': 0.9999789595603943, 'cosine_mean': 0.9999935626983643, 'max_absolute_difference': 0.0005486607551574707}

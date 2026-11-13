@@ -1,0 +1,174 @@
+{
+  "case_id": "case_7d921e0ee175e9966290",
+  "audit_query_id": "audit_query_100",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_7d921e0ee175e9966290",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows food in a dish, with a browned, cheese-like topping."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a glass bowl containing layered fruit and cream, with fruit and mint on top; no cheese topping is visible."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "cheese on top"
+    ],
+    "witnesses": [
+      {
+        "witness_id": "delete_object_1",
+        "operation": "delete",
+        "semantic_target": "object",
+        "before_span": " and cheese on top",
+        "after_span": null,
+        "edited_instruction": "A bowl with a dish",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "Removes the requirement for cheese on top.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 shows food in a dish."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows a glass bowl containing a dessert."
+        }
+      },
+      {
+        "witness_id": "substitute_object_1",
+        "operation": "substitute",
+        "semantic_target": "object",
+        "before_span": "cheese",
+        "after_span": "fruit",
+        "edited_instruction": "A bowl with a dish and fruit on top.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "Changes the required topping from cheese to fruit; the original cheese topping is absent in Image 3, and fruit is not on top in Image 2.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 has a browned cheese-like topping, not fruit on top."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows berries and mint on top of the dessert."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_7d921e0ee175e9966290",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "Image 2 clearly shows a browned, cheese-topped dish, but it appears to be a shallow baking pan rather than a bowl, so the full source description is not reliably established."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows fruit and cream in a glass trifle bowl, with no visible cheese topping."
+    },
+    "verdicts": [
+      {
+        "witness_id": "delete_object_1",
+        "decision": "reject",
+        "failure_code": "source_invalid_or_uncertain",
+        "witness_type": null,
+        "reason": "The deletion reconstructs the edited text, but the full source constraint is uncertain on Image 2 because the vessel does not clearly appear to be a bowl.",
+        "edited_on_positive": {
+          "status": "uncertain",
+          "evidence": "Image 2 shows a shallow baking pan, not clearly a bowl; the phrase “A bowl with a dish” is therefore not reliably supported."
+        },
+        "edited_on_candidate": {
+          "status": "uncertain",
+          "evidence": "Image 3 visibly has a glass bowl, but a separate dish within it is not clearly identifiable."
+        }
+      },
+      {
+        "witness_id": "substitute_object_1",
+        "decision": "reject",
+        "failure_code": "source_invalid_or_uncertain",
+        "witness_type": null,
+        "reason": "The cheese-to-fruit replacement is a single edit, but the full source description is uncertain on Image 2 because its vessel does not clearly appear to be a bowl.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 has cheese on top, not fruit."
+        },
+        "edited_on_candidate": {
+          "status": "uncertain",
+          "evidence": "Image 3 visibly has fruit on top, but the full edited description also requires a bowl with a dish, which is not clearly established."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [],
+  "local_checks": [
+    {
+      "witness_id": "delete_object_1",
+      "accepted": false,
+      "local_failures": [
+        "wrong_witness_type",
+        "wrong_support_pattern"
+      ],
+      "review_decision": "reject"
+    },
+    {
+      "witness_id": "substitute_object_1",
+      "accepted": false,
+      "local_failures": [
+        "wrong_witness_type",
+        "wrong_support_pattern"
+      ],
+      "review_decision": "reject"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "83bff0587269d11cead83c7160798935435cae66108ebaf6813b2629804b7803",
+      "input_hash": "1efe5ff76ccc67df8a8d1584e4c7c15851606af844e22a60f6b98cb5f0260899",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/1efe5ff76ccc67df8a8d1584e4c7c15851606af844e22a60f6b98cb5f0260899.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_ack_9d43aea82fdb7ef94a770deb67b632b3",
+      "usage": {
+        "prompt_tokens": 8931,
+        "completion_tokens": 835,
+        "total_tokens": 9766,
+        "completion_tokens_details": {
+          "reasoning_tokens": 330
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "f6d4687204140b7d507a6c44745cd8e5216200e7008e7282a5b37967d0c05f4c",
+      "input_hash": "6cbc29bf16a9c8d66fdd25e342499682ffbeb5abbd524b56bf000a52d93bfb23",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/6cbc29bf16a9c8d66fdd25e342499682ffbeb5abbd524b56bf000a52d93bfb23.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0ddb4bccd169d586016af2beca448c87d1bae4cd9a57ec92d6",
+      "usage": {
+        "prompt_tokens": 12894,
+        "completion_tokens": 749,
+        "total_tokens": 13643,
+        "prompt_tokens_details": {
+          "cached_tokens": 5248
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 367
+        }
+      }
+    }
+  ]
+}

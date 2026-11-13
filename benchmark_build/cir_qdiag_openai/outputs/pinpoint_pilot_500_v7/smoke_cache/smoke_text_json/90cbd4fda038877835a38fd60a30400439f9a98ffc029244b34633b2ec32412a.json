@@ -1,0 +1,83 @@
+{
+  "request": {
+    "stage": "smoke_text_json",
+    "backend": "OpenAIChatBackend",
+    "model_name": "stage-routed-openai-chat",
+    "model_revision": null,
+    "backend_identity": {
+      "backend_contract": "minimal-httpx-chat-structured-v3",
+      "api_base": "https://ai.gs88.shop/v1",
+      "structured_output_mode": "prompt",
+      "generation_model": "gpt-5.6-terra",
+      "selection_model": "gpt-5.6-terra",
+      "generation_reasoning_effort": null,
+      "selection_reasoning_effort": null,
+      "image_detail": "high"
+    },
+    "prompt_hash": "61500d94e9d47548b11adff4c95e1948ca558d34f5d27e72b7f00b0ed818989b",
+    "prompt_version": "v7",
+    "schema": {
+      "additionalProperties": false,
+      "properties": {
+        "value": {
+          "title": "Value",
+          "type": "string"
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "title": "TextSmokeResponse",
+      "type": "object"
+    },
+    "max_output_tokens": 128
+  },
+  "images": [],
+  "parsed": {
+    "value": "OK123123OK"
+  },
+  "raw_response": {
+    "id": "resp_0ab8dbee4a4bab53016a66cfc188d48194ab196667acec9c24",
+    "object": "chat.completion",
+    "created": 1785122754,
+    "model": "gpt-5.6-terra",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"value\":\"OK123123OK\"}"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 4521,
+      "completion_tokens": 12,
+      "total_tokens": 4533
+    }
+  },
+  "request_id": "resp_0ab8dbee4a4bab53016a66cfc188d48194ab196667acec9c24",
+  "trace": {
+    "stage": "smoke_text_json",
+    "model_name": "gpt-5.6-terra",
+    "model_revision": null,
+    "provider": "openai-compatible-chat",
+    "reasoning_effort": null,
+    "prompt_version": "v7",
+    "prompt_hash": "61500d94e9d47548b11adff4c95e1948ca558d34f5d27e72b7f00b0ed818989b",
+    "input_hash": "90cbd4fda038877835a38fd60a30400439f9a98ffc029244b34633b2ec32412a",
+    "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_openai/outputs/pinpoint_pilot_500_v7/smoke_cache/smoke_text_json/90cbd4fda038877835a38fd60a30400439f9a98ffc029244b34633b2ec32412a.json",
+    "cached": false,
+    "attempts": 1,
+    "request_id": "resp_0ab8dbee4a4bab53016a66cfc188d48194ab196667acec9c24",
+    "usage": {
+      "prompt_tokens": 4521,
+      "completion_tokens": 12,
+      "total_tokens": 4533
+    }
+  },
+  "attempt": 1,
+  "previous_errors": [],
+  "previous_error_details": []
+}

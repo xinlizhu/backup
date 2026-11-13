@@ -1,0 +1,84 @@
+{
+  "case_id": "case_bf3f774a9c3135c4a1b6",
+  "audit_query_id": "audit_query_043",
+  "signature": "5065d94bb0c1b275e428d3f2ada2352b274139ccb2134477487b5f51eef77ac6",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_bf3f774a9c3135c4a1b6",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a close-up pizza filling nearly the whole frame, with no many boxes shown."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a yellow school bus, not a close-up pizza."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "Show a pizza in close coverage, sized to fill the frame rather than showing many boxes."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_bf3f774a9c3135c4a1b6",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 is a close, frame-filling view of a pizza; no array of boxes is shown. Relative to Image 1, it emphasizes the pizza rather than the many boxes."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows school buses, not a pizza or pizza boxes, so it does not satisfy the instruction."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "917469d1b0e9c10a0050c4381169c16d5a23215616ca58ac2250b71e580edbad",
+      "input_hash": "aeda8c228401d495ab939800f6ee785874bf1fda5c0e4385275d5b1c10f9304d",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_100/api_cache/propose_witnesses/aeda8c228401d495ab939800f6ee785874bf1fda5c0e4385275d5b1c10f9304d.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_02ec3dae5b6c2bd8016af2b893a25487d1afdbd2954077cd4f",
+      "usage": {
+        "prompt_tokens": 3320,
+        "completion_tokens": 641,
+        "total_tokens": 3961,
+        "completion_tokens_details": {
+          "reasoning_tokens": 511
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "5fcceb511a43d0b1b54e697220e2c3b2726d87e531b8b1db4e1983865765f470",
+      "input_hash": "87a84143d6c9a23cbfa536f5bce49b0c95cf1c8b09e705fefb7959fa5ebbef6c",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_100/api_cache/review_witnesses/87a84143d6c9a23cbfa536f5bce49b0c95cf1c8b09e705fefb7959fa5ebbef6c.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_05a245638fe32998016af2b89e154c87d19854808442a6d361",
+      "usage": {
+        "prompt_tokens": 6167,
+        "completion_tokens": 195,
+        "total_tokens": 6362,
+        "completion_tokens_details": {
+          "reasoning_tokens": 76
+        }
+      }
+    }
+  ]
+}

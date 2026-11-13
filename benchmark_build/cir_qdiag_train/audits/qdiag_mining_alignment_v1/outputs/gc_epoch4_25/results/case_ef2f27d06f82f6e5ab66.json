@@ -1,0 +1,135 @@
+{
+  "case_id": "case_ef2f27d06f82f6e5ab66",
+  "audit_query_id": "audit_query_082",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_ef2f27d06f82f6e5ab66",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Relative to the reference's front-corner view, the locomotive is shown from its back corner, with prominent white diagonal strips across the visible end."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The locomotive is shown from a back corner, but its visible end is weathered tan and dark metal without the requested white strips."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "Add white strips."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "delete",
+        "semantic_target": "object",
+        "before_span": "and add white strips",
+        "after_span": null,
+        "edited_instruction": "Turn to face back corner.",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "Remove the requirement for white strips to be present.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "The locomotive's rear end and adjoining side are visible in a back-corner view."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The locomotive's rear end beneath the cab and its adjoining side are visible in a back-corner view."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_ef2f27d06f82f6e5ab66",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "Image 2 visibly has white diagonal stripes on the locomotive's front, but the view does not reliably establish that it faces the back corner relative to Image 1."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a locomotive from the side with no visible white strips; its orientation relative to Image 1 is also unclear."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "reject",
+        "failure_code": "source_invalid_or_uncertain",
+        "witness_type": null,
+        "reason": "The source instruction is not reliably established on Image 2: the white stripes are visible, but the back-corner orientation cannot be confirmed. Therefore the deletion support pattern cannot be accepted.",
+        "edited_on_positive": {
+          "status": "uncertain",
+          "evidence": "Image 2 shows a locomotive with a visible front, but whether it faces the back corner relative to Image 1 is unclear."
+        },
+        "edited_on_candidate": {
+          "status": "uncertain",
+          "evidence": "Image 3 shows a side view of a locomotive, but whether it faces the back corner relative to Image 1 is unclear."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": false,
+      "local_failures": [
+        "wrong_witness_type",
+        "wrong_support_pattern"
+      ],
+      "review_decision": "reject"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "6eda86fdd0b1f19aa3c8144cd49a01bfd3c2ebfa552a3423bc59f6500521406d",
+      "input_hash": "7590a13231ce66bae6d5a304f55c3c52f666f75d6bf91e28234b63e657ab40b2",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/7590a13231ce66bae6d5a304f55c3c52f666f75d6bf91e28234b63e657ab40b2.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_08805f21d1a652f5016af2bf610d4887d1b94dfa3081dc221f",
+      "usage": {
+        "prompt_tokens": 6314,
+        "completion_tokens": 583,
+        "total_tokens": 6897,
+        "prompt_tokens_details": {
+          "cached_tokens": 5094
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 236
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "663c181bb1cbd33f4d1bc844804b7a84f1b9d5715647ad618e5399b099d893ac",
+      "input_hash": "f7152c71fe233e351c75fa2dd857db708f4b9bd713aeeab6fefb85acae81d4b9",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/f7152c71fe233e351c75fa2dd857db708f4b9bd713aeeab6fefb85acae81d4b9.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0d9c9bebf97aee0f016af2bf76278087d28e4bc5f65e7b45f1",
+      "usage": {
+        "prompt_tokens": 5996,
+        "completion_tokens": 588,
+        "total_tokens": 6584,
+        "prompt_tokens_details": {
+          "cached_tokens": 5248
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 326
+        }
+      }
+    }
+  ]
+}

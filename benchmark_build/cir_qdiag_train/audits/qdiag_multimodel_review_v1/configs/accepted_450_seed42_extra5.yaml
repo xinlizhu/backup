@@ -1,0 +1,28 @@
+source_final: /mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_openai/outputs/pinpoint_full_v7/final.jsonl
+release_final: /mnt/data/datasets/search_dataset/zxl/benchmark_build/release_code/QDiag/data/final.jsonl
+sampling:
+  seed: 42
+  per_cell: 50
+  population: accepted_edits
+  subset_of: outputs/accepted_900_seed42/sampled_edits.private.jsonl
+review:
+  context: sampled_candidates_only
+  prompt_version: v7
+  max_output_tokens: 16384
+  baseline_model: gpt-5.6-terra
+  models:
+  - gpt-5.6-sol
+  - gpt-5.6-luna
+  - gpt-6.1-terra
+  - grok-4.6
+  - claude-haiku-5-5
+api:
+  api_base: ${OPENAI_BASE_URL}
+  api_key: ${OPENAI_API_KEY}
+  timeout_seconds: 600
+  max_retries: 2
+  image_detail: high
+  structured_output_mode: prompt
+runtime:
+  output_dir: outputs/accepted_450_seed42_extra5
+  max_workers: 80

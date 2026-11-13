@@ -1,0 +1,91 @@
+{
+  "case_id": "case_c6a62b8053490ba65bd9",
+  "audit_query_id": "audit_query_093",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_c6a62b8053490ba65bd9",
+    "case_status": "source_invalid_or_uncertain",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "A pillow rests against a gray-green textured throw, but no turkey is visibly identifiable on it; the background does not clearly establish a window effect."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The candidate shows a locomotive outdoors, with no visible pillow, towel, or window-background setting."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "Place a pillow on a grey turkey towel",
+      "Use a window background effect"
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_c6a62b8053490ba65bd9",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "Image 2 shows a pillow against a grey textured textile, but it does not clearly establish the instruction's 'turkey towel' constraint; the background also does not reliably verify a window effect."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a yellow-and-red locomotive, not a pillow on a grey textile."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "92101acb28505ee87bdade987bcc70b4f91059d27f782a95b10086039a90ebff",
+      "input_hash": "a55fa3c9bff3d43f3baf3a14ab6f30034cdb1af3dbd3d119a00c07c214052a1e",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/a55fa3c9bff3d43f3baf3a14ab6f30034cdb1af3dbd3d119a00c07c214052a1e.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_073d93e51299dcb4016af2bf40e26c87d1bd386d25115e100c",
+      "usage": {
+        "prompt_tokens": 7884,
+        "completion_tokens": 324,
+        "total_tokens": 8208,
+        "prompt_tokens_details": {
+          "cached_tokens": 5888
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 184
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "f6b632fc233963f6222f5f9f60f1df363b2fb7427930d6031a37aa46d482566d",
+      "input_hash": "5d001f3f84ece6f01e155f4b78dddbd7bffea8e0f557d705d03a1208d1ecdb26",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/5d001f3f84ece6f01e155f4b78dddbd7bffea8e0f557d705d03a1208d1ecdb26.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0a6b8b68fed6edd7016af2bf4af5f487d2a6b2d5424487bdbd",
+      "usage": {
+        "prompt_tokens": 7342,
+        "completion_tokens": 299,
+        "total_tokens": 7641,
+        "prompt_tokens_details": {
+          "cached_tokens": 5248
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 186
+        }
+      }
+    }
+  ]
+}

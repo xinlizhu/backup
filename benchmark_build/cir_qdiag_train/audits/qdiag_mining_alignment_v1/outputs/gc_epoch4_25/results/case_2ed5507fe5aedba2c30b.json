@@ -1,0 +1,166 @@
+{
+  "case_id": "case_2ed5507fe5aedba2c30b",
+  "audit_query_id": "audit_query_079",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_2ed5507fe5aedba2c30b",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "A black, bowl-shaped vessel sink is prominently visible beside a running faucet."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The image shows an interior staircase with black balusters and wooden handrails; no bowl sink is visible."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "A bowl sink must be visible."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "object",
+        "before_span": "bowl sink",
+        "after_span": "baluster",
+        "edited_instruction": "Show a black baluster.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "Replace the requested bowl sink with a baluster, retaining the black color constraint.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The image shows a black vessel sink and faucet, with no baluster visible."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Numerous black vertical balusters support the staircase handrails."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_2ed5507fe5aedba2c30b",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 clearly shows a dark black bowl-shaped sink."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a staircase with railings and balusters, not a bowl sink."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing “bowl sink” with “baluster” is one object substitution; the edited instruction is fluent, and Image 3 visibly contains black balusters while Image 2 shows a sink instead.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 shows a black bowl sink, not a baluster."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 visibly shows black balusters in the staircase railing."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "substitute",
+      "semantic_target": "object",
+      "before_span": "bowl sink",
+      "after_span": "baluster",
+      "edited_instruction": "Show a black baluster.",
+      "witness_type": "substitution_contrast",
+      "changed_constraint": "Replace the requested bowl sink with a baluster, retaining the black color constraint.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "The image shows a black vessel sink and faucet, with no baluster visible."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "Numerous black vertical balusters support the staircase handrails."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing “bowl sink” with “baluster” is one object substitution; the edited instruction is fluent, and Image 3 visibly contains black balusters while Image 2 shows a sink instead.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 shows a black bowl sink, not a baluster."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 visibly shows black balusters in the staircase railing."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "e31dfa2a2bfc3a44df4e9d28def1c7d7961a273dc139be703891b1f86fbfabab",
+      "input_hash": "d5ba82edf9daf6bbeea7b462106fd3213745e0039c1a95deed65ec2267ee02fc",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/d5ba82edf9daf6bbeea7b462106fd3213745e0039c1a95deed65ec2267ee02fc.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0d263366cdc3fa95016af2beaafd8087d2a3e1ad28cfa34a4b",
+      "usage": {
+        "prompt_tokens": 8389,
+        "completion_tokens": 455,
+        "total_tokens": 8844,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 129
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "4a5e668e693a7c44e100b28926f565e4af2ddeafac05af6249c7277542b22baf",
+      "input_hash": "f41f71ea2d011bb6dc6df3d953ed362e9c177aef6029dfb540a4fa69852eafa0",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/f41f71ea2d011bb6dc6df3d953ed362e9c177aef6029dfb540a4fa69852eafa0.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0d645449d02b0b30016af2beb8cf5087d280be984e799e7ce6",
+      "usage": {
+        "prompt_tokens": 8072,
+        "completion_tokens": 325,
+        "total_tokens": 8397,
+        "prompt_tokens_details": {
+          "cached_tokens": 5248
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 118
+        }
+      }
+    }
+  ]
+}

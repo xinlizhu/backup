@@ -1,0 +1,134 @@
+{
+  "case_id": "case_8b250b3ad870bdd0920a",
+  "audit_query_id": "audit_query_085",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_8b250b3ad870bdd0920a",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Several gorillas are seated on fallen tree trunks lying on the ground."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Two monkeys sit together on a large rock, not on different tree trunks."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The monkeys sit on different tree trunks."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "substitute_object_1",
+        "operation": "substitute",
+        "semantic_target": "object",
+        "before_span": "on different tree trunks",
+        "after_span": "on a rock",
+        "edited_instruction": "Monkeys sit on a rock on the ground.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "The sitting surface changes from different tree trunks to a rock.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The seated gorillas are on fallen trunks; no rock serves as their sitting surface."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Both monkeys are seated on the visible large rock."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_8b250b3ad870bdd0920a",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The primates sit on several distinct fallen trunks and logs arranged over the dirt ground."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Two baboons sit together on one broad rock; they are not seated on different tree trunks."
+    },
+    "verdicts": [
+      {
+        "witness_id": "substitute_object_1",
+        "decision": "reject",
+        "failure_code": "not_single_edit",
+        "witness_type": null,
+        "reason": "The spans reconstruct the proposed instruction, but the replacement bundles two changes: tree trunks become rock, and separate seating surfaces ('different') become one shared surface ('a'). Object identity can change, but the independent distribution constraint is also changed.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The seated primates are supported by wooden trunks and logs, not a rock."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Both baboons are visibly seated on the same broad rock amid ground vegetation."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [],
+  "local_checks": [
+    {
+      "witness_id": "substitute_object_1",
+      "accepted": false,
+      "local_failures": [
+        "wrong_witness_type"
+      ],
+      "review_decision": "reject"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "45d237de7d6806b4f174a473fae63c05c0437edbce796c4acb34e3ec82f92481",
+      "input_hash": "15083798fe74c4d0ade47b7e8c4ff24335f4bf2ce25a6cbbb5781a572a3e0278",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/15083798fe74c4d0ade47b7e8c4ff24335f4bf2ce25a6cbbb5781a572a3e0278.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_057352ec3c8d4e25016af2bfcbaa5487d09e8f8629fa71c96a",
+      "usage": {
+        "prompt_tokens": 8335,
+        "completion_tokens": 703,
+        "total_tokens": 9038,
+        "prompt_tokens_details": {
+          "cached_tokens": 5888
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 378
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "9b69a88eedc41f17f8b446a78a33a3d195e7570e5e48cc54176c73e657790f1e",
+      "input_hash": "6bd76d2d194b44c695fb079954f7829965dc4fa9ad74235cfb434a71f40a7deb",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/6bd76d2d194b44c695fb079954f7829965dc4fa9ad74235cfb434a71f40a7deb.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_060b3eb7c1b5924a016af2bff6dd5087d1a141c78b9110a2d4",
+      "usage": {
+        "prompt_tokens": 7699,
+        "completion_tokens": 403,
+        "total_tokens": 8102,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 113
+        }
+      }
+    }
+  ]
+}

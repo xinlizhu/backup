@@ -1,0 +1,15 @@
+model_path: /mnt/data/datasets/search_dataset/zxl/QW/Qwen3.6-27B
+served_model_name: qwen3.6-27b
+host: 127.0.0.1
+port: 8000
+dtype: bfloat16
+max_model_len: 32768
+max_num_batched_tokens: 32768
+max_num_seqs: 2
+gpu_memory_utilization: 0.95
+# On H100, vLLM's auto mode selects a JIT-compiled FlashInfer GDN kernel.
+# Triton avoids requiring a locally compatible CUDA/CCCL compiler toolchain.
+gdn_prefill_backend: triton
+mm_processor_kwargs:
+  max_pixels: 4194304
+image_root: /mnt/data/datasets/search_dataset/zxl/CIR_new/datasets/CIRR

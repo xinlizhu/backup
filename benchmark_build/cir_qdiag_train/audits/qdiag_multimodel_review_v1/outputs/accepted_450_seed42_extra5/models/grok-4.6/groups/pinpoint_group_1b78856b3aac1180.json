@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_1b78856b3aac1180",
+  "model": "grok-4.6",
+  "signature": "cb958fa178e5ebcdd33f446ebd46fe25a7c20417ca5539cc74de61fb4df99804",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_1b78856b3aac1180_query_01669_object_substitute",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Single object substitution of dress to shirt; fluent and otherwise unchanged. Every supplied positive is a dress or gown, so shirt is clearly false for all."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.6",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "7e502fd843e1d4285e9758257b78f4ec65218c7dfcaf61febd1837c32ec8c091",
+      "input_hash": "d0ba83cc6bae0982174214e49733049855fe0aa99d7908e5ad7a74141ca71436",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/grok-4.6/cache/validate_group/d0ba83cc6bae0982174214e49733049855fe0aa99d7908e5ad7a74141ca71436.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "3f2ef8da-8be4-998c-acf6-a96ee5e2aef2",
+      "usage": {
+        "prompt_tokens": 5108,
+        "completion_tokens": 79,
+        "total_tokens": 6528,
+        "prompt_tokens_details": {
+          "text_tokens": 2513,
+          "audio_tokens": 0,
+          "image_tokens": 2595,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1341,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 156640000
+      }
+    }
+  ],
+  "format_warnings": []
+}

@@ -1,0 +1,637 @@
+[load model] CLIP4CIR-CIRR-RN50x4
+[loaded] strict weights
+[cirr_val images] 256/2297 elapsed=4.8s
+[cirr_val images] 512/2297 elapsed=5.5s
+[cirr_val images] 768/2297 elapsed=6.3s
+[cirr_val images] 1024/2297 elapsed=7.2s
+[cirr_val images] 1280/2297 elapsed=7.8s
+[cirr_val images] 1536/2297 elapsed=8.8s
+[cirr_val images] 1792/2297 elapsed=9.6s
+[cirr_val images] 2048/2297 elapsed=10.2s
+[cirr_val images] 2297/2297 elapsed=11.0s
+[cirr_val queries] 256/4181 elapsed=11.3s
+[cirr_val queries] 512/4181 elapsed=11.3s
+[cirr_val queries] 768/4181 elapsed=11.4s
+[cirr_val queries] 1024/4181 elapsed=11.5s
+[cirr_val queries] 1280/4181 elapsed=11.5s
+[cirr_val queries] 1536/4181 elapsed=11.6s
+[cirr_val queries] 1792/4181 elapsed=11.6s
+[cirr_val queries] 2048/4181 elapsed=11.7s
+[cirr_val queries] 2304/4181 elapsed=11.7s
+[cirr_val queries] 2560/4181 elapsed=11.8s
+[cirr_val queries] 2816/4181 elapsed=11.8s
+[cirr_val queries] 3072/4181 elapsed=11.9s
+[cirr_val queries] 3328/4181 elapsed=11.9s
+[cirr_val queries] 3584/4181 elapsed=12.0s
+[cirr_val queries] 3840/4181 elapsed=12.0s
+[cirr_val queries] 4096/4181 elapsed=12.1s
+[cirr_val queries] 4181/4181 elapsed=12.1s
+/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/scripts/evaluate_cirr_original_adapter.py:268: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at /pytorch/torch/csrc/utils/tensor_numpy.cpp:213.)
+  gallery_device = torch.from_numpy(
+CLIP4CIR-CIRR-RN50x4 CIRR-val scoring:   0%|          | 0/9 [00:00<?, ?it/s]CLIP4CIR-CIRR-RN50x4 CIRR-val scoring:  11%|█         | 1/9 [00:00<00:01,  7.09it/s]CLIP4CIR-CIRR-RN50x4 CIRR-val scoring:  33%|███▎      | 3/9 [00:00<00:00, 11.93it/s]CLIP4CIR-CIRR-RN50x4 CIRR-val scoring:  56%|█████▌    | 5/9 [00:00<00:00, 14.14it/s]CLIP4CIR-CIRR-RN50x4 CIRR-val scoring:  78%|███████▊  | 7/9 [00:00<00:00, 15.82it/s]CLIP4CIR-CIRR-RN50x4 CIRR-val scoring: 100%|██████████| 9/9 [00:00<00:00, 15.52it/s]
+[metrics] cirr_val {"model": "CLIP4CIR-CIRR-RN50x4", "checkpoint": "/mnt/data/datasets/search_dataset/zxl/models/CLIP4CIR/weights/CIRR/RN50x4_fullft/cirr_comb_RN50x4_fullft.pt", "num_queries": 4181, "recall_at_1": 45.3719, "recall_at_5": 78.474, "recall_at_10": 87.8737, "recall_at_50": 97.68, "group_recall_at_1": 72.973, "group_recall_at_2": 88.8065, "group_recall_at_3": 95.2165}
+[fashioniq_dress images] 256/3817 elapsed=0.6s
+[fashioniq_dress images] 512/3817 elapsed=1.0s
+[fashioniq_dress images] 768/3817 elapsed=1.5s
+[fashioniq_dress images] 1024/3817 elapsed=1.9s
+[fashioniq_dress images] 1280/3817 elapsed=2.3s
+[fashioniq_dress images] 1536/3817 elapsed=2.8s
+[fashioniq_dress images] 1792/3817 elapsed=3.2s
+[fashioniq_dress images] 2048/3817 elapsed=3.7s
+[fashioniq_dress images] 2304/3817 elapsed=4.1s
+[fashioniq_dress images] 2560/3817 elapsed=4.6s
+[fashioniq_dress images] 2816/3817 elapsed=5.0s
+[fashioniq_dress images] 3072/3817 elapsed=5.5s
+[fashioniq_dress images] 3328/3817 elapsed=5.9s
+[fashioniq_dress images] 3584/3817 elapsed=6.4s
+[fashioniq_dress images] 3817/3817 elapsed=6.8s
+[fashioniq_dress queries] 256/2017 elapsed=6.8s
+[fashioniq_dress queries] 512/2017 elapsed=6.9s
+[fashioniq_dress queries] 768/2017 elapsed=6.9s
+[fashioniq_dress queries] 1024/2017 elapsed=7.0s
+[fashioniq_dress queries] 1280/2017 elapsed=7.1s
+[fashioniq_dress queries] 1536/2017 elapsed=7.2s
+[fashioniq_dress queries] 1792/2017 elapsed=7.2s
+[fashioniq_dress queries] 2017/2017 elapsed=7.3s
+FashionIQ scoring:   0%|          | 0/4 [00:00<?, ?it/s]FashionIQ scoring: 100%|██████████| 4/4 [00:00<00:00, 801.05it/s]
+[metrics] fashioniq_dress {"num_queries": 2017, "gallery_size": 3817, "recall_at_1": 5.2058, "recall_at_5": 14.9232, "recall_at_10": 21.1701, "recall_at_50": 44.9182}
+[fashioniq_shirt images] 256/6346 elapsed=0.6s
+[fashioniq_shirt images] 512/6346 elapsed=1.0s
+[fashioniq_shirt images] 768/6346 elapsed=1.5s
+[fashioniq_shirt images] 1024/6346 elapsed=2.0s
+[fashioniq_shirt images] 1280/6346 elapsed=2.5s
+[fashioniq_shirt images] 1536/6346 elapsed=3.1s
+[fashioniq_shirt images] 1792/6346 elapsed=3.7s
+[fashioniq_shirt images] 2048/6346 elapsed=4.2s
+[fashioniq_shirt images] 2304/6346 elapsed=4.6s
+[fashioniq_shirt images] 2560/6346 elapsed=5.2s
+[fashioniq_shirt images] 2816/6346 elapsed=5.6s
+[fashioniq_shirt images] 3072/6346 elapsed=6.1s
+[fashioniq_shirt images] 3328/6346 elapsed=6.6s
+[fashioniq_shirt images] 3584/6346 elapsed=7.1s
+[fashioniq_shirt images] 3840/6346 elapsed=7.6s
+[fashioniq_shirt images] 4096/6346 elapsed=8.2s
+[fashioniq_shirt images] 4352/6346 elapsed=8.6s
+[fashioniq_shirt images] 4608/6346 elapsed=9.1s
+[fashioniq_shirt images] 4864/6346 elapsed=9.6s
+[fashioniq_shirt images] 5120/6346 elapsed=10.1s
+[fashioniq_shirt images] 5376/6346 elapsed=10.5s
+[fashioniq_shirt images] 5632/6346 elapsed=10.9s
+[fashioniq_shirt images] 5888/6346 elapsed=11.3s
+[fashioniq_shirt images] 6144/6346 elapsed=11.8s
+[fashioniq_shirt images] 6346/6346 elapsed=12.1s
+[fashioniq_shirt queries] 256/2038 elapsed=12.2s
+[fashioniq_shirt queries] 512/2038 elapsed=12.2s
+[fashioniq_shirt queries] 768/2038 elapsed=12.3s
+[fashioniq_shirt queries] 1024/2038 elapsed=12.3s
+[fashioniq_shirt queries] 1280/2038 elapsed=12.4s
+[fashioniq_shirt queries] 1536/2038 elapsed=12.4s
+[fashioniq_shirt queries] 1792/2038 elapsed=12.5s
+[fashioniq_shirt queries] 2038/2038 elapsed=12.5s
+FashionIQ scoring:   0%|          | 0/4 [00:00<?, ?it/s]FashionIQ scoring: 100%|██████████| 4/4 [00:00<00:00, 688.69it/s]
+[metrics] fashioniq_shirt {"num_queries": 2038, "gallery_size": 6346, "recall_at_1": 10.5005, "recall_at_5": 21.0991, "recall_at_10": 26.5947, "recall_at_50": 45.2404}
+[fashioniq_toptee images] 256/5373 elapsed=0.5s
+[fashioniq_toptee images] 512/5373 elapsed=1.1s
+[fashioniq_toptee images] 768/5373 elapsed=1.5s
+[fashioniq_toptee images] 1024/5373 elapsed=1.9s
+[fashioniq_toptee images] 1280/5373 elapsed=2.5s
+[fashioniq_toptee images] 1536/5373 elapsed=2.9s
+[fashioniq_toptee images] 1792/5373 elapsed=3.5s
+[fashioniq_toptee images] 2048/5373 elapsed=4.1s
+[fashioniq_toptee images] 2304/5373 elapsed=4.7s
+[fashioniq_toptee images] 2560/5373 elapsed=5.1s
+[fashioniq_toptee images] 2816/5373 elapsed=5.6s
+[fashioniq_toptee images] 3072/5373 elapsed=6.2s
+[fashioniq_toptee images] 3328/5373 elapsed=6.7s
+[fashioniq_toptee images] 3584/5373 elapsed=7.1s
+[fashioniq_toptee images] 3840/5373 elapsed=7.6s
+[fashioniq_toptee images] 4096/5373 elapsed=8.2s
+[fashioniq_toptee images] 4352/5373 elapsed=8.6s
+[fashioniq_toptee images] 4608/5373 elapsed=9.0s
+[fashioniq_toptee images] 4864/5373 elapsed=9.6s
+[fashioniq_toptee images] 5120/5373 elapsed=10.0s
+[fashioniq_toptee images] 5373/5373 elapsed=10.5s
+[fashioniq_toptee queries] 256/1961 elapsed=10.5s
+[fashioniq_toptee queries] 512/1961 elapsed=10.6s
+[fashioniq_toptee queries] 768/1961 elapsed=10.6s
+[fashioniq_toptee queries] 1024/1961 elapsed=10.7s
+[fashioniq_toptee queries] 1280/1961 elapsed=10.8s
+[fashioniq_toptee queries] 1536/1961 elapsed=10.8s
+[fashioniq_toptee queries] 1792/1961 elapsed=10.9s
+[fashioniq_toptee queries] 1961/1961 elapsed=11.0s
+FashionIQ scoring:   0%|          | 0/4 [00:00<?, ?it/s]FashionIQ scoring: 100%|██████████| 4/4 [00:00<00:00, 798.69it/s]
+[metrics] fashioniq_toptee {"num_queries": 1961, "gallery_size": 5373, "recall_at_1": 8.4141, "recall_at_5": 18.511, "recall_at_10": 27.231, "recall_at_50": 50.0255}
+[pinpoint images] 256/109598 elapsed=0.7s
+[pinpoint images] 512/109598 elapsed=1.2s
+[pinpoint images] 768/109598 elapsed=1.8s
+[pinpoint images] 1024/109598 elapsed=2.5s
+[pinpoint images] 1280/109598 elapsed=3.1s
+[pinpoint images] 1536/109598 elapsed=3.6s
+[pinpoint images] 1792/109598 elapsed=4.1s
+[pinpoint images] 2048/109598 elapsed=4.7s
+[pinpoint images] 2304/109598 elapsed=5.3s
+[pinpoint images] 2560/109598 elapsed=6.0s
+[pinpoint images] 2816/109598 elapsed=6.6s
+[pinpoint images] 3072/109598 elapsed=7.1s
+[pinpoint images] 3328/109598 elapsed=7.6s
+[pinpoint images] 3584/109598 elapsed=8.1s
+[pinpoint images] 3840/109598 elapsed=8.6s
+[pinpoint images] 4096/109598 elapsed=9.1s
+[pinpoint images] 4352/109598 elapsed=9.6s
+[pinpoint images] 4608/109598 elapsed=10.1s
+[pinpoint images] 4864/109598 elapsed=10.6s
+[pinpoint images] 5120/109598 elapsed=11.1s
+[pinpoint images] 5376/109598 elapsed=11.8s
+[pinpoint images] 5632/109598 elapsed=12.3s
+[pinpoint images] 5888/109598 elapsed=12.8s
+[pinpoint images] 6144/109598 elapsed=13.4s
+[pinpoint images] 6400/109598 elapsed=14.0s
+[pinpoint images] 6656/109598 elapsed=14.5s
+[pinpoint images] 6912/109598 elapsed=15.1s
+[pinpoint images] 7168/109598 elapsed=15.7s
+[pinpoint images] 7424/109598 elapsed=16.3s
+[pinpoint images] 7680/109598 elapsed=16.9s
+[pinpoint images] 7936/109598 elapsed=17.5s
+[pinpoint images] 8192/109598 elapsed=18.0s
+[pinpoint images] 8448/109598 elapsed=18.5s
+[pinpoint images] 8704/109598 elapsed=19.3s
+[pinpoint images] 8960/109598 elapsed=20.0s
+[pinpoint images] 9216/109598 elapsed=20.6s
+[pinpoint images] 9472/109598 elapsed=21.1s
+[pinpoint images] 9728/109598 elapsed=21.6s
+[pinpoint images] 9984/109598 elapsed=22.2s
+[pinpoint images] 10240/109598 elapsed=22.9s
+[pinpoint images] 10496/109598 elapsed=23.5s
+[pinpoint images] 10752/109598 elapsed=24.0s
+[pinpoint images] 11008/109598 elapsed=24.5s
+[pinpoint images] 11264/109598 elapsed=25.0s
+[pinpoint images] 11520/109598 elapsed=25.7s
+[pinpoint images] 11776/109598 elapsed=26.2s
+[pinpoint images] 12032/109598 elapsed=26.7s
+[pinpoint images] 12288/109598 elapsed=27.2s
+[pinpoint images] 12544/109598 elapsed=27.7s
+[pinpoint images] 12800/109598 elapsed=28.2s
+[pinpoint images] 13056/109598 elapsed=28.7s
+[pinpoint images] 13312/109598 elapsed=29.3s
+[pinpoint images] 13568/109598 elapsed=29.8s
+[pinpoint images] 13824/109598 elapsed=30.3s
+[pinpoint images] 14080/109598 elapsed=31.0s
+[pinpoint images] 14336/109598 elapsed=31.5s
+[pinpoint images] 14592/109598 elapsed=32.0s
+[pinpoint images] 14848/109598 elapsed=32.6s
+[pinpoint images] 15104/109598 elapsed=33.3s
+[pinpoint images] 15360/109598 elapsed=34.0s
+[pinpoint images] 15616/109598 elapsed=34.7s
+[pinpoint images] 15872/109598 elapsed=35.4s
+[pinpoint images] 16128/109598 elapsed=36.0s
+[pinpoint images] 16384/109598 elapsed=36.5s
+[pinpoint images] 16640/109598 elapsed=37.0s
+[pinpoint images] 16896/109598 elapsed=37.6s
+[pinpoint images] 17152/109598 elapsed=38.3s
+[pinpoint images] 17408/109598 elapsed=38.9s
+[pinpoint images] 17664/109598 elapsed=39.5s
+[pinpoint images] 17920/109598 elapsed=40.0s
+[pinpoint images] 18176/109598 elapsed=40.6s
+[pinpoint images] 18432/109598 elapsed=41.3s
+[pinpoint images] 18688/109598 elapsed=42.0s
+[pinpoint images] 18944/109598 elapsed=42.8s
+[pinpoint images] 19200/109598 elapsed=43.5s
+[pinpoint images] 19456/109598 elapsed=44.0s
+[pinpoint images] 19712/109598 elapsed=44.6s
+[pinpoint images] 19968/109598 elapsed=45.1s
+[pinpoint images] 20224/109598 elapsed=45.7s
+[pinpoint images] 20480/109598 elapsed=46.4s
+[pinpoint images] 20736/109598 elapsed=47.2s
+[pinpoint images] 20992/109598 elapsed=47.9s
+[pinpoint images] 21248/109598 elapsed=48.6s
+[pinpoint images] 21504/109598 elapsed=49.3s
+[pinpoint images] 21760/109598 elapsed=49.8s
+[pinpoint images] 22016/109598 elapsed=50.4s
+[pinpoint images] 22272/109598 elapsed=50.9s
+[pinpoint images] 22528/109598 elapsed=51.5s
+[pinpoint images] 22784/109598 elapsed=52.2s
+[pinpoint images] 23040/109598 elapsed=52.9s
+[pinpoint images] 23296/109598 elapsed=53.5s
+[pinpoint images] 23552/109598 elapsed=54.0s
+[pinpoint images] 23808/109598 elapsed=54.6s
+[pinpoint images] 24064/109598 elapsed=55.2s
+[pinpoint images] 24320/109598 elapsed=55.9s
+[pinpoint images] 24576/109598 elapsed=56.6s
+[pinpoint images] 24832/109598 elapsed=57.3s
+[pinpoint images] 25088/109598 elapsed=57.9s
+[pinpoint images] 25344/109598 elapsed=58.4s
+[pinpoint images] 25600/109598 elapsed=59.0s
+[pinpoint images] 25856/109598 elapsed=59.6s
+[pinpoint images] 26112/109598 elapsed=60.3s
+[pinpoint images] 26368/109598 elapsed=60.8s
+[pinpoint images] 26624/109598 elapsed=61.3s
+[pinpoint images] 26880/109598 elapsed=61.9s
+[pinpoint images] 27136/109598 elapsed=62.5s
+[pinpoint images] 27392/109598 elapsed=63.2s
+[pinpoint images] 27648/109598 elapsed=63.8s
+[pinpoint images] 27904/109598 elapsed=64.3s
+[pinpoint images] 28160/109598 elapsed=64.8s
+[pinpoint images] 28416/109598 elapsed=65.4s
+[pinpoint images] 28672/109598 elapsed=66.1s
+[pinpoint images] 28928/109598 elapsed=66.8s
+[pinpoint images] 29184/109598 elapsed=67.5s
+[pinpoint images] 29440/109598 elapsed=68.4s
+[pinpoint images] 29696/109598 elapsed=69.0s
+[pinpoint images] 29952/109598 elapsed=69.5s
+[pinpoint images] 30208/109598 elapsed=70.1s
+[pinpoint images] 30464/109598 elapsed=70.7s
+[pinpoint images] 30720/109598 elapsed=71.4s
+[pinpoint images] 30976/109598 elapsed=72.0s
+[pinpoint images] 31232/109598 elapsed=72.9s
+[pinpoint images] 31488/109598 elapsed=73.6s
+[pinpoint images] 31744/109598 elapsed=74.3s
+[pinpoint images] 32000/109598 elapsed=75.0s
+[pinpoint images] 32256/109598 elapsed=75.5s
+[pinpoint images] 32512/109598 elapsed=76.1s
+[pinpoint images] 32768/109598 elapsed=76.7s
+[pinpoint images] 33024/109598 elapsed=77.4s
+[pinpoint images] 33280/109598 elapsed=78.3s
+[pinpoint images] 33536/109598 elapsed=79.3s
+[pinpoint images] 33792/109598 elapsed=80.1s
+[pinpoint images] 34048/109598 elapsed=80.7s
+[pinpoint images] 34304/109598 elapsed=81.2s
+[pinpoint images] 34560/109598 elapsed=81.8s
+[pinpoint images] 34816/109598 elapsed=82.6s
+[pinpoint images] 35072/109598 elapsed=83.6s
+[pinpoint images] 35328/109598 elapsed=84.4s
+[pinpoint images] 35584/109598 elapsed=85.1s
+[pinpoint images] 35840/109598 elapsed=85.7s
+[pinpoint images] 36096/109598 elapsed=86.4s
+[pinpoint images] 36352/109598 elapsed=87.1s
+[pinpoint images] 36608/109598 elapsed=87.9s
+[pinpoint images] 36864/109598 elapsed=89.0s
+[pinpoint images] 37120/109598 elapsed=89.8s
+[pinpoint images] 37376/109598 elapsed=90.6s
+[pinpoint images] 37632/109598 elapsed=91.2s
+[pinpoint images] 37888/109598 elapsed=91.8s
+[pinpoint images] 38144/109598 elapsed=92.7s
+[pinpoint images] 38400/109598 elapsed=93.5s
+[pinpoint images] 38656/109598 elapsed=94.4s
+[pinpoint images] 38912/109598 elapsed=95.2s
+[pinpoint images] 39168/109598 elapsed=95.9s
+[pinpoint images] 39424/109598 elapsed=96.5s
+[pinpoint images] 39680/109598 elapsed=97.3s
+[pinpoint images] 39936/109598 elapsed=97.9s
+[pinpoint images] 40192/109598 elapsed=98.5s
+[pinpoint images] 40448/109598 elapsed=99.1s
+[pinpoint images] 40704/109598 elapsed=99.8s
+[pinpoint images] 40960/109598 elapsed=100.7s
+[pinpoint images] 41216/109598 elapsed=101.6s
+[pinpoint images] 41472/109598 elapsed=102.5s
+[pinpoint images] 41728/109598 elapsed=103.4s
+[pinpoint images] 41984/109598 elapsed=104.0s
+[pinpoint images] 42240/109598 elapsed=104.8s
+[pinpoint images] 42496/109598 elapsed=105.4s
+[pinpoint images] 42752/109598 elapsed=105.9s
+[pinpoint images] 43008/109598 elapsed=106.6s
+[pinpoint images] 43264/109598 elapsed=107.2s
+[pinpoint images] 43520/109598 elapsed=107.8s
+[pinpoint images] 43776/109598 elapsed=108.4s
+[pinpoint images] 44032/109598 elapsed=109.3s
+[pinpoint images] 44288/109598 elapsed=109.9s
+[pinpoint images] 44544/109598 elapsed=110.7s
+[pinpoint images] 44800/109598 elapsed=111.5s
+[pinpoint images] 45056/109598 elapsed=112.3s
+[pinpoint images] 45312/109598 elapsed=113.1s
+[pinpoint images] 45568/109598 elapsed=113.7s
+[pinpoint images] 45824/109598 elapsed=114.3s
+[pinpoint images] 46080/109598 elapsed=115.0s
+[pinpoint images] 46336/109598 elapsed=115.6s
+[pinpoint images] 46592/109598 elapsed=116.3s
+[pinpoint images] 46848/109598 elapsed=117.0s
+[pinpoint images] 47104/109598 elapsed=117.7s
+[pinpoint images] 47360/109598 elapsed=118.3s
+[pinpoint images] 47616/109598 elapsed=119.1s
+[pinpoint images] 47872/109598 elapsed=119.9s
+[pinpoint images] 48128/109598 elapsed=120.7s
+[pinpoint images] 48384/109598 elapsed=121.5s
+[pinpoint images] 48640/109598 elapsed=122.1s
+[pinpoint images] 48896/109598 elapsed=122.7s
+[pinpoint images] 49152/109598 elapsed=123.3s
+[pinpoint images] 49408/109598 elapsed=123.9s
+[pinpoint images] 49664/109598 elapsed=124.5s
+[pinpoint images] 49920/109598 elapsed=125.2s
+[pinpoint images] 50176/109598 elapsed=125.9s
+[pinpoint images] 50432/109598 elapsed=126.7s
+[pinpoint images] 50688/109598 elapsed=127.6s
+[pinpoint images] 50944/109598 elapsed=128.4s
+[pinpoint images] 51200/109598 elapsed=129.0s
+[pinpoint images] 51456/109598 elapsed=129.5s
+[pinpoint images] 51712/109598 elapsed=130.1s
+[pinpoint images] 51968/109598 elapsed=130.8s
+[pinpoint images] 52224/109598 elapsed=131.5s
+[pinpoint images] 52480/109598 elapsed=132.0s
+[pinpoint images] 52736/109598 elapsed=132.6s
+[pinpoint images] 52992/109598 elapsed=133.4s
+[pinpoint images] 53248/109598 elapsed=134.1s
+[pinpoint images] 53504/109598 elapsed=134.8s
+[pinpoint images] 53760/109598 elapsed=135.6s
+[pinpoint images] 54016/109598 elapsed=136.7s
+[pinpoint images] 54272/109598 elapsed=137.6s
+[pinpoint images] 54528/109598 elapsed=138.4s
+[pinpoint images] 54784/109598 elapsed=139.3s
+[pinpoint images] 55040/109598 elapsed=140.2s
+[pinpoint images] 55296/109598 elapsed=140.8s
+[pinpoint images] 55552/109598 elapsed=142.0s
+[pinpoint images] 55808/109598 elapsed=142.6s
+[pinpoint images] 56064/109598 elapsed=143.4s
+[pinpoint images] 56320/109598 elapsed=144.4s
+[pinpoint images] 56576/109598 elapsed=145.1s
+[pinpoint images] 56832/109598 elapsed=145.7s
+[pinpoint images] 57088/109598 elapsed=146.2s
+[pinpoint images] 57344/109598 elapsed=146.9s
+[pinpoint images] 57600/109598 elapsed=147.4s
+[pinpoint images] 57856/109598 elapsed=148.2s
+[pinpoint images] 58112/109598 elapsed=149.0s
+[pinpoint images] 58368/109598 elapsed=149.6s
+[pinpoint images] 58624/109598 elapsed=150.2s
+[pinpoint images] 58880/109598 elapsed=152.4s
+[pinpoint images] 59136/109598 elapsed=153.7s
+[pinpoint images] 59392/109598 elapsed=154.4s
+[pinpoint images] 59648/109598 elapsed=155.5s
+[pinpoint images] 59904/109598 elapsed=156.1s
+[pinpoint images] 60160/109598 elapsed=156.7s
+[pinpoint images] 60416/109598 elapsed=157.2s
+[pinpoint images] 60672/109598 elapsed=157.9s
+[pinpoint images] 60928/109598 elapsed=158.6s
+[pinpoint images] 61184/109598 elapsed=159.3s
+[pinpoint images] 61440/109598 elapsed=160.1s
+[pinpoint images] 61696/109598 elapsed=160.9s
+[pinpoint images] 61952/109598 elapsed=161.6s
+[pinpoint images] 62208/109598 elapsed=162.4s
+[pinpoint images] 62464/109598 elapsed=163.2s
+[pinpoint images] 62720/109598 elapsed=165.9s
+[pinpoint images] 62976/109598 elapsed=168.8s
+[pinpoint images] 63232/109598 elapsed=171.2s
+[pinpoint images] 63488/109598 elapsed=172.6s
+[pinpoint images] 63744/109598 elapsed=173.4s
+[pinpoint images] 64000/109598 elapsed=174.3s
+[pinpoint images] 64256/109598 elapsed=174.9s
+[pinpoint images] 64512/109598 elapsed=175.6s
+[pinpoint images] 64768/109598 elapsed=176.1s
+[pinpoint images] 65024/109598 elapsed=176.9s
+[pinpoint images] 65280/109598 elapsed=177.7s
+[pinpoint images] 65536/109598 elapsed=178.5s
+[pinpoint images] 65792/109598 elapsed=179.0s
+[pinpoint images] 66048/109598 elapsed=179.6s
+[pinpoint images] 66304/109598 elapsed=180.2s
+[pinpoint images] 66560/109598 elapsed=180.9s
+[pinpoint images] 66816/109598 elapsed=181.5s
+[pinpoint images] 67072/109598 elapsed=182.1s
+[pinpoint images] 67328/109598 elapsed=182.7s
+[pinpoint images] 67584/109598 elapsed=183.2s
+[pinpoint images] 67840/109598 elapsed=184.0s
+[pinpoint images] 68096/109598 elapsed=186.2s
+[pinpoint images] 68352/109598 elapsed=187.8s
+[pinpoint images] 68608/109598 elapsed=188.9s
+[pinpoint images] 68864/109598 elapsed=189.9s
+[pinpoint images] 69120/109598 elapsed=190.9s
+[pinpoint images] 69376/109598 elapsed=191.8s
+[pinpoint images] 69632/109598 elapsed=192.7s
+[pinpoint images] 69888/109598 elapsed=193.7s
+[pinpoint images] 70144/109598 elapsed=195.8s
+[pinpoint images] 70400/109598 elapsed=197.9s
+[pinpoint images] 70656/109598 elapsed=200.7s
+[pinpoint images] 70912/109598 elapsed=203.3s
+[pinpoint images] 71168/109598 elapsed=205.2s
+[pinpoint images] 71424/109598 elapsed=206.7s
+[pinpoint images] 71680/109598 elapsed=208.2s
+[pinpoint images] 71936/109598 elapsed=209.0s
+[pinpoint images] 72192/109598 elapsed=209.8s
+[pinpoint images] 72448/109598 elapsed=210.7s
+[pinpoint images] 72704/109598 elapsed=211.4s
+[pinpoint images] 72960/109598 elapsed=212.1s
+[pinpoint images] 73216/109598 elapsed=213.0s
+[pinpoint images] 73472/109598 elapsed=213.6s
+[pinpoint images] 73728/109598 elapsed=214.4s
+[pinpoint images] 73984/109598 elapsed=215.2s
+[pinpoint images] 74240/109598 elapsed=216.3s
+[pinpoint images] 74496/109598 elapsed=217.7s
+[pinpoint images] 74752/109598 elapsed=219.6s
+[pinpoint images] 75008/109598 elapsed=221.5s
+[pinpoint images] 75264/109598 elapsed=222.4s
+[pinpoint images] 75520/109598 elapsed=223.1s
+[pinpoint images] 75776/109598 elapsed=223.8s
+[pinpoint images] 76032/109598 elapsed=224.5s
+[pinpoint images] 76288/109598 elapsed=225.4s
+[pinpoint images] 76544/109598 elapsed=226.1s
+[pinpoint images] 76800/109598 elapsed=228.4s
+[pinpoint images] 77056/109598 elapsed=230.3s
+[pinpoint images] 77312/109598 elapsed=232.2s
+[pinpoint images] 77568/109598 elapsed=235.2s
+[pinpoint images] 77824/109598 elapsed=238.5s
+[pinpoint images] 78080/109598 elapsed=241.5s
+[pinpoint images] 78336/109598 elapsed=244.5s
+[pinpoint images] 78592/109598 elapsed=247.4s
+[pinpoint images] 78848/109598 elapsed=249.8s
+[pinpoint images] 79104/109598 elapsed=251.0s
+[pinpoint images] 79360/109598 elapsed=251.7s
+[pinpoint images] 79616/109598 elapsed=252.3s
+[pinpoint images] 79872/109598 elapsed=253.2s
+[pinpoint images] 80128/109598 elapsed=254.1s
+[pinpoint images] 80384/109598 elapsed=254.9s
+[pinpoint images] 80640/109598 elapsed=255.4s
+[pinpoint images] 80896/109598 elapsed=256.0s
+[pinpoint images] 81152/109598 elapsed=256.5s
+[pinpoint images] 81408/109598 elapsed=257.3s
+[pinpoint images] 81664/109598 elapsed=257.9s
+[pinpoint images] 81920/109598 elapsed=258.6s
+[pinpoint images] 82176/109598 elapsed=259.1s
+[pinpoint images] 82432/109598 elapsed=259.7s
+[pinpoint images] 82688/109598 elapsed=260.6s
+[pinpoint images] 82944/109598 elapsed=261.5s
+[pinpoint images] 83200/109598 elapsed=262.1s
+[pinpoint images] 83456/109598 elapsed=262.7s
+[pinpoint images] 83712/109598 elapsed=263.6s
+[pinpoint images] 83968/109598 elapsed=264.4s
+[pinpoint images] 84224/109598 elapsed=265.1s
+[pinpoint images] 84480/109598 elapsed=267.5s
+[pinpoint images] 84736/109598 elapsed=269.2s
+[pinpoint images] 84992/109598 elapsed=271.0s
+[pinpoint images] 85248/109598 elapsed=272.7s
+[pinpoint images] 85504/109598 elapsed=274.7s
+[pinpoint images] 85760/109598 elapsed=276.3s
+[pinpoint images] 86016/109598 elapsed=277.5s
+[pinpoint images] 86272/109598 elapsed=279.0s
+[pinpoint images] 86528/109598 elapsed=280.6s
+[pinpoint images] 86784/109598 elapsed=282.3s
+[pinpoint images] 87040/109598 elapsed=283.5s
+[pinpoint images] 87296/109598 elapsed=284.6s
+[pinpoint images] 87552/109598 elapsed=285.7s
+[pinpoint images] 87808/109598 elapsed=286.5s
+[pinpoint images] 88064/109598 elapsed=287.3s
+[pinpoint images] 88320/109598 elapsed=288.2s
+[pinpoint images] 88576/109598 elapsed=289.1s
+[pinpoint images] 88832/109598 elapsed=289.9s
+[pinpoint images] 89088/109598 elapsed=290.5s
+[pinpoint images] 89344/109598 elapsed=291.1s
+[pinpoint images] 89600/109598 elapsed=291.8s
+[pinpoint images] 89856/109598 elapsed=292.7s
+[pinpoint images] 90112/109598 elapsed=293.3s
+[pinpoint images] 90368/109598 elapsed=293.9s
+[pinpoint images] 90624/109598 elapsed=294.7s
+[pinpoint images] 90880/109598 elapsed=295.4s
+[pinpoint images] 91136/109598 elapsed=296.0s
+[pinpoint images] 91392/109598 elapsed=296.9s
+[pinpoint images] 91648/109598 elapsed=297.5s
+[pinpoint images] 91904/109598 elapsed=298.2s
+[pinpoint images] 92160/109598 elapsed=299.0s
+[pinpoint images] 92416/109598 elapsed=299.6s
+[pinpoint images] 92672/109598 elapsed=300.2s
+[pinpoint images] 92928/109598 elapsed=301.1s
+[pinpoint images] 93184/109598 elapsed=302.0s
+[pinpoint images] 93440/109598 elapsed=302.7s
+[pinpoint images] 93696/109598 elapsed=303.4s
+[pinpoint images] 93952/109598 elapsed=304.0s
+[pinpoint images] 94208/109598 elapsed=304.8s
+[pinpoint images] 94464/109598 elapsed=305.5s
+[pinpoint images] 94720/109598 elapsed=306.3s
+[pinpoint images] 94976/109598 elapsed=307.1s
+[pinpoint images] 95232/109598 elapsed=307.8s
+[pinpoint images] 95488/109598 elapsed=308.6s
+[pinpoint images] 95744/109598 elapsed=309.5s
+[pinpoint images] 96000/109598 elapsed=310.4s
+[pinpoint images] 96256/109598 elapsed=311.0s
+[pinpoint images] 96512/109598 elapsed=312.1s
+[pinpoint images] 96768/109598 elapsed=312.6s
+[pinpoint images] 97024/109598 elapsed=313.6s
+[pinpoint images] 97280/109598 elapsed=314.5s
+[pinpoint images] 97536/109598 elapsed=315.6s
+[pinpoint images] 97792/109598 elapsed=316.3s
+[pinpoint images] 98048/109598 elapsed=317.1s
+[pinpoint images] 98304/109598 elapsed=318.0s
+[pinpoint images] 98560/109598 elapsed=319.0s
+[pinpoint images] 98816/109598 elapsed=319.8s
+[pinpoint images] 99072/109598 elapsed=320.6s
+[pinpoint images] 99328/109598 elapsed=321.2s
+[pinpoint images] 99584/109598 elapsed=322.1s
+[pinpoint images] 99840/109598 elapsed=322.9s
+[pinpoint images] 100096/109598 elapsed=323.6s
+[pinpoint images] 100352/109598 elapsed=324.5s
+[pinpoint images] 100608/109598 elapsed=325.3s
+[pinpoint images] 100864/109598 elapsed=326.0s
+[pinpoint images] 101120/109598 elapsed=326.9s
+[pinpoint images] 101376/109598 elapsed=327.7s
+[pinpoint images] 101632/109598 elapsed=328.6s
+[pinpoint images] 101888/109598 elapsed=329.8s
+[pinpoint images] 102144/109598 elapsed=330.6s
+[pinpoint images] 102400/109598 elapsed=331.4s
+[pinpoint images] 102656/109598 elapsed=332.2s
+[pinpoint images] 102912/109598 elapsed=333.2s
+[pinpoint images] 103168/109598 elapsed=333.8s
+[pinpoint images] 103424/109598 elapsed=334.5s
+[pinpoint images] 103680/109598 elapsed=335.3s
+[pinpoint images] 103936/109598 elapsed=336.0s
+[pinpoint images] 104192/109598 elapsed=336.6s
+[pinpoint images] 104448/109598 elapsed=337.3s
+[pinpoint images] 104704/109598 elapsed=338.3s
+[pinpoint images] 104960/109598 elapsed=339.0s
+[pinpoint images] 105216/109598 elapsed=339.6s
+[pinpoint images] 105472/109598 elapsed=340.4s
+[pinpoint images] 105728/109598 elapsed=341.2s
+[pinpoint images] 105984/109598 elapsed=341.7s
+[pinpoint images] 106240/109598 elapsed=342.4s
+[pinpoint images] 106496/109598 elapsed=343.1s
+[pinpoint images] 106752/109598 elapsed=343.6s
+[pinpoint images] 107008/109598 elapsed=344.5s
+[pinpoint images] 107264/109598 elapsed=345.2s
+[pinpoint images] 107520/109598 elapsed=346.2s
+[pinpoint images] 107776/109598 elapsed=346.8s
+[pinpoint images] 108032/109598 elapsed=347.8s
+[pinpoint images] 108288/109598 elapsed=348.6s
+[pinpoint images] 108544/109598 elapsed=349.5s
+[pinpoint images] 108800/109598 elapsed=350.5s
+[pinpoint images] 109056/109598 elapsed=351.2s
+[pinpoint images] 109312/109598 elapsed=351.9s
+[pinpoint images] 109568/109598 elapsed=352.7s
+[pinpoint images] 109598/109598 elapsed=352.9s
+[pinpoint queries] 256/7635 elapsed=353.0s
+[pinpoint queries] 512/7635 elapsed=353.1s
+[pinpoint queries] 768/7635 elapsed=353.2s
+[pinpoint queries] 1024/7635 elapsed=353.3s
+[pinpoint queries] 1280/7635 elapsed=353.4s
+[pinpoint queries] 1536/7635 elapsed=353.5s
+[pinpoint queries] 1792/7635 elapsed=353.6s
+[pinpoint queries] 2048/7635 elapsed=353.7s
+[pinpoint queries] 2304/7635 elapsed=353.8s
+[pinpoint queries] 2560/7635 elapsed=354.0s
+[pinpoint queries] 2816/7635 elapsed=354.1s
+[pinpoint queries] 3072/7635 elapsed=354.2s
+[pinpoint queries] 3328/7635 elapsed=354.4s
+[pinpoint queries] 3584/7635 elapsed=354.5s
+[pinpoint queries] 3840/7635 elapsed=354.6s
+[pinpoint queries] 4096/7635 elapsed=354.7s
+[pinpoint queries] 4352/7635 elapsed=354.8s
+[pinpoint queries] 4608/7635 elapsed=354.9s
+[pinpoint queries] 4864/7635 elapsed=355.0s
+[pinpoint queries] 5120/7635 elapsed=355.2s
+[pinpoint queries] 5376/7635 elapsed=355.3s
+[pinpoint queries] 5632/7635 elapsed=355.5s
+[pinpoint queries] 5888/7635 elapsed=355.6s
+[pinpoint queries] 6144/7635 elapsed=355.6s
+[pinpoint queries] 6400/7635 elapsed=355.7s
+[pinpoint queries] 6656/7635 elapsed=355.8s
+[pinpoint queries] 6912/7635 elapsed=355.9s
+[pinpoint queries] 7168/7635 elapsed=356.0s
+[pinpoint queries] 7424/7635 elapsed=356.1s
+[pinpoint queries] 7635/7635 elapsed=356.2s
+[search] corpus_chunk=1/7 images=16384/109598
+[search] corpus_chunk=2/7 images=32768/109598
+[search] corpus_chunk=3/7 images=49152/109598
+[search] corpus_chunk=4/7 images=65536/109598
+[search] corpus_chunk=5/7 images=81920/109598
+[search] corpus_chunk=6/7 images=98304/109598
+[search] corpus_chunk=7/7 images=109598/109598
+[official-eval] /mnt/data/datasets/search_dataset/zxl/multi_modal_py3.12/bin/python /mnt/data/datasets/search_dataset/zxl/pinpoint-dataset/evaluate.py --results outputs/external_retrieval_20261109/CLIP4CIR-CIRR-RN50x4/pinpoint/CLIP4CIR-CIRR-RN50x4.json --ground_truth /mnt/data/datasets/search_dataset/zxl/pinpoint-dataset/pinpoint_licensed.parquet --output outputs/external_retrieval_20261109/CLIP4CIR-CIRR-RN50x4/pinpoint/official_metrics.csv
+Loading ground truth...
+Loaded 7635 queries
+Found 1 result file(s)
+
+Processing CLIP4CIR-CIRR-RN50x4...
+  ❌ Error evaluating CLIP4CIR-CIRR-RN50x4: [Errno 2] No such file or directory: 'outputs/external_retrieval_20261109/CLIP4CIR-CIRR-RN50x4/pinpoint/CLIP4CIR-CIRR-RN50x4.json'
+
+❌ No models could be evaluated
+Traceback (most recent call last):
+  File "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/scripts/evaluate_external_retrieval.py", line 132, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/scripts/evaluate_external_retrieval.py", line 128, in main
+    score_dataset(mp,root,args.model_name,args.checkpoint,args.device)
+  File "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/scripts/score_external_retrieval.py", line 70, in score_dataset
+    metrics=run_official_evaluator(pp,result_path,folder/'official_metrics.csv')
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/data/datasets/search_dataset/zxl/benchmark_build/diag_model/run_clip_pinpoint_official.py", line 320, in run_official_evaluator
+    metrics = pd.read_csv(metrics_path)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/data/datasets/search_dataset/zxl/multi_modal_py3.12/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 873, in read_csv
+    return _read(filepath_or_buffer, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/data/datasets/search_dataset/zxl/multi_modal_py3.12/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 300, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/data/datasets/search_dataset/zxl/multi_modal_py3.12/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1645, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/data/datasets/search_dataset/zxl/multi_modal_py3.12/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1904, in _make_engine
+    self.handles = get_handle(
+                   ^^^^^^^^^^^
+  File "/mnt/data/datasets/search_dataset/zxl/multi_modal_py3.12/lib/python3.12/site-packages/pandas/io/common.py", line 930, in get_handle
+    handle = open(
+             ^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'outputs/external_retrieval_20261109/CLIP4CIR-CIRR-RN50x4/pinpoint/official_metrics.csv'
+[official-eval] /mnt/data/datasets/search_dataset/zxl/multi_modal_py3.12/bin/python /mnt/data/datasets/search_dataset/zxl/pinpoint-dataset/evaluate.py --results /mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/outputs/external_retrieval_20261109/CLIP4CIR-CIRR-RN50x4/pinpoint/CLIP4CIR-CIRR-RN50x4.json --ground_truth /mnt/data/datasets/search_dataset/zxl/pinpoint-dataset/pinpoint_licensed.parquet --output /mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/outputs/external_retrieval_20261109/CLIP4CIR-CIRR-RN50x4/pinpoint/official_metrics.csv
+Loading ground truth...
+Loaded 7635 queries
+Found 1 result file(s)
+
+Processing CLIP4CIR-CIRR-RN50x4...
+Evaluating CLIP4CIR-CIRR-RN50x4...
+  Matched 7635/7635 queries
+
+✅ Saved metrics to /mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/outputs/external_retrieval_20261109/CLIP4CIR-CIRR-RN50x4/pinpoint/official_metrics.csv
+[metrics] pinpoint {"model": "CLIP4CIR-CIRR-RN50x4", "precision@1": 0.1125, "precision@10": 0.0866, "NegRecall@10": 0.0949, "mAP@10": 0.0652, "mAP@10_noNeg": 0.0758, "delta_mAP@10_noNeg": 0.0106, "pct_increase_mAP@10_noNeg": 0.163, "ling_sens_range": 0.1388, "total_queries": 7635, "mAP@1": 0.1125, "mAP@5": 0.0743, "mAP@50": 0.0763, "mAP@1_noNeg": 0.136, "mAP@5_noNeg": 0.0874, "mAP@50_noNeg": 0.0854, "NegRecall@1": 0.1669, "NegRecall@5": 0.1139, "NegRecall@50": 0.0861, "precision@5": 0.1029, "precision@50": 0.0428, "recall@1": 0.0147, "recall@5": 0.0666, "recall@10": 0.1082, "recall@50": 0.2427, "ling_sens_std": 0.0535}

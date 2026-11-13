@@ -1,0 +1,79 @@
+{
+  "case_id": "case_b9c4d427116fa01088fd",
+  "audit_query_id": "audit_query_084",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_b9c4d427116fa01088fd",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "T shows dough on a floured wooden surface from an oblique angle similar to R, with a wooden rolling pin clearly visible on the right."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows a wine glass and bottle against a red background, with no rolling pin. Its frontal wine still life does not match R's angled dough photograph."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "Include a rolling pin on the right-hand side.",
+      "Show a similarly angled photograph relative to R's dough scene."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_b9c4d427116fa01088fd",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows dough on a floured wooden surface from an oblique, slightly elevated angle similar to the reference. A wooden rolling pin is clearly visible on the right-hand side."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a wine glass and bottle against a red background, with no rolling pin on the right-hand side or elsewhere in view."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "2a24714b0fbd25e02e8873ec58c02f33fe709be895a95d0b9f9abf681533e50a",
+      "input_hash": "ef4b844470d7d5a6f6fabbdeb3acfe0266edb96daeb213c89b0285031c7c3991",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/ef4b844470d7d5a6f6fabbdeb3acfe0266edb96daeb213c89b0285031c7c3991.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_029c6e4cf634f14e016af2bd5ef7e887d1928657d2e5fad1e6",
+      "usage": {
+        "prompt_tokens": 13393,
+        "completion_tokens": 192,
+        "total_tokens": 13585
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "bdafb5032bfa3e36ec2a6463f49fff3296ecf382214b27fd51e54a95b7225beb",
+      "input_hash": "ec6a5d688ea277fc083cb62437e384231b4b3851a4384849a19d84d907386eab",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/ec6a5d688ea277fc083cb62437e384231b4b3851a4384849a19d84d907386eab.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_00f0722f31e3a2eb016af2bd6713d487d1b5e5b2c2494563aa",
+      "usage": {
+        "prompt_tokens": 12851,
+        "completion_tokens": 117,
+        "total_tokens": 12968
+      }
+    }
+  ]
+}

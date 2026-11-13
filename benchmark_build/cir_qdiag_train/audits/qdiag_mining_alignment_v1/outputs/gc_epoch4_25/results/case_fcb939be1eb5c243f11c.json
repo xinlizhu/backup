@@ -1,0 +1,166 @@
+{
+  "case_id": "case_fcb939be1eb5c243f11c",
+  "audit_query_id": "audit_query_084",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_fcb939be1eb5c243f11c",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Like R, T shows dough from an oblique, elevated angle. A wooden rolling pin is clearly visible on the right."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows dough from a similar oblique, elevated angle, but no rolling pin is visible on the right or elsewhere in the image."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "Must include a rolling pin on the right-hand side."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "delete",
+        "semantic_target": "object",
+        "before_span": ", must include rolling pin on the right hand side",
+        "after_span": null,
+        "edited_instruction": "Similar angled photograph",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "The requirement to include a rolling pin on the right-hand side is removed.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "T photographs dough from an oblique, elevated viewpoint similar to R."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C also photographs dough from an oblique, elevated viewpoint similar to R."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_fcb939be1eb5c243f11c",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows dough photographed at an angle, with a rolling pin clearly visible on the right."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows several dough portions on a tray from an angled view, but no rolling pin is visible."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "The single deletion removes the rolling-pin constraint and reconstructs the edited instruction. The candidate retains the angled dough view and violates only the removed constraint.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 shows dough from an angle."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows dough from an angled view."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "delete",
+      "semantic_target": "object",
+      "before_span": ", must include rolling pin on the right hand side",
+      "after_span": null,
+      "edited_instruction": "Similar angled photograph",
+      "witness_type": "deletion_relaxation",
+      "changed_constraint": "The requirement to include a rolling pin on the right-hand side is removed.",
+      "edited_on_positive": {
+        "status": "supported",
+        "evidence": "T photographs dough from an oblique, elevated viewpoint similar to R."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C also photographs dough from an oblique, elevated viewpoint similar to R."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "The single deletion removes the rolling-pin constraint and reconstructs the edited instruction. The candidate retains the angled dough view and violates only the removed constraint.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 shows dough from an angle."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows dough from an angled view."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "dcea31c2b1285b428b58f9baad58793df1e2c2ea5d2d6d335e0a364fa232b7e2",
+      "input_hash": "5e533386a3cbe480981203863ad838232c524b949758417486bd5794b36ab702",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/5e533386a3cbe480981203863ad838232c524b949758417486bd5794b36ab702.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0d28b2ba4dbe72d7016af2bf9346e087d1a6d174449eef9399",
+      "usage": {
+        "prompt_tokens": 9324,
+        "completion_tokens": 505,
+        "total_tokens": 9829,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 158
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "281b2d4c2e3bb06daa6d9dbb461b3ed90099e5a852e79b7df830116fbdcf1cd6",
+      "input_hash": "8049ad048bd1fadcfad20af6833f953582facf582d9e49dfd901649081f29e23",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/8049ad048bd1fadcfad20af6833f953582facf582d9e49dfd901649081f29e23.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0a4cdfbcbabdd17f016af2bfaf62f087d1ba92cb2a086f4b85",
+      "usage": {
+        "prompt_tokens": 9009,
+        "completion_tokens": 358,
+        "total_tokens": 9367,
+        "prompt_tokens_details": {
+          "cached_tokens": 5248
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 160
+        }
+      }
+    }
+  ]
+}

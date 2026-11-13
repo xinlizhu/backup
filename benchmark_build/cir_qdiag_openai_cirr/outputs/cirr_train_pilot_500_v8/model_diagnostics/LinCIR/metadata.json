@@ -1,0 +1,42 @@
+{
+  "batch_size": 64,
+  "completed": true,
+  "delta_identity_max_abs_error": 1.4901161193847656e-07,
+  "device": "cuda:0",
+  "dtype": "auto",
+  "elapsed_seconds": 79.4469690322876,
+  "embedding_dimension": 768,
+  "embedding_protocol": {
+    "backbone": "openai/clip-vit-large-patch14",
+    "checkpoint": "lincir_large.pt",
+    "family": "lincir",
+    "normalization": "l2",
+    "query_protocol": "a photo of [$] that <modification>",
+    "target_protocol": "normalized CLIP image projection"
+  },
+  "files": {
+    "features": "features.npz",
+    "rows": "rows.jsonl",
+    "scores": "scores.csv"
+  },
+  "input_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_openai_cirr/outputs/cirr_train_pilot_500_v8/final.jsonl",
+  "input_sha256": "92d4d2b5a1c446ffb7cbb2a225b47a66069e691ef1bb85d280bb7e3fb9e34891",
+  "limit_samples": null,
+  "model_name": "LinCIR",
+  "model_path": "/mnt/data/datasets/search_dataset/zxl/CIR_PLAY/models/lincir/pretrained_models/lincir_large.pt",
+  "negative_count": 2446,
+  "normalization_max_abs_error": 1.1920928955078125e-07,
+  "python": "3.12.13",
+  "reference_baseline_protocol": {
+    "content": [
+      "reference_image"
+    ],
+    "family": "lincir",
+    "implementation": "pseudo_token_prompt_a_photo_of_placeholder",
+    "role": "query",
+    "version": "1"
+  },
+  "reference_contribution_identity_max_abs_error": 1.4901161193847656e-08,
+  "sample_count": 500,
+  "schema_version": "1.1"
+}

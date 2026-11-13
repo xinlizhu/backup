@@ -1,0 +1,61 @@
+{
+  "case_id": "pair_80674cc84e53ae96f4cc",
+  "signature": "f91b95909684e2ecf5207ab608279749c891c56633f2fa7c877aa09c2d59f3d4",
+  "simulated": false,
+  "status": "complete",
+  "judgment": {
+    "case_id": "pair_80674cc84e53ae96f4cc",
+    "constraints": [
+      {
+        "constraint": "The subject is a clownfish.",
+        "A_status": "supported",
+        "B_status": "supported",
+        "A_evidence": "The fish has an orange body with broad white bands edged in black.",
+        "B_evidence": "The fish has the characteristic orange body and broad white bands of a clownfish."
+      },
+      {
+        "constraint": "The clownfish has darker coloration than the reference clownfish.",
+        "A_status": "supported",
+        "B_status": "contradicted",
+        "A_evidence": "Its face and exposed body are deep reddish orange, visibly darker than the reference fish's yellow face and lighter orange areas.",
+        "B_evidence": "Its face and body remain bright golden orange and yellow, rather than showing a darker overall coloration than the reference."
+      },
+      {
+        "constraint": "The clownfish is swimming through the middle of a sea anemone.",
+        "A_status": "supported",
+        "B_status": "supported",
+        "A_evidence": "The fish is suspended amid anemone tentacles that surround it and overlap its body.",
+        "B_evidence": "The fish is positioned within the anemone, with tentacles surrounding it and crossing in front of its body."
+      }
+    ],
+    "A_status": "supported",
+    "B_status": "contradicted",
+    "decision": "A_only",
+    "reason": "Both show a clownfish swimming among anemone tentacles, but A shows the requested darker reddish-orange coloration, while B retains bright golden-orange coloration."
+  },
+  "trace": {
+    "stage": "rank_pair_judgment",
+    "model_name": "gpt-5.6-terra",
+    "model_revision": null,
+    "provider": "openai-compatible-chat",
+    "reasoning_effort": null,
+    "prompt_version": "rank_preference_v1",
+    "prompt_hash": "46c4c109cfd8d1e9445efa0af0dabbf49e6e51259ddbb26ad3ae94a092d6f3bc",
+    "input_hash": "b8d76082c7c4f2729c1a28192ab5f7b46e585789b642d339e94ede539ae5c353",
+    "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_rank_preference_v1/outputs/gc_epochs14_top3/api_cache/rank_pair_judgment/b8d76082c7c4f2729c1a28192ab5f7b46e585789b642d339e94ede539ae5c353.json",
+    "cached": false,
+    "attempts": 1,
+    "request_id": "resp_0f7f8e44d83123ec016af2ccddaf3887d18b1db2eed4ca71a0",
+    "usage": {
+      "prompt_tokens": 6816,
+      "completion_tokens": 454,
+      "total_tokens": 7270,
+      "prompt_tokens_details": {
+        "cached_tokens": 4864
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 87
+      }
+    }
+  }
+}

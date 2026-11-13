@@ -1,0 +1,57 @@
+{
+  "group_id": "pinpoint_group_1d1d54a7e5af7639",
+  "model": "grok-4.6",
+  "signature": "cb958fa178e5ebcdd33f446ebd46fe25a7c20417ca5539cc74de61fb4df99804",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_1d1d54a7e5af7639_query_07639_object_add",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Adds one hat-presence constraint; the span reconstructs the text, and no supplied positive shows a hat."
+    },
+    {
+      "negative_id": "pinpoint_group_1d1d54a7e5af7639_query_07641_predicate_substitute",
+      "decision": "reject",
+      "failure_code": "wrong_semantic_target",
+      "reason": "Flipping without/with graphic prints changes print presence, an object or attribute, not a predicate or action."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.6",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "5c6bcba580f68573b7226fcbf493cd80d4a17e8a053de60a7dd0fd775a5bae38",
+      "input_hash": "33d3fe6a7b0b0fa5a02bd58e7551add290e423c0f2b544dd4120cbca28018a55",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/grok-4.6/cache/validate_group/33d3fe6a7b0b0fa5a02bd58e7551add290e423c0f2b544dd4120cbca28018a55.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "7be354df-9f95-9946-8e9a-501218b4746b",
+      "usage": {
+        "prompt_tokens": 5819,
+        "completion_tokens": 149,
+        "total_tokens": 8320,
+        "prompt_tokens_details": {
+          "text_tokens": 2682,
+          "audio_tokens": 0,
+          "image_tokens": 3137,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2352,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 235720000
+      }
+    }
+  ],
+  "format_warnings": []
+}

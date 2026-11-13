@@ -1,0 +1,133 @@
+{
+  "case_id": "case_88bc45a0147ae1ec450d",
+  "audit_query_id": "audit_query_087",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_88bc45a0147ae1ec450d",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The orange clownfish is nestled among the sea anemone's tentacles and appears darker than the yellow-orange fish in the reference."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "A red-orange clownfish is among the anemone's tentacles; its coloring appears darker than the yellow-orange reference fish."
+    },
+    "candidate_relation": "compatible",
+    "violated_source_constraints": [],
+    "witnesses": [
+      {
+        "witness_id": "add_predicate_facing_camera",
+        "operation": "add",
+        "semantic_target": "predicate",
+        "before_span": null,
+        "after_span": ", facing the camera",
+        "edited_instruction": "Shows a darker colored clown fish swimming through the middle of a sea anemone, facing the camera.",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "The clownfish faces the camera.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The fish is shown in side profile, not facing the camera."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The clownfish faces forward toward the camera, with both eyes visible."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_88bc45a0147ae1ec450d",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "The clownfish is among the anemone's central tentacles, but darker coloration relative to R is not reliably established. T has vivid orange areas, while R has a yellow face and substantial dark body markings; lighting and occlusion complicate the comparison."
+    },
+    "source_on_candidate": {
+      "status": "uncertain",
+      "evidence": "The clownfish faces forward among anemone tentacles. Its red-orange face differs from R's yellow face, but its overall coloration cannot reliably be judged darker than R's partly obscured, dark-marked body."
+    },
+    "verdicts": [
+      {
+        "witness_id": "add_predicate_facing_camera",
+        "decision": "reject",
+        "failure_code": "source_invalid_or_uncertain",
+        "witness_type": null,
+        "reason": "The insertion adds one clear orientation predicate: T faces right in profile, while C faces the camera. However, ADD requires the original instruction to be supported on both images. The darker-than-R constraint is uncertain, including on T, so the witness cannot be accepted.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "T shows the fish side-on with its head pointing right, rather than facing the camera."
+        },
+        "edited_on_candidate": {
+          "status": "uncertain",
+          "evidence": "C visibly faces the camera, with both eyes and the front of its face visible between tentacles. The retained requirement that the fish be darker than R remains uncertain."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [],
+  "local_checks": [
+    {
+      "witness_id": "add_predicate_facing_camera",
+      "accepted": false,
+      "local_failures": [
+        "wrong_witness_type",
+        "wrong_support_pattern"
+      ],
+      "review_decision": "reject"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "75a8265a851ccd32d67788ebd4a08aa533ef9f4eb55f5c15ff27f299799dc43a",
+      "input_hash": "b1effa3a66e97c7d3de79ea48f10f027075552bfad49bdcb22dbb54ccabf85cf",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/b1effa3a66e97c7d3de79ea48f10f027075552bfad49bdcb22dbb54ccabf85cf.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0e193454355d0c30016af2bfb7756887d1ab0c8c395005efaf",
+      "usage": {
+        "prompt_tokens": 8680,
+        "completion_tokens": 625,
+        "total_tokens": 9305,
+        "prompt_tokens_details": {
+          "cached_tokens": 5888
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 372
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "a2859b8f296022762b65bebd2eac475562f2aab6602c75fe36cfa1fda81a309b",
+      "input_hash": "7ef89c2a92083c059c35907f9643305e7f5f8acdbed5778f6bb38bc49461e01e",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/7ef89c2a92083c059c35907f9643305e7f5f8acdbed5778f6bb38bc49461e01e.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0b778f79570122b0016af2bfc4e4e087d1a667648fc7df03f9",
+      "usage": {
+        "prompt_tokens": 8051,
+        "completion_tokens": 471,
+        "total_tokens": 8522,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 91
+        }
+      }
+    }
+  ]
+}

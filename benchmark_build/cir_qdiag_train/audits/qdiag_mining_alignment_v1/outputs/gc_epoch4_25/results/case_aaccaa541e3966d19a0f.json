@@ -1,0 +1,90 @@
+{
+  "case_id": "case_aaccaa541e3966d19a0f",
+  "audit_query_id": "audit_query_097",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_aaccaa541e3966d19a0f",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "T shows a saxophone with a blue body and gold keys, satisfying the requested change from R's conventional gold finish."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows a silver-colored, saxophone-shaped horn against a blue background; the instrument itself is not blue. Its valve mechanism also makes its identification as a saxophone uncertain."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The instrument must be blue."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_aaccaa541e3966d19a0f",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 visibly shows a saxophone with a blue body and gold-colored keys."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 visibly shows a saxophone-like instrument with a dark metallic body; the blue is only the background, not the instrument."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "b4f3065b8c73b11f70c21606421148f5af93f4fc153115d8f6dba10b79507215",
+      "input_hash": "f36f9599d6481a5b88724465d86e15fd9a4d512c1fadfc24bc4607bb37a38e54",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/f36f9599d6481a5b88724465d86e15fd9a4d512c1fadfc24bc4607bb37a38e54.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_05435cc6e1016975016af2bf9787f887d1852a6a1021cc4353",
+      "usage": {
+        "prompt_tokens": 8593,
+        "completion_tokens": 391,
+        "total_tokens": 8984,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 213
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "17c04ce5e109cc9043b7e71b23880e64d389280c0678fe3838ea48ece960d0b3",
+      "input_hash": "6973a68d7b6074ece1eb7d84f7cb0a8945388a6ec2db257d9d98c259295badf8",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/6973a68d7b6074ece1eb7d84f7cb0a8945388a6ec2db257d9d98c259295badf8.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0e714848e27ddf57016af2bfadf8b887d1a392b8f37bedc410",
+      "usage": {
+        "prompt_tokens": 8215,
+        "completion_tokens": 202,
+        "total_tokens": 8417,
+        "prompt_tokens_details": {
+          "cached_tokens": 5248
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 103
+        }
+      }
+    }
+  ]
+}

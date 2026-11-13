@@ -1,0 +1,166 @@
+{
+  "case_id": "case_61eb551c3e0077bb245f",
+  "audit_query_id": "audit_query_084",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_61eb551c3e0077bb245f",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Like R, T shows dough on a work surface from an oblique angle; a wooden rolling pin is clearly visible on the right."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows dough from a similar oblique angle, but hands are kneading it and no rolling pin is visible on the right."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "Must include a rolling pin on the right-hand side."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "delete",
+        "semantic_target": "object",
+        "before_span": ", must include rolling pin on the right hand side",
+        "after_span": null,
+        "edited_instruction": "Similar angled photograph",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "Presence of a rolling pin on the right-hand side.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "T presents dough on a floured work surface from an oblique angle similar to R."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C also presents dough on a floured work surface from a similar oblique angle."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_61eb551c3e0077bb245f",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows dough on a floured surface from an oblique angle similar to the reference, with a wooden rolling pin clearly visible on the right."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows dough being kneaded on a floured surface from a similar oblique angle, but no rolling pin is visible on the right or elsewhere in the photograph."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting the exact specified span removes the single requirement for a rolling pin on the right and preserves the similar-angle requirement. Both images satisfy the remaining instruction; the candidate fails only the removed requirement.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 presents the dough and work surface from an oblique viewpoint comparable to the reference."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 also presents dough on a work surface from an oblique viewpoint comparable to the reference."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "delete",
+      "semantic_target": "object",
+      "before_span": ", must include rolling pin on the right hand side",
+      "after_span": null,
+      "edited_instruction": "Similar angled photograph",
+      "witness_type": "deletion_relaxation",
+      "changed_constraint": "Presence of a rolling pin on the right-hand side.",
+      "edited_on_positive": {
+        "status": "supported",
+        "evidence": "T presents dough on a floured work surface from an oblique angle similar to R."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C also presents dough on a floured work surface from a similar oblique angle."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting the exact specified span removes the single requirement for a rolling pin on the right and preserves the similar-angle requirement. Both images satisfy the remaining instruction; the candidate fails only the removed requirement.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 presents the dough and work surface from an oblique viewpoint comparable to the reference."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 also presents dough on a work surface from an oblique viewpoint comparable to the reference."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "0b25cec2eab6bec108a56bee9f90cd25ede36a4bd4ba2764dc50191aeaa0450f",
+      "input_hash": "316fb40ae7a2aab54e3f7a8a10e786a24ba81a36ac88c01ad13ece7688fa6fa9",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/316fb40ae7a2aab54e3f7a8a10e786a24ba81a36ac88c01ad13ece7688fa6fa9.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_068d8c7499203ce1016af2bdcb090087d1be742da5cafe219b",
+      "usage": {
+        "prompt_tokens": 7303,
+        "completion_tokens": 477,
+        "total_tokens": 7780,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 127
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "ea2d5ec1914573789ed14eceec648667760fb79d0d04ccb82e5a0f930ca71742",
+      "input_hash": "d258687832b3f5e34a2e092b6b39dc39a1bf283947ab36192a3885f5ab3aa8db",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/d258687832b3f5e34a2e092b6b39dc39a1bf283947ab36192a3885f5ab3aa8db.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0d0f62a17a6c85a6016af2bde0933887d18c0ad0efd509a05a",
+      "usage": {
+        "prompt_tokens": 6824,
+        "completion_tokens": 360,
+        "total_tokens": 7184,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 44
+        }
+      }
+    }
+  ]
+}

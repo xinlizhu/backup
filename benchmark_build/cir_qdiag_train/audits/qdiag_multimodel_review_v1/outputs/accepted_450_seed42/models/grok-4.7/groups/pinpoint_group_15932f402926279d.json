@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_15932f402926279d",
+  "model": "grok-4.7",
+  "signature": "52913ea34ae01078c58f7a80fc2119b86ef4b6b3449e9e55b21816a5d5d1ccbd",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_15932f402926279d_query_04570_object_add",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Adds exactly one object, a scarf, while preserving the undone-jacket request. Every supplied positive clearly shows the neck and shoulders with no scarf, so the added fact is false."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.7",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "39c6570d8f78d1bf6561a9539faed6345f9ccf8ab79beb1e54f80feceb3941ff",
+      "input_hash": "aae5144353ed1a70127b1d6e3026ec8d7c45f6100833d4c554b9efcd6b049249",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/grok-4.7/cache/validate_group/aae5144353ed1a70127b1d6e3026ec8d7c45f6100833d4c554b9efcd6b049249.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "0561fd0a-f420-98d1-990c-80c061063171",
+      "usage": {
+        "prompt_tokens": 5144,
+        "completion_tokens": 83,
+        "total_tokens": 8203,
+        "prompt_tokens_details": {
+          "text_tokens": 2483,
+          "audio_tokens": 0,
+          "image_tokens": 2661,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2976,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 255700000
+      }
+    }
+  ],
+  "format_warnings": []
+}

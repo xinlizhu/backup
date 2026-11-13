@@ -1,0 +1,328 @@
+{
+  "title": "Four-model review agreement under the single-target protocol",
+  "models": [
+    "grok-4.6",
+    "grok-4.7",
+    "kimi-k3",
+    "gpt-5.6-terra"
+  ],
+  "labels": [
+    "accept",
+    "reject",
+    "uncertain"
+  ],
+  "source_hashes": {
+    "cases.private.jsonl": "7ecf8fc9591e01985a2255556382bf54d5a2ed2acffebda0cb3ac68b968bb056",
+    "grok-4.6_decision_map": "961aa3160b6fdd4a47f8c34adb7bea3273faa0d20c76f8d935a3cbe913060d9f",
+    "grok-4.7_decision_map": "114155b87c2c79b3bc9404f496caf2bd1d904038b7ffc896c1977eb0bb37ab87",
+    "kimi-k3_decision_map": "525ff5cdc3d0bca9d430ea0ac90d17801787063b0acce18f79e7fc5dfa15e99b",
+    "gpt-5.6-terra_decision_map": "30f0c814ab26cb4cca71bb15cec6bb773299a8e612f84f6fced5a19b6f2a4aa8"
+  },
+  "agreement_definition": "Average agreement across all six unordered model pairs; uncertain retained as a third category.",
+  "kappa_definition": "Fleiss pooled empirical category marginals; (observed agreement - chance agreement)/(1 - chance agreement). Overall recomputed on all 450 samples, not mean of cell kappas.",
+  "alpha_definition": "Nominal Krippendorff alpha = 1 - observed disagreement / expected disagreement from pairable coincidence marginals, with the n*(n-1) finite-sample denominator. Missing judgments are None, not the uncertain category. The four included models have no missing judgments.",
+  "rejection_definition": "Each model's reject decisions divided by all edits in the row; uncertain is not reject. These are not human-adjudicated error rates.",
+  "formula_reference": "https://www.statsmodels.org/stable/generated/statsmodels.stats.inter_rater.fleiss_kappa.html",
+  "alpha_reference": "https://www.asc.upenn.edu/sites/default/files/2021-03/Computing%20Krippendorff%27s%20Alpha-Reliability.pdf",
+  "verification": "Exact fraction arithmetic agrees with independent pairwise and vectorized calculations; nominal alpha also matches the fixed-rater finite-sample correction. Constant-label, perfect-agreement, disagreement, chance-agreement and missing-value fixtures checked.",
+  "table": [
+    {
+      "operation": "add",
+      "semantic_category": "object",
+      "samples": 50,
+      "mean_pairwise_agreement_percent": 98.0,
+      "fleiss_kappa": -0.007556675062972292,
+      "krippendorff_alpha_nominal": -0.0025188916876574307,
+      "expected_chance_agreement_percent": 98.015,
+      "po_exact": "49/50",
+      "pe_exact": "19603/20000",
+      "kappa_exact": "-3/397",
+      "alpha_exact": "-1/397",
+      "pooled_label_counts": {
+        "accept": 198,
+        "reject": 1,
+        "uncertain": 1
+      },
+      "rejection_percent_by_model": {
+        "grok-4.6": 0.0,
+        "grok-4.7": 0.0,
+        "kimi-k3": 0.0,
+        "gpt-5.6-terra": 2.0
+      },
+      "uncertain_percent_by_model": {
+        "grok-4.6": 0.0,
+        "grok-4.7": 0.0,
+        "kimi-k3": 0.0,
+        "gpt-5.6-terra": 2.0
+      }
+    },
+    {
+      "operation": "add",
+      "semantic_category": "attribute",
+      "samples": 50,
+      "mean_pairwise_agreement_percent": 92.66666666666666,
+      "fleiss_kappa": 0.5598239295718287,
+      "krippendorff_alpha_nominal": 0.5620248099239696,
+      "expected_chance_agreement_percent": 83.34,
+      "po_exact": "139/150",
+      "pe_exact": "4167/5000",
+      "kappa_exact": "1399/2499",
+      "alpha_exact": "2809/4998",
+      "pooled_label_counts": {
+        "accept": 182,
+        "reject": 14,
+        "uncertain": 4
+      },
+      "rejection_percent_by_model": {
+        "grok-4.6": 4.0,
+        "grok-4.7": 4.0,
+        "kimi-k3": 12.0,
+        "gpt-5.6-terra": 8.0
+      },
+      "uncertain_percent_by_model": {
+        "grok-4.6": 2.0,
+        "grok-4.7": 2.0,
+        "kimi-k3": 2.0,
+        "gpt-5.6-terra": 2.0
+      }
+    },
+    {
+      "operation": "add",
+      "semantic_category": "predicate",
+      "samples": 50,
+      "mean_pairwise_agreement_percent": 91.0,
+      "fleiss_kappa": 0.4007989347536618,
+      "krippendorff_alpha_nominal": 0.40379494007989347,
+      "expected_chance_agreement_percent": 84.98,
+      "po_exact": "91/100",
+      "pe_exact": "4249/5000",
+      "kappa_exact": "301/751",
+      "alpha_exact": "1213/3004",
+      "pooled_label_counts": {
+        "accept": 184,
+        "uncertain": 10,
+        "reject": 6
+      },
+      "rejection_percent_by_model": {
+        "grok-4.6": 4.0,
+        "grok-4.7": 4.0,
+        "kimi-k3": 2.0,
+        "gpt-5.6-terra": 2.0
+      },
+      "uncertain_percent_by_model": {
+        "grok-4.6": 4.0,
+        "grok-4.7": 6.0,
+        "kimi-k3": 4.0,
+        "gpt-5.6-terra": 6.0
+      }
+    },
+    {
+      "operation": "substitute",
+      "semantic_category": "object",
+      "samples": 50,
+      "mean_pairwise_agreement_percent": 89.66666666666666,
+      "fleiss_kappa": 0.5704288782650869,
+      "krippendorff_alpha_nominal": 0.5725767338737615,
+      "expected_chance_agreement_percent": 75.945,
+      "po_exact": "269/300",
+      "pe_exact": "15189/20000",
+      "kappa_exact": "8233/14433",
+      "alpha_exact": "8264/14433",
+      "pooled_label_counts": {
+        "accept": 173,
+        "reject": 20,
+        "uncertain": 7
+      },
+      "rejection_percent_by_model": {
+        "grok-4.6": 6.0,
+        "grok-4.7": 8.0,
+        "kimi-k3": 16.0,
+        "gpt-5.6-terra": 10.0
+      },
+      "uncertain_percent_by_model": {
+        "grok-4.6": 4.0,
+        "grok-4.7": 2.0,
+        "kimi-k3": 0.0,
+        "gpt-5.6-terra": 8.0
+      }
+    },
+    {
+      "operation": "substitute",
+      "semantic_category": "attribute",
+      "samples": 50,
+      "mean_pairwise_agreement_percent": 89.0,
+      "fleiss_kappa": 0.5824634655532359,
+      "krippendorff_alpha_nominal": 0.5845511482254697,
+      "expected_chance_agreement_percent": 73.655,
+      "po_exact": "89/100",
+      "pe_exact": "14731/20000",
+      "kappa_exact": "279/479",
+      "alpha_exact": "280/479",
+      "pooled_label_counts": {
+        "accept": 169,
+        "reject": 30,
+        "uncertain": 1
+      },
+      "rejection_percent_by_model": {
+        "grok-4.6": 10.0,
+        "grok-4.7": 10.0,
+        "kimi-k3": 18.0,
+        "gpt-5.6-terra": 22.0
+      },
+      "uncertain_percent_by_model": {
+        "grok-4.6": 0.0,
+        "grok-4.7": 0.0,
+        "kimi-k3": 0.0,
+        "gpt-5.6-terra": 2.0
+      }
+    },
+    {
+      "operation": "substitute",
+      "semantic_category": "predicate",
+      "samples": 50,
+      "mean_pairwise_agreement_percent": 92.33333333333333,
+      "fleiss_kappa": 0.6941285989759958,
+      "krippendorff_alpha_nominal": 0.6956579559811158,
+      "expected_chance_agreement_percent": 74.935,
+      "po_exact": "277/300",
+      "pe_exact": "14987/20000",
+      "kappa_exact": "10439/15039",
+      "alpha_exact": "10462/15039",
+      "pooled_label_counts": {
+        "accept": 171,
+        "reject": 27,
+        "uncertain": 2
+      },
+      "rejection_percent_by_model": {
+        "grok-4.6": 10.0,
+        "grok-4.7": 10.0,
+        "kimi-k3": 18.0,
+        "gpt-5.6-terra": 16.0
+      },
+      "uncertain_percent_by_model": {
+        "grok-4.6": 2.0,
+        "grok-4.7": 2.0,
+        "kimi-k3": 0.0,
+        "gpt-5.6-terra": 0.0
+      }
+    },
+    {
+      "operation": "delete",
+      "semantic_category": "object",
+      "samples": 50,
+      "mean_pairwise_agreement_percent": 86.66666666666667,
+      "fleiss_kappa": 0.503968253968254,
+      "krippendorff_alpha_nominal": 0.5064484126984127,
+      "expected_chance_agreement_percent": 73.11999999999999,
+      "po_exact": "13/15",
+      "pe_exact": "457/625",
+      "kappa_exact": "127/252",
+      "alpha_exact": "1021/2016",
+      "pooled_label_counts": {
+        "accept": 168,
+        "reject": 32
+      },
+      "rejection_percent_by_model": {
+        "grok-4.6": 6.0,
+        "grok-4.7": 12.0,
+        "kimi-k3": 18.0,
+        "gpt-5.6-terra": 28.0
+      },
+      "uncertain_percent_by_model": {
+        "grok-4.6": 0.0,
+        "grok-4.7": 0.0,
+        "kimi-k3": 0.0,
+        "gpt-5.6-terra": 0.0
+      }
+    },
+    {
+      "operation": "delete",
+      "semantic_category": "attribute",
+      "samples": 50,
+      "mean_pairwise_agreement_percent": 96.66666666666667,
+      "fleiss_kappa": 0.7756841633019291,
+      "krippendorff_alpha_nominal": 0.7768057424854194,
+      "expected_chance_agreement_percent": 85.14,
+      "po_exact": "29/30",
+      "pe_exact": "4257/5000",
+      "kappa_exact": "1729/2229",
+      "alpha_exact": "3463/4458",
+      "pooled_label_counts": {
+        "accept": 184,
+        "reject": 14,
+        "uncertain": 2
+      },
+      "rejection_percent_by_model": {
+        "grok-4.6": 6.0,
+        "grok-4.7": 8.0,
+        "kimi-k3": 6.0,
+        "gpt-5.6-terra": 8.0
+      },
+      "uncertain_percent_by_model": {
+        "grok-4.6": 2.0,
+        "grok-4.7": 0.0,
+        "kimi-k3": 0.0,
+        "gpt-5.6-terra": 2.0
+      }
+    },
+    {
+      "operation": "delete",
+      "semantic_category": "predicate",
+      "samples": 50,
+      "mean_pairwise_agreement_percent": 91.66666666666666,
+      "fleiss_kappa": 0.198332531665865,
+      "krippendorff_alpha_nominal": 0.20234086900753567,
+      "expected_chance_agreement_percent": 89.605,
+      "po_exact": "11/12",
+      "pe_exact": "17921/20000",
+      "kappa_exact": "1237/6237",
+      "alpha_exact": "1262/6237",
+      "pooled_label_counts": {
+        "accept": 189,
+        "reject": 11
+      },
+      "rejection_percent_by_model": {
+        "grok-4.6": 0.0,
+        "grok-4.7": 4.0,
+        "kimi-k3": 8.0,
+        "gpt-5.6-terra": 10.0
+      },
+      "uncertain_percent_by_model": {
+        "grok-4.6": 0.0,
+        "grok-4.7": 0.0,
+        "kimi-k3": 0.0,
+        "gpt-5.6-terra": 0.0
+      }
+    },
+    {
+      "operation": "Overall",
+      "semantic_category": "All",
+      "samples": 450,
+      "mean_pairwise_agreement_percent": 91.96296296296296,
+      "fleiss_kappa": 0.5640542287074644,
+      "krippendorff_alpha_nominal": 0.5642964208026269,
+      "expected_chance_agreement_percent": 81.56413580246914,
+      "po_exact": "2483/2700",
+      "pe_exact": "1321339/1620000",
+      "kappa_exact": "168461/298661",
+      "alpha_exact": "505600/895983",
+      "pooled_label_counts": {
+        "accept": 1618,
+        "reject": 155,
+        "uncertain": 27
+      },
+      "rejection_percent_by_model": {
+        "grok-4.6": 5.111111111111111,
+        "grok-4.7": 6.666666666666667,
+        "kimi-k3": 10.88888888888889,
+        "gpt-5.6-terra": 11.777777777777779
+      },
+      "uncertain_percent_by_model": {
+        "grok-4.6": 1.5555555555555556,
+        "grok-4.7": 1.3333333333333333,
+        "kimi-k3": 0.6666666666666666,
+        "gpt-5.6-terra": 2.4444444444444446
+      }
+    }
+  ]
+}

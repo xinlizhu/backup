@@ -1,0 +1,1888 @@
+{
+  "analysis": {
+    "bootstrap_replicates": 1000,
+    "c_grid": [
+      0.1,
+      1.0
+    ],
+    "cell_counts": {
+      "attribute|add": 401,
+      "attribute|delete": 387,
+      "attribute|substitute": 474,
+      "object|add": 315,
+      "object|delete": 109,
+      "object|substitute": 411,
+      "predicate|add": 545,
+      "predicate|delete": 283,
+      "predicate|substitute": 476
+    },
+    "delta_identity_max_abs_error": 1.7508864402770996e-07,
+    "folds_requested": 5,
+    "grouped_by": "pair_id",
+    "inner_folds_requested": 2,
+    "mode_counts": {
+      "text_only_editable": 2498,
+      "vision_grounded": 903
+    },
+    "seed": 42
+  },
+  "extraction": {
+    "batch_size": 512,
+    "completed": true,
+    "delta_identity_max_abs_error": 1.7508864402770996e-07,
+    "device": "cuda:0",
+    "dtype": "auto",
+    "elapsed_seconds": 16.272210121154785,
+    "embedding_dimension": 512,
+    "files": {
+      "features": "features.npz",
+      "rows": "rows.jsonl",
+      "scores": "scores.csv"
+    },
+    "input_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag/outputs/pilot_500_v5/final.jsonl",
+    "input_sha256": "bb5602a2986b4f42b1192ef5a01faa9ecbc49b566cd90a57a5e614c21bee3007",
+    "limit_samples": null,
+    "model_name": "BGE-VL-base",
+    "model_path": "/mnt/data/datasets/search_dataset/zxl/CIR_PLAY/models/checkpoints/BGE-VL-base",
+    "negative_count": 3401,
+    "normalization_max_abs_error": 1.1920928955078125e-07,
+    "python": "3.12.13",
+    "sample_count": 459,
+    "schema_version": "1.0"
+  },
+  "factorial_structure": {
+    "additive": {
+      "frobenius_r2_against_fold_train_mean": 0.041716116279983395,
+      "mean_prediction_cosine": 0.19742429020249866,
+      "residual_sum_squares": 1044.1624224075595
+    },
+    "class_group_counts": {
+      "attribute|add": 342,
+      "attribute|delete": 336,
+      "attribute|substitute": 373,
+      "object|add": 299,
+      "object|delete": 107,
+      "object|substitute": 385,
+      "predicate|add": 383,
+      "predicate|delete": 245,
+      "predicate|substitute": 351
+    },
+    "grouped_by_pair_id": true,
+    "interaction_gain_r2": 0.01044296805853906,
+    "outer_folds": 5,
+    "ridge_alpha": 0.001,
+    "saturated_9_cell": {
+      "frobenius_r2_against_fold_train_mean": 0.052159084338522455,
+      "mean_prediction_cosine": 0.22202903593665652,
+      "residual_sum_squares": 1032.783586751053
+    },
+    "status": "ok"
+  },
+  "probes": [
+    {
+      "c_tuned_inside_outer_fold": true,
+      "chance_majority_accuracy": 0.16024698618053515,
+      "chance_uniform_accuracy": 0.1111111111111111,
+      "class_counts": {
+        "attribute|add": 401,
+        "attribute|delete": 387,
+        "attribute|substitute": 474,
+        "object|add": 315,
+        "object|delete": 109,
+        "object|substitute": 411,
+        "predicate|add": 545,
+        "predicate|delete": 283,
+        "predicate|substitute": 476
+      },
+      "class_group_counts": {
+        "attribute|add": 342,
+        "attribute|delete": 336,
+        "attribute|substitute": 373,
+        "object|add": 299,
+        "object|delete": 107,
+        "object|substitute": 385,
+        "predicate|add": 383,
+        "predicate|delete": 245,
+        "predicate|substitute": 351
+      },
+      "confusion_matrix": [
+        [
+          248,
+          0,
+          3,
+          19,
+          0,
+          7,
+          32,
+          0,
+          6
+        ],
+        [
+          2,
+          49,
+          1,
+          2,
+          21,
+          6,
+          0,
+          15,
+          13
+        ],
+        [
+          4,
+          30,
+          185,
+          13,
+          25,
+          43,
+          14,
+          18,
+          79
+        ],
+        [
+          8,
+          3,
+          1,
+          310,
+          3,
+          18,
+          39,
+          1,
+          18
+        ],
+        [
+          3,
+          42,
+          0,
+          2,
+          233,
+          20,
+          5,
+          56,
+          26
+        ],
+        [
+          9,
+          36,
+          11,
+          71,
+          55,
+          148,
+          32,
+          25,
+          87
+        ],
+        [
+          59,
+          3,
+          4,
+          33,
+          3,
+          18,
+          376,
+          3,
+          46
+        ],
+        [
+          8,
+          29,
+          0,
+          1,
+          28,
+          5,
+          5,
+          186,
+          21
+        ],
+        [
+          20,
+          46,
+          6,
+          15,
+          34,
+          51,
+          63,
+          74,
+          167
+        ]
+      ],
+      "group_count": 459,
+      "labels": [
+        "object|add",
+        "object|delete",
+        "object|substitute",
+        "attribute|add",
+        "attribute|delete",
+        "attribute|substitute",
+        "predicate|add",
+        "predicate|delete",
+        "predicate|substitute"
+      ],
+      "metrics": {
+        "accuracy": {
+          "ci_high": 0.5773965054988869,
+          "ci_low": 0.5404331587905311,
+          "value": 0.5592472802117024
+        },
+        "balanced_accuracy": {
+          "ci_high": 0.5836177091373648,
+          "ci_low": 0.5424202846903599,
+          "value": 0.5635919708365849
+        },
+        "macro_f1": {
+          "ci_high": 0.5612102875397053,
+          "ci_low": 0.5239496719618515,
+          "value": 0.5429741023006317
+        }
+      },
+      "name": "raw_v__cell",
+      "outer_folds": 5,
+      "row_count": 3401,
+      "selected_c_by_fold": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "status": "ok"
+    },
+    {
+      "c_tuned_inside_outer_fold": true,
+      "chance_majority_accuracy": 0.3834166421640694,
+      "chance_uniform_accuracy": 0.3333333333333333,
+      "class_counts": {
+        "attribute": 1262,
+        "object": 835,
+        "predicate": 1304
+      },
+      "class_group_counts": {
+        "attribute": 435,
+        "object": 418,
+        "predicate": 448
+      },
+      "confusion_matrix": [
+        [
+          443,
+          193,
+          199
+        ],
+        [
+          109,
+          718,
+          435
+        ],
+        [
+          158,
+          391,
+          755
+        ]
+      ],
+      "group_count": 459,
+      "labels": [
+        "object",
+        "attribute",
+        "predicate"
+      ],
+      "metrics": {
+        "accuracy": {
+          "ci_high": 0.5792187891647566,
+          "ci_low": 0.5463584723626458,
+          "value": 0.5633637165539547
+        },
+        "balanced_accuracy": {
+          "ci_high": 0.5768342478558237,
+          "ci_low": 0.5422685426671121,
+          "value": 0.5594882818536456
+        },
+        "macro_f1": {
+          "ci_high": 0.5817472514825719,
+          "ci_low": 0.5471793100642076,
+          "value": 0.5647460483974381
+        }
+      },
+      "name": "raw_v__semantic_target",
+      "outer_folds": 5,
+      "row_count": 3401,
+      "selected_c_by_fold": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "status": "ok"
+    },
+    {
+      "c_tuned_inside_outer_fold": true,
+      "chance_majority_accuracy": 0.40017641870038223,
+      "chance_uniform_accuracy": 0.3333333333333333,
+      "class_counts": {
+        "add": 1261,
+        "delete": 779,
+        "substitute": 1361
+      },
+      "class_group_counts": {
+        "add": 455,
+        "delete": 449,
+        "substitute": 453
+      },
+      "confusion_matrix": [
+        [
+          1081,
+          6,
+          174
+        ],
+        [
+          18,
+          657,
+          104
+        ],
+        [
+          195,
+          281,
+          885
+        ]
+      ],
+      "group_count": 459,
+      "labels": [
+        "add",
+        "delete",
+        "substitute"
+      ],
+      "metrics": {
+        "accuracy": {
+          "ci_high": 0.7845029108000027,
+          "ci_low": 0.7573802946471756,
+          "value": 0.7712437518376948
+        },
+        "balanced_accuracy": {
+          "ci_high": 0.7971548919149869,
+          "ci_low": 0.770497254164737,
+          "value": 0.7836340899904805
+        },
+        "macro_f1": {
+          "ci_high": 0.7828650009744926,
+          "ci_low": 0.7563243962114556,
+          "value": 0.7700250377583658
+        }
+      },
+      "name": "raw_v__edit_operation",
+      "outer_folds": 5,
+      "row_count": 3401,
+      "selected_c_by_fold": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "status": "ok"
+    },
+    {
+      "c_tuned_inside_outer_fold": true,
+      "chance_majority_accuracy": 0.16024698618053515,
+      "chance_uniform_accuracy": 0.1111111111111111,
+      "class_counts": {
+        "attribute|add": 401,
+        "attribute|delete": 387,
+        "attribute|substitute": 474,
+        "object|add": 315,
+        "object|delete": 109,
+        "object|substitute": 411,
+        "predicate|add": 545,
+        "predicate|delete": 283,
+        "predicate|substitute": 476
+      },
+      "class_group_counts": {
+        "attribute|add": 342,
+        "attribute|delete": 336,
+        "attribute|substitute": 373,
+        "object|add": 299,
+        "object|delete": 107,
+        "object|substitute": 385,
+        "predicate|add": 383,
+        "predicate|delete": 245,
+        "predicate|substitute": 351
+      },
+      "confusion_matrix": [
+        [
+          263,
+          0,
+          2,
+          17,
+          0,
+          3,
+          30,
+          0,
+          0
+        ],
+        [
+          0,
+          55,
+          3,
+          2,
+          24,
+          6,
+          1,
+          17,
+          1
+        ],
+        [
+          3,
+          17,
+          229,
+          12,
+          20,
+          54,
+          11,
+          10,
+          55
+        ],
+        [
+          10,
+          0,
+          3,
+          334,
+          3,
+          10,
+          32,
+          1,
+          8
+        ],
+        [
+          2,
+          40,
+          2,
+          1,
+          266,
+          9,
+          4,
+          53,
+          10
+        ],
+        [
+          4,
+          27,
+          20,
+          57,
+          39,
+          183,
+          25,
+          15,
+          104
+        ],
+        [
+          51,
+          2,
+          3,
+          40,
+          1,
+          11,
+          413,
+          0,
+          24
+        ],
+        [
+          8,
+          33,
+          0,
+          2,
+          32,
+          4,
+          2,
+          193,
+          9
+        ],
+        [
+          9,
+          31,
+          21,
+          16,
+          29,
+          79,
+          57,
+          44,
+          190
+        ]
+      ],
+      "group_count": 459,
+      "labels": [
+        "object|add",
+        "object|delete",
+        "object|substitute",
+        "attribute|add",
+        "attribute|delete",
+        "attribute|substitute",
+        "predicate|add",
+        "predicate|delete",
+        "predicate|substitute"
+      ],
+      "metrics": {
+        "accuracy": {
+          "ci_high": 0.6428592265377563,
+          "ci_low": 0.6089046303344117,
+          "value": 0.6251102616877389
+        },
+        "balanced_accuracy": {
+          "ci_high": 0.6471813150383519,
+          "ci_low": 0.6080902064712406,
+          "value": 0.6268837989377984
+        },
+        "macro_f1": {
+          "ci_high": 0.6251720646434296,
+          "ci_low": 0.5890121022644081,
+          "value": 0.6066191258035277
+        }
+      },
+      "name": "direction_v__cell",
+      "outer_folds": 5,
+      "row_count": 3401,
+      "selected_c_by_fold": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "status": "ok"
+    },
+    {
+      "c_tuned_inside_outer_fold": false,
+      "chance_majority_accuracy": 0.16024698618053515,
+      "chance_uniform_accuracy": 0.1111111111111111,
+      "class_counts": {
+        "attribute|add": 401,
+        "attribute|delete": 387,
+        "attribute|substitute": 474,
+        "object|add": 315,
+        "object|delete": 109,
+        "object|substitute": 411,
+        "predicate|add": 545,
+        "predicate|delete": 283,
+        "predicate|substitute": 476
+      },
+      "class_group_counts": {
+        "attribute|add": 342,
+        "attribute|delete": 336,
+        "attribute|substitute": 373,
+        "object|add": 299,
+        "object|delete": 107,
+        "object|substitute": 385,
+        "predicate|add": 383,
+        "predicate|delete": 245,
+        "predicate|substitute": 351
+      },
+      "confusion_matrix": [
+        [
+          18,
+          7,
+          129,
+          17,
+          6,
+          107,
+          10,
+          8,
+          13
+        ],
+        [
+          5,
+          1,
+          51,
+          7,
+          1,
+          35,
+          4,
+          2,
+          3
+        ],
+        [
+          25,
+          13,
+          247,
+          17,
+          13,
+          51,
+          13,
+          14,
+          18
+        ],
+        [
+          27,
+          11,
+          128,
+          28,
+          15,
+          148,
+          20,
+          12,
+          12
+        ],
+        [
+          13,
+          14,
+          186,
+          18,
+          12,
+          106,
+          9,
+          15,
+          14
+        ],
+        [
+          17,
+          3,
+          125,
+          25,
+          7,
+          237,
+          26,
+          16,
+          18
+        ],
+        [
+          19,
+          9,
+          187,
+          33,
+          12,
+          234,
+          17,
+          17,
+          17
+        ],
+        [
+          3,
+          2,
+          154,
+          10,
+          2,
+          94,
+          5,
+          7,
+          6
+        ],
+        [
+          11,
+          8,
+          179,
+          19,
+          5,
+          218,
+          6,
+          18,
+          12
+        ]
+      ],
+      "group_count": 459,
+      "labels": [
+        "object|add",
+        "object|delete",
+        "object|substitute",
+        "attribute|add",
+        "attribute|delete",
+        "attribute|substitute",
+        "predicate|add",
+        "predicate|delete",
+        "predicate|substitute"
+      ],
+      "metrics": {
+        "accuracy": {
+          "ci_high": 0.182114624413723,
+          "ci_low": 0.1594082724041581,
+          "value": 0.1702440458688621
+        },
+        "balanced_accuracy": {
+          "ci_high": 0.15954660687095956,
+          "ci_low": 0.14017572269608358,
+          "value": 0.1499179244824872
+        },
+        "macro_f1": {
+          "ci_high": 0.11229604534803128,
+          "ci_low": 0.09318952937021224,
+          "value": 0.10241957690812381
+        }
+      },
+      "name": "norm_v__cell",
+      "outer_folds": 5,
+      "row_count": 3401,
+      "selected_c_by_fold": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "status": "ok"
+    },
+    {
+      "c_tuned_inside_outer_fold": false,
+      "chance_majority_accuracy": 0.16024698618053515,
+      "chance_uniform_accuracy": 0.1111111111111111,
+      "class_counts": {
+        "attribute|add": 401,
+        "attribute|delete": 387,
+        "attribute|substitute": 474,
+        "object|add": 315,
+        "object|delete": 109,
+        "object|substitute": 411,
+        "predicate|add": 545,
+        "predicate|delete": 283,
+        "predicate|substitute": 476
+      },
+      "class_group_counts": {
+        "attribute|add": 342,
+        "attribute|delete": 336,
+        "attribute|substitute": 373,
+        "object|add": 299,
+        "object|delete": 107,
+        "object|substitute": 385,
+        "predicate|add": 383,
+        "predicate|delete": 245,
+        "predicate|substitute": 351
+      },
+      "confusion_matrix": [
+        [
+          34,
+          55,
+          26,
+          22,
+          38,
+          32,
+          28,
+          52,
+          28
+        ],
+        [
+          15,
+          25,
+          5,
+          10,
+          10,
+          6,
+          12,
+          20,
+          6
+        ],
+        [
+          36,
+          74,
+          30,
+          35,
+          49,
+          35,
+          35,
+          75,
+          42
+        ],
+        [
+          35,
+          66,
+          25,
+          39,
+          44,
+          38,
+          41,
+          73,
+          40
+        ],
+        [
+          31,
+          54,
+          24,
+          30,
+          59,
+          48,
+          42,
+          59,
+          40
+        ],
+        [
+          44,
+          71,
+          28,
+          36,
+          68,
+          65,
+          44,
+          76,
+          42
+        ],
+        [
+          57,
+          94,
+          33,
+          39,
+          68,
+          51,
+          72,
+          81,
+          50
+        ],
+        [
+          18,
+          49,
+          21,
+          24,
+          33,
+          19,
+          22,
+          64,
+          33
+        ],
+        [
+          37,
+          67,
+          35,
+          38,
+          56,
+          33,
+          48,
+          99,
+          63
+        ]
+      ],
+      "group_count": 459,
+      "labels": [
+        "object|add",
+        "object|delete",
+        "object|substitute",
+        "attribute|add",
+        "attribute|delete",
+        "attribute|substitute",
+        "predicate|add",
+        "predicate|delete",
+        "predicate|substitute"
+      ],
+      "metrics": {
+        "accuracy": {
+          "ci_high": 0.14056230849735835,
+          "ci_low": 0.12444252791677389,
+          "value": 0.13260805645398413
+        },
+        "balanced_accuracy": {
+          "ci_high": 0.15258072983443272,
+          "ci_low": 0.1331526593480888,
+          "value": 0.1430823210611153
+        },
+        "macro_f1": {
+          "ci_high": 0.1358953964298485,
+          "ci_low": 0.12163394652482022,
+          "value": 0.12919746500884458
+        }
+      },
+      "name": "q_positive__cell",
+      "outer_folds": 5,
+      "row_count": 3401,
+      "selected_c_by_fold": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "status": "ok"
+    },
+    {
+      "c_tuned_inside_outer_fold": false,
+      "chance_majority_accuracy": 0.16024698618053515,
+      "chance_uniform_accuracy": 0.1111111111111111,
+      "class_counts": {
+        "attribute|add": 401,
+        "attribute|delete": 387,
+        "attribute|substitute": 474,
+        "object|add": 315,
+        "object|delete": 109,
+        "object|substitute": 411,
+        "predicate|add": 545,
+        "predicate|delete": 283,
+        "predicate|substitute": 476
+      },
+      "class_group_counts": {
+        "attribute|add": 342,
+        "attribute|delete": 336,
+        "attribute|substitute": 373,
+        "object|add": 299,
+        "object|delete": 107,
+        "object|substitute": 385,
+        "predicate|add": 383,
+        "predicate|delete": 245,
+        "predicate|substitute": 351
+      },
+      "confusion_matrix": [
+        [
+          200,
+          12,
+          12,
+          34,
+          7,
+          5,
+          34,
+          5,
+          6
+        ],
+        [
+          8,
+          31,
+          6,
+          2,
+          20,
+          6,
+          12,
+          15,
+          9
+        ],
+        [
+          33,
+          37,
+          172,
+          23,
+          33,
+          27,
+          36,
+          31,
+          19
+        ],
+        [
+          40,
+          17,
+          9,
+          180,
+          1,
+          42,
+          65,
+          24,
+          23
+        ],
+        [
+          18,
+          72,
+          21,
+          18,
+          98,
+          18,
+          50,
+          65,
+          27
+        ],
+        [
+          38,
+          50,
+          22,
+          92,
+          39,
+          56,
+          64,
+          68,
+          45
+        ],
+        [
+          81,
+          33,
+          16,
+          57,
+          29,
+          20,
+          250,
+          14,
+          45
+        ],
+        [
+          22,
+          41,
+          18,
+          24,
+          53,
+          11,
+          20,
+          75,
+          19
+        ],
+        [
+          23,
+          60,
+          36,
+          48,
+          56,
+          28,
+          87,
+          51,
+          87
+        ]
+      ],
+      "group_count": 459,
+      "labels": [
+        "object|add",
+        "object|delete",
+        "object|substitute",
+        "attribute|add",
+        "attribute|delete",
+        "attribute|substitute",
+        "predicate|add",
+        "predicate|delete",
+        "predicate|substitute"
+      ],
+      "metrics": {
+        "accuracy": {
+          "ci_high": 0.3561702828826116,
+          "ci_low": 0.32091495095966305,
+          "value": 0.3378418112319906
+        },
+        "balanced_accuracy": {
+          "ci_high": 0.36028769819893447,
+          "ci_low": 0.32300588080417464,
+          "value": 0.34050815575676874
+        },
+        "macro_f1": {
+          "ci_high": 0.337074781429448,
+          "ci_low": 0.3020877862511001,
+          "value": 0.31840101568067525
+        }
+      },
+      "name": "q_negative__cell",
+      "outer_folds": 5,
+      "row_count": 3401,
+      "selected_c_by_fold": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "status": "ok"
+    },
+    {
+      "c_tuned_inside_outer_fold": false,
+      "chance_majority_accuracy": 0.734489855924728,
+      "chance_uniform_accuracy": 0.5,
+      "class_counts": {
+        "text_only_editable": 2498,
+        "vision_grounded": 903
+      },
+      "class_group_counts": {
+        "text_only_editable": 457,
+        "vision_grounded": 452
+      },
+      "confusion_matrix": [
+        [
+          1779,
+          719
+        ],
+        [
+          351,
+          552
+        ]
+      ],
+      "group_count": 459,
+      "labels": [
+        "text_only_editable",
+        "vision_grounded"
+      ],
+      "metrics": {
+        "accuracy": {
+          "ci_high": 0.7010827532649777,
+          "ci_low": 0.6707157416742024,
+          "value": 0.6853866509850044
+        },
+        "balanced_accuracy": {
+          "ci_high": 0.679498102818506,
+          "ci_low": 0.6456981328140544,
+          "value": 0.6617327084258768
+        },
+        "macro_f1": {
+          "ci_high": 0.6545323127806157,
+          "ci_low": 0.6234844521375199,
+          "value": 0.6383091521628677
+        }
+      },
+      "name": "raw_v__construction_mode",
+      "outer_folds": 5,
+      "row_count": 3401,
+      "selected_c_by_fold": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "status": "ok"
+    },
+    {
+      "c_tuned_inside_outer_fold": false,
+      "chance_majority_accuracy": 0.15372297838270615,
+      "chance_uniform_accuracy": 0.1111111111111111,
+      "class_counts": {
+        "attribute|add": 318,
+        "attribute|delete": 303,
+        "attribute|substitute": 353,
+        "object|add": 294,
+        "object|delete": 102,
+        "object|substitute": 384,
+        "predicate|add": 230,
+        "predicate|delete": 213,
+        "predicate|substitute": 301
+      },
+      "class_group_counts": {
+        "attribute|add": 318,
+        "attribute|delete": 303,
+        "attribute|substitute": 353,
+        "object|add": 294,
+        "object|delete": 102,
+        "object|substitute": 384,
+        "predicate|add": 230,
+        "predicate|delete": 213,
+        "predicate|substitute": 301
+      },
+      "confusion_matrix": [
+        [
+          239,
+          0,
+          4,
+          16,
+          0,
+          4,
+          24,
+          1,
+          6
+        ],
+        [
+          1,
+          46,
+          0,
+          3,
+          23,
+          4,
+          4,
+          17,
+          4
+        ],
+        [
+          2,
+          27,
+          186,
+          13,
+          13,
+          43,
+          22,
+          21,
+          57
+        ],
+        [
+          5,
+          1,
+          2,
+          253,
+          4,
+          11,
+          28,
+          2,
+          12
+        ],
+        [
+          2,
+          33,
+          0,
+          2,
+          181,
+          12,
+          14,
+          47,
+          12
+        ],
+        [
+          6,
+          30,
+          12,
+          44,
+          31,
+          122,
+          27,
+          25,
+          56
+        ],
+        [
+          12,
+          2,
+          1,
+          9,
+          2,
+          7,
+          175,
+          1,
+          21
+        ],
+        [
+          6,
+          12,
+          0,
+          2,
+          20,
+          7,
+          8,
+          143,
+          15
+        ],
+        [
+          9,
+          22,
+          2,
+          1,
+          18,
+          32,
+          39,
+          52,
+          126
+        ]
+      ],
+      "group_count": 457,
+      "labels": [
+        "object|add",
+        "object|delete",
+        "object|substitute",
+        "attribute|add",
+        "attribute|delete",
+        "attribute|substitute",
+        "predicate|add",
+        "predicate|delete",
+        "predicate|substitute"
+      ],
+      "metrics": {
+        "accuracy": {
+          "ci_high": 0.6074681036845062,
+          "ci_low": 0.5682083341134383,
+          "value": 0.588871096877502
+        },
+        "balanced_accuracy": {
+          "ci_high": 0.6153721652035384,
+          "ci_low": 0.5705798894121672,
+          "value": 0.5930758407065138
+        },
+        "macro_f1": {
+          "ci_high": 0.5917423796585581,
+          "ci_low": 0.550878097349013,
+          "value": 0.5724232874490685
+        }
+      },
+      "name": "raw_v__cell__text_only",
+      "outer_folds": 5,
+      "row_count": 2498,
+      "selected_c_by_fold": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "status": "ok"
+    },
+    {
+      "c_tuned_inside_outer_fold": false,
+      "chance_majority_accuracy": 0.3488372093023256,
+      "chance_uniform_accuracy": 0.1111111111111111,
+      "class_counts": {
+        "attribute|add": 83,
+        "attribute|delete": 84,
+        "attribute|substitute": 121,
+        "object|add": 21,
+        "object|delete": 7,
+        "object|substitute": 27,
+        "predicate|add": 315,
+        "predicate|delete": 70,
+        "predicate|substitute": 175
+      },
+      "class_group_counts": {
+        "attribute|add": 83,
+        "attribute|delete": 84,
+        "attribute|substitute": 121,
+        "object|add": 21,
+        "object|delete": 7,
+        "object|substitute": 27,
+        "predicate|add": 315,
+        "predicate|delete": 70,
+        "predicate|substitute": 175
+      },
+      "confusion_matrix": [
+        [
+          13,
+          0,
+          0,
+          1,
+          0,
+          0,
+          6,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          5,
+          1
+        ],
+        [
+          0,
+          2,
+          7,
+          0,
+          5,
+          2,
+          1,
+          1,
+          9
+        ],
+        [
+          0,
+          0,
+          1,
+          57,
+          1,
+          10,
+          11,
+          2,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          1,
+          55,
+          5,
+          1,
+          13,
+          8
+        ],
+        [
+          5,
+          3,
+          7,
+          24,
+          21,
+          31,
+          9,
+          13,
+          8
+        ],
+        [
+          43,
+          2,
+          3,
+          46,
+          7,
+          8,
+          179,
+          1,
+          26
+        ],
+        [
+          1,
+          3,
+          0,
+          0,
+          12,
+          5,
+          1,
+          43,
+          5
+        ],
+        [
+          12,
+          2,
+          17,
+          18,
+          22,
+          19,
+          34,
+          25,
+          26
+        ]
+      ],
+      "group_count": 452,
+      "labels": [
+        "object|add",
+        "object|delete",
+        "object|substitute",
+        "attribute|add",
+        "attribute|delete",
+        "attribute|substitute",
+        "predicate|add",
+        "predicate|delete",
+        "predicate|substitute"
+      ],
+      "metrics": {
+        "accuracy": {
+          "ci_high": 0.48405538858147323,
+          "ci_low": 0.4245027019838727,
+          "value": 0.45514950166112955
+        },
+        "balanced_accuracy": {
+          "ci_high": 0.46087568770982246,
+          "ci_low": 0.38358106950481224,
+          "value": 0.4230139143599044
+        },
+        "macro_f1": {
+          "ci_high": 0.38068962962654734,
+          "ci_low": 0.3200072741776818,
+          "value": 0.3521593950650236
+        }
+      },
+      "name": "raw_v__cell__vision_grounded",
+      "outer_folds": 5,
+      "row_count": 903,
+      "selected_c_by_fold": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "status": "ok"
+    },
+    {
+      "chance_majority_accuracy": 0.16024698618053515,
+      "chance_uniform_accuracy": 0.1111111111111111,
+      "class_counts": {
+        "attribute|add": 401,
+        "attribute|delete": 387,
+        "attribute|substitute": 474,
+        "object|add": 315,
+        "object|delete": 109,
+        "object|substitute": 411,
+        "predicate|add": 545,
+        "predicate|delete": 283,
+        "predicate|substitute": 476
+      },
+      "class_group_counts": {
+        "attribute|add": 342,
+        "attribute|delete": 336,
+        "attribute|substitute": 373,
+        "object|add": 299,
+        "object|delete": 107,
+        "object|substitute": 385,
+        "predicate|add": 383,
+        "predicate|delete": 245,
+        "predicate|substitute": 351
+      },
+      "confusion_matrix": [
+        [
+          162,
+          9,
+          24,
+          21,
+          10,
+          17,
+          41,
+          15,
+          16
+        ],
+        [
+          19,
+          17,
+          5,
+          4,
+          7,
+          7,
+          15,
+          15,
+          20
+        ],
+        [
+          41,
+          33,
+          146,
+          23,
+          26,
+          34,
+          39,
+          28,
+          41
+        ],
+        [
+          52,
+          16,
+          13,
+          154,
+          13,
+          34,
+          50,
+          31,
+          38
+        ],
+        [
+          37,
+          31,
+          30,
+          33,
+          68,
+          52,
+          45,
+          40,
+          51
+        ],
+        [
+          63,
+          29,
+          28,
+          73,
+          41,
+          73,
+          56,
+          48,
+          63
+        ],
+        [
+          60,
+          24,
+          19,
+          38,
+          28,
+          36,
+          258,
+          30,
+          52
+        ],
+        [
+          19,
+          25,
+          16,
+          21,
+          32,
+          27,
+          37,
+          62,
+          44
+        ],
+        [
+          33,
+          30,
+          28,
+          44,
+          37,
+          52,
+          87,
+          60,
+          105
+        ]
+      ],
+      "group_count": 459,
+      "input": "positive_text [SEP] negative_text",
+      "labels": [
+        "object|add",
+        "object|delete",
+        "object|substitute",
+        "attribute|add",
+        "attribute|delete",
+        "attribute|substitute",
+        "predicate|add",
+        "predicate|delete",
+        "predicate|substitute"
+      ],
+      "metrics": {
+        "accuracy": {
+          "ci_high": 0.3229597114956144,
+          "ci_low": 0.2915314265198784,
+          "value": 0.30726256983240224
+        },
+        "balanced_accuracy": {
+          "ci_high": 0.31123392391142596,
+          "ci_low": 0.27864562142788235,
+          "value": 0.29470034408503043
+        },
+        "macro_f1": {
+          "ci_high": 0.2993906583771868,
+          "ci_low": 0.2688846577015996,
+          "value": 0.28440202166409906
+        }
+      },
+      "name": "text_tfidf__cell",
+      "outer_folds": 5,
+      "row_count": 3401,
+      "selected_c_by_fold": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "status": "ok"
+    },
+    {
+      "chance_majority_accuracy": 0.6201550387596899,
+      "chance_uniform_accuracy": 0.3333333333333333,
+      "class_counts": {
+        "attribute": 288,
+        "object": 55,
+        "predicate": 560
+      },
+      "class_group_counts": {
+        "attribute": 226,
+        "object": 51,
+        "predicate": 379
+      },
+      "confusion_matrix": [
+        [
+          26,
+          14,
+          15
+        ],
+        [
+          38,
+          106,
+          144
+        ],
+        [
+          171,
+          133,
+          256
+        ]
+      ],
+      "group_count": 452,
+      "labels": [
+        "object",
+        "attribute",
+        "predicate"
+      ],
+      "metrics": {
+        "accuracy": {
+          "ci_high": 0.46060632285432523,
+          "ci_low": 0.39416175451839014,
+          "value": 0.42967884828349945
+        },
+        "balanced_accuracy": {
+          "ci_high": 0.48452728847511845,
+          "ci_low": 0.3823972119705204,
+          "value": 0.4326418951418951
+        },
+        "macro_f1": {
+          "ci_high": 0.39491252116325504,
+          "ci_low": 0.33094338565049286,
+          "value": 0.36543515435987867
+        }
+      },
+      "name": "raw_v__semantic_target__text_only_editable_to_vision_grounded",
+      "outer_folds": 5,
+      "row_count": 903,
+      "selected_c_by_fold": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_and_test_groups_disjoint_per_fold": true,
+      "status": "ok",
+      "test_mode": "vision_grounded",
+      "train_mode": "text_only_editable"
+    },
+    {
+      "chance_majority_accuracy": 0.3899119295436349,
+      "chance_uniform_accuracy": 0.3333333333333333,
+      "class_counts": {
+        "attribute": 974,
+        "object": 780,
+        "predicate": 744
+      },
+      "class_group_counts": {
+        "attribute": 431,
+        "object": 418,
+        "predicate": 398
+      },
+      "confusion_matrix": [
+        [
+          155,
+          386,
+          239
+        ],
+        [
+          108,
+          607,
+          259
+        ],
+        [
+          66,
+          408,
+          270
+        ]
+      ],
+      "group_count": 457,
+      "labels": [
+        "object",
+        "attribute",
+        "predicate"
+      ],
+      "metrics": {
+        "accuracy": {
+          "ci_high": 0.4309644904015975,
+          "ci_low": 0.396379453097325,
+          "value": 0.41313050440352284
+        },
+        "balanced_accuracy": {
+          "ci_high": 0.41196985923025525,
+          "ci_low": 0.37874679628598207,
+          "value": 0.39494148664844825
+        },
+        "macro_f1": {
+          "ci_high": 0.4001869839940871,
+          "ci_low": 0.36483722406109914,
+          "value": 0.3826106203290011
+        }
+      },
+      "name": "raw_v__semantic_target__vision_grounded_to_text_only_editable",
+      "outer_folds": 5,
+      "row_count": 2498,
+      "selected_c_by_fold": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_and_test_groups_disjoint_per_fold": true,
+      "status": "ok",
+      "test_mode": "text_only_editable",
+      "train_mode": "vision_grounded"
+    },
+    {
+      "chance_majority_accuracy": 0.4640088593576966,
+      "chance_uniform_accuracy": 0.3333333333333333,
+      "class_counts": {
+        "add": 419,
+        "delete": 161,
+        "substitute": 323
+      },
+      "class_group_counts": {
+        "add": 419,
+        "delete": 157,
+        "substitute": 321
+      },
+      "confusion_matrix": [
+        [
+          374,
+          6,
+          39
+        ],
+        [
+          5,
+          135,
+          21
+        ],
+        [
+          118,
+          79,
+          126
+        ]
+      ],
+      "group_count": 452,
+      "labels": [
+        "add",
+        "delete",
+        "substitute"
+      ],
+      "metrics": {
+        "accuracy": {
+          "ci_high": 0.7268822587104525,
+          "ci_low": 0.6782113262246333,
+          "value": 0.7032115171650055
+        },
+        "balanced_accuracy": {
+          "ci_high": 0.7334840743798846,
+          "ci_low": 0.6821350029299855,
+          "value": 0.7070678760026864
+        },
+        "macro_f1": {
+          "ci_high": 0.700214408708502,
+          "ci_low": 0.6450307556785088,
+          "value": 0.6734479041433725
+        }
+      },
+      "name": "raw_v__edit_operation__text_only_editable_to_vision_grounded",
+      "outer_folds": 5,
+      "row_count": 903,
+      "selected_c_by_fold": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_and_test_groups_disjoint_per_fold": true,
+      "status": "ok",
+      "test_mode": "vision_grounded",
+      "train_mode": "text_only_editable"
+    },
+    {
+      "chance_majority_accuracy": 0.4155324259407526,
+      "chance_uniform_accuracy": 0.3333333333333333,
+      "class_counts": {
+        "add": 842,
+        "delete": 618,
+        "substitute": 1038
+      },
+      "class_group_counts": {
+        "add": 405,
+        "delete": 403,
+        "substitute": 435
+      },
+      "confusion_matrix": [
+        [
+          504,
+          7,
+          331
+        ],
+        [
+          14,
+          473,
+          131
+        ],
+        [
+          54,
+          282,
+          702
+        ]
+      ],
+      "group_count": 457,
+      "labels": [
+        "add",
+        "delete",
+        "substitute"
+      ],
+      "metrics": {
+        "accuracy": {
+          "ci_high": 0.6899199743196973,
+          "ci_low": 0.6540569547544854,
+          "value": 0.6721377101681345
+        },
+        "balanced_accuracy": {
+          "ci_high": 0.6985204024663667,
+          "ci_low": 0.6613554931500248,
+          "value": 0.6800825227240678
+        },
+        "macro_f1": {
+          "ci_high": 0.6962788975467692,
+          "ci_low": 0.6604001966804475,
+          "value": 0.6786602377806789
+        }
+      },
+      "name": "raw_v__edit_operation__vision_grounded_to_text_only_editable",
+      "outer_folds": 5,
+      "row_count": 2498,
+      "selected_c_by_fold": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_and_test_groups_disjoint_per_fold": true,
+      "status": "ok",
+      "test_mode": "text_only_editable",
+      "train_mode": "vision_grounded"
+    }
+  ],
+  "schema_version": "1.0"
+}

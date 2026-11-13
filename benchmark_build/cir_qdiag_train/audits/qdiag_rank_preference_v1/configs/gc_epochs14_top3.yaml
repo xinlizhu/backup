@@ -1,0 +1,32 @@
+data:
+  run_dir: ../../outputs/head_ablation_oprd_20261109/clip4cir_combiner
+  sampling_plan: ../qdiag_mining_alignment_v1/sampling_plan_seed42.jsonl
+  sampling_metadata: ../qdiag_mining_alignment_v1/sampling_plan_metadata.json
+  epochs:
+  - 1
+  - 4
+  ranks:
+  - 1
+  - 2
+  - 3
+  student_checkpoints:
+    1: initial.pt
+    4: checkpoint_epoch_003.pt
+  random_seed: 20261110
+model:
+  api_base: ${OPENAI_BASE_URL}
+  api_key: ${OPENAI_API_KEY}
+  generation_model: gpt-5.6-terra
+  validation_model: gpt-5.6-terra
+  generation_reasoning_effort: null
+  validation_reasoning_effort: null
+  image_detail: high
+  structured_output_mode: prompt
+  timeout_seconds: 600
+  max_retries: 2
+judging:
+  max_output_tokens: 3000
+runtime:
+  output_dir: outputs/gc_epochs14_top3
+  device: cuda:0
+  max_workers: 80

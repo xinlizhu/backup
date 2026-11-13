@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_941962d13ca68cc5",
+  "model": "grok-4.7",
+  "signature": "52913ea34ae01078c58f7a80fc2119b86ef4b6b3449e9e55b21816a5d5d1ccbd",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_941962d13ca68cc5_query_05176_object_add",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Inserts one object phrase, 'with a sun hat,' while preserving the outfit and palette request. No supplied positive depicts a sun hat, so the added fact is clearly false for every positive."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.7",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "dace294ee39f8c095a74ec07b65275d3bd3b5b36822da868882cfb1da629c2ab",
+      "input_hash": "5c54fb4cb2f100a2aee67170295f8f8172fc67adb928f0261bd03f50216d8456",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/grok-4.7/cache/validate_group/5c54fb4cb2f100a2aee67170295f8f8172fc67adb928f0261bd03f50216d8456.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "47dc7bdf-b182-9191-996c-d1db6af0182b",
+      "usage": {
+        "prompt_tokens": 6482,
+        "completion_tokens": 87,
+        "total_tokens": 12260,
+        "prompt_tokens_details": {
+          "text_tokens": 2576,
+          "audio_tokens": 0,
+          "image_tokens": 3906,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 5691,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 445600000
+      }
+    }
+  ],
+  "format_warnings": []
+}

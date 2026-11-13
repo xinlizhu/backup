@@ -1,0 +1,51 @@
+{
+  "identity": {
+    "source_final_sha256": "104c09d177a82df0daad003380e15154ecd2ad2884669d3b83842ca6b7b60616",
+    "release_final_sha256": "9ac8d8176bfa874484ee239cecd3ae61b5cfb45f3ee4f297366422dc1cd4dd44",
+    "prompt_sha256": "4036e186cec60c2851dd3eb1cd7d8bd1d45eb677c820088fc829f24b90278032",
+    "sampling": {
+      "seed": 42,
+      "per_cell": 50,
+      "population": "accepted_edits",
+      "subset_of": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_900_seed42/sampled_edits.private.jsonl"
+    },
+    "context": "sampled_candidates_only",
+    "baseline_model": "gpt-5.6-terra",
+    "source_review_code_sha256": "24ca3f03f82dc9715436e7d11b1c624fba3863a4b7c2980ab587575a93a3cc09",
+    "parent_sample_sha256": "37c4b25cabd6324b388ff77e4d5fb3ea9376c0c9979ca574c884ec3f642fa021"
+  },
+  "signature": "bd1831c68960abe458dbc4ffb203c5a0121dc541b550a246321120f3482e28c4",
+  "population_counts": {
+    "add/object": 1616,
+    "add/attribute": 693,
+    "add/predicate": 452,
+    "substitute/object": 1444,
+    "substitute/attribute": 1052,
+    "substitute/predicate": 478,
+    "delete/object": 1090,
+    "delete/attribute": 2497,
+    "delete/predicate": 809
+  },
+  "sampled_edits": 450,
+  "sampled_groups": 351,
+  "per_cell": 50,
+  "new_models": [
+    "gpt-5.6-sol",
+    "gpt-5.6-luna",
+    "gpt-6.1-terra",
+    "grok-4.6",
+    "claude-haiku-5-5"
+  ],
+  "planned_group_calls_per_model": 351,
+  "planned_total_group_calls": 1755,
+  "interpretation": "Acceptance agreement conditional on original gpt-5.6-terra acceptance; not overall accuracy or agreement on rejected candidates. The sample is balanced across nine cells; overall acceptance is their macro-average, not weighted by full-release cell prevalence.",
+  "context_limit": "Only sampled candidates are sent; original full-group instructions, review images/order, prompt and response schema are preserved. Candidate-batch context differs from the historical baseline.",
+  "artifacts": {
+    "prompts/validate_group_v7.txt": "4036e186cec60c2851dd3eb1cd7d8bd1d45eb677c820088fc829f24b90278032",
+    "sampled_edits.private.jsonl": "aa488599d9f1187738228849810575d3227057ff0d2b4f4650264e0377fb7d19",
+    "review_groups.private.jsonl": "e3a9fe774e54fdd3784e0fc28f0ab81d236db2e5aa2fa17edbce4d80f3ea210a",
+    "baseline_decisions.jsonl": "dbfb79a2341a9614ad8a2764ccd0f5d384ac021c3d9f654247a5a8d4efd6808c",
+    "image_inventory.json": "5c39e5d251ec56b7289f521ab9cc06e5d66490ba88859dbcc82375c5148c8f67",
+    "original_request_verification.json": "68255867428b8f95be53c9d52f65a96784c015ed28bd83bee1b14a30e5008a8f"
+  }
+}

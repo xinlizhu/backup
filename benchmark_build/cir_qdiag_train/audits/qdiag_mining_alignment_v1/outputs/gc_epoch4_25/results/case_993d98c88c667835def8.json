@@ -1,0 +1,90 @@
+{
+  "case_id": "case_993d98c88c667835def8",
+  "audit_query_id": "audit_query_100",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_993d98c88c667835def8",
+    "case_status": "source_invalid_or_uncertain",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "The food visibly has browned melted cheese on top, but its container appears to be a shallow round metal baking pan; identifying it as a bowl is uncertain."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The cheese-topped food is in a rectangular glass baking dish rather than a bowl."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The food must be served in a bowl."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_993d98c88c667835def8",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "The food visibly has a browned, melted cheese topping, but its metal container appears to be a shallow baking pan or tray. The close crop does not reliably establish the requested bowl."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "A cheese-topped casserole is visible in a rectangular glass baking dish with handles, rather than a bowl."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "3c8254fea51907ece42b038d1566752383565614aef443a50276cf7926f48869",
+      "input_hash": "26de68268c1fee305a7405ccd5d73a082c2f31683a8ccdbb9430fdc702a7a926",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/26de68268c1fee305a7405ccd5d73a082c2f31683a8ccdbb9430fdc702a7a926.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0b5ef1b46aea30f9016af2bde0fbd087d1aee965205ea27ab3",
+      "usage": {
+        "prompt_tokens": 13341,
+        "completion_tokens": 353,
+        "total_tokens": 13694,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 180
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "7a589f939953ed3a1ae3b0ccee24fc7295ce5556dc6736c88f48956532d746ea",
+      "input_hash": "d31814971e0cdef451098c759a3e2f0ad890ccc72e352f97837399fa9e2fd1a5",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/d31814971e0cdef451098c759a3e2f0ad890ccc72e352f97837399fa9e2fd1a5.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0dacebfcce7bdc46016af2bdf6b27c87d1ac0d3c03f9a385bf",
+      "usage": {
+        "prompt_tokens": 12799,
+        "completion_tokens": 166,
+        "total_tokens": 12965,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 54
+        }
+      }
+    }
+  ]
+}

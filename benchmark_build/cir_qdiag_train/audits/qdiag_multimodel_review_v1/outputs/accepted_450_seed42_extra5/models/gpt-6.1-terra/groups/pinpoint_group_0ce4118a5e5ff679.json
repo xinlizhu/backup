@@ -1,0 +1,49 @@
+{
+  "group_id": "pinpoint_group_0ce4118a5e5ff679",
+  "model": "gpt-6.1-terra",
+  "signature": "08eff7f6139e72d377a59effd10853d9c15929bec5b0a3afebcc9b0ca4a1c2df",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_0ce4118a5e5ff679_query_00014_predicate_delete",
+      "decision": "reject",
+      "failure_code": "wrong_semantic_target",
+      "reason": "Deleting “here” removes a location constraint, not a predicate."
+    },
+    {
+      "negative_id": "pinpoint_group_0ce4118a5e5ff679_query_00015_predicate_add",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Adds the single predicate that the men are standing in a line; none of the supplied positives shows men standing in a line."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "gpt-6.1-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "0f0f59568f12860682c93d2c7c6006d12de8a588a903840c732e6f69dcb1d618",
+      "input_hash": "2bd08bc1be11ae725543010e18f4bf0fd113a6537afcb0270b3b07707eb73465",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/gpt-6.1-terra/cache/validate_group/2bd08bc1be11ae725543010e18f4bf0fd113a6537afcb0270b3b07707eb73465.json",
+      "cached": false,
+      "attempts": 2,
+      "request_id": "resp_0af9baaf4c0f0c93016af42e49569c87d0bf6200cc81e34448",
+      "usage": {
+        "prompt_tokens": 9115,
+        "completion_tokens": 616,
+        "total_tokens": 9731,
+        "prompt_tokens_details": {
+          "cached_tokens": 3169
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 488
+        }
+      }
+    }
+  ],
+  "format_warnings": []
+}

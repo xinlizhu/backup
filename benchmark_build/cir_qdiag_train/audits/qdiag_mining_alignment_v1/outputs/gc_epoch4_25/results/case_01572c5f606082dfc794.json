@@ -1,0 +1,135 @@
+{
+  "case_id": "case_01572c5f606082dfc794",
+  "audit_query_id": "audit_query_078",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_01572c5f606082dfc794",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows one beaver sitting on a rock with blue sky visible behind it."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows one beaver on a rock, but its visible background is rocky terrain rather than blue sky."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "blue sky in the background"
+    ],
+    "witnesses": [
+      {
+        "witness_id": "delete_background_sky",
+        "operation": "delete",
+        "semantic_target": "predicate",
+        "before_span": "with blue sky in the background",
+        "after_span": null,
+        "edited_instruction": "one beaver sat on a rock",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "Removes the requirement that the background include blue sky.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 shows one beaver sitting on a rock."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows one beaver sitting on a rock."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_01572c5f606082dfc794",
+    "source_on_positive": {
+      "status": "contradicted",
+      "evidence": "The single animal sits on a rock against a blue background, but it has marmot-like features and a furry tail rather than a beaver's broad, flat tail. The blue background alone also does not reliably establish sky."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "A single marmot-like animal sits on a rock, surrounded by rocks and earth with no blue sky visible. Its small ears, short muzzle, and furry tail do not support identification as a beaver."
+    },
+    "verdicts": [
+      {
+        "witness_id": "delete_background_sky",
+        "decision": "reject",
+        "failure_code": "source_invalid_or_uncertain",
+        "witness_type": null,
+        "reason": "The span deletion reconstructs the fluent edited instruction, but the source is not established on T. Both images show marmot-like animals rather than beavers, so deleting the background constraint leaves an unsupported animal identity and does not yield the required deletion support pattern.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "One animal is seated on a rock, but its visible features and furry tail identify it as marmot-like rather than a beaver."
+        },
+        "edited_on_candidate": {
+          "status": "contradicted",
+          "evidence": "One animal sits on a rock, but it is marmot-like rather than a beaver; removing the sky constraint does not resolve this identity mismatch."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [],
+  "local_checks": [
+    {
+      "witness_id": "delete_background_sky",
+      "accepted": false,
+      "local_failures": [
+        "wrong_witness_type",
+        "wrong_support_pattern"
+      ],
+      "review_decision": "reject"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "7cb5788697e395a16fc836824c7c6a3c89a7179e30f17b109eb9bc146070f9eb",
+      "input_hash": "6344bc598d887d0a1ecd890ff77818437cd15a3a58c3ed6ed60bffc1ad821780",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/6344bc598d887d0a1ecd890ff77818437cd15a3a58c3ed6ed60bffc1ad821780.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_07d03d7103508ae8016af2bf4b071c87d18f1ea5e46cabf14f",
+      "usage": {
+        "prompt_tokens": 7831,
+        "completion_tokens": 490,
+        "total_tokens": 8321,
+        "prompt_tokens_details": {
+          "cached_tokens": 5888
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 252
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "9fb26511953eb6cc21ef1c3b9dcae2e4eff2a9b578c3a51c312f834334a3468a",
+      "input_hash": "8c33b43c13d0f3e0f76fbba0b4dda04a9d2f10e56d8509bc60972656fd9e169c",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/8c33b43c13d0f3e0f76fbba0b4dda04a9d2f10e56d8509bc60972656fd9e169c.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0687024fe6c6851c016af2bf587e6c87d28127c3c38a619d43",
+      "usage": {
+        "prompt_tokens": 7191,
+        "completion_tokens": 461,
+        "total_tokens": 7652,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 87
+        }
+      }
+    }
+  ]
+}

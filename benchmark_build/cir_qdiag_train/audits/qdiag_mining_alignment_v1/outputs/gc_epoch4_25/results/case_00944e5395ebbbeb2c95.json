@@ -1,0 +1,88 @@
+{
+  "case_id": "case_00944e5395ebbbeb2c95",
+  "audit_query_id": "audit_query_089",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_00944e5395ebbbeb2c95",
+    "case_status": "source_invalid_or_uncertain",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "School buses are parked closely together, with severe fire damage visible on two prominent bus fronts. A third bus with fire damage to its front cannot be clearly identified."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The image shows a dump truck with a snowplow in a snowy lot, with no buses or visibly fire-damaged vehicle fronts."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "The scene is a bus parking lot.",
+      "Three buses have fire damage at their front ends."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_00944e5395ebbbeb2c95",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "The photo shows school buses parked together, with severe charring on the ends of the central buses. However, three distinct buses with fire damage specifically at their front ends cannot be reliably established from this view."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The photo shows a green dump truck fitted with a snowplow on a snowy street, rather than a bus parking lot with three buses burned at their front ends."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "7e78873132d6716ec976e8ab55ffa71f2cfe880364b8a9440ff438b26ca220eb",
+      "input_hash": "30906117776ad05ce069c044488898e5e5fe54859436441681056efc807b4a00",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/30906117776ad05ce069c044488898e5e5fe54859436441681056efc807b4a00.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_07c5b2232c2d8beb016af2be31dbb887d2a09d10dbfc96ec05",
+      "usage": {
+        "prompt_tokens": 7832,
+        "completion_tokens": 276,
+        "total_tokens": 8108,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 82
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "4188a61bbfc305add6e3a972e2a95739f4c9e82cfd5c8f3450ad8810c07c0540",
+      "input_hash": "07da2bcaf7dd0ecbba8381d1919023e5b48b0927404100c3b9af3a26b1451c94",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/07da2bcaf7dd0ecbba8381d1919023e5b48b0927404100c3b9af3a26b1451c94.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_06b4e16b0848a406016af2be3e5ed087d1b90805d3bdf04766",
+      "usage": {
+        "prompt_tokens": 7290,
+        "completion_tokens": 128,
+        "total_tokens": 7418,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        }
+      }
+    }
+  ]
+}

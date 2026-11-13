@@ -1,0 +1,88 @@
+{
+  "case_id": "case_16d958b1317c1554c724",
+  "audit_query_id": "audit_query_089",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_16d958b1317c1554c724",
+    "case_status": "source_invalid_or_uncertain",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "The image shows a bus lot and a visibly burned bus, but it does not clearly show three buses with fire damage to their front ends."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The candidate shows two alpacas outdoors, not a bus parking lot or buses with fire damage."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "depicts a bus parking lot",
+      "shows three buses with fire damage to their front ends"
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_16d958b1317c1554c724",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "The image shows school buses in a parking area, with severe charring and exposed structures on the fronts of two central buses. A third bus with a fire-damaged front cannot be reliably identified, so the stated count of three is unverified."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The image shows two alpacas wearing decorative hats against greenery, with no bus parking lot or fire-damaged buses."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "2b9707295fa6cf1a3c619a634f95886aa1669eab99f035a6f9002087937b0fca",
+      "input_hash": "7c73f830b96fb58faca820f12bdca8589d3cc32109a16423d730900062679ad2",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/7c73f830b96fb58faca820f12bdca8589d3cc32109a16423d730900062679ad2.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_017a52dab43e8aec016af2bf5d95fc87d1a16f33c976db127a",
+      "usage": {
+        "prompt_tokens": 3753,
+        "completion_tokens": 922,
+        "total_tokens": 4675,
+        "completion_tokens_details": {
+          "reasoning_tokens": 780
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "58b9c93d35ee689b7519d7ce315701c3e2b2b8f0bda854eb8c201b7af14f9d4a",
+      "input_hash": "2fee766bdef2a74eff055c7ee002761bfbdb1ee751b44f2a8b38b62453c84401",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/2fee766bdef2a74eff055c7ee002761bfbdb1ee751b44f2a8b38b62453c84401.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_03d1a7aa52cb822a016af2bf806fe087d19a460a3ede3a74a5",
+      "usage": {
+        "prompt_tokens": 6436,
+        "completion_tokens": 178,
+        "total_tokens": 6614,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 50
+        }
+      }
+    }
+  ]
+}

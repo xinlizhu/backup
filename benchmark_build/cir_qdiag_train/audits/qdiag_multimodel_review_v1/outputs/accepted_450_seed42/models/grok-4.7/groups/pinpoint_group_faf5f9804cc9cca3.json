@@ -1,0 +1,49 @@
+{
+  "group_id": "pinpoint_group_faf5f9804cc9cca3",
+  "model": "grok-4.7",
+  "signature": "52913ea34ae01078c58f7a80fc2119b86ef4b6b3449e9e55b21816a5d5d1ccbd",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_faf5f9804cc9cca3_query_06951_predicate_add",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Appending “framing the border” is one fluent predicate addition and reconstructs the negative text. No positive shows lights framing a border, so the added relation is clearly false for every positive."
+    },
+    {
+      "negative_id": "pinpoint_group_faf5f9804cc9cca3_query_06951_object_substitute",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Swapping “mirror garland” for “ribbon garland” is a single object-identity edit and stays fluent. None of the positives contains a ribbon garland, so the substituted object is clearly false in all of them."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.7",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "bb2d065957cf0ffccc1c1b81e97a1f27ce490c9c33c7aef5c3e8310574883f4b",
+      "input_hash": "ad651d8e75646cff0d9eb03d269b9d5a990e0cc959dd3ecdce40f7b72e93c58a",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/grok-4.7/cache/validate_group/ad651d8e75646cff0d9eb03d269b9d5a990e0cc959dd3ecdce40f7b72e93c58a.json",
+      "cached": false,
+      "attempts": 3,
+      "request_id": "d033ed7f-0133-93f6-90fe-44697256d3b4",
+      "usage": {
+        "prompt_tokens": 6564,
+        "completion_tokens": 6584,
+        "total_tokens": 13148,
+        "prompt_tokens_details": {
+          "cached_tokens": 4096
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 6404
+        }
+      }
+    }
+  ],
+  "format_warnings": []
+}

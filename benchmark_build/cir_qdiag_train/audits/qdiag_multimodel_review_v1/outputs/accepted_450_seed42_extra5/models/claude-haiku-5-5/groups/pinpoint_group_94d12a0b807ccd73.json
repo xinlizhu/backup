@@ -1,0 +1,68 @@
+{
+  "group_id": "pinpoint_group_94d12a0b807ccd73",
+  "model": "claude-haiku-5-5",
+  "signature": "44bb4aae802e19564501a676b733c7e19828d9ced260b7da0428f08b1a359df2",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_94d12a0b807ccd73_query_06048_object_add",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "Image 3 shows a lighthouse structure in the background. The addition of '<img3> lighthouse' is compatible with the positive images provided, as the lighthouse object appears to be present in at least one supplied positive image."
+    },
+    {
+      "negative_id": "pinpoint_group_94d12a0b807ccd73_query_06051_attribute_add",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "The addition of 'with a gold frame' is a single attribute edit applied to the existing wedding arch. All supplied positive images (3-6) show wedding settings with warm orange/coral tones but none display a prominent gold frame element on the arch itself, making this a clearly false addition for the positive set."
+    },
+    {
+      "negative_id": "pinpoint_group_94d12a0b807ccd73_query_06052_predicate_add",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "The addition of 'while framing the aisle' is a single predicate edit that adds a spatial/functional relationship. The positive images show wedding arches in various configurations, but none consistently demonstrate the aisle-framing predicate as the primary compositional constraint, making this a meaningful single edit that is false for the visual evidence."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-haiku-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "509e93d2c43d38deede4dc7deb6dd574820c8b5a54f6344871340bca19703606",
+      "input_hash": "98f342df59f05f9492612698fdc66cb285da290446c88877da279a8cb56e9c8c",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/claude-haiku-5-5/cache/validate_group/98f342df59f05f9492612698fdc66cb285da290446c88877da279a8cb56e9c8c.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01ArA7kiS9R4WjEDhZizTqDWkC",
+      "usage": {
+        "prompt_tokens": 10968,
+        "completion_tokens": 433,
+        "total_tokens": 11401,
+        "prompt_tokens_details": {
+          "cached_tokens": 8551,
+          "cache_creation_tokens": 2413
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_94d12a0b807ccd73_query_06051_attribute_add",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 313,
+      "action": "full reason retained; decision and failure_code unchanged"
+    },
+    {
+      "negative_id": "pinpoint_group_94d12a0b807ccd73_query_06052_predicate_add",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 359,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

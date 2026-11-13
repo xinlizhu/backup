@@ -1,0 +1,49 @@
+{
+  "group_id": "pinpoint_group_1af6e4a2ba54a76d",
+  "model": "gpt-5.6-luna",
+  "signature": "e0a59d07fd411f37376a5d88b0f5931c56e4eaa296bc7c0f3d113be2a03e8f5e",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_1af6e4a2ba54a76d_query_06071_object_delete",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Deleting 'sweater' removes one garment-category constraint, leaving a fluent, strictly weaker request for a dress while preserving the silhouette and color-palette requirements."
+    },
+    {
+      "negative_id": "pinpoint_group_1af6e4a2ba54a76d_query_06075_object_substitute",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "Image 6 shows a long knitted garment with its front closure out of view, so it remains compatible with a cardigan dress. The substituted garment category is not clearly false for every supplied positive."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "gpt-5.6-luna",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "e09cc173a3c1bd0caf42a54f5cec6d19f85093055a09877d8dcdd08374af7949",
+      "input_hash": "8b8cd19f2af3f5422b005b509d7271789da98f166d66a8e925756f4aaaa21bf8",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/gpt-5.6-luna/cache/validate_group/8b8cd19f2af3f5422b005b509d7271789da98f166d66a8e925756f4aaaa21bf8.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0bfc8e5c7c740f1a016af42d7a892c87d2b0e0d178e005fc2c",
+      "usage": {
+        "prompt_tokens": 22788,
+        "completion_tokens": 291,
+        "total_tokens": 23079,
+        "prompt_tokens_details": {
+          "cached_tokens": 22785
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 129
+        }
+      }
+    }
+  ],
+  "format_warnings": []
+}

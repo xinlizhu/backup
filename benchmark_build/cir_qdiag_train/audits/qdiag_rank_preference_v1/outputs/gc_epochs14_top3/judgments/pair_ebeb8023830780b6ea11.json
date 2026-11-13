@@ -1,0 +1,68 @@
+{
+  "case_id": "pair_ebeb8023830780b6ea11",
+  "signature": "f91b95909684e2ecf5207ab608279749c891c56633f2fa7c877aa09c2d59f3d4",
+  "simulated": false,
+  "status": "complete",
+  "judgment": {
+    "case_id": "pair_ebeb8023830780b6ea11",
+    "constraints": [
+      {
+        "constraint": "The bowl is white.",
+        "A_status": "supported",
+        "B_status": "supported",
+        "A_evidence": "The food is held in a white oval serving bowl.",
+        "B_evidence": "The bowl has a white interior with a dark rim."
+      },
+      {
+        "constraint": "The bowl sits on a blue napkin.",
+        "A_status": "supported",
+        "B_status": "contradicted",
+        "A_evidence": "Blue fabric extends beneath and around the white bowl.",
+        "B_evidence": "The bowl sits directly on the visible wooden surface; no blue napkin is present."
+      },
+      {
+        "constraint": "Broccoli is placed beside the bowl.",
+        "A_status": "supported",
+        "B_status": "contradicted",
+        "A_evidence": "Large green broccoli florets sit on a separate plate beside the bowl at the upper right.",
+        "B_evidence": "No broccoli is visible beside the bowl."
+      },
+      {
+        "constraint": "The bowl's contents are orange.",
+        "A_status": "supported",
+        "B_status": "contradicted",
+        "A_evidence": "The contents are predominantly orange, with an orange sauce and topping.",
+        "B_evidence": "The mashed contents remain pale cream, with green chive garnish."
+      }
+    ],
+    "A_status": "supported",
+    "B_status": "contradicted",
+    "decision": "A_only",
+    "reason": "A shows all four requested attributes: a white bowl on blue fabric, broccoli beside it, and orange contents. B lacks the blue napkin and broccoli, and its contents remain cream-colored."
+  },
+  "trace": {
+    "stage": "rank_pair_judgment",
+    "model_name": "gpt-5.6-terra",
+    "model_revision": null,
+    "provider": "openai-compatible-chat",
+    "reasoning_effort": null,
+    "prompt_version": "rank_preference_v1",
+    "prompt_hash": "a1743bc0210f6e06f37c2de299bd14e516b49f8f0ff44df61c0c38cc8d6e95be",
+    "input_hash": "9545cc2a0cff49f3fd60f25be0f2582786e4dc52ec51613f39a4da1a12f10f46",
+    "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_rank_preference_v1/outputs/gc_epochs14_top3/api_cache/rank_pair_judgment/9545cc2a0cff49f3fd60f25be0f2582786e4dc52ec51613f39a4da1a12f10f46.json",
+    "cached": false,
+    "attempts": 1,
+    "request_id": "resp_0d70328a3c035a17016af2ccccca5487d1a1f9eb44cd18a0b3",
+    "usage": {
+      "prompt_tokens": 18378,
+      "completion_tokens": 427,
+      "total_tokens": 18805,
+      "prompt_tokens_details": {
+        "cached_tokens": 4864
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 32
+      }
+    }
+  }
+}

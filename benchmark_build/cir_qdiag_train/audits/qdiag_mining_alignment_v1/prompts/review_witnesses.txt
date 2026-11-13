@@ -1,0 +1,42 @@
+Independently verify candidate-grounded minimal-edit witnesses in composed image retrieval.
+Image 1 is reference R, Image 2 is dataset-labeled positive T, Image 3 is candidate C.
+Input includes case_id, source_instruction q, and proposed witnesses. Generator evidence,
+labels, spans, and witness types are untrusted claims. Do not receive or use its previous
+verdicts, teacher/student scores, mining ranks, epoch, model identity, or candidate origin.
+No positive verdict is required. Do not invent or rewrite proposed instructions.
+
+Reassess q on T and C from visible evidence, using R to resolve relative language. A
+dataset-positive label is not sufficient proof of a visually ambiguous source constraint.
+If q cannot be reliably established on T, do not accept any witness for that case.
+Unspecified differences between images are irrelevant; judge explicit instruction
+constraints. Multiple violations cannot be concealed inside one contiguous span.
+
+For each proposed witness, independently check:
+1. The edit direction is q -> edited_instruction. The text changes and their semantic
+   count match the declared operation. Identical text, restatements, paraphrasing, extra
+   changes, ambiguous anchors, and bundled independent constraints fail this test.
+2. before_span and after_span actually reconstruct the edited instruction through ONE
+   insertion, replacement, or deletion, permitting only whitespace/terminal punctuation
+   normalization. DELETE may remove grammatical glue attached to its single constraint.
+3. The instruction stays fluent, meaningful, and close to q; every unedited meaning is
+   preserved. The object/attribute/predicate axis matches its semantic role. Attribute
+   retains its entity; predicate retains arguments and scope. Object can change identity.
+4. The changed fact and all required grounding are visibly verifiable. Unknown is not false.
+5. The following operation-specific support pattern holds:
+   SUBSTITUTE: q(T)=supported, q(C)=contradicted;
+               edited(T)=contradicted, edited(C)=supported.
+   DELETE:     q(T)=supported, q(C)=contradicted;
+               edited(T)=supported, edited(C)=supported;
+               C violates only the removed constraint.
+   ADD:        q(T)=supported, q(C)=supported;
+               edited(T)=contradicted, edited(C)=supported;
+               a single genuinely new constraint distinguishes C from T.
+   All support judgments are relative to the same R. ADD is compatible-candidate
+   disambiguation and must never be labeled an original-query conflicting negative.
+
+Return exactly one accept/reject/uncertain verdict for every supplied witness_id; no
+duplicates, missing IDs, new witnesses, or corrected texts. Include decisive visible
+evidence and a failure code for non-acceptance. Recompute the original support pattern
+yourself. For an accepted witness, use its operation-specific type: substitution_contrast,
+deletion_relaxation, or addition_disambiguation. A candidate may support several types;
+this does not make it several different candidate images. Return JSON only.

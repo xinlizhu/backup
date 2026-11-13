@@ -1,0 +1,174 @@
+{
+  "case_id": "case_be1df419233002eb72de",
+  "audit_query_id": "audit_query_095",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_be1df419233002eb72de",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows one bird with its bill open and neck raised; the water appears grey-brown."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows one bird with its bill open and neck raised, but the water is visibly blue rather than grey."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "Change the water color to grey; the candidate water is visibly blue."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "substitute-water-color",
+        "operation": "substitute",
+        "semantic_target": "attribute",
+        "before_span": "grey",
+        "after_span": "blue",
+        "edited_instruction": "Remove all but one bird, change water color to blue, and raise remaining bird out of wate with it's mouth open.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "Water color: grey is replaced with blue; the candidate shows blue water, while the positive shows grey-brown water.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2's water appears grey-brown, not blue; its single bird has an open bill and raised neck."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows blue water and one bird with an open bill and raised neck."
+        }
+      },
+      {
+        "witness_id": "delete-water-color",
+        "operation": "delete",
+        "semantic_target": "attribute",
+        "before_span": ", change water color to grey",
+        "after_span": null,
+        "edited_instruction": "Remove all but one bird, and raise remaining bird out of wate with it's mouth open.",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "The deleted constraint is that the water be grey; the candidate contradicts that color constraint, while both images show one bird with an open bill and raised neck.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 shows one bird with its bill open and neck raised; without a water-color requirement, the remaining instruction is supported."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows one bird with its bill open and neck raised; without a water-color requirement, the remaining instruction is supported."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_be1df419233002eb72de",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows one bird standing up out of the water with its beak open; the water appears grey-brown."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 has blue water, but the bird is floating with its body in the water rather than raised out of it."
+    },
+    "verdicts": [
+      {
+        "witness_id": "substitute-water-color",
+        "decision": "reject",
+        "failure_code": "support_pattern_mismatch",
+        "witness_type": null,
+        "reason": "The single color substitution is structurally valid, but the edited query is not supported by Image 3: although its water is blue and its beak is open, the bird is not raised out of the water.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2's water is grey-brown, not blue."
+        },
+        "edited_on_candidate": {
+          "status": "contradicted",
+          "evidence": "The water is blue, but the bird's body remains in the water rather than being raised out of it."
+        }
+      },
+      {
+        "witness_id": "delete-water-color",
+        "decision": "reject",
+        "failure_code": "support_pattern_mismatch",
+        "witness_type": null,
+        "reason": "The deletion is a single constraint removal, but the edited query still requires the bird to be raised out of the water, which Image 3 does not show.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 shows one bird raised up from the water with its beak open."
+        },
+        "edited_on_candidate": {
+          "status": "contradicted",
+          "evidence": "Image 3 shows the bird floating with its body in the water, not raised out of it."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [],
+  "local_checks": [
+    {
+      "witness_id": "substitute-water-color",
+      "accepted": false,
+      "local_failures": [
+        "wrong_witness_type",
+        "wrong_support_pattern"
+      ],
+      "review_decision": "reject"
+    },
+    {
+      "witness_id": "delete-water-color",
+      "accepted": false,
+      "local_failures": [
+        "wrong_witness_type",
+        "wrong_support_pattern"
+      ],
+      "review_decision": "reject"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "7525ceb4eb389c4c32747d49ad0bbb364c88e711b6a747b5c636f8766db9b655",
+      "input_hash": "d9240e91070b478080c5824dc3b2869e6e63a57b37c0cfd1daecd0d1b4a30502",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/d9240e91070b478080c5824dc3b2869e6e63a57b37c0cfd1daecd0d1b4a30502.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_07056c850688da0e016af2bf26916487d19bd9ce0bdf2bd3c2",
+      "usage": {
+        "prompt_tokens": 8781,
+        "completion_tokens": 3097,
+        "total_tokens": 11878,
+        "completion_tokens_details": {
+          "reasoning_tokens": 2629
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "d60b9d051b74181e2b64a968fec75c4c45935d98a15a19df3f127649bd47097c",
+      "input_hash": "0afca566a75495573a43a936d9e7bc363f38ac8d85c4663ca9f23607a4449a5e",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/0afca566a75495573a43a936d9e7bc363f38ac8d85c4663ca9f23607a4449a5e.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_02cdd569a3c377e0016af2bf4c20f887d19177ac1f06fe555b",
+      "usage": {
+        "prompt_tokens": 11783,
+        "completion_tokens": 611,
+        "total_tokens": 12394,
+        "prompt_tokens_details": {
+          "cached_tokens": 5248
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 249
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,235 @@
+{
+  "case_id": "case_de3258d168d921c4b9d6",
+  "audit_query_id": "audit_query_079",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_de3258d168d921c4b9d6",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "T shows a black, bowl-shaped sink with a faucet pouring water into it."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows a round bowl-shaped sink, but its basin is silver-colored metal; the surrounding cabinet is black."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The sink bowl must be black."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "attribute",
+        "before_span": "black",
+        "after_span": "silver",
+        "edited_instruction": "Show a silver bowl sink.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "The sink bowl's color changes from black to silver.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "T's bowl is black, although the faucet is silver."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C has a reflective silver-colored round sink bowl set into the countertop."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "operation": "delete",
+        "semantic_target": "attribute",
+        "before_span": "black",
+        "after_span": null,
+        "edited_instruction": "Show a bowl sink.",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "Removes the requirement that the sink bowl be black.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "T shows a large bowl-shaped sink beneath a faucet."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C shows a round metal sink bowl beneath a faucet."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_de3258d168d921c4b9d6",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 clearly shows a black, round bowl-shaped sink beneath a running faucet."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a round silver metallic sink basin inset into a black cabinet. The basin itself is silver, not black."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing 'black' with 'silver' changes one color attribute while preserving the bowl sink entity. The black basin in Image 2 and silver basin in Image 3 establish the required contrast.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The bowl sink is black; the silver faucet does not make the basin silver."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The round, concave sink basin at the upper left of the cabinet has a visibly silver metallic interior and rim."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting 'black' removes exactly one color constraint. Both images show bowl-shaped sink basins, and the candidate violates only the removed black-color requirement.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 shows a large round bowl sink."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows a round bowl-shaped sink basin inset into the countertop; the instruction does not require an above-counter installation."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "substitute",
+      "semantic_target": "attribute",
+      "before_span": "black",
+      "after_span": "silver",
+      "edited_instruction": "Show a silver bowl sink.",
+      "witness_type": "substitution_contrast",
+      "changed_constraint": "The sink bowl's color changes from black to silver.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "T's bowl is black, although the faucet is silver."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C has a reflective silver-colored round sink bowl set into the countertop."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing 'black' with 'silver' changes one color attribute while preserving the bowl sink entity. The black basin in Image 2 and silver basin in Image 3 establish the required contrast.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The bowl sink is black; the silver faucet does not make the basin silver."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The round, concave sink basin at the upper left of the cabinet has a visibly silver metallic interior and rim."
+        }
+      }
+    },
+    {
+      "witness_id": "w2",
+      "operation": "delete",
+      "semantic_target": "attribute",
+      "before_span": "black",
+      "after_span": null,
+      "edited_instruction": "Show a bowl sink.",
+      "witness_type": "deletion_relaxation",
+      "changed_constraint": "Removes the requirement that the sink bowl be black.",
+      "edited_on_positive": {
+        "status": "supported",
+        "evidence": "T shows a large bowl-shaped sink beneath a faucet."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C shows a round metal sink bowl beneath a faucet."
+      },
+      "independent_review": {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting 'black' removes exactly one color constraint. Both images show bowl-shaped sink basins, and the candidate violates only the removed black-color requirement.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 shows a large round bowl sink."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows a round bowl-shaped sink basin inset into the countertop; the instruction does not require an above-counter installation."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    },
+    {
+      "witness_id": "w2",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "3238e10f547abc293da356c9aac8de427c93f045d2c3c3e02bd744f4e1a47ae8",
+      "input_hash": "c65819b9a8b7f1a574d4570de5b597548eeebb370800d30af4209d3bce19266e",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/c65819b9a8b7f1a574d4570de5b597548eeebb370800d30af4209d3bce19266e.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_030a9db11245dd2f016af2bf9ab72887d09c5e495cb6caad69",
+      "usage": {
+        "prompt_tokens": 8903,
+        "completion_tokens": 523,
+        "total_tokens": 9426,
+        "prompt_tokens_details": {
+          "cached_tokens": 3830
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 52
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "16df2db66720afe019827310c3fadc6c32e07fdc5990da1cb8a23a94670eeca4",
+      "input_hash": "b55ab4859e28fe56218036cb8fa42552131b20edcb06d06f84fda8cadc5e07dd",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/b55ab4859e28fe56218036cb8fa42552131b20edcb06d06f84fda8cadc5e07dd.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_064e27868a1d18c9016af2bfa7fc9887d08c1e8947db064975",
+      "usage": {
+        "prompt_tokens": 8476,
+        "completion_tokens": 447,
+        "total_tokens": 8923,
+        "prompt_tokens_details": {
+          "cached_tokens": 3482
+        }
+      }
+    }
+  ]
+}

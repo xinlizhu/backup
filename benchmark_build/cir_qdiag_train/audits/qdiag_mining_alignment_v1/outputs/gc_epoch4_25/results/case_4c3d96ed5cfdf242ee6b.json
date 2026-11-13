@@ -1,0 +1,161 @@
+{
+  "case_id": "case_4c3d96ed5cfdf242ee6b",
+  "audit_query_id": "audit_query_084",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_4c3d96ed5cfdf242ee6b",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Like R, T shows dough on a floured wooden surface from an oblique angle; a wooden rolling pin is clearly visible on the right."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "C shows dough on a floured wooden surface from a similar oblique angle, with a wooden rolling pin along the right side."
+    },
+    "candidate_relation": "compatible",
+    "violated_source_constraints": [],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "add",
+        "semantic_target": "attribute",
+        "before_span": null,
+        "after_span": ", with rectangular dough",
+        "edited_instruction": "Similar angled photograph, must include rolling pin on the right hand side, with rectangular dough",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "The added constraint requires the dough to have a rectangular shape.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "T satisfies the angle and right-side rolling-pin requirements, but its dough is rounded and ring-like rather than rectangular."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C has a similar oblique view and a rolling pin on the right; its folded dough forms a clearly rectangular slab."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_4c3d96ed5cfdf242ee6b",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The dough is photographed from an oblique angle above the work surface, similar to the reference. A wooden rolling pin is clearly visible on the right."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "The folded dough is photographed from a similar oblique angle above a wooden surface, with a wooden rolling pin along the right side."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "The appended span reconstructs the edited instruction with one insertion and adds a single dough-shape attribute while preserving the original constraints. Both images satisfy the source; only the candidate has rectangular dough.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The dough forms a rounded, irregular mound rather than a rectangular slab, although the angle and right-side rolling pin satisfy the original constraints."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The dough is folded into a visibly rectangular slab with approximately straight sides and rounded corners. The oblique viewpoint and right-side rolling pin also satisfy the retained constraints."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "add",
+      "semantic_target": "attribute",
+      "before_span": null,
+      "after_span": ", with rectangular dough",
+      "edited_instruction": "Similar angled photograph, must include rolling pin on the right hand side, with rectangular dough",
+      "witness_type": "addition_disambiguation",
+      "changed_constraint": "The added constraint requires the dough to have a rectangular shape.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "T satisfies the angle and right-side rolling-pin requirements, but its dough is rounded and ring-like rather than rectangular."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C has a similar oblique view and a rolling pin on the right; its folded dough forms a clearly rectangular slab."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "addition_disambiguation",
+        "reason": "The appended span reconstructs the edited instruction with one insertion and adds a single dough-shape attribute while preserving the original constraints. Both images satisfy the source; only the candidate has rectangular dough.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The dough forms a rounded, irregular mound rather than a rectangular slab, although the angle and right-side rolling pin satisfy the original constraints."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The dough is folded into a visibly rectangular slab with approximately straight sides and rounded corners. The oblique viewpoint and right-side rolling pin also satisfy the retained constraints."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "1e1074d5d2316fa371095cbade0c2a1294ab42983aaace5a97d80dd11d1e7f63",
+      "input_hash": "72df45fa4c9791b8d8bba7cbb4c5ffecd89d0ac59a31f0709a0262178005956d",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/72df45fa4c9791b8d8bba7cbb4c5ffecd89d0ac59a31f0709a0262178005956d.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_072543f9bff0aa4f016af2bd9740e487d18fb5985d1d61bbc1",
+      "usage": {
+        "prompt_tokens": 7524,
+        "completion_tokens": 439,
+        "total_tokens": 7963,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 83
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "8c0d1c76dbb04f88b03da07ddb89dc148a170a388130e6501df4271a78118395",
+      "input_hash": "379131a5f383abf0b939f5dc747eb9c837cbdd34a4638fb615e9748aa5de56dd",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/379131a5f383abf0b939f5dc747eb9c837cbdd34a4638fb615e9748aa5de56dd.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0ef1b4696e9f3192016af2bda52fe087d1bd603090f64a1c94",
+      "usage": {
+        "prompt_tokens": 7052,
+        "completion_tokens": 325,
+        "total_tokens": 7377,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        }
+      }
+    }
+  ]
+}

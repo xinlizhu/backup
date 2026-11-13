@@ -1,0 +1,52 @@
+{
+  "model": "kimi-k3",
+  "text_ok": false,
+  "visual_review_ok": true,
+  "errors": {
+    "hello": "Server error '524 <none>' for url 'https://ai.gs88.shop/v1/chat/completions'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/524"
+  },
+  "probe_group_id": "pinpoint_group_ff403cbd87cd76c0",
+  "probe_negative_id": "pinpoint_group_ff403cbd87cd76c0_query_01620_object_substitute",
+  "image_count": 6,
+  "review_decision": "accepted",
+  "review_reason": "Single object substitution (bedroom→living room), fluent and close to source. All supplied positives (images 2-6) are bedrooms, so a living room is clearly false for every positive.",
+  "trace": {
+    "stage": "validate_group",
+    "model_name": "kimi-k3",
+    "model_revision": null,
+    "provider": "openai-compatible-chat",
+    "reasoning_effort": null,
+    "prompt_version": "v7",
+    "prompt_hash": "9281c135a21186e15a9a2776a5ec05d617f334865d6bf22a23cc02e0940c5a71",
+    "input_hash": "e3e115208770cd9185def88f3438327f3f979cab25c187ce1d271570ccb796dc",
+    "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_900_seed42/probes/kimi-k3/cache/validate_group/e3e115208770cd9185def88f3438327f3f979cab25c187ce1d271570ccb796dc.json",
+    "cached": false,
+    "attempts": 1,
+    "request_id": "01a1c9a929277fe6a45ef990948dd3ab",
+    "usage": {
+      "prompt_tokens": 6643,
+      "completion_tokens": 128,
+      "total_tokens": 6771,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0,
+        "reasoning_tokens": 0
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0,
+      "credit": 3.64
+    }
+  },
+  "ready_for_audit": false,
+  "limit": "A valid multimodal response verifies request/response compatibility, not that the provider/model reliably used the images."
+}

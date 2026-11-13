@@ -1,0 +1,235 @@
+{
+  "case_id": "case_b0af9c8c64fc3763b801",
+  "audit_query_id": "audit_query_080",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_b0af9c8c64fc3763b801",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "A bright yellow flower stands in a white vase, providing the requested colorful floral decoration relative to the reference's pale blossoms."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The clear vase holds a branch with pink-purple blossoms rather than a yellow flower."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The flower in the vase must be yellow."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "attribute",
+        "before_span": "yellow",
+        "after_span": "purple",
+        "edited_instruction": "Bright up the room with a purple flower in a vase.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "The flower color changes from yellow to purple.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The flower in the white vase is yellow, not purple."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The branch in the clear vase bears purple blossoms, providing colorful floral decoration."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "operation": "delete",
+        "semantic_target": "attribute",
+        "before_span": "yellow",
+        "after_span": null,
+        "edited_instruction": "Bright up the room with a flower in a vase.",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "The requirement that the flower be yellow is removed.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "A yellow flower stands in a white vase as floral decoration."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "A flowering branch with purple blossoms stands in a clear vase as floral decoration."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_b0af9c8c64fc3763b801",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a bright yellow flower on a green stem placed in a white vase, satisfying the requested floral color and arrangement."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows purple flowers on a branch in a clear glass vase. No yellow flower is visible."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing 'yellow' with 'purple' is one attribute substitution that preserves the flower and vase requirements. The yellow flower in Image 2 and purple flowers in Image 3 establish the required contrast.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The flower in Image 2 is yellow, with no purple flower visible."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Purple flowers are visibly attached to the branch placed inside the clear glass vase."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting 'yellow' removes one color constraint and exactly reconstructs the edited instruction after whitespace normalization. Both images show flowers in vases; the candidate violates only the removed yellow requirement.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 shows a yellow flower in a white vase."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows a flowering branch with purple blossoms in a clear glass vase."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "substitute",
+      "semantic_target": "attribute",
+      "before_span": "yellow",
+      "after_span": "purple",
+      "edited_instruction": "Bright up the room with a purple flower in a vase.",
+      "witness_type": "substitution_contrast",
+      "changed_constraint": "The flower color changes from yellow to purple.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "The flower in the white vase is yellow, not purple."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "The branch in the clear vase bears purple blossoms, providing colorful floral decoration."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing 'yellow' with 'purple' is one attribute substitution that preserves the flower and vase requirements. The yellow flower in Image 2 and purple flowers in Image 3 establish the required contrast.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The flower in Image 2 is yellow, with no purple flower visible."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Purple flowers are visibly attached to the branch placed inside the clear glass vase."
+        }
+      }
+    },
+    {
+      "witness_id": "w2",
+      "operation": "delete",
+      "semantic_target": "attribute",
+      "before_span": "yellow",
+      "after_span": null,
+      "edited_instruction": "Bright up the room with a flower in a vase.",
+      "witness_type": "deletion_relaxation",
+      "changed_constraint": "The requirement that the flower be yellow is removed.",
+      "edited_on_positive": {
+        "status": "supported",
+        "evidence": "A yellow flower stands in a white vase as floral decoration."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "A flowering branch with purple blossoms stands in a clear vase as floral decoration."
+      },
+      "independent_review": {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting 'yellow' removes one color constraint and exactly reconstructs the edited instruction after whitespace normalization. Both images show flowers in vases; the candidate violates only the removed yellow requirement.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 shows a yellow flower in a white vase."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows a flowering branch with purple blossoms in a clear glass vase."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    },
+    {
+      "witness_id": "w2",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "24c1b89afc4c5817c457149ad8c5eac4dece6bbfd04d821ade4c7884def692f9",
+      "input_hash": "0201424dc29cf06d21afafccc80ff776614276219c74b8fcb2f534cf46c07202",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/0201424dc29cf06d21afafccc80ff776614276219c74b8fcb2f534cf46c07202.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0c28316ebc90a7ae016af2be0c66c487d1a0a305441a8d06fa",
+      "usage": {
+        "prompt_tokens": 7511,
+        "completion_tokens": 526,
+        "total_tokens": 8037,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 36
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "3f5f7efe99789770c6d0c5d2f5fc78a89d4228c00630b9b25c9a307892267dc2",
+      "input_hash": "4063cc6a8285fe55bae595a57ff296314f9d91792755913126606125a7b0f251",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/4063cc6a8285fe55bae595a57ff296314f9d91792755913126606125a7b0f251.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_00f067f057e884c9016af2be31487887d185bb999e705a836b",
+      "usage": {
+        "prompt_tokens": 7096,
+        "completion_tokens": 443,
+        "total_tokens": 7539,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        }
+      }
+    }
+  ]
+}

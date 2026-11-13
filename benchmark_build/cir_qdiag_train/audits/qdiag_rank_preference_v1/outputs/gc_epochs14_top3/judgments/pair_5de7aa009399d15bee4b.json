@@ -1,0 +1,72 @@
+{
+  "case_id": "pair_5de7aa009399d15bee4b",
+  "signature": "f91b95909684e2ecf5207ab608279749c891c56633f2fa7c877aa09c2d59f3d4",
+  "simulated": false,
+  "status": "complete",
+  "judgment": {
+    "case_id": "pair_5de7aa009399d15bee4b",
+    "constraints": [
+      {
+        "constraint": "Shows a hog.",
+        "A_status": "supported",
+        "B_status": "supported",
+        "A_evidence": "A hog with a stocky body, pointed ears, and a long snout is visible.",
+        "B_evidence": "A hog with a stocky body, pointed ears, and a broad snout is visible in the foreground."
+      },
+      {
+        "constraint": "The hog has shorter hair than the shaggy hog in the reference.",
+        "A_status": "supported",
+        "B_status": "supported",
+        "A_evidence": "The body coat is relatively short and close-fitting compared with the reference's long, hanging hair.",
+        "B_evidence": "The hog has short bristles without the reference's long, shaggy flank hair."
+      },
+      {
+        "constraint": "The hog has white skin on its face.",
+        "A_status": "contradicted",
+        "B_status": "contradicted",
+        "A_evidence": "The face is dark gray with some lighter gray bristles; no white facial skin is visible.",
+        "B_evidence": "The face and snout are gray to dark brown, with no white facial skin visible."
+      },
+      {
+        "constraint": "The hog is walking.",
+        "A_status": "supported",
+        "B_status": "supported",
+        "A_evidence": "Its legs are staggered in a stride, with a rear hoof lifted.",
+        "B_evidence": "The foreground hog has staggered front legs and a forward-stepping posture."
+      },
+      {
+        "constraint": "The hog is in a dirt area.",
+        "A_status": "supported",
+        "B_status": "supported",
+        "A_evidence": "The ground includes exposed dirt with sparse grass and dry vegetation.",
+        "B_evidence": "The hog stands on exposed forest soil among scattered ferns and rocks."
+      }
+    ],
+    "A_status": "contradicted",
+    "B_status": "contradicted",
+    "decision": "neither",
+    "reason": "Both candidates show shorter-haired hogs walking on dirt, but neither has the required white skin on its face."
+  },
+  "trace": {
+    "stage": "rank_pair_judgment",
+    "model_name": "gpt-5.6-terra",
+    "model_revision": null,
+    "provider": "openai-compatible-chat",
+    "reasoning_effort": null,
+    "prompt_version": "rank_preference_v1",
+    "prompt_hash": "897254e4a7890ad4a6e4b56dcfe1f65f07692b8f303fb614283f11c70575592c",
+    "input_hash": "3b357d9eb115acc0dc65ab79d2f3a3a12bc955ba1b8465bf51f2d94d660f50e9",
+    "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_rank_preference_v1/outputs/gc_epochs14_top3/api_cache/rank_pair_judgment/3b357d9eb115acc0dc65ab79d2f3a3a12bc955ba1b8465bf51f2d94d660f50e9.json",
+    "cached": false,
+    "attempts": 1,
+    "request_id": "resp_08751f5947d20b47016af2ccecf81087d286b6879a263cf835",
+    "usage": {
+      "prompt_tokens": 5903,
+      "completion_tokens": 492,
+      "total_tokens": 6395,
+      "completion_tokens_details": {
+        "reasoning_tokens": 101
+      }
+    }
+  }
+}

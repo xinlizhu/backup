@@ -1,0 +1,88 @@
+{
+  "case_id": "case_f6b5137a68e7e3b0883a",
+  "audit_query_id": "audit_query_100",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_f6b5137a68e7e3b0883a",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "A blue-rimmed bowl contains a baked dish with browned, melted cheese visible on top."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The image shows a bedroom with a bed, window, and curtains; no bowl, dish, or cheese is visible."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "A bowl containing a dish",
+      "Cheese on top of the dish"
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_f6b5137a68e7e3b0883a",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "Image 2 shows a baked dish with a browned, cheese-like topping, but it is not clearly a bowl; the wording does not reliably match the visible container."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a bedroom with window curtains and furniture, with no visible bowl, food dish, or cheese."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "e0d966a8e56dc62ee5aa1572863113fc1cfc8d5715e35c06c53efdec1980d0b5",
+      "input_hash": "d9b7e1d29111b4bd6dab56bee850384cdc63ca5851006f24e97d79e169960f4e",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/d9b7e1d29111b4bd6dab56bee850384cdc63ca5851006f24e97d79e169960f4e.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_01d23cb616712933016af2bf2251f887d196e4d032b67af7e4",
+      "usage": {
+        "prompt_tokens": 10722,
+        "completion_tokens": 564,
+        "total_tokens": 11286,
+        "completion_tokens_details": {
+          "reasoning_tokens": 391
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "b9adec7f1531d4a70524a4453eaeb76d0d75ab4568a69e8dcd7eccec3ac6a541",
+      "input_hash": "77f59502236ebf80e3dc4710b6cc384b0dc04e2a5d40175fdcaa2c4d9087c342",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/77f59502236ebf80e3dc4710b6cc384b0dc04e2a5d40175fdcaa2c4d9087c342.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0ba332b17bb462af016af2bf2c916c87d2b266f2d97c30d021",
+      "usage": {
+        "prompt_tokens": 13569,
+        "completion_tokens": 397,
+        "total_tokens": 13966,
+        "prompt_tokens_details": {
+          "cached_tokens": 5248
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 282
+        }
+      }
+    }
+  ]
+}

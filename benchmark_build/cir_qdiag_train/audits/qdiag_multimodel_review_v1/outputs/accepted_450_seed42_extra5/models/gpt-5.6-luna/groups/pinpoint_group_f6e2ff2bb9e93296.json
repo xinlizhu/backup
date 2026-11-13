@@ -1,0 +1,49 @@
+{
+  "group_id": "pinpoint_group_f6e2ff2bb9e93296",
+  "model": "gpt-5.6-luna",
+  "signature": "e0a59d07fd411f37376a5d88b0f5931c56e4eaa296bc7c0f3d113be2a03e8f5e",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_f6e2ff2bb9e93296_query_06492_predicate_add",
+      "decision": "reject",
+      "failure_code": "not_visually_verifiable",
+      "reason": "The addition is a single predicate edit, but image 2 crops out the lower pants and image 3 largely conceals the pants. Whether they are folded neatly cannot be reliably judged across every supplied positive."
+    },
+    {
+      "negative_id": "pinpoint_group_f6e2ff2bb9e93296_query_06495_object_delete",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Deleting 'on the blue pants' removes one object-specific constraint identifying where the satin occurs. The remaining request is fluent, preserves the satin-to-matte replacement, and is strictly weaker."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "gpt-5.6-luna",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "25cca8f8d8af9e7d9c38386092532946e87c7a87061c5ef05a7394192784cf68",
+      "input_hash": "0d193809b0d310b0b61473181aa32f0f8e5c5405c1912614d7f2d32ed568aee7",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/gpt-5.6-luna/cache/validate_group/0d193809b0d310b0b61473181aa32f0f8e5c5405c1912614d7f2d32ed568aee7.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_078268e14cc470af016af42e0c1f4087d0997f752b7b1cfe26",
+      "usage": {
+        "prompt_tokens": 21527,
+        "completion_tokens": 444,
+        "total_tokens": 21971,
+        "prompt_tokens_details": {
+          "cached_tokens": 21524
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 276
+        }
+      }
+    }
+  ],
+  "format_warnings": []
+}

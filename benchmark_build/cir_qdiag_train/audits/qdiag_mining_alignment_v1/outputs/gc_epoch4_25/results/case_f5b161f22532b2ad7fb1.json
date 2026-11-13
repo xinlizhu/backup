@@ -1,0 +1,81 @@
+{
+  "case_id": "case_f5b161f22532b2ad7fb1",
+  "audit_query_id": "audit_query_097",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_f5b161f22532b2ad7fb1",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a blue saxophone with gold-colored keys, matching the instruction to be a blue saxophone instead of a regular one."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows two brown, horned animals on rocky, snowy ground, not a blue saxophone."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "The candidate is not a blue saxophone; it shows animals instead."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_f5b161f22532b2ad7fb1",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 visibly shows a saxophone with a blue body."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows goats outdoors, not a saxophone."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "2277cd8c5194194e4e6d26449bbacc3e54b687b99618dec052334dc98fbf3852",
+      "input_hash": "6f5f3cceef12cb06f1095c7f1496d04025f7fbd798df179c375ffa24eceeacb5",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/6f5f3cceef12cb06f1095c7f1496d04025f7fbd798df179c375ffa24eceeacb5.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0cf55411526b0b34016af2bf04403087d08ec2a03d8c57d122",
+      "usage": {
+        "prompt_tokens": 7766,
+        "completion_tokens": 136,
+        "total_tokens": 7902
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "b658adab313256d8deb31bfa191d151792a8063dfbe86542d3e67fe7b08dc13a",
+      "input_hash": "b2ca9a9596c0bae92ed21022127283a8d3e2ea7c586de77d2266e8fc0c1efb78",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/b2ca9a9596c0bae92ed21022127283a8d3e2ea7c586de77d2266e8fc0c1efb78.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_ack_e2742b91a02b8abb32768335ef66e56c",
+      "usage": {
+        "prompt_tokens": 2848,
+        "completion_tokens": 124,
+        "total_tokens": 2972,
+        "completion_tokens_details": {
+          "reasoning_tokens": 43
+        }
+      }
+    }
+  ]
+}

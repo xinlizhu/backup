@@ -1,0 +1,73 @@
+{
+  "batch_size": 64,
+  "bootstrap_confidence_level": 0.95,
+  "bootstrap_replicates": 2000,
+  "calibration_pair_count": 494,
+  "calibration_paraphrase_count": 1390,
+  "calibration_version": "2",
+  "classification": {
+    "method": "leave-one-pair-out calibration interval",
+    "otherwise": "uncertain",
+    "stable_loss": "original_delta + shift_interval_high < 0",
+    "stable_win": "original_delta + shift_interval_low > 0"
+  },
+  "coverage": {
+    "accepted_count_histogram": {
+      "0": 6,
+      "1": 16,
+      "2": 60,
+      "3": 418
+    },
+    "accepted_paraphrase_count": 1390,
+    "covered_sample_count": 494,
+    "final_sample_count": 500,
+    "ignored_nonfinal_samples": [],
+    "samples_without_accepted_paraphrases": [
+      "cirr_train_11189",
+      "cirr_train_16879",
+      "cirr_train_18158",
+      "cirr_train_2586",
+      "cirr_train_30504",
+      "cirr_train_30904"
+    ]
+  },
+  "device": "cuda:0",
+  "diagnostic_input_sha256": "92d4d2b5a1c446ffb7cbb2a225b47a66069e691ef1bb85d280bb7e3fb9e34891",
+  "diagnostics_dir": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_openai_cirr/outputs/cirr_train_pilot_500_v8/model_diagnostics/Pic2Word",
+  "dtype": "auto",
+  "input_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_openai_cirr/outputs/cirr_train_pilot_500_v8/final.jsonl",
+  "input_sha256": "92d4d2b5a1c446ffb7cbb2a225b47a66069e691ef1bb85d280bb7e3fb9e34891",
+  "interval_level": 0.95,
+  "limit_samples": null,
+  "model_name": "Pic2Word",
+  "model_path": "/mnt/data/datasets/search_dataset/zxl/CIR_PLAY/models/lincir/pretrained_models/pic2word_large.pt",
+  "original_rescore_drift": {
+    "max_absolute": 1.192092896062924e-07,
+    "mean": 1.3573935177623118e-10,
+    "mean_absolute": 2.369405287935732e-08,
+    "purpose": "diagnostic only; paraphrase shifts are measured against the same-run re-encoded original query"
+  },
+  "pair_balanced_mean_shift": 0.0034515593708687627,
+  "pair_balanced_median_shift": 0.002950504422187805,
+  "pair_weighting": "each pair has total weight 1",
+  "paraphrase_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_openai_cirr/outputs/cirr_train_pilot_500_v8/positive_paraphrases.jsonl",
+  "paraphrase_sha256": "d5104c314d412340718346834eabb977c84a4d958e5cdd797ac55a5206f78cd4",
+  "python": "3.12.13",
+  "schema_version": "1.0",
+  "seed": 42,
+  "shift_interval_high": 0.04273679852485657,
+  "shift_interval_high_bootstrap_ci": [
+    0.0386200211942196,
+    0.04572799801826477
+  ],
+  "shift_interval_low": -0.03445199131965637,
+  "shift_interval_low_bootstrap_ci": [
+    -0.039924830198287964,
+    -0.030496180057525635
+  ],
+  "symmetric_abs_shift_threshold": 0.039924830198287964,
+  "symmetric_threshold_bootstrap_ci": [
+    0.03677564859390259,
+    0.04317951202392578
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "case_id": "case_a1ecf66c470bca72f158",
+  "audit_query_id": "audit_query_090",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_a1ecf66c470bca72f158",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "An orange car is shown from a rear three-quarter viewpoint on a road directly beside a visible body of water."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The image shows a gorilla with its face visible against green foliage, rather than a car viewed from behind beside water."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "Show a car.",
+      "Show the car from the back."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_a1ecf66c470bca72f158",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a car from a rear three-quarter viewpoint, with its rear lights, license plate, and exhausts visible, traveling on a road directly beside a large body of water."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a gorilla amid green foliage, not a car viewed from behind by water."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "b750386738fdda43bd469e039d2a7ccd9de5fe588d3ab273d9b7b6369a5fe48a",
+      "input_hash": "d846dadb08140efa8014f6a2f261687d8554f6d775cac200c42446cc017e8577",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/d846dadb08140efa8014f6a2f261687d8554f6d775cac200c42446cc017e8577.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_07e9bf8d9560ad4d016af2bd8bd61487d198dc2a367331d7ba",
+      "usage": {
+        "prompt_tokens": 10803,
+        "completion_tokens": 168,
+        "total_tokens": 10971,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "4bf506c26aabad2b0647c7d589000a28cc5cb5e818cf7a22617d0e7b8098c121",
+      "input_hash": "09b7698f420a4615cdda7030aaf941b22e12281cd100229e247400ff00a663b5",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/09b7698f420a4615cdda7030aaf941b22e12281cd100229e247400ff00a663b5.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_01782b272f7389b9016af2bd935a4487d190aefed7645afdfc",
+      "usage": {
+        "prompt_tokens": 10261,
+        "completion_tokens": 111,
+        "total_tokens": 10372,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "case_id": "case_90beac541fd5f4c99fc6",
+  "audit_query_id": "audit_query_091",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_90beac541fd5f4c99fc6",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a wooden vanity with a dark black-marble countertop and an inset sink, replacing the ornate pedestal sink in the reference."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows two ferrets outdoors and no sink, wood vanity, or marble surface."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "sink changed to a wooden sink",
+      "sink has a black marble surface"
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_90beac541fd5f4c99fc6",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 visibly shows a wooden vanity with a dark black-marble-like countertop and a sink basin."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows two ferrets outdoors; no wooden sink or black marble surface is visible."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "ddf4bd5718da6419c7461559f25b54cbac85b51cd1d176207f1a881300cc0b1d",
+      "input_hash": "7267098de15ed09bac6cf17c460f7d18ece80920a085f66a5d2c612155545e9d",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/7267098de15ed09bac6cf17c460f7d18ece80920a085f66a5d2c612155545e9d.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_04c47e0796381bd6016af2bf832b6887d1b12a6aa32eca3fcc",
+      "usage": {
+        "prompt_tokens": 7271,
+        "completion_tokens": 259,
+        "total_tokens": 7530,
+        "prompt_tokens_details": {
+          "cached_tokens": 5888
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 124
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "b3ecde52206aac50489bf76b9a844804fa98a1d36d5f9447b4d9c91e9b727dbe",
+      "input_hash": "541ca911764bf96ddb572c608a50238f462d229161731ad62dc16a6256dd94a5",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/541ca911764bf96ddb572c608a50238f462d229161731ad62dc16a6256dd94a5.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_046d48626d05e693016af2bf89b37487d18930e975f4a3239e",
+      "usage": {
+        "prompt_tokens": 3340,
+        "completion_tokens": 177,
+        "total_tokens": 3517,
+        "completion_tokens_details": {
+          "reasoning_tokens": 81
+        }
+      }
+    }
+  ]
+}

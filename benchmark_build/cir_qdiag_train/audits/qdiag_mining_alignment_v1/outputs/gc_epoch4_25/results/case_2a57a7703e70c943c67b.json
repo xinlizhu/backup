@@ -1,0 +1,88 @@
+{
+  "case_id": "case_2a57a7703e70c943c67b",
+  "audit_query_id": "audit_query_080",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_2a57a7703e70c943c67b",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "A vivid yellow flower stands in a white vase, providing the requested colorful floral accent relative to the reference's pale blossoms."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The bathroom counter shows a sink, toiletries, and a small green succulent in a pot; no yellow flower in a vase is visible."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "A yellow flower must be present.",
+      "The flower must be in a vase."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_2a57a7703e70c943c67b",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a bright yellow daffodil with green leaves in a white vase, satisfying the requested yellow flower in a vase relative to the reference's pale blossoms."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a bathroom sink and countertop accessories, including a small green succulent. No yellow flower in a vase is visible."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "f651120f9652381f2ec3711019a1a7de2b618ffa267f032fd3ac39d4c57ad3f3",
+      "input_hash": "566d42fe888788ca81513fb62970601e7a53f082b0ed7ec2c9f5645543ade7d0",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/566d42fe888788ca81513fb62970601e7a53f082b0ed7ec2c9f5645543ade7d0.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_057578c5b0e5aa2e016af2bfd0f0e087d2842e37e46e9ee37e",
+      "usage": {
+        "prompt_tokens": 7713,
+        "completion_tokens": 248,
+        "total_tokens": 7961,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 67
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "a2c19446a01f6cfafc59a9989e2cc1246d6c1ea34e2af7f6557915866c32bbd5",
+      "input_hash": "36fd9941caed62a6c29145e18f317ea885342c7cb1801bd13ba11721f7d9d51f",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/36fd9941caed62a6c29145e18f317ea885342c7cb1801bd13ba11721f7d9d51f.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_003d4a7e6b4f51b2016af2bffc48d887d2b0860680b8a6b33f",
+      "usage": {
+        "prompt_tokens": 7171,
+        "completion_tokens": 115,
+        "total_tokens": 7286,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        }
+      }
+    }
+  ]
+}

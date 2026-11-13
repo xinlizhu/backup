@@ -1,0 +1,49 @@
+{
+  "group_id": "pinpoint_group_1262c9a2e6f2fcd8",
+  "model": "claude-haiku-5-5",
+  "signature": "44bb4aae802e19564501a676b733c7e19828d9ced260b7da0428f08b1a359df2",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_1262c9a2e6f2fcd8_query_04286_object_delete",
+      "decision": "reject",
+      "failure_code": "invalid_delete",
+      "reason": "The negative text 'gold ring' does not preserve the source meaning. Deleting 'Deep navy velvet,' leaves only 'gold ring', which removes a major semantic constraint (the upholstery material) while retaining only the ring. This is not a single meaningful constraint deletion but rather an unbalanced removal that changes the semantic focus. A proper single DELETE would remove one constraint while keeping the primary object intact."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-haiku-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "1d3ffadaeed8e8171eaecf1a41108c6a23d91bd40ec3c40fb88393fd9acac123",
+      "input_hash": "af1d94bf79754ac921350019d774f40fe425a923d1e4787caa10fc1d93459b6a",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/claude-haiku-5-5/cache/validate_group/af1d94bf79754ac921350019d774f40fe425a923d1e4787caa10fc1d93459b6a.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01cEaBkIthQZymlItBz1zC3u5e",
+      "usage": {
+        "prompt_tokens": 6793,
+        "completion_tokens": 206,
+        "total_tokens": 6999,
+        "prompt_tokens_details": {
+          "cached_tokens": 5295,
+          "cache_creation_tokens": 1494
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_1262c9a2e6f2fcd8_query_04286_object_delete",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 430,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

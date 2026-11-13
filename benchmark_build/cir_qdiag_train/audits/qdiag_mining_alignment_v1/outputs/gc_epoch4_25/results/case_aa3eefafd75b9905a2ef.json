@@ -1,0 +1,90 @@
+{
+  "case_id": "case_aa3eefafd75b9905a2ef",
+  "audit_query_id": "audit_query_100",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_aa3eefafd75b9905a2ef",
+    "case_status": "source_invalid_or_uncertain",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "The food visibly has melted, browned cheese on top, but its container appears to be a shallow metal baking pan; the close crop does not reliably establish the requested bowl."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "A glass pedestal bowl contains a layered dessert topped with white cream, caramel-colored drizzle, and chocolate cake crumbs rather than cheese."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "Cheese on top of the dish."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_aa3eefafd75b9905a2ef",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "A shallow, round metal bowl-like vessel contains a savory dish covered with melted cheese, visibly browned across the top."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The glass pedestal bowl contains a layered chocolate dessert topped with white cream, caramel-colored sauce, and chocolate crumbs rather than cheese."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "1e0496f99ccce72a14a55815afced2ae8bc698feef44bb692a20d06a540c3851",
+      "input_hash": "479472017619374b739156473b015459c68bea21043c8042accc016516c7b37e",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/479472017619374b739156473b015459c68bea21043c8042accc016516c7b37e.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_08de5c1503fd1f1d016af2bf26bc3887d096af7dfe3b5f3a49",
+      "usage": {
+        "prompt_tokens": 13684,
+        "completion_tokens": 259,
+        "total_tokens": 13943,
+        "prompt_tokens_details": {
+          "cached_tokens": 3830
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 75
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "adbabb5c3239aada3eeeaa01d354da791552b1ab15496fe6a8083f1d51a87524",
+      "input_hash": "2a68d6bb5665986075c2a6640b6279adf13726161be581078c7ff64fb1705d88",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/2a68d6bb5665986075c2a6640b6279adf13726161be581078c7ff64fb1705d88.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0525ac19beab1e0d016af2bf35d08887d28b1e27df529e7327",
+      "usage": {
+        "prompt_tokens": 13142,
+        "completion_tokens": 131,
+        "total_tokens": 13273,
+        "prompt_tokens_details": {
+          "cached_tokens": 3482
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 28
+        }
+      }
+    }
+  ]
+}

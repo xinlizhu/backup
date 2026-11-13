@@ -1,0 +1,61 @@
+{
+  "group_id": "pinpoint_group_0ce4118a5e5ff679",
+  "model": "kimi-k3",
+  "signature": "7bcee9a6a15f47b49de535c2997e213c18a83885fbb254d34ea6aaed145faa23",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_0ce4118a5e5ff679_query_00014_predicate_delete",
+      "decision": "reject",
+      "failure_code": "wrong_semantic_target",
+      "reason": "Deleting 'here' removes a locative reference constraint, not an action/relation; this does not match the stated predicate semantic target."
+    },
+    {
+      "negative_id": "pinpoint_group_0ce4118a5e5ff679_query_00015_predicate_add",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Single fluent predicate addition; no positive shows men standing in a line (image 5 shows two men conversing, not queued; others show only garments), so the added fact is false for all positives."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "kimi-k3",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "0f0f59568f12860682c93d2c7c6006d12de8a588a903840c732e6f69dcb1d618",
+      "input_hash": "7a441aa715d7a2686f8e582668f51d6bd7478483e71e98b0193d0c06faf5af85",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/kimi-k3/cache/validate_group/7a441aa715d7a2686f8e582668f51d6bd7478483e71e98b0193d0c06faf5af85.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "01a1c9b955cd78c1bd64cf8fb13df009",
+      "usage": {
+        "prompt_tokens": 5327,
+        "completion_tokens": 361,
+        "total_tokens": 5688,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "text_tokens": 0,
+          "audio_tokens": 0,
+          "image_tokens": 0
+        },
+        "completion_tokens_details": {
+          "text_tokens": 0,
+          "audio_tokens": 0,
+          "image_tokens": 0,
+          "reasoning_tokens": 0
+        },
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "input_tokens_details": null,
+        "claude_cache_creation_5_m_tokens": 0,
+        "claude_cache_creation_1_h_tokens": 0,
+        "credit": 3.57
+      }
+    }
+  ],
+  "format_warnings": []
+}

@@ -1,0 +1,63 @@
+{
+  "group_id": "pinpoint_group_fba977cf3c5db15b",
+  "model": "grok-4.7",
+  "signature": "52913ea34ae01078c58f7a80fc2119b86ef4b6b3449e9e55b21816a5d5d1ccbd",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_fba977cf3c5db15b_query_00252_predicate_add",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Adds one predicate, laying the garment flat. The positive shows finished dresses worn upright by standing models, so that added fact is clearly false."
+    },
+    {
+      "negative_id": "pinpoint_group_fba977cf3c5db15b_query_00254_attribute_substitute",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Replaces color palette with monochrome in one attribute edit. Both the reference mosaic and the positive dresses are richly multicolored, so monochrome is clearly false."
+    },
+    {
+      "negative_id": "pinpoint_group_fba977cf3c5db15b_query_00255_predicate_substitute",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Substitutes sketch for design as a single action. The positive is a photograph of finished worn garments, not a sketch, so the new predicate is clearly false."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.7",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "8b6e4cdbf96ead292048084b86d365b9e88e97f16468ba28dadda132769d099f",
+      "input_hash": "747b35ca91c88815f48187d9f04bf99e03b40d2a48f8fb0c9b6735e376411843",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/grok-4.7/cache/validate_group/747b35ca91c88815f48187d9f04bf99e03b40d2a48f8fb0c9b6735e376411843.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "1caac08d-54cd-969b-b18d-00f00b835ac8",
+      "usage": {
+        "prompt_tokens": 3249,
+        "completion_tokens": 235,
+        "total_tokens": 5283,
+        "prompt_tokens_details": {
+          "text_tokens": 2615,
+          "audio_tokens": 0,
+          "image_tokens": 634,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1799,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 156300000
+      }
+    }
+  ],
+  "format_warnings": []
+}

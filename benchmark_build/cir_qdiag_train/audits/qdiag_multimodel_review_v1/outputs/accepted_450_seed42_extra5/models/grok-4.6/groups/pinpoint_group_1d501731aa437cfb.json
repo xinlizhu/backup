@@ -1,0 +1,57 @@
+{
+  "group_id": "pinpoint_group_1d501731aa437cfb",
+  "model": "grok-4.6",
+  "signature": "cb958fa178e5ebcdd33f446ebd46fe25a7c20417ca5539cc74de61fb4df99804",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_1d501731aa437cfb_query_03970_predicate_delete",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Deletes only the purpose 'for grilling', including its preposition, leaving a fluent, strictly weaker adaptation question with all other meaning intact."
+    },
+    {
+      "negative_id": "pinpoint_group_1d501731aa437cfb_query_03970_predicate_substitute",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "Broiling is not clearly false for every positive: the lemon-topped fish and charred skewers lack grate marks and remain compatible with broiling."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.6",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "fd7855d1edfe98a036c868b93c80be3c61a45d6e0dcf09168d0725bb6f2e3308",
+      "input_hash": "7a0f9a3fb35d1247ee1f0af76842de772489892e5243548c338401ba3f6c1f76",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/grok-4.6/cache/validate_group/7a0f9a3fb35d1247ee1f0af76842de772489892e5243548c338401ba3f6c1f76.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "4226db02-0e51-9d7a-a899-dd0fbef785c0",
+      "usage": {
+        "prompt_tokens": 5985,
+        "completion_tokens": 153,
+        "total_tokens": 10318,
+        "prompt_tokens_details": {
+          "text_tokens": 2538,
+          "audio_tokens": 0,
+          "image_tokens": 3447,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 4180,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 348960000
+      }
+    }
+  ],
+  "format_warnings": []
+}

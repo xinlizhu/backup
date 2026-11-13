@@ -1,0 +1,51 @@
+{
+  "case_id": "pair_1856dc7bcb403d49144d",
+  "signature": "f91b95909684e2ecf5207ab608279749c891c56633f2fa7c877aa09c2d59f3d4",
+  "simulated": false,
+  "status": "complete",
+  "judgment": {
+    "case_id": "pair_1856dc7bcb403d49144d",
+    "constraints": [
+      {
+        "constraint": "A dog is present and wears a collar around its neck.",
+        "A_status": "supported",
+        "B_status": "supported",
+        "A_evidence": "The brown puppy wears a collar around its neck.",
+        "B_evidence": "The brown puppy has a visible collar around its neck, with attached metal hardware."
+      },
+      {
+        "constraint": "The dog's collar is blue.",
+        "A_status": "contradicted",
+        "B_status": "supported",
+        "A_evidence": "The collar strap is red with black hardware, not blue.",
+        "B_evidence": "Blue collar material is visible beneath the puppy's chin and along the side of its neck."
+      }
+    ],
+    "A_status": "contradicted",
+    "B_status": "supported",
+    "decision": "B_only",
+    "reason": "B shows a dog wearing a blue collar; A's dog wears a red collar."
+  },
+  "trace": {
+    "stage": "rank_pair_judgment",
+    "model_name": "gpt-5.6-terra",
+    "model_revision": null,
+    "provider": "openai-compatible-chat",
+    "reasoning_effort": null,
+    "prompt_version": "rank_preference_v1",
+    "prompt_hash": "804d8af7226a45297e545f298a37c67ca0dbc8017a1a22dbe1f4e287f8615cc5",
+    "input_hash": "03cf5f3387e95f04e9ec3dafcd1fb14075dc7745d6bb164ebb850401ba3352a7",
+    "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_rank_preference_v1/outputs/gc_epochs14_top3/api_cache/rank_pair_judgment/03cf5f3387e95f04e9ec3dafcd1fb14075dc7745d6bb164ebb850401ba3352a7.json",
+    "cached": false,
+    "attempts": 1,
+    "request_id": "resp_0f128b70c296d972016af2ccdb8fdc87d183a2849e662cf5d8",
+    "usage": {
+      "prompt_tokens": 7405,
+      "completion_tokens": 181,
+      "total_tokens": 7586,
+      "prompt_tokens_details": {
+        "cached_tokens": 4864
+      }
+    }
+  }
+}

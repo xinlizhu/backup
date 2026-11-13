@@ -1,0 +1,163 @@
+{
+  "case_id": "case_c5f904be8aa960014b61",
+  "audit_query_id": "audit_query_090",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_c5f904be8aa960014b61",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The car is shown from a rear three-quarter angle on a road directly beside a large body of water."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The car is shown from a rear three-quarter angle in a studio setting with a gray floor and backdrop, rather than beside water."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The car must be by water."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "delete",
+        "semantic_target": "predicate",
+        "before_span": "by water",
+        "after_span": null,
+        "edited_instruction": "Show car from back.",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "Remove the requirement that the car be by water.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "The rear bumper, taillights, and rear license plate are visible in a rear three-quarter view."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The rear bumper, taillights, and trunk are visible in a rear three-quarter view."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_c5f904be8aa960014b61",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a car from a rear three-quarter angle, with its taillights, rear bumper, and license plate visible, traveling beside a large body of water."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a car from a rear three-quarter angle on a studio floor against a plain backdrop, rather than beside water."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting 'by water' removes one spatial predicate and exactly reconstructs the edited instruction after whitespace normalization. Both cars are visibly shown from the back; the candidate violates only the removed waterside constraint.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "The car in Image 2 is viewed from behind at a three-quarter angle, clearly exposing its rear."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The car in Image 3 is viewed from behind at a three-quarter angle, with its rear lights, trunk, bumper, and exhausts visible."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "delete",
+      "semantic_target": "predicate",
+      "before_span": "by water",
+      "after_span": null,
+      "edited_instruction": "Show car from back.",
+      "witness_type": "deletion_relaxation",
+      "changed_constraint": "Remove the requirement that the car be by water.",
+      "edited_on_positive": {
+        "status": "supported",
+        "evidence": "The rear bumper, taillights, and rear license plate are visible in a rear three-quarter view."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "The rear bumper, taillights, and trunk are visible in a rear three-quarter view."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting 'by water' removes one spatial predicate and exactly reconstructs the edited instruction after whitespace normalization. Both cars are visibly shown from the back; the candidate violates only the removed waterside constraint.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "The car in Image 2 is viewed from behind at a three-quarter angle, clearly exposing its rear."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The car in Image 3 is viewed from behind at a three-quarter angle, with its rear lights, trunk, bumper, and exhausts visible."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "cabc7c948b2fda8f77d71d50ee5605049c97754a72b46fc18f321e8b4b59f659",
+      "input_hash": "8e80d26ac0a4b97fd6636bbad1768a349aa5032792050ee7e8797759b86a9dd8",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/8e80d26ac0a4b97fd6636bbad1768a349aa5032792050ee7e8797759b86a9dd8.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0c9cbe496d97e9bb016af2bd867f6487d180ce36c3847ca5ac",
+      "usage": {
+        "prompt_tokens": 13443,
+        "completion_tokens": 507,
+        "total_tokens": 13950,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 170
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "f32c8d4ca3702d26c263c6f76e5e721e46665e6b43bbdc4ca89b8610ad48e460",
+      "input_hash": "f806f5656f1676e51b87a3a47467360a88a6e6d7f6534ee42976e7cdbff6e130",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/f806f5656f1676e51b87a3a47467360a88a6e6d7f6534ee42976e7cdbff6e130.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0783d9f51a138080016af2bd9840a487d2ae1e97c2b18ee564",
+      "usage": {
+        "prompt_tokens": 12958,
+        "completion_tokens": 321,
+        "total_tokens": 13279,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        }
+      }
+    }
+  ]
+}

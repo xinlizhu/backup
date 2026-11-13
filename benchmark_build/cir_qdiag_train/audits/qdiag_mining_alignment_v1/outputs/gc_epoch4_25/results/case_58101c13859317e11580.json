@@ -1,0 +1,130 @@
+{
+  "case_id": "case_58101c13859317e11580",
+  "audit_query_id": "audit_query_087",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_58101c13859317e11580",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The clownfish has deeper orange coloring than the reference's yellow-orange face and is swimming among tentacles in the middle of an anemone."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "Clownfish with dark, muted brown-orange bodies are visible among the anemone's central tentacles, darker in appearance than the reference's bright yellow-orange coloring."
+    },
+    "candidate_relation": "compatible",
+    "violated_source_constraints": [],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "add",
+        "semantic_target": "attribute",
+        "before_span": null,
+        "after_span": "with a purple base",
+        "edited_instruction": "Shows a darker colored clown fish swimming through the middle of a sea anemone with a purple base.",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "The sea anemone has a purple base.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The darker orange clownfish is among the anemone's tentacles, but the anemone is tan-gray with no purple base."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Dark-bodied clownfish swim among the tentacles, and the anemone has a conspicuous purple-magenta base."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_58101c13859317e11580",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "The clownfish is among the anemone's central tentacles, but its vivid orange body is not unambiguously darker than the reference fish, which has orange-yellow areas and broad dark markings."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "Dark brown-orange clownfish are visible among the anemone's green tentacles, including across its middle; their bodies appear darker than the reference fish's bright orange-yellow areas."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "reject",
+        "failure_code": "source_invalid_or_uncertain",
+        "witness_type": null,
+        "reason": "The insertion adds one fluent anemone-color attribute, and the candidate visibly has a purple base. However, the positive does not reliably establish the original 'darker colored' comparison. Its anemone base is also insufficiently exposed to establish the required contradiction of the added attribute.",
+        "edited_on_positive": {
+          "status": "uncertain",
+          "evidence": "The fish's relative darkness is ambiguous, and dense gray-brown tentacles obscure the anemone's base; a non-purple base cannot be confirmed."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Darker brown-orange clownfish are among the central green tentacles, above a conspicuous exposed purple-magenta anemone base."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": false,
+      "local_failures": [
+        "wrong_witness_type",
+        "wrong_support_pattern"
+      ],
+      "review_decision": "reject"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "5b73e5e5472c2a2117ea9c4fdae28323211050951bc959ac50bd481257a0f896",
+      "input_hash": "296068f190557a6e88550570e514deecfefac75d9e6e0e7bb976758ec6466249",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/296068f190557a6e88550570e514deecfefac75d9e6e0e7bb976758ec6466249.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0e9f4d3519e6537e016af2bd9231e487d1a4f39e9954da2e19",
+      "usage": {
+        "prompt_tokens": 8298,
+        "completion_tokens": 575,
+        "total_tokens": 8873,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 208
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "f274bfede2653f68b8a545ac3228f4b751217d18cfaf1e8fdd80db604c39630e",
+      "input_hash": "7dc577ae775e491cc389d678c5efcdc22f1698eff3c9fa7297a5e11c8cde2b9d",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/7dc577ae775e491cc389d678c5efcdc22f1698eff3c9fa7297a5e11c8cde2b9d.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_029b9827ac97c137016af2bdaae16887d185c1d161631e20e9",
+      "usage": {
+        "prompt_tokens": 7830,
+        "completion_tokens": 423,
+        "total_tokens": 8253,
+        "completion_tokens_details": {
+          "reasoning_tokens": 126
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,238 @@
+{
+  "case_id": "case_26184e6ec5925674f0d4",
+  "audit_query_id": "audit_query_100",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_26184e6ec5925674f0d4",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "A shallow, bowl-like metal vessel holds a prepared dish covered with melted, browned cheese."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The glass pedestal bowl contains a layered dessert topped with cookies, cream, crumbs, and mint rather than cheese."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The dish has cheese on top."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "object",
+        "before_span": "cheese",
+        "after_span": "cookies",
+        "edited_instruction": "A bowl with a dish and cookies on top.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "The topping is cookies instead of cheese.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The dish is topped with melted, browned cheese; there are no cookies on top."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The dessert in the glass bowl has round cookies arranged prominently around its top."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "operation": "delete",
+        "semantic_target": "object",
+        "before_span": " and cheese on top",
+        "after_span": null,
+        "edited_instruction": "A bowl with a dish.",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "Remove the requirement for cheese on top.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "The shallow metal vessel contains a prepared savory dish."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The glass pedestal bowl contains a prepared layered dessert."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_26184e6ec5925674f0d4",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a food dish in a shallow metal bowl, covered with a visibly melted, browned cheese topping."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a layered dessert in a glass pedestal bowl with wafer cookies around the top. Its visible topping is cream, crumbs, and cookies rather than cheese."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing 'cheese' with 'cookies' makes exactly one object substitution and preserves the bowl, food dish, and topping relation. The positive has cheese on top without cookies; the candidate visibly has cookies on top without a cheese topping.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The food in the metal bowl is topped with melted, browned cheese; no cookies appear on its exposed surface."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The glass bowl contains a layered dessert with clearly visible round wafer cookies standing around its upper edge."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting ' and cheese on top' removes the single cheese-topping constraint and its grammatical glue. Both images show a bowl containing a food dish, and the candidate's only violation of the source instruction is the cheese topping.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "A shallow metal bowl holds a prepared savory food dish."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "A glass pedestal bowl holds a prepared layered dessert."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "substitute",
+      "semantic_target": "object",
+      "before_span": "cheese",
+      "after_span": "cookies",
+      "edited_instruction": "A bowl with a dish and cookies on top.",
+      "witness_type": "substitution_contrast",
+      "changed_constraint": "The topping is cookies instead of cheese.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "The dish is topped with melted, browned cheese; there are no cookies on top."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "The dessert in the glass bowl has round cookies arranged prominently around its top."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing 'cheese' with 'cookies' makes exactly one object substitution and preserves the bowl, food dish, and topping relation. The positive has cheese on top without cookies; the candidate visibly has cookies on top without a cheese topping.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The food in the metal bowl is topped with melted, browned cheese; no cookies appear on its exposed surface."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The glass bowl contains a layered dessert with clearly visible round wafer cookies standing around its upper edge."
+        }
+      }
+    },
+    {
+      "witness_id": "w2",
+      "operation": "delete",
+      "semantic_target": "object",
+      "before_span": " and cheese on top",
+      "after_span": null,
+      "edited_instruction": "A bowl with a dish.",
+      "witness_type": "deletion_relaxation",
+      "changed_constraint": "Remove the requirement for cheese on top.",
+      "edited_on_positive": {
+        "status": "supported",
+        "evidence": "The shallow metal vessel contains a prepared savory dish."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "The glass pedestal bowl contains a prepared layered dessert."
+      },
+      "independent_review": {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting ' and cheese on top' removes the single cheese-topping constraint and its grammatical glue. Both images show a bowl containing a food dish, and the candidate's only violation of the source instruction is the cheese topping.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "A shallow metal bowl holds a prepared savory food dish."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "A glass pedestal bowl holds a prepared layered dessert."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    },
+    {
+      "witness_id": "w2",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "ff1e525104aca11ef67ffcf83dbc75bc5bed3f15da748c25a5e52bf338489b67",
+      "input_hash": "846af2af383360592177cd799626982f8b7f41e9e1172379c59ddc02c08598cb",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/846af2af383360592177cd799626982f8b7f41e9e1172379c59ddc02c08598cb.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_07a151af68d84a52016af2be13c5cc87d1a2ffbd1ec7be64f7",
+      "usage": {
+        "prompt_tokens": 13654,
+        "completion_tokens": 606,
+        "total_tokens": 14260,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 126
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "483caf08b31e1acccef78da68f79577c89a73fd58302b7414863e181f81d9083",
+      "input_hash": "ccab608a499bd3ef953eb15c81670a52feb5fe751227bbcd6ceee61b43f161d6",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/ccab608a499bd3ef953eb15c81670a52feb5fe751227bbcd6ceee61b43f161d6.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0ef2d98c63c0accf016af2be34addc87d2965ab3cf8f102b8e",
+      "usage": {
+        "prompt_tokens": 13236,
+        "completion_tokens": 525,
+        "total_tokens": 13761,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 51
+        }
+      }
+    }
+  ]
+}

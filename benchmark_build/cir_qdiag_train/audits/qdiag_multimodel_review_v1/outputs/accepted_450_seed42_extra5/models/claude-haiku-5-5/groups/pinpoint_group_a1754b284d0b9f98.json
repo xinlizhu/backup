@@ -1,0 +1,49 @@
+{
+  "group_id": "pinpoint_group_a1754b284d0b9f98",
+  "model": "claude-haiku-5-5",
+  "signature": "44bb4aae802e19564501a676b733c7e19828d9ced260b7da0428f08b1a359df2",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_a1754b284d0b9f98_query_01028_predicate_add",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "Images 2, 3, 4, and 5 all show ornate metal brackets with interlocking or connected design elements. Image 4 particularly displays a bracket with two curved sections that interlock at the center. The predicate 'that interlock' is compatible with the supplied positive images, failing the requirement that the new fact be clearly false for EVERY supplied positive."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-haiku-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "7b7ab3b7d45eaa994137a2d72518dc3a155a1f8b9ce63920ecfe46ee3d7af01d",
+      "input_hash": "9a9c3375c4b04c2ca45483069524242b1bd890b249418d7f1aeaf4a886f748c3",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/claude-haiku-5-5/cache/validate_group/9a9c3375c4b04c2ca45483069524242b1bd890b249418d7f1aeaf4a886f748c3.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_016LC8eksmSGiCHMMLblPOoLHk",
+      "usage": {
+        "prompt_tokens": 8549,
+        "completion_tokens": 187,
+        "total_tokens": 8736,
+        "prompt_tokens_details": {
+          "cached_tokens": 6665,
+          "cache_creation_tokens": 1880
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_a1754b284d0b9f98_query_01028_predicate_add",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 363,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

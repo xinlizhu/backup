@@ -1,0 +1,238 @@
+{
+  "case_id": "case_929d5bbf7d56478834dd",
+  "audit_query_id": "audit_query_080",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_929d5bbf7d56478834dd",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "A bright yellow daffodil stands in a white vase, supporting the requested colorful floral decoration relative to the reference's pale blossoms."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Flowers stand in a white decorative vase, but their round heads are lime green rather than the requested yellow."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The flower must be yellow."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "attribute",
+        "before_span": "yellow",
+        "after_span": "green",
+        "edited_instruction": "Bright up the room with a green flower in a vase.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "Flower color changes from yellow to green.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The daffodil's bloom is yellow, not green; its green leaves do not satisfy the flower-color constraint."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Lime-green flower heads on stems stand in a white petal-shaped vase."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "operation": "delete",
+        "semantic_target": "attribute",
+        "before_span": "yellow",
+        "after_span": null,
+        "edited_instruction": "Bright up the room with a flower in a vase.",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "Removes the requirement that the flower be yellow.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "A yellow daffodil is displayed in a white vase."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Green flowers are displayed in a white decorative vase on an indoor tabletop."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_929d5bbf7d56478834dd",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a yellow flower with green stems in a vase against a bright, plain background."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows green flower heads in a white vessel against a bright indoor background; no yellow flower is visible."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "The single attribute edit changes yellow to green and preserves the flower, vase, and bright-room intent. Image 2 is yellow, while Image 3 visibly has green flower heads in a vessel.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2's flower is yellow, not green."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows green flower heads in a white vessel in a bright indoor setting."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting only the color attribute yields a fluent, broader instruction. Both images show a flower in a vase or vessel in a bright setting; the candidate's source-query mismatch is the removed yellow constraint.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 shows a flower in a vase in a bright, plain setting."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows flowers in a vessel in a bright indoor setting."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "substitute",
+      "semantic_target": "attribute",
+      "before_span": "yellow",
+      "after_span": "green",
+      "edited_instruction": "Bright up the room with a green flower in a vase.",
+      "witness_type": "substitution_contrast",
+      "changed_constraint": "Flower color changes from yellow to green.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "The daffodil's bloom is yellow, not green; its green leaves do not satisfy the flower-color constraint."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "Lime-green flower heads on stems stand in a white petal-shaped vase."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "The single attribute edit changes yellow to green and preserves the flower, vase, and bright-room intent. Image 2 is yellow, while Image 3 visibly has green flower heads in a vessel.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2's flower is yellow, not green."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows green flower heads in a white vessel in a bright indoor setting."
+        }
+      }
+    },
+    {
+      "witness_id": "w2",
+      "operation": "delete",
+      "semantic_target": "attribute",
+      "before_span": "yellow",
+      "after_span": null,
+      "edited_instruction": "Bright up the room with a flower in a vase.",
+      "witness_type": "deletion_relaxation",
+      "changed_constraint": "Removes the requirement that the flower be yellow.",
+      "edited_on_positive": {
+        "status": "supported",
+        "evidence": "A yellow daffodil is displayed in a white vase."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "Green flowers are displayed in a white decorative vase on an indoor tabletop."
+      },
+      "independent_review": {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting only the color attribute yields a fluent, broader instruction. Both images show a flower in a vase or vessel in a bright setting; the candidate's source-query mismatch is the removed yellow constraint.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 shows a flower in a vase in a bright, plain setting."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows flowers in a vessel in a bright indoor setting."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    },
+    {
+      "witness_id": "w2",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "424ff1b2c99e21f88823af8458f70435c04d8547393bd1196ccc4a8f5d85dae1",
+      "input_hash": "665775365c3a7a7b80eb24b160e56bb54cf6474dfe2e3fa828586f983f1ba9f2",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/665775365c3a7a7b80eb24b160e56bb54cf6474dfe2e3fa828586f983f1ba9f2.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0244616495956d21016af2bf87dc6487d190ab15610ddb65a2",
+      "usage": {
+        "prompt_tokens": 7311,
+        "completion_tokens": 568,
+        "total_tokens": 7879,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 65
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "e3754362dc84d1366c1f54a665307901d345f37305dbe73dcc070af5156c3b1d",
+      "input_hash": "9af0ee394c83173cab5ff7d6f3b05307d43c40341512872abd70493dd491352c",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/9af0ee394c83173cab5ff7d6f3b05307d43c40341512872abd70493dd491352c.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0187798d3f3dd17c016af2bf97a58887d181ed99469ea2974c",
+      "usage": {
+        "prompt_tokens": 7060,
+        "completion_tokens": 508,
+        "total_tokens": 7568,
+        "prompt_tokens_details": {
+          "cached_tokens": 5248
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 167
+        }
+      }
+    }
+  ]
+}

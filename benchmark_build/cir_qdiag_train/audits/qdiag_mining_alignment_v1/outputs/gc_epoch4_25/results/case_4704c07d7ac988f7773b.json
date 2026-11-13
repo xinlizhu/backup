@@ -1,0 +1,88 @@
+{
+  "case_id": "case_4704c07d7ac988f7773b",
+  "audit_query_id": "audit_query_090",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_4704c07d7ac988f7773b",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The car is shown from a rear three-quarter angle on a road directly beside a large visible body of water."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The car is shown from a front three-quarter angle on dry dirt in a wooded setting, rather than from behind beside water."
+    },
+    "candidate_relation": "multiple_constraint_conflict",
+    "violated_source_constraints": [
+      "Show the car from the back.",
+      "Show the car by water."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_4704c07d7ac988f7773b",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The orange car is shown from a rear three-quarter angle, with its rear lights, license plate, and exhausts visible, on a road immediately beside a large body of water."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The red convertible is shown from a front three-quarter angle, with its headlights and front grille visible. Its surroundings are dry ground and trees; no water is visible."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "dc4557fdfa57c648ed4315653245e9e8f78582a589a968bf334d9637b310af9c",
+      "input_hash": "21afba341391a476314a42c4928ac6a30244882998420a8eb5ed025b44053186",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/21afba341391a476314a42c4928ac6a30244882998420a8eb5ed025b44053186.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0eac20267aba76a1016af2be77904087d18c1422a101e772d6",
+      "usage": {
+        "prompt_tokens": 10812,
+        "completion_tokens": 236,
+        "total_tokens": 11048,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 60
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "b4f4f77cc1d89554c0018976678b1c51ec9012a2cd1402da49d8f9d0bfdad0e5",
+      "input_hash": "99fb2819f75fcefe3622d9f077a91eb22db41cb3fa958a6ffb8e2454d37ac51a",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/99fb2819f75fcefe3622d9f077a91eb22db41cb3fa958a6ffb8e2454d37ac51a.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_07c63207b30ce721016af2be9059e887d1ba7ff58824408538",
+      "usage": {
+        "prompt_tokens": 10270,
+        "completion_tokens": 123,
+        "total_tokens": 10393,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        }
+      }
+    }
+  ]
+}

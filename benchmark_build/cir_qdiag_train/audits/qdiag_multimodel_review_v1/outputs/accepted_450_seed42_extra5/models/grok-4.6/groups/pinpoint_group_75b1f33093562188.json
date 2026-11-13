@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_75b1f33093562188",
+  "model": "grok-4.6",
+  "signature": "cb958fa178e5ebcdd33f446ebd46fe25a7c20417ca5539cc74de61fb4df99804",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_75b1f33093562188_query_00716_predicate_substitute",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "The match-to-contrast predicate swap is one fluent edit, but image 3 includes a pale blue non-suede pillow that contrasts with the camel suede boot, so the new relation is not clearly false for every positive."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.6",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "499835bfda8de9d737ccaa20d3ff351e61f6816ed025679b4a10eda33c08816d",
+      "input_hash": "20f8b728e88a7220a27d8c9b048e283686f31985506fceaa69b9e6e36127ba9d",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/grok-4.6/cache/validate_group/20f8b728e88a7220a27d8c9b048e283686f31985506fceaa69b9e6e36127ba9d.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "149b7fb5-eb99-9e98-bd40-35d95866c9d2",
+      "usage": {
+        "prompt_tokens": 5432,
+        "completion_tokens": 99,
+        "total_tokens": 8815,
+        "prompt_tokens_details": {
+          "text_tokens": 2501,
+          "audio_tokens": 0,
+          "image_tokens": 2931,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 3284,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 280900000
+      }
+    }
+  ],
+  "format_warnings": []
+}

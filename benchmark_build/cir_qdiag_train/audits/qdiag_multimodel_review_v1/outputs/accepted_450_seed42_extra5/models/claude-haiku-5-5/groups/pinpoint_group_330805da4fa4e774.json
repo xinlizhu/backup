@@ -1,0 +1,49 @@
+{
+  "group_id": "pinpoint_group_330805da4fa4e774",
+  "model": "claude-haiku-5-5",
+  "signature": "44bb4aae802e19564501a676b733c7e19828d9ced260b7da0428f08b1a359df2",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_330805da4fa4e774_query_06070_object_add",
+      "decision": "reject",
+      "failure_code": "not_visually_verifiable",
+      "reason": "The source text requests casual outfit options retaining <img2>'s relaxed styling and <img1>'s warm fiery color palette. The addition of 'including a denim jacket' specifies a concrete garment object. However, the reference images show abstract art (red painting, field painting) and the positive images show wall art, landscape paintings, and motivational signs—no clothing or outfits are present in any image. The task cannot be verified visually against the supplied images."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-haiku-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "980a114368666c8402f78167a84abcf7f2e5fb5a585d35c6f98403ece5d87503",
+      "input_hash": "773e8f99c1ba40f261dc8be04d12ec80529aaf8e166ada35075ed254a5506b30",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/claude-haiku-5-5/cache/validate_group/773e8f99c1ba40f261dc8be04d12ec80529aaf8e166ada35075ed254a5506b30.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01KGckAsTwTUOuChadN7X9fvEP",
+      "usage": {
+        "prompt_tokens": 10809,
+        "completion_tokens": 217,
+        "total_tokens": 11026,
+        "prompt_tokens_details": {
+          "cached_tokens": 8427,
+          "cache_creation_tokens": 2378
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_330805da4fa4e774_query_06070_object_add",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 477,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

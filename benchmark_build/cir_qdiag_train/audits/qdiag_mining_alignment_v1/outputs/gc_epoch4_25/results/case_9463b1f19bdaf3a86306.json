@@ -1,0 +1,166 @@
+{
+  "case_id": "case_9463b1f19bdaf3a86306",
+  "audit_query_id": "audit_query_079",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_9463b1f19bdaf3a86306",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 prominently shows a dark, nearly black bowl-shaped sink."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a basket of fruit, with no visible sink or black bowl."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "The candidate does not show a black bowl sink."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "substitute-object-1",
+        "operation": "substitute",
+        "semantic_target": "object",
+        "before_span": "black bowl sink",
+        "after_span": "fruit basket",
+        "edited_instruction": "Show a fruit basket.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "The requested object changes from a black bowl sink to a fruit basket.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 shows a dark bowl sink, not a fruit basket."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows fruit arranged in a woven basket."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_9463b1f19bdaf3a86306",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 visibly shows a dark, bowl-shaped sink with a faucet."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows fruit in a basket, not a sink."
+    },
+    "verdicts": [
+      {
+        "witness_id": "substitute-object-1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "One replacement changes the requested object from a black bowl sink to a fruit basket; the edited instruction is contradicted by Image 2 and supported by Image 3.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 shows a sink, not a fruit basket."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 visibly shows fruit arranged in a basket."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "substitute-object-1",
+      "operation": "substitute",
+      "semantic_target": "object",
+      "before_span": "black bowl sink",
+      "after_span": "fruit basket",
+      "edited_instruction": "Show a fruit basket.",
+      "witness_type": "substitution_contrast",
+      "changed_constraint": "The requested object changes from a black bowl sink to a fruit basket.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "Image 2 shows a dark bowl sink, not a fruit basket."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "Image 3 shows fruit arranged in a woven basket."
+      },
+      "independent_review": {
+        "witness_id": "substitute-object-1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "One replacement changes the requested object from a black bowl sink to a fruit basket; the edited instruction is contradicted by Image 2 and supported by Image 3.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 shows a sink, not a fruit basket."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 visibly shows fruit arranged in a basket."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "substitute-object-1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "3d270d2a719f9209da2f2dc0a7125ffb616085ccd813d84e73331389f28c82c9",
+      "input_hash": "57e9193d02fb6290e543feb7109efa495a5a3e79630f3c1f7e499a871b7e274c",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/57e9193d02fb6290e543feb7109efa495a5a3e79630f3c1f7e499a871b7e274c.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0c3e0fed89ff6f77016af2bf3895b087d1a20bffee5d6f5af4",
+      "usage": {
+        "prompt_tokens": 8121,
+        "completion_tokens": 476,
+        "total_tokens": 8597,
+        "prompt_tokens_details": {
+          "cached_tokens": 5888
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 242
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "6e2b121109b6d1d6ff100e3fba677a01c9f0647329ac4d9e5ec9d2b233c03e4a",
+      "input_hash": "b80cf01443b792dee6da1613e2aeac7c398753b480e20312825d08209bf7c47b",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/b80cf01443b792dee6da1613e2aeac7c398753b480e20312825d08209bf7c47b.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0a7c9351de8548d4016af2bf46ce9087d18c6caa1cbf5240b3",
+      "usage": {
+        "prompt_tokens": 7642,
+        "completion_tokens": 291,
+        "total_tokens": 7933,
+        "prompt_tokens_details": {
+          "cached_tokens": 5248
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 94
+        }
+      }
+    }
+  ]
+}

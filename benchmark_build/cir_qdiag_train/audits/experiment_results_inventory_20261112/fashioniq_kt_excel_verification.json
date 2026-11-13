@@ -1,0 +1,205 @@
+{
+  "workbook": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/experiment_results_inventory_20261112/CIR实验结果汇总_含FashionIQ分类及KT实验_20261112.xlsx",
+  "new_sheets": [
+    {
+      "sheet": "FashionIQ_分类总览",
+      "title": "FashionIQ · Dress / Shirt / Toptee / Macro Average",
+      "rows": 25,
+      "source": "fashioniq_main_categories.csv; fashioniq_extra_model_categories.csv; fashioniq_head_categories.csv"
+    },
+    {
+      "sheet": "FashionIQ_主表分类",
+      "title": "FashionIQ · 原主表模型分类结果",
+      "rows": 72,
+      "source": "fashioniq_main_categories.csv"
+    },
+    {
+      "sheet": "FashionIQ_新增模型分类",
+      "title": "FashionIQ · 新增 CIR 模型分类结果",
+      "rows": 16,
+      "source": "fashioniq_extra_model_categories.csv"
+    },
+    {
+      "sheet": "FashionIQ_头消融分类",
+      "title": "FashionIQ · 原始头与新增头分类结果",
+      "rows": 16,
+      "source": "fashioniq_head_categories.csv"
+    },
+    {
+      "sheet": "Candidate_Count_Temperature",
+      "title": "Candidate Count and Temperature",
+      "rows": 4,
+      "source": "candidate_count_temperature_complete.csv"
+    },
+    {
+      "sheet": "K_T实验完整指标",
+      "title": "Candidate Count and Temperature · 完整指标",
+      "rows": 4,
+      "source": "candidate_count_temperature_complete.csv"
+    },
+    {
+      "sheet": "补充数据来源",
+      "title": "FashionIQ 与 K / T 实验 · 来源索引",
+      "rows": 112,
+      "source": "fashioniq_*_categories.csv; candidate_count_temperature_complete.csv"
+    }
+  ],
+  "new_cells_verified": 1883,
+  "existing_cells_unchanged": true,
+  "macro_average_checks": [
+    {
+      "model": "BGE-MLLM-S2",
+      "method": "Teacher",
+      "maximum_rounding_difference": 3.3333333334439885e-05
+    },
+    {
+      "model": "Qwen3-VL-Emb-8B",
+      "method": "Teacher",
+      "maximum_rounding_difference": 3.3333333334439885e-05
+    },
+    {
+      "model": "CLIP-L",
+      "method": "Original",
+      "maximum_rounding_difference": 3.3333333334439885e-05
+    },
+    {
+      "model": "CLIP-L",
+      "method": "InfoNCE",
+      "maximum_rounding_difference": 3.3333333334439885e-05
+    },
+    {
+      "model": "CLIP-L",
+      "method": "CMSE",
+      "maximum_rounding_difference": 3.3333333334439885e-05
+    },
+    {
+      "model": "CLIP-L",
+      "method": "OPRD",
+      "maximum_rounding_difference": 3.3333333334439885e-05
+    },
+    {
+      "model": "CLIP-B",
+      "method": "Original",
+      "maximum_rounding_difference": 3.3333333334439885e-05
+    },
+    {
+      "model": "CLIP-B",
+      "method": "InfoNCE",
+      "maximum_rounding_difference": 3.333333334154531e-05
+    },
+    {
+      "model": "CLIP-B",
+      "method": "CMSE",
+      "maximum_rounding_difference": 3.3333333334439885e-05
+    },
+    {
+      "model": "CLIP-B",
+      "method": "OPRD",
+      "maximum_rounding_difference": 3.333333333355171e-05
+    },
+    {
+      "model": "Qwen3-VL-Emb-2B",
+      "method": "Original",
+      "maximum_rounding_difference": 3.333333333088717e-05
+    },
+    {
+      "model": "Qwen3-VL-Emb-2B",
+      "method": "InfoNCE",
+      "maximum_rounding_difference": 3.3333333334439885e-05
+    },
+    {
+      "model": "Qwen3-VL-Emb-2B",
+      "method": "CMSE",
+      "maximum_rounding_difference": 3.3333333334439885e-05
+    },
+    {
+      "model": "Qwen3-VL-Emb-2B",
+      "method": "OPRD",
+      "maximum_rounding_difference": 3.333333332733446e-05
+    },
+    {
+      "model": "Qwen3-VL-2B-Instruct",
+      "method": "Original",
+      "maximum_rounding_difference": 2.220446049250313e-16
+    },
+    {
+      "model": "Qwen3-VL-2B-Instruct",
+      "method": "InfoNCE",
+      "maximum_rounding_difference": 3.3333333334439885e-05
+    },
+    {
+      "model": "Qwen3-VL-2B-Instruct",
+      "method": "CMSE",
+      "maximum_rounding_difference": 3.3333333334439885e-05
+    },
+    {
+      "model": "Qwen3-VL-2B-Instruct",
+      "method": "OPRD",
+      "maximum_rounding_difference": 3.3333333334439885e-05
+    },
+    {
+      "model": "CLIP4CIR-CIRR-RN50x4",
+      "method": "官方权重",
+      "maximum_rounding_difference": 3.3333333334439885e-05
+    },
+    {
+      "model": "MagicLens-CLIP-Base",
+      "method": "官方权重",
+      "maximum_rounding_difference": 3.3333333334439885e-05
+    },
+    {
+      "model": "MagicLens-CLIP-Large",
+      "method": "官方权重",
+      "maximum_rounding_difference": 3.3333333334439885e-05
+    },
+    {
+      "model": "TEMA-MCIRR",
+      "method": "官方权重",
+      "maximum_rounding_difference": 3.333333334154531e-05
+    },
+    {
+      "model": "原始残差 MLP 头",
+      "method": "OPRD",
+      "maximum_rounding_difference": 3.3333333334439885e-05
+    },
+    {
+      "model": "MMRet 加法头",
+      "method": "OPRD",
+      "maximum_rounding_difference": 3.33333333379926e-05
+    },
+    {
+      "model": "CLIP4CIR Combiner",
+      "method": "OPRD",
+      "maximum_rounding_difference": 3.33333333379926e-05
+    },
+    {
+      "model": "MagicLens 融合头",
+      "method": "OPRD",
+      "maximum_rounding_difference": 3.3333333334439885e-05
+    }
+  ],
+  "image_table_exact_match": true,
+  "KT_KL_directions": [
+    {
+      "K": 8,
+      "T": 0.05,
+      "KL": "Forward"
+    },
+    {
+      "K": 16,
+      "T": 0.05,
+      "KL": "Forward"
+    },
+    {
+      "K": 32,
+      "T": 0.05,
+      "KL": "Reverse"
+    },
+    {
+      "K": 32,
+      "T": 1.0,
+      "KL": "Reverse"
+    }
+  ],
+  "sha256": "f2bdcf2014559c8d52ac0a5bebfd32bd077bdfb102d1d3da3878ec17ad861d3b"
+}

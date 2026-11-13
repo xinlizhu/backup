@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_326386d4005ad12e",
+  "model": "grok-4.7",
+  "signature": "52913ea34ae01078c58f7a80fc2119b86ef4b6b3449e9e55b21816a5d5d1ccbd",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_326386d4005ad12e_query_01322_attribute_add",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "The added black-and-white constraint is a single fluent attribute edit, but positives 3 and 5 are black text on white cards and remain compatible with it."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.7",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "6854609511be480f5fb3656a3b11df78aa0aa7364339669f6b1ac9586915c2df",
+      "input_hash": "ff8806b5d06d81f8696ea403c6900cad3db215301dce244e1929fe1f041b57bf",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/grok-4.7/cache/validate_group/ff8806b5d06d81f8696ea403c6900cad3db215301dce244e1929fe1f041b57bf.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "0cdb5834-016c-9d0d-8c79-5830ecc47d6c",
+      "usage": {
+        "prompt_tokens": 5012,
+        "completion_tokens": 85,
+        "total_tokens": 6735,
+        "prompt_tokens_details": {
+          "text_tokens": 2469,
+          "audio_tokens": 0,
+          "image_tokens": 2543,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1638,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 172900000
+      }
+    }
+  ],
+  "format_warnings": []
+}

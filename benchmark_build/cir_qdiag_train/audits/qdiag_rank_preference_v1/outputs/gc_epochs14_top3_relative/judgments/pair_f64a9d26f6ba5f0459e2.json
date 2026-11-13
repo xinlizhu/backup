@@ -1,0 +1,53 @@
+{
+  "case_id": "pair_f64a9d26f6ba5f0459e2",
+  "signature": "f3a97f608e6addbd5531ad7795f5e06873610abdb12f716de8375d49eda4c022",
+  "simulated": false,
+  "status": "complete",
+  "judgment": {
+    "case_id": "pair_f64a9d26f6ba5f0459e2",
+    "constraints": [
+      {
+        "constraint": "Remove five bottles from the reference's eight, leaving three bottles.",
+        "A_status": "supported",
+        "B_status": "contradicted",
+        "A_evidence": "Shows three bottles, matching the required remaining count of eight minus five.",
+        "B_evidence": "Shows five bottles, corresponding to removing only three rather than five."
+      },
+      {
+        "constraint": "Retain the reference's general object type: capped, labeled water bottles.",
+        "A_status": "supported",
+        "B_status": "supported",
+        "A_evidence": "Three clear plastic water bottles with caps and printed labels; the specific labels differ from the reference.",
+        "B_evidence": "Five clear plastic water bottles with caps and printed labels; the specific labels differ from the reference."
+      }
+    ],
+    "decision": "A",
+    "confidence": "high",
+    "reason": "The requested change is numerical: removing five of the eight reference bottles leaves three. A shows exactly three bottles, whereas B shows five. Both retain the relevant bottle type, making A's correct remaining count decisive."
+  },
+  "trace": {
+    "stage": "rank_pair_relative_preference",
+    "model_name": "gpt-5.6-terra",
+    "model_revision": null,
+    "provider": "openai-compatible-chat",
+    "reasoning_effort": null,
+    "prompt_version": "rank_preference_relative_v2",
+    "prompt_hash": "15c10da4c943a5379e1cb51eccedfdbca7eb52518640d439b482c11f16adb482",
+    "input_hash": "10d1b341b57f3daf8e378deae0c9201a099da3980d6ea9e1df035e0f442950e4",
+    "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_rank_preference_v1/outputs/gc_epochs14_top3_relative/api_cache/rank_pair_relative_preference/10d1b341b57f3daf8e378deae0c9201a099da3980d6ea9e1df035e0f442950e4.json",
+    "cached": false,
+    "attempts": 1,
+    "request_id": "resp_0",
+    "usage": {
+      "prompt_tokens": 4699,
+      "completion_tokens": 373,
+      "total_tokens": 5072,
+      "prompt_tokens_details": {
+        "cached_tokens": 160
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 158
+      }
+    }
+  }
+}

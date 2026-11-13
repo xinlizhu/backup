@@ -1,0 +1,61 @@
+{
+  "group_id": "pinpoint_group_079788dad27585a1",
+  "model": "kimi-k3",
+  "signature": "7bcee9a6a15f47b49de535c2997e213c18a83885fbb254d34ea6aaed145faa23",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_079788dad27585a1_query_03543_object_substitute",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Single substitution sweater->cardigan; all supplied positives are pullover sweaters, none are cardigans, so the new object identity is false for every positive."
+    },
+    {
+      "negative_id": "pinpoint_group_079788dad27585a1_query_03543_attribute_substitute",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Single attribute edit same->different color palette; all positives share the cream/beige palette of the reference, so a different palette contradicts every positive."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "kimi-k3",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "d61499e34e0b35739cb2029754c0382bdce12ba8f6672cbc8c55d340e3300a4d",
+      "input_hash": "f6771afb30101e0aaffa1024135dfcd24f6af89e28cdc6621c251511075b23ca",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/kimi-k3/cache/validate_group/f6771afb30101e0aaffa1024135dfcd24f6af89e28cdc6621c251511075b23ca.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "01a1c9b9482f7eb28ad7a5f9d9bec086",
+      "usage": {
+        "prompt_tokens": 5307,
+        "completion_tokens": 202,
+        "total_tokens": 5509,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "text_tokens": 0,
+          "audio_tokens": 0,
+          "image_tokens": 0
+        },
+        "completion_tokens_details": {
+          "text_tokens": 0,
+          "audio_tokens": 0,
+          "image_tokens": 0,
+          "reasoning_tokens": 0
+        },
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "input_tokens_details": null,
+        "claude_cache_creation_5_m_tokens": 0,
+        "claude_cache_creation_1_h_tokens": 0,
+        "credit": 3.16
+      }
+    }
+  ],
+  "format_warnings": []
+}

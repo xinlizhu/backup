@@ -1,0 +1,62 @@
+{
+  "group_id": "pinpoint_group_fcdb9b204d9d2398",
+  "model": "claude-haiku-5-5",
+  "signature": "44bb4aae802e19564501a676b733c7e19828d9ced260b7da0428f08b1a359df2",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_fcdb9b204d9d2398_query_05113_attribute_substitute",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "The substitution from 'olive' to 'green' cannot be verified as clearly false. Image 2 (the reference showing terracotta/olive tones) contains greenish hues in its color palette. Positive images 3-6 show items in blue and neutral tones, not terracotta or olive. Without a positive image explicitly showing an olive (not green) terracotta top, the claim that green is false for all positives cannot be established."
+    },
+    {
+      "negative_id": "pinpoint_group_fcdb9b204d9d2398_query_05116_object_add",
+      "decision": "reject",
+      "failure_code": "not_visually_verifiable",
+      "reason": "The addition of 'with a tassel tie at the neckline' cannot be reliably judged from the supplied images. Reference image 1 shows a person from behind with head down, making neckline details obscured. Positive images 3-6 do not clearly display peasant blouses or neckline details. The presence or absence of a tassel tie at the neckline cannot be verified with confidence from the available visual evidence."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-haiku-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "856c8be630ab507d4cdc5dfe1ead77a954ff2dd39349d4fdab76f7e0c733a0da",
+      "input_hash": "59ebe852d79104587cb4ac4b5d9fad946b852a1ee3ef2a20e1d85b4ae050627b",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/claude-haiku-5-5/cache/validate_group/59ebe852d79104587cb4ac4b5d9fad946b852a1ee3ef2a20e1d85b4ae050627b.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01DatuFztpQ6S8nBFS6ZGWhEPC",
+      "usage": {
+        "prompt_tokens": 9443,
+        "completion_tokens": 369,
+        "total_tokens": 9812,
+        "prompt_tokens_details": {
+          "cached_tokens": 7362,
+          "cache_creation_tokens": 2077
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_fcdb9b204d9d2398_query_05113_attribute_substitute",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 412,
+      "action": "full reason retained; decision and failure_code unchanged"
+    },
+    {
+      "negative_id": "pinpoint_group_fcdb9b204d9d2398_query_05116_object_add",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 405,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

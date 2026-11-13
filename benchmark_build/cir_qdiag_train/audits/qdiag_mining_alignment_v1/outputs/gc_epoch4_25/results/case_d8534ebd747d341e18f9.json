@@ -1,0 +1,95 @@
+{
+  "case_id": "case_d8534ebd747d341e18f9",
+  "audit_query_id": "audit_query_088",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_d8534ebd747d341e18f9",
+    "case_status": "source_invalid_or_uncertain",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "Image 2 shows a large bird with a long dark neck on rocky ground, but it is visibly upright rather than clearly sitting."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a small puppy indoors on a blanket, with no bird, long black neck, or rocky dirt area."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "large bird",
+      "longer black neck",
+      "sitting in a rocky dirt area"
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_d8534ebd747d341e18f9",
+    "source_on_positive": {
+      "status": "contradicted",
+      "evidence": "Image 2 shows a large bird with a long black neck on rocky ground, but it is upright rather than sitting."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a puppy indoors, not a large bird with a long black neck in a rocky dirt area."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "0d1cea5a7e708b2ce7c1fc8a1b8838edfc863febdd34605d5bdb99da17deb0b9",
+      "input_hash": "714f3cb558763fcf8bd28cbee0ba5d387ae0be25c12c8c2366d627b0bc7e7936",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_100/api_cache/propose_witnesses/714f3cb558763fcf8bd28cbee0ba5d387ae0be25c12c8c2366d627b0bc7e7936.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_022be906fb39362b016af2b8a60c4887d19f00ea07d064a103",
+      "usage": {
+        "prompt_tokens": 7129,
+        "completion_tokens": 610,
+        "total_tokens": 7739,
+        "completion_tokens_details": {
+          "reasoning_tokens": 466
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "401954c7eb0eff3940f330556da6e298a9dbe0f332fa0787915bdba296a56cce",
+      "input_hash": "c8189beed4ef0a82993e0dac237b972ee764b4b764da2f25c3edf05e86cff3df",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_100/api_cache/review_witnesses/c8189beed4ef0a82993e0dac237b972ee764b4b764da2f25c3edf05e86cff3df.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_062d6ced1b4fe756016af2b8c57c0487d183e5c0bcffd03874",
+      "usage": {
+        "prompt_tokens": 6587,
+        "completion_tokens": 219,
+        "total_tokens": 6806,
+        "prompt_tokens_details": {
+          "cached_tokens": 5248
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 115
+        }
+      }
+    }
+  ],
+  "imported_from": {
+    "result_file": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_100/results/case_d8534ebd747d341e18f9.json",
+    "result_sha256": "e752932629bda41cb29eb9499ed967652a7b6711934527331eb02964f7e3afc9",
+    "original_signature": "5065d94bb0c1b275e428d3f2ada2352b274139ccb2134477487b5f51eef77ac6",
+    "reason": "User restricted audit to final epoch; identical query/images/prompts/backend"
+  }
+}

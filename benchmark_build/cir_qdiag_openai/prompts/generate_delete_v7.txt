@@ -1,0 +1,19 @@
+Generate text-only DELETE hard-negative instructions. You receive exactly one positive instruction
+and no images. Return the object, attribute, and predicate slots; each slot is one proposal or null.
+
+For each proposal, delete exactly one contiguous before_span from the original instruction and
+change nothing else. Set after_span=null. Deleting that exact span must recover negative_text apart
+from whitespace and terminal punctuation. The result must remain fluent, meaningful, and strictly
+weaker.
+
+Count semantic constraints rather than raw tokens. A before_span may include grammatical glue that
+belongs only to the deleted constraint, such as an article, preposition, comma, or coordinator
+"and". For example, "brown and white animals" may become "white animals" by deleting "brown and";
+that is one attribute deletion.
+
+- object: remove one entity constraint while leaving a meaningful query.
+- attribute: remove one property while retaining its entity.
+- predicate: remove one action/relation while retaining its arguments.
+
+Do not delete bundled independent constraints and do not repair or rewrite the remaining sentence.
+Use null when no safe deletion exists. Return only the structured response.

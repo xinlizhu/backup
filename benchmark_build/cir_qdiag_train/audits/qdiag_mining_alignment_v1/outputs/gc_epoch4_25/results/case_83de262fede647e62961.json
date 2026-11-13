@@ -1,0 +1,88 @@
+{
+  "case_id": "case_83de262fede647e62961",
+  "audit_query_id": "audit_query_083",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_83de262fede647e62961",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows one body-cream tube beside its pink box."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a dog and a person, not a product with its box."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "The candidate does not show a product.",
+      "The candidate does not show a product box."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_83de262fede647e62961",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows one body-cream container together with its pink product box."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a dog and a person; no product or product box is visible."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "a75c5c09b93b08d4ee38dedfce4943d565c916aa521b3ad72ba70038c3399d1b",
+      "input_hash": "0f867c1ada327aacbcb50beb3534de415268e9fbcfe7e6c36aea3253b1ee0d11",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/0f867c1ada327aacbcb50beb3534de415268e9fbcfe7e6c36aea3253b1ee0d11.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_08414de8faaa482b016af2bebfd73c87d0b66a1f73d88f2a1b",
+      "usage": {
+        "prompt_tokens": 85939,
+        "completion_tokens": 643,
+        "total_tokens": 86582,
+        "prompt_tokens_details": {
+          "cached_tokens": 65957
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 326
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "244c8855b8732bac789c686562a02abb9975b4892f8cbc3a2abd60bea4e04c93",
+      "input_hash": "15aeb52c01bf3917024116c15982f3f555f82cf061958beaef2463fbc155059d",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/15aeb52c01bf3917024116c15982f3f555f82cf061958beaef2463fbc155059d.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0212523b8cce0c2e016af2be59cd5987d10e9f2efea7225ae4",
+      "usage": {
+        "prompt_tokens": 6301,
+        "completion_tokens": 274,
+        "total_tokens": 6575,
+        "completion_tokens_details": {
+          "reasoning_tokens": 106
+        }
+      }
+    }
+  ]
+}

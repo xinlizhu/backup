@@ -1,0 +1,160 @@
+{
+  "case_id": "case_642f49ed300f1890f1d8",
+  "audit_query_id": "audit_query_081",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_642f49ed300f1890f1d8",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a wind instrument with a deep red, maroon-like body."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a wind instrument with a brown/copper-colored body, not maroon."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The wind instrument should be maroon."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "substitute_attribute_color",
+        "operation": "substitute",
+        "semantic_target": "attribute",
+        "before_span": "maroon",
+        "after_span": "brown",
+        "edited_instruction": "Make a wind instrument a brown color.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "The instrument color changes from maroon to brown.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 shows a deep red, maroon-like instrument body, not a brown one."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows a brown/copper-colored wind instrument."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_642f49ed300f1890f1d8",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a saxophone with a distinctly reddish-maroon body; Image 1 provides wind-instrument context."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a saxophone with a brown/copper-colored body, not maroon."
+    },
+    "verdicts": [
+      {
+        "witness_id": "substitute_attribute_color",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing “maroon” with “brown” is one attribute substitution. The instruction remains fluent and preserves the wind-instrument entity; the visible body colors contrast as required.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The saxophone body in Image 2 is maroon rather than brown."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The saxophone body in Image 3 is visibly brown/copper-colored."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "substitute_attribute_color",
+      "operation": "substitute",
+      "semantic_target": "attribute",
+      "before_span": "maroon",
+      "after_span": "brown",
+      "edited_instruction": "Make a wind instrument a brown color.",
+      "witness_type": "substitution_contrast",
+      "changed_constraint": "The instrument color changes from maroon to brown.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "Image 2 shows a deep red, maroon-like instrument body, not a brown one."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "Image 3 shows a brown/copper-colored wind instrument."
+      },
+      "independent_review": {
+        "witness_id": "substitute_attribute_color",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing “maroon” with “brown” is one attribute substitution. The instruction remains fluent and preserves the wind-instrument entity; the visible body colors contrast as required.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The saxophone body in Image 2 is maroon rather than brown."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The saxophone body in Image 3 is visibly brown/copper-colored."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "substitute_attribute_color",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "715bcdb09ebf9eae7c59b7ff708a4b4986ad1dd19cbc2d9e084e3ae8bfaf941a",
+      "input_hash": "fe8175c97e55367f9d81e7af418d70c49e525d9c69eb3f79738ba0ae16b05f31",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/fe8175c97e55367f9d81e7af418d70c49e525d9c69eb3f79738ba0ae16b05f31.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_ack_5039c31d484d06bcbdbfa70f17ea2638",
+      "usage": {
+        "prompt_tokens": 3929,
+        "completion_tokens": 585,
+        "total_tokens": 4514,
+        "completion_tokens_details": {
+          "reasoning_tokens": 257
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "0117001c589c188635f5db767874c134aaa4e91e14049b492b9a33e2c6984aea",
+      "input_hash": "986d16033e85041bfd2fd1db5aaf512d127f2fe91d731bc7aec59c7af744f9f2",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/986d16033e85041bfd2fd1db5aaf512d127f2fe91d731bc7aec59c7af744f9f2.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_05ca8e3a9469f537016af2bec0653c87d1bfc25bb68cfaf8ba",
+      "usage": {
+        "prompt_tokens": 7826,
+        "completion_tokens": 287,
+        "total_tokens": 8113,
+        "completion_tokens_details": {
+          "reasoning_tokens": 68
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "categories": {
+    "dress": {
+      "gallery_size": 3817,
+      "num_queries": 2017,
+      "recall_at_1": 5.2058,
+      "recall_at_10": 21.1701,
+      "recall_at_5": 14.9232,
+      "recall_at_50": 44.9182
+    },
+    "shirt": {
+      "gallery_size": 6346,
+      "num_queries": 2038,
+      "recall_at_1": 10.5005,
+      "recall_at_10": 26.5947,
+      "recall_at_5": 21.0991,
+      "recall_at_50": 45.2404
+    },
+    "toptee": {
+      "gallery_size": 5373,
+      "num_queries": 1961,
+      "recall_at_1": 8.4141,
+      "recall_at_10": 27.231,
+      "recall_at_5": 18.511,
+      "recall_at_50": 50.0255
+    }
+  },
+  "macro_average": {
+    "recall_at_1": 8.0401,
+    "recall_at_10": 24.9986,
+    "recall_at_5": 18.1778,
+    "recall_at_50": 46.728
+  },
+  "micro_average": {
+    "recall_at_1": 8.0452,
+    "recall_at_10": 24.9834,
+    "recall_at_5": 18.1849,
+    "recall_at_50": 46.6921
+  },
+  "model": "CLIP4CIR-CIRR-RN50x4",
+  "model_source": "/mnt/data/datasets/search_dataset/zxl/models/CLIP4CIR/weights/CIRR/RN50x4_fullft/cirr_comb_RN50x4_fullft.pt",
+  "num_queries": 6016,
+  "protocol": {
+    "caption_composition": "strip('.?, ') then caption_1 + ' and ' + caption_2",
+    "categories": [
+      "dress",
+      "shirt",
+      "toptee"
+    ],
+    "category_specific_gallery": true,
+    "dataset": "FashionIQ",
+    "reference_image_excluded": false,
+    "split": "val",
+    "standard_summary": "macro average over dress, shirt, and toptee"
+  },
+  "schema_version": 1
+}

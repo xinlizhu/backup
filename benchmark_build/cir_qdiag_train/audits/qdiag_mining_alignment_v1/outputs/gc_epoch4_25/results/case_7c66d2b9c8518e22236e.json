@@ -1,0 +1,82 @@
+{
+  "case_id": "case_7c66d2b9c8518e22236e",
+  "audit_query_id": "audit_query_096",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_7c66d2b9c8518e22236e",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Two yellow school buses are parked next to each other with both fronts visible, unlike the side views in R."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows a single saxophone on a white background, with no school buses or adjacent parked vehicles."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "Show the fronts of school buses.",
+      "Have the school buses parked adjacent to each other."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_7c66d2b9c8518e22236e",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Two yellow school buses are parked next to each other, with both front windshields, headlights, and front panels visible."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The candidate shows a single saxophone on a white background; there are no school buses or adjacent parked vehicles."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "f69031efeb9f8d23e31bb7ce52c0ae057ed3bded1ab279cb011d6c431327b4d5",
+      "input_hash": "e7e69416c603f63b0d1e67527d6832279cf51a53429e80ee9ef2573c8c496c9e",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/e7e69416c603f63b0d1e67527d6832279cf51a53429e80ee9ef2573c8c496c9e.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_00b4be6a57b96e06016af2bd5803a887d18fff348c0a9f1978",
+      "usage": {
+        "prompt_tokens": 6877,
+        "completion_tokens": 173,
+        "total_tokens": 7050
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "cfe605a305ca2d919b8440d400641297e99df11e642ad10898a4272b1ff5ae5e",
+      "input_hash": "9bcbeb0fdac910277b0235bdd2afa770b6eb566c945921b18b1564a2205959f8",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/9bcbeb0fdac910277b0235bdd2afa770b6eb566c945921b18b1564a2205959f8.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0bad548ba6cca13d016af2bd5e218887d28ea684e31b20aef9",
+      "usage": {
+        "prompt_tokens": 6335,
+        "completion_tokens": 103,
+        "total_tokens": 6438,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        }
+      }
+    }
+  ]
+}

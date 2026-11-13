@@ -1,0 +1,238 @@
+{
+  "case_id": "case_27ac48e417bbd0070a1b",
+  "audit_query_id": "audit_query_083",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_27ac48e417bbd0070a1b",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "T shows one body-cream container with one matching retail box, satisfying the requested single product with its box."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows a perfume bottle and an eyeshadow palette together in a boxed set, rather than a single product."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "Exactly one product should remain with its box."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "delete",
+        "semantic_target": "attribute",
+        "before_span": "single",
+        "after_span": null,
+        "edited_instruction": "Leave a product with its box",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "Remove the restriction to exactly one product.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "T shows a body-cream container beside its matching box."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C shows products with their retail packaging; the weaker instruction no longer excludes an additional product."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "operation": "substitute",
+        "semantic_target": "attribute",
+        "before_span": "single product",
+        "after_span": "pair of products",
+        "edited_instruction": "Leave a pair of products with its box",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "Change the product count from one to two.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "T shows only one body-cream container with its box, not a pair of products."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "C shows two products—a perfume bottle and an eyeshadow palette—with their shared retail box."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_27ac48e417bbd0070a1b",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows one body-cream tube alongside its matching pink retail box, satisfying the single-product and box constraints."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows two distinct cosmetic products—a fragrance bottle and an eyeshadow palette—together in a shared retail box. The single-product constraint is violated."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting 'single' exactly reconstructs the edited instruction and removes only the explicit quantity restriction. Both images show a product with its packaging; the candidate violates only the removed single-product constraint.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "The body-cream tube is displayed with its matching box."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The fragrance bottle and eyeshadow palette are displayed in their shared retail box; the edited instruction no longer requires exactly one product."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing 'single product' with 'pair of products' changes only product quantity and exactly reconstructs the edited instruction. 'Its box' can refer to the pair as a packaged unit, visibly grounded by the candidate's shared box.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 contains one cream tube and its packaging, not a pair of products."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 contains a pair of products—a fragrance bottle and an eyeshadow palette—with their shared retail box."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "w1",
+      "operation": "delete",
+      "semantic_target": "attribute",
+      "before_span": "single",
+      "after_span": null,
+      "edited_instruction": "Leave a product with its box",
+      "witness_type": "deletion_relaxation",
+      "changed_constraint": "Remove the restriction to exactly one product.",
+      "edited_on_positive": {
+        "status": "supported",
+        "evidence": "T shows a body-cream container beside its matching box."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C shows products with their retail packaging; the weaker instruction no longer excludes an additional product."
+      },
+      "independent_review": {
+        "witness_id": "w1",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "Deleting 'single' exactly reconstructs the edited instruction and removes only the explicit quantity restriction. Both images show a product with its packaging; the candidate violates only the removed single-product constraint.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "The body-cream tube is displayed with its matching box."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The fragrance bottle and eyeshadow palette are displayed in their shared retail box; the edited instruction no longer requires exactly one product."
+        }
+      }
+    },
+    {
+      "witness_id": "w2",
+      "operation": "substitute",
+      "semantic_target": "attribute",
+      "before_span": "single product",
+      "after_span": "pair of products",
+      "edited_instruction": "Leave a pair of products with its box",
+      "witness_type": "substitution_contrast",
+      "changed_constraint": "Change the product count from one to two.",
+      "edited_on_positive": {
+        "status": "contradicted",
+        "evidence": "T shows only one body-cream container with its box, not a pair of products."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "C shows two products—a perfume bottle and an eyeshadow palette—with their shared retail box."
+      },
+      "independent_review": {
+        "witness_id": "w2",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "substitution_contrast",
+        "reason": "Replacing 'single product' with 'pair of products' changes only product quantity and exactly reconstructs the edited instruction. 'Its box' can refer to the pair as a packaged unit, visibly grounded by the candidate's shared box.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "Image 2 contains one cream tube and its packaging, not a pair of products."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 contains a pair of products—a fragrance bottle and an eyeshadow palette—with their shared retail box."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    },
+    {
+      "witness_id": "w2",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "ad444441930b3ac0b9e35cc36df7cf4995216724b1dba4f430ca88cd3290ae93",
+      "input_hash": "30f3cfbd8373f601a3703b870e97230963ba0fc511e489dafa9753537730c71b",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/30f3cfbd8373f601a3703b870e97230963ba0fc511e489dafa9753537730c71b.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0c73db483d7e8e71016af2bd62860887d1b929a3086d310472",
+      "usage": {
+        "prompt_tokens": 7619,
+        "completion_tokens": 848,
+        "total_tokens": 8467,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 348
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "259b52485188867200d546f56b540513715454ca2237b0f027a304c8ef5034b3",
+      "input_hash": "80db1fcfb1e50be5dd6506a77303a07ad9fd8750057b791c453241f4e9dfd7b9",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/80db1fcfb1e50be5dd6506a77303a07ad9fd8750057b791c453241f4e9dfd7b9.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0896c753d6a9fd8a016af2bd7ae3d887d1b004cb3f9c5fc16a",
+      "usage": {
+        "prompt_tokens": 7200,
+        "completion_tokens": 581,
+        "total_tokens": 7781,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 101
+        }
+      }
+    }
+  ]
+}

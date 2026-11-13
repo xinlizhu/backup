@@ -1,0 +1,62 @@
+{
+  "group_id": "pinpoint_group_04a5bcba3ed4da92",
+  "model": "claude-haiku-5-5",
+  "signature": "44bb4aae802e19564501a676b733c7e19828d9ced260b7da0428f08b1a359df2",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_04a5bcba3ed4da92_query_00712_predicate_substitute",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "The substitution from 'look like' to 'are next to' changes the spatial relationship. Images 2-5 show lighting fixtures that could plausibly be positioned next to the reference earrings (Image 1) while maintaining compatibility with the original query. The cone-shaped and metallic lighting pieces shown are not contradicted by an adjacency relationship."
+    },
+    {
+      "negative_id": "pinpoint_group_04a5bcba3ed4da92_query_00714_object_substitute",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "Substituting 'earrings' with 'necklaces' changes the object type but maintains semantic compatibility with the supplied positive images. The lighting fixtures shown (Images 2-5) are based on the same aesthetic and silhouette principles and could equally derive from necklace designs with similar metallic, cone-shaped, or textured characteristics. The visual logic is not contradicted."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-haiku-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "b79f6282a5eba09a19b6ac19caf2d99c52eecff5a1a5ec08440ff665cddd4aac",
+      "input_hash": "e2487aae8dfe4991e4b3b457b8dae1280ed20d9f9ff386a732ac52088e9e4f28",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/claude-haiku-5-5/cache/validate_group/e2487aae8dfe4991e4b3b457b8dae1280ed20d9f9ff386a732ac52088e9e4f28.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_01DxaOcAyBREKSWA3lYMQAQ7tV",
+      "usage": {
+        "prompt_tokens": 8554,
+        "completion_tokens": 349,
+        "total_tokens": 8903,
+        "prompt_tokens_details": {
+          "cached_tokens": 6669,
+          "cache_creation_tokens": 1881
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_04a5bcba3ed4da92_query_00712_predicate_substitute",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 353,
+      "action": "full reason retained; decision and failure_code unchanged"
+    },
+    {
+      "negative_id": "pinpoint_group_04a5bcba3ed4da92_query_00714_object_substitute",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 385,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

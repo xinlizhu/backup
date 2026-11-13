@@ -1,0 +1,91 @@
+{
+  "case_id": "case_b64e4dcff865c979f5ae",
+  "audit_query_id": "audit_query_092",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_b64e4dcff865c979f5ae",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows one panda resting with its head against its forelimb beside a branch, consistent with the described resting state."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a dark-furred primate crouching on the ground, not a panda resting on a branch."
+    },
+    "candidate_relation": "multiple_constraint_conflict",
+    "violated_source_constraints": [
+      "The target animal is a panda; the candidate shows a dark-furred primate rather than a panda.",
+      "The described resting pose on a branch is absent; the candidate animal is crouched on the ground."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_b64e4dcff865c979f5ae",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a single panda resting its head on a forepaw, with a branch visible beneath it."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a young gorilla on the ground, not a panda resting on a branch."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "18bdd748524f6e8e7229aadabf756b8f32bf8f82ca0cf86c7ae29732e9ea85df",
+      "input_hash": "3a43ced9c334efb706a5e9b124759c3fd6e47761d82aea9137e05b0af7cafc4d",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/3a43ced9c334efb706a5e9b124759c3fd6e47761d82aea9137e05b0af7cafc4d.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0da13a6d798fada1016af2bee803bc87d1a8285d7e4901a51d",
+      "usage": {
+        "prompt_tokens": 8076,
+        "completion_tokens": 492,
+        "total_tokens": 8568,
+        "prompt_tokens_details": {
+          "cached_tokens": 5888
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 326
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "1428de2e73c22451c9d919b6df8eb4e81ccb31de503cb5a666819bddc0bf9afc",
+      "input_hash": "b5333a55a83bc796667bd22992fad8c2b729c0081d95d48147f14f6531b94e01",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/b5333a55a83bc796667bd22992fad8c2b729c0081d95d48147f14f6531b94e01.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0fdd6a0c6a51d707016af2bef9650887d1b796c55b40623520",
+      "usage": {
+        "prompt_tokens": 7534,
+        "completion_tokens": 212,
+        "total_tokens": 7746,
+        "prompt_tokens_details": {
+          "cached_tokens": 5248
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 115
+        }
+      }
+    }
+  ]
+}

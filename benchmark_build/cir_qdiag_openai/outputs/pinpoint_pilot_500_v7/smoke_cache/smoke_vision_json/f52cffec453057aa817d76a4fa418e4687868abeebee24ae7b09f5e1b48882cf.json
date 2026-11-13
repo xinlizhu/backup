@@ -1,0 +1,92 @@
+{
+  "request": {
+    "stage": "smoke_vision_json",
+    "backend": "OpenAIChatBackend",
+    "model_name": "stage-routed-openai-chat",
+    "model_revision": null,
+    "backend_identity": {
+      "backend_contract": "minimal-httpx-chat-structured-v3",
+      "api_base": "https://ai.gs88.shop/v1",
+      "structured_output_mode": "prompt",
+      "generation_model": "gpt-5.6-terra",
+      "selection_model": "gpt-5.6-terra",
+      "generation_reasoning_effort": null,
+      "selection_reasoning_effort": null,
+      "image_detail": "high"
+    },
+    "prompt_hash": "2df414dedb51e692fdeff91430416c4929648afcb38ac5893c7fc2542776e317",
+    "prompt_version": "v7",
+    "schema": {
+      "additionalProperties": false,
+      "properties": {
+        "reference_summary": {
+          "title": "Reference Summary",
+          "type": "string"
+        },
+        "positive_summary": {
+          "title": "Positive Summary",
+          "type": "string"
+        }
+      },
+      "required": [
+        "reference_summary",
+        "positive_summary"
+      ],
+      "title": "SmokeResponse",
+      "type": "object"
+    },
+    "max_output_tokens": 512
+  },
+  "images": [
+    "/mnt/data/datasets/search_dataset/zxl/pinpoint-dataset/image_cache/da/da9391c91ec61ec5048beef0ffb9f8d1.jpg",
+    "/mnt/data/datasets/search_dataset/zxl/pinpoint-dataset/image_cache/07/07925d979fc3d5abb13191a1317228db.jpg"
+  ],
+  "parsed": {
+    "reference_summary": "Whitewashed cliffside buildings and stairways overlook a deep blue sea and distant islands under a clear sky.",
+    "positive_summary": "A woman in a white sundress poses barefoot beside a brick wall and patio chair in bright sunlight."
+  },
+  "raw_response": {
+    "id": "resp_08b71384967ae14c016a66cfe12f68819689816683d7d020ed",
+    "object": "chat.completion",
+    "created": 1785122788,
+    "model": "gpt-5.6-terra",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"reference_summary\":\"Whitewashed cliffside buildings and stairways overlook a deep blue sea and distant islands under a clear sky.\",\"positive_summary\":\"A woman in a white sundress poses barefoot beside a brick wall and patio chair in bright sunlight.\"}"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 5871,
+      "completion_tokens": 53,
+      "total_tokens": 5924
+    }
+  },
+  "request_id": "resp_08b71384967ae14c016a66cfe12f68819689816683d7d020ed",
+  "trace": {
+    "stage": "smoke_vision_json",
+    "model_name": "gpt-5.6-terra",
+    "model_revision": null,
+    "provider": "openai-compatible-chat",
+    "reasoning_effort": null,
+    "prompt_version": "v7",
+    "prompt_hash": "2df414dedb51e692fdeff91430416c4929648afcb38ac5893c7fc2542776e317",
+    "input_hash": "f52cffec453057aa817d76a4fa418e4687868abeebee24ae7b09f5e1b48882cf",
+    "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_openai/outputs/pinpoint_pilot_500_v7/smoke_cache/smoke_vision_json/f52cffec453057aa817d76a4fa418e4687868abeebee24ae7b09f5e1b48882cf.json",
+    "cached": false,
+    "attempts": 1,
+    "request_id": "resp_08b71384967ae14c016a66cfe12f68819689816683d7d020ed",
+    "usage": {
+      "prompt_tokens": 5871,
+      "completion_tokens": 53,
+      "total_tokens": 5924
+    }
+  },
+  "attempt": 1,
+  "previous_errors": [],
+  "previous_error_details": []
+}

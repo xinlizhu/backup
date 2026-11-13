@@ -1,0 +1,58 @@
+experiment:
+  name: clip_l_semantic_distill_response
+  seed: 42
+  output_dir: outputs/semantic_distillation/clip_l_full_baseline/semantic_response
+  initialize_from: outputs/clip_l/full/baseline/checkpoint_epoch_010.pt
+
+data:
+  train_manifest: data/cirr_train_all_v5_no_va.jsonl
+  train_image_split_path: /mnt/data/datasets/search_dataset/zxl/CIR_new/datasets/CIRR/cirr/image_splits/split.rc2.train.json
+  val_annotation_path: /mnt/data/datasets/search_dataset/zxl/CIR_new/datasets/CIRR/cirr/captions/cap.rc2.val.json
+  val_image_split_path: /mnt/data/datasets/search_dataset/zxl/CIR_new/datasets/CIRR/cirr/image_splits/split.rc2.val.json
+  image_root: /mnt/data/datasets/search_dataset/zxl/CIR_new/datasets/CIRR
+  teacher_cache_dir: outputs/semantic_distillation/cache/bge_mllm_s2_object
+  student_image_cache_dir: outputs/semantic_distillation/cache/clip_l_full_baseline_images
+  semantic_target: object
+  edit_operations: [add, substitute]
+  num_workers: 8
+
+model:
+  variant: clip_vit_l14
+  pretrained_model_name_or_path: models/clip-vit-large-patch14
+  local_files_only: true
+  trust_remote_code: false
+  hidden_dim: 1024
+  dropout: 0.1
+  freeze_backbone: false
+  freeze_vision_encoder: true
+  unfreeze_last_n_layers: null
+  lora_rank: null
+  gradient_checkpointing: true
+
+objective:
+  positive_rank_weight: 0.0
+  semantic_response_weight: 1.0
+  positive_rank_temperature: 0.05
+  semantic_response_beta: 0.01
+  require_teacher_target_top1: true
+  semantic_min_teacher_target_delta: 0.0
+
+optimizer:
+  epochs: 16
+  batch_size_per_gpu: 128
+  gradient_accumulation_steps: 1
+  learning_rate: 0.00001
+  backbone_learning_rate: 0.0000005
+  weight_decay: 0.01
+  warmup_ratio: 0.05
+  max_grad_norm: 1.0
+  temperature: 0.07
+  learnable_temperature: false
+  mixed_precision: bf16
+  log_every_steps: 20
+  save_every_epochs: 4
+
+evaluation:
+  batch_size: 128
+  recall_k: [1, 5, 10, 50]
+  group_recall_k: [1, 2, 3]

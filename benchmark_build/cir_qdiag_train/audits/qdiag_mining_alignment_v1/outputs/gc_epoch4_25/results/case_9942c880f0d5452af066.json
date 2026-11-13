@@ -1,0 +1,92 @@
+{
+  "case_id": "case_9942c880f0d5452af066",
+  "audit_query_id": "audit_query_078",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_9942c880f0d5452af066",
+    "case_status": "source_invalid_or_uncertain",
+    "source_on_positive": {
+      "status": "contradicted",
+      "evidence": "One rodent sits on a rock against a blue background, but its compact body, short ears, and furry tail identify it as a marmot rather than a beaver."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The image shows an indoor bedroom with a bed, pillows, wall art, and mounted antlers; no beaver, rock, or blue sky is visible."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "One beaver is present.",
+      "The beaver is sitting on a rock.",
+      "Blue sky is visible in the background."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_9942c880f0d5452af066",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "One brown rodent sits on a rock against a blue background. It appears marmot-like rather than clearly identifiable as a beaver, and the blurred blue area cannot reliably be established as sky."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The image shows an indoor bedroom with a bed, pillows, wall art, and mounted antlers. There is no beaver sitting on a rock or blue sky in the background."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "e87589f085a0aace09d2cd854f8c799546f61dd3f7f3121e2fece5240d55f371",
+      "input_hash": "5f70e94651f73ab07b41affba7ec970c692800a9a3058f2d9e9441a35da96a5b",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/5f70e94651f73ab07b41affba7ec970c692800a9a3058f2d9e9441a35da96a5b.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0f7d4dcac2806fc3016af2bdcd190487d1918248ad90bc738c",
+      "usage": {
+        "prompt_tokens": 8404,
+        "completion_tokens": 256,
+        "total_tokens": 8660,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 46
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "02ab8619a505e90926e6cf0c2222547082f21ebb14d4a583547b10740aba6cce",
+      "input_hash": "5bd189a9b14496081d53207d3558c9ed745e64f8f0d970f6d5fcb8af516e8b17",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/5bd189a9b14496081d53207d3558c9ed745e64f8f0d970f6d5fcb8af516e8b17.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0c2839aeb638431c016af2bde086f887d19bcec3ea7c3ec057",
+      "usage": {
+        "prompt_tokens": 7862,
+        "completion_tokens": 193,
+        "total_tokens": 8055,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 62
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_91d942973bc7d06a",
+  "model": "grok-4.6",
+  "signature": "cb958fa178e5ebcdd33f446ebd46fe25a7c20417ca5539cc74de61fb4df99804",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_91d942973bc7d06a_query_05149_predicate_add",
+      "decision": "reject",
+      "failure_code": "not_visually_verifiable",
+      "reason": "Adding “centered in the home gym” is one predicate edit, but none of the supplied positives show a home gym or equipment layout, so centering cannot be judged as clearly false."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.6",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "8e5168e617422213cb67bd572a8dda464c75883662d06a67eb84528eae311b8d",
+      "input_hash": "d6ff04d27b36ac3896aa5b77ca43ddf9f372027eecf5f879d328ee1e33f57546",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/grok-4.6/cache/validate_group/d6ff04d27b36ac3896aa5b77ca43ddf9f372027eecf5f879d328ee1e33f57546.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "ddf20f3b-3e07-9836-8ddf-ac9321644d59",
+      "usage": {
+        "prompt_tokens": 4998,
+        "completion_tokens": 92,
+        "total_tokens": 7793,
+        "prompt_tokens_details": {
+          "text_tokens": 2664,
+          "audio_tokens": 0,
+          "image_tokens": 2334,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2703,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 236940000
+      }
+    }
+  ],
+  "format_warnings": []
+}

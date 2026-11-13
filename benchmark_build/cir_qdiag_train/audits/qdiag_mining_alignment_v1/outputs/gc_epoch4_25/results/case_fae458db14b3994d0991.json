@@ -1,0 +1,130 @@
+{
+  "case_id": "case_fae458db14b3994d0991",
+  "audit_query_id": "audit_query_100",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_fae458db14b3994d0991",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "A shallow, bowl-like metal baking vessel contains a prepared dish covered with melted, browned cheese."
+    },
+    "source_on_candidate": {
+      "status": "supported",
+      "evidence": "A shallow, bowl-like white baking vessel contains a prepared dish with a golden cheese topping."
+    },
+    "candidate_relation": "compatible",
+    "violated_source_constraints": [],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "add",
+        "semantic_target": "attribute",
+        "before_span": null,
+        "after_span": "white",
+        "edited_instruction": "A white bowl with a dish and cheese on top.",
+        "witness_type": "addition_disambiguation",
+        "changed_constraint": "The bowl is white.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The cheese-topped dish is in a silver-colored metal vessel, not a white bowl."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The cheese-topped dish is contained in a white ceramic baking vessel."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_fae458db14b3994d0991",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "Image 2 clearly shows a cheese-topped dish in a blue-rimmed pan, but it does not reliably establish the separate bowl described by “a bowl with a dish.”"
+    },
+    "source_on_candidate": {
+      "status": "uncertain",
+      "evidence": "Image 3 shows cheese-topped food in a white oval baking dish; a separate bowl is not clearly visible."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "reject",
+        "failure_code": "source_invalid_or_uncertain",
+        "witness_type": null,
+        "reason": "The required original instruction is not reliably established on Image 2, so the proposed ADD witness cannot be accepted. The insertion of “white” is otherwise a single edit.",
+        "edited_on_positive": {
+          "status": "uncertain",
+          "evidence": "The dish in Image 2 appears blue-rimmed, but the source instruction's separate bowl is not reliably established."
+        },
+        "edited_on_candidate": {
+          "status": "uncertain",
+          "evidence": "Image 3 has a white baking dish and cheese-topped food, but does not clearly show the bowl required by the edited instruction."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": false,
+      "local_failures": [
+        "wrong_witness_type",
+        "wrong_support_pattern"
+      ],
+      "review_decision": "reject"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "3fdc1b1a1ede5be6d6159d966bb788985702425e9ce579954cf230769d839581",
+      "input_hash": "3ec30c51afe93e77df5f7f2cf605e40b6c18018b8db68f4417621c86b99271a2",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/3ec30c51afe93e77df5f7f2cf605e40b6c18018b8db68f4417621c86b99271a2.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0081b953a6d9d032016af2be8ffeb087d19b57945188d667a6",
+      "usage": {
+        "prompt_tokens": 14462,
+        "completion_tokens": 375,
+        "total_tokens": 14837,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 71
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "9b80f2835d675164930a05d6065f44f2482c22e85bfe2e4f6af2782fa02f5cc1",
+      "input_hash": "f5e9ecbe45aa8d276131284cb346e4483acb57497ce00f0e948114dab4746b64",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/f5e9ecbe45aa8d276131284cb346e4483acb57497ce00f0e948114dab4746b64.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_084aeb7110eb9baf016af2beaccfac87d08a363fe46fe697f1",
+      "usage": {
+        "prompt_tokens": 14145,
+        "completion_tokens": 637,
+        "total_tokens": 14782,
+        "completion_tokens_details": {
+          "reasoning_tokens": 383
+        }
+      }
+    }
+  ]
+}

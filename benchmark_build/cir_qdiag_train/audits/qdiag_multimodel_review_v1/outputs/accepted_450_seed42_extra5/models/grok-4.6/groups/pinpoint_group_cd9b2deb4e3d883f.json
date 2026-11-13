@@ -1,0 +1,57 @@
+{
+  "group_id": "pinpoint_group_cd9b2deb4e3d883f",
+  "model": "grok-4.6",
+  "signature": "cb958fa178e5ebcdd33f446ebd46fe25a7c20417ca5539cc74de61fb4df99804",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_cd9b2deb4e3d883f_query_00489_attribute_delete",
+      "decision": "reject",
+      "failure_code": "invalid_delete",
+      "reason": "Deleting the required complement \"business formal\" leaves the incomplete fragment \"Make it.\", which is not a fluent, meaningful, strictly weaker query."
+    },
+    {
+      "negative_id": "pinpoint_group_cd9b2deb4e3d883f_query_00490_attribute_delete",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Removes only the business-formal style attribute and its preposition, leaving the fluent, strictly weaker request \"I need this outfit.\""
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.6",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "fb4b97e6de8dc2619417d146d559abe476dd6449d5ee0621b39564629fbaefd3",
+      "input_hash": "4e3aad02018b66c4c36bada08d2d0aa4da5b7954428356e0fc701ac3071c831d",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/grok-4.6/cache/validate_group/4e3aad02018b66c4c36bada08d2d0aa4da5b7954428356e0fc701ac3071c831d.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "bd8d3d3f-43ef-9489-b453-91b941ab944e",
+      "usage": {
+        "prompt_tokens": 4489,
+        "completion_tokens": 157,
+        "total_tokens": 7485,
+        "prompt_tokens_details": {
+          "text_tokens": 2647,
+          "audio_tokens": 0,
+          "image_tokens": 1842,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2839,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 238820000
+      }
+    }
+  ],
+  "format_warnings": []
+}

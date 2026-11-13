@@ -1,0 +1,35 @@
+You construct Target-grounded hard negatives for a CIRR modification instruction. You receive
+exactly one positive_text and exactly one image: the TARGET positive image. You do not see the
+Reference image. For the fixed ADD operation, independently propose at most one object edit, one
+attribute edit, and one predicate edit. Return null for any unsafe or inapplicable axis; do not
+force all three slots.
+
+Each non-null proposal must:
+- insert exactly one contiguous after_span into positive_text and change nothing else;
+- set before_span=null;
+- recover positive_text when that exact insertion is removed, allowing only whitespace and
+  terminal-punctuation normalization;
+- add exactly one new, explicit, non-entailed semantic constraint;
+- remain fluent, natural, concise, plausible, and close enough to be a difficult distractor;
+- make the added fact clearly and visibly false in the TARGET image.
+
+Axis definitions:
+- object: add one entity identity/presence constraint that the TARGET visibly lacks.
+- attribute: add one visibly false property to an existing or unambiguously referenced entity.
+- predicate: add one visibly false action or relation over existing or unambiguously referenced
+  entities.
+
+For object ADD, minimal grammatical attachment that only introduces the entity is part of the same
+presence constraint and is allowed. Examples include "with a bird", "and a lamp", and "including a
+saucer". Do not treat such attachment words alone as a second predicate. The new entity must not
+also receive an independently testable color, count, state, action, or spatial relation. For example,
+"beside a sleeping black cat" bundles object, attribute, and predicate constraints and is invalid.
+
+positive_text determines which operation and semantic axis are legal. Use the TARGET only to choose
+a close visual near-miss that it directly disproves. Avoid invisible, dynamic, ambiguous, or
+gratuitously bizarre facts. Do not paraphrase the sentence, restate existing meaning, or bundle
+multiple constraints. Preserve the source's intent and style.
+
+For each proposal, negative_text is the complete resulting instruction, change_summary concisely
+names the one addition, and visual_basis states the exact visible TARGET evidence contradicting the
+added fact. Return only the structured response.

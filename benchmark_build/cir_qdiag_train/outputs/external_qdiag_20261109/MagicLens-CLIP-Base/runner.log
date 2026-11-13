@@ -1,0 +1,48 @@
+/mnt/data/datasets/search_dataset/zxl/magic_lens311/lib/python3.11/site-packages/torch/cuda/__init__.py:188: UserWarning: CUDA initialization: The NVIDIA driver on your system is too old (found version 12090). Please update your GPU driver by downloading and installing a new version from the URL: http://www.nvidia.com/Download/index.aspx Alternatively, go to: https://pytorch.org to install a PyTorch version that has been compiled with your version of the CUDA driver. (Triggered internally at /__w/pytorch/pytorch/c10/cuda/CUDAFunctions.cpp:119.)
+  return torch._C._cuda_getDeviceCount() > 0
+E1109 08:57:18.999080  256587 numa_hwloc.cc:121] Call to hwloc_set_cpubind() failed: Invalid argument [22]
+[devices] [CudaDevice(id=0)]
+[preflight] {'groups': 500, 'queries': 7509, 'negative_count': 5576, 'images': 3930, 'target_images': 3506, 'missing_images': []}
+[model] initializing official parameter tree
+[model] checkpoint tree and shapes verified
+[smoke] {'native_query_max_abs_error': 2.253800630569458e-07, 'native_target_max_abs_error': 3.818422555923462e-07, 'preprocess_max_abs_error': 2.384185791015625e-07, 'checkpoint_tree_verified': True, 'query_shape': [3, 512]}
+[images] 256/3930 elapsed=125.7s
+[images] 512/3930 elapsed=126.5s
+[images] 768/3930 elapsed=127.3s
+[images] 1024/3930 elapsed=128.0s
+[images] 1280/3930 elapsed=128.8s
+[images] 1536/3930 elapsed=129.6s
+[images] 1792/3930 elapsed=130.3s
+[images] 2048/3930 elapsed=131.1s
+[images] 2304/3930 elapsed=131.9s
+[images] 2560/3930 elapsed=132.7s
+[images] 2816/3930 elapsed=133.4s
+[images] 3072/3930 elapsed=134.2s
+[images] 3328/3930 elapsed=134.9s
+[images] 3584/3930 elapsed=135.7s
+[images] 3840/3930 elapsed=136.5s
+[images] 3930/3930 elapsed=136.9s
+[targets] complete
+[queries] 512/7509 elapsed=186.8s
+[queries] 1024/7509 elapsed=186.9s
+[queries] 1536/7509 elapsed=187.0s
+[queries] 2048/7509 elapsed=187.0s
+[queries] 2560/7509 elapsed=187.1s
+[queries] 3072/7509 elapsed=187.2s
+[queries] 3584/7509 elapsed=187.3s
+[queries] 4096/7509 elapsed=187.4s
+[queries] 4608/7509 elapsed=187.5s
+[queries] 5120/7509 elapsed=187.6s
+[queries] 5632/7509 elapsed=187.6s
+[queries] 6144/7509 elapsed=187.7s
+[queries] 6656/7509 elapsed=187.8s
+[queries] 7168/7509 elapsed=187.9s
+[queries] 7509/7509 elapsed=188.0s
+[done scores] outputs/external_qdiag_20261109/MagicLens-CLIP-Base elapsed=195.1s
+    subset  groups  instructions  negatives  mean_delta  DRR_percent  CRR_percent  CRR_CI_low_percent  CRR_CI_high_percent    b_psi
+       all     499          1862       5576    0.040104    67.738585     4.440854            3.640742             5.396316 0.210163
+    strict     471          1580       3242    0.051614    73.690092     5.117060            4.199467             6.116277 0.210163
+       add     423          1162       1598    0.033507    71.222887     0.809605            0.471457             1.239355 0.210163
+substitute     432          1214       1644    0.066451    75.574929     8.583221            7.061077            10.146066 0.210163
+    delete     495          1632       2334    0.027919    60.775086     3.738962            2.835063             4.777006 0.210163
+[done metrics] outputs/external_qdiag_20261109/MagicLens-CLIP-Base

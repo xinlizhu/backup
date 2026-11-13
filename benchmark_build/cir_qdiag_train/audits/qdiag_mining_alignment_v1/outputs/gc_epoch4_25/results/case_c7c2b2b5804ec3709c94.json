@@ -1,0 +1,163 @@
+{
+  "case_id": "case_c7c2b2b5804ec3709c94",
+  "audit_query_id": "audit_query_100",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_c7c2b2b5804ec3709c94",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "A round baking dish contains food with a clearly visible browned, melted cheese topping."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The glass bowl contains a layered cream dessert topped with biscuits and mint; no cheese topping is visible."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "cheese on top"
+    ],
+    "witnesses": [
+      {
+        "witness_id": "delete_cheese_topping",
+        "operation": "delete",
+        "semantic_target": "attribute",
+        "before_span": " and cheese on top",
+        "after_span": null,
+        "edited_instruction": "A bowl with a dish.",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "The removed constraint specifies cheese as the topping.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "The image shows a round dish of food in a baking dish."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The image shows a layered dessert presented in a glass bowl."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_c7c2b2b5804ec3709c94",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a prepared dish in a round baking dish with browned, melted cheese visibly covering the top."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a layered dessert in a glass pedestal bowl, topped with cookies, crumbs, and mint; no cheese topping is visible."
+    },
+    "verdicts": [
+      {
+        "witness_id": "delete_cheese_topping",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "The deletion removes one topping constraint and reconstructs the edited text exactly. Both images show a food dish in a bowl or serving dish; only the positive visibly has the specified cheese topping.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 shows food in a round dish, so it satisfies the edited instruction without requiring the topping detail."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows a layered dessert in a glass serving bowl, satisfying the edited instruction."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [
+    {
+      "witness_id": "delete_cheese_topping",
+      "operation": "delete",
+      "semantic_target": "attribute",
+      "before_span": " and cheese on top",
+      "after_span": null,
+      "edited_instruction": "A bowl with a dish.",
+      "witness_type": "deletion_relaxation",
+      "changed_constraint": "The removed constraint specifies cheese as the topping.",
+      "edited_on_positive": {
+        "status": "supported",
+        "evidence": "The image shows a round dish of food in a baking dish."
+      },
+      "edited_on_candidate": {
+        "status": "supported",
+        "evidence": "The image shows a layered dessert presented in a glass bowl."
+      },
+      "independent_review": {
+        "witness_id": "delete_cheese_topping",
+        "decision": "accept",
+        "failure_code": null,
+        "witness_type": "deletion_relaxation",
+        "reason": "The deletion removes one topping constraint and reconstructs the edited text exactly. Both images show a food dish in a bowl or serving dish; only the positive visibly has the specified cheese topping.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "Image 2 shows food in a round dish, so it satisfies the edited instruction without requiring the topping detail."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Image 3 shows a layered dessert in a glass serving bowl, satisfying the edited instruction."
+        }
+      }
+    }
+  ],
+  "local_checks": [
+    {
+      "witness_id": "delete_cheese_topping",
+      "accepted": true,
+      "local_failures": [],
+      "review_decision": "accept"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "f2a95ba0d7ba303fe27eee4ca385296b0e3f1430fdedd147596e366d5a37a0a8",
+      "input_hash": "0ed43e62282ab638e2256c85ee401c1494c61ab16d70b6e79597db57f63ed064",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/0ed43e62282ab638e2256c85ee401c1494c61ab16d70b6e79597db57f63ed064.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_ack_fbb8fe279d1211f485c03ceb97996eea",
+      "usage": {
+        "prompt_tokens": 9443,
+        "completion_tokens": 494,
+        "total_tokens": 9937,
+        "completion_tokens_details": {
+          "reasoning_tokens": 263
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "704c7ce5cfd5af1d8bed63206b79314d720be5192708b528340f53800fa58f2b",
+      "input_hash": "eb5aafbad31457b10676ae8c2ef9a1b678db2dbe377d42961c90bc6b65186814",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/eb5aafbad31457b10676ae8c2ef9a1b678db2dbe377d42961c90bc6b65186814.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_021a2a8f479a211f016af2bf21cf2c87d1bf53b28f1abb1637",
+      "usage": {
+        "prompt_tokens": 13340,
+        "completion_tokens": 573,
+        "total_tokens": 13913,
+        "prompt_tokens_details": {
+          "cached_tokens": 5248
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 268
+        }
+      }
+    }
+  ]
+}

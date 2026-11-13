@@ -1,0 +1,62 @@
+{
+  "group_id": "pinpoint_group_cd9b2deb4e3d883f",
+  "model": "kimi-k3",
+  "signature": "7bcee9a6a15f47b49de535c2997e213c18a83885fbb254d34ea6aaed145faa23",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_cd9b2deb4e3d883f_query_00489_attribute_delete",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Deleting 'business formal' removes exactly one attribute constraint, leaving 'Make it.' which is fluent, meaningful, and strictly weaker while preserving the rest."
+    },
+    {
+      "negative_id": "pinpoint_group_cd9b2deb4e3d883f_query_00490_attribute_delete",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Removing 'in business formal' deletes a single attribute constraint; 'I need this outfit.' is fluent, coherent, and strictly weaker with surviving meaning intact."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "kimi-k3",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "fb4b97e6de8dc2619417d146d559abe476dd6449d5ee0621b39564629fbaefd3",
+      "input_hash": "bde1814defbe8dda4fef7b66131542bc37c7a19490685fb0460b5dfff8e3ba32",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/kimi-k3/cache/validate_group/bde1814defbe8dda4fef7b66131542bc37c7a19490685fb0460b5dfff8e3ba32.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "01a1c9baaabf71df9213dee50e81b322",
+      "usage": {
+        "prompt_tokens": 3715,
+        "completion_tokens": 219,
+        "total_tokens": 3934,
+        "prompt_cache_hit_tokens": 768,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "text_tokens": 0,
+          "audio_tokens": 0,
+          "image_tokens": 0
+        },
+        "completion_tokens_details": {
+          "text_tokens": 0,
+          "audio_tokens": 0,
+          "image_tokens": 0,
+          "reasoning_tokens": 0
+        },
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "input_tokens_details": null,
+        "claude_cache_creation_5_m_tokens": 0,
+        "claude_cache_creation_1_h_tokens": 0,
+        "credit": 2.06
+      }
+    }
+  ],
+  "format_warnings": []
+}

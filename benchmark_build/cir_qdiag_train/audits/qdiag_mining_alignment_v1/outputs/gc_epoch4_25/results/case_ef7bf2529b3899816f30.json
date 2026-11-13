@@ -1,0 +1,85 @@
+{
+  "case_id": "case_ef7bf2529b3899816f30",
+  "audit_query_id": "audit_query_088",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_ef7bf2529b3899816f30",
+    "case_status": "source_invalid_or_uncertain",
+    "source_on_positive": {
+      "status": "contradicted",
+      "evidence": "T shows a large bird with a much longer black neck than R on rocky dirt, but it is standing upright on visible legs rather than sitting."
+    },
+    "source_on_candidate": {
+      "status": "uncertain",
+      "evidence": "C shows a close-up of a dark bird's head and upper neck. The crop does not establish a longer neck than R, a sitting posture, or a rocky dirt setting."
+    },
+    "candidate_relation": "uncertain",
+    "violated_source_constraints": [],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_ef7bf2529b3899816f30",
+    "source_on_positive": {
+      "status": "contradicted",
+      "evidence": "The large bird has a long, dark bare neck, visibly longer than the reference bird's neck, and occupies rocky dirt ground. However, it is standing on visible legs rather than sitting."
+    },
+    "source_on_candidate": {
+      "status": "uncertain",
+      "evidence": "The close-up shows a bird's dark head and feathered lower neck. Its full neck length, body posture, and ground are outside the frame, so a longer black neck and sitting in rocky dirt cannot be reliably established."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "e6c5b4bb9f11e51ad55e141bba2e45c6ba65b5fa916edea2fc4514b6f393794c",
+      "input_hash": "34b566613a188799b478961c2c9355203f2ea93d87bbec759052e6d31ae7fa38",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/34b566613a188799b478961c2c9355203f2ea93d87bbec759052e6d31ae7fa38.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0fe686af2dbf9145016af2bdb88d5487d1b7baac8270019c77",
+      "usage": {
+        "prompt_tokens": 7047,
+        "completion_tokens": 264,
+        "total_tokens": 7311,
+        "completion_tokens_details": {
+          "reasoning_tokens": 88
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "799966739c3c38fa60f1c41ced6b836c74306c00223c43bddefdc81498d851d0",
+      "input_hash": "065c559d12f46ba7ce2c47c239c443a480e9e1891ca9633f4cc837b7f9924876",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/065c559d12f46ba7ce2c47c239c443a480e9e1891ca9633f4cc837b7f9924876.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_03247b1e22829f7f016af2bdc2ed2c87d2b57cc91e2ac6e29b",
+      "usage": {
+        "prompt_tokens": 6505,
+        "completion_tokens": 166,
+        "total_tokens": 6671,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 27
+        }
+      }
+    }
+  ]
+}

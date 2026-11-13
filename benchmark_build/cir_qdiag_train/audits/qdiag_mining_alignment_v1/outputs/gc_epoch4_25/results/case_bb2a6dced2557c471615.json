@@ -1,0 +1,177 @@
+{
+  "case_id": "case_bb2a6dced2557c471615",
+  "audit_query_id": "audit_query_087",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_bb2a6dced2557c471615",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "The clownfish has deeper orange coloring than the yellow-orange fish in R and is nestled among tentacles in the middle of an anemone."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Clownfish appear among the anemone's central tentacles, but their pale peach and yellow coloring is lighter, rather than darker, than the fish in R."
+    },
+    "candidate_relation": "single_constraint_conflict",
+    "violated_source_constraints": [
+      "The clownfish is darker colored than the fish in R."
+    ],
+    "witnesses": [
+      {
+        "witness_id": "w1",
+        "operation": "substitute",
+        "semantic_target": "attribute",
+        "before_span": "darker",
+        "after_span": "lighter",
+        "edited_instruction": "Shows a lighter colored clown fish swimming through the middle of a sea anemone.",
+        "witness_type": "substitution_contrast",
+        "changed_constraint": "Relative body coloring changes from darker than R to lighter than R.",
+        "edited_on_positive": {
+          "status": "contradicted",
+          "evidence": "The fish is deep orange, rather than lighter than R's yellow-orange fish; its position among anemone tentacles satisfies the retained setting."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "The pale peach and yellow clownfish are lighter than R's fish and appear swimming among the anemone's central tentacles."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "operation": "delete",
+        "semantic_target": "attribute",
+        "before_span": "darker colored",
+        "after_span": null,
+        "edited_instruction": "Shows a clown fish swimming through the middle of a sea anemone.",
+        "witness_type": "deletion_relaxation",
+        "changed_constraint": "Removes the requirement that the clownfish be darker colored than R.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "An orange-and-white clownfish appears swimming amid dense tentacles in the middle of the anemone."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Several clownfish appear swimming among tentacles in the central portion of the anemone."
+        }
+      }
+    ]
+  },
+  "review": {
+    "case_id": "case_bb2a6dced2557c471615",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "The clownfish is visibly nestled among the anemone's central tentacles. However, its vivid orange body is not unambiguously darker than the reference fish, which has a yellow-orange face and substantial black body markings. The required relative darkness cannot be reliably established."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "The clownfish among the anemone tentacles have pale peach and yellow-orange bodies with narrow white markings. They appear lighter than the reference fish with its substantial black markings, rather than darker."
+    },
+    "verdicts": [
+      {
+        "witness_id": "w1",
+        "decision": "reject",
+        "failure_code": "source_invalid_or_uncertain",
+        "witness_type": null,
+        "reason": "Replacing 'darker' with 'lighter' is a single fluent attribute edit, but the required source support on T is uncertain. T's orange coloration versus the reference's mixed yellow-orange and black coloration does not establish the required darker-to-lighter contrast.",
+        "edited_on_positive": {
+          "status": "uncertain",
+          "evidence": "The fish is among the central anemone tentacles, but its orange body and the reference fish's yellow-orange and black regions do not yield an unambiguous overall lighter-color comparison."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Pale peach and yellow-orange clownfish are visible among the central anemone tentacles, appearing lighter than the reference fish's heavily black-marked body."
+        }
+      },
+      {
+        "witness_id": "w2",
+        "decision": "reject",
+        "failure_code": "source_invalid_or_uncertain",
+        "witness_type": null,
+        "reason": "Deleting 'darker colored' removes one attribute constraint and preserves a fluent instruction supported by both images. Nevertheless, deletion relaxation requires the original instruction to be supported on T, and its relative darkness is not reliably established.",
+        "edited_on_positive": {
+          "status": "supported",
+          "evidence": "An orange-and-white clownfish is visibly positioned within the middle of dense anemone tentacles, which overlap its body."
+        },
+        "edited_on_candidate": {
+          "status": "supported",
+          "evidence": "Several clownfish are visible amid the anemone's tentacles, including a pale fish near the center with tentacles surrounding and overlapping it."
+        }
+      }
+    ]
+  },
+  "accepted_witnesses": [],
+  "local_checks": [
+    {
+      "witness_id": "w1",
+      "accepted": false,
+      "local_failures": [
+        "wrong_witness_type",
+        "wrong_support_pattern"
+      ],
+      "review_decision": "reject"
+    },
+    {
+      "witness_id": "w2",
+      "accepted": false,
+      "local_failures": [
+        "wrong_witness_type",
+        "wrong_support_pattern"
+      ],
+      "review_decision": "reject"
+    }
+  ],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "43bd82b5c5fc3fa231518809563bd9d2c827e7d00e9034d03cfb20a9e462eff2",
+      "input_hash": "00562cbb235cd6cbee7854a4657a5609d7f590a9565ed340000ec7c28f4befe8",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/00562cbb235cd6cbee7854a4657a5609d7f590a9565ed340000ec7c28f4befe8.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0cb7f37da8d9c1e9016af2bdc8037c87d19a29a669f85621c3",
+      "usage": {
+        "prompt_tokens": 10119,
+        "completion_tokens": 655,
+        "total_tokens": 10774,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 81
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "d8a98774ef5c5bda96785377da49e952193a7a22833e5d4ba5c6bbecc538186b",
+      "input_hash": "b1b96e99d323c610309c016fd5fc8378ef3a408bf3fcb4cbdaf445b5c80379b3",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/b1b96e99d323c610309c016fd5fc8378ef3a408bf3fcb4cbdaf445b5c80379b3.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0783dd6e3663ee02016af2bde00b8c87d2b20cd3ddaa10b070",
+      "usage": {
+        "prompt_tokens": 9716,
+        "completion_tokens": 659,
+        "total_tokens": 10375,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 84
+        }
+      }
+    }
+  ]
+}

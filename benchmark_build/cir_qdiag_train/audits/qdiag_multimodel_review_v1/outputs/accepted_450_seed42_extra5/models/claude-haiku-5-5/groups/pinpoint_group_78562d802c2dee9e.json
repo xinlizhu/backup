@@ -1,0 +1,49 @@
+{
+  "group_id": "pinpoint_group_78562d802c2dee9e",
+  "model": "claude-haiku-5-5",
+  "signature": "44bb4aae802e19564501a676b733c7e19828d9ced260b7da0428f08b1a359df2",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_78562d802c2dee9e_query_06933_predicate_add",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Single predicate edit adds 'with the heels lowered' as a new constraint. The phrasing is fluent and natural. All supplied positive images (2, 4, 5) display high-heel mules, making the constraint 'heels lowered' clearly false for every shoe image shown. No positive result is compatible with a query requesting reduced heel height."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "claude-haiku-5-5",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "1807e6884bd2f7cb43473ba7fc6b2f22ffefef2e838f531cd31b27aa67f0e612",
+      "input_hash": "06c9f0412a693cd739435a56018d9bf490e3e2174c8df84fb28146c984a22bdd",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/claude-haiku-5-5/cache/validate_group/06c9f0412a693cd739435a56018d9bf490e3e2174c8df84fb28146c984a22bdd.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "msg_019QBk9dsJSQKftoYJYqHTO00D",
+      "usage": {
+        "prompt_tokens": 11521,
+        "completion_tokens": 2908,
+        "total_tokens": 14429,
+        "prompt_tokens_details": {
+          "cached_tokens": 8983,
+          "cache_creation_tokens": 2534
+        }
+      }
+    }
+  ],
+  "format_warnings": [
+    {
+      "negative_id": "pinpoint_group_78562d802c2dee9e_query_06933_predicate_add",
+      "kind": "reason_exceeds_requested_length",
+      "requested_max_characters": 300,
+      "actual_characters": 330,
+      "action": "full reason retained; decision and failure_code unchanged"
+    }
+  ]
+}

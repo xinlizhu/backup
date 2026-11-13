@@ -1,0 +1,57 @@
+{
+  "group_id": "pinpoint_group_f3f6fc314af87fd8",
+  "model": "grok-4.7",
+  "signature": "52913ea34ae01078c58f7a80fc2119b86ef4b6b3449e9e55b21816a5d5d1ccbd",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_f3f6fc314af87fd8_query_01805_object_add",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Adds one visible object, a small brass nameplate, while preserving the framed hanging request. Neither supplied framed positive shows any nameplate."
+    },
+    {
+      "negative_id": "pinpoint_group_f3f6fc314af87fd8_query_01806_predicate_delete",
+      "decision": "accept",
+      "failure_code": null,
+      "reason": "Deletes only the enclosure-in-a-picture-frame relation; the frame modifier belongs to that constraint. The result is fluent, meaningful, and strictly weaker."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.7",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "41dad821d9bc69ccdc472f94cca31ea570e0890c97d89ae1a82f7b8c5d83e032",
+      "input_hash": "7f251ffeebacda51f46a39045ab7a380544ac55f74f8becebdabca1564f54a2b",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/grok-4.7/cache/validate_group/7f251ffeebacda51f46a39045ab7a380544ac55f74f8becebdabca1564f54a2b.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "0af01ea4-f930-9fb3-b7f1-d341c0eecb67",
+      "usage": {
+        "prompt_tokens": 3753,
+        "completion_tokens": 156,
+        "total_tokens": 5665,
+        "prompt_tokens_details": {
+          "text_tokens": 2593,
+          "audio_tokens": 0,
+          "image_tokens": 1160,
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1756,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 159060000
+      }
+    }
+  ],
+  "format_warnings": []
+}

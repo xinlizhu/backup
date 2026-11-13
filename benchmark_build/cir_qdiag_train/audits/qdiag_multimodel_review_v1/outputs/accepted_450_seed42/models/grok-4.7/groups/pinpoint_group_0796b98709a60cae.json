@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_0796b98709a60cae",
+  "model": "grok-4.7",
+  "signature": "52913ea34ae01078c58f7a80fc2119b86ef4b6b3449e9e55b21816a5d5d1ccbd",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_0796b98709a60cae_query_04802_attribute_substitute",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "Replacing color palette with pattern is one fluent attribute edit, but the new fact is not clearly false for every positive: the reference is a plain solid knit, and positives such as the grey and pink solid knits remain compatible with that pattern."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.7",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "7b1e5d9307b61ee972892292aa8b67216383c9df9601177c5dbf630b3934fbd2",
+      "input_hash": "46fea2aa4c79a690a264ce370e5f1cf2f65327513d3346a371b3e3f962ad5296",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42/models/grok-4.7/cache/validate_group/46fea2aa4c79a690a264ce370e5f1cf2f65327513d3346a371b3e3f962ad5296.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "5156fa85-542e-91d0-9bc2-a47eabe43d4c",
+      "usage": {
+        "prompt_tokens": 3995,
+        "completion_tokens": 100,
+        "total_tokens": 8228,
+        "prompt_tokens_details": {
+          "text_tokens": 2500,
+          "audio_tokens": 0,
+          "image_tokens": 1495,
+          "cached_tokens": 1152
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 4133,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 316600000
+      }
+    }
+  ],
+  "format_warnings": []
+}

@@ -1,0 +1,86 @@
+{
+  "case_id": "case_761ed7f2f401d5f97640",
+  "audit_query_id": "audit_query_076",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_761ed7f2f401d5f97640",
+    "case_status": "source_valid",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Compared with the many dogs in R, T shows one dog on a red carpet with a large bone at its mouth and front paws."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows a barber cutting a seated person's hair; there is no dog, red carpet, or bone visible."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "Exactly one dog remains.",
+      "The dog is on a red carpet.",
+      "The dog has a bone."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_761ed7f2f401d5f97640",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows a single dog on a red carpet with a large bone held at its mouth, satisfying the requested reduction from the reference's multiple dogs to one, red carpet setting, and bone."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a barber cutting a person's hair. There is no dog, red carpet setting, or bone, so the explicit source constraints are contradicted."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "53ea12a4231c298bebc3ba3e6e54f0f4b53587747d8980d2f372f86341d2f20e",
+      "input_hash": "75e1b977773103ff7327c497d5dd606842af43f2a53e45fa7df59f54b5b1583a",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/75e1b977773103ff7327c497d5dd606842af43f2a53e45fa7df59f54b5b1583a.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0ab72d60619710bc016af2bf5e766c87d1a6a3ae0d5259ed6c",
+      "usage": {
+        "prompt_tokens": 28806,
+        "completion_tokens": 182,
+        "total_tokens": 28988,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "3d462360b1ec599763cbe4bcf14bd3eb37d6d38f7106f947d32c72ac4def7923",
+      "input_hash": "8a6537f6b53d86f81624a93523b4471ee11d42e85fe6d7eb8c6c4e8724623fa8",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/8a6537f6b53d86f81624a93523b4471ee11d42e85fe6d7eb8c6c4e8724623fa8.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_01e736102110362d016af2bf7f649c87d1b1a1e485db9c37ea",
+      "usage": {
+        "prompt_tokens": 28264,
+        "completion_tokens": 126,
+        "total_tokens": 28390,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        }
+      }
+    }
+  ]
+}

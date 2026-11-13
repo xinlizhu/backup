@@ -1,0 +1,92 @@
+{
+  "case_id": "case_2d4b87bc60fba324f437",
+  "audit_query_id": "audit_query_094",
+  "signature": "44d0f809ecc2d56bd6212325a3a7facccdd5eba8c75944f408917771c83a0bbe",
+  "simulated": false,
+  "status": "complete",
+  "proposal": {
+    "case_id": "case_2d4b87bc60fba324f437",
+    "case_status": "source_invalid_or_uncertain",
+    "source_on_positive": {
+      "status": "uncertain",
+      "evidence": "T shows an adult warthog with two piglets apparently nursing together on the image-left side, unlike their opposite-side arrangement in R. However, the requested change from mother to boar implies a male adult, which the visible evidence does not establish."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "C shows a single dog sitting on a cushioned seat, with no babies or nursing interaction."
+    },
+    "candidate_relation": "unrelated",
+    "violated_source_constraints": [
+      "The target adult is a boar.",
+      "The adult is nursing two babies.",
+      "The two babies are together on the same left side."
+    ],
+    "witnesses": []
+  },
+  "review": {
+    "case_id": "case_2d4b87bc60fba324f437",
+    "source_on_positive": {
+      "status": "supported",
+      "evidence": "Image 2 shows an adult warthog with two piglets pressed to its underside in nursing positions, both together on the image-left side. This contrasts with the piglets positioned on opposite sides of the adult in the reference."
+    },
+    "source_on_candidate": {
+      "status": "contradicted",
+      "evidence": "Image 3 shows a single dog sitting on a cushioned seat. There is no boar, no pair of babies, and no nursing."
+    },
+    "verdicts": []
+  },
+  "accepted_witnesses": [],
+  "local_checks": [],
+  "traces": [
+    {
+      "stage": "propose_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "242e60c2969d11adad02a69394c8c11499af8306b6fbfe309e843943106a3de2",
+      "input_hash": "1b36169f5f09c083dde263e0b6e3776e4688be48099ba5b97635ba7d9ccd1a3f",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/propose_witnesses/1b36169f5f09c083dde263e0b6e3776e4688be48099ba5b97635ba7d9ccd1a3f.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_0f851767a579ef0e016af2be3d873887d1b7fff7835529bd1d",
+      "usage": {
+        "prompt_tokens": 16629,
+        "completion_tokens": 295,
+        "total_tokens": 16924,
+        "prompt_tokens_details": {
+          "cached_tokens": 5632
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 79
+        }
+      }
+    },
+    {
+      "stage": "review_witnesses",
+      "model_name": "gpt-5.6-terra",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "qdiag_mining_alignment_v1",
+      "prompt_hash": "5c980202d58523c5d9e63768f45e28126b5402a6c8371a907a564d2a4ea914f0",
+      "input_hash": "d04fa795254a25f0a47f73fc44efe86273d6fdc37008f6dc5e87cf63d3b1efdb",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_mining_alignment_v1/outputs/gc_epoch4_25/api_cache/review_witnesses/d04fa795254a25f0a47f73fc44efe86273d6fdc37008f6dc5e87cf63d3b1efdb.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "resp_07ede82054fea274016af2be4ca53c87d18f96d06a8dfd5589",
+      "usage": {
+        "prompt_tokens": 16087,
+        "completion_tokens": 207,
+        "total_tokens": 16294,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 76
+        }
+      }
+    }
+  ]
+}

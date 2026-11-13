@@ -1,0 +1,51 @@
+{
+  "group_id": "pinpoint_group_587ea337e530d8fb",
+  "model": "grok-4.6",
+  "signature": "cb958fa178e5ebcdd33f446ebd46fe25a7c20417ca5539cc74de61fb4df99804",
+  "simulated": false,
+  "status": "complete",
+  "verdicts": [
+    {
+      "negative_id": "pinpoint_group_587ea337e530d8fb_query_04142_object_substitute",
+      "decision": "reject",
+      "failure_code": "positive_compatible",
+      "reason": "Single fluent invite→announcement substitution, but images 3 and 4 are 10th-birthday movie-night invitations that announce the event, so “announcement” is not clearly false for every positive."
+    }
+  ],
+  "traces": [
+    {
+      "stage": "validate_group",
+      "model_name": "grok-4.6",
+      "model_revision": null,
+      "provider": "openai-compatible-chat",
+      "reasoning_effort": null,
+      "prompt_version": "v7",
+      "prompt_hash": "f3a15774e8995cb4bc1f0732a6b285b3e9d769db3438bf3e111f6b2d45b547fd",
+      "input_hash": "b2ec0fbccc1b79a1a506776e880562221b955bed067d53a9dc1a1314a07d4856",
+      "raw_response_path": "/mnt/data/datasets/search_dataset/zxl/benchmark_build/cir_qdiag_train/audits/qdiag_multimodel_review_v1/outputs/accepted_450_seed42_extra5/models/grok-4.6/cache/validate_group/b2ec0fbccc1b79a1a506776e880562221b955bed067d53a9dc1a1314a07d4856.json",
+      "cached": false,
+      "attempts": 1,
+      "request_id": "2a7c6baf-d27a-90e3-b18f-8352836f266d",
+      "usage": {
+        "prompt_tokens": 5602,
+        "completion_tokens": 94,
+        "total_tokens": 9283,
+        "prompt_tokens_details": {
+          "text_tokens": 2464,
+          "audio_tokens": 0,
+          "image_tokens": 3138,
+          "cached_tokens": 1152
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 3587,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "num_sources_used": 0,
+        "cost_in_usd_ticks": 315620000
+      }
+    }
+  ],
+  "format_warnings": []
+}
