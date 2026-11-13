@@ -1,0 +1,35 @@
+Generate realistic English search phrases for ONE financial research chart or table.
+The user is searching for the topic BEFORE seeing this image. They do not know its answers.
+
+INPUT EVIDENCE
+You receive the target image, its original caption/footnote, optional labels transcribed from THIS source table, and the report heading/security code as background. No generated search title or description is supplied.
+The image, own caption, and own table labels identify the target. Transcribed labels are partial and can have OCR errors; check them against the image. They are not neighboring prose.
+The report heading/security code identifies the document, NOT every visual in it.
+
+FIRST DECIDE WHETHER A GROUNDED QUERY IS POSSIBLE
+- Establish the target subject and metric from its own evidence first. A printed company/ticker/product/region overrides the report identity. Never attach the report company to another named company's product or chart. Keep an unfamiliar target ticker literally instead of guessing its company name.
+- Only when the target has no other subject and clearly concerns the report's main company may the report heading/security code identify it. Remove exchange suffixes when useful. Do not infer full names from a ticker unless that name is supplied. Use an identifiable product, industry, or region without adding a company when company ownership is uncertain.
+- A company financial query must include its supported company name or ticker. A broker/source is not the subject of a client company's financials. If the subject is unresolved, return review.
+- Missing tiny numbers or exact years is acceptable if the topic is readable. But a numeric panel without metric row labels is review, even if New/Old/EPS Impact/year column headings exist. Never infer row names from the values.
+- Names plus dollar values without metric headers do not identify average check, menu prices, revenue, or valuation. Return review unless the own caption establishes the metric.
+- Skip decorations, generic legal lists, and broker-wide rating counts/percentages. Keep useful company-specific price/rating histories and tables listing individual companies' financial metrics, ratings, or price targets.
+
+WRITE EXACTLY ONE CORE QUERY
+- Usually 4-12 words, at most 18. Use subject + business/segment + principal metric/comparison. Focus on one coherent need rather than listing all rows or tickers.
+- Select the single most useful main search intent. Do not invent extra intents or enumerate all financial statement rows. For multi-metric visuals, choose one coherent topic; do not mix a 12-month price target with five-year financial drivers.
+- Use short search phrases, not full questions or explanations. No question marks, "what", "how much", "show me", "this chart", colors, chart shapes, or layout.
+- No observed values, answer numbers, figure/page numbers, broker/source names, or incidental event dates. For multi-company rating/target tables, search the company group or selected named peers, not the broker name. Avoid exact data periods in queries. Numbers integral to metric names are allowed, e.g. 30-89 day delinquency, 2Y CAGR, or 12-month price target.
+- Do not add AI, growth, forecasts, guidance, consensus, or causality without explicit support. Historical results, analyst estimates, consensus forecasts, and company guidance are DIFFERENT. A source crediting estimates does not make historical data a forecast.
+- A comparison of two plotted metrics is not automatically a statistical correlation analysis. A historical rating band is rating HISTORY, not an analyst rating distribution. Distribution requires actual counts/percentages across analysts or rating categories.
+- Preserve unsupported metric acronyms literally. Only standard EPS, FCF, capex, P/E, and YoY may be expanded without an explicit definition. Do not invent ownership relationships or company names.
+- Preserve important printed qualifiers such as "excluding regulatory credits", "per share", or "excluding Foursight" when they define the metric's scope.
+
+AUDIT EVIDENCE
+For each query quote 1-5 SHORT supporting labels. At least one quote must identify its actual metric. A number alone never proves a metric. Quotes may come from image, caption, table_labels, or report_heading (including the original metadata security code). Do not invent quotes. The evidence is separate from the query text.
+
+FINAL CHECK
+Remove any query with an unsupported subject, metric, or qualifier. Prefer one good query to invented variety. If no grounded query remains, return review. Do not return generic financial queries with an unresolved company.
+
+Return JSON only:
+{"status":"ok|review|skip","reason":"","queries":[{"type":"core","text":"...","evidence":[{"source":"image|caption|table_labels|report_heading","text":"..."}]}]}
+Choose a single enum value, never pipe-separated alternatives. For ok return exactly one core query and an empty reason. For review/skip return an empty queries array and a brief reason.
